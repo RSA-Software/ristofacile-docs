@@ -1,0 +1,87 @@
+/* ---------------------------------------------------------------------------
+   Manuale Facile — personalizzazioni grafiche
+   --------------------------------------------------------------------------- */
+
+/* Screenshot delle maschere: bordo leggero e angoli arrotondati, così le
+   catture con sfondo chiaro non si confondono con la pagina. */
+.md-typeset img[src*="/img/"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Etichetta per i campi obbligatori: usare {: .obbligatorio } */
+.md-typeset .obbligatorio {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Percorso di menu, es. Menu > Anagrafiche > Clienti */
+.md-typeset kbd.percorso {
+  font-family: var(--md-text-font);
+}
+
+/* Collegamento permanente ai titoli: al posto del segno di paragrafo che
+   genera toc (permalink: true) si mostra l'icona a catena del tema. Il
+   carattere resta nel link ma e' reso trasparente; l'icona prende il colore
+   (currentColor) che il tema gia' assegna al link, a riposo e al passaggio. */
+.md-typeset .headerlink {
+  -webkit-text-fill-color: transparent;
+  width: 0.75em;
+  height: 0.75em;
+  overflow: hidden;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* ---------------------------------------------------------------------------
+   Colori di RistoFacile: l'arancione AzionePrimaria (#F2751F) delle app.
+   --------------------------------------------------------------------------- */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #F2751F;
+  --md-primary-fg-color--light: #F59A55;
+  --md-primary-fg-color--dark: #C65A10;
+  --md-accent-fg-color: #C65A10;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #F2751F;
+  --md-primary-fg-color--light: #F59A55;
+  --md-primary-fg-color--dark: #C65A10;
+  --md-accent-fg-color: #F59A55;
+}
+
+/* Schermate del telefono: strette, non vanno allargate a tutta pagina. */
+.md-typeset img.telefono {
+  max-width: 340px;
+  display: block;
+  margin: 0 auto;
+}
+/* Due o tre schermate del telefono affiancate. */
+.md-typeset .affiancate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.md-typeset .affiancate img {
+  max-width: 300px;
+}
+
+/* Pallini della legenda dei colori dei tavoli. */
+.md-typeset .stato {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+.md-typeset .stato.libero    { background: #6B7280; }
+.md-typeset .stato.occupato  { background: #8B5CF6; }
+.md-typeset .stato.cucina    { background: #D9463B; }
+.md-typeset .stato.corso     { background: #E0A62E; }
+.md-typeset .stato.conto     { background: #22A06B; }
+.md-typeset .stato.prenotato { background: #3B82C4; }

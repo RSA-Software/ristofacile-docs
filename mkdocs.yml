@@ -1,0 +1,169 @@
+site_name: Manuale RistoFacile
+site_description: Manuale utente di RistoFacile — cassa, palmare e monitor di cucina, schermata per schermata
+site_author: R.S.A. S.a.s. di Capizzi, Furnari & C.
+site_url: https://rsa-software.github.io/ristofacile-docs/   # <-- sostituire con il dominio definitivo
+copyright: © R.S.A. S.a.s. — Tutti i diritti riservati
+
+# ---------------------------------------------------------------------------
+# Repository (mostra il link "Modifica questa pagina" su ogni documento)
+# ---------------------------------------------------------------------------
+repo_url: https://github.com/RSA-Software/ristofacile-docs
+repo_name: RSA-Software/ristofacile-docs
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+# ---------------------------------------------------------------------------
+# Tema
+# ---------------------------------------------------------------------------
+theme:
+  name: material
+  language: it
+  logo: assets/img/logo.svg
+  favicon: assets/img/favicon.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Passa al tema scuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Passa al tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs           # le tre app come schede in alto
+    - navigation.top
+    - navigation.indexes        # index.md come pagina della sezione
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+    - content.tooltips
+
+extra_css:
+  - assets/css/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.rsasoftware.it
+      name: rsasoftware.it
+
+# ---------------------------------------------------------------------------
+# Plugin
+# ---------------------------------------------------------------------------
+plugins:
+  - search:
+      lang: it
+      separator: '[\s\-\.]+'
+
+# ---------------------------------------------------------------------------
+# Estensioni Markdown
+# ---------------------------------------------------------------------------
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Collegamento a questa sezione
+      title: In questa pagina
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ---------------------------------------------------------------------------
+# Struttura del manuale
+#
+# RistoFacile sono tre app: la cassa (RistoFacile), il palmare dei camerieri
+# (RistoApp) e il monitor di cucina (RistoKds). Ognuna ha la sua scheda in
+# alto. Dentro la cassa l'indice ricalca il MENU LATERALE dell'app, voce per
+# voce e nello stesso ordine; le schermate che non stanno nel menu (Comanda,
+# Conto, Asporto...) stanno sotto la voce da cui si raggiungono.
+# Nel palmare l'indice segue le quattro linguette in basso (Sala, Ordini,
+# Menu, Io) e poi Impostazioni.
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - Guida introduttiva:
+      - introduzione/index.md
+      - Prima configurazione: introduzione/prima-configurazione.md
+      - Licenza digitale: introduzione/licenza.md
+      - Una serata, dal tavolo al conto: introduzione/una-serata.md
+      - Convenzioni del manuale: introduzione/convenzioni.md
+  - Cassa:
+      - cassa/index.md
+      - Accesso operatore: cassa/accesso.md
+      - Vendita:
+          - Mappa della sala: cassa/mappa-sala.md
+          - Comanda: cassa/comanda.md
+          - Varianti: cassa/varianti.md
+          - Mezza e mezza: cassa/mezza.md
+          - Menu fissi: cassa/menu-fisso.md
+          - Conto: cassa/conto.md
+          - Dividi conto: cassa/dividi-conto.md
+          - Vendita al banco: cassa/vendita-al-banco.md
+          - Asporto e domicilio: cassa/asporto.md
+          - Prenotazioni: cassa/prenotazioni.md
+          - Messaggi: cassa/messaggi.md
+      - Fatture: cassa/fatture.md
+      - Storico conti: cassa/storico-conti.md
+      - Statistiche: cassa/statistiche.md
+      - Operatori: cassa/operatori.md
+      - Sale e tavoli: cassa/sale-e-tavoli.md
+      - Centri di produzione: cassa/centri-di-produzione.md
+      - Tabelle di base: cassa/tabelle-di-base.md
+      - Menu: cassa/menu.md
+      - Articoli: cassa/articoli.md
+      - Modificatori: cassa/modificatori.md
+      - Varianti: cassa/varianti-anagrafica.md
+      - Disponibilità: cassa/disponibilita.md
+      - Regole di composizione: cassa/regole-di-composizione.md
+      - Portate: cassa/portate.md
+      - Impostazioni:
+          - cassa/impostazioni.md
+          - Menu online: cassa/menu-online.md
+  - Palmare:
+      - palmare/index.md
+      - Accesso: palmare/accesso.md
+      - Sala: palmare/sala.md
+      - Comanda: palmare/comanda.md
+      - Conto: palmare/conto.md
+      - Ordini: palmare/ordini.md
+      - Prenotazioni: palmare/prenotazioni.md
+      - Menu: palmare/menu.md
+      - Io: palmare/io.md
+      - Messaggi: palmare/messaggi.md
+      - Impostazioni: palmare/impostazioni.md
+  - Monitor di cucina:
+      - kds/index.md
+      - Scelta del centro: kds/centro.md
+      - Monitor: kds/monitor.md
+  - Appendici:
+      - Glossario: appendici/glossario.md
+      - Messaggi a video: appendici/messaggi.md
