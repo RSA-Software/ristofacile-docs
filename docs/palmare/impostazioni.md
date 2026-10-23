@@ -1,6 +1,6 @@
 ---
 title: Impostazioni
-description: Le impostazioni del palmare - collegamento al servizio, tavolo dell'asporto, stampante del preconto, POS, stampante fiscale, turno, richiamo dalla cucina, tema e licenza digitale.
+description: Le impostazioni del palmare - collegamento al servizio, tavolo dell'asporto, scelta della stampante del preconto e del POS, stampante fiscale in lettura, turno, richiamo dalla cucina, tema e licenza digitale.
 app: Palmare
 percorso: Menu ▸ Impostazioni
 pagina: ImpostazioniPage
@@ -32,14 +32,17 @@ Rispetto alla cassa, sul palmare:
 - **non ci sono** Modelli di stampa, Cassa automatica, Dati fiscali, Menu online e Hotel, e
   nella parte della sala manca il **Tagliando di via in cucina**;
 - **c'è in più** il **Richiamo dalla cucina**;
+- stampanti, terminali POS e stampante fiscale **si scelgono o si leggono, ma non si
+  modificano**: aggiungerli, correggerli o toglierli si fa dalla cassa;
 - la licenza digitale prende sempre un **posto Mobile**: non si sceglie l'edizione.
 
 ## Prima di cominciare
 
 - Sul palmare non si creano sale, tavoli e operatori: devono già esistere, creati dalla cassa
   ([Sale e tavoli](../cassa/sale-e-tavoli.md), [Operatori](../cassa/operatori.md)).
-- Le stampanti e i terminali POS sono quelli dell'impianto: se ne servono di nuovi si possono
-  aggiungere anche da qui, ma di solito si registrano dalla cassa.
+- Le stampanti, i terminali POS e la stampante fiscale sono quelli dell'impianto e si registrano
+  dalla cassa ([Impostazioni della cassa](../cassa/impostazioni.md)): dal palmare si sceglie solo
+  quali usare.
 
 ## La schermata
 
@@ -76,15 +79,18 @@ Come **Sala ▸ Tavolo asporto** della cassa: **Sala asporto**, **Tavolo asporto
 
 ![Stampante preconto](../assets/img/palmare/impostazioni-preconto.png){ .telefono }
 
-*Stampante ESC/POS di rete su cui esce il preconto. L'elenco è dell'impianto e lo vedono tutti i
-dispositivi; qui scegli quale usa questo.*
+*Stampante su cui esce il preconto di questo dispositivo. L'elenco è dell'impianto e si gestisce
+dalla cassa.*
 
 | Elemento | Descrizione |
 |---|---|
-| **Stampante di questo dispositivo** | Tendina (*Scegli la stampante*) con le stampanti dell'impianto. Compare solo se l'impianto ne ha. |
-| **Indirizzo IP**, **Porta** | Come sulla cassa. |
-| **Salva**, **Stampa di prova**, **Verifica stato** | Come sulla cassa. |
-| **Togli dall'impianto** | Come **Togli** della cassa: toglie la stampante per tutti i dispositivi. |
+| **Stampante di questo dispositivo** | Tendina (*Scegli la stampante*) con le stampanti dell'impianto. Compare solo se l'impianto ne ha. La scelta vale subito per questo palmare: non c'è da salvare. |
+| **Stampa di prova**, **Verifica stato** | Come sulla cassa, sulla stampante scelta. |
+
+Indirizzo e porta non si scrivono qui: una stampante nuova, o una da correggere o togliere, si
+gestisce da [Impostazioni della cassa ▸ Stampante preconto](../cassa/impostazioni.md#stampante-preconto).
+Con l'impianto senza stampanti la riga di esito dice *Nessuna stampante sull'impianto: si
+aggiungono dalla cassa.*
 
 ### Prenotazioni in mappa e Aggiornamento automatico
 
@@ -101,31 +107,40 @@ in cassa.
 
 ![Pagamento con carta](../assets/img/palmare/impostazioni-carte.png){ .telefono }
 
-*Il terminale POS su cui questa postazione incassa le carte. Premendo INCASSA, l'importo messo su
-Carte o Bancomat viene chiesto al terminale prima di emettere il documento.*
+*Il terminale POS su cui questo dispositivo incassa le carte. Premendo INCASSA, l'importo messo su
+Carte o Bancomat viene chiesto al terminale prima di emettere il documento. I terminali si
+gestiscono dalla cassa.*
 
-Al posto dell'elenco a sinistra della cassa c'è una tendina:
+Al posto dell'elenco a sinistra della cassa c'è una tendina, e non c'è la scheda del terminale:
 
 | Elemento | Descrizione |
 |---|---|
-| **Terminale** | Tendina con i terminali dell'impianto (*Nessun terminale* se vuota). Sceglierne uno apre la sua scheda. |
+| **Terminale** | Tendina con i terminali dell'impianto (*Nessun terminale* se vuota). |
 | **Id cassa** | Come **ID cassa** sulla cassa. |
-| **Nuovo terminale** | Apre una scheda vuota. |
-| **Scheda del terminale** | **Id**, **Descrizione**, **Id terminale (quello scritto sul POS)**, **Indirizzo IP**, **Porta**, con **Salva**, **Chiudi** e **Togli**. |
-| **Usa qui** | Come **Usa su questa cassa**. |
+| **Usa qui** | Come **Usa su questa cassa**: il palmare incassa sul terminale scelto nella tendina. |
 | **Verifica stato**, **Carte a mano** | Come sulla cassa. |
 | **Aggiorna elenco** | Rilegge dal servizio l'elenco dei terminali (solo sul palmare). |
 | *Questa postazione incassa su:* | Il terminale in uso. |
 
+Un terminale nuovo, o uno da correggere o togliere, si gestisce da
+[Impostazioni della cassa ▸ Pagamento con carta](../cassa/impostazioni.md#pagamento-con-carta).
+Con l'impianto senza terminali la riga di esito dice *Nessun terminale sull'impianto: si
+aggiungono dalla cassa.*
+
 ### Stampante fiscale
 
-*Registratore telematico in rete. Emissione scontrino al Conto (aggancio in arrivo); qui imposti
-tipo e indirizzo.* **Tipo**, indirizzo, **Salva** e **Verifica stato** come sulla cassa.
+![Stampante fiscale](../assets/img/palmare/impostazioni-fiscale.png){ .telefono }
 
-È la **stessa** impostazione dell'impianto che si vede dalla cassa: cambiarla qui la cambia per
-tutti.
+*Il registratore telematico dell'impianto, lo stesso della cassa. Si imposta dalla cassa.*
 
-<!-- DA VERIFICARE: la frase a video "aggancio in arrivo" sembra superata (sulla cassa lo scontrino al conto esce gia'); confermare se dal palmare lo scontrino esce davvero sulla stampante fiscale. -->
+Il riquadro è in sola lettura: mostra il tipo e l'indirizzo della stampante fiscale (per esempio
+**3i** e `192.168.1.144`), oppure *Nessuna stampante fiscale impostata.* Con una stampante
+impostata c'è **Verifica stato**, che interroga il registratore come sulla cassa.
+
+La stampante fiscale è una sola per tutto l'impianto: si cambia da
+[Impostazioni della cassa ▸ Stampante fiscale](../cassa/impostazioni.md#stampante-fiscale).
+
+<!-- DA VERIFICARE: confermare se dal palmare lo scontrino al conto esce davvero sulla stampante fiscale. -->
 
 ### Turno
 
@@ -170,9 +185,9 @@ palmare occupa sempre un posto **Mobile** della licenza. Vedi
 |---|---|
 | **Salva e connetti** | Salva e verifica il collegamento al servizio. |
 | **Salva tavolo asporto** | Salva sala e tavolo dell'asporto per questo palmare. |
-| **Salva** / **Stampa di prova** / **Verifica stato** / **Togli dall'impianto** | Stampante del preconto, come sulla cassa. |
-| **Nuovo terminale** / **Usa qui** / **Carte a mano** / **Aggiorna elenco** | Terminale POS di questo palmare. |
-| **Salva** / **Verifica stato** | Stampante fiscale dell'impianto. |
+| **Stampa di prova** / **Verifica stato** | Stampante del preconto scelta per questo palmare. |
+| **Usa qui** / **Verifica stato** / **Carte a mano** / **Aggiorna elenco** | Terminale POS di questo palmare. |
+| **Verifica stato** | Interroga la stampante fiscale dell'impianto. |
 | **ESCI** / **ACCEDI** | Chiude il turno / apre l'accesso. |
 | **Avvisami quando è pronto**, **Solo i miei tavoli** | Accendono e spengono il richiamo dalla cucina. |
 | **Scuro** / **Chiaro** / **Sistema** | Cambiano il tema. |
@@ -212,8 +227,9 @@ Quelli propri del palmare:
 
 - Alcuni messaggi dicono «cassa» anche sul palmare (per esempio *Questa cassa stampa su…*): si
   riferiscono a questo palmare.
-- Stampanti, terminali POS e stampante fiscale sono dell'impianto: **Togli dall'impianto**,
-  **Togli** e il salvataggio della stampante fiscale hanno effetto anche sulle casse.
+- Stampanti, terminali POS e stampante fiscale sono dell'impianto e valgono per tutti i
+  dispositivi: per questo dal palmare non si modificano, così una prova fatta da un telefono non
+  cambia la configurazione delle casse.
 - Su Samsung, se le notifiche smettono di arrivare dopo un po', togli RistoApp dal risparmio
   energetico come indicato nella riga di stato.
 

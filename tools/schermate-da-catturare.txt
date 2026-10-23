@@ -34,8 +34,6 @@ palmare/comanda-tablet.png
 palmare/comanda-varianti.png
 palmare/conto-dividi.png
 palmare/conto-tablet.png
-palmare/impostazioni-carte.png
-palmare/impostazioni-preconto.png
 palmare/impostazioni-richiamo.png
 palmare/menu-allergeni.png
 palmare/ordini-scheda.png

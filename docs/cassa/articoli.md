@@ -105,7 +105,7 @@ In fondo: **Elimina articolo** e **Duplica** a sinistra, **Annulla** e **Salva**
 |---|---|
 | **IVA** | L'aliquota IVA. Decide anche su quale reparto della stampante fiscale esce la riga dello scontrino. |
 | **Reparto** | Il reparto dell'articolo. |
-| **Merceologica** | La categoria merceologica (es. PRIMI, VINI): decide le statistiche e se l'articolo si vende al banco. |
+| **Cat. Merceologica** | La categoria merceologica (es. PRIMI, VINI): decide le statistiche e se l'articolo si vende al banco. |
 
 Per un articolo nuovo IVA, reparto e categoria si propongono uguali a quelli dell'ultimo articolo
 salvato su questa cassa. Accanto a ciascuno c'è il pulsante **+** per creare una voce nuova senza
@@ -162,7 +162,7 @@ Il codice della nuova voce è il primo libero; la voce creata risulta subito sce
 | **Annulla** | Torna all'elenco senza salvare. |
 | **Duplica** | Apre una scheda nuova (**Copia di …**) con i dati dell'articolo; scrivi il nuovo codice e salva. Al salvataggio vengono copiati anche prezzo, immagine, allergeni e traduzioni. |
 | **Elimina articolo** | Elimina l'articolo, dopo conferma. |
-| **+** accanto a IVA, Reparto, Merceologica | Apre la finestra per creare la voce al volo; **Crea** la salva, **Annulla** chiude. |
+| **+** accanto a IVA, Reparto, Cat. Merceologica | Apre la finestra per creare la voce al volo; **Crea** la salva, **Annulla** chiude. |
 | **Scegli immagine** / **Rimuovi** | Carica una foto dal dispositivo / toglie la foto (dopo conferma). L'immagine si salva subito, senza **Salva**. |
 | Tocco su un allergene | Ne cambia lo stato. **Salva** registra e torna alla scheda; **Annulla** torna senza registrare. |
 | **+ Aggiungi lingua** | Apre la scelta della lingua (finestra **Scegli la lingua**). Le lingue già presenti e l'italiano non si possono scegliere. |
@@ -170,7 +170,7 @@ Il codice della nuova voce è il primo libero; la voce creata risulta subito sce
 
 ### Le finestre di scelta
 
-Toccando le caselle **IVA**, **Reparto** e **Merceologica** si apre una pagina di scelta (**Scegli
+Toccando le caselle **IVA**, **Reparto** e **Cat. Merceologica** si apre una pagina di scelta (**Scegli
 IVA**, **Scegli reparto**, **Scegli merceologica**) con la casella **Cerca per codice o
 descrizione** e l'elenco delle voci. Tocca una voce per sceglierla. La **matita** accanto a una voce
 apre la sua scheda in [Tabelle di base](tabelle-di-base.md) senza sceglierla: corretta la voce e
@@ -194,7 +194,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 
 1. Tocca **+ Nuovo articolo**.
 2. Scrivi **Codice articolo \*** e **Descrizione \***.
-3. Controlla **IVA**, **Reparto** e **Merceologica** (sono proposti quelli dell'ultimo articolo).
+3. Controlla **IVA**, **Reparto** e **Cat. Merceologica** (sono proposti quelli dell'ultimo articolo).
 4. Scrivi il **Prezzo**.
 5. Tocca **Salva**. La scheda resta aperta e si accende la colonna **Informazioni al cliente**.
 6. Se serve, aggiungi immagine, allergeni e traduzioni.

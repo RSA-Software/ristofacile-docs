@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-20 — **62 domande** su 33 pagine.
+Aggiornato al 2026-10-23 — **62 domande** su 33 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -221,7 +221,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/palmare/impostazioni.md`
 
-- [ ] riga 128: la frase a video "aggancio in arrivo" sembra superata (sulla cassa lo scontrino al conto esce gia'); confermare se dal palmare lo scontrino esce davvero sulla stampante fiscale.
+- [ ] riga 143: confermare se dal palmare lo scontrino al conto esce davvero sulla stampante fiscale.
 
 ## Palmare
 
