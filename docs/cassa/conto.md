@@ -334,3 +334,4 @@ tavolo come «preconto» sulla mappa della sala.
 - [Operatori](operatori.md)
 - [Impostazioni](impostazioni.md)
 - [Conto sul palmare](../palmare/conto.md)
+- [Self order](self-order.md)

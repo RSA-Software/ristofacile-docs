@@ -271,3 +271,4 @@ non si sposta. La divisione completa si fa da [Dividi conto](dividi-conto.md).
 - [Operatori](operatori.md)
 - [Comanda sul palmare](../palmare/comanda.md)
 - [Monitor di cucina](../kds/monitor.md)
+- [Self order](self-order.md)

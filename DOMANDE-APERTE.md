@@ -1,13 +1,20 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-23 — **62 domande** su 33 pagine.
+Aggiornato al 2026-10-27 — **64 domande** su 34 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
 marcatore va tolto. Per rigenerare questo elenco:
 
     .venv/Scripts/python.exe tools/domande-aperte.py
+
+## Pubblicare il self order su internet
+
+`docs/appendici/self-order-internet.md`
+
+- [ ] riga 59: con il tunnel sullo stesso PC, oltre a 127.0.0.1 serve anche ::1?
+- [ ] riga 75: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay.
 
 ## Accesso operatore
 

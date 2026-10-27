@@ -192,3 +192,4 @@ Ogni esportazione sovrascrive il file precedente con lo stesso nome.
 - [Impostazioni](impostazioni.md)
 - [Menu](menu.md)
 - [Articoli](articoli.md)
+- [Self order](self-order.md)
