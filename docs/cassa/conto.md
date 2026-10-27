@@ -25,7 +25,8 @@ documento. La usa il cassiere, o chiunque in sala sia abilitato a incassare.
 A fine pasto il cliente chiede il conto: dalla comanda del tavolo tocchi **CONTO** e arrivi qui.
 Scrivi quanto paga in contanti, con carta o con altri metodi (oppure tocchi il nome del metodo e
 la cassa ci mette l'importo esatto), scegli se emettere lo scontrino o la fattura e tocchi
-**INCASSA E STAMPA**. Lo scontrino lo emette il servizio sulla stampante fiscale di questa postazione (la predefinita dell'impianto, se non ne hai scelta una);
+**INCASSA E STAMPA**. Lo scontrino lo emette il servizio sulla stampante fiscale di questa postazione (la predefinita
+dell'impianto, se non ne hai scelta una);
 a chiusura riuscita il tavolo si libera e torni alla mappa della sala.
 
 Se il tavolo paga separatamente, da qui si apre la [divisione del conto](dividi-conto.md), che

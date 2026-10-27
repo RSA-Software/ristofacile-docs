@@ -55,8 +55,8 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/conto.md`
 
-- [ ] riga 94: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
-- [ ] riga 327: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
+- [ ] riga 95: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
+- [ ] riga 328: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Disponibilità
 
@@ -84,10 +84,10 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/impostazioni.md`
 
-- [ ] riga 92: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
-- [ ] riga 158: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
-- [ ] riga 234: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
-- [ ] riga 287: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 94: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
+- [ ] riga 160: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
+- [ ] riga 239: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
+- [ ] riga 292: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
 
 ## Mappa della sala
 

@@ -52,7 +52,9 @@ La schermata è divisa in due:
 - **a sinistra** l'elenco delle voci: **Turno**, **Connessione**, **Sala**, **Stampante preconto**,
   **Modelli di stampa**, **Stampanti fiscali**, **Pagamento con carta**, **Cassa automatica**,
   **Dati fiscali**, **Aspetto**, **Menu online**, **Hotel**, **Licenza**. Sotto ogni nome, in
-  piccolo, c'è lo stato attuale (per esempio chi è in turno, l'indirizzo del servizio, le stampanti fiscali (per esempio *2 · qui n. 2*), il terminale POS in uso);
+  piccolo, c'è lo stato attuale (per esempio chi è in turno, l'indirizzo del servizio, il terminale
+  POS in uso; per le stampanti fiscali, per esempio, *2 · qui n. 2*, cioè 2 stampanti e questa
+  cassa usa la n. 2);
 - **a destra** il pannello della voce scelta, con in testa titolo e una riga che dice a cosa
   serve, e in fondo i pulsanti e il messaggio con l'esito dell'ultima operazione.
 
@@ -189,11 +191,14 @@ la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne 
   da questa cassa. La prima voce è **Predefinita dell'impianto**: chi non sceglie nulla usa quella.
   La scelta vale solo per questa cassa e resta anche dopo che l'hai chiusa e riaperta.
 - **Verifica stato** interroga la stampante di questa postazione.
-- **Chiusura giornaliera** fa la chiusura fiscale (la Z) della stampante di questa postazione, dopo una
-  conferma che ne dice il nome.
-- **Chiudi tutte** fa la Z di ogni stampante dell'impianto, una dopo l'altra, per chi fa la chiusura
-  serale da una sola cassa. Sotto compare l'esito **per stampante** (*CHIUSA* oppure *NON CHIUSA* con il
-  motivo): una stampante spenta non ferma le altre. Se una non si è chiusa, controllala e premi di nuovo.
+- **Chiusura giornaliera** fa la chiusura fiscale (la Z) della stampante di questa postazione, dopo
+  una conferma che ne dice il nome.
+- **Chiudi tutte** fa la Z di ogni stampante dell'impianto, una dopo l'altra, per chi fa la
+  chiusura serale da una sola cassa. Sotto compare l'esito **per stampante** (*CHIUSA* oppure
+  *NON CHIUSA* con il motivo): una stampante spenta non ferma le altre. Premendo di nuovo
+  **Chiudi tutte** la chiusura si ripete anche sulle stampanti che si erano già chiuse (una seconda
+  chiusura a importo zero, senza danni): per riprovare una sola stampante, sceglila come stampante
+  di questa postazione e usa **Chiusura giornaliera**.
 - In fondo, *Questa postazione emette su …* ricorda la stampante in uso.
 
 Se due postazioni usano la **stessa stampante fisica**, le loro richieste vanno in coda e nessuna

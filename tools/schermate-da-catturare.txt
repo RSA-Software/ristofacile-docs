@@ -41,3 +41,4 @@ palmare/prenotazioni-scheda.png
 palmare/sala-separa.png
 palmare/sala-tablet.png
 palmare/sala-tessere.png
+palmare/impostazioni-fiscale.png

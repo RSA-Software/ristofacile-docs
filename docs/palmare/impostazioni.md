@@ -129,8 +129,6 @@ aggiungono dalla cassa.*
 
 ### Stampanti fiscali
 
-![Stampante fiscale](../assets/img/palmare/impostazioni-fiscale.png){ .telefono }
-
 *I registratori telematici dell'impianto. Si gestiscono dalla cassa; qui si sceglie quale usare.*
 
 Il riquadro mostra l'elenco delle stampanti fiscali dell'impianto, in sola lettura (numero,
@@ -145,10 +143,6 @@ Se la stampante scelta viene tolta dall'elenco, il palmare non chiude con lo sco
 ne sceglie un'altra (*La stampante fiscale n. X non è nell'elenco del servizio.*).
 
 Il palmare **non ha** i pulsanti della chiusura giornaliera (la Z): si fa dalla cassa.
-
-!!! note "Immagine da rifare"
-
-    La schermata qui sopra è quella della versione con una sola stampante fiscale.
 
 ### Turno
 
