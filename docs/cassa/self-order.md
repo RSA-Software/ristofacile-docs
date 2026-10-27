@@ -64,7 +64,7 @@ sinistra compare l'esito dell'ultima operazione.
 
 | Elemento | Descrizione |
 |---|---|
-| **Self order acceso** | Acceso, i telefoni possono vedere il menu e ordinare. Spento, chi inquadra il QR vede solo un avviso: niente menu, niente ordini. |
+| **Self order acceso** | Acceso, i telefoni possono vedere il menu e ordinare. Spento, chi inquadra il QR vede il menu in sola lettura: niente ordini, chiamate o pagamenti (sul telefono: *Da qui puoi consultare il menu: per ordinare chiedi al cameriere.*). |
 | **Pagamento dal telefono** | Acceso, nel conto del telefono compaiono **Paga tutto** e **Paga una quota**. Si può accendere solo se il servizio ha configurato Nexi: altrimenti la riga sotto lo dice. |
 | **Indirizzo pubblico** | L'indirizzo con cui i telefoni raggiungono il servizio da internet, per esempio `https://ordina.trattoria.it`. È quello stampato nei QR: se lo cambi vanno ristampati tutti i cartoncini. |
 | **Pezzi per ordine** | Quanti piatti al massimo può mandare un telefono in un solo invio, da 1 a 99 (proposto 15). |
@@ -77,7 +77,7 @@ sinistra compare l'esito dell'ultima operazione.
 
 | Comando | Effetto |
 |---|---|
-| **Salva** (Attivazione) | Salva interruttori, indirizzo e limiti sul servizio. Sotto compare *Salvato: il self order e' acceso.* oppure *Salvato: il self order e' spento, i QR mostrano solo un avviso.* |
+| **Salva** (Attivazione) | Salva interruttori, indirizzo e limiti sul servizio. Sotto compare *Salvato: il self order e' acceso.* oppure *Salvato: il self order e' spento, i QR mostrano solo il menu.* |
 | **Metti in pausa tutto il locale** / **Riprendi gli ordini** (Pausa) | In pausa i telefoni vedono ancora il menu ma non possono ordinare, in nessun tavolo. |
 | **Pausa** / **Riprendi** accanto a un tavolo (Pausa) | Ferma o riprende gli ordini dai telefoni solo per quel tavolo. |
 | **Stampa tutti i cartoncini** (Codici QR) | Prepara il PDF dei cartoncini di tutti i tavoli che hanno il codice, da stampare e ritagliare. |
