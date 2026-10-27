@@ -34,6 +34,7 @@ palmare/comanda-tablet.png
 palmare/comanda-varianti.png
 palmare/conto-dividi.png
 palmare/conto-tablet.png
+palmare/impostazioni-fiscale.png
 palmare/impostazioni-richiamo.png
 palmare/menu-allergeni.png
 palmare/ordini-scheda.png
@@ -41,4 +42,3 @@ palmare/prenotazioni-scheda.png
 palmare/sala-separa.png
 palmare/sala-tablet.png
 palmare/sala-tessere.png
-palmare/impostazioni-fiscale.png

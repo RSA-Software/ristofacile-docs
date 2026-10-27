@@ -177,13 +177,13 @@ la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne 
 
 | Elemento della scheda | Descrizione |
 |---|---|
-| **Numero** | Da 1 a 99, diverso per ogni stampante. È anche il **numero di cassa** che compare sugli scontrini di quella stampante. **+ NUOVA** propone il primo numero libero. |
+| **Numero** | Da 1 a 99, diverso per ogni stampante. È anche il **numero di cassa** che compare sugli scontrini di quella stampante e che conta per la licenza. **+ NUOVA** propone il primo numero libero. Quando correggi una stampante il numero non si cambia (la scheda dice *Il numero è il numero di cassa sugli scontrini e nella licenza: per cambiarlo elimina la stampante e aggiungila di nuovo.*). |
 | **Descrizione** | Il nome che riconosci, per esempio *Cassa 1*, *Banco bar*. |
 | **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**. |
 | **Indirizzo (IP o IP:porta)** | L'indirizzo del registratore in rete, per esempio `192.168.1.100`. Con **Ditron** si scrive la porta logica del driver WinEcrCom, perché il Ditron è collegato al computer del servizio. |
 | **Predefinita** | La usano le postazioni che non ne scelgono una. Ce n'è una sola: scegliendo questa, l'altra smette di esserlo. |
 | **Verifica** | Interroga il registratore con i valori che hai scritto, prima di salvare. |
-| **Elimina** | Toglie la stampante dall'elenco (chiede conferma). Compare solo quando ne correggi una. |
+| **Elimina** | Toglie la stampante dall'elenco (chiede conferma). Compare solo quando ne correggi una. La conferma dice anche se la usa questa postazione o il [self order](self-order.md) per lo scontrino del saldo dal telefono. |
 
 **Su questa postazione** (a destra):
 
@@ -198,11 +198,26 @@ la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne 
   *NON CHIUSA* con il motivo): una stampante spenta non ferma le altre. Premendo di nuovo
   **Chiudi tutte** la chiusura si ripete anche sulle stampanti che si erano già chiuse (una seconda
   chiusura a importo zero, senza danni): per riprovare una sola stampante, sceglila come stampante
-  di questa postazione e usa **Chiusura giornaliera**.
+  di questa postazione e usa **Chiusura giornaliera**. Due stampanti dell'elenco con lo **stesso
+  indirizzo** sono la stessa stampante fisica: la Z si fa una volta sola e la seconda riga dice
+  *Stessa stampante della n. X: chiusa con quella.* Una stampante senza indirizzo non si chiude e
+  non conta come errore: la riga dice *Saltata: manca l'indirizzo.* con la scritta **SALTATA**.
 - In fondo, *Questa postazione emette su …* ricorda la stampante in uso.
 
 Se due postazioni usano la **stessa stampante fisica**, le loro richieste vanno in coda e nessuna
 va persa.
+
+!!! warning "Numeri di cassa e licenza"
+
+    Ogni stampante dell'elenco è una cassa per la licenza, anche quando due voci indicano la stessa
+    stampante fisica: due voci con lo stesso indirizzo contano come **due casse**. Per far emettere
+    due postazioni sulla stessa stampante, lascia una sola voce e falla scegliere a entrambe.
+
+!!! note "Due casse che modificano l'elenco insieme"
+
+    **Salva** ed **Elimina** mandano al servizio l'elenco intero, così come lo vede questa cassa.
+    Se due casse modificano l'elenco nello stesso momento vale l'ultimo salvataggio: la modifica
+    dell'altra va persa. Prima di cambiare l'elenco, riapri **Impostazioni** per vederlo aggiornato.
 
 !!! note "Se la stampante della postazione viene tolta"
 
