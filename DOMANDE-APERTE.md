@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-27 — **64 domande** su 34 pagine.
+Aggiornato al 2026-10-27 — **63 domande** su 33 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -56,7 +56,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/conto.md`
 
 - [ ] riga 94: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
-- [ ] riga 325: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
+- [ ] riga 327: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Disponibilità
 
@@ -84,10 +84,10 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/impostazioni.md`
 
-- [ ] riga 93: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
-- [ ] riga 159: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
-- [ ] riga 194: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
-- [ ] riga 247: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 92: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
+- [ ] riga 158: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
+- [ ] riga 234: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
+- [ ] riga 287: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
 
 ## Mappa della sala
 
@@ -222,13 +222,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/palmare/conto.md`
 
 - [ ] riga 120: «Credito» è il «non riscosso» (importo lasciato a credito del cliente)? Come va spiegato all'utente?
-- [ ] riga 239: sul palmare non c'è una riga di stato nella schermata del conto: i messaggi informativi del modello (es. "Carta autorizzata (STAN ...)", "Fattura n. ... di € ...", "La carta e' GIA' stata addebitata ...: premi ...") non compaiono. È voluto?
-
-## Impostazioni
-
-`docs/palmare/impostazioni.md`
-
-- [ ] riga 143: confermare se dal palmare lo scontrino al conto esce davvero sulla stampante fiscale.
+- [ ] riga 241: sul palmare non c'è una riga di stato nella schermata del conto: i messaggi informativi del modello (es. "Carta autorizzata (STAN ...)", "Fattura n. ... di € ...", "La carta e' GIA' stata addebitata ...: premi ...") non compaiono. È voluto?
 
 ## Palmare
 

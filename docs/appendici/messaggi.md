@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di cucin
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-27 — **525 messaggi**.
+Aggiornato al 2026-10-27 — **531 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -243,7 +243,7 @@ Aggiornato al 2026-10-27 — **525 messaggi**.
 | *Incasso annullato: la cassa ha restituito € X al cliente. …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Annulla e restituisci**. | Il conto resta aperto. |
 | *In "Contorni" se ne possono scegliere al massimo 2: tocca a destra quello da togliere.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Sezione già piena (con massimo maggiore di 1). | Togli prima un piatto dalla colonna destra. |
 | *In "Contorni" se ne possono scegliere al massimo 2: tocca a destra quello da togliere.* | Palmare: [Comanda](../palmare/comanda.md) | Superato il massimo della sezione del menu. | Tocca un piatto già scelto (in arancione, sopra la griglia) per toglierlo. |
-| *Inserisci l'indirizzo della stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** o **Verifica stato** con l'indirizzo vuoto. | Scrivi l'indirizzo (o la porta logica per Ditron). |
+| *Inserisci l'indirizzo della stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** o **Verifica** con l'indirizzo vuoto. | Scrivi l'indirizzo (o la porta logica per Ditron). |
 | *Inserisci l'indirizzo IP della cassa automatica.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** senza indirizzo. | Scrivi l'indirizzo. |
 | *Inserisci l'indirizzo IP della stampante comande.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva**, **Stampa di prova** o **Verifica stato** con l'indirizzo vuoto. | Scrivi l'indirizzo IP. |
 | *Intervallo non valido: "da" e "a" devono essere numeri, e "a" non puo' essere minore di "da".* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Intervallo del pannello sbagliato. | Correggi **Da** e **a**. |
@@ -287,6 +287,11 @@ Aggiornato al 2026-10-27 — **525 messaggi**.
 | *L'articolo e' obbligatorio.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Voce senza articolo. | Scegli l'articolo. |
 | *La stampante fiscale non ha risposto: …* | Palmare: [Conto](../palmare/conto.md) | Lo scontrino potrebbe essere uscito. | Tocca di nuovo il pulsante di incasso: il servizio controlla e non ristampa. Non rifar passare la carta. |
 | *La stampante fiscale non ha risposto: … Premi di nuovo INCASSA E STAMPA: il servizio controlla se lo scontrino e' uscito e non lo ristampa.* | Cassa: [Conto](../cassa/conto.md) | Comunicazione con la stampante interrotta: lo scontrino potrebbe essere uscito. Gli importi si bloccano. | Tocca di nuovo il pulsante: il servizio verifica sulla stampante e non emette due volte. |
+| *La stampante fiscale n. X non è configurata (manca l'indirizzo).* | Cassa: [Conto](../cassa/conto.md) | La stampante scelta non ha l'indirizzo. | Scrivilo nella scheda della stampante, in Impostazioni ▸ **Stampanti fiscali**. |
+| *La stampante fiscale n. X non è configurata (manca l'indirizzo).* | Palmare: [Conto](../palmare/conto.md) | La stampante scelta non ha l'indirizzo. | Fallo scrivere dalla cassa, in Impostazioni ▸ **Stampanti fiscali**. |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Conto](../cassa/conto.md) | La stampante scelta per questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in Impostazioni ▸ **Stampanti fiscali** ▸ **Stampante di questa postazione**; nel frattempo puoi usare CHIUDI SENZA DOCUMENTO. |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | Palmare: [Conto](../palmare/conto.md) | La stampante scelta per questo palmare è stata tolta dall'elenco. | Scegline un'altra in Impostazioni ▸ **Stampanti fiscali**; nel frattempo usa CHIUDI SENZA DOCUMENTO se sei abilitato. |
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *La vendita che avevi aperto e' stata incassata da un'altra cassa. …* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Un'altra cassa ha ripreso e incassato questa vendita. | Niente: la schermata si azzera, le righe sono già pagate. |
 | *La voce non esiste piu': l'elenco e' stato ricaricato.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | La voce toccata è stata eliminata nel frattempo. | Nessuna azione. |
@@ -301,6 +306,7 @@ Aggiornato al 2026-10-27 — **525 messaggi**.
 | **Libera il tavolo** — *Su Sala principale · Tavolo 12 non e' stato battuto niente. Vuoi liberarlo e tornare in sala?* | Palmare: [Comanda](../palmare/comanda.md) | Hai toccato **LIBERA TAVOLO**. | **Libera** o **Annulla**. |
 | *Licenza attivata, ma il dispositivo non riesce a salvarla: vale solo per questa sessione.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il dispositivo non riesce a scrivere la licenza. | Riprova l'attivazione; se si ripete, chiama l'assistenza. |
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Numero o porta del terminale non validi. | Correggi il campo. |
+| *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
 | *L'indirizzo pubblico va scritto intero, per esempio https://ordina.trattoria.it* | Cassa: [Self order](../cassa/self-order.md) | L'indirizzo non è completo. | Scrivilo con `https://` davanti. |
 | *L'ordine dev'essere un numero valido.* | Cassa: [Modificatori](../cassa/modificatori.md), [Portate](../cassa/portate.md) | Ordine non numerico. | Scrivi un numero. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Cassa: [Conto](../cassa/conto.md) | Hai scelto **Fattura** dopo che lo scontrino era già uscito. | Emetti la fattura dal gestionale. |

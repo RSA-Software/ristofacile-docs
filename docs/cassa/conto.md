@@ -25,7 +25,7 @@ documento. La usa il cassiere, o chiunque in sala sia abilitato a incassare.
 A fine pasto il cliente chiede il conto: dalla comanda del tavolo tocchi **CONTO** e arrivi qui.
 Scrivi quanto paga in contanti, con carta o con altri metodi (oppure tocchi il nome del metodo e
 la cassa ci mette l'importo esatto), scegli se emettere lo scontrino o la fattura e tocchi
-**INCASSA E STAMPA**. Lo scontrino lo emette il servizio sulla stampante fiscale dell'impianto;
+**INCASSA E STAMPA**. Lo scontrino lo emette il servizio sulla stampante fiscale di questa postazione (la predefinita dell'impianto, se non ne hai scelta una);
 a chiusura riuscita il tavolo si libera e torni alla mappa della sala.
 
 Se il tavolo paga separatamente, da qui si apre la [divisione del conto](dividi-conto.md), che
@@ -33,7 +33,7 @@ ripartisce le voci su più conti e li fa incassare uno per uno, ciascuno con il 
 
 ## Prima di cominciare
 
-- Una **stampante fiscale** configurata sull'impianto ([Impostazioni](impostazioni.md) ▸ **Stampante fiscale**): senza, lo scontrino non si emette e il conto resta aperto (vedi [Controlli e messaggi](#controlli-e-messaggi)).
+- Una **stampante fiscale** configurata sull'impianto ([Impostazioni](impostazioni.md) ▸ **Stampanti fiscali**): senza, lo scontrino non si emette e il conto resta aperto (vedi [Controlli e messaggi](#controlli-e-messaggi)).
 - Per usare **Sconto** e **Abbuono**, l'operatore deve avere **Puo' applicare sconti** e uno **Sconto massimo** in [Operatori](operatori.md).
 - Per **CHIUDI SENZA DOCUMENTO** e per l'addebito in camera, l'operatore deve avere **Puo' chiudere il conto** in [Operatori](operatori.md).
 - Se la sala del tavolo prevede una percentuale di servizio ([Sale e tavoli](sale-e-tavoli.md)), in [Articoli](articoli.md) deve esistere l'articolo **SERVIZIO** con un'aliquota IVA che abbia un reparto della cassa.
@@ -111,7 +111,7 @@ gli importi non si possono più modificare: il conto registrerà esattamente que
 |---|---|
 | **Dividi** | Apre la [divisione del conto](dividi-conto.md). |
 | Nome di un metodo (**Contanti**, **Carta**, **Bancomat**, **Buoni pasto**, **Credito**) | Aggiunge a quel metodo l'importo che manca per coprire il totale. |
-| **Scontrino** | Il conto si chiude con lo scontrino, emesso sulla stampante fiscale dell'impianto. |
+| **Scontrino** | Il conto si chiude con lo scontrino, emesso sulla stampante fiscale di questa postazione. |
 | **Fattura** | Il conto si chiude con una fattura; se il cliente non è ancora scelto si apre subito il pannello **Cliente della fattura**. |
 | **Camera** | Il conto si addebita alla camera di un ospite dell'hotel: niente scontrino, il documento lo emette l'hotel al check-out. Azzera gli importi dei metodi di pagamento e apre la scelta della camera. |
 | **INCASSA E STAMPA** | Con **Scontrino**: incassa (carta e cassa automatica, se usate) ed emette lo scontrino. Il testo del pulsante cambia con la situazione: **INCASSA ED EMETTI FATTURA** con la fattura, **ADDEBITA IN CAMERA** con la camera, **STAMPA SCONTRINO** o **EMETTI FATTURA** quando la carta è già stata addebitata. |
@@ -285,6 +285,8 @@ tavolo come «preconto» sulla mappa della sala.
 | *Scrivi prima l'indirizzo email del cliente.* | Hai acceso **Invia copia per email** senza indirizzo. | Compila **Email**. |
 | *Sul conto c'e' il servizio N%, ma in anagrafica manca l'articolo SERVIZIO con la sua aliquota IVA, o la sua aliquota non ha un reparto della cassa: va creato o sistemato prima di emettere il documento.* | La sala ha il servizio ma l'articolo SERVIZIO manca o è incompleto. | Crea o sistema l'articolo in [Articoli](articoli.md). |
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Il servizio non ha una stampante fiscale. Il conto resta aperto. | Configura la stampante fiscale, oppure chiudi senza documento e documenta più tardi dallo Storico. |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | La stampante scelta per questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in Impostazioni ▸ **Stampanti fiscali** ▸ **Stampante di questa postazione**; nel frattempo puoi usare CHIUDI SENZA DOCUMENTO. |
+| *La stampante fiscale n. X non è configurata (manca l'indirizzo).* | La stampante scelta non ha l'indirizzo. | Scrivilo nella scheda della stampante, in Impostazioni ▸ **Stampanti fiscali**. |
 | *La stampante fiscale non ha risposto: … Premi di nuovo INCASSA E STAMPA: il servizio controlla se lo scontrino e' uscito e non lo ristampa.* | Comunicazione con la stampante interrotta: lo scontrino potrebbe essere uscito. Gli importi si bloccano. | Tocca di nuovo il pulsante: il servizio verifica sulla stampante e non emette due volte. |
 | **Scontrino: esito incerto** — *… Guarda la stampante fiscale: lo scontrino di € X e' uscito?* | Il servizio non è riuscito a rileggere la stampante. | Guarda la carta: tocca **E' uscito** o **Non e' uscito**. |
 | *… Il conto resta aperto.* | La stampante fiscale ha rifiutato l'emissione (il motivo è nella prima parte del messaggio, quello della stampante). Non è uscito niente. | Risolvi il problema (carta, coperchio, stampante spenta) e tocca di nuovo il pulsante. |

@@ -93,7 +93,7 @@ I dati da inserire, app per app:
    PIN). Si apre la mappa della sala con il tuo nome in turno.
 6. Completa le impostazioni della cassa (vedi [Impostazioni](../cassa/impostazioni.md)):
     - **Stampante preconto**: la stampante vicino alla cassa;
-    - **Stampante fiscale**: il registratore telematico;
+    - **Stampanti fiscali**: i registratori telematici (uno per cassa, se ne hai più d'uno) e quale usa questa cassa;
     - **Pagamento con carta** e **Cassa automatica**, se ci sono;
     - **Sala ▸ Tavolo asporto**, se fai asporto o domicilio;
     - **Dati fiscali**, se emetti fatture elettroniche.
@@ -161,7 +161,7 @@ Vedi anche [Scelta del centro](../kds/centro.md) e [Monitor](../kds/monitor.md).
 - La licenza digitale si può attivare anche più tardi: nel frattempo cassa e palmare lavorano in
   modalità dimostrativa, con la finestra della demo che compare sempre più spesso.
 - Collegamento, stampante scelta, terminale POS, tavolo dell'asporto e tema valgono per il
-  singolo dispositivo: vanno impostati su ciascuno. Elenco delle stampanti, stampante fiscale e
+  singolo dispositivo: vanno impostati su ciascuno. Elenco delle stampanti, elenco delle stampanti fiscali e
   dati della ditta valgono per tutto il locale e si impostano una volta.
 - Se reinstalli l'app su un iPhone o un iPad, il collegamento al servizio va reimpostato.
 

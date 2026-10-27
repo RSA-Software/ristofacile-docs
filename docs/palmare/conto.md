@@ -33,7 +33,7 @@ configurata per il locale.
 ## Prima di cominciare
 
 - Tutti i piatti devono essere stati mandati in cucina: il pulsante **CONTO** compare solo allora.
-- Una stampante fiscale configurata sul servizio (vedi [Impostazioni](impostazioni.md)).
+- Una stampante fiscale configurata sul servizio e, se ce n'è più d'una, quella di questo palmare scelta in [Impostazioni](impostazioni.md) (altrimenti vale la predefinita).
 - Per incassare con la carta dal palmare: un terminale POS assegnato al palmare in
   Impostazioni ▸ **Pagamento con carta**. Senza, la carta si batte a mano sul POS e qui si scrive
   solo l'importo.
@@ -214,6 +214,8 @@ addebita di nuovo la carta.
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Fattura dopo lo scontrino. | Fai la fattura dal gestionale. |
 | *Pagamento con carta non riuscito: …* | Il terminale ha rifiutato la carta. Il conto resta aperto. | Riprova o cambia metodo. |
 | *Nessuna risposta dal terminale: … IL PAGAMENTO POTREBBE ESSERE PASSATO LO STESSO. …* | Il terminale non ha risposto in tempo. | Controlla sul POS (o la sua ultima ricevuta) **prima** di riprovare. |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | La stampante scelta per questo palmare è stata tolta dall'elenco. | Scegline un'altra in Impostazioni ▸ **Stampanti fiscali**; nel frattempo usa CHIUDI SENZA DOCUMENTO se sei abilitato. |
+| *La stampante fiscale n. X non è configurata (manca l'indirizzo).* | La stampante scelta non ha l'indirizzo. | Fallo scrivere dalla cassa, in Impostazioni ▸ **Stampanti fiscali**. |
 | *La stampante fiscale non ha risposto: …* | Lo scontrino potrebbe essere uscito. | Tocca di nuovo il pulsante di incasso: il servizio controlla e non ristampa. Non rifar passare la carta. |
 | **Scontrino: esito incerto** — *… Guarda la stampante fiscale: lo scontrino di € 42,00 e' uscito?* | Il servizio non riesce a sapere se lo scontrino è uscito. | Guarda la stampante e rispondi **E' uscito** o **Non e' uscito**. |
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Nessuna stampante fiscale. | Chiudi senza documento e documenta poi dalla cassa ([Storico conti](../cassa/storico-conti.md)). |

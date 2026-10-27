@@ -210,7 +210,7 @@ prezzi. Vedi [Sale e tavoli](../cassa/sale-e-tavoli.md).
 ### Scontrino
 
 Il documento fiscale del conto. Lo emette il [servizio del locale](#servizio-del-locale) sulla
-stampante fiscale, quando nel [Conto](../cassa/conto.md) si tocca **INCASSA E STAMPA** con
+stampante fiscale della postazione che incassa (la predefinita dell'impianto, se la postazione non ne ha scelta una), quando nel [Conto](../cassa/conto.md) si tocca **INCASSA E STAMPA** con
 **Scontrino** acceso. Se la stampante non risponde il conto resta aperto.
 
 ### Separa

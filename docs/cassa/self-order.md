@@ -70,6 +70,7 @@ sinistra compare l'esito dell'ultima operazione.
 | **Pezzi per ordine** | Quanti piatti al massimo può mandare un telefono in un solo invio, da 1 a 99 (proposto 15). |
 | **Proxy fidati** | Da compilare solo se lo dice chi ha installato il servizio; altrimenti lascialo vuoto. |
 | Riga della stampante | Dice dove esce la comanda di un ordine dal telefono se il centro di produzione non stampa: sulla stampante delle comande di questa cassa, oppure solo ai centri di produzione se la cassa non ne ha una. |
+| **Stampante fiscale per il saldo dal telefono** | La stampante su cui esce lo scontrino quando il conto viene saldato dal telefono. La prima voce è **Predefinita dell'impianto**; si sceglie fra le stampanti dell'elenco di [Impostazioni ▸ Stampanti fiscali](impostazioni.md#stampanti-fiscali). Si salva con **Salva**. |
 | Riga della licenza | Dice se il modulo è in licenza, in prova o assente. |
 | Codice del tavolo (linguetta **Codici QR**) | Il codice di sei caratteri che sta nel QR del tavolo, oppure *senza codice*. |
 
@@ -165,7 +166,7 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 - **Pagamento dal telefono.** Il cliente paga tutto oppure una quota, dividendo il conto per il
   numero di persone (la quota è arrotondata per eccesso al centesimo). Paga sulla pagina di Nexi:
   il locale non vede mai la carta. Quando i pagamenti dal telefono coprono tutto il conto, il
-  servizio chiude il tavolo da solo ed emette lo scontrino sulla stampante fiscale del locale.
+  servizio chiude il tavolo da solo ed emette lo scontrino sulla stampante fiscale scelta per il saldo dal telefono (la predefinita, se non ne hai scelta una).
 - Se chiudi il conto in cassa mentre un cliente sta pagando, il suo pagamento viene annullato; se
   arriva lo stesso, resta da rimborsare e compare l'avviso 💶.
 
