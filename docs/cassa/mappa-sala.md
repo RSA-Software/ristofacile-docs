@@ -192,3 +192,4 @@ manda in cucina.
 - [Vendita al banco](vendita-al-banco.md)
 - [Messaggi alla cucina](messaggi.md)
 - [Sala sul palmare](../palmare/sala.md)
+- [Self order](self-order.md)

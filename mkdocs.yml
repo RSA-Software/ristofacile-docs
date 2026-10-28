@@ -139,6 +139,7 @@ nav:
       - Centri di produzione: cassa/centri-di-produzione.md
       - Tabelle di base: cassa/tabelle-di-base.md
       - Menu: cassa/menu.md
+      - Self order: cassa/self-order.md
       - Articoli: cassa/articoli.md
       - Modificatori: cassa/modificatori.md
       - Varianti: cassa/varianti-anagrafica.md
@@ -167,3 +168,4 @@ nav:
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi a video: appendici/messaggi.md
+      - Pubblicare il self order su internet: appendici/self-order-internet.md

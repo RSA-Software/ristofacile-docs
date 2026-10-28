@@ -24,15 +24,15 @@ titolare o di chi installa l'impianto; il cassiere la apre di solito solo per us
 ## A cosa serve
 
 Alcune impostazioni valgono **solo per questa cassa** (il servizio a cui si collega, il tavolo
-dell'asporto, quale stampante, quale POS e quale cassa automatica usa, il tema), altre valgono
+dell'asporto, quale stampante (anche fiscale), quale POS e quale cassa automatica usa, il tema), altre valgono
 **per tutto l'impianto** e le vedono tutte le postazioni (l'elenco delle stampanti, dei terminali
-POS e delle casse automatiche, la stampante fiscale, i modelli di stampa, i dati della ditta, il
+POS e delle casse automatiche, l'elenco delle stampanti fiscali, i modelli di stampa, i dati della ditta, il
 menu online, il codice di addebito in camera). Ogni pannello lo dice nella sua riga di
 descrizione o nel messaggio che compare dopo il salvataggio.
 
-Esempio: in un locale con due casse al banco e una sola stampante fiscale, la stampante fiscale si
-imposta una volta; la stampante del preconto invece si sceglie su ciascuna cassa, perché ognuna
-stampa su quella che ha vicino.
+Esempio: in un locale con due casse al banco, ciascuna con il suo registratore, le due stampanti
+fiscali si registrano una volta nell'elenco dell'impianto e poi ogni cassa sceglie la sua; lo stesso
+vale per la stampante del preconto, che ognuna sceglie fra quelle vicine.
 
 ## Prima di cominciare
 
@@ -50,10 +50,11 @@ stampa su quella che ha vicino.
 La schermata è divisa in due:
 
 - **a sinistra** l'elenco delle voci: **Turno**, **Connessione**, **Sala**, **Stampante preconto**,
-  **Modelli di stampa**, **Stampante fiscale**, **Pagamento con carta**, **Cassa automatica**,
+  **Modelli di stampa**, **Stampanti fiscali**, **Pagamento con carta**, **Cassa automatica**,
   **Dati fiscali**, **Aspetto**, **Menu online**, **Hotel**, **Licenza**. Sotto ogni nome, in
-  piccolo, c'è lo stato attuale (per esempio chi è in turno, l'indirizzo del servizio, il tipo di
-  stampante fiscale, il terminale POS in uso);
+  piccolo, c'è lo stato attuale (per esempio chi è in turno, l'indirizzo del servizio, il terminale
+  POS in uso; per le stampanti fiscali, per esempio, *2 · qui n. 2*, cioè 2 stampanti e questa
+  cassa usa la n. 2);
 - **a destra** il pannello della voce scelta, con in testa titolo e una riga che dice a cosa
   serve, e in fondo i pulsanti e il messaggio con l'esito dell'ultima operazione.
 
@@ -158,20 +159,79 @@ Sotto la voce, a sinistra, si legge l'indirizzo della stampante in uso.
 
 <!-- DA VERIFICARE: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa. -->
 
-### Stampante fiscale
+### Stampanti fiscali
 
-![Stampante fiscale](../assets/img/cassa/impostazioni-fiscale.png)
+![Stampanti fiscali](../assets/img/cassa/impostazioni-fiscale.png)
 
-*Il registratore telematico su cui esce lo scontrino quando si chiude il conto.* Vale per tutto
-l'impianto.
+*I registratori telematici dell'impianto: lo scontrino esce su quello della postazione che chiude il conto.*
+Un impianto può avere **più stampanti fiscali**, per esempio una per ogni cassa. L'elenco vale per
+tutto l'impianto; quale stampante usa questa cassa vale solo qui.
 
-| Elemento | Descrizione |
+Il pannello ha due parti.
+
+**Stampanti dell'impianto** (a sinistra) è l'elenco: per ogni stampante si legge *n. numero · descrizione*,
+sotto la marca e l'indirizzo, e a destra la scritta **PREDEFINITA** e, per quella che usa questa cassa,
+la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne aggiunge una.
+
+![La scheda della stampante](../assets/img/cassa/impostazioni-fiscale-modale.png)
+
+| Elemento della scheda | Descrizione |
 |---|---|
-| **Tipo** | La marca del registratore: **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**. |
-| **Indirizzo (IP o IP:porta)** | L'indirizzo del registratore in rete, per esempio `192.168.1.100`. Con **Ditron** l'etichetta diventa **Porta logica (driver WinEcrCom)** e si scrive il numero della porta (per esempio `1`): il Ditron non sta in rete ma è collegato al computer del servizio. |
-| Riga di esito | Per esempio *Stampante fiscale: Epson - 192.168.1.100.* oppure *Nessuna stampante fiscale configurata.* |
+| **Numero** | Da 1 a 99, diverso per ogni stampante. È anche il **numero di cassa** che compare sugli scontrini di quella stampante e che conta per la licenza. **+ NUOVA** propone il primo numero libero. Quando correggi una stampante il numero non si cambia (la scheda dice *Il numero è il numero di cassa sugli scontrini e nella licenza: per cambiarlo elimina la stampante e aggiungila di nuovo.*). |
+| **Descrizione** | Il nome che riconosci, per esempio *Cassa 1*, *Banco bar*. |
+| **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**. |
+| **Indirizzo (IP o IP:porta)** | L'indirizzo del registratore in rete, per esempio `192.168.1.100`. Con **Ditron** si scrive la porta logica del driver WinEcrCom, perché il Ditron è collegato al computer del servizio. |
+| **Predefinita** | La usano le postazioni che non ne scelgono una. Ce n'è una sola: scegliendo questa, l'altra smette di esserlo. |
+| **Verifica** | Interroga il registratore con i valori che hai scritto, prima di salvare. |
+| **Elimina** | Toglie la stampante dall'elenco (chiede conferma). Compare solo quando ne correggi una. La conferma dice anche se la usa questa postazione o il [self order](self-order.md) per lo scontrino del saldo dal telefono. |
 
-Sotto la voce, a sinistra, si legge il tipo scelto.
+**Su questa postazione** (a destra):
+
+- **Stampante di questa postazione** sceglie la stampante su cui escono gli scontrini dei conti chiusi
+  da questa cassa. La prima voce è **Predefinita dell'impianto**: chi non sceglie nulla usa quella.
+  La scelta vale solo per questa cassa e resta anche dopo che l'hai chiusa e riaperta.
+- **Verifica stato** interroga la stampante di questa postazione.
+- **Chiusura giornaliera** fa la chiusura fiscale (la Z) della stampante di questa postazione, dopo
+  una conferma che ne dice il nome.
+- **Chiudi tutte** fa la Z di ogni stampante dell'impianto, una dopo l'altra, per chi fa la
+  chiusura serale da una sola cassa. Sotto compare l'esito **per stampante** (*CHIUSA* oppure
+  *NON CHIUSA* con il motivo): una stampante spenta non ferma le altre. Premendo di nuovo
+  **Chiudi tutte** la chiusura si ripete anche sulle stampanti che si erano già chiuse (una seconda
+  chiusura a importo zero, senza danni): per riprovare una sola stampante, sceglila come stampante
+  di questa postazione e usa **Chiusura giornaliera**. Due stampanti dell'elenco con lo **stesso
+  indirizzo** sono la stessa stampante fisica: la Z si fa una volta sola e la seconda riga dice
+  *Stessa stampante della n. X: chiusa con quella.* Una stampante senza indirizzo non si chiude e
+  non conta come errore: la riga dice *Saltata: manca l'indirizzo.* con la scritta **SALTATA**.
+- In fondo, *Questa postazione emette su …* ricorda la stampante in uso.
+
+Se due postazioni usano la **stessa stampante fisica**, le loro richieste vanno in coda e nessuna
+va persa.
+
+!!! warning "Numeri di cassa e licenza"
+
+    Ogni stampante dell'elenco è una cassa per la licenza, anche quando due voci indicano la stessa
+    stampante fisica: due voci con lo stesso indirizzo contano come **due casse**. Per far emettere
+    due postazioni sulla stessa stampante, lascia una sola voce e falla scegliere a entrambe.
+
+!!! note "Due casse che modificano l'elenco insieme"
+
+    **Salva** ed **Elimina** mandano al servizio l'elenco intero, così come lo vede questa cassa.
+    Se due casse modificano l'elenco nello stesso momento vale l'ultimo salvataggio: la modifica
+    dell'altra va persa. Prima di cambiare l'elenco, riapri **Impostazioni** per vederlo aggiornato.
+
+!!! note "Se la stampante della postazione viene tolta"
+
+    Se elimini dall'elenco la stampante scelta da una cassa (o da un palmare), quella postazione non
+    passa da sola alla predefinita: finché non ne sceglie un'altra non può chiudere con lo scontrino e
+    mostra *La stampante fiscale n. X non è nell'elenco del servizio.* Nell'elenco della postazione la
+    voce compare come *n. X (non più nell'elenco)*.
+
+!!! info "Impianti già in funzione"
+
+    La stampante fiscale che avevi configurato prima diventa da sola la **predefinita**, con
+    numero uguale al numero di cassa della ditta (oppure 1). Non devi rifare niente.
+
+Le **Chiusure giornaliere** si fanno solo dalla cassa: il palmare non ha i pulsanti della Z.
 
 ### Pagamento con carta
 
@@ -314,7 +374,9 @@ con i pulsanti **Attiva** e **Disattiva questo dispositivo**. È descritto nella
 | **Stampa di prova** (Stampante preconto) | Manda una pagina di prova all'indirizzo scritto. |
 | **Verifica stato** (Stampante preconto) | Chiede alla stampante se è pronta. |
 | **Togli** (Stampante preconto) | Toglie la stampante scelta dall'elenco dell'impianto, per tutte le casse (chiede conferma). |
-| **Salva** / **Verifica stato** (Stampante fiscale) | Salva tipo e indirizzo sull'impianto / interroga il registratore. |
+| **+ NUOVA** / **Salva** / **Elimina** (Stampanti fiscali) | Aggiunge una stampante all'elenco dell'impianto / salva la scheda / la toglie (chiede conferma). |
+| **Verifica** / **Verifica stato** (Stampanti fiscali) | Interroga il registratore scritto nella scheda / quello di questa postazione. |
+| **Chiusura giornaliera** / **Chiudi tutte** (Stampanti fiscali) | Fa la Z della stampante di questa postazione / di tutte le stampanti dell'impianto. |
 | **+  NUOVO** (Pagamento con carta) | Apre una scheda vuota per un nuovo terminale. |
 | **Salva** / **Togli** / **Chiudi** (scheda del terminale) | Salva il terminale nell'elenco dell'impianto / lo toglie (chiede conferma) / chiude la scheda. |
 | **Usa su questa cassa** (Pagamento con carta) | Da adesso questa cassa incassa le carte sul terminale scelto, con l'**ID cassa** scritto. |
@@ -397,7 +459,9 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Salvata solo su questa cassa (*indirizzo*): l'impianto non risponde (*…*).* | Il servizio non risponde: la stampante è stata salvata solo su questa cassa. | Riprova quando il servizio è raggiungibile, per averla nell'elenco dell'impianto. |
 | *Stampa di prova non riuscita.* | La stampante non ha stampato. | Controlla che sia accesa, in rete e con la carta. |
 | *Scegli prima una stampante dall'elenco dell'impianto.* | **Togli** senza una stampante scelta. | Scegli la stampante in **Stampanti dell'impianto**. |
-| *Inserisci l'indirizzo della stampante fiscale.* | **Salva** o **Verifica stato** con l'indirizzo vuoto. | Scrivi l'indirizzo (o la porta logica per Ditron). |
+| *Inserisci l'indirizzo della stampante fiscale.* | **Salva** o **Verifica** con l'indirizzo vuoto. | Scrivi l'indirizzo (o la porta logica per Ditron). |
+| *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
+| *La stampante fiscale n. X non è nell'elenco del servizio.* | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
 | *Verifica della stampante fiscale fallita.* | Il registratore non risponde o segnala un errore. | Leggi il dettaglio e controlla il registratore. |
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Numero o porta del terminale non validi. | Correggi il campo. |
 | *Scegli un terminale dall'elenco.* | **Usa su questa cassa** senza un terminale scelto. | Tocca un terminale in elenco. |
@@ -419,10 +483,10 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 
 - **Cosa vale per chi.** Collegamento, turno, tavolo dell'asporto, stampante scelta, terminale POS
   e cassa automatica in uso, i tre valori di **Mappa e servizio** e il tema valgono solo per questa
-  cassa. Elenco delle stampanti, dei terminali e delle macchine, stampante fiscale, modelli di
+  cassa. Elenco delle stampanti, dei terminali e delle macchine, elenco delle stampanti fiscali, modelli di
   stampa, dati fiscali, menu online e codice di addebito in camera valgono per tutto l'impianto.
-- La stampante fiscale si imposta anche dal [palmare](../palmare/impostazioni.md): è la stessa
-  impostazione dell'impianto, chi salva per ultimo vince.
+- L'elenco delle stampanti fiscali si gestisce dalla cassa; il [palmare](../palmare/impostazioni.md)
+  lo legge e sceglie la propria stampante.
 - **Togli** su stampanti, terminali e macchine li toglie per **tutte** le casse: quelle che li
   usavano tornano a lavorare a mano finché non ne scelgono un altro.
 

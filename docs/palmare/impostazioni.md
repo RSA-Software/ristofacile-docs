@@ -40,7 +40,7 @@ Rispetto alla cassa, sul palmare:
 
 - Sul palmare non si creano sale, tavoli e operatori: devono già esistere, creati dalla cassa
   ([Sale e tavoli](../cassa/sale-e-tavoli.md), [Operatori](../cassa/operatori.md)).
-- Le stampanti, i terminali POS e la stampante fiscale sono quelli dell'impianto e si registrano
+- Le stampanti, i terminali POS e le stampanti fiscali sono quelli dell'impianto e si registrano
   dalla cassa ([Impostazioni della cassa](../cassa/impostazioni.md)): dal palmare si sceglie solo
   quali usare.
 
@@ -50,7 +50,7 @@ Rispetto alla cassa, sul palmare:
 
 Un'unica colonna di riquadri da scorrere, nell'ordine: **Connessione**, **Asporto**, **Stampante
 preconto**, **Prenotazioni in mappa**, **Aggiornamento automatico**, **Pagamento con carta**,
-**Stampante fiscale**, **Turno**, **Richiamo dalla cucina**, **Aspetto** e in fondo **Licenza
+**Stampanti fiscali**, **Turno**, **Richiamo dalla cucina**, **Aspetto** e in fondo **Licenza
 digitale**. Ogni riquadro ha i suoi pulsanti e, sotto, la riga con l'esito.
 
 ## Campi e indicatori
@@ -127,20 +127,22 @@ Un terminale nuovo, o uno da correggere o togliere, si gestisce da
 Con l'impianto senza terminali la riga di esito dice *Nessun terminale sull'impianto: si
 aggiungono dalla cassa.*
 
-### Stampante fiscale
+### Stampanti fiscali
 
-![Stampante fiscale](../assets/img/palmare/impostazioni-fiscale.png){ .telefono }
+*I registratori telematici dell'impianto. Si gestiscono dalla cassa; qui si sceglie quale usare.*
 
-*Il registratore telematico dell'impianto, lo stesso della cassa. Si imposta dalla cassa.*
+Il riquadro mostra l'elenco delle stampanti fiscali dell'impianto, in sola lettura (numero,
+descrizione, marca, indirizzo, **PREDEFINITA**), e sotto la tendina **Stampante di questo palmare**:
+la prima voce è **Predefinita dell'impianto**, scelta da chi non sceglie nulla. Gli scontrini dei
+conti chiusi da questo palmare escono sulla stampante scelta. Con una stampante in uso c'è
+**Verifica stato**, che interroga il registratore come sulla cassa.
 
-Il riquadro è in sola lettura: mostra il tipo e l'indirizzo della stampante fiscale (per esempio
-**3i** e `192.168.1.144`), oppure *Nessuna stampante fiscale impostata.* Con una stampante
-impostata c'è **Verifica stato**, che interroga il registratore come sulla cassa.
+Per aggiungere, correggere o togliere una stampante vai in
+[Impostazioni della cassa ▸ Stampanti fiscali](../cassa/impostazioni.md#stampanti-fiscali).
+Se la stampante scelta viene tolta dall'elenco, il palmare non chiude con lo scontrino finché non
+ne sceglie un'altra (*La stampante fiscale n. X non è nell'elenco del servizio.*).
 
-La stampante fiscale è una sola per tutto l'impianto: si cambia da
-[Impostazioni della cassa ▸ Stampante fiscale](../cassa/impostazioni.md#stampante-fiscale).
-
-<!-- DA VERIFICARE: confermare se dal palmare lo scontrino al conto esce davvero sulla stampante fiscale. -->
+Il palmare **non ha** i pulsanti della chiusura giornaliera (la Z): si fa dalla cassa.
 
 ### Turno
 
@@ -187,7 +189,7 @@ palmare occupa sempre un posto **Mobile** della licenza. Vedi
 | **Salva tavolo asporto** | Salva sala e tavolo dell'asporto per questo palmare. |
 | **Stampa di prova** / **Verifica stato** | Stampante del preconto scelta per questo palmare. |
 | **Usa qui** / **Verifica stato** / **Carte a mano** / **Aggiorna elenco** | Terminale POS di questo palmare. |
-| **Verifica stato** | Interroga la stampante fiscale dell'impianto. |
+| **Verifica stato** | Interroga la stampante fiscale in uso su questo palmare. |
 | **ESCI** / **ACCEDI** | Chiude il turno / apre l'accesso. |
 | **Avvisami quando è pronto**, **Solo i miei tavoli** | Accendono e spengono il richiamo dalla cucina. |
 | **Scuro** / **Chiaro** / **Sistema** | Cambiano il tema. |
@@ -227,7 +229,7 @@ Quelli propri del palmare:
 
 - Alcuni messaggi dicono «cassa» anche sul palmare (per esempio *Questa cassa stampa su…*): si
   riferiscono a questo palmare.
-- Stampanti, terminali POS e stampante fiscale sono dell'impianto e valgono per tutti i
+- Stampanti, terminali POS ed elenco delle stampanti fiscali sono dell'impianto e valgono per tutti i
   dispositivi: per questo dal palmare non si modificano, così una prova fatta da un telefono non
   cambia la configurazione delle casse.
 - Su Samsung, se le notifiche smettono di arrivare dopo un po', togli RistoApp dal risparmio
