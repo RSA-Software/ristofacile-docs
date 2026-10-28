@@ -268,21 +268,37 @@ L'elenco delle macchine vale per tutto l'impianto; quale macchina usa questa cas
 | **Macchine** | L'elenco delle casse automatiche dell'impianto; quella usata da questa cassa porta **IN USO**. Tocca una macchina per aprirne la scheda, o **+  NUOVA** per aggiungerne una. |
 | **Numero** | Il numero della macchina nell'impianto (maggiore di zero). |
 | **Descrizione** | Il nome in elenco, per esempio *Self ingresso*. |
-| **Marca** | **PagAmico** o **VNE**. |
+| **Marca** | **PagAmico**, **VNE**, **CashDro** o **Cashlogy**. I campi e i pulsanti della scheda cambiano con la marca: vedi [Le marche](#le-marche-delle-casse-automatiche). |
 | **Indirizzo IP** | Dove si trova la macchina in rete. Obbligatorio. |
-| **Porta** | Vuota = la porta di fabbrica della marca (è mostrata in grigio nel campo). |
+| **Porta** | Vuota = la porta di fabbrica della marca (è mostrata in grigio nel campo): 9100 per PagAmico, 443 per VNE e CashDro (80 se l'indirizzo della CashDro comincia con `http://`), 8092 per Cashlogy. |
 | **Password erogazione** | Solo per PagAmico: la password di erogazione impostata sulla macchina. Senza, la macchina rifiuta i comandi che danno denaro (resto, prelievo). |
-| **POS collegato alla macchina** | **SI'**: *la carta la incassa la macchina.* **NO**: *la carta va sul POS del bancone.* |
+| **Utente POS** / **Password POS** | Solo per CashDro, obbligatori: l'utente e la password creati sulla macchina, che li danno CashDro o il rivenditore. |
+| **Impronta del certificato (facoltativa)** | Solo per CashDro: *Lasciala vuota alla prima prova: il servizio scrive nel giornale quella vista.* Copiata qui dal giornale, il servizio parla solo con quella macchina. Sono 64 cifre esadecimali; i due punti si possono lasciare. |
+| **POS collegato alla macchina** | Solo per PagAmico e VNE, le macchine che hanno anche un POS. **SI'**: *la carta la incassa la macchina.* **NO**: *la carta va sul POS del bancone.* |
 | **Questa cassa incassa i contanti su** | In fondo al pannello: la macchina in uso, oppure *Nessuna macchina: i contanti si incassano a mano*. |
 
 Nel riquadro **Su questa cassa**, visibile con una macchina scelta:
 
 | Elemento | Descrizione |
 |---|---|
-| *Incasso rimasto aperto (per esempio dopo un riavvio)? Sblocca restituisce al cliente quello che ha inserito.* | Spiega il pulsante **Sblocca incasso**. |
+| *Incasso rimasto aperto (per esempio dopo un riavvio)? Sblocca restituisce al cliente quello che ha inserito.* | Spiega il pulsante **Sblocca incasso**. Con una Cashlogy si legge invece *Un incasso rimasto aperto si annulla dalla finestra del Cashlogy Connector, sul PC della macchina.* |
 | Importo (*€ 0,00*) | L'importo da prelevare. |
 
 La cassa automatica è solo della cassa: il palmare non la usa.
+
+#### Le marche delle casse automatiche
+
+| Marca | Incassa | Carta | Chiudi trattenendo | Preleva | Ricarica | Sblocca incasso |
+|---|---|---|---|---|---|---|
+| **PagAmico** | sì | sì, se ha il POS | sì | sì | sì | sì |
+| **VNE** | sì | sì, se ha il POS | sì | sì | dal pannello della macchina | sì |
+| **CashDro** | sì, solo contanti | no | no | no | dal pannello della macchina | sì |
+| **Cashlogy** | sì, solo contanti | no | no | sì | dalla finestra del Connector | dalla finestra del Connector |
+
+- **CashDro.** La cassa le parla in https. La CashDro non eroga denaro su comando: un rimborso o un resto che la macchina non ha dato si consegnano a mano.
+  <!-- DA VERIFICARE: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota). -->
+- **Cashlogy.** La cassa non parla con la macchina ma con il **Cashlogy Connector**, il programma di Cashlogy installato sul PC collegato alla macchina. **Il Connector va avviato su quel PC**: la cassa non lo avvia. La finestra di pagamento la apre il Connector, e un incasso già avviato si annulla solo da quella finestra. Se il Connector è stato riavviato e gli incassi non partono, tocca **Verifica stato**: rimette in contatto la cassa con il Connector.
+  <!-- DA VERIFICARE: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector. -->
 
 ### Dati fiscali
 
@@ -385,9 +401,9 @@ con i pulsanti **Attiva** e **Disattiva questo dispositivo**. È descritto nella
 | **+  NUOVA** (Cassa automatica) | Apre una scheda vuota per una nuova macchina. |
 | **Salva** / **Togli** / **Chiudi** (scheda della macchina) | Salva la macchina nell'elenco dell'impianto / la toglie (chiede conferma) / chiude la scheda. |
 | **Usa su questa cassa** (Cassa automatica) | Da adesso questa cassa incassa i contanti sulla macchina scelta. |
-| **Verifica stato** (Cassa automatica) | Interroga la macchina. |
-| **Sblocca incasso** | Chiude un incasso rimasto aperto restituendo al cliente il contante inserito (chiede conferma). |
-| **Preleva** | Fa erogare dalla macchina l'importo scritto (chiede conferma). |
+| **Verifica stato** (Cassa automatica) | Interroga la macchina. Con la Cashlogy rimette anche in contatto la cassa con il Connector. |
+| **Sblocca incasso** | Chiude un incasso rimasto aperto restituendo al cliente il contante inserito (chiede conferma). Non c'è con la Cashlogy. Se la macchina non restituisce tutto, un avviso dice quanto denaro del cliente è rimasto dentro (e, a parte, il resto non erogato da dare a mano): va cercato nel giornale del servizio e restituito o registrato sul suo conto. Se la macchina non dice com'è finita (l'esito non arriva in tempo, o la macchina non dice quanto era entrato), l'avviso comincia con *ATTENZIONE* e chiede di controllare la macchina prima di dire che non è entrato denaro. |
+| **Preleva** | Fa erogare dalla macchina l'importo scritto (chiede conferma). Non c'è con la CashDro. |
 | **Ricarica** | Apre la ricarica del fondo cassa (solo PagAmico; sulla VNE la ricarica si fa dal pannello della macchina). |
 | **FINE RICARICA** | Nella finestra della ricarica: chiude la ricarica. |
 | **Contanti a mano** | Questa cassa non usa più nessuna macchina: i contanti si incassano a mano. |
@@ -469,6 +485,9 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Il servizio non ha restituito nessun terminale: resta valido quello gia' scelto su questa cassa.* | Il servizio non ha dato l'elenco. | La cassa continua a usare il terminale scelto; riprova più tardi. |
 | *Inserisci l'indirizzo IP della cassa automatica.* | **Salva** senza indirizzo. | Scrivi l'indirizzo. |
 | *La porta dev'essere un numero maggiore di zero (lasciala vuota per quella di fabbrica).* | Porta non valida. | Correggi o svuota il campo. |
+| *La CashDro vuole l'utente e la password POS creati sulla macchina (li da' CashDro o il rivenditore).* | **Salva** di una CashDro senza **Utente POS** o **Password POS**. | Scrivi utente e password. |
+| *L'impronta del certificato e' fatta di 64 cifre esadecimali (i due punti si possono lasciare).* … | L'impronta scritta non è valida. | Ricopiala dal giornale del servizio, o lasciala vuota. |
+| *Non riesco a leggere le casse automatiche dal servizio: finche' non le leggo, non si salva …* / *Le casse automatiche dell'impianto non si leggono dal servizio: non salvo, …* | Il servizio non ha dato l'elenco delle macchine. **Salva** e **Togli** sono bloccati, perché salvare sostituirebbe l'elenco dell'impianto con la sola macchina a video. | Riapri la pagina quando il servizio risponde. Se il dettaglio parla del file delle casse automatiche danneggiato, va corretto o tolto sul PC del servizio. |
 | *Scrivi l'importo da prelevare, per esempio 50 o 12,50.* | **Preleva** senza un importo valido. | Scrivi l'importo. |
 | *Prelievo dalla cassa automatica.* (con *Il contante potrebbe essere uscito lo stesso: controlla la macchina prima di riprovare.*) | La macchina non ha risposto durante il prelievo. | Controlla la macchina **prima** di ripetere: potresti prelevare due volte. |
 | *Ricarica della cassa automatica.* (con *…premi di nuovo RICARICA per riprenderla.*) | La ricarica non si è aperta o la cassa ha perso il contatto con la macchina. | Tocca di nuovo **Ricarica**: riprende la ricarica rimasta aperta. |
@@ -487,6 +506,7 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
   stampa, dati fiscali, menu online e codice di addebito in camera valgono per tutto l'impianto.
 - L'elenco delle stampanti fiscali si gestisce dalla cassa; il [palmare](../palmare/impostazioni.md)
   lo legge e sceglie la propria stampante.
+- **Salva** e **Togli** della cassa automatica rileggono l'elenco dal servizio e cambiano solo la macchina a video: le modifiche fatte nel frattempo da un'altra cassa restano.
 - **Togli** su stampanti, terminali e macchine li toglie per **tutte** le casse: quelle che li
   usavano tornano a lavorare a mano finché non ne scelgono un altro.
 

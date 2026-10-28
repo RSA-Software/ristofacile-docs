@@ -215,18 +215,64 @@ Mentre la macchina incassa, nel riquadro ci sono due pulsanti con effetti oppost
 | Comando | Effetto |
 |---|---|
 | **Annulla e restituisci** | La macchina restituisce tutto quello che il cliente ha inserito: **niente è incassato** e il conto resta aperto. |
-| **Chiudi trattenendo** | La macchina tiene quello che è stato inserito: è un **incasso parziale**, non un annullo. L'importo trattenuto viene scritto in **Contanti** e il conto resta aperto per coprire il resto con un altro metodo, con **Credito** o dividendo il conto. |
+| **Chiudi trattenendo** | Solo PagAmico e VNE. La macchina tiene quello che è stato inserito: è un **incasso parziale**, non un annullo. L'importo trattenuto viene scritto in **Contanti** e il conto resta aperto per coprire il resto. |
+
+Con la Cashlogy nel riquadro non c'è nessun pulsante: si legge *Per annullare: dalla finestra del Cashlogy Connector.*
 
 Gli esiti possibili:
 
 - **completato**: i soldi sono entrati, si prosegue con lo scontrino. Se la macchina non ha potuto dare tutto il resto, la cassa avvisa di consegnare a mano la differenza;
-- **trattenuto** (incasso parziale): vedi **Chiudi trattenendo**;
-- **annullato**: la macchina ha restituito i soldi, anche quando l'incasso è stato interrotto dal pannello della macchina stessa; il conto resta aperto;
+- **trattenuto** (incasso parziale): la macchina ha tenuto una parte dei soldi. Succede con **Chiudi trattenendo**, ma anche quando un annullo non restituisce tutto quello che il cliente ha inserito, con qualunque marca. Vedi [Dopo un incasso parziale](#dopo-un-incasso-parziale);
+- **completato dopo un annullo**: hai chiesto l'annullo, ma la macchina aveva già concluso il pagamento. Il conto si chiude con l'incasso registrato; se il cliente voleva indietro il denaro, va restituito a conto chiuso;
+- **annullato**: la macchina ha restituito **tutti** i soldi, anche quando l'incasso è stato interrotto dal pannello della macchina stessa (o dalla finestra del Cashlogy Connector); il conto resta aperto;
 - **rifiutato**: non è entrato niente; la cassa propone di incassare a mano (**Incasso a mano**, o **Carta a mano** per la carta) e proseguire con la chiusura;
-- **incerto**: nessuno sa dove siano i soldi. Controlla la macchina e il giornale del servizio **prima** di ripetere l'incasso.
+- **incerto**: nessuno sa dove siano i soldi. L'incasso del conto resta **da verificare**: vedi [Incasso da verificare](#incasso-da-verificare).
 
 Se la macchina ha già incassato e poi lo scontrino non esce, rientrando nel conto la cassa non
 richiede di nuovo i soldi. Anche questo vale solo per **questa** postazione.
+
+### Incasso da verificare
+
+Quando la cassa perde il contatto con la macchina durante un incasso (nessuna risposta, esito
+incerto, app chiusa a metà), sul conto compare la riga *Incasso di € X sulla cassa automatica da
+verificare* con il tasto **Verifica**. Finché non è chiarito, da questo conto non si incassa
+niente: né a mano, né con la macchina, né con la carta; il conto non si divide.
+
+1. Tocca **Verifica** (oppure di nuovo il tasto dell'incasso): la cassa chiede al servizio com'è finito l'incasso.
+2. Se l'incasso si era concluso, la cassa ne applica l'esito: per esempio *Cassa automatica: incassati € 20,00, resto € 7,50. Premi INCASSA E STAMPA per chiudere il conto.*
+3. Se l'incasso è ancora aperto, la cassa riprende a seguirlo: il cliente può finire di pagare.
+4. Se l'incasso era stato rifiutato o era andato in errore, nella macchina non è entrato niente: il segno si toglie e compare *L'incasso precedente di questo conto sulla cassa automatica non e' riuscito (…): nella macchina non e' entrato niente.* Puoi incassare.
+5. Se la cassa non raggiunge il servizio, compare *Non riesco a raggiungere il servizio per controllare l'incasso precedente di questo conto sulla cassa automatica (€ X): riprova.* Non scegliere niente a caso: controlla che il servizio sia acceso e in rete, poi tocca di nuovo **Verifica**.
+6. Se il servizio non sa più com'è andata (per esempio dopo un suo riavvio), compare la conferma **Incasso da verificare**. L'incasso potrebbe essere andato a buon fine: chiedi al cliente e guarda il giornale del servizio, poi controlla la macchina:
+    - se l'operazione è ancora aperta, chiudila con **Sblocca incasso** in [Impostazioni](impostazioni.md) ▸ **Cassa automatica**, che restituisce al cliente quello che ha inserito (con la Cashlogy: dalla finestra del Cashlogy Connector);
+    - se nella macchina è rimasto denaro di questo conto, tocca **È entrato denaro** e scrivi quanto (quello che il cliente ha inserito, meno il resto che la macchina gli ha già dato), poi **Registra**. La cassa lo tiene come [trattenuto](#dopo-un-incasso-parziale): al prossimo incasso la macchina chiede solo la differenza, e se l'importo copre il conto la macchina non viene richiamata;
+    - quando sei sicuro che per questo conto nella macchina non è rimasto denaro, tocca **Nessun denaro entrato**. Compare *Incasso da verificare chiuso: hai confermato che per questo conto nella cassa automatica non e' entrato niente. Prima di incassare di nuovo, assicurati che il cliente non abbia gia' pagato.*
+
+Come il trattenuto, anche l'incasso da verificare lo conosce solo **questa** cassa: va chiarito da qui.
+Uscendo dal conto, buttando la vendita o liberando il tavolo, la cassa lo ricorda con un avviso.
+
+### Dopo un incasso parziale
+
+Quando la macchina ha trattenuto una parte dei soldi, sotto i pagamenti compare la riga
+*€ Y gia' trattenuti dalla cassa automatica*. La cassa se ne ricorda anche uscendo dal conto,
+sospendendo la vendita al banco o riavviando l'app.
+
+1. Sistema la ripartizione: lascia in **Contanti** l'importo da incassare in contanti (non può essere meno del già trattenuto), oppure sposta il resto su **Carta**/**Bancomat**.
+2. Tocca **INCASSA E STAMPA**: la macchina chiede **solo la differenza** (*€ X nella cassa automatica*). Se il trattenuto copre già i contanti, la macchina non viene richiamata.
+3. Se la macchina non può incassare (occupata, spenta, o la spunta **Cassa automatica** è spenta), la cassa chiede di incassare a mano **solo la differenza**: *La macchina ha gia' trattenuto € Y: incassa a mano solo € X.*, con il pulsante **Incasso a mano € X**.
+
+Se il trattenuto supera il dovuto (per esempio il conto è stato ridotto), la macchina non viene
+richiamata e la cassa dice di consegnare a mano il resto al cliente.
+
+Se hai restituito a mano al cliente i soldi trattenuti, tocca **Restituito** sulla riga del
+trattenuto e conferma: da quel momento la cassa non li conta più come incassati.
+
+!!! warning "Il trattenuto lo conosce solo questa cassa"
+
+    Il denaro trattenuto dalla macchina è ricordato solo dalla postazione che ha fatto l'incasso.
+    Il conto va finito **da questa cassa**: chiudendolo dal palmare o da un'altra cassa, il
+    cliente pagherebbe di nuovo. Per lo stesso motivo, con un trattenuto il conto non si divide
+    e non si addebita in camera. Uscendo dal conto la cassa lo ricorda con un avviso.
 
 ### Emettere la fattura
 
@@ -296,10 +342,21 @@ tavolo come «preconto» sulla mappa della sala.
 | *Nessuna risposta dal terminale: … IL PAGAMENTO POTREBBE ESSERE PASSATO LO STESSO. …* | Il terminale non ha risposto in tempo. | Controlla sul POS (o stampa l'ultima ricevuta) **prima** di riprovare. |
 | *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Problema sulla stampante preconto. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
 | **Cassa automatica** — *… Vuoi incassare i contanti a mano e proseguire con la chiusura?* | La macchina è occupata, non ha accettato l'incasso o non ha incassato niente. | **Incasso a mano** per proseguire incassando tu, **Annulla** per lasciare il conto aperto. |
-| *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Hai toccato **Chiudi trattenendo**. | Copri la differenza con un altro metodo o dividi il conto. |
+| *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Hai toccato **Chiudi trattenendo**, o la macchina ha chiuso l'incasso a metà. | Tocca di nuovo **INCASSA E STAMPA** (la macchina chiede solo la differenza) o copri il resto con un altro metodo. |
+| *La macchina ha gia' trattenuto € Y: incassa a mano solo € X. Proseguire con la chiusura?* | La macchina non può incassare e su questo conto c'è già un trattenuto. | Incassa a mano solo l'importo indicato. |
+| *La cassa automatica ha gia' trattenuto € Y in contanti su questo conto: i contanti non possono essere meno di € Y.* | Hai messo in **Contanti** meno del già trattenuto. | Correggi i contanti, oppure tocca **Restituito** se hai reso i soldi al cliente. |
+| *La macchina ha trattenuto € Y su questo conto: finisci l'incasso da questa cassa.* … | Stai uscendo da un conto con un trattenuto. | Rientra nel conto da questa cassa per finire l'incasso. |
+| *Questo conto e' stato chiuso da un altro dispositivo: da qui non si incassa piu' niente, ne' carta ne' cassa automatica.* … | Il conto è stato chiuso altrove mentre c'era un trattenuto. | Restituisci al cliente l'importo indicato, poi conferma con **Restituiti**. |
 | *Incasso annullato: la cassa ha restituito € X al cliente. …* | Hai toccato **Annulla e restituisci**. | Il conto resta aperto. |
 | *La cassa automatica non ha potuto erogare € X di resto: consegnali a mano al cliente.* | Monete o banconote insufficienti nella macchina. | Dai il resto a mano. |
-| *Nessuna risposta dalla cassa automatica: … L'INCASSO POTREBBE ESSERE PARTITO LO STESSO. …* / *Non riesco piu' a seguire l'incasso sulla cassa automatica: … IL DENARO POTREBBE ESSERE DENTRO LA MACCHINA. …* | Comunicazione persa con la macchina. | Controlla la macchina (e il giornale del servizio) **prima** di ripetere l'incasso. |
+| *Nessuna risposta dalla cassa automatica: … L'INCASSO POTREBBE ESSERE PARTITO LO STESSO. …* / *Non riesco piu' a seguire l'incasso sulla cassa automatica: … IL DENARO POTREBBE ESSERE DENTRO LA MACCHINA. …* | Comunicazione persa con la macchina. L'incasso resta da verificare. | Tocca **Verifica**: vedi [Incasso da verificare](#incasso-da-verificare). |
+| **Incasso da verificare** — *L'incasso precedente di questo conto e' da verificare: controlla la macchina …* | Il servizio non sa com'è finito l'incasso precedente di questo conto. | Controlla la macchina; se l'operazione è aperta chiudila con **Sblocca incasso**. Poi tocca **È entrato denaro** e scrivi l'importo, oppure **Nessun denaro entrato**. |
+| *Non riesco a raggiungere il servizio per controllare l'incasso precedente di questo conto sulla cassa automatica (€ X): riprova.* | La cassa non raggiunge il servizio: non sa com'è finito l'incasso. | Controlla che il servizio sia acceso e in rete, poi tocca di nuovo **Verifica**. Finché non risponde non si incassa da questo conto. |
+| **Denaro entrato** — *Scrivi un importo maggiore di zero, per esempio 12,50.* | Nella domanda dell'importo hai scritto zero o un valore non valido. | Scrivi l'importo rimasto nella macchina, oppure tocca **Annulla**. |
+| *Incasso da verificare chiuso dall'operatore. Registrati € X entrati nella cassa automatica. …* | Hai registrato con **È entrato denaro** l'importo rimasto nella macchina. | Premi il tasto dell'incasso: la macchina chiede solo quello che manca. |
+| *Annullo con restituzione incompleta: entrati € X, restituiti € Y. …* | L'annullo non ha restituito tutto. | La differenza resta come trattenuto: vedi [Dopo un incasso parziale](#dopo-un-incasso-parziale). |
+| *Hai chiesto l'annullo, ma la macchina aveva gia' concluso il pagamento: l'annullo non l'ha disfatto.* … | L'annullo è arrivato a pagamento concluso. | Il conto si chiude; se il cliente voleva indietro il denaro, restituiscilo a conto chiuso. |
+| *Se sulla macchina e' rimasto aperto un incasso di QUESTO conto, non incassare a mano: …* | La macchina è occupata, forse proprio dall'incasso di questo conto. | Controlla la macchina prima di incassare a mano. |
 | *La cassa automatica impostata su questa postazione non risulta piu' configurata sul servizio: …* | La macchina scelta in Impostazioni non esiste più sul servizio. | Sistema [Impostazioni](impostazioni.md) ▸ **Cassa automatica**. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Hai scelto **Fattura** dopo che lo scontrino era già uscito. | Emetti la fattura dal gestionale. |
 | *Questo conto si documenta con lo scontrino: la fattura va fatta dal gestionale.* | Stai documentando dallo Storico la parte di un conto diviso. | Usa **Scontrino**. |
@@ -323,7 +380,8 @@ tavolo come «preconto» sulla mappa della sala.
 - **Dopo la chiusura.** Con lo scontrino, la chiusura senza documento o l'addebito in camera: la comanda viene chiusa, il tavolo si libera (se non ha altre comande aperte), gli eventuali tavoli uniti tornano separati e torni alla mappa della sala (o all'elenco dell'asporto, se avevi aperto la comanda da lì). Un ordine d'asporto passa a «consegnato»; un ordine a domicilio no: la consegna la segna chi la fa.
 - **Incasso di una parte del conto.** Se dopo l'incasso il tavolo ha ancora voci da pagare, si torna alla [divisione](dividi-conto.md); quando l'ultimo conto è incassato la comanda si chiude e si torna alla mappa della sala.
 - **Due postazioni sullo stesso tavolo.** Finché stai incassando, la cassa non aggiorna il conto con le modifiche fatte altrove (un totale che cambia sotto un contante già contato è peggio di uno vecchio). Se non hai ancora cominciato, il conto si aggiorna da solo.
-- **Ricordo dell'incasso in corso.** Carta già addebitata e incasso della cassa automatica restano ricordati per sette giorni, **solo sulla postazione** che li ha fatti, finché il conto non si chiude.
+- **Ricordo dell'incasso in corso.** Carta già addebitata, incasso della cassa automatica e denaro trattenuto restano ricordati per sette giorni, **solo sulla postazione** che li ha fatti, finché il conto non si chiude.
+- **Buttare un conto con un trattenuto.** Prima di **Butta via** al banco, di rifiutare o segnare non ritirato un asporto e di liberare un tavolo, se la macchina ha trattenuto soldi su quel conto la cassa chiede: *La macchina ha trattenuto € Y su questo conto: restituiscili al cliente prima di proseguire.* Con **Annulla** non si cancella niente.
 - **Licenza dimostrativa.** Durante un incasso la finestra della versione dimostrativa non compare: viene rimandata a dopo.
 - **Conti documentati dallo Storico.** Aprendo il conto dallo [Storico conti](storico-conti.md) per emettere lo scontrino di un conto chiuso senza documento, si sceglie solo fra **Scontrino** e **Fattura**: terminale POS, cassa automatica, **Camera** e **CHIUDI SENZA DOCUMENTO** non entrano in gioco, perché i soldi sono già stati incassati. <!-- DA VERIFICARE: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto? -->
 

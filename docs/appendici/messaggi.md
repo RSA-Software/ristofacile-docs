@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di cucin
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-27 — **531 messaggi**.
+Aggiornato al 2026-10-28 — **545 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -40,6 +40,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Allergeni non leggibili: il server non risponde. Chiedi in cucina prima di rispondere al cliente.* | Palmare: [Menu](../palmare/menu.md) | Il servizio non ha risposto. | Chiedi in cucina. |
 | **Annulla prenotazione** — *Annullare questa prenotazione? Uscira' dal registro.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Hai toccato **Annulla** nella scheda. | **Annulla prenotazione** o **Indietro**. |
 | *Annullare questa prenotazione? Uscira' dal registro.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Conferma di **Annulla** nella scheda. | **Annulla prenotazione** per procedere, **Indietro** per tenerla. |
+| *Annullo con restituzione incompleta: entrati € X, restituiti € Y. …* | Cassa: [Conto](../cassa/conto.md) | L'annullo non ha restituito tutto. | La differenza resta come trattenuto: vedi [Dopo un incasso parziale](../cassa/conto.md#dopo-un-incasso-parziale). |
 | *Apri prima un tavolo.* | Palmare: [Comanda](../palmare/comanda.md) | Il tavolo non si è aperto. | Torna in sala e riapri il tavolo. |
 | *Articolo duplicato, ma non e' stato possibile copiare: … Il resto c'e'.* | Cassa: [Articoli](../cassa/articoli.md) | Immagine, allergeni o traduzioni non copiati. | Aggiungili a mano sulla copia. |
 | *Articolo non trovato in anagrafica.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Il codice scelto non esiste più in anagrafica. | Scegli un altro articolo. |
@@ -80,6 +81,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Creati N tavoli su M. Primo errore: …* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Una parte dei tavoli non è stata creata. | Leggi l'errore e riprova per i tavoli mancanti. |
 | *CUCINA: nessuna stampante collegata (solo monitor), niente da ristampare.* | Palmare: [Comanda](../palmare/comanda.md) | Il centro usa solo il monitor di cucina. | Nessuna: i piatti sono già a monitor. |
 | *Dati della ditta salvati. Restano 2 cose da sistemare per la fattura elettronica.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Mancano ancora dati obbligatori. | Completa quanto elencato in **Per la fattura elettronica**. |
+| **Denaro entrato** — *Scrivi un importo maggiore di zero, per esempio 12,50.* | Cassa: [Conto](../cassa/conto.md) | Nella domanda dell'importo hai scritto zero o un valore non valido. | Scrivi l'importo rimasto nella macchina, oppure tocca **Annulla**. |
 | *Digita il PIN.* | Cassa: [Accesso operatore](../cassa/accesso.md) | È stato premuto Invio con la casella vuota. | Digita il PIN. |
 | *Digita il PIN.* | Palmare: [Accesso](../palmare/accesso.md) | **ENTRA** senza cifre. | Digita il PIN. |
 | *Digita prima l'importo sul tastierino, poi PREZZO LIBERO.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | **PREZZO LIBERO** senza importo digitato. | Digita l'importo, poi riprova. |
@@ -113,6 +115,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Fattura …: documento prodotto ma non apribile a schermo.* | Cassa: [Fatture](../cassa/fatture.md) | Il PDF è stato prodotto ma la schermata del documento non si è aperta. | Riprova **Apri il PDF**. |
 | *Fine turno* - *Vuoi uscire? MARCO non firmera' piu' le comande su questo dispositivo, e per rientrare servira' il PIN.* | Cassa: [Comanda](../cassa/comanda.md) | Tocco su **ESCI**. | **Esci** per confermare. |
 | **Fine turno** — *Vuoi uscire? Mario non firmera' piu' le comande su questo dispositivo, e per rientrare servira' il PIN.* | Palmare: [Io](../palmare/io.md) | Hai toccato **ESCI**. | **Esci** per chiudere il turno, **Annulla** per restare. |
+| *Hai chiesto l'annullo, ma la macchina aveva gia' concluso il pagamento: l'annullo non l'ha disfatto.* … | Cassa: [Conto](../cassa/conto.md) | L'annullo è arrivato a pagamento concluso. | Il conto si chiude; se il cliente voleva indietro il denaro, restituiscilo a conto chiuso. |
 | *Il backend non ha restituito l'ordine appena aperto.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Il servizio non ha restituito l'ordine creato. | Ricarica la schermata e controlla se l'ordine è in coda prima di rifarlo. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato…* | Palmare: [Accesso](../palmare/accesso.md) | Il servizio del locale è più vecchio dell'app. | Fai aggiornare il servizio: fino ad allora non si entra. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato a una versione che espone api/v1/risto/accesso. Fino ad allora da qui non si entra.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Il servizio installato è più vecchio della cassa. | Fai aggiornare il servizio RistoFacile. |
@@ -241,6 +244,8 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Impossibile svuotare il conto.* | Cassa: [Dividi il conto](../cassa/dividi-conto.md) | Il servizio non ha svuotato il conto. | Riprova. |
 | *Imposta prima l'indirizzo della stampante.* | Cassa: [Centri di produzione](../cassa/centri-di-produzione.md) | **Verifica stato** con la casella vuota. | Scrivi l'indirizzo. |
 | *Incasso annullato: la cassa ha restituito € X al cliente. …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Annulla e restituisci**. | Il conto resta aperto. |
+| *Incasso da verificare chiuso dall'operatore. Registrati € X entrati nella cassa automatica. …* | Cassa: [Conto](../cassa/conto.md) | Hai registrato con **È entrato denaro** l'importo rimasto nella macchina. | Premi il tasto dell'incasso: la macchina chiede solo quello che manca. |
+| **Incasso da verificare** — *L'incasso precedente di questo conto e' da verificare: controlla la macchina …* | Cassa: [Conto](../cassa/conto.md) | Il servizio non sa com'è finito l'incasso precedente di questo conto. | Controlla la macchina; se l'operazione è aperta chiudila con **Sblocca incasso**. Poi tocca **È entrato denaro** e scrivi l'importo, oppure **Nessun denaro entrato**. |
 | *In "Contorni" se ne possono scegliere al massimo 2: tocca a destra quello da togliere.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Sezione già piena (con massimo maggiore di 1). | Togli prima un piatto dalla colonna destra. |
 | *In "Contorni" se ne possono scegliere al massimo 2: tocca a destra quello da togliere.* | Palmare: [Comanda](../palmare/comanda.md) | Superato il massimo della sezione del menu. | Tocca un piatto già scelto (in arancione, sopra la griglia) per toglierlo. |
 | *Inserisci l'indirizzo della stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** o **Verifica** con l'indirizzo vuoto. | Scrivi l'indirizzo (o la porta logica per Ditron). |
@@ -253,7 +258,9 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *I posti massimi devono essere un numero maggiore o uguale a zero.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Posti massimi non validi. | Correggi, oppure lascia 0. |
 | *I posti massimi non possono essere meno dei posti.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Posti massimi inferiori ai posti. | Alza i posti massimi o abbassa i posti. |
 | *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Cassa: [Conto](../cassa/conto.md) | Problema sulla stampante preconto. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
-| *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Chiudi trattenendo**. | Copri la differenza con un altro metodo o dividi il conto. |
+| *La CashDro vuole l'utente e la password POS creati sulla macchina (li da' CashDro o il rivenditore).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** di una CashDro senza **Utente POS** o **Password POS**. | Scrivi utente e password. |
+| *La cassa automatica ha gia' trattenuto € Y in contanti su questo conto: i contanti non possono essere meno di € Y.* | Cassa: [Conto](../cassa/conto.md) | Hai messo in **Contanti** meno del già trattenuto. | Correggi i contanti, oppure tocca **Restituito** se hai reso i soldi al cliente. |
+| *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Chiudi trattenendo**, o la macchina ha chiuso l'incasso a metà. | Tocca di nuovo **INCASSA E STAMPA** (la macchina chiede solo la differenza) o copri il resto con un altro metodo. |
 | *La cassa automatica impostata su questa postazione non risulta piu' configurata sul servizio: …* | Cassa: [Conto](../cassa/conto.md) | La macchina scelta in Impostazioni non esiste più sul servizio. | Sistema [Impostazioni](../cassa/impostazioni.md) ▸ **Cassa automatica**. |
 | *La cassa automatica non ha potuto erogare € X di resto: consegnali a mano al cliente.* | Cassa: [Conto](../cassa/conto.md) | Monete o banconote insufficienti nella macchina. | Dai il resto a mano. |
 | *La categoria merceologica e' obbligatoria: e' lei a dire su quali piatti la regola vale.* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | Manca la categoria. | Scegli la categoria. |
@@ -277,6 +284,8 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *La licenza è stata revocata.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | La licenza è stata revocata. | Contatta RSA. |
 | *L'aliquota deve essere una percentuale fra 0 e 100.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Percentuale non valida. | Correggi la percentuale. |
 | *L'aliquota dev'essere una percentuale fra 0 e 100.* | Cassa: [Articoli](../cassa/articoli.md) | Finestra **Nuova aliquota IVA**. | Correggi l'aliquota. |
+| *La macchina ha gia' trattenuto € Y: incassa a mano solo € X. Proseguire con la chiusura?* | Cassa: [Conto](../cassa/conto.md) | La macchina non può incassare e su questo conto c'è già un trattenuto. | Incassa a mano solo l'importo indicato. |
+| *La macchina ha trattenuto € Y su questo conto: finisci l'incasso da questa cassa.* … | Cassa: [Conto](../cassa/conto.md) | Stai uscendo da un conto con un trattenuto. | Rientra nel conto da questa cassa per finire l'incasso. |
 | *La password e' obbligatoria (nessuna password gia' salvata per questa installazione).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Primo salvataggio senza password. | Scrivi la password. |
 | *La password e' obbligatoria (nessuna password gia' salvata per questa installazione).* | Monitor di cucina: [Scelta del centro](../kds/centro.md) · Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | Primo collegamento senza password. | Scrivi la password. |
 | *La percentuale di servizio deve essere fra 0 e 100.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Servizio fuori intervallo. | Correggi la percentuale. |
@@ -307,6 +316,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Licenza attivata, ma il dispositivo non riesce a salvarla: vale solo per questa sessione.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il dispositivo non riesce a scrivere la licenza. | Riprova l'attivazione; se si ripete, chiama l'assistenza. |
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Numero o porta del terminale non validi. | Correggi il campo. |
 | *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
+| *L'impronta del certificato e' fatta di 64 cifre esadecimali (i due punti si possono lasciare).* … | Cassa: [Impostazioni](../cassa/impostazioni.md) | L'impronta scritta non è valida. | Ricopiala dal giornale del servizio, o lasciala vuota. |
 | *L'indirizzo pubblico va scritto intero, per esempio https://ordina.trattoria.it* | Cassa: [Self order](../cassa/self-order.md) | L'indirizzo non è completo. | Scrivilo con `https://` davanti. |
 | *L'ordine dev'essere un numero valido.* | Cassa: [Modificatori](../cassa/modificatori.md), [Portate](../cassa/portate.md) | Ordine non numerico. | Scrivi un numero. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Cassa: [Conto](../cassa/conto.md) | Hai scelto **Fattura** dopo che lo scontrino era già uscito. | Emetti la fattura dal gestionale. |
@@ -349,7 +359,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Nessun allergene dichiarato per questo articolo.* | Palmare: [Menu](../palmare/menu.md) | Il piatto non ha allergeni registrati. | Se il cliente ha un'allergia seria, chiedi comunque in cucina. |
 | *Nessun allergene dichiarato per questo articolo.* / *Allergeni non leggibili: il server non risponde. Chiedi in cucina prima di rispondere al cliente.* | Cassa: [Comanda](../cassa/comanda.md) | Nella finestra degli allergeni: il primo vuol dire che non ne ha, il secondo che non si sono potuti leggere. | Nel secondo caso chiedi in cucina. |
 | *Nessuna prenotazione per questo giorno* — *Tocca "+ Nuova" per crearne una* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Il giorno non ha prenotazioni. | Nessuna. |
-| *Nessuna risposta dalla cassa automatica: … L'INCASSO POTREBBE ESSERE PARTITO LO STESSO. …* / *Non riesco piu' a seguire l'incasso sulla cassa automatica: … IL DENARO POTREBBE ESSERE DENTRO LA MACCHINA. …* | Cassa: [Conto](../cassa/conto.md) | Comunicazione persa con la macchina. | Controlla la macchina (e il giornale del servizio) **prima** di ripetere l'incasso. |
+| *Nessuna risposta dalla cassa automatica: … L'INCASSO POTREBBE ESSERE PARTITO LO STESSO. …* / *Non riesco piu' a seguire l'incasso sulla cassa automatica: … IL DENARO POTREBBE ESSERE DENTRO LA MACCHINA. …* | Cassa: [Conto](../cassa/conto.md) | Comunicazione persa con la macchina. L'incasso resta da verificare. | Tocca **Verifica**: vedi [Incasso da verificare](../cassa/conto.md#incasso-da-verificare). |
 | *Nessuna risposta dal terminale: … IL PAGAMENTO POTREBBE ESSERE PASSATO LO STESSO. …* | Cassa: [Conto](../cassa/conto.md) | Il terminale non ha risposto in tempo. | Controlla sul POS (o stampa l'ultima ricevuta) **prima** di riprovare. |
 | *Nessuna risposta dal terminale: … IL PAGAMENTO POTREBBE ESSERE PASSATO LO STESSO. …* | Palmare: [Conto](../palmare/conto.md) | Il terminale non ha risposto in tempo. | Controlla sul POS (o la sua ultima ricevuta) **prima** di riprovare. |
 | *Nessun articolo in questa sezione* — *Il menu si compone dalla cassa* | Palmare: [Menu](../palmare/menu.md) | La sezione è vuota. | Nessuna. |
@@ -407,6 +417,8 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | **Non presentato** — *Segnare il cliente come non presentato? Uscira' dal registro.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Hai toccato **Non presentato**. | **Conferma** o **Indietro**. |
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Cassa: [Dividi il conto](../cassa/dividi-conto.md) | **+ Nuovo conto** quando tutte le voci sono già assegnate. | Togli qualcosa da un conto o incassa. |
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Palmare: [Conto](../palmare/conto.md) | **+** quando tutto è già su un conto. | Incassa i conti o rimanda delle voci fra quelle da dividere. |
+| *Non riesco a leggere le casse automatiche dal servizio: finche' non le leggo, non si salva …* / *Le casse automatiche dell'impianto non si leggono dal servizio: non salvo, …* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non ha dato l'elenco delle macchine. **Salva** e **Togli** sono bloccati, perché salvare sostituirebbe l'elenco dell'impianto con la sola macchina a video. | Riapri la pagina quando il servizio risponde. Se il dettaglio parla del file delle casse automatiche danneggiato, va corretto o tolto sul PC del servizio. |
+| *Non riesco a raggiungere il servizio per controllare l'incasso precedente di questo conto sulla cassa automatica (€ X): riprova.* | Cassa: [Conto](../cassa/conto.md) | La cassa non raggiunge il servizio: non sa com'è finito l'incasso. | Controlla che il servizio sia acceso e in rete, poi tocca di nuovo **Verifica**. Finché non risponde non si incassa da questo conto. |
 | *Non riesco a sapere dal servizio se il tavolo ha pagato dal telefono: riprova fra un attimo.* | Cassa: [Self order](../cassa/self-order.md) | Il servizio non ha risposto alla domanda sui pagamenti. | Riprova; se insiste, controlla il collegamento. |
 | **Non ritirato** — *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* | Palmare: [Ordini](../palmare/ordini.md) | Hai toccato **Non ritirato** (o **Non consegnato**). | **Conferma** o **Annulla**. |
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
@@ -448,6 +460,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Questo conto e' in incasso da un'altra postazione, con uno scontrino in sospeso: l'incasso va finito da li'. Il conto resta aperto.* | Cassa: [Conto](../cassa/conto.md) | Un'altra cassa sta incassando lo stesso tavolo. | Finisci l'incasso dall'altra postazione. |
 | *Questo conto e' stato chiuso da un altro dispositivo.* | Cassa: [Conto](../cassa/conto.md) | Mentre eri qui il conto è stato incassato da un'altra cassa o da un palmare. | Esci con **Annulla**. |
 | *Questo conto e' stato chiuso da un altro dispositivo.* | Palmare: [Conto](../palmare/conto.md) | Il tavolo è stato incassato altrove mentre eri qui. | Torna in sala. |
+| *Questo conto e' stato chiuso da un altro dispositivo: da qui non si incassa piu' niente, ne' carta ne' cassa automatica.* … | Cassa: [Conto](../cassa/conto.md) | Il conto è stato chiuso altrove mentre c'era un trattenuto. | Restituisci al cliente l'importo indicato, poi conferma con **Restituiti**. |
 | *Questo conto si documenta con lo scontrino: la fattura va fatta dal gestionale.* | Cassa: [Conto](../cassa/conto.md) | Stai documentando dallo Storico la parte di un conto diviso. | Usa **Scontrino**. |
 | *Questo conto si documenta con lo scontrino: la fattura va fatta dal gestionale.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Nel Conto aperto con **Emetti** hai scelto la fattura. | Emetti lo scontrino, oppure fai la fattura dal gestionale. |
 | *Questo dispositivo non ha una licenza attiva.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | **Disattiva** su un dispositivo senza licenza. | Nessuna azione. |
@@ -505,6 +518,7 @@ Aggiornato al 2026-10-27 — **531 messaggi**.
 | *Seriale non riconosciuto per questo programma.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il seriale non esiste o non è di RistoFacile. | Controlla il seriale ricevuto da RSA. |
 | *Serve anche il codice del ristorante: senza, il centro non sa di chi e' il menu.* | Cassa: [Menu online](../cassa/menu-online.md) | **Salva collegamento** con l'indirizzo del servizio ma senza codice del ristorante. | Scrivi il **Codice del ristorante**. |
 | *Servono indirizzo del sito, nome del sito e token.* | Cassa: [Menu online](../cassa/menu-online.md) | **Salva indirizzo** con un campo vuoto. | Compila i tre campi. |
+| *Se sulla macchina e' rimasto aperto un incasso di QUESTO conto, non incassare a mano: …* | Cassa: [Conto](../cassa/conto.md) | La macchina è occupata, forse proprio dall'incasso di questo conto. | Controlla la macchina prima di incassare a mano. |
 | *Si possono creare al massimo 60 tavoli per volta.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Intervallo troppo ampio. | Crea i tavoli in più passaggi. |
 | *"Spaghetti" non ha un prezzo in listino: entra in comanda ma NON comparira' sul conto. Sistema il listino prima di incassare.* | Cassa: [Comanda](../cassa/comanda.md) | Il piatto non ha prezzo nel listino della sala. | Inserisci il prezzo in [Articoli](../cassa/articoli.md) prima di incassare. |
 | *Stai emettendo una fattura: e' quello il documento del conto. Per chiudere senza documento torna su Scontrino.* | Cassa: [Conto](../cassa/conto.md) | **CHIUDI SENZA DOCUMENTO** con **Fattura** scelta. | Torna su **Scontrino**. |
