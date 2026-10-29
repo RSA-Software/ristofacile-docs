@@ -90,6 +90,7 @@ l'indirizzo.
 | **Ora** (riga) | Ora di ritiro o di consegna. Un trattino se l'ordine non ha ora. |
 | **ASPORTO** / **DOMICILIO** | Tipo d'ordine. |
 | **#numero** | Numero dell'ordine da dire al cliente. È un progressivo che cresce per tutto l'anno. |
+| **n. 27** | Accanto al #numero, il numero del giorno dell'ordine: è quello che si chiama in [Chiamate](chiamate.md) e sul monitor in sala, e che il monitor di cucina mette in testa al titolo. Riparte ogni giorno. |
 | **Stato** | *Ricevuto* e *In produzione* in giallo; *Confermato*, *Programmato*, *Pronto*, *In consegna* in verde. |
 | **Nome** (modulo) | Nome del cliente. Obbligatorio. |
 | **Telefono** (modulo) | Facoltativo per l'asporto; **obbligatorio per il domicilio** (*Per il fattorino*). |
@@ -157,6 +158,8 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 1. Quando la cucina ha finito, tocca **Pronto** sulla riga dell'ordine.
 2. Asporto: quando il cliente arriva, tocca la riga, poi **Apri comanda** e incassa dal
    [conto](conto.md). Alla chiusura del conto l'ordine diventa **Ritirato** ed esce dalla coda.
+   Fa eccezione l'asporto seguito dalle [Chiamate](chiamate.md) e pagato prima che sia pronto:
+   vedi le Note.
 3. Domicilio: incassa dal conto prima che parta, poi tocca **Parte** quando esce il fattorino e
    **Consegnato** al suo rientro. L'ordine esce dalla coda.
 
@@ -199,6 +202,12 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 - **La chiusura del conto chiude l'asporto, non il domicilio**: un ordine da asporto diventa
   *Ritirato* quando ne chiudi il conto; un ordine a domicilio di solito si incassa prima che
   parta, quindi la consegna va segnata a mano con **Consegnato**.
+- **Gli asporti seguiti dalle chiamate**: quando sono accese le chiamate anche per gli asporti
+  della cassa, i numeri degli asporti mandati in cucina compaiono anche in
+  [Chiamate](chiamate.md) e sul monitor in sala. Un asporto pagato **prima** che sia pronto non
+  diventa *Ritirato* alla chiusura del conto: resta in coda *In produzione*, poi diventa *Pronto*, e
+  il ritiro si segna da Chiamate con **Consegnato** o da qui con **Ritirato**. Se la cucina segna
+  consegnati i suoi piatti sul monitor di cucina, l'ordine diventa consegnato da solo.
 - L'ora del nuovo ordine vale sempre per **oggi**: non si prende dalla cassa un ordine per un
   altro giorno.
 - Le vendite al banco usano lo stesso tavolo dell'asporto ma qui non compaiono: stanno in
@@ -212,6 +221,7 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 - [Comanda](comanda.md)
 - [Conto](conto.md)
 - [Vendita al banco](vendita-al-banco.md)
+- [Chiamate](chiamate.md)
 - [Impostazioni](impostazioni.md)
 - [Operatori](operatori.md)
 - [Ordini sul palmare](../palmare/ordini.md)

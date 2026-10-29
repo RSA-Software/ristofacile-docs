@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-28 — **65 domande** su 33 pagine.
+Aggiornato al 2026-10-29 — **69 domande** su 34 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -35,15 +35,23 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/asporto.md`
 
-- [ ] riga 131: chi porta un ordine nello stato "Programmato"? Dalla cassa non c'e' nessun comando che lo imposti ne' che lo faccia avanzare.
-- [ ] riga 180: dalla cassa si puo' correggere l'indirizzo di un ordine gia' creato? Non risulta un comando di modifica.
-- [ ] riga 185: come si recupera la comanda rimasta aperta sul tavolo dell'asporto?
+- [ ] riga 132: chi porta un ordine nello stato "Programmato"? Dalla cassa non c'e' nessun comando che lo imposti ne' che lo faccia avanzare.
+- [ ] riga 183: dalla cassa si puo' correggere l'indirizzo di un ordine gia' creato? Non risulta un comando di modifica.
+- [ ] riga 188: come si recupera la comanda rimasta aperta sul tavolo dell'asporto?
 
 ## Centri di produzione
 
 `docs/cassa/centri-di-produzione.md`
 
 - [ ] riga 71: dal codice, gli articoli che puntano a un centro spento escono comunque sulla stampante comande della postazione con intestazione CUCINA. È il comportamento voluto?
+
+## Chiamate
+
+`docs/cassa/chiamate.md`
+
+- [ ] riga 51: quando ci sara' la scheda del kiosk, rimandare li' per l'accensione dei kiosk e la loro licenza.
+- [ ] riga 60: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa).
+- [ ] riga 141: il kiosk mostra o stampa al cliente questo stesso numero? Il codice del kiosk non e' in questi repository.
 
 ## Comanda
 
@@ -95,7 +103,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/mappa-sala.md`
 
-- [ ] riga 183: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
+- [ ] riga 185: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
 
 ## Menu online
 
@@ -211,7 +219,8 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kds/monitor.md`
 
-- [ ] riga 193: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
+- [ ] riga 109: quando ci sara' la scheda del kiosk, rimandare li' per l'impostazione dell'invio in cucina degli ordini da pagare alla cassa (subito o dopo l'incasso).
+- [ ] riga 216: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
 
 ## Accesso
 

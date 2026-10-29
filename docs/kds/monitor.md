@@ -77,13 +77,36 @@ Dentro ogni colonna i piatti sono raggruppati su due livelli, con la pastiglia d
 
 - **Portata** (di partenza): prima la portata (es. «Antipasti», «Primi», «Senza portata»), nell'ordine
   in cui escono, e dentro ogni portata i tavoli. Serve a sapere «quanti antipasti devo fare».
-- **Tavolo**: prima il tavolo (es. «Sala principale - Tavolo 12», oppure «Asporto - Rossi - ritiro
-  20:30»), dal più vecchio, e dentro ogni tavolo le portate. Serve a far uscire un tavolo tutto
+- **Tavolo**: prima il tavolo (es. «Sala principale - Tavolo 12», oppure «n. 27 · Asporto - Rossi -
+  ritiro 20:30»), dal più vecchio, e dentro ogni tavolo le portate. Serve a far uscire un tavolo tutto
   insieme.
 
 Ogni gruppo ha una testata con il nome, il conteggio e l'attesa più lunga (es. «3 piatti · da 12'»;
 «in attesa» per i gruppi fermi; «adesso» per quelli appena arrivati). Un gruppo che continua dalla
 pagina precedente porta «(segue)»; un gruppo in attesa porta «· IN ATTESA».
+
+### Gli ordini da asporto e del kiosk
+
+![Titoli degli ordini da asporto e del kiosk](../assets/img/kds/monitor-titoli.png)
+
+Al posto del tavolo, gli ordini da asporto hanno un titolo che comincia con il **numero
+dell'ordine**, quello che si chiama al banco e sul monitor in sala (vedi [Chiamate](../cassa/chiamate.md)).
+Il numero sta in testa perché, se il titolo è lungo o la colonna è stretta, il monitor taglia la
+fine del titolo:
+
+| Ordine | Titolo |
+|---|---|
+| Kiosk, il cliente mangia nel locale con il segnaposto 12 | «Ordine 27 · Segnaposto 12» |
+| Kiosk, da portare via | «Ordine 27 · Porta via» |
+| Asporto preso dalla cassa o dal palmare | «n. 27 · Asporto - Rossi - ritiro 20:30» (il titolo di sempre, preceduto dal numero) |
+
+A video i titoli dei gruppi sono in maiuscolo. Un ordine senza numero del giorno (preso prima
+dell'aggiornamento che ha introdotto i numeri) ha il titolo di sempre, senza il numero.
+
+Gli ordini del kiosk da pagare **non arrivano in cucina finché non sono pagati**: un ordine pagato
+al kiosk compare appena è pagato, uno da pagare alla cassa compare quando la cassa lo incassa (a
+meno che i kiosk siano impostati per mandarlo in cucina subito).
+<!-- DA VERIFICARE: quando ci sara' la scheda del kiosk, rimandare li' per l'impostazione dell'invio in cucina degli ordini da pagare alla cassa (subito o dopo l'incasso). -->
 
 ### La card del piatto
 
@@ -214,7 +237,15 @@ Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
 - I piatti **in attesa** del via restano in fondo alla colonna IN CODA, sbiaditi; compaiono come
   normali quando il cameriere tocca **VIA** sul palmare o sulla cassa.
 - Il monitor si aggiorna da solo ogni quattro secondi.
-- Gli ordini da asporto si riconoscono dal titolo «Asporto - nome - ritiro 20:30».
+- Gli ordini da asporto si riconoscono dal titolo, che comincia con il numero dell'ordine:
+  «n. 27 · Asporto - nome - ritiro 20:30», e per il kiosk «Ordine 27 · Porta via» o
+  «Ordine 27 · Segnaposto 12» (vedi sopra).
+- **Ordini da portare via e monitor in sala**: quando tutti i piatti di un ordine da asporto o del
+  kiosk, già incassato, sono consegnati qui, il suo numero sparisce subito dal monitor in sala (vedi
+  [Chiamate](../cassa/chiamate.md)). Toccare «consegnato» subito dopo «pronto» lascia il numero
+  sulla TV solo pochi secondi: per questi ordini segna consegnato quando il cliente ha ritirato.
+  Quando invece li consegna il banco dalla schermata Chiamate, qui restano nella colonna PRONTO e
+  vanno tolti toccandoli.
 - Quando la cucina segna pronto un piatto, sul [palmare](../palmare/comanda.md) lo stato della
   portata diventa «pronta» (o «2 pronti») e, se il cameriere ha acceso il richiamo, arriva una
   notifica sul telefono.
@@ -226,3 +257,4 @@ Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
 - [Comanda sul palmare](../palmare/comanda.md)
 - [Messaggi alla cucina](../palmare/messaggi.md)
 - [Centri di produzione](../cassa/centri-di-produzione.md)
+- [Chiamate](../cassa/chiamate.md)

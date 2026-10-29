@@ -56,7 +56,8 @@ La schermata ha quattro zone.
   per ogni articolo che sta finendo (es. «Tiramisù: ultime 3 porzioni»), oppure il segno di spunta
   verde con «Nessun avviso · scorte a posto». In basso la **Legenda** dei colori.
 - **In basso, la barra dei comandi:** il gruppo **Sposta** / **Unisci** / **Separa** e i pulsanti
-  **Vendita al banco**, **Asporto e domicilio**, **Prenotazioni**, **Messaggi**. Quando uno fra
+  **Vendita al banco**, **Asporto e domicilio**, **Chiamate**, **Prenotazioni**, **Messaggi**.
+  **Chiamate** c'è solo quando i kiosk sono accesi e hanno la licenza. Quando uno fra
   Sposta, Unisci e Separa è in corso, al posto dei pulsanti compaiono un riquadro arancione che dice
   cosa toccare adesso e il pulsante **Annulla**.
 
@@ -113,6 +114,7 @@ manda in cucina.
 | **Annulla** | Compare durante Sposta, Unisci o Separa: interrompe l'operazione senza cambiare nulla. Lo stesso effetto ha toccare di nuovo il tavolo di partenza. |
 | **Vendita al banco** | Apre la [Vendita al banco](vendita-al-banco.md). |
 | **Asporto e domicilio** | Apre l'elenco degli ordini [Asporto e domicilio](asporto.md). |
+| **Chiamate** | Apre le [Chiamate](chiamate.md): i numeri degli ordini da ritirare al banco, in preparazione e pronti, e l'indirizzo del monitor in sala. C'è solo quando i kiosk sono accesi e hanno la licenza. |
 | **Prenotazioni** | Apre le [Prenotazioni](prenotazioni.md). |
 | **Messaggi** | Apre i [Messaggi alla cucina](messaggi.md). |
 
@@ -188,6 +190,7 @@ manda in cucina.
 - [Sale e tavoli](sale-e-tavoli.md)
 - [Disponibilità](disponibilita.md)
 - [Asporto e domicilio](asporto.md)
+- [Chiamate](chiamate.md)
 - [Prenotazioni](prenotazioni.md)
 - [Vendita al banco](vendita-al-banco.md)
 - [Messaggi alla cucina](messaggi.md)

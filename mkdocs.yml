@@ -129,6 +129,7 @@ nav:
           - Dividi conto: cassa/dividi-conto.md
           - Vendita al banco: cassa/vendita-al-banco.md
           - Asporto e domicilio: cassa/asporto.md
+          - Chiamate: cassa/chiamate.md
           - Prenotazioni: cassa/prenotazioni.md
           - Messaggi: cassa/messaggi.md
       - Fatture: cassa/fatture.md

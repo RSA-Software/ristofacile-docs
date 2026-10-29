@@ -46,7 +46,8 @@ tavolo porta la scritta **Asporto** e il numero di ordini in coda.
 Il titolo è **Asporto e domicilio**. Dall'alto:
 
 - **la testata**: a sinistra quanti ordini ci sono (es. «5 ordini in coda», oppure «2 di 5 ordini in
-  coda» quando è attivo un filtro), a destra i pulsanti **+ Asporto** e **+ Domicilio**;
+  coda» quando è attivo un filtro), a destra i pulsanti **+ Asporto** e **+ Domicilio**. Quando i
+  kiosk sono accesi e hanno la licenza, prima di **+ Asporto** c'è anche il pulsante **Chiamate**;
 - **le pastiglie di stato**, che filtrano la coda: **Tutti (5)**, **Da confermare (1)**,
   **Confermati (2)**, **In produzione (1)**, **Pronti (1)**, **In consegna (0)**. Compare solo la
   pastiglia degli stati che hanno almeno un ordine, e la fascia sparisce del tutto se gli ordini
@@ -102,6 +103,7 @@ In fondo, fissi anche con la tastiera aperta, **Annulla** e **Crea ordine**.
 | **ASPORTO / DOMICILIO** | Il tipo di ordine. |
 | **Stato** | **Ricevuto**, **Confermato**, **In produzione**, **Pronto**, **In consegna** (solo domicilio). |
 | **#12** | Il numero dell'ordine da dire al cliente. |
+| **n. 7** | Accanto al #numero, il numero del giorno: quello che si chiama in [Chiamate](../cassa/chiamate.md) e sul monitor in sala. |
 | **Nome** | Obbligatorio. |
 | **Telefono** | Facoltativo per l'asporto, obbligatorio per il domicilio («Telefono (per il fattorino)»). |
 | **Via** | Obbligatoria per il domicilio. |
@@ -115,6 +117,7 @@ In fondo, fissi anche con la tastiera aperta, **Annulla** e **Crea ordine**.
 | Comando | Effetto |
 |---|---|
 | **+ Asporto** / **+ Domicilio** | Apre il modulo del nuovo ordine. |
+| **Chiamate** | Apre le [Chiamate](../cassa/chiamate.md): i numeri degli ordini da ritirare al banco, da segnare pronti o consegnati. Sul palmare le due colonne stanno una sotto l'altra. |
 | **Pastiglia di stato** | Mostra solo gli ordini in quello stato; **Tutti** li mostra tutti. |
 | **Pulsante sulla riga** | Porta l'ordine allo stato successivo. |
 | **Tocco sulla riga** | Apre la scheda dell'ordine. |
@@ -179,7 +182,8 @@ rifiutato e non ritirato escono dalla coda.
   **INVIA IN CUCINA** nella sua comanda (se era Ricevuto o Confermato; un ordine già pronto non torna
   indietro).
 - Un ordine **da asporto** esce da solo dalla coda come **Ritirato** quando il suo conto viene
-  incassato. Un ordine **a domicilio** invece resta in coda anche se è già stato pagato: la consegna
+  incassato (tranne quando è seguito dalle [Chiamate](../cassa/chiamate.md) e viene pagato prima
+  che sia pronto: allora resta in coda finché non lo consegni). Un ordine **a domicilio** invece resta in coda anche se è già stato pagato: la consegna
   la segna chi la fa, con **Consegnato**.
 - La coda si aggiorna da sola con gli ordini creati o modificati dagli altri dispositivi, ma non
   mentre è aperta la scheda di un ordine.
@@ -191,4 +195,5 @@ rifiutato e non ritirato escono dalla coda.
 - [Conto](conto.md)
 - [Sala](sala.md)
 - [Asporto e domicilio sulla cassa](../cassa/asporto.md)
+- [Chiamate](../cassa/chiamate.md)
 - [Impostazioni](impostazioni.md)

@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di cucin
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-28 — **545 messaggi**.
+Aggiornato al 2026-10-29 — **551 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -61,6 +61,7 @@ Aggiornato al 2026-10-28 — **545 messaggi**.
 | *Codice non disponibile: «…» e' gia' usato da un altro articolo. Scegline un altro.* | Cassa: [Articoli](../cassa/articoli.md) | Il codice è stato preso nel frattempo (anche da un'altra postazione). | Scegli un altro codice. |
 | *Codice non disponibile: il N e' gia' in uso.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Alla creazione hai scelto un codice già usato. | Scegli un altro codice. |
 | *Codice nuovo* — *…: il cartoncino gia' stampato smette di funzionare e i telefoni collegati vanno scollegati. Continuare?* | Cassa: [Self order](../cassa/self-order.md) | Stai cambiando il codice di un tavolo. | Conferma con **Cambia codice** solo se ristampi il cartoncino. |
+| *Collegamento perso, riprovo…* (monitor) | Cassa: [Chiamate](../cassa/chiamate.md) | La TV non raggiunge più il servizio. Restano a video gli ultimi numeri. | Controlla che il servizio sia acceso e la TV collegata alla rete del locale: i numeri riprendono da soli. |
 | *Comanda inviata in cucina, ma la STAMPA su "CUCINA" e' fallita:* | Palmare: [Comanda](../palmare/comanda.md) | I piatti sono in cucina ma la stampante non ha stampato. | Controlla la stampante e usa **Ristampa**. |
 | *Comanda inviata in cucina, ma la STAMPA su "Cucina" e' fallita:* (seguito dal dettaglio) | Cassa: [Comanda](../cassa/comanda.md) | Le righe sono in cucina ma il foglietto non è uscito. | Controlla la stampante e tocca **Ristampa**. |
 | *Configura e salva l'indirizzo prima di esportare il QR.* | Cassa: [Menu online](../cassa/menu-online.md) | **PDF** o **JPG** senza un indirizzo completo. | Come sopra. |
@@ -318,6 +319,7 @@ Aggiornato al 2026-10-28 — **545 messaggi**.
 | *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
 | *L'impronta del certificato e' fatta di 64 cifre esadecimali (i due punti si possono lasciare).* … | Cassa: [Impostazioni](../cassa/impostazioni.md) | L'impronta scritta non è valida. | Ricopiala dal giornale del servizio, o lasciala vuota. |
 | *L'indirizzo pubblico va scritto intero, per esempio https://ordina.trattoria.it* | Cassa: [Self order](../cassa/self-order.md) | L'indirizzo non è completo. | Scrivilo con `https://` davanti. |
+| *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | Cassa: [Chiamate](../cassa/chiamate.md) | Hai toccato **Consegnato** su un ordine il cui conto non è ancora chiuso. L'ordine resta fra i pronti. | Incassa il conto dalla comanda dell'ordine (vedi [Asporto e domicilio](../cassa/asporto.md) e [Conto](../cassa/conto.md)). Un asporto già pronto, alla chiusura del conto, diventa ritirato da solo. |
 | *L'ordine dev'essere un numero valido.* | Cassa: [Modificatori](../cassa/modificatori.md), [Portate](../cassa/portate.md) | Ordine non numerico. | Scrivi un numero. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Cassa: [Conto](../cassa/conto.md) | Hai scelto **Fattura** dopo che lo scontrino era già uscito. | Emetti la fattura dal gestionale. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Palmare: [Conto](../palmare/conto.md) | Fattura dopo lo scontrino. | Fai la fattura dal gestionale. |
@@ -351,6 +353,7 @@ Aggiornato al 2026-10-28 — **545 messaggi**.
 | **Modifiche non salvate** — *La scheda di "…" ha modifiche non salvate. Vuoi abbandonarle?* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | Hai cambiato regola senza salvare. | **Abbandona** o **Resta qui**. |
 | **Modifiche non salvate** — *La scheda di "…" ha modifiche non salvate. Vuoi abbandonarle?* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Hai cambiato voce o tabella senza salvare. | **Abbandona** o **Resta qui**. |
 | **Modifiche non salvate** — *La scheda di "…" ha modifiche non salvate. Vuoi abbandonarle?* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Hai cambiato scheda senza salvare. | **Abbandona** o **Resta qui**. |
+| *Monitor non attivo* (monitor) | Cassa: [Chiamate](../cassa/chiamate.md) | I kiosk sono spenti o nessun kiosk ha la licenza. | Accendi i kiosk o controlla la licenza con l'assistenza. |
 | *Nessuna aliquota IVA utilizzabile.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Nessuna aliquota ha un reparto della stampante fiscale. | Sistema le aliquote IVA (reparto di cassa). |
 | *Nessuna categoria e' marcata "vendita al banco": la spunta si mette in Tabelle di base, sulla scheda della categoria merceologica.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Nessuna categoria merceologica è abilitata al banco. | Accendi **Vendita al banco** sulla categoria in Tabelle di base. |
 | *Nessuna fattura in questo periodo.* | Cassa: [Fatture](../cassa/fatture.md) | Nel periodo (e con la ricerca scritta) non ci sono fatture della cassa. | Allarga il periodo o cancella la ricerca e premi **Invio**. |
@@ -418,11 +421,13 @@ Aggiornato al 2026-10-28 — **545 messaggi**.
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Cassa: [Dividi il conto](../cassa/dividi-conto.md) | **+ Nuovo conto** quando tutte le voci sono già assegnate. | Togli qualcosa da un conto o incassa. |
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Palmare: [Conto](../palmare/conto.md) | **+** quando tutto è già su un conto. | Incassa i conti o rimanda delle voci fra quelle da dividere. |
 | *Non riesco a leggere le casse automatiche dal servizio: finche' non le leggo, non si salva …* / *Le casse automatiche dell'impianto non si leggono dal servizio: non salvo, …* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non ha dato l'elenco delle macchine. **Salva** e **Togli** sono bloccati, perché salvare sostituirebbe l'elenco dell'impianto con la sola macchina a video. | Riapri la pagina quando il servizio risponde. Se il dettaglio parla del file delle casse automatiche danneggiato, va corretto o tolto sul PC del servizio. |
+| *Non riesco a leggere le chiamate dal servizio: riprovo da solo ogni pochi secondi.* | Cassa: [Chiamate](../cassa/chiamate.md) | Il servizio non risponde. Il messaggio compare una volta sola, non a ogni giro. | Controlla la rete e il servizio: l'elenco torna da solo. |
 | *Non riesco a raggiungere il servizio per controllare l'incasso precedente di questo conto sulla cassa automatica (€ X): riprova.* | Cassa: [Conto](../cassa/conto.md) | La cassa non raggiunge il servizio: non sa com'è finito l'incasso. | Controlla che il servizio sia acceso e in rete, poi tocca di nuovo **Verifica**. Finché non risponde non si incassa da questo conto. |
 | *Non riesco a sapere dal servizio se il tavolo ha pagato dal telefono: riprova fra un attimo.* | Cassa: [Self order](../cassa/self-order.md) | Il servizio non ha risposto alla domanda sui pagamenti. | Riprova; se insiste, controlla il collegamento. |
 | **Non ritirato** — *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* | Palmare: [Ordini](../palmare/ordini.md) | Hai toccato **Non ritirato** (o **Non consegnato**). | **Conferma** o **Annulla**. |
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
 | *Non sono riuscito a leggere l'immagine.* | Cassa: [Menu online](../cassa/menu-online.md) | Il file scelto non si apre. | Scegli un altro file PNG o JPG. |
+| *Non sono riuscito a segnare l'ordine 27: riprova* (seguito dal dettaglio) | Cassa: [Chiamate](../cassa/chiamate.md) | Il tocco non è arrivato al servizio. La tessera resta dov'era. | Controlla la rete e tocca di nuovo. |
 | *N tavoli non hanno cambiato ordine. L'elenco viene ricaricato.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Lo spostamento non è stato salvato per alcuni tavoli. | Controlla l'ordine e ripeti lo spostamento. |
 | *Numero di coperti non valido.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Coperti vuoti, zero o non numerici. | Scrivi un numero maggiore di zero. |
 | *Numero di coperti non valido.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Coperti vuoti o zero. | Scrivi un numero maggiore di zero. |
@@ -547,6 +552,7 @@ Aggiornato al 2026-10-28 — **545 messaggi**.
 | *Tavoli non letti: …* | Cassa: [Storico conti](../cassa/storico-conti.md) | Non è stato possibile leggere i tavoli della sala scelta. | Riprova scegliendo di nuovo la sala. |
 | *Tavolo in pausa: si riprende da Self order, linguetta Pausa.* | Cassa: [Self order](../cassa/self-order.md) | Dopo il blocco di un telefono hai messo in pausa il tavolo. | Riprendi il tavolo dalla linguetta **Pausa**. |
 | **Tavolo libero** — *Vuoi occupare il tavolo 7?* | Palmare: [Sala](../palmare/sala.md) | Hai toccato un tavolo libero. Aprendolo il tavolo risulta occupato. | **Occupa** per aprirlo, **Annulla** se era un tocco involontario. |
+| *Tocca per attivare il suono* (monitor) | Cassa: [Chiamate](../cassa/chiamate.md) | La pagina è appena stata aperta e il browser non la lascia ancora suonare. | Tocca lo schermo una volta, o premi un tasto del telecomando. |
 | *Tocca prima la riga da offrire.* / *Tocca prima la riga da stornare.* / *Tocca prima una riga venduta a peso.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | La funzione agisce sulla riga selezionata. | Tocca la riga nel carrello, poi la funzione. |
 | *Tocca prima la riga del carrello a cui attaccare la variante.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Variante toccata senza riga selezionata. | Seleziona la riga, poi la variante. |
 | *Troppi tentativi: riprova fra* … *minuti.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Troppe richieste in poco tempo. | Aspetta e riprova. |
