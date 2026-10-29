@@ -4,10 +4,6 @@ cassa/articoli-scheda.png
 cassa/asporto-nuovo-asporto.png
 cassa/asporto-nuovo-domicilio.png
 cassa/asporto-scheda.png
-cassa/chiamate.png
-cassa/chiamate-monitor.png
-cassa/chiamate-monitor-collegamento.png
-cassa/chiamate-scelta.png
 cassa/conto-cassa-automatica.png
 cassa/conto-cliente.png
 cassa/conto-pos.png
@@ -32,7 +28,6 @@ cassa/vendita-al-banco-peso.png
 cassa/vendita-al-banco-prezzo-libero.png
 introduzione/licenza-demo.png
 kds/monitor-operatore.png
-kds/monitor-titoli.png
 palmare/comanda-dettagli.png
 palmare/comanda-menu-fisso.png
 palmare/comanda-tablet.png
