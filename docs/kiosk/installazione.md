@@ -126,10 +126,13 @@ copia.
 L'app da sola tiene il tablet in orizzontale, nasconde le barre di sistema (si riaffacciano solo
 per un attimo strisciando dal bordo), tiene lo schermo acceso e ignora il tasto Indietro.
 
-**Il permesso USB** si chiede solo in due momenti: nella configurazione (scelta della stampante o
-**Stampa di prova**) e all'avvio dell'app, o quando si ricollega la stampante, con il kiosk
-sull'attesa. **Mai durante un ordine**: se il permesso manca, le stampe del cliente non escono e il
-kiosk va avanti lo stesso (vedi [Pagamenti](pagamenti.md#note)).
+**Il permesso USB** si chiede in tre momenti: nella configurazione (scelta della stampante o
+**Stampa di prova**), all'avvio dell'app e **ogni volta che la stampante scelta si ricollega**. Di
+solito capita all'avvio o quando colleghi la stampante, con il personale davanti; ma se la
+stampante si stacca e si riattacca durante un ordine (per esempio un cavo che fa contatto) la
+richiesta di Android può comparire anche davanti al cliente: in quel caso tocca tu **Consenti**.
+Le stampe del cliente non aspettano il permesso: se manca, non escono e il kiosk va avanti lo
+stesso (vedi [Pagamenti](pagamenti.md#note)).
 
 **La rete.** Il kiosk Android parla con il servizio in `http` sulla rete del locale: nella
 configurazione si scrive l'indirizzo con `http://`, come per le casse.
@@ -143,8 +146,17 @@ configurazione si scrive l'indirizzo con `http://`, come per le casse.
 
 ## Note
 
-- **Prima del cliente.** Dopo l'installazione prova un ordine completo, con la carta e in
-  contanti, e chiudi il conto di prova dalla cassa senza documento.
+- **Prima del cliente.** Dopo l'installazione prova un ordine completo.
+  - Un pagamento con la carta o in contanti a un kiosk che incassa **emette uno scontrino vero**
+    sulla stampante fiscale assegnata al kiosk: l'ordine di prova si chiude da solo, con il suo
+    documento fiscale. Usa importi piccoli, o una stampante fiscale di prova.
+  - Senza scontrino si prova con **Pago alla cassa** (se è acceso), con l'invio in cucina **dopo**: l'ordine
+    di prova non va in cucina e si annulla da solo alla scadenza (di partenza 30 minuti).
+  - La cassa oggi non apre gli ordini del kiosk (vedi
+    [Pagamenti](pagamenti.md#un-pagamento-da-verificare)): un ordine di prova rimasto aperto (da
+    verificare, con lo scontrino da emettere, o «paga alla cassa» con l'invio **subito**) non si
+    chiude dalla cassa.
+  <!-- DA VERIFICARE: prima dell'aggiornamento della cassa (Piano 8), chi e come chiude un ordine di prova del kiosk rimasto aperto (oggi solo con la rotta del servizio, come nel collaudo). -->
 - **Uscire dall'app** si può solo dalla configurazione, con **Esci dall'app**: vedi
   [Configurazione](configurazione.md#chiudere-lapp). Per lavorare sul PC o sul tablet va tolto
   anche il blocco del sistema operativo.

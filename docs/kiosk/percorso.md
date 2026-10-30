@@ -193,9 +193,12 @@ Mentre paga, il cliente vede:
 ![Incasso in contanti](../assets/img/kiosk/percorso-contanti.png)
 
 Se il pagamento non riesce (carta rifiutata, contanti annullati) si torna a **Come paghi?** con
-*Il pagamento non è riuscito: puoi riprovare o scegliere un altro modo.*. Passando fra carta e
-contanti il cliente **tiene lo stesso numero d'ordine**; un ordine nuovo nasce solo passando a
-**Pago alla cassa** (quello di prima si annulla).
+*Il pagamento non è riuscito: puoi riprovare o scegliere un altro modo.*. Riprovando, o passando
+fra carta e contanti, il cliente **tiene lo stesso numero d'ordine**. Nasce invece un **ordine
+nuovo, con un numero nuovo** (quello di prima si annulla), quando il cliente:
+
+- passa a **Pago alla cassa**;
+- torna indietro e **cambia il carrello** o il **segnaposto** prima di pagare di nuovo.
 
 Se al momento di pagare un prezzo è cambiato, il kiosk non incassa e torna al riepilogo con *I prezzi sono
 cambiati: controlla il totale.* e i prezzi nuovi: si incassa sempre il totale calcolato dal

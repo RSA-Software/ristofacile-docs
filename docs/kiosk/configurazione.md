@@ -165,7 +165,7 @@ servizio. La cassa non ha ancora la schermata per cambiarle: per ora le imposta 
 | **Stato del POS** | Interroga il terminale: *Il POS risponde: …* oppure *Il POS non risponde: …*. |
 | **Nessun POS** | Il kiosk non accetta la carta (resta il rendiresto, se ha il POS). |
 | **Usa questo rendiresto** / **Nessun rendiresto** | Sceglie la cassa automatica dei contanti, oppure nessuna. |
-| **Usa questa stampante** | Sceglie la stampante termica. Con una USB su Android, la prima volta il tablet chiede il permesso (vedi [Installazione](installazione.md#android)). |
+| **Usa questa stampante** | Sceglie la stampante termica. Con una USB su Android il tablet chiede il permesso (vedi [Installazione](installazione.md#android)). |
 | **Stampa di prova** | Stampa sulla termica scelta «PROVA DI STAMPA», il numero del kiosk, data e ora e *Promemoria e tagliandi usciranno qui.*. Sotto: *Stampa di prova mandata.* |
 | **Rileggi gli elenchi** | Rilegge dal servizio terminali, rendiresto e stampanti. |
 | Interruttore **La stampante fiscale è in questo kiosk** | Vedi sopra. |

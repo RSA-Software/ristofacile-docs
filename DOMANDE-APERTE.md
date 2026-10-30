@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-30 — **73 domande** su 37 pagine.
+Aggiornato al 2026-10-30 — **74 domande** su 37 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -233,13 +233,14 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 41: con quale pacchetto si installa RistoKiosk su Windows e su Android (installatore in preparazione, Piano 9).
 - [ ] riga 106: l'Accesso assegnato di Windows accetta RistoKiosk come app del chiosco (e' un programma classico, non un'app dello Store), o serve lo Shell Launcher / una configurazione a piu' app? Scrivere i passi esatti per Windows 10 e 11 Pro.
+- [ ] riga 159: prima dell'aggiornamento della cassa (Piano 8), chi e come chiude un ordine di prova del kiosk rimasto aperto (oggi solo con la rotta del servizio, come nel collaudo).
 
 ## Pagamenti, per il personale
 
 `docs/kiosk/pagamenti.md`
 
 - [ ] riga 149: prima dell'aggiornamento della cassa (Piano 8), come chiude il personale il conto di un ordine del kiosk da verificare, con lo scontrino da emettere o da pagare alla cassa? Oggi lo si e' fatto solo dalla rotta del servizio (collaudo).
-- [ ] riga 256: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta.
+- [ ] riga 255: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
 
 ## Accesso
 

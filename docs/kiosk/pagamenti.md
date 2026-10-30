@@ -252,8 +252,7 @@ Se alla riaccensione il servizio non risponde:
   schermata finale dice *Di’ alla cassa il numero 27*, e gli avvisi in cassa ci sono comunque.
 - **La ricevuta del POS** esce sulla termica del kiosk, se c'è.
 - **Il kiosk non restituisce mai soldi da solo**: un rimborso si fa dalla cassa.
-- I casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
-  <!-- DA VERIFICARE: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta. -->
+<!-- DA VERIFICARE: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte. -->
 
 ## Vedi anche
 
