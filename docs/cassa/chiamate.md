@@ -48,15 +48,17 @@ il suo numero si vede solo qui, non sulla TV.
 
 - Il bottone **Chiamate** e il monitor in sala ci sono solo quando i kiosk sono accesi e almeno un
   kiosk ha la licenza, anche in prova. Altrimenti il bottone non compare e il monitor scrive
-  *Monitor non attivo*. <!-- DA VERIFICARE: quando ci sara' la scheda del kiosk, rimandare li' per l'accensione dei kiosk e la loro licenza. -->
+  *Monitor non attivo*. L'accensione dei kiosk e la loro licenza sono spiegate in
+  [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio).
 - Il pronto da solo c'è solo per i centri di produzione con lo schermo, cioè di tipo
   **Monitor KDS** o **Stampante + KDS** (vedi [Centri di produzione](centri-di-produzione.md)).
 - Per il monitor in sala serve una TV, o uno schermo con un PC, con un browser e collegata alla
   rete del locale.
 - **I minuti sul monitor e le chiamate per gli asporti della cassa** non si impostano ancora da una
   schermata della cassa: stanno nella configurazione dei kiosk sul servizio e li imposta
-  l'assistenza. Di partenza un numero pronto resta sul monitor **10 minuti** (si può scegliere da 1
-  a 120) e gli asporti della cassa **non** compaiono.
+  l'assistenza (vedi [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio)).
+  Di partenza un numero pronto resta sul monitor **10 minuti** (si può scegliere da 1 a 120) e gli
+  asporti della cassa **non** compaiono.
   <!-- DA VERIFICARE: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa). -->
 
 ## La schermata
@@ -138,7 +140,7 @@ non ha un operatore: è per questo che mostra solo i numeri.
 | **Monitor in sala: apri … sul browser della TV** | L'indirizzo della pagina del monitor da aprire sulla TV della sala. |
 | **In preparazione (n)** | Gli ordini che la cucina sta preparando, e quanti sono. |
 | **Pronti (n)** | Gli ordini pronti da consegnare, e quanti sono. Restano qui finché non li consegni, anche dopo che sono spariti dalla TV. |
-| **Numero** (tessera) | Il numero dell'ordine da chiamare. È il numero del giorno dell'ordine, lo stesso che nella coda dell'[asporto](asporto.md) compare come «n. 27» e sul monitor di cucina in testa al titolo. <!-- DA VERIFICARE: il kiosk mostra o stampa al cliente questo stesso numero? Il codice del kiosk non e' in questi repository. --> |
+| **Numero** (tessera) | Il numero dell'ordine da chiamare. È il numero del giorno dell'ordine, lo stesso che nella coda dell'[asporto](asporto.md) compare come «n. 27» e sul monitor di cucina in testa al titolo. Il cliente del kiosk legge lo stesso numero alla fine dell'ordine (*Il tuo numero*), sul promemoria «paga alla cassa» e, con le stampanti fiscali RCH, in testa allo scontrino (vedi [Percorso del cliente](../kiosk/percorso.md#9-il-numero)). |
 | **Porta via** | Ordine del kiosk da portare via. Compare anche sul monitor in sala. |
 | **Segnaposto 12** | Ordine del kiosk di un cliente che mangia nel locale e aspetta al tavolo con quel segnaposto. Non compare sul monitor in sala: il vassoio va portato al tavolo. |
 | **Asporto · Rossi** | Asporto preso dalla cassa o dal palmare, con il nome del cliente. |
@@ -232,7 +234,9 @@ sparisce da Chiamate e dalla TV senza bisogno di toccare **Consegnato**.
     solo quando il cliente ha ritirato, oppure lascia che lo segni chi consegna, da Chiamate.
 
 - Un ordine del kiosk **non ancora pagato** non compare né qui né sulla TV, e non arriva sul monitor
-  di cucina: compare quando è pagato.
+  di cucina: compare quando è pagato. Fa eccezione un ordine «paga alla cassa» con l'invio in cucina
+  **subito**, che arriva in cucina e qui alla conferma del cliente (vedi
+  [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio)).
 - Un ordine non ancora incassato che la cucina segna consegnato sul monitor di cucina resta fra i
   **Pronti**: diventa consegnato quando ne chiudi il conto.
 - Dopo **Consegnato** in Chiamate i piatti dell'ordine restano nella colonna PRONTO del
@@ -258,3 +262,4 @@ sparisce da Chiamate e dalla TV senza bisogno di toccare **Consegnato**.
 - [Centri di produzione](centri-di-produzione.md)
 - [Monitor di cucina](../kds/monitor.md)
 - [Ordini sul palmare](../palmare/ordini.md)
+- [Kiosk](../kiosk/index.md)

@@ -106,7 +106,8 @@ markdown_extensions:
 # voce e nello stesso ordine; le schermate che non stanno nel menu (Comanda,
 # Conto, Asporto...) stanno sotto la voce da cui si raggiungono.
 # Nel palmare l'indice segue le quattro linguette in basso (Sala, Ordini,
-# Menu, Io) e poi Impostazioni.
+# Menu, Io) e poi Impostazioni. Il kiosk (RistoKiosk) ha la sua scheda: installazione,
+# configurazione, percorso del cliente e pagamenti per il personale.
 # ---------------------------------------------------------------------------
 nav:
   - Home: index.md
@@ -166,6 +167,12 @@ nav:
       - kds/index.md
       - Scelta del centro: kds/centro.md
       - Monitor: kds/monitor.md
+  - Kiosk:
+      - kiosk/index.md
+      - Installazione: kiosk/installazione.md
+      - Configurazione: kiosk/configurazione.md
+      - Percorso del cliente: kiosk/percorso.md
+      - Pagamenti, per il personale: kiosk/pagamenti.md
   - Appendici:
       - Glossario: appendici/glossario.md
       - Messaggi a video: appendici/messaggi.md

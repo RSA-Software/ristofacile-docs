@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-29 — **69 domande** su 34 pagine.
+Aggiornato al 2026-10-30 — **73 domande** su 37 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -49,9 +49,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/chiamate.md`
 
-- [ ] riga 51: quando ci sara' la scheda del kiosk, rimandare li' per l'accensione dei kiosk e la loro licenza.
-- [ ] riga 60: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa).
-- [ ] riga 141: il kiosk mostra o stampa al cliente questo stesso numero? Il codice del kiosk non e' in questi repository.
+- [ ] riga 62: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa).
 
 ## Comanda
 
@@ -219,8 +217,29 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kds/monitor.md`
 
-- [ ] riga 109: quando ci sara' la scheda del kiosk, rimandare li' per l'impostazione dell'invio in cucina degli ordini da pagare alla cassa (subito o dopo l'incasso).
 - [ ] riga 216: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
+
+## Configurazione del kiosk
+
+`docs/kiosk/configurazione.md`
+
+- [ ] riga 129: quando la cassa avra' la schermata della configurazione dei kiosk (Piano 8), scrivere qui il percorso e le etichette esatte.
+- [ ] riga 233: c'e' un modo di registrare la termica del kiosk dalla cassa senza passare dalla stampante preconto di una cassa (passi 2-3)?
+- [ ] riga 299: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
+
+## Installazione del kiosk
+
+`docs/kiosk/installazione.md`
+
+- [ ] riga 41: con quale pacchetto si installa RistoKiosk su Windows e su Android (installatore in preparazione, Piano 9).
+- [ ] riga 106: l'Accesso assegnato di Windows accetta RistoKiosk come app del chiosco (e' un programma classico, non un'app dello Store), o serve lo Shell Launcher / una configurazione a piu' app? Scrivere i passi esatti per Windows 10 e 11 Pro.
+
+## Pagamenti, per il personale
+
+`docs/kiosk/pagamenti.md`
+
+- [ ] riga 149: prima dell'aggiornamento della cassa (Piano 8), come chiude il personale il conto di un ordine del kiosk da verificare, con lo scontrino da emettere o da pagare alla cassa? Oggi lo si e' fatto solo dalla rotta del servizio (collaudo).
+- [ ] riga 256: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta.
 
 ## Accesso
 

@@ -105,8 +105,8 @@ dell'aggiornamento che ha introdotto i numeri) ha il titolo di sempre, senza il 
 
 Gli ordini del kiosk da pagare **non arrivano in cucina finché non sono pagati**: un ordine pagato
 al kiosk compare appena è pagato, uno da pagare alla cassa compare quando la cassa lo incassa (a
-meno che i kiosk siano impostati per mandarlo in cucina subito).
-<!-- DA VERIFICARE: quando ci sara' la scheda del kiosk, rimandare li' per l'impostazione dell'invio in cucina degli ordini da pagare alla cassa (subito o dopo l'incasso). -->
+meno che i kiosk siano impostati per mandarlo in cucina subito: vedi l'invio in cucina in
+[Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio)).
 
 ### La card del piatto
 

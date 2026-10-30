@@ -1,6 +1,6 @@
 ---
 title: Messaggi a video
-description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di cucina, con la schermata che li mostra, la causa e cosa fare.
+description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina e kiosk, con la schermata che li mostra, la causa e cosa fare.
 ---
 
 # Messaggi a video
@@ -8,13 +8,13 @@ description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di cucin
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-29 — **551 messaggi**.
+Aggiornato al 2026-10-30 — **607 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
     Porta alla scheda della schermata che mostra il messaggio, raggruppando
-    le schede per app: **Cassa**, **Palmare**, **Monitor di cucina** e
-    **Guida introduttiva**. Lo stesso messaggio può comparire sia sulla
+    le schede per app: **Cassa**, **Palmare**, **Monitor di cucina**,
+    **Kiosk** e **Guida introduttiva**. Lo stesso messaggio può comparire sia sulla
     cassa sia sul palmare: in quel caso la colonna li elenca tutti e due.
 
     L'elenco è **generato dalle schede**: ogni messaggio è spiegato anche
@@ -41,6 +41,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | **Annulla prenotazione** — *Annullare questa prenotazione? Uscira' dal registro.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Hai toccato **Annulla** nella scheda. | **Annulla prenotazione** o **Indietro**. |
 | *Annullare questa prenotazione? Uscira' dal registro.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Conferma di **Annulla** nella scheda. | **Annulla prenotazione** per procedere, **Indietro** per tenerla. |
 | *Annullo con restituzione incompleta: entrati € X, restituiti € Y. …* | Cassa: [Conto](../cassa/conto.md) | L'annullo non ha restituito tutto. | La differenza resta come trattenuto: vedi [Dopo un incasso parziale](../cassa/conto.md#dopo-un-incasso-parziale). |
+| *Annullo in corso: ritira i soldi restituiti.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il cliente ha toccato **Annulla** durante i contanti. | Il cliente ritira i soldi dalla macchina. |
 | *Apri prima un tavolo.* | Palmare: [Comanda](../palmare/comanda.md) | Il tavolo non si è aperto. | Torna in sala e riapri il tavolo. |
 | *Articolo duplicato, ma non e' stato possibile copiare: … Il resto c'e'.* | Cassa: [Articoli](../cassa/articoli.md) | Immagine, allergeni o traduzioni non copiati. | Aggiungili a mano sulla copia. |
 | *Articolo non trovato in anagrafica.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Il codice scelto non esiste più in anagrafica. | Scegli un altro articolo. |
@@ -49,6 +50,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Assegna un tavolo alla prenotazione prima di far accomodare il cliente.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | **Arrivato** su una prenotazione senza tavolo. | Tocca **Modifica** e assegna il tavolo. |
 | *Attenzione: il tavolo ha al massimo 4 posti, la prenotazione ne richiede 6.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Il tavolo scelto è piccolo. | Scegli un tavolo più grande, o tienilo e unisci un altro tavolo all'arrivo. |
 | *Attenzione: il tavolo ha al massimo N posti, la prenotazione ne richiede M. Salvare lo stesso? Al loro arrivo servira' unire un altro tavolo.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Al **Salva**, i coperti superano i posti del tavolo. | **Salva** per tenere il tavolo, **Cambia tavolo** per sceglierne un altro. |
+| *Attenzione: le credenziali di questo kiosk non sono ristrette. …* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | L'utente del kiosk non è fra gli utenti dei kiosk sul servizio. | Fallo aggiungere (vedi [Installazione](../kiosk/installazione.md#lutente-web-del-kiosk)). |
 | *Attenzione: questo tavolo e' gia' assegnato ad un'altra prenotazione in questa data.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Il tavolo è già prenotato quel giorno. È solo un avviso. | Controlla gli orari o scegli un altro tavolo. |
 | *Base URL e utente sono obbligatori.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva e connetti** con indirizzo o utente vuoti. | Compila **Indirizzo** e **Utente**. |
 | *Base URL e utente sono obbligatori.* | Monitor di cucina: [Scelta del centro](../kds/centro.md) | Indirizzo o utente vuoti. | Compilali. |
@@ -62,11 +64,16 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Codice non disponibile: il N e' gia' in uso.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Alla creazione hai scelto un codice già usato. | Scegli un altro codice. |
 | *Codice nuovo* — *…: il cartoncino gia' stampato smette di funzionare e i telefoni collegati vanno scollegati. Continuare?* | Cassa: [Self order](../cassa/self-order.md) | Stai cambiando il codice di un tavolo. | Conferma con **Cambia codice** solo se ristampi il cartoncino. |
 | *Collegamento perso, riprovo…* (monitor) | Cassa: [Chiamate](../cassa/chiamate.md) | La TV non raggiunge più il servizio. Restano a video gli ultimi numeri. | Controlla che il servizio sia acceso e la TV collegata alla rete del locale: i numeri riprendono da soli. |
+| *Collegato al servizio, ma: Il kiosk n. 2 non è configurato: aggiungilo dalla cassa.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Sul servizio non c'è un kiosk con questo numero. | Fallo aggiungere dall'assistenza, o correggi il numero. |
+| *Collegato al servizio, ma: Kiosk non attivo, ordina alla cassa* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La licenza del kiosk non c'è o è scaduta. | Attiva la licenza nel riquadro **Licenza digitale**. |
+| *Collegato al servizio, ma: Questo dispositivo non è il kiosk n. 1: associalo dalla cassa.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Al numero 1 è associato un altro dispositivo, o nessuno. | Copia l'identificativo e fallo associare dall'assistenza; oppure correggi il **Numero del kiosk**. |
 | *Comanda inviata in cucina, ma la STAMPA su "CUCINA" e' fallita:* | Palmare: [Comanda](../palmare/comanda.md) | I piatti sono in cucina ma la stampante non ha stampato. | Controlla la stampante e usa **Ristampa**. |
 | *Comanda inviata in cucina, ma la STAMPA su "Cucina" e' fallita:* (seguito dal dettaglio) | Cassa: [Comanda](../cassa/comanda.md) | Le righe sono in cucina ma il foglietto non è uscito. | Controlla la stampante e tocca **Ristampa**. |
 | *Configura e salva l'indirizzo prima di esportare il QR.* | Cassa: [Menu online](../cassa/menu-online.md) | **PDF** o **JPG** senza un indirizzo completo. | Come sopra. |
 | *Configura e salva l'indirizzo prima di stampare.* | Cassa: [Menu online](../cassa/menu-online.md) | **Stampa QR** senza un indirizzo completo. | Compila e salva la linguetta **Qrcode**. |
+| *Configurazione del kiosk da rifare: chiama il personale* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il PIN del kiosk salvato sul dispositivo non si legge più. | Tieni premuto 3 secondi l'angolo in alto a sinistra e scegli un PIN nuovo. |
 | *Configurazione del menu online non leggibile.* | Cassa: [Menu online](../cassa/menu-online.md) | Il servizio non risponde o l'utente non ha il permesso. | Controlla la connessione. |
+| *Con gli articoli a peso si paga alla cassa, dopo la pesata.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Nel carrello c'è un articolo a peso. | Il cliente sceglie **Pago alla cassa**. |
 | *Connessione fallita: …* | Monitor di cucina: [Scelta del centro](../kds/centro.md) | Il servizio non risponde o le credenziali sono sbagliate. | Controlla indirizzo, rete e credenziali. |
 | *Connessione fallita.* (cassa e palmare) / *Connessione fallita:* … (monitor) | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | Indirizzo, porta, utente o password sbagliati, oppure servizio spento. | Controlla i dati e che il servizio sia acceso e raggiungibile in rete. |
 | *Connessione fallita.* (con il dettaglio) | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non risponde o rifiuta utente e password. | Controlla indirizzo, porta, utente e password e che il servizio sia acceso. |
@@ -117,6 +124,8 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Fine turno* - *Vuoi uscire? MARCO non firmera' piu' le comande su questo dispositivo, e per rientrare servira' il PIN.* | Cassa: [Comanda](../cassa/comanda.md) | Tocco su **ESCI**. | **Esci** per confermare. |
 | **Fine turno** — *Vuoi uscire? Mario non firmera' piu' le comande su questo dispositivo, e per rientrare servira' il PIN.* | Palmare: [Io](../palmare/io.md) | Hai toccato **ESCI**. | **Esci** per chiudere il turno, **Annulla** per restare. |
 | *Hai chiesto l'annullo, ma la macchina aveva gia' concluso il pagamento: l'annullo non l'ha disfatto.* … | Cassa: [Conto](../cassa/conto.md) | L'annullo è arrivato a pagamento concluso. | Il conto si chiude; se il cliente voleva indietro il denaro, restituiscilo a conto chiuso. |
+| *Hai versato 5,00 €: rivolgiti alla cassa con il numero 28.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il rendiresto ha tenuto dei soldi senza completare il pagamento. | Controlla la macchina; in cassa c'è l'avviso da verificare con l'importo. |
+| *I due PIN non coincidono: ricomincia.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il PIN ripetuto è diverso dal primo. | Scrivi di nuovo il PIN, due volte uguale. |
 | *Il backend non ha restituito l'ordine appena aperto.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Il servizio non ha restituito l'ordine creato. | Ricarica la schermata e controlla se l'ordine è in coda prima di rifarlo. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato…* | Palmare: [Accesso](../palmare/accesso.md) | Il servizio del locale è più vecchio dell'app. | Fai aggiornare il servizio: fino ad allora non si entra. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato a una versione che espone api/v1/risto/accesso. Fino ad allora da qui non si entra.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Il servizio installato è più vecchio della cassa. | Fai aggiornare il servizio RistoFacile. |
@@ -129,9 +138,14 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Il conto e' cambiato mentre lo incassavi (un ordine dal telefono o un'altra postazione): ricontrolla il totale, ora € …, e premi di nuovo.* | Cassa: [Self order](../cassa/self-order.md) | Mentre eri sul conto è arrivato un ordine o un pagamento dal telefono. | Ricontrolla il totale e incassa di nuovo. |
 | *Il conto era gia' stato chiuso da un'altra postazione: non e' stato addebitato niente in camera.* | Cassa: [Conto](../cassa/conto.md) | Il conto era già chiuso altrove. | Nessuna azione. |
 | *… Il conto resta aperto.* | Cassa: [Conto](../cassa/conto.md) | La stampante fiscale ha rifiutato l'emissione (il motivo è nella prima parte del messaggio, quello della stampante). Non è uscito niente. | Risolvi il problema (carta, coperchio, stampante spenta) e tocca di nuovo il pulsante. |
+| *Il giornale dei pagamenti del kiosk non si legge (spostato in pagamento.json.corrotto): controlla il POS, il rendiresto e gli ordini del kiosk in cassa.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il file dei pagamenti del kiosk è rovinato. | Controlla le periferiche e gli avvisi in cassa, poi PIN e **Riprova**. |
+| *Il giornale dei pagamenti è bloccato da un altro programma: non si sa quale pagamento c'era.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Un altro programma (per esempio un antivirus o un backup) tiene aperto il file dei pagamenti. | Chiudi quel programma, poi PIN e **Riprova**. |
+| *Il kiosk non ha modi di pagamento: configura un POS o un rendiresto, oppure accendi «paga alla cassa».* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il kiosk incassa ma non ha periferiche, e «paga alla cassa» è spento. | Scegli un POS o un rendiresto in configurazione, o fai accendere «paga alla cassa». |
 | *Il menu e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Con un conto acceso in Comanda, l'assegnazione non è riuscita. | Assegnalo da [Dividi conto](../cassa/dividi-conto.md). |
 | *Il menu e' in comanda, ma questi piatti non sono stati scritti: …. Battili dalle loro sezioni.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Il servizio ha accettato il menu ma non tutti i piatti. | Batti i piatti mancanti dalle loro sezioni in Comanda. |
 | *Il menu non esiste piu'.* | Cassa: [Menu](../cassa/menu.md) | Il menu è stato eliminato da un'altra postazione. | Torna all'elenco. |
+| *Il menu non si carica: riprova o ordina alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il menu non è arrivato dal servizio dopo **Dove mangi?**. | Tocca **Riprova**; se insiste, controlla il servizio. |
+| *Il menu è cambiato: controlla il tuo ordine.* / *Non più disponibili: …* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Mentre il cliente ordinava un piatto è finito o il menu è cambiato. | Il cliente controlla il carrello e sceglie altro. |
 | *Il messaggio non e' partito.* | Palmare: [Messaggi alla cucina](../palmare/messaggi.md) | Il servizio ha rifiutato l'invio (sotto compare il motivo). | Riprova. |
 | *Il messaggio non e' partito.* (seguito dal dettaglio) | Cassa: [Messaggi alla cucina](../cassa/messaggi.md) | Il servizio non ha accettato il messaggio. | Riprova; se persiste, controlla il collegamento. |
 | *Il minimo di scelte non puo' essere maggiore del massimo.* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Min più alto del Max. | Correggi i valori. |
@@ -142,18 +156,28 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Il nome del cliente e' obbligatorio.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | **Salva** con il nome vuoto. | Scrivi il nome. |
 | *Il nome del cliente e' obbligatorio.* | Palmare: [Ordini](../palmare/ordini.md) | **Crea ordine** senza nome. | Scrivi il nome. |
 | *Il nome del cliente e' obbligatorio.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | **Salva** senza nome. | Scrivi il nome. |
+| *Il numero del kiosk va da 1 a 99.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Numero fuori misura. | Correggilo. |
 | *Il numero di parti dev'essere almeno 2.* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | Parti meno di 2. | Correggi il numero. |
+| *Il pagamento era già concluso.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il cliente ha toccato **Annulla** quando la macchina aveva già incassato tutto. | Niente: l'ordine è pagato e va in cucina. |
+| *Il pagamento non copre il conto: rivolgiti alla cassa.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | L'importo pagato è minore del conto. | Vedi l'avviso in cassa: incassa la differenza. |
+| *Il pagamento non è partito: rivolgiti alla cassa con il numero 28.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il servizio ha rifiutato il pagamento prima di cominciare. | Nessun soldo preso: il cliente paga in cassa o ricomincia l'ordine. |
+| *Il pagamento non è riuscito: puoi riprovare o scegliere un altro modo.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Carta rifiutata, pagamento annullato sul POS, contanti annullati. | Riprova, o scegli un altro modo. |
+| *Il pagamento è preso: stiamo registrando l’ordine 26, rivolgiti alla cassa se non parte.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Pagamento preso, servizio irraggiungibile. | Rimetti in funzione il servizio o la rete: il kiosk registra da solo. |
+| *Il pagamento è registrato ma l'ordine era scaduto: rivolgiti alla cassa con il numero 27* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il cliente ha pagato un ordine che il servizio aveva già annullato per scadenza. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
 | *Il piatto e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Con un conto acceso in Comanda, l'assegnazione non è riuscita. | Assegnala da [Dividi conto](../cassa/dividi-conto.md). |
 | *Il piatto e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Palmare: [Comanda](../palmare/comanda.md) | Su un tavolo diviso il piatto è entrato ma non è stato assegnato al conto. | Assegnalo da **Dividi** nel [Conto](../palmare/conto.md). |
 | *Il piatto e' in comanda, ma queste parti non sono state scritte: …. Aprilo dalla comanda per completarlo, o toglilo e ribattilo.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Il servizio ha accettato la pizza ma non tutte le parti. | Correggi la pizza da **Modifica composizione** o toglila e ribattila. |
 | *Il PIN deve essere un numero da 1 a 8 cifre.* | Cassa: [Operatori](../cassa/operatori.md) | PIN non valido. | Correggi il PIN. |
 | *Il PIN e' obbligatorio: e' quello che questo operatore digita per entrare.* | Cassa: [Operatori](../cassa/operatori.md) | Operatore nuovo, o senza PIN, salvato senza PIN. | Tocca **Digita** e scrivi il PIN. |
 | *Il PIN non puo' cominciare per zero: in archivio e' un numero, quindi "0123" diventerebbe 123 e "000000" varrebbe 0, cioe' nessun PIN.* | Cassa: [Operatori](../cassa/operatori.md) | Il PIN comincia con 0. | Scegli un PIN che non cominci per zero. |
+| *Il PIN va da 4 a 8 cifre.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Hai scelto un PIN troppo corto o troppo lungo. | Scegline uno da 4 a 8 cifre. |
 | *Il prezzo del coperto deve essere un numero maggiore o uguale a zero.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Coperto non valido. | Correggi il coperto. |
 | *Il prezzo della riga non e' stato cambiato.*, *Quantita' non aggiornata.*, *Riga non rimossa.*, *"…" non e' stato registrato.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Il servizio non ha registrato la modifica. | Controlla la connessione e ripeti. |
 | *Il prezzo dev'essere un numero.* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Prezzo non valido. | Correggi il prezzo. |
 | *Il prezzo fisso deve essere un numero. Lascialo vuoto se il menu si vende solo piatto per piatto.* | Cassa: [Menu](../cassa/menu.md) | Prezzo fisso non valido. | Correggi o svuota il prezzo. |
 | *Il punto vendita dev'essere un numero maggiore o uguale a zero.* / *Il canale dev'essere un numero maggiore o uguale a zero.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Dati interni non validi. | Ricrea la voce. |
+| *Il rendiresto scelto (id 1) non c'è più sul servizio: scegline un altro.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La macchina è stata tolta dal servizio. | Scegli un'altra macchina, o **Nessun rendiresto**. |
+| *Il rendiresto è occupato: rivolgiti alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il rendiresto sta già incassando per un'altra postazione. | Il cliente riprova più tardi, paga con la carta o va alla cassa. Il kiosk non riprova da solo. |
 | *Il reparto cassa dev'essere un numero da 1 a 9: e' il reparto del registratore su cui esce la riga di scontrino.* | Cassa: [Articoli](../cassa/articoli.md) | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 9. |
 | *Il self order al tavolo e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* | Cassa: [Self order](../cassa/self-order.md) | La licenza non comprende il modulo. | Chiedi il modulo al rivenditore. |
 | *Il seriale non è scritto correttamente.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il seriale non ha la forma giusta. | Ricopialo con attenzione. |
@@ -162,8 +186,13 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Il server licenze non risponde. Controlla la connessione.* | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | Attivazione senza Internet. | Collega il dispositivo a Internet e riprova. |
 | *Il servizio non conosce ancora i messaggi alla cucina: va aggiornato.* | Cassa: [Messaggi alla cucina](../cassa/messaggi.md) | Il servizio installato è più vecchio della cassa: **INVIA** resta spento. | Fai aggiornare il servizio RistoFacile. |
 | *Il servizio non conosce ancora i messaggi alla cucina: va aggiornato.* | Palmare: [Messaggi alla cucina](../palmare/messaggi.md) | Il servizio installato è di una versione precedente. **INVIA** resta spento. | Fai aggiornare il servizio. |
+| *Il servizio non ha ancora dato una risposta definitiva: il kiosk continua a provare e mostra l'esito appena arriva.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | **Riprova** senza risposta entro 30 secondi. | Aspetta: l'esito arriva da solo quando il servizio risponde. |
 | *Il servizio non ha restituito la configurazione del menu online.* | Cassa: [Menu online](../cassa/menu-online.md) | Il servizio ha risposto senza dati. | Riprova; se persiste, chiama l'assistenza. |
 | *Il servizio non ha restituito nessun terminale: resta valido quello gia' scelto su questa cassa.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non ha dato l'elenco. | La cassa continua a usare il terminale scelto; riprova più tardi. |
+| *Il servizio non risponde da oltre 2 minuti durante l'incasso: controlla il rendiresto e il conto in cassa.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | La rete o il servizio sono caduti mentre il cliente pagava in contanti. | Rimetti in funzione la rete o il servizio, poi PIN e **Riprova**. |
+| *Il servizio non risponde: riprova fra poco o ordina alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il servizio non ha risposto all'invio dell'ordine. | Riprova; se insiste, controlla il servizio. |
+| *Il servizio non risponde.* (seguito dal dettaglio) | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Indirizzo sbagliato, servizio spento o rete assente. | Controlla l'indirizzo e che il servizio sia acceso e raggiungibile. |
+| *Il servizio rifiuta le credenziali: controlla nome utente e password.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Utente o password sbagliati. | Correggili. |
 | *Il supplemento deve essere un numero.* | Cassa: [Menu](../cassa/menu.md) | Supplemento non valido. | Correggi il supplemento. |
 | *Il supplemento dev'essere un numero maggiore o uguale a zero.* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | Supplemento non valido. | Correggi il supplemento. |
 | *Il tavolo 13 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Unisci o Separa partendo da un tavolo unito. | Tocca il tavolo che tiene il conto. |
@@ -258,6 +287,10 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *I posti devono essere un numero maggiore di zero.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Posti mancanti o a zero (scheda o pannello). | Scrivi i posti. |
 | *I posti massimi devono essere un numero maggiore o uguale a zero.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Posti massimi non validi. | Correggi, oppure lascia 0. |
 | *I posti massimi non possono essere meno dei posti.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Posti massimi inferiori ai posti. | Alza i posti massimi o abbassa i posti. |
+| *I prezzi sono cambiati: controlla il totale.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Un prezzo è cambiato dopo che il piatto è entrato nel carrello. | Il cliente controlla il totale nuovo e conferma di nuovo. |
+| *Kiosk da configurare: chiama il personale.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il kiosk non è collegato a nessun servizio. | Apri la configurazione e collega il servizio. |
+| *Kiosk momentaneamente chiuso: ordina alla cassa* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Kiosk spenti o in pausa, o servizio irraggiungibile. | Accendi i kiosk o togli la pausa (assistenza); controlla che il servizio sia acceso. Il kiosk riprova da solo. |
+| *Kiosk non attivo, ordina alla cassa* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | La licenza del kiosk non c'è. | Attivala dalla [Configurazione](../kiosk/configurazione.md). |
 | *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Cassa: [Conto](../cassa/conto.md) | Problema sulla stampante preconto. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
 | *La CashDro vuole l'utente e la password POS creati sulla macchina (li da' CashDro o il rivenditore).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** di una CashDro senza **Utente POS** o **Password POS**. | Scrivi utente e password. |
 | *La cassa automatica ha gia' trattenuto € Y in contanti su questo conto: i contanti non possono essere meno di € Y.* | Cassa: [Conto](../cassa/conto.md) | Hai messo in **Contanti** meno del già trattenuto. | Correggi i contanti, oppure tocca **Restituito** se hai reso i soldi al cliente. |
@@ -302,9 +335,11 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Conto](../cassa/conto.md) | La stampante scelta per questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in Impostazioni ▸ **Stampanti fiscali** ▸ **Stampante di questa postazione**; nel frattempo puoi usare CHIUDI SENZA DOCUMENTO. |
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Palmare: [Conto](../palmare/conto.md) | La stampante scelta per questo palmare è stata tolta dall'elenco. | Scegline un'altra in Impostazioni ▸ **Stampanti fiscali**; nel frattempo usa CHIUDI SENZA DOCUMENTO se sei abilitato. |
+| *La stampante USB scelta (…) non è collegata.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La termica USB è staccata o spenta. | Ricollegala e tocca **Rileggi gli elenchi**. |
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *La vendita che avevi aperto e' stata incassata da un'altra cassa. …* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Un'altra cassa ha ripreso e incassato questa vendita. | Niente: la schermata si azzera, le righe sono già pagate. |
 | *La voce non esiste piu': l'elenco e' stato ricaricato.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | La voce toccata è stata eliminata nel frattempo. | Nessuna azione. |
+| *Le credenziali del servizio non sono valide: chiama il personale.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Utente o password del kiosk rifiutati. | Correggili in configurazione. |
 | *L'edizione* (nome) *non è prevista per questo programma.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Edizione non compresa nella licenza. | Scegli l'edizione acquistata. |
 | *Le impostazioni del self order non sono state lette dal servizio: riapri la pagina prima di salvare.* | Cassa: [Self order](../cassa/self-order.md) | All'apertura il servizio non ha risposto. | Esci e rientra nella schermata. |
 | *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Cassa: [Articoli](../cassa/articoli.md) | Mancano gli allergeni sull'impianto. |  |
@@ -318,6 +353,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Numero o porta del terminale non validi. | Correggi il campo. |
 | *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
 | *L'impronta del certificato e' fatta di 64 cifre esadecimali (i due punti si possono lasciare).* … | Cassa: [Impostazioni](../cassa/impostazioni.md) | L'impronta scritta non è valida. | Ricopiala dal giornale del servizio, o lasciala vuota. |
+| *L'indirizzo del servizio va scritto per intero, per esempio http://192.168.1.10:4063.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Manca `http://` o la porta. | Scrivi l'indirizzo intero. |
 | *L'indirizzo pubblico va scritto intero, per esempio https://ordina.trattoria.it* | Cassa: [Self order](../cassa/self-order.md) | L'indirizzo non è completo. | Scrivilo con `https://` davanti. |
 | *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | Cassa: [Chiamate](../cassa/chiamate.md) | Hai toccato **Consegnato** su un ordine il cui conto non è ancora chiuso. L'ordine resta fra i pronti. | Incassa il conto dalla comanda dell'ordine (vedi [Asporto e domicilio](../cassa/asporto.md) e [Conto](../cassa/conto.md)). Un asporto già pronto, alla chiusura del conto, diventa ritirato da solo. |
 | *L'ordine dev'essere un numero valido.* | Cassa: [Modificatori](../cassa/modificatori.md), [Portate](../cassa/portate.md) | Ordine non numerico. | Scrivi un numero. |
@@ -329,6 +365,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *L'uscita Secondi era gia' stata avviata.* | Cassa: [Comanda](../cassa/comanda.md) | Un collega ha già dato il via da un altro dispositivo. | Nessuna azione. |
 | *L'uscita Secondi era gia' stata avviata.* | Palmare: [Comanda](../palmare/comanda.md) | Il via l'ha già dato un altro dispositivo. | Nessuna. |
 | *Manca: …* | Cassa: [Conto](../cassa/conto.md) | Con **Fattura**: al cliente manca un dato obbligatorio per la fattura elettronica. | Tocca il cliente e completa la scheda. |
+| *Manca il nome utente.* / *Manca la password.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Campo vuoto. | Compilalo. |
 | *Manca l'indirizzo: questo cliente non ne ha uno in anagrafica, scrivilo qui.* | Cassa: [Fatture](../cassa/fatture.md) | Hai toccato **Manda** con il campo dell'indirizzo vuoto. | Scrivi l'indirizzo e tocca di nuovo **Manda**. |
 | *Mancano € 5,00 da ripartire fra i metodi di pagamento: il conto non si puo' chiudere finche' l'importo non e' coperto per intero.* | Palmare: [Conto](../palmare/conto.md) | I pagamenti scritti non coprono il totale. | Completa il pagamento. |
 | *Mancano € X da ripartire fra i metodi di pagamento: il conto non si puo' chiudere finche' l'importo non e' coperto per intero.* | Cassa: [Conto](../cassa/conto.md) | Gli importi scritti non coprono il totale. | Completa i pagamenti, o tocca il nome di un metodo per mettere l'importo esatto. |
@@ -390,11 +427,14 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Nessun operatore in turno: la riga non si puo' firmare.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Nessun operatore collegato alla cassa. | Accedi con il tuo operatore. |
 | *Nessun ordine in coda* — *Tocca "+ Asporto" o "+ Domicilio" per crearne uno* | Palmare: [Ordini](../palmare/ordini.md) | La coda è vuota. | Nessuna. |
 | *Nessun ordine in questo stato* — *Tocca "Tutti" per rivedere l'intera coda* | Palmare: [Ordini](../palmare/ordini.md) | Il filtro scelto non ha ordini. | Tocca **Tutti**. |
+| *Nessun pagamento in sospeso su questo kiosk.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il kiosk è fermo ma non ha pagamenti a metà. | PIN e **Riprova** per tornare ad accogliere i clienti. |
+| *Nessun rendiresto configurato sul servizio.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Sul servizio non c'è nessuna cassa automatica. | Registrala dalla cassa, in Impostazioni ▸ **Cassa automatica**. |
 | *Nessun reparto impostato: gli articoli con questa aliquota usciranno sul reparto di ripiego dello scontrino.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Aliquota salvata senza **Reparto cassa** (il salvataggio avviene lo stesso). | Imposta il reparto appena lo conosci. |
 | *Nessun tavolo configurato per l'asporto: impostalo in Impostazioni.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Manca il tavolo dell'asporto. | Impostalo in Impostazioni ▸ Sala ▸ **Tavolo asporto**. |
 | *Nessun tavolo configurato per l'asporto: impostalo in Impostazioni.* | Palmare: [Ordini](../palmare/ordini.md) | Manca il tavolo dell'asporto. | Sceglilo in [Impostazioni](../palmare/impostazioni.md). |
 | *Nessun tavolo configurato per la vendita al banco: impostalo in Impostazioni.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Su questa cassa non è impostato il tavolo dell'asporto. | Impostalo in Impostazioni ▸ **Sala** ▸ **Tavolo asporto**. |
 | *Nessun tavolo in questa sala* — *I tavoli si configurano dalla cassa* | Palmare: [Sala](../palmare/sala.md) | La sala non ha tavoli. | Crea i tavoli dalla cassa. |
+| *Nessun terminale configurato sul servizio.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Sul servizio non c'è nessun POS. | Registralo dalla cassa, in Impostazioni ▸ **Pagamento con carta**. |
 | *Nessun terminale sull'impianto. Premi NUOVO per aggiungerne uno.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | L'impianto non ha terminali. | Tocca **+  NUOVO**. |
 | *Nexi non e' configurato nel servizio: il pagamento dal telefono non si puo' accendere.* | Cassa: [Self order](../cassa/self-order.md) | Il servizio non ha le credenziali di Nexi. | Rivolgiti a chi ha installato il servizio. |
 | *Niente da sincronizzare.* / *Sincronizzati N articoli.* / *Sincronizzati N, falliti M.* | Cassa: [Articoli](../cassa/articoli.md) | Esito di **Sincronizza** (nella fascia in alto). | Se ci sono falliti, compare anche l'errore con l'elenco. |
@@ -420,6 +460,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | **Non presentato** — *Segnare il cliente come non presentato? Uscira' dal registro.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Hai toccato **Non presentato**. | **Conferma** o **Indietro**. |
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Cassa: [Dividi il conto](../cassa/dividi-conto.md) | **+ Nuovo conto** quando tutte le voci sono già assegnate. | Togli qualcosa da un conto o incassa. |
 | *Non resta niente da dividere: un conto nuovo nascerebbe vuoto e ci resterebbe. Rimetti prima qualcosa fra le voci da dividere, oppure incassa uno dei conti.* | Palmare: [Conto](../palmare/conto.md) | **+** quando tutto è già su un conto. | Incassa i conti o rimanda delle voci fra quelle da dividere. |
+| *Non riesco ad annullare: concludi il pagamento o chiama il personale.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | La macchina non accetta l'annullo. | Il cliente conclude il pagamento, o intervieni tu sulla macchina. |
 | *Non riesco a leggere le casse automatiche dal servizio: finche' non le leggo, non si salva …* / *Le casse automatiche dell'impianto non si leggono dal servizio: non salvo, …* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non ha dato l'elenco delle macchine. **Salva** e **Togli** sono bloccati, perché salvare sostituirebbe l'elenco dell'impianto con la sola macchina a video. | Riapri la pagina quando il servizio risponde. Se il dettaglio parla del file delle casse automatiche danneggiato, va corretto o tolto sul PC del servizio. |
 | *Non riesco a leggere le chiamate dal servizio: riprovo da solo ogni pochi secondi.* | Cassa: [Chiamate](../cassa/chiamate.md) | Il servizio non risponde. Il messaggio compare una volta sola, non a ogni giro. | Controlla la rete e il servizio: l'elenco torna da solo. |
 | *Non riesco a raggiungere il servizio per controllare l'incasso precedente di questo conto sulla cassa automatica (€ X): riprova.* | Cassa: [Conto](../cassa/conto.md) | La cassa non raggiunge il servizio: non sa com'è finito l'incasso. | Controlla che il servizio sia acceso e in rete, poi tocca di nuovo **Verifica**. Finché non risponde non si incassa da questo conto. |
@@ -442,16 +483,21 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | Palmare: [Ordini](../palmare/ordini.md) | L'ordine è stato eliminato ma la sua comanda no. | Chiudila dalla cassa. |
 | *Pagamento con carta non riuscito: …* | Palmare: [Conto](../palmare/conto.md) | Il terminale ha rifiutato la carta. Il conto resta aperto. | Riprova o cambia metodo. |
 | *Pagamento con carta non riuscito: … Il conto resta aperto: nessun documento e' stato emesso.* | Cassa: [Conto](../cassa/conto.md) | Il terminale ha rifiutato la carta. | Riprova o cambia metodo. |
+| *Pagamento da verificare: chiama il personale.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il kiosk non sa se il cliente ha pagato. | Controlla il POS o il rendiresto e l'avviso in cassa (vedi «Un pagamento da verificare»). |
 | *Per la consegna a domicilio serve il telefono: il fattorino deve poter chiamare.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Domicilio senza telefono. | Compila **Telefono**. |
 | *Per la consegna a domicilio serve il telefono: il fattorino deve poter chiamare.* | Palmare: [Ordini](../palmare/ordini.md) | Domicilio senza telefono. | Scrivi il telefono. |
 | *Per la consegna a domicilio serve l'indirizzo.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Domicilio senza via. | Compila **Via**. |
 | *Per la consegna a domicilio serve l'indirizzo.* | Palmare: [Ordini](../palmare/ordini.md) | Domicilio senza via. | Scrivi l'indirizzo. |
 | *Per la fattura serve ancora: …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Usa questo cliente** con dati mancanti. | Completa i campi elencati. |
 | *Permesso notifiche negato: senza, l'avviso non puo' comparire.* | Palmare: [Impostazioni](../palmare/impostazioni.md) | Il permesso alle notifiche è stato negato, oppure il dispositivo è un iPhone o un iPad. | Su Android concedi il permesso dalle impostazioni del telefono e riaccendi l'interruttore. |
+| *Permesso USB della stampante non dato: dallo dalla configurazione del kiosk (scegli la stampante o «Stampa di prova»).* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Android la stampante USB non ha ancora il permesso. | Apri la configurazione, scegli la stampante o tocca **Stampa di prova** e tocca **Consenti**. |
+| *Permesso USB negato: collega di nuovo la stampante e tocca «Consenti».* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Su Android non hai dato il permesso alla stampante. | Stacca e ricollega la stampante e tocca **Consenti**. |
+| *Per «MOZZARELLA» scegli come.* / *Scegli «Cottura».* / *Per «Cottura» scegli almeno 1.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Manca una scelta obbligatoria nel piatto o nel menu composto. | Completa la scelta indicata. |
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | Cassa: [Comanda](../cassa/comanda.md) | **+** su un menu a prezzo fisso. | Tocca di nuovo **MENU INTERO**. |
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | Palmare: [Comanda](../palmare/comanda.md) | **+** su un menu a prezzo fisso. | Aggiungi un altro menu da «MENU INTERO». |
 | *PIN errato.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Il PIN digitato non corrisponde a quello dell'operatore. | Ridigita il PIN. Se l'hai dimenticato, fattelo reimpostare da chi gestisce gli [Operatori](../cassa/operatori.md). |
 | *PIN errato.* | Palmare: [Accesso](../palmare/accesso.md) | Il PIN non corrisponde. Le cifre digitate vengono cancellate. | Ridigita il PIN; se l'hai dimenticato fattelo reimpostare dalla cassa in [Operatori](../cassa/operatori.md). |
+| *PIN sbagliato: ancora 4 tentativi.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il PIN non è giusto. | Riprova. |
 | *Porta della stampante comande non valida (di solito 9100).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Porta non numerica o fuori intervallo. | Correggi la porta. |
 | **Posti del tavolo** — *… Salvare lo stesso? Al loro arrivo servira' unire un altro tavolo.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | **Salva** con un tavolo troppo piccolo. | **Salva** oppure **Cambia tavolo**. |
 | *PREFERITI e IN EVIDENZA stanno sempre in testa: non si spostano.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Si è provato a spostare una delle due tessere fisse. | — |
@@ -462,6 +508,8 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Puoi scegliere al massimo 2 opzioni per "Salse".* | Palmare: [Comanda](../palmare/comanda.md) | Hai superato il massimo di un gruppo di varianti. | Spegni una variante prima di accenderne un'altra. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Cassa: [Comanda](../cassa/comanda.md) | Omaggio su una parte di una pizza composta. | Offri la riga principale. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Palmare: [Comanda](../palmare/comanda.md) | Omaggio su una parte di un piatto composto. | Offri il piatto intero. |
+| *Queste credenziali sono di un kiosk: operazione non permessa.* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Con l'utente di un kiosk si è tentata un'operazione che non è del kiosk (per esempio da una cassa collegata con quell'utente). | Collega la cassa con il suo utente; l'utente del kiosk serve solo al kiosk. |
+| *Queste credenziali sono di un kiosk: si stampa solo sulle stampanti configurate nel servizio.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La stampante scelta non è (più) fra quelle registrate sul servizio. | Registrala dalla cassa e sceglila di nuovo dall'elenco. |
 | *Questo conto e' in incasso da un'altra postazione, con uno scontrino in sospeso: l'incasso va finito da li'. Il conto resta aperto.* | Cassa: [Conto](../cassa/conto.md) | Un'altra cassa sta incassando lo stesso tavolo. | Finisci l'incasso dall'altra postazione. |
 | *Questo conto e' stato chiuso da un altro dispositivo.* | Cassa: [Conto](../cassa/conto.md) | Mentre eri qui il conto è stato incassato da un'altra cassa o da un palmare. | Esci con **Annulla**. |
 | *Questo conto e' stato chiuso da un altro dispositivo.* | Palmare: [Conto](../palmare/conto.md) | Il tavolo è stato incassato altrove mentre eri qui. | Torna in sala. |
@@ -470,6 +518,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Questo conto si documenta con lo scontrino: la fattura va fatta dal gestionale.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Nel Conto aperto con **Emetti** hai scelto la fattura. | Emetti lo scontrino, oppure fai la fattura dal gestionale. |
 | *Questo dispositivo non ha una licenza attiva.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | **Disattiva** su un dispositivo senza licenza. | Nessuna azione. |
 | *Questo dispositivo è stato disattivato.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il posto del dispositivo è stato liberato. | Riattiva con il seriale. |
+| *Questo kiosk non emette scontrini: rivolgiti alla cassa.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Al kiosk è stata tolta la stampante fiscale mentre il cliente pagava. | Vedi l'avviso in cassa. |
 | *Questo menu non ha un prezzo fisso: si vende piatto per piatto dalle sue sezioni.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Il menu non ha prezzo o articolo di vendita. | Torna in Comanda e batti i piatti dalle sezioni, o completa il menu in [Menu](../cassa/menu.md). |
 | *Questo menu non ha un prezzo fisso: si vende piatto per piatto dalle sue sezioni.* | Palmare: [Comanda](../palmare/comanda.md) | Il menu non ha un prezzo. | Batti i piatti dalle sezioni. |
 | *Questo piatto fa parte di un menu: per aggiungerne un altro battilo dalla sua sezione.* | Cassa: [Comanda](../cassa/comanda.md) | **+** su un piatto che fa parte di un menu. | Batti il piatto dalla sua sezione. |
@@ -478,6 +527,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Questo tavolo e' stato chiuso o spostato da un altro dispositivo.* | Cassa: [Comanda](../cassa/comanda.md) | Mentre eri sulla comanda, il tavolo è stato incassato, liberato o spostato altrove. | Torna alla mappa. |
 | *Questo tavolo e' stato chiuso o spostato da un altro dispositivo.* | Palmare: [Comanda](../palmare/comanda.md) | Mentre eri nel tavolo, la cassa o un altro palmare l'ha chiuso o spostato. | Torna in sala e riapri il tavolo giusto. |
 | *Regola di composizione non trovata.* | Cassa: [Componi la pizza](../cassa/mezza.md) | La regola è stata cancellata nel frattempo. | Torna in Comanda e riprova. |
+| *Resto da ricevere 4,00 €: mostra il tagliando alla cassa.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il rendiresto non ha dato tutto il resto. | Dai il resto al cliente e tocca **Visto** sull'avviso. |
 | *Ricarica della cassa automatica.* (con *…premi di nuovo RICARICA per riprenderla.*) | Cassa: [Impostazioni](../cassa/impostazioni.md) | La ricarica non si è aperta o la cassa ha perso il contatto con la macchina. | Tocca di nuovo **Ricarica**: riprende la ricarica rimasta aperta. |
 | **Rifiuta ordine** — *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Palmare: [Ordini](../palmare/ordini.md) | Hai toccato **Rifiuta**. | **Rifiuta** o **Annulla**. |
 | *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Conferma di **Rifiuta**. | **Rifiuta** per procedere, **Annulla** per lasciare l'ordine. |
@@ -502,6 +552,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Scegli almeno un centro di produzione a cui mandare il messaggio.* | Palmare: [Messaggi alla cucina](../palmare/messaggi.md) | **INVIA** senza centri scelti. | Tocca almeno un centro in **A CHI**. |
 | *Scegli almeno un piatto.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Nessun piatto scelto (menu con sole sezioni facoltative). | Scegli almeno un piatto. |
 | *Scegli il gruppo della variante: senza gruppo in comanda non compare.* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Variante senza gruppo. | Scegli il gruppo. |
+| *Scegli il peso.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Articolo a peso senza peso scelto. | Tocca uno dei pesi. |
 | *Scegli prima una sezione: il piatto deve finire da qualche parte.* | Cassa: [Menu](../cassa/menu.md) | Hai toccato un articolo senza sezione scelta. | Tocca una sezione o creane una. |
 | *Scegli prima una stampante dall'elenco dell'impianto.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Togli** senza una stampante scelta. | Scegli la stampante in **Stampanti dell'impianto**. |
 | *Scegli prima un centro di produzione (passo 2).* | Monitor di cucina: [Scelta del centro](../kds/centro.md) | Manca la scelta del centro. | Tocca una tessera. |
@@ -515,7 +566,9 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | **Scontrino: esito incerto** — *… Guarda la stampante fiscale: lo scontrino di € X e' uscito?* | Cassa: [Conto](../cassa/conto.md) | Il servizio non è riuscito a rileggere la stampante. | Guarda la carta: tocca **E' uscito** o **Non e' uscito**. |
 | *Scrivi almeno due caratteri: partita IVA, codice fiscale o ragione sociale.* | Cassa: [Conto](../cassa/conto.md) | Ricerca del cliente troppo corta. | Scrivi almeno due caratteri. |
 | *Scrivi l'importo da prelevare, per esempio 50 o 12,50.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Preleva** senza un importo valido. | Scrivi l'importo. |
+| *Scrivi l'indirizzo del servizio e le credenziali del kiosk.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il kiosk non è ancora collegato. | Compila il riquadro **Servizio** e tocca **Salva e verifica**. |
 | *Scrivi prima l'indirizzo email del cliente.* | Cassa: [Conto](../cassa/conto.md) | Hai acceso **Invia copia per email** senza indirizzo. | Compila **Email**. |
+| *Scrivi un numero da 1 a 99.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Indicazione del segnaposto. | Scrivi il numero del segnaposto. |
 | *Segnare il cliente come non presentato? Uscira' dal registro.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Conferma di **Non presentato**. | **Conferma** per procedere, **Indietro** per tenerla. |
 | *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* (o *non consegnato*) | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Conferma di **Non ritirato** / **Non consegnato**. | **Conferma** per procedere, **Annulla** per lasciare l'ordine. |
 | *Seleziona una sala e un tavolo per l'asporto.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva tavolo asporto** senza sala o tavolo. | Tocca prima la sala, poi il tavolo. |
@@ -537,6 +590,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Stampante comande non configurata (Impostazioni).* | Cassa: [Comanda](../cassa/comanda.md) | **Stampa** del preconto senza stampante. | Configura la stampante in [Impostazioni](../cassa/impostazioni.md). |
 | *Stampante comande non configurata (Impostazioni).* | Palmare: [Comanda](../palmare/comanda.md) | **Stampa** del preconto senza stampante. | Imposta la stampante del preconto in [Impostazioni](../palmare/impostazioni.md). |
 | *Statistiche non caricate.* | Cassa: [Statistiche](../cassa/statistiche.md) | Il servizio non ha risposto o ha dato errore; sotto c'è il dettaglio. | Controlla il collegamento al servizio e tocca **Aggiorna**. |
+| *Stiamo registrando un pagamento: per ora ordina alla cassa.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Kiosk fuori servizio finché il pagamento non è registrato. | Come sopra. |
 | *Storico dei conti non caricato.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Il servizio non ha risposto o ha dato errore; sotto c'è il dettaglio. | Controlla il collegamento al servizio; poi cambia un filtro o premi **Invio** nella ricerca per riprovare. |
 | *Sul conto c'e' il servizio N%, ma in anagrafica manca l'articolo SERVIZIO con la sua aliquota IVA, o la sua aliquota non ha un reparto della cassa: va creato o sistemato prima di emettere il documento.* | Cassa: [Conto](../cassa/conto.md) | La sala ha il servizio ma l'articolo SERVIZIO manca o è incompleto. | Crea o sistema l'articolo in [Articoli](../cassa/articoli.md). |
 | *Su questo conto e' gia' stato incassato qualcosa (carta, contanti o scontrino): non si puo' piu' addebitare in camera.* | Cassa: [Conto](../cassa/conto.md) | **Camera** scelta dopo un incasso già avvenuto. | Completa l'incasso con lo scontrino. |
@@ -555,6 +609,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Tocca per attivare il suono* (monitor) | Cassa: [Chiamate](../cassa/chiamate.md) | La pagina è appena stata aperta e il browser non la lascia ancora suonare. | Tocca lo schermo una volta, o premi un tasto del telecomando. |
 | *Tocca prima la riga da offrire.* / *Tocca prima la riga da stornare.* / *Tocca prima una riga venduta a peso.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | La funzione agisce sulla riga selezionata. | Tocca la riga nel carrello, poi la funzione. |
 | *Tocca prima la riga del carrello a cui attaccare la variante.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Variante toccata senza riga selezionata. | Seleziona la riga, poi la variante. |
+| *Troppi errori: PIN bloccato per 5 minuti.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Cinque PIN sbagliati di fila. | Aspetta 5 minuti: intanto anche il PIN giusto risponde *PIN bloccato: riprova fra 5 minuti.* |
 | *Troppi tentativi: riprova fra* … *minuti.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Troppe richieste in poco tempo. | Aspetta e riprova. |
 | *Tutte le parti sono gia' assegnate: tocca la parte da sostituire, poi scegli il nuovo gusto.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Tocco su un gusto con tutte le parti piene. | Tocca prima la parte da cambiare. |
 | *Tutte le parti sono gia' assegnate: tocca la parte da sostituire, poi scegli il nuovo gusto.* | Palmare: [Comanda](../palmare/comanda.md) | In **Componi il piatto**, tutte le parti sono piene. | Tocca la parte da cambiare, poi il gusto. |
@@ -573,6 +628,7 @@ Aggiornato al 2026-10-29 — **551 messaggi**.
 | *Un'altra postazione ha modificato questi dati prima di te: adesso vedi la versione aggiornata, rifai la modifica e salva.* | Cassa: [Operatori](../cassa/operatori.md) | Lo stesso operatore è stato modificato da un'altra cassa mentre lo modificavi. | La scheda è già ricaricata: rifai la modifica e salva. |
 | *Un'altra postazione ha modificato questi dati prima di te: adesso vedi la versione aggiornata, rifai la modifica e salva.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Sala o tavolo modificati da un'altra cassa nel frattempo. | Rifai la modifica e salva. |
 | *Un'altra postazione ha modificato questi dati prima di te: adesso vedi la versione aggiornata, rifai la modifica e salva.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Modifica concorrente da un'altra postazione. | Rifai la modifica e salva. |
+| *Un momento: il collegamento è lento.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il kiosk non riesce per un attimo a leggere il rendiresto dal servizio. | Niente: il kiosk continua a leggere; dopo 2 minuti senza risposta passa alla [vista Fermo](../kiosk/pagamenti.md#la-vista-fermo). |
 | **Varianti senza gruppo** — «Sono rimaste da un gruppo eliminato e in comanda non compaiono. Aprine una e scegli il suo nuovo gruppo, oppure eliminala.» | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Hai toccato **Senza gruppo**. | Ricolloca o elimina le varianti. |
 | *Verifica della stampante fiscale fallita.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il registratore non risponde o segnala un errore. | Leggi il dettaglio e controlla il registratore. |
 | *Verifica stato in corso...* | Cassa: [Centri di produzione](../cassa/centri-di-produzione.md) | La verifica è partita. | Attendi l'esito (pochi secondi). |

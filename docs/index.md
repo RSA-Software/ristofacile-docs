@@ -18,6 +18,9 @@ nel locale:
 - il **Monitor di cucina**, lo schermo in cucina, in pizzeria o al bar: i piatti da preparare
   arrivano da soli e chi cucina li fa avanzare con un tocco.
 
+Accanto alle tre app c'è il **[Kiosk](kiosk/index.md)**, il totem dove il cliente ordina e paga da
+solo.
+
 Quello che si batte su un dispositivo compare subito sugli altri: il tavolo aperto dal palmare è
 occupato anche sulla cassa, il piatto segnato pronto in cucina risulta pronto sul palmare.
 

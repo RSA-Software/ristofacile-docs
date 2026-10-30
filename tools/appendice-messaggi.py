@@ -4,7 +4,7 @@ Legge, in ogni scheda, la sezione «Controlli e messaggi» e ne prende le righe
 delle tabelle con le colonne | Messaggio | Causa | Cosa fare |. I messaggi
 identici (stesso testo, causa e rimedio) che compaiono su piu' schede
 diventano una riga sola; la colonna «Dove» elenca le schede raggruppate per
-app (Cassa, Palmare, Monitor di cucina, Guida introduttiva).
+app (Cassa, Palmare, Monitor di cucina, Kiosk, Guida introduttiva).
 
 Uso, dalla radice del repository:
 
@@ -24,6 +24,7 @@ APP = {
     "cassa": "Cassa",
     "palmare": "Palmare",
     "kds": "Monitor di cucina",
+    "kiosk": "Kiosk",
     "introduzione": "Guida introduttiva",
 }
 ORDINE_APP = list(APP.values())
@@ -154,8 +155,8 @@ def main() -> None:
     testa = (
         "---\n"
         "title: Messaggi a video\n"
-        "description: Elenco alfabetico dei messaggi di cassa, palmare e monitor di "
-        "cucina, con la schermata che li mostra, la causa e cosa fare.\n"
+        "description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di "
+        "cucina e kiosk, con la schermata che li mostra, la causa e cosa fare.\n"
         "---\n\n"
         "# Messaggi a video\n\n"
         "Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il\n"
@@ -163,8 +164,8 @@ def main() -> None:
         f"Aggiornato al {datetime.date.today().isoformat()} — **{len(righe)} messaggi**.\n\n"
         "!!! note \"Come leggere la colonna «Dove»\"\n\n"
         "    Porta alla scheda della schermata che mostra il messaggio, raggruppando\n"
-        "    le schede per app: **Cassa**, **Palmare**, **Monitor di cucina** e\n"
-        "    **Guida introduttiva**. Lo stesso messaggio può comparire sia sulla\n"
+        "    le schede per app: **Cassa**, **Palmare**, **Monitor di cucina**,\n"
+        "    **Kiosk** e **Guida introduttiva**. Lo stesso messaggio può comparire sia sulla\n"
         "    cassa sia sul palmare: in quel caso la colonna li elenca tutti e due.\n\n"
         "    L'elenco è **generato dalle schede**: ogni messaggio è spiegato anche\n"
         "    in fondo alla pagina della sua schermata, insieme agli altri che si\n"
