@@ -188,7 +188,7 @@ manda in cucina.
 | *3 coperti non stanno sul tavolo ...: ha al massimo 2 posti. Scegli un altro tavolo.* | Separa verso un tavolo con meno posti dei coperti scelti. | Tocca un altro tavolo. |
 | *Su questo tavolo non c'e' niente da separare.* | Il conto non ha righe separabili né coperti non pagati. | Nessuna azione. |
 | *Scegli almeno una riga o qualche coperto da separare.* | **Scegli il tavolo** senza aver scelto niente. | Spunta almeno una riga o aumenta i coperti. |
-| *Impossibile spostare il tavolo.* / *Impossibile unire i tavoli.* / *Impossibile separare il tavolo.* (seguiti dal dettaglio) | Il servizio ha rifiutato l'operazione, ad esempio perché il tavolo di destinazione è già occupato o unito a un altro conto. | Leggi il dettaglio e scegli un altro tavolo. |
+| *Impossibile spostare il tavolo.* / *Impossibile unire i tavoli.* / *Impossibile separare il tavolo.* (seguiti dal dettaglio) | Il servizio ha rifiutato l'operazione, ad esempio perché il tavolo di destinazione è già occupato o unito a un altro conto, o perché c'entra un ordine del kiosk (*Gli ordini del kiosk non si spostano, non si uniscono e non si separano: gestiscili da «Ordini dal kiosk»*). | Leggi il dettaglio e scegli un altro tavolo; un ordine del kiosk si gestisce da [Ordini dal kiosk](ordini-kiosk.md). |
 | *Impossibile caricare la mappa della sala.* / *Impossibile caricare i tavoli della sala.* | Il servizio non risponde. | Controlla il collegamento; la mappa si ricarica tornando sulla schermata. |
 
 ## Note
@@ -202,7 +202,10 @@ manda in cucina.
 - **I tavoli dei kiosk.** Se il tavolo di «mangio qui» o di «porto via» dei kiosk è anche il tavolo
   dell'asporto di questa cassa, sulla mappa vince il kiosk: il tocco porta agli ordini del kiosk, e
   la coda dell'asporto si apre solo da **Asporto e domicilio**. Gli ordini del kiosk non si
-  liberano e non si spostano dalla mappa: si incassano o si annullano da
+  liberano, e **Sposta**, **Unisci** e **Separa** non valgono mai su di loro, nemmeno dopo l'incasso
+  o il via in cucina: la mappa li ferma al tocco sul tavolo del kiosk, e il servizio li rifiuta da
+  qualunque altra strada (*Gli ordini del kiosk non si spostano, non si uniscono e non si separano:
+  gestiscili da «Ordini dal kiosk»*). Si incassano o si annullano da
   [Ordini dal kiosk](ordini-kiosk.md).
 - **Le carte da stornare.** Ogni volta che la mappa compare, se questa cassa ha addebitato con il
   POS una carta che non è finita in nessuno scontrino, la cassa lo ricorda con la domanda **Carta da

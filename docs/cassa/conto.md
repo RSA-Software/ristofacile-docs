@@ -299,23 +299,33 @@ dalla comanda.
   residuo la cassa si ferma prima del POS (*Con € 5,00 già pagati dal telefono o dal kiosk i
   pagamenti superano il conto di € 5,00: correggi gli importi (restano da incassare € 3,00). La
   carta non è passata.*).
-- **Già pagato per intero al kiosk**: di solito lo scontrino si emette da Ordini dal kiosk con
-  **Emetti lo scontrino**. Se sei nel conto, lascia **vuoti** tutti gli importi e tocca **INCASSA E
-  STAMPA**: lo scontrino porta il pagamento del kiosk. Con un importo scritto a mano, anche in
-  contanti, la cassa **non** incassa e né il POS né la cassa automatica partono: *Il conto è già
-  pagato al kiosk: non incassare di nuovo. Svuota gli importi scritti (contanti, carta, bancomat…) e
-  premi di nuovo: lo scontrino porta il pagamento del kiosk.*
+- **Già pagato per intero al kiosk**: lo scontrino **non** si emette dal conto, ma da
+  [Ordini dal kiosk](ordini-kiosk.md#emettere-lo-scontrino-di-un-ordine-pagato-al-kiosk) con
+  **Emetti lo scontrino**. Il conto non incassa, né con gli importi vuoti né con un importo scritto
+  a mano (contanti compresi), e né il POS né la cassa automatica partono: *Il conto è già pagato al
+  kiosk: non incassare di nuovo. Lo scontrino si emette da «Ordini dal kiosk» in cassa («Emetti lo
+  scontrino»), non dal conto.* (con gli importi vuoti: *L'ordine è già pagato al kiosk. Lo scontrino
+  si emette da «Ordini dal kiosk» in cassa («Emetti lo scontrino»), non dal conto.*).
+- **Un ordine che la cassa non deve incassare adesso.** Prima del POS, della cassa automatica e del
+  documento il conto rilegge l'ordine, e si ferma se l'ordine nel frattempo è al kiosk: *Al kiosk il
+  cliente sta pagando questo ordine: il conto non si incassa adesso. …*, oppure *L'ordine è fermo al
+  kiosk: prima prendilo in cassa da «Ordini dal kiosk» («Prendi in cassa»), poi incassalo*. Succede
+  con una comanda aperta prima che il cliente cominciasse a pagare al kiosk. Se la carta era già
+  passata, va fra le [carte da stornare](#carta-da-stornare).
 - **Da verificare**: finché c'è la riga **Da verificare al kiosk**, **INCASSA E STAMPA** risponde
   *C'è un pagamento del kiosk da verificare: decidi da «Ordini dal kiosk» se è entrato.*
 - **Solo scontrino o fattura**: con denaro del kiosk nel conto, **CHIUDI SENZA DOCUMENTO**, la
   camera e la divisione del conto sono rifiutati, come per il [self order](self-order.md).
 - **Uno storno sotto il pagato al kiosk.** Se togli un piatto dopo che il cliente ha pagato al
   kiosk e il totale scende sotto il pagato, al posto di **Resto** compare **Da rimborsare al
-  cliente (pagato al kiosk)**. Lascia vuoti gli importi e tocca **INCASSA E STAMPA**: lo scontrino
-  porta il totale nuovo, e la parte in più del pagamento va a rimborso con l'avviso 💶 *Rimborso di
-  € …, ordine … (kiosk …): pagati al kiosk (…) e rimasti fuori dallo scontrino. Rimborsa il
-  cliente.* L'avviso nasce già al primo **INCASSA E STAMPA**, anche se lo scontrino poi non esce:
-  il rimborso si fa una volta sola.
+  cliente (pagato al kiosk)**: l'ordine è pagato per intero, e lo scontrino si emette da
+  [Ordini dal kiosk](ordini-kiosk.md) con **Emetti lo scontrino**. Lo scontrino porta il totale
+  nuovo, e la parte in più del pagamento va a rimborso con l'avviso 💶 *Rimborso di € …, ordine …
+  (kiosk …): pagati al kiosk (…) e rimasti fuori dallo scontrino. Rimborsa il cliente.* Il rimborso
+  si scrive solo quando la chiusura ha passato tutti i controlli, subito prima dello scontrino: una
+  chiusura rifiutata non lascia nessun avviso. Se invece è la stampante fiscale a non emettere,
+  l'avviso c'è già, e ripetendo l'emissione non ne nasce un secondo: il rimborso si fa una volta
+  sola.
 
 ### Carta da stornare
 
@@ -325,7 +335,12 @@ La carta è passata sul POS di **questa** cassa, ma il conto non la può più re
   addebitava), oppure il servizio rifiuta gli importi in un modo che ripetere non cambia: pagamenti
   oltre il conto, acconti che non coprono, un pagamento da verificare, niente da incassare;
 - oppure il conto l'ha chiuso un altro mentre il POS addebitava: un'altra cassa, il palmare,
-  **Annulla e rimborsa**, il pagamento del kiosk.
+  **Annulla e rimborsa**, il pagamento del kiosk;
+- oppure, dopo la carta, il servizio ha rifiutato la chiusura perché l'ordine del kiosk è passato
+  in mano al kiosk (*Al kiosk il cliente sta pagando…*, fermo al kiosk) o per un'altra regola degli
+  ordini del kiosk. In questi casi non c'è la domanda: l'errore dice che la carta è già stata
+  addebitata e che *la mappa della sala te la ricorda fra le carte da stornare*, e la carta entra
+  nell'elenco.
 
 ![Carta da stornare](../assets/img/cassa/conto-carta-da-stornare.png)
 
@@ -459,7 +474,12 @@ tavolo come «preconto» sulla mappa della sala.
 | *Sconto non registrato sulla comanda: l'incasso prosegue con l'importo mostrato.* | Il servizio non ha salvato lo sconto. | L'incasso prosegue; verifica poi lo sconto nello Storico. |
 | *Stampa della copia di cortesia fallita.* / *La fattura e' stata emessa ma non si e' potuta aprire a schermo.* | Problema di stampa o di visualizzazione dopo l'emissione. | La fattura è emessa: ristampala o aprila dalla schermata [Fatture](fatture.md). |
 | *Impossibile caricare il conto.* / *Impossibile chiudere il conto.* | Il servizio non risponde o ha dato errore. | Controlla la connessione e riprova. |
-| *Il conto è già pagato al kiosk: non incassare di nuovo. Svuota gli importi scritti (contanti, carta, bancomat…) e premi di nuovo: lo scontrino porta il pagamento del kiosk.* | Hai scritto un importo su un conto che il cliente ha già pagato per intero al kiosk. Né il POS né la cassa automatica sono partiti (*La carta non è passata.*). | Svuota gli importi e tocca di nuovo **INCASSA E STAMPA**. |
+| *Il conto è già pagato al kiosk: non incassare di nuovo. Lo scontrino si emette da «Ordini dal kiosk» in cassa («Emetti lo scontrino»), non dal conto.* | Hai scritto un importo su un conto che il cliente ha già pagato per intero al kiosk. Né il POS né la cassa automatica sono partiti (*La carta non è passata.*). | Esci dal conto ed emetti lo scontrino da [Ordini dal kiosk](ordini-kiosk.md#emettere-lo-scontrino-di-un-ordine-pagato-al-kiosk). |
+| *L'ordine è già pagato al kiosk. Lo scontrino si emette da «Ordini dal kiosk» in cassa («Emetti lo scontrino»), non dal conto.* | Lo stesso, con gli importi vuoti. | Come sopra. |
+| *Al kiosk il cliente sta pagando questo ordine: il conto non si incassa adesso. Aspetta che finisca e guarda «Ordini dal kiosk» in cassa.* | Mentre il conto era aperto il cliente ha cominciato a pagare l'ordine al kiosk. | Aspetta l'esito, poi guarda [Ordini dal kiosk](ordini-kiosk.md). |
+| *L'ordine è fermo al kiosk: prima prendilo in cassa da «Ordini dal kiosk» («Prendi in cassa»), poi incassalo.* | L'ordine è ancora in mano al kiosk. | Tocca **Prendi in cassa** in [Ordini dal kiosk](ordini-kiosk.md#prendere-in-cassa-un-ordine-fermo-al-kiosk). |
+| *L'ordine del kiosk è già chiuso.* / *…: il conto non si incassa da qui. Guarda «Ordini dal kiosk» in cassa.* | L'ordine è stato chiuso intanto, o è in uno stato che dal conto non si incassa. | Guarda [Ordini dal kiosk](ordini-kiosk.md). |
+| *Lo stato dell'ordine del kiosk non si è potuto rileggere: riprova.* | Prima di incassare il conto non è riuscito a rileggere l'ordine dal servizio. | Riprova fra un attimo. |
 | *Con € … già pagati dal telefono o dal kiosk i pagamenti superano il conto di € …: correggi gli importi (restano da incassare € …).* | Carta, bancomat, buoni pasto o credito oltre quello che resta da pagare. | Scrivi solo quello che resta. |
 | *C'è un pagamento del kiosk da verificare: decidi da «Ordini dal kiosk» se è entrato.* | Sul conto c'è denaro del kiosk da verificare. | Decidi da [Ordini dal kiosk](ordini-kiosk.md#decidere-un-pagamento-da-verificare). |
 | *Su questo tavolo c'e' un pagamento dal telefono o dal kiosk: il conto si chiude con lo scontrino o la fattura, non senza documento, in camera o diviso.* | **CHIUDI SENZA DOCUMENTO**, **Camera** o **Dividi** su un conto con pagamenti del telefono o del kiosk. | Chiudi con **Scontrino** o **Fattura**. Un ordine pagato al kiosk si annulla solo con **Annulla e rimborsa**. |

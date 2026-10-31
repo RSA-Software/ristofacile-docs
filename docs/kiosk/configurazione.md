@@ -161,7 +161,7 @@ servizio. Si cambiano dalla cassa, Menu ▸ **Kiosk**: le etichette esatte e i p
 | **Torna all'attesa** | Chiude la configurazione e il kiosk torna ad accogliere i clienti. |
 | **Salva e verifica** | Salva indirizzo, utente e password, consegna al servizio lo stato della licenza e chiede al servizio lo stato del kiosk: sotto compare l'esito. |
 | **Rileggi lo stato** | Chiede di nuovo lo stato al servizio, senza salvare niente: dopo un cambio sul servizio (dispositivo associato, kiosk acceso). |
-| **Copia** | Copia l'identificativo del dispositivo: *Copiato: incollalo nella scheda del kiosk, in cassa.* |
+| **Copia** | Copia l'identificativo del dispositivo: *Copiato. In cassa, nella scheda del kiosk, scegli in DISPOSITIVO quello che finisce con …89abcdef.* (le ultime 8 cifre di questo dispositivo). |
 | **Salva il numero** | Salva il numero del kiosk: *Questo è il kiosk n. 2.* |
 | **Usa questo POS** | Il kiosk incassa la carta sul terminale scelto, con l'id scritto. |
 | **Stato del POS** | Interroga il terminale: *Il POS risponde: …* oppure *Il POS non risponde: …*. |
@@ -201,8 +201,9 @@ servizio. Si cambiano dalla cassa, Menu ▸ **Kiosk**: le etichette esatte e i p
 
 !!! note "Riconoscere il dispositivo giusto"
     In cassa il dispositivo si vede con le ultime 8 cifre dell'identificativo (es. «…1234abcd»):
-    sono le ultime 8 del codice che il kiosk mostra sotto **Identificativo del dispositivo**. Con
-    **Copia** lo copi per intero.
+    sono le ultime 8 del codice che il kiosk mostra sotto **Identificativo del dispositivo**, e
+    **Copia** le ripete nel suo messaggio. In cassa il dispositivo non si scrive: si sceglie
+    dall'elenco **DISPOSITIVO** della scheda del kiosk.
 
 ### Cambiare il numero del kiosk
 

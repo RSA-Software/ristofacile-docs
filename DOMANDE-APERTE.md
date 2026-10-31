@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-31 — **69 domande** su 36 pagine.
+Aggiornato al 2026-10-31 — **70 domande** su 37 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -56,7 +56,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/conto.md`
 
 - [ ] riga 95: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
-- [ ] riga 483: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
+- [ ] riga 503: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Disponibilità
 
@@ -95,7 +95,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/mappa-sala.md`
 
-- [ ] riga 213: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
+- [ ] riga 216: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
 
 ## Menu online
 
@@ -131,6 +131,12 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 70: il campo Badge viene solo salvato; nessuna schermata dell'app lo legge (non si entra col badge). A cosa serve?
 - [ ] riga 129: eliminare un operatore che compare su comande e conti già chiusi è consentito? Cosa succede allo storico?
+
+## Ordini dal kiosk
+
+`docs/cassa/ordini-kiosk.md`
+
+- [ ] riga 279: come si porta a «rimborsato» il denaro da rimborsare di un ordine del kiosk (oggi nessuna rotta o schermata lo fa: «Visto» chiude solo l'avviso), perche' il parcheggio a frazioni finite lo possa riusare?
 
 ## Portate
 
@@ -217,7 +223,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kiosk/configurazione.md`
 
-- [ ] riga 301: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
+- [ ] riga 302: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
 
 ## Installazione del kiosk
 

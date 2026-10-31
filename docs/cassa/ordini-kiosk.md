@@ -43,6 +43,10 @@ senza far pagare di nuovo il cliente.
   [Configurazione del kiosk](../kiosk/configurazione.md#collegare-il-lettore-di-qr-dei-segnaposto)).
 - Per emettere gli scontrini: la stampante fiscale della postazione, in
   [Impostazioni](impostazioni.md) ▸ **Stampanti fiscali**.
+- I permessi dell'operatore, in [Operatori](operatori.md): **Annulla l'ordine** vuole **Puo'
+  annullare la comanda**; **Annulla e rimborsa** vuole **Puo' annullare la comanda** e anche
+  **Puo' chiudere il conto**. **Apri**, **Prendi in cassa**, **Emetti lo scontrino** e la verifica
+  (**Il denaro è entrato** e **Non è entrato**) non chiedono permessi: non fanno uscire denaro.
 
 ## La schermata
 
@@ -121,8 +125,8 @@ dell'avviso, **IMPORTO ENTRATO** e **COME È ENTRATO** (**Carta** o **Contanti**
 | **Il denaro è entrato** (verifica) | Chiede conferma con l'importo e il mezzo (**Sì, è entrato** / **Indietro**), poi registra il pagamento. |
 | **Non è entrato** (verifica) | Chiede conferma (**Non è entrato** / **Indietro**): l'ordine diventa da incassare alla cassa. |
 | **X** o tocco fuori (verifica) | Chiude la verifica senza decidere. |
-| **Annulla l'ordine** | Chiede conferma (**Annulla l'ordine** / **Indietro**), poi storna le righe e chiude l'ordine senza documento: non va in cucina. |
-| **Annulla e rimborsa** | Chiede conferma (**Annulla e rimborsa** / **Indietro**), poi storna le righe, toglie dalla cucina i piatti non ancora pronti, chiude l'ordine senza documento e lascia l'avviso del rimborso. |
+| **Annulla l'ordine** | Con il permesso **Puo' annullare la comanda**: chiede conferma (**Annulla l'ordine** / **Indietro**), poi storna le righe e chiude l'ordine senza documento: non va in cucina. Senza permesso il pulsante c'è, ma il tocco dice quale permesso manca. |
+| **Annulla e rimborsa** | Con i permessi **Puo' annullare la comanda** e **Puo' chiudere il conto**: chiede conferma (**Annulla e rimborsa** / **Indietro**), poi storna le righe, toglie dalla cucina i piatti non ancora pronti, chiude l'ordine senza documento e lascia l'avviso del rimborso. |
 
 ## Come si fa
 
@@ -222,6 +226,7 @@ Un ordine già in cucina non si annulla: si incassa.
 | *L'ordine non si è potuto annullare: riprova* | Il servizio non ha potuto chiudere l'ordine. | Riprova. |
 | *Ordine …: lo scontrino non è uscito. Riprova con «Emetti lo scontrino».* (o il messaggio della stampante) | La stampante fiscale ha rifiutato o non risponde. | Risolvi il problema della stampante e tocca di nuovo **Emetti lo scontrino**. |
 | *Ordine …: nessuna stampante fiscale sull'impianto, lo scontrino non si emette da qui.* | Sull'impianto non c'è una stampante fiscale. | Configurala in [Impostazioni](impostazioni.md). |
+| *Ordine …: … Lo scontrino non è uscito: scegli un'altra stampante per questa postazione in Impostazioni, o emettilo da un'altra cassa con «Emetti lo scontrino».* | La stampante fiscale di questa postazione non è più configurata; la prima parte del messaggio dice quale. | Scegli un'altra stampante in [Impostazioni](impostazioni.md) ▸ **Stampanti fiscali**, o emetti da un'altra cassa. |
 | *Ordine …: scontrino n. … emesso. Se non è su questa stampante è uscito su quella del kiosk o di un'altra postazione: consegnalo con i piatti.* | Lo scontrino era già stato cominciato altrove. | Cerca lo scontrino su quella stampante. |
 | *Ordine …: lo scontrino resta in sospeso. Quando hai guardato la stampante, concludi con «Emetti lo scontrino».* | Hai risposto **Guardo dopo** sull'esito incerto. | Guarda la stampante, poi **Emetti lo scontrino**. |
 | *Pagamento verificato, ma lo scontrino non è uscito: riprova con «Emetti lo scontrino».* | La verifica è registrata, la stampante no. | Tocca **Emetti lo scontrino**. |
@@ -230,6 +235,10 @@ Un ordine già in cucina non si annulla: si incassa.
 | **Il denaro è entrato** — *Confermi che per l'ordine … sono entrati € … con la carta?* | Conferma della verifica; dice anche se c'è da rimborsare o da incassare il resto. | **Sì, è entrato** o **Indietro**. |
 | **Il denaro non è entrato** — *Al kiosk il cliente non ha pagato l'ordine …? L'ordine passa da incassare alla cassa.* | Conferma di **Non è entrato**. | **Non è entrato** o **Indietro**. |
 | *Ordine …: chiuso. Se l'hai annullato tu, rimborsa il cliente: la somma è nell'avviso 💶 del rimborso.* | La risposta di **Annulla e rimborsa** si è persa, ma l'ordine è chiuso. | Rimborsa la somma dell'avviso. |
+| *MARCO non e' abilitato a annullare un ordine del kiosk (permesso «Puo' annullare la comanda»). Il permesso si da' in Impostazioni -> Operatori.* | **Annulla l'ordine** senza il permesso. | Fallo fare a un operatore abilitato, o dai il permesso in [Operatori](operatori.md). |
+| *MARCO non e' abilitato a annullare e rimborsare un ordine del kiosk (permessi «Puo' annullare la comanda» e «Puo' chiudere il conto»). …* | **Annulla e rimborsa** senza uno dei due permessi. | Come sopra. |
+| *Nessun operatore collegato: per … serve un operatore abilitato.* | Nessun operatore in turno. | Entra con il tuo PIN. |
+| *C'e' un incasso in corso su questo conto: finiscilo prima, poi apri l'avviso.* | Hai toccato **Apri** su un avviso mentre il conto sotto sta incassando (POS, cassa automatica, scontrino). Il conto resta. | Finisci l'incasso, poi tocca di nuovo **Apri**. |
 
 ## Note
 
@@ -246,9 +255,10 @@ Un ordine già in cucina non si annulla: si incassa.
   «paga alla cassa» partono per la cucina alla prima chiusura tentata dalla cassa: con
   **INCASSA E STAMPA** anche se subito dopo la stampante fiscale non risponde e il conto resta
   aperto, e anche con **CHIUDI SENZA DOCUMENTO**. Per non farle partire, l'ordine va annullato con
-  **Annulla l'ordine**. Finché non è incassato, l'ordine non si sposta su un altro tavolo (*Le righe
-  di questo ordine del kiosk partono per la cucina quando lo incassi: incassalo prima di
-  spostarlo*).
+  **Annulla l'ordine**.
+- **Gli ordini del kiosk non si spostano.** Sposta, unisci e separa non valgono mai su un ordine del
+  kiosk, nemmeno dopo l'incasso o il via in cucina: *Gli ordini del kiosk non si spostano, non si
+  uniscono e non si separano: gestiscili da «Ordini dal kiosk»*.
 - **Un pagato che non basta più.** Se il totale di un ordine pagato al kiosk sale sopra quello che il
   cliente ha pagato, l'ordine passa da *scontrino da emettere* a *Pagato in parte al kiosk: resto da
   incassare*: la differenza si incassa dal conto.
@@ -258,6 +268,15 @@ Un ordine già in cucina non si annulla: si incassa.
 - **Il denaro in eccesso** (verifica oltre il conto, pagamento arrivato su un ordine già chiuso,
   storno dopo il pagamento) non lo restituisce il kiosk: compare l'avviso 💶 del rimborso e lo rendi
   tu (vedi [Pagamenti, per il personale](../kiosk/pagamenti.md)).
+- **Un limite molto lontano: i posti del tavolo virtuale.** Ogni ordine del kiosk occupa un posto
+  del suo tavolo virtuale anche dopo la chiusura; finiti i posti (decine di migliaia di ordini sullo
+  stesso tavolo) il servizio riusa quello dell'ordine chiuso più vecchio. Non riusa però un ordine
+  che ha ancora denaro aperto nel registro dei pagamenti, per esempio un rimborso da fare o una
+  verifica da decidere: se le 50 comande chiuse più vecchie del tavolo ne hanno tutte, il tavolo non
+  apre ordini nuovi. Segnare visto l'avviso del rimborso non chiude quel denaro nel registro, e dalla
+  cassa al momento non c'è un modo di farlo: se succede, chiama l'assistenza, oppure scegli per i
+  kiosk un altro tavolo virtuale in [Kiosk](kiosk.md).
+  <!-- DA VERIFICARE: come si porta a «rimborsato» il denaro da rimborsare di un ordine del kiosk (oggi nessuna rotta o schermata lo fa: «Visto» chiude solo l'avviso), perche' il parcheggio a frazioni finite lo possa riusare? -->
 - **Un pagamento arrivato tardi.** Se il kiosk registra il pagamento di un ordine che avevi dato per
   non entrato, l'ordine torna da verificare e compare l'avviso *Il kiosk ha registrato il pagamento
   dell'ordine … dopo che era stato dato per non entrato: controlla prima di incassare.*

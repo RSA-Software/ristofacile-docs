@@ -131,7 +131,7 @@ pagamento.
 
 | Comando | Effetto |
 |---|---|
-| **Apri** (avviso in cassa) | Apre [Ordini dal kiosk](../cassa/ordini-kiosk.md) con quell'ordine in cima. Solo sulla cassa. |
+| **Apri** (avviso in cassa) | Apre [Ordini dal kiosk](../cassa/ordini-kiosk.md) con quell'ordine in cima. Solo sulla cassa. Dal conto, prima di lasciarlo, la cassa ricorda la carta già addebitata o il denaro della cassa automatica; con un incasso in corso non apre niente: *C'e' un incasso in corso su questo conto: finiscilo prima, poi apri l'avviso.* |
 | **Visto** (avviso in cassa) | Toglie l'avviso: usalo dopo aver sistemato il caso. Sugli avvisi di soldi chiede prima conferma (**Sì, fatto**). |
 | **✕** (avviso in cassa) | Chiude il riquadro senza segnare visto l'avviso. |
 | **OK** (vista Fermo) | Con il PIN giusto mostra **Riprova** e, se c'è un pagamento, **Ho controllato io**. |

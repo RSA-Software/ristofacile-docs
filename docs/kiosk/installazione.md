@@ -142,16 +142,30 @@ configurazione si scrive l'indirizzo con `http://`, come per le casse.
 
 Con l'aggiornamento che porta in cassa la voce **Kiosk** e gli **Ordini dal kiosk**:
 
-1. Aggiorna **prima il servizio**, poi **tutte le casse** (e i palmari), per ultimi i **kiosk**: le
-   schermate nuove della cassa e del kiosk chiedono al servizio cose che un servizio vecchio non sa.
-2. Non lasciare casse vecchie accanto a quelle nuove. Una cassa non aggiornata, quando salva un
-   piatto nella composizione del [Menu](../cassa/menu.md), riaccende **Ordinabile dal kiosk**: il
-   piatto torna sui kiosk.
-3. Sulla TV del monitor in sala ricarica la pagina **una volta a mano** (riaprila, o tasto F5): la
+1. **Ferma i kiosk** prima di cominciare (sul kiosk, **Esci dall'app**), a un'ora senza clienti: i
+   kiosk restano senza ordini finché l'aggiornamento non è finito.
+2. Aggiorna **prima il servizio**. Le schermate nuove della cassa e del kiosk chiedono al servizio
+   cose che un servizio vecchio non sa.
+3. Aggiorna **i kiosk insieme al servizio**: un kiosk della versione di prima, con il servizio nuovo,
+   non riesce a segnalare un pagamento da verificare (il servizio rifiuta la segnalazione). Lasciali
+   comunque senza ordini.
+4. Aggiorna **tutte le casse e tutti i palmari**. Finché ne resta uno di prima, i kiosk restano
+   spenti:
+   - una cassa di prima calcola coperto e servizio sul conto di un ordine del kiosk, non conosce i
+     pagamenti da verificare né il controllo prima del POS, e mette gli avvisi del kiosk sul tavolo;
+   - un palmare di prima apre i tavoli del kiosk come tavoli normali;
+   - una cassa di prima, quando salva un piatto nella composizione del [Menu](../cassa/menu.md),
+     riaccende **Ordinabile dal kiosk**: il piatto torna sui kiosk.
+5. Sulla TV del monitor in sala ricarica la pagina **una volta a mano** (riaprila, o tasto F5): la
    pagina di prima non sa ricaricarsi da sola. Dagli aggiornamenti successivi si ricarica da sola
    quando il servizio cambia (vedi [Chiamate](../cassa/chiamate.md#il-monitor-in-sala)).
-4. In cassa apri Menu ▸ **Kiosk** e controlla la configurazione: quello che prima scriveva
-   l'assistenza (kiosk, dispositivi, utenti web) ora si vede e si cambia da lì.
+6. In cassa apri Menu ▸ [Kiosk](../cassa/kiosk.md) e controlla la configurazione: quello che prima
+   scriveva l'assistenza (kiosk, dispositivi, utenti web) ora si vede e si cambia da lì.
+7. Per ultimi **riaccendi i kiosk**: avvia RistoKiosk e, se li avevi spenti, accendi **Kiosk accesi**
+   e tocca **Salva**.
+
+Il contrario regge: una cassa nuova con un servizio ancora vecchio non vede i tavoli del kiosk e
+lavora come prima.
 
 ## Controlli e messaggi
 
