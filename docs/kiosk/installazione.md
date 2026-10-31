@@ -155,7 +155,9 @@ Con l'aggiornamento che porta in cassa la voce **Kiosk** e gli **Ordini dal kios
      pagamenti da verificare né il controllo prima del POS, e mette gli avvisi del kiosk sul tavolo;
    - un palmare di prima apre i tavoli del kiosk come tavoli normali;
    - una cassa di prima, quando salva un piatto nella composizione del [Menu](../cassa/menu.md),
-     riaccende **Ordinabile dal kiosk**: il piatto torna sui kiosk.
+     riaccende **Ordinabile dal kiosk**: il piatto torna sui kiosk;
+   - una cassa o un palmare di prima danno il «visto» a un avviso di rimborso senza chiedere se hai
+     già rimborsato, e il servizio registra il rimborso come fatto.
 5. Sulla TV del monitor in sala ricarica la pagina **una volta a mano** (riaprila, o tasto F5): la
    pagina di prima non sa ricaricarsi da sola. Dagli aggiornamenti successivi si ricarica da sola
    quando il servizio cambia (vedi [Chiamate](../cassa/chiamate.md#il-monitor-in-sala)).

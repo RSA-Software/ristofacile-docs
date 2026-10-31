@@ -200,7 +200,10 @@ Un ordine già in cucina non si annulla: si incassa.
    lo segni visto).* e in alto l'avviso 💶 *Ordine 4 annullato dalla cassa: rimborsa € 3,00 (pagati
    al kiosk con la carta).*
 4. Rimborsa il cliente: la carta si storna sul POS, i contanti si rendono a mano.
-5. Tocca **Visto** sull'avviso e rispondi **Sì, fatto**.
+5. **Solo dopo aver rimborsato davvero**, tocca **Visto** sull'avviso e rispondi **Sì, fatto**: il
+   servizio segna il denaro come rimborsato e l'avviso sparisce da tutte le postazioni. Se il
+   servizio non riesce a registrarlo, l'avviso resta con *Rimborso non registrato: riprova fra
+   poco. L'avviso resta: riprova con «visto».*
 
 È l'unico modo di chiudere senza documento un ordine pagato al kiosk.
 
@@ -268,15 +271,19 @@ Un ordine già in cucina non si annulla: si incassa.
 - **Il denaro in eccesso** (verifica oltre il conto, pagamento arrivato su un ordine già chiuso,
   storno dopo il pagamento) non lo restituisce il kiosk: compare l'avviso 💶 del rimborso e lo rendi
   tu (vedi [Pagamenti, per il personale](../kiosk/pagamenti.md)).
+- **Il «visto» del rimborso registra il rimborso.** Con **Sì, fatto** sull'avviso 💶 il servizio
+  segna quel denaro come rimborsato: daglielo solo dopo aver reso davvero i soldi al cliente. Un
+  secondo rimborso sulla stessa comanda (per esempio un pagamento arrivato dopo l'annullo) ha un
+  avviso a sé, con il suo «visto».
 - **Un limite molto lontano: i posti del tavolo virtuale.** Ogni ordine del kiosk occupa un posto
   del suo tavolo virtuale anche dopo la chiusura; finiti i posti (decine di migliaia di ordini sullo
-  stesso tavolo) il servizio riusa quello dell'ordine chiuso più vecchio. Non riusa però un ordine
-  che ha ancora denaro aperto nel registro dei pagamenti, per esempio un rimborso da fare o una
-  verifica da decidere: se le 50 comande chiuse più vecchie del tavolo ne hanno tutte, il tavolo non
-  apre ordini nuovi. Segnare visto l'avviso del rimborso non chiude quel denaro nel registro, e dalla
-  cassa al momento non c'è un modo di farlo: se succede, chiama l'assistenza, oppure scegli per i
-  kiosk un altro tavolo virtuale in [Kiosk](kiosk.md).
-  <!-- DA VERIFICARE: come si porta a «rimborsato» il denaro da rimborsare di un ordine del kiosk (oggi nessuna rotta o schermata lo fa: «Visto» chiude solo l'avviso), perche' il parcheggio a frazioni finite lo possa riusare? -->
+  stesso tavolo) il servizio riusa quello di un ordine chiuso, il più vecchio fra quelli che non
+  hanno più denaro aperto (un rimborso non ancora segnato visto, una verifica da decidere). Il
+  tavolo smette di aprire ordini nuovi solo se **tutte** le sue comande chiuse hanno denaro aperto.
+  Il denaro di un pagamento arrivato su un ordine già chiuso resta aperto anche dopo il visto, ma
+  occupa solo il posto di quell'ordine.
+  In quel caso chiudi i casi in sospeso (rimborsa e segna visto gli avvisi 💶, decidi le verifiche)
+  oppure scegli per i kiosk un altro tavolo virtuale in [Kiosk](kiosk.md).
 - **Un pagamento arrivato tardi.** Se il kiosk registra il pagamento di un ordine che avevi dato per
   non entrato, l'ordine torna da verificare e compare l'avviso *Il kiosk ha registrato il pagamento
   dell'ordine … dopo che era stato dato per non entrato: controlla prima di incassare.*

@@ -113,7 +113,11 @@ Gli avvisi di soldi (resto, rimborso, pagamento su un ordine già chiuso) restan
 *Hai già rimborsato o dato il resto al cliente? L'avviso sparisce per tutte le postazioni.*, con
 **Non ancora** e **Sì, fatto** (per un avviso di soldi da verificare: *Hai
 controllato il pagamento sul POS o sul rendiresto? L'avviso sparisce per tutte le postazioni: la
-verifica si fa da «Ordini dal kiosk».*). Un tocco fuori dalla domanda vale **Non ancora**. Gli avvisi *Pagamento da verificare* e *Scontrino da emettere* di un
+verifica si fa da «Ordini dal kiosk».*). Un tocco fuori dalla domanda vale **Non ancora**.
+Sugli avvisi di rimborso del kiosk **Sì, fatto** registra anche il rimborso sul servizio: rispondi
+così solo dopo aver reso davvero i soldi. Se il servizio non riesce a registrarlo, l'avviso resta
+a video con *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».*
+(senza risposta: *Il servizio non risponde: l'avviso resta. Riprova con «visto» fra poco.*). Gli avvisi *Pagamento da verificare* e *Scontrino da emettere* di un
 ordine ancora aperto, una volta visti, escono dal riquadro ma restano legati all'ordine finché il
 suo conto non si chiude; quello da verificare sparisce da solo quando il kiosk registra il
 pagamento.
@@ -244,6 +248,8 @@ Se alla riaccensione il servizio non risponde:
 | *Il pagamento è preso: stiamo registrando l’ordine 26, rivolgiti alla cassa se non parte.* | Pagamento preso, servizio irraggiungibile. | Rimetti in funzione il servizio o la rete: il kiosk registra da solo. |
 | *Stiamo registrando un pagamento: per ora ordina alla cassa.* | Kiosk fuori servizio finché il pagamento non è registrato. | Come sopra. |
 | *Resto da ricevere 4,00 €: mostra il tagliando alla cassa.* | Il rendiresto non ha dato tutto il resto. | Dai il resto al cliente e tocca **Visto** sull'avviso. |
+| *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».* (in cassa e sul palmare) | Il servizio non è riuscito a registrare il rimborso al «visto» dell'avviso. | Tocca di nuovo **Visto** fra poco. |
+| *Il servizio non risponde: l'avviso resta. Riprova con «visto» fra poco.* | Il «visto» di un avviso di soldi non ha avuto risposta. | Controlla il collegamento e riprova. |
 | *Il pagamento non è partito: rivolgiti alla cassa con il numero 28.* | Il servizio ha rifiutato il pagamento prima di cominciare. | Nessun soldo preso: il cliente paga in cassa o ricomincia l'ordine. |
 | *Il pagamento è registrato ma l'ordine era scaduto: rivolgiti alla cassa con il numero 27* | Il cliente ha pagato un ordine che il servizio aveva già annullato per scadenza. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
 | *Questo kiosk non emette scontrini: rivolgiti alla cassa.* | Al kiosk è stata tolta la stampante fiscale mentre il cliente pagava. | Vedi l'avviso in cassa. |

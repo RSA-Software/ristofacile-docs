@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-31 — **70 domande** su 37 pagine.
+Aggiornato al 2026-10-31 — **69 domande** su 36 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -132,12 +132,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 - [ ] riga 70: il campo Badge viene solo salvato; nessuna schermata dell'app lo legge (non si entra col badge). A cosa serve?
 - [ ] riga 129: eliminare un operatore che compare su comande e conti già chiusi è consentito? Cosa succede allo storico?
 
-## Ordini dal kiosk
-
-`docs/cassa/ordini-kiosk.md`
-
-- [ ] riga 279: come si porta a «rimborsato» il denaro da rimborsare di un ordine del kiosk (oggi nessuna rotta o schermata lo fa: «Visto» chiude solo l'avviso), perche' il parcheggio a frazioni finite lo possa riusare?
-
 ## Portate
 
 `docs/cassa/portate.md`
@@ -236,7 +230,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kiosk/pagamenti.md`
 
-- [ ] riga 269: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
+- [ ] riga 275: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
 
 ## Accesso
 

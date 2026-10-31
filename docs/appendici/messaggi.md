@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-31 — **705 messaggi**.
+Aggiornato al 2026-10-31 — **707 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -220,6 +220,7 @@ Aggiornato al 2026-10-31 — **705 messaggi**.
 | *Il servizio non ha restituito la configurazione del menu online.* | Cassa: [Menu online](../cassa/menu-online.md) | Il servizio ha risposto senza dati. | Riprova; se persiste, chiama l'assistenza. |
 | *Il servizio non ha restituito nessun terminale: resta valido quello gia' scelto su questa cassa.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non ha dato l'elenco. | La cassa continua a usare il terminale scelto; riprova più tardi. |
 | *Il servizio non risponde da oltre 2 minuti durante l'incasso: controlla il rendiresto e il conto in cassa.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | La rete o il servizio sono caduti mentre il cliente pagava in contanti. | Rimetti in funzione la rete o il servizio, poi PIN e **Riprova**. |
+| *Il servizio non risponde: l'avviso resta. Riprova con «visto» fra poco.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il «visto» di un avviso di soldi non ha avuto risposta. | Controlla il collegamento e riprova. |
 | *Il servizio non risponde: riprova fra poco o ordina alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il servizio non ha risposto all'invio dell'ordine. | Riprova; se insiste, controlla il servizio. |
 | *Il servizio non risponde.* (seguito dal dettaglio) | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Indirizzo sbagliato, servizio spento o rete assente. | Controlla l'indirizzo e che il servizio sia acceso e raggiungibile. |
 | *Il servizio rifiuta le credenziali: controlla nome utente e password.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Utente o password sbagliati. | Correggili. |
@@ -621,6 +622,7 @@ Aggiornato al 2026-10-31 — **705 messaggi**.
 | **Rifiuta ordine** — *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Palmare: [Ordini](../palmare/ordini.md) | Hai toccato **Rifiuta**. | **Rifiuta** o **Annulla**. |
 | *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Conferma di **Rifiuta**. | **Rifiuta** per procedere, **Annulla** per lasciare l'ordine. |
 | *Righe del conto non lette.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Le voci del conto scelto non si sono lette. | Tocca di nuovo la riga per riprovare. |
+| *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».* (in cassa e sul palmare) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il servizio non è riuscito a registrare il rimborso al «visto» dell'avviso. | Tocca di nuovo **Visto** fra poco. |
 | **Rimuovi immagine** — *Togliere l'immagine dall'articolo "…"?* | Cassa: [Articoli](../cassa/articoli.md) | Hai toccato **Rimuovi**. | **Rimuovi** o **Annulla**. |
 | *RistoFacile in modalità demo* | Monitor di cucina: [Monitor](../kds/monitor.md) | Una cassa del locale è in prova. | Nessuna: il monitor funziona. |
 | *Sala Interna · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | Cassa: [Comanda](../cassa/comanda.md) | **+** sui coperti oltre i posti massimi. | Unisci un tavolo dalla [Mappa della sala](../cassa/mappa-sala.md) o alza i posti massimi in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
