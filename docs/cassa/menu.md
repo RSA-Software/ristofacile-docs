@@ -68,8 +68,8 @@ menu. Sotto, tre colonne:
   con nome, codice e prezzo. La griglia non scorre: mostra quanti articoli ci stanno e, se sono di
   più, avvisa (es. «1200 articoli: ne mostro 24, restringi la ricerca»).
 - **I piatti della sezione** (a destra): in testa il nome della sezione scelta, poi una riga per
-  piatto con nome, prezzo di listino, le note *non va in cucina* o *non attivo* quando valgono, il
-  supplemento in arancione, le frecce per spostarlo e la **X** per toglierlo. Sezione vuota:
+  piatto con nome, prezzo di listino, le note *non va in cucina*, *non attivo*, *non dal
+  telefono*, *non dal kiosk* o *consigliato* quando valgono, il supplemento in arancione, le frecce per spostarlo e la **X** per toglierlo. Sezione vuota:
   *Tocca un articolo al centro per aggiungerlo qui.*
 
 ![Opzioni della sezione](../assets/img/cassa/menu-sezione.png)
@@ -105,6 +105,11 @@ menu. Sotto, tre colonne:
 | **SUPPLEMENTO** | In euro. «Quanto si aggiunge al prezzo del menu scegliendo questo piatto.» Sotto compare il **Prezzo di listino** dell'articolo (o *Nessun prezzo in listino*). |
 | **CENTRO DI PRODUZIONE** | Il reparto dove esce la comanda di questo piatto. «Ritocca quello scelto per toglierlo: nessun centro = il piatto non viene stampato in cucina.» Mostra solo i centri attivi. |
 | **Attivo nel menu** | «Spento resta nel menu ma non si puo' scegliere». |
+| **Ordinabile dal telefono** | «Self order: spento, il cliente lo vede nel menu ma lo ordina al cameriere» (vedi [Self order](self-order.md)). |
+| **Ordinabile dal kiosk** | «Kiosk: spento, il piatto non compare sui kiosk». Di partenza acceso. Nell'elenco dei piatti un piatto spento porta la nota *non dal kiosk*. |
+| **Consigliato** | «Self order: proposto al cliente prima dell'invio dell'ordine». Anche il kiosk mostra i consigliati, nell'attesa e dopo un piatto senza abbinamenti. |
+
+![Ordinabile dal kiosk](../assets/img/cassa/menu-piatto-kiosk.png)
 
 ## Pulsanti e comandi
 
@@ -156,6 +161,13 @@ menu. Sotto, tre colonne:
 
 Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.md).
 
+### Togliere un piatto dai kiosk
+
+1. Tocca il piatto nella colonna di destra.
+2. Spegni **Ordinabile dal kiosk**.
+3. Tocca **Salva**. Il piatto mostra la nota *non dal kiosk*: sui kiosk non compare più, mentre in
+   Comanda e sul telefono del self order resta.
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
@@ -196,6 +208,11 @@ Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.
   <!-- DA VERIFICARE: dove si impostano giorni, orari e minimo di persone del menu (gestionale?). Il minimo di persone non risulta applicato in Comanda. -->
 - Il catalogo articoli si apre subito dalla copia salvata sul dispositivo e si aggiorna dal servizio
   in sottofondo (vedi [Articoli](articoli.md)).
+- **Casse non aggiornate.** Una cassa di una versione precedente non conosce **Ordinabile dal
+  kiosk**: quando salva un piatto lo riaccende, e il piatto torna sui kiosk. Aggiorna tutte le casse
+  insieme (vedi [Installazione del kiosk](../kiosk/installazione.md#aggiornare-servizio-casse-e-kiosk)).
+- Gli articoli che il kiosk propone dopo un piatto (gli abbinamenti) non si scelgono qui ma in
+  Menu ▸ [Kiosk](kiosk.md#linguetta-suggerimenti) ▸ **Suggerimenti**.
 
 ## Vedi anche
 
@@ -206,3 +223,4 @@ Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.
 - [Menu fissi](menu-fisso.md)
 - [Disponibilità](disponibilita.md)
 - [Menu online](menu-online.md)
+- [Kiosk](kiosk.md)

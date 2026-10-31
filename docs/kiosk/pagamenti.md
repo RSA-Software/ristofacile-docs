@@ -62,9 +62,13 @@ perché lo scrive il servizio.
 ![Avviso del kiosk in cassa](../assets/img/kiosk/pagamenti-avviso-cassa.png)
 
 Gli avvisi del kiosk compaiono in alto su mappa, comanda e conto, nello stesso riquadro degli
-avvisi del [self order](../cassa/self-order.md), con l'icona 📱: il testo, **Visto** per toglierlo,
-**✕** per chiudere il riquadro senza segnarlo visto, e sotto *e altri N avvisi* se ce ne sono altri.
-Ogni avviso nomina l'ordine e il kiosk, per esempio «ordine 23 (kiosk 1)».
+avvisi del [self order](../cassa/self-order.md): l'icona (💳 pagamento da verificare, 💶 resto o
+rimborso, 🧾 scontrino da emettere, ⏰ ordine non pagato), il testo, **Apri** per andare
+all'ordine in [Ordini dal kiosk](../cassa/ordini-kiosk.md), **Visto** per toglierlo, **✕** per
+chiudere il riquadro senza segnarlo visto, e sotto *e altri N avvisi* se ce ne sono altri. Ogni
+avviso nomina l'ordine e il kiosk, per esempio «ordine 23 (kiosk 1)». Gli avvisi del kiosk non
+compaiono sulle tessere dei tavoli. Sul palmare ci sono anche loro, senza **Apri**: gli ordini del
+kiosk si gestiscono dalla cassa.
 
 ![Resto non dato](../assets/img/kiosk/pagamenti-avviso-resto.png)
 
@@ -91,18 +95,28 @@ pagamento, **Ho controllato io**.
 
 | Avviso | Che cosa vuol dire |
 |---|---|
-| *Pagamento da verificare, ordine 23 (kiosk 1): …* | Il kiosk non sa se il cliente ha pagato. Il testo dice il perché (per esempio *Il kiosk si è spento durante il pagamento con il POS: controlla sul terminale se è passato.*), l'importo e i riferimenti dell'operazione. L'ordine **non** va in cucina finché il conto non si chiude. Il denaro **trattenuto** dal rendiresto arriva qui, con il suo importo. |
-| *Resto non dato, ordine 22 (kiosk 1): € 4,00 da dare al cliente.* | L'ordine è pagato e in cucina; il cliente deve ricevere il resto dalla cassa. |
-| *Scontrino da emettere per l'ordine 27 (kiosk 1): …* | Il cliente ha pagato al kiosk e l'ordine è in cucina, ma lo scontrino non è uscito (per esempio la stampante fiscale è spenta). Il testo dice il motivo. Con *Scontrino da verificare* il kiosk non sa se lo scontrino è uscito: controlla prima sulla stampante. |
-| *Rimborso di € …, ordine 27 (kiosk 1): …* | Il kiosk ha incassato più del conto: la differenza va restituita. |
-| *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* | Un ordine «paga alla cassa» mandato in cucina subito, e non ancora incassato. |
+| 💳 *Pagamento da verificare, ordine 23 (kiosk 1): …* | Il kiosk non sa se il cliente ha pagato. Il testo dice il perché (per esempio *Il kiosk si è spento durante il pagamento con il POS: controlla sul terminale se è passato.*), l'importo e i riferimenti dell'operazione. L'ordine **non** va in cucina e il suo conto non si chiude finché non decidi da [Ordini dal kiosk](../cassa/ordini-kiosk.md#decidere-un-pagamento-da-verificare). Il denaro **trattenuto** dal rendiresto arriva qui, con il suo importo. |
+| 💳 *Il kiosk ha registrato il pagamento dell'ordine 15 dopo che era stato dato per non entrato: controlla prima di incassare.* | Avevi risposto **Non è entrato**, ma poi il kiosk ha registrato il pagamento. L'ordine torna da verificare. |
+| 💶 *Resto non dato, ordine 22 (kiosk 1): € 4,00 da dare al cliente.* | L'ordine è pagato e in cucina; il cliente deve ricevere il resto dalla cassa. |
+| 🧾 *Scontrino da emettere per l'ordine 27 (kiosk 1): …* | Il cliente ha pagato al kiosk e l'ordine è in cucina, ma lo scontrino non è uscito (per esempio la stampante fiscale è spenta). Il testo dice il motivo. Con *Scontrino da verificare* il kiosk non sa se lo scontrino è uscito: controlla prima sulla stampante. Lo scontrino si emette da [Ordini dal kiosk](../cassa/ordini-kiosk.md#emettere-lo-scontrino-di-un-ordine-pagato-al-kiosk). |
+| 💶 *Rimborso di € …, ordine 27 (kiosk 1): …* | Il kiosk ha incassato più del conto, o il conto è sceso sotto quello che il cliente ha pagato (per esempio *… pagati al kiosk (contanti) e rimasti fuori dallo scontrino. Rimborsa il cliente.*): la differenza va restituita. |
+| 💶 *Ordine 4 annullato dalla cassa: rimborsa € 3,00 (pagati al kiosk con la carta).* | Hai annullato con **Annulla e rimborsa** un ordine pagato al kiosk. |
+| ⏰ *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* | Un ordine «paga alla cassa» mandato in cucina subito, e non ancora incassato. |
 | *Cliente GIÀ ADDEBITATO, ordine 27 (kiosk 1), …* | Il pagamento è arrivato su un ordine già scaduto e annullato, che non è stato preparato. Non far pagare di nuovo: rifai l'ordine o rimborsa. |
 | *Pagamento da verificare, ordine 27 (kiosk 1): pagato al kiosk … su un ordine già chiuso.* | Il cliente può aver pagato due volte: controlla. |
 
 Gli avvisi di soldi (resto, rimborso, pagamento su un ordine già chiuso) restano finché non tocchi
-**Visto**, anche a conto chiuso. Gli avvisi *Pagamento da verificare* e *Scontrino da emettere* di un
+**Visto**, anche a conto chiuso, e **Visto** chiede prima conferma:
+
+![Visto su un avviso di soldi](../assets/img/kiosk/pagamenti-visto-denaro.png)
+
+*Hai già rimborsato o dato il resto al cliente? L'avviso sparisce per tutte le postazioni.*, con
+**Non ancora** e **Sì, fatto** (per un avviso di soldi da verificare: *Hai
+controllato il pagamento sul POS o sul rendiresto? L'avviso sparisce per tutte le postazioni: la
+verifica si fa da «Ordini dal kiosk».*). Un tocco fuori dalla domanda vale **Non ancora**. Gli avvisi *Pagamento da verificare* e *Scontrino da emettere* di un
 ordine ancora aperto, una volta visti, escono dal riquadro ma restano legati all'ordine finché il
-suo conto non si chiude.
+suo conto non si chiude; quello da verificare sparisce da solo quando il kiosk registra il
+pagamento.
 
 ### La vista Fermo
 
@@ -117,7 +131,8 @@ suo conto non si chiude.
 
 | Comando | Effetto |
 |---|---|
-| **Visto** (avviso in cassa) | Toglie l'avviso: usalo dopo aver sistemato il caso. |
+| **Apri** (avviso in cassa) | Apre [Ordini dal kiosk](../cassa/ordini-kiosk.md) con quell'ordine in cima. Solo sulla cassa. |
+| **Visto** (avviso in cassa) | Toglie l'avviso: usalo dopo aver sistemato il caso. Sugli avvisi di soldi chiede prima conferma (**Sì, fatto**). |
 | **✕** (avviso in cassa) | Chiude il riquadro senza segnare visto l'avviso. |
 | **OK** (vista Fermo) | Con il PIN giusto mostra **Riprova** e, se c'è un pagamento, **Ho controllato io**. |
 | **Riprova** | Il kiosk riprova a far sapere al servizio com'è andato il pagamento (o, senza pagamento, torna ad accogliere i clienti). Se il servizio risponde, il kiosk mostra l'esito e torna all'attesa; se dopo 30 secondi non ha ancora risposto, la vista dice *Il servizio non ha ancora dato una risposta definitiva: il kiosk continua a provare e mostra l'esito appena arriva.* e si blocca di nuovo. |
@@ -134,26 +149,25 @@ e chiede il PIN: i due tasti non restano a disposizione di chi passa.
 1. Leggi l'avviso in cassa: numero dell'ordine, importo, motivo.
 2. Controlla la periferica: sul **giornale del POS** se l'addebito c'è; sul **rendiresto** quanto
    ha incassato e restituito per quell'ordine.
-3. Se il cliente ha pagato, l'ordine va concluso senza farlo pagare di nuovo; se non ha pagato,
-   incassa tu.
-4. Tocca **Visto**.
+3. Tocca **Apri** sull'avviso: si apre [Ordini dal kiosk](../cassa/ordini-kiosk.md) con l'ordine
+   in cima.
+4. Tocca **Il denaro è entrato?**. Se il cliente ha pagato, scrivi l'importo che vedi sul POS o
+   sul rendiresto, scegli **Carta** o **Contanti** e tocca **Il denaro è entrato**: l'ordine va in
+   cucina e si conclude senza farlo pagare di nuovo (se l'importo non basta, la cassa apre la
+   comanda per incassare il resto). Se non ha pagato, tocca **Non è entrato**: l'ordine si incassa
+   alla cassa.
+5. Tocca **Visto** sull'avviso.
 
-!!! warning "La cassa non apre ancora gli ordini del kiosk"
-    Al momento la cassa non sa aprire il conto di un ordine del kiosk: né dall'avviso né dalla
-    mappa (sul tavolo del kiosk si apre una comanda nuova, vuota), e gli ordini del kiosk non sono
-    nella coda dell'asporto. L'elenco degli ordini del kiosk da incassare, la lettura del QR del
-    promemoria e la conferma dei pesi arrivano con un prossimo aggiornamento. Fino ad allora
-    chiudere o annullare il conto di un ordine del kiosk da verificare, da pagare alla cassa o con
-    lo scontrino da emettere non si fa dalla cassa.
-
-<!-- DA VERIFICARE: prima dell'aggiornamento della cassa (Piano 8), come chiude il personale il conto di un ordine del kiosk da verificare, con lo scontrino da emettere o da pagare alla cassa? Oggi lo si e' fatto solo dalla rotta del servizio (collaudo). -->
+Gli ordini del kiosk si aprono **sempre** da [Ordini dal kiosk](../cassa/ordini-kiosk.md): il tocco
+sul tavolo del kiosk in sala porta lì, e non apre mai una comanda nuova. Gli ordini del kiosk non
+sono nella coda dell'asporto.
 
 ### Un resto da dare
 
 1. Il cliente arriva con il tagliando «Resto da ricevere».
 2. Controlla che il numero e l'importo siano quelli dell'avviso *Resto non dato* in cassa.
 3. Dai il resto al cliente.
-4. Tocca **Visto**.
+4. Tocca **Visto** e rispondi **Sì, fatto**.
 
 ### Il pagamento è preso ma non registrato
 
@@ -256,6 +270,7 @@ Se alla riaccensione il servizio non risponde:
 
 ## Vedi anche
 
+- [Ordini dal kiosk](../cassa/ordini-kiosk.md): verificare, emettere, annullare e rimborsare
 - [Percorso del cliente](percorso.md)
 - [Configurazione](configurazione.md)
 - [Self order](../cassa/self-order.md): gli avvisi in cassa

@@ -58,13 +58,14 @@ Non applicabile.
 ### L'utente web del kiosk
 
 Il kiosk si collega al servizio con un nome utente e una password, come le casse. Per il kiosk va
-creato **un utente web apposta**, che non sia quello di una cassa, e il suo nome va scritto
-nell'elenco degli **utenti dei kiosk** nella configurazione dei kiosk sul servizio.
+creato **un utente web apposta**, che non sia quello di una cassa, con un'**email sua**, e il suo
+nome va scritto fra gli **utenti web dei kiosk** in cassa.
 
-1. Crea l'utente web del kiosk, come gli utenti delle casse.
-2. Scrivi il suo nome utente fra gli utenti dei kiosk: nel file della configurazione dei kiosk sul
-   servizio è la voce `utenti`, un elenco di nomi (per esempio `["KIOSK"]`). Le maiuscole non
-   contano.
+1. Crea l'utente web del kiosk, come gli utenti delle casse, con un'email che non sia di un
+   operatore.
+2. In cassa apri Menu ▸ **Kiosk**, linguetta **Kiosk**, riquadro **Utenti web dei kiosk**: scrivi il
+   nome utente, tocca **Aggiungi** e poi **Salva** (vedi
+   [Kiosk](../cassa/kiosk.md#dare-al-kiosk-il-suo-utente-web)). Le maiuscole non contano.
 3. Sul kiosk scrivi quel nome e la sua password nella configurazione, riquadro **Servizio**, e
    tocca **Salva e verifica**.
 4. L'avviso giallo *Attenzione: le credenziali di questo kiosk non sono ristrette. …* non deve
@@ -85,10 +86,10 @@ fra gli utenti dei kiosk, invece:
 
 Con l'elenco vuoto nessuno è ristretto e il kiosk lo segnala in configurazione.
 
-!!! note "Per ora l'elenco lo scrive l'assistenza"
-    La cassa non ha ancora la schermata dei kiosk: arriverà con un prossimo aggiornamento. Fino ad
-    allora gli utenti dei kiosk, come il numero e il dispositivo di ogni kiosk, si scrivono nella
-    configurazione dei kiosk sul servizio.
+!!! note "Un'email per ogni kiosk"
+    Il servizio riconosce l'utente del kiosk anche dalla sua email. Se la stessa email è anche di un
+    operatore, chi entra con quell'email riceve le restrizioni del kiosk: in cassa lo segnala un
+    avviso ambra sull'utente (*L'email … è anche di …*). Dai a ogni kiosk un utente e un'email suoi.
 
 ### Windows
 
@@ -137,6 +138,21 @@ stesso (vedi [Pagamenti](pagamenti.md#note)).
 **La rete.** Il kiosk Android parla con il servizio in `http` sulla rete del locale: nella
 configurazione si scrive l'indirizzo con `http://`, come per le casse.
 
+### Aggiornare servizio, casse e kiosk
+
+Con l'aggiornamento che porta in cassa la voce **Kiosk** e gli **Ordini dal kiosk**:
+
+1. Aggiorna **prima il servizio**, poi **tutte le casse** (e i palmari), per ultimi i **kiosk**: le
+   schermate nuove della cassa e del kiosk chiedono al servizio cose che un servizio vecchio non sa.
+2. Non lasciare casse vecchie accanto a quelle nuove. Una cassa non aggiornata, quando salva un
+   piatto nella composizione del [Menu](../cassa/menu.md), riaccende **Ordinabile dal kiosk**: il
+   piatto torna sui kiosk.
+3. Sulla TV del monitor in sala ricarica la pagina **una volta a mano** (riaprila, o tasto F5): la
+   pagina di prima non sa ricaricarsi da sola. Dagli aggiornamenti successivi si ricarica da sola
+   quando il servizio cambia (vedi [Chiamate](../cassa/chiamate.md#il-monitor-in-sala)).
+4. In cassa apri Menu ▸ **Kiosk** e controlla la configurazione: quello che prima scriveva
+   l'assistenza (kiosk, dispositivi, utenti web) ora si vede e si cambia da lì.
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
@@ -152,11 +168,11 @@ configurazione si scrive l'indirizzo con `http://`, come per le casse.
     documento fiscale. Usa importi piccoli, o una stampante fiscale di prova.
   - Senza scontrino si prova con **Pago alla cassa** (se è acceso), con l'invio in cucina **dopo**: l'ordine
     di prova non va in cucina e si annulla da solo alla scadenza (di partenza 30 minuti).
-  - La cassa oggi non apre gli ordini del kiosk (vedi
-    [Pagamenti](pagamenti.md#un-pagamento-da-verificare)): un ordine di prova rimasto aperto (da
-    verificare, con lo scontrino da emettere, o «paga alla cassa» con l'invio **subito**) non si
-    chiude dalla cassa.
-  <!-- DA VERIFICARE: prima dell'aggiornamento della cassa (Piano 8), chi e come chiude un ordine di prova del kiosk rimasto aperto (oggi solo con la rotta del servizio, come nel collaudo). -->
+  - Un ordine di prova rimasto aperto si chiude dalla cassa, in
+    [Ordini dal kiosk](../cassa/ordini-kiosk.md): **Annulla l'ordine** per un «paga alla cassa»
+    non ancora in cucina, **Annulla e rimborsa** per un ordine pagato al kiosk (il rimborso della
+    carta di prova si fa sul POS), il conto con **CHIUDI SENZA DOCUMENTO** per un «paga alla cassa»
+    già in cucina. Un ordine da verificare si decide prima con **Il denaro è entrato?**.
 - **Uscire dall'app** si può solo dalla configurazione, con **Esci dall'app**: vedi
   [Configurazione](configurazione.md#chiudere-lapp). Per lavorare sul PC o sul tablet va tolto
   anche il blocco del sistema operativo.

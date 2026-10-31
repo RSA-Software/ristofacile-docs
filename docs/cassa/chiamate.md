@@ -48,18 +48,18 @@ il suo numero si vede solo qui, non sulla TV.
 
 - Il bottone **Chiamate** e il monitor in sala ci sono solo quando i kiosk sono accesi e almeno un
   kiosk ha la licenza, anche in prova. Altrimenti il bottone non compare e il monitor scrive
-  *Monitor non attivo*. L'accensione dei kiosk e la loro licenza sono spiegate in
-  [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio).
+  *Monitor non attivo*. I kiosk si accendono dalla cassa, Menu ▸ [Kiosk](kiosk.md) ▸ **Generale** ▸
+  **Kiosk accesi**; la licenza è spiegata in
+  [Configurazione del kiosk](../kiosk/configurazione.md).
 - Il pronto da solo c'è solo per i centri di produzione con lo schermo, cioè di tipo
   **Monitor KDS** o **Stampante + KDS** (vedi [Centri di produzione](centri-di-produzione.md)).
 - Per il monitor in sala serve una TV, o uno schermo con un PC, con un browser e collegata alla
   rete del locale.
-- **I minuti sul monitor e le chiamate per gli asporti della cassa** non si impostano ancora da una
-  schermata della cassa: stanno nella configurazione dei kiosk sul servizio e li imposta
-  l'assistenza (vedi [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio)).
-  Di partenza un numero pronto resta sul monitor **10 minuti** (si può scegliere da 1 a 120) e gli
-  asporti della cassa **non** compaiono.
-  <!-- DA VERIFICARE: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa). -->
+- **I minuti sul monitor e le chiamate per gli asporti della cassa** si impostano in Menu ▸
+  [Kiosk](kiosk.md#linguetta-monitor) ▸ linguetta **Monitor**: **Minuti dei numeri pronti** (da 1
+  a 120, di partenza **10**) e l'interruttore **Anche gli asporti della cassa** (di partenza
+  spento: gli asporti della cassa **non** compaiono). Si salvano con **Salva**. Nella stessa
+  linguetta c'è l'indirizzo da aprire sulla TV.
 
 ## La schermata
 
@@ -112,6 +112,9 @@ schermata Chiamate. Ha due colonne a numeri grandi: **In preparazione** e
 - Il monitor mostra **solo numeri**: niente nomi, importi o segnaposti.
 - Un numero pronto resta sul monitor per i minuti impostati (di partenza 10) da quando è diventato
   pronto, poi sparisce dalla TV. In Chiamate invece resta fra i pronti finché non lo consegni.
+- Quando il servizio viene aggiornato, la pagina si ricarica da sola appena il servizio torna. La
+  prima volta dopo l'aggiornamento che ha portato questa funzione, però, la TV va ricaricata **a
+  mano una volta** (riapri la pagina, o tasto F5): la pagina di prima non lo sapeva fare.
 - Un ordine segnato **consegnato** sparisce dalla TV **subito**, chiunque lo segni: tu da Chiamate,
   la cassa alla chiusura del conto o la cucina dal monitor di cucina (vedi le Note).
 - Il monitor legge i numeri dal servizio ogni tre secondi: un tocco in Chiamate o sul monitor di
@@ -157,8 +160,8 @@ non ha un operatore: è per questo che mostra solo i numeri.
 | **Chiamate** (Mappa della sala) | Apre questa schermata. Sul palmare il bottone sta nella linguetta **Ordini**, accanto a **+ Asporto**. |
 | Tocco su una tessera **In preparazione** | Segna pronto l'ordine, senza conferma, come sul monitor di cucina. La tessera passa fra i **Pronti** e, se è da portare via, sulla TV il numero passa fra i pronti, lampeggia e suona. |
 | Tocco su una tessera **Pronti** | Apre la scelta fra **Consegnato**, **Torna in preparazione** e **Annulla**. |
-| **Consegnato** | Segna l'ordine consegnato: esce da Chiamate e, subito, dalla TV. Si può solo se l'ordine è già incassato. |
-| **Torna in preparazione** | Rimedio a un pronto toccato per sbaglio: la tessera torna fra **In preparazione** e sulla TV il numero torna nella colonna di sinistra. |
+| **Consegnato** | Segna l'ordine consegnato: esce da Chiamate e, subito, dalla TV. Sul monitor di cucina passano a consegnato anche i piatti dell'ordine già pronti; quelli non ancora pronti restano al cuoco. Si può solo se l'ordine è già incassato. |
+| **Torna in preparazione** | Rimedio a un pronto toccato per sbaglio: la tessera torna fra **In preparazione** e sulla TV il numero torna nella colonna di sinistra. Non vale se sul monitor di cucina tutti i piatti sono pronti: lì il pronto va riportato indietro dal monitor di cucina. |
 | **Annulla** | Chiude la scelta senza cambiare niente. |
 
 ## Come si fa
@@ -192,12 +195,14 @@ non ha un operatore: è per questo che mostra solo i numeri.
 2. Tocca **Torna in preparazione**.
 3. La tessera torna fra **In preparazione** e sulla TV il numero torna nella colonna di sinistra.
 
-Se la cucina aveva già finito tutto sul monitor di cucina, dopo pochi secondi l'ordine torna pronto
-da solo, e i minuti per cui resta sulla TV ripartono da capo.
+Se la cucina ha già finito tutto sul monitor di cucina, l'ordine resta fra i pronti e compare *Il
+monitor di cucina lo dà pronto: riportalo indietro dal monitor di cucina.*: il pronto lo toglie
+chi lo ha messo, sul monitor di cucina.
 
 ### Un asporto della cassa pagato prima che sia pronto
 
-Vale quando sono accese le chiamate anche per gli asporti della cassa.
+Vale quando sono accese le chiamate anche per gli asporti della cassa (Menu ▸ **Kiosk** ▸
+**Monitor** ▸ **Anche gli asporti della cassa**).
 
 1. Da [Asporto e domicilio](asporto.md) prendi l'ordine e mandalo in cucina: il numero compare fra
    **In preparazione**, in Chiamate e sulla TV.
@@ -211,13 +216,20 @@ Vale quando sono accese le chiamate anche per gli asporti della cassa.
 5. Il numero sparisce da Chiamate e dalla TV.
 
 Se invece il cliente paga al ritiro, a ordine già pronto, la chiusura del conto lo segna ritirato:
-sparisce da Chiamate e dalla TV senza bisogno di toccare **Consegnato**.
+sparisce da Chiamate e dalla TV senza bisogno di toccare **Consegnato**, e i piatti già pronti
+lasciano il monitor di cucina.
+
+Con le chiamate attive, un asporto della cassa **si incassa prima di segnarlo ritirato**: **Ritirato**
+in [Asporto e domicilio](asporto.md) e **Consegnato** qui rispondono *L'ordine 27 non e' ancora
+incassato: incassalo prima di segnarlo consegnato.* e l'ordine resta in coda.
 
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | Hai toccato **Consegnato** su un ordine il cui conto non è ancora chiuso. L'ordine resta fra i pronti. | Incassa il conto dalla comanda dell'ordine (vedi [Asporto e domicilio](asporto.md) e [Conto](conto.md)). Un asporto già pronto, alla chiusura del conto, diventa ritirato da solo. |
+| *L'ordine 27 e' gia' pagato al kiosk ma lo scontrino non e' ancora uscito: emettilo dalla cassa senza far pagare di nuovo, poi segnalo consegnato.* | **Consegnato** su un ordine pagato al kiosk con lo scontrino ancora da emettere. | Emetti lo scontrino da [Ordini dal kiosk](ordini-kiosk.md#emettere-lo-scontrino-di-un-ordine-pagato-al-kiosk), poi tocca **Consegnato**. |
+| *Il monitor di cucina lo dà pronto: riportalo indietro dal monitor di cucina.* | **Torna in preparazione** su un ordine che il monitor di cucina dà tutto pronto. | Riporta indietro il piatto sul monitor di cucina. |
 | *Non riesco a leggere le chiamate dal servizio: riprovo da solo ogni pochi secondi.* | Il servizio non risponde. Il messaggio compare una volta sola, non a ogni giro. | Controlla la rete e il servizio: l'elenco torna da solo. |
 | *Non sono riuscito a segnare l'ordine 27: riprova* (seguito dal dettaglio) | Il tocco non è arrivato al servizio. La tessera resta dov'era. | Controlla la rete e tocca di nuovo. |
 | *Collegamento perso, riprovo…* (monitor) | La TV non raggiunge più il servizio. Restano a video gli ultimi numeri. | Controlla che il servizio sia acceso e la TV collegata alla rete del locale: i numeri riprendono da soli. |
@@ -236,11 +248,14 @@ sparisce da Chiamate e dalla TV senza bisogno di toccare **Consegnato**.
 - Un ordine del kiosk **non ancora pagato** non compare né qui né sulla TV, e non arriva sul monitor
   di cucina: compare quando è pagato. Fa eccezione un ordine «paga alla cassa» con l'invio in cucina
   **subito**, che arriva in cucina e qui alla conferma del cliente (vedi
-  [Configurazione del kiosk](../kiosk/configurazione.md#le-impostazioni-del-servizio)).
+  [Kiosk](kiosk.md#generale)).
 - Un ordine non ancora incassato che la cucina segna consegnato sul monitor di cucina resta fra i
   **Pronti**: diventa consegnato quando ne chiudi il conto.
-- Dopo **Consegnato** in Chiamate i piatti dell'ordine restano nella colonna PRONTO del
-  [monitor di cucina](../kds/monitor.md): il cuoco li toglie toccandoli.
+- Dopo **Consegnato** in Chiamate i piatti dell'ordine già pronti escono anche dalla colonna PRONTO
+  del [monitor di cucina](../kds/monitor.md); quelli non ancora pronti (per esempio una bibita
+  ancora in coda al bar) restano al loro centro.
+- I minuti delle tessere («in coda da 4 minuti») li calcola il servizio: non dipendono
+  dall'orologio della cassa o del palmare.
 - Se un'altra cassa o un palmare ha già consegnato l'ordine, il tuo tocco fa sparire la tessera
   senza messaggi.
 - L'elenco mostra gli ordini arrivati nelle **ultime 12 ore**, così un locale aperto dopo mezzanotte

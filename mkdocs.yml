@@ -131,6 +131,7 @@ nav:
           - Vendita al banco: cassa/vendita-al-banco.md
           - Asporto e domicilio: cassa/asporto.md
           - Chiamate: cassa/chiamate.md
+          - Ordini dal kiosk: cassa/ordini-kiosk.md
           - Prenotazioni: cassa/prenotazioni.md
           - Messaggi: cassa/messaggi.md
       - Fatture: cassa/fatture.md
@@ -142,6 +143,7 @@ nav:
       - Tabelle di base: cassa/tabelle-di-base.md
       - Menu: cassa/menu.md
       - Self order: cassa/self-order.md
+      - Kiosk: cassa/kiosk.md
       - Articoli: cassa/articoli.md
       - Modificatori: cassa/modificatori.md
       - Varianti: cassa/varianti-anagrafica.md

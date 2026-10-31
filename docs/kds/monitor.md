@@ -244,8 +244,8 @@ Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
   kiosk, già incassato, sono consegnati qui, il suo numero sparisce subito dal monitor in sala (vedi
   [Chiamate](../cassa/chiamate.md)). Toccare «consegnato» subito dopo «pronto» lascia il numero
   sulla TV solo pochi secondi: per questi ordini segna consegnato quando il cliente ha ritirato.
-  Quando invece li consegna il banco dalla schermata Chiamate, qui restano nella colonna PRONTO e
-  vanno tolti toccandoli.
+  Quando invece li consegna il banco dalla schermata Chiamate, i piatti già pronti escono da soli
+  dalla colonna PRONTO; quelli non ancora pronti restano qui, da preparare.
 - Quando la cucina segna pronto un piatto, sul [palmare](../palmare/comanda.md) lo stato della
   portata diventa «pronta» (o «2 pronti») e, se il cameriere ha acceso il richiamo, arriva una
   notifica sul telefono.

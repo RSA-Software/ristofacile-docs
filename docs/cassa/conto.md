@@ -97,6 +97,9 @@ tetto con l'abbuono.
 | **Pagato** | Somma degli importi scritti nei cinque metodi. |
 | **Residuo** | In rosso: quanto manca per coprire il totale. Finché c'è un residuo il conto non si incassa. |
 | **Resto** | In verde: quanto rendere al cliente. |
+| **Già pagato al kiosk** / **Già pagato dal telefono** / **Già pagato dal telefono e al kiosk** | In azzurro, sotto il **Totale**: quanto il cliente ha già pagato al kiosk o dal telefono ([self order](self-order.md)). Conta nel **Pagato** e lo scontrino lo riporta. |
+| **Da verificare al kiosk: decidi da «Ordini dal kiosk»** | In ambra: un pagamento del kiosk di cui non si sa se è entrato. Finché non lo decidi da [Ordini dal kiosk](ordini-kiosk.md) il conto non si incassa. |
+| **Da rimborsare al cliente (pagato al kiosk)** | Al posto di **Resto**, quando il conto è sceso sotto quello che il cliente ha pagato al kiosk (per esempio dopo uno storno): la differenza va resa al cliente. |
 | **Cassa automatica** | Spunta presente solo se su questa postazione è stata scelta una cassa automatica. È accesa all'apertura del conto; spegnila quando il cliente paga al banco a mano o la macchina è in rifornimento. Sotto, la nota dice cosa farà la macchina: **Contanti e carta**, **Solo contanti** oppure **Spenta**. |
 | **Documento** | La scelta del documento: **Scontrino** (proposto all'apertura) o **Fattura**. Con l'hotel collegato compare anche **Camera** (e la scritta **Documento** sparisce per fare posto). |
 | **Scegli il cliente** | Compare solo con **Fattura**: tocca per scegliere o aggiungere il cliente a cui intestarla. Una volta scelto mostra nome, partita IVA o codice fiscale, recapito e, se prevista, *copia a* indirizzo email. |
@@ -196,7 +199,9 @@ ricorda solo **questa** postazione.
 
 !!! warning "Carta già addebitata"
     Quando un messaggio dice che la carta è GIÀ stata addebitata, non farla ripassare: risolvi il
-    problema della stampante e tocca di nuovo il pulsante (**STAMPA SCONTRINO**).
+    problema della stampante e tocca di nuovo il pulsante (**STAMPA SCONTRINO**). Quando invece il
+    conto non potrà mai registrare quella carta (per esempio è già pagato al kiosk), la cassa lo
+    dice con la domanda [Carta da stornare](#carta-da-stornare).
 
 ### Incassare con la cassa automatica
 
@@ -273,6 +278,87 @@ trattenuto e conferma: da quel momento la cassa non li conta più come incassati
     Il conto va finito **da questa cassa**: chiudendolo dal palmare o da un'altra cassa, il
     cliente pagherebbe di nuovo. Per lo stesso motivo, con un trattenuto il conto non si divide
     e non si addebita in camera. Uscendo dal conto la cassa lo ricorda con un avviso.
+
+### Incassare un ordine del kiosk
+
+Gli ordini del kiosk si aprono da [Ordini dal kiosk](ordini-kiosk.md) con **Apri**, poi **CONTO**
+dalla comanda.
+
+![Conto di un ordine già pagato al kiosk](../assets/img/cassa/conto-kiosk.png)
+
+- **Niente coperto né servizio**, qualunque sia la sala. Se il conto se ne accorge dopo averli
+  mostrati, lo dice: *Il conto e' cambiato (e' un ordine del kiosk: niente servizio ne' coperto):
+  ricontrolla il totale, ora € …, e premi di nuovo.*
+- **Righe da pesare**: con un articolo **DA PESARE** il conto non si apre e si torna alla comanda
+  (vedi [Comanda](comanda.md#un-ordine-del-kiosk-con-gli-articoli-a-peso)).
+- **«Paga alla cassa»**: si incassa come un conto qualunque. Con l'invio in cucina **dopo**, le
+  righe partono per la cucina al primo **INCASSA E STAMPA**, anche se poi la stampante fiscale non
+  risponde e il conto resta aperto.
+- **Pagato in parte al kiosk**: la riga **Già pagato al kiosk** è già scalata e il **Residuo** dice
+  quanto manca. Incassa solo il residuo: con carta, bancomat, buoni pasto o credito oltre il
+  residuo la cassa si ferma prima del POS (*Con € 5,00 già pagati dal telefono o dal kiosk i
+  pagamenti superano il conto di € 5,00: correggi gli importi (restano da incassare € 3,00). La
+  carta non è passata.*).
+- **Già pagato per intero al kiosk**: di solito lo scontrino si emette da Ordini dal kiosk con
+  **Emetti lo scontrino**. Se sei nel conto, lascia **vuoti** tutti gli importi e tocca **INCASSA E
+  STAMPA**: lo scontrino porta il pagamento del kiosk. Con un importo scritto a mano, anche in
+  contanti, la cassa **non** incassa e né il POS né la cassa automatica partono: *Il conto è già
+  pagato al kiosk: non incassare di nuovo. Svuota gli importi scritti (contanti, carta, bancomat…) e
+  premi di nuovo: lo scontrino porta il pagamento del kiosk.*
+- **Da verificare**: finché c'è la riga **Da verificare al kiosk**, **INCASSA E STAMPA** risponde
+  *C'è un pagamento del kiosk da verificare: decidi da «Ordini dal kiosk» se è entrato.*
+- **Solo scontrino o fattura**: con denaro del kiosk nel conto, **CHIUDI SENZA DOCUMENTO**, la
+  camera e la divisione del conto sono rifiutati, come per il [self order](self-order.md).
+- **Uno storno sotto il pagato al kiosk.** Se togli un piatto dopo che il cliente ha pagato al
+  kiosk e il totale scende sotto il pagato, al posto di **Resto** compare **Da rimborsare al
+  cliente (pagato al kiosk)**. Lascia vuoti gli importi e tocca **INCASSA E STAMPA**: lo scontrino
+  porta il totale nuovo, e la parte in più del pagamento va a rimborso con l'avviso 💶 *Rimborso di
+  € …, ordine … (kiosk …): pagati al kiosk (…) e rimasti fuori dallo scontrino. Rimborsa il
+  cliente.* L'avviso nasce già al primo **INCASSA E STAMPA**, anche se lo scontrino poi non esce:
+  il rimborso si fa una volta sola.
+
+### Carta da stornare
+
+La carta è passata sul POS di **questa** cassa, ma il conto non la può più registrare:
+
+- il conto risulta già pagato al kiosk (il pagamento del kiosk è arrivato mentre il POS
+  addebitava), oppure il servizio rifiuta gli importi in un modo che ripetere non cambia: pagamenti
+  oltre il conto, acconti che non coprono, un pagamento da verificare, niente da incassare;
+- oppure il conto l'ha chiuso un altro mentre il POS addebitava: un'altra cassa, il palmare,
+  **Annulla e rimborsa**, il pagamento del kiosk.
+
+![Carta da stornare](../assets/img/cassa/conto-carta-da-stornare.png)
+
+La cassa non dice di ripetere **STAMPA SCONTRINO**: chiede **Carta da stornare**, con il motivo,
+l'importo e lo STAN dell'operazione, e due risposte.
+
+1. Annulla l'operazione **sul terminale POS** (storno), oppure rimborsa il cliente: la cassa non
+   storna da sola, registra solo che l'hai fatto.
+2. Tocca **Stornata sul POS**. Con il conto ancora aperto la carta esce dal conto e i suoi importi
+   si svuotano: *Carta stornata (€ …): tolta dal conto. Controlla gli importi e premi …*. Puoi
+   incassare la differenza in un altro modo.
+3. Se adesso non puoi, tocca **Guardo dopo**: la carta entra nell'elenco delle **carte da stornare**
+   di questa cassa. Rientrando nel conto, **INCASSA** rifà la stessa domanda.
+
+![La carta da stornare ricordata sulla mappa](../assets/img/cassa/conto-carta-da-stornare-mappa.png)
+
+Finché non tocchi **Stornata sul POS**, la [mappa della sala](mappa-sala.md) e la
+[vendita al banco](vendita-al-banco.md), ogni volta che compaiono, ricordano le carte dell'elenco,
+una alla volta (*La carta e' stata addebitata da questa cassa per € … (STAN …) il …, e non e' in
+nessuno scontrino: annulla l'operazione sul POS (storno) o rimborsa il cliente.*). Con **Guardo
+dopo** la stessa carta torna dopo 10 minuti. Al banco il promemoria compare solo se il banco si
+apre con il servizio raggiungibile; una postazione che resta su Ordini dal kiosk lo vede tornando
+sulla mappa. Se il conto poi si chiude da qui con uno scontrino o
+una fattura che contengono la carta, la carta esce dall'elenco da sola; con **CHIUDI SENZA
+DOCUMENTO** o con l'addebito in camera no.
+
+!!! warning "La carta da stornare la conosce solo questa cassa"
+    L'elenco delle carte da stornare, come la carta addebitata su un conto aperto, sta solo sulla
+    postazione che ha addebitato: il palmare e le altre casse non lo vedono, e **reinstallare l'app
+    lo cancella**. L'elenco non scade; la carta addebitata su un conto aperto si ricorda per sette
+    giorni. Uscendo da un conto con la carta addebitata e non chiusa la cassa avvisa: *La carta e'
+    gia' stata addebitata per € … su questo conto, che resta aperto: rientra nel conto da questa
+    cassa per chiuderlo (o per dire che l'hai stornata). Il palmare e le altre casse non lo sanno.*
 
 ### Emettere la fattura
 
@@ -373,6 +459,17 @@ tavolo come «preconto» sulla mappa della sala.
 | *Sconto non registrato sulla comanda: l'incasso prosegue con l'importo mostrato.* | Il servizio non ha salvato lo sconto. | L'incasso prosegue; verifica poi lo sconto nello Storico. |
 | *Stampa della copia di cortesia fallita.* / *La fattura e' stata emessa ma non si e' potuta aprire a schermo.* | Problema di stampa o di visualizzazione dopo l'emissione. | La fattura è emessa: ristampala o aprila dalla schermata [Fatture](fatture.md). |
 | *Impossibile caricare il conto.* / *Impossibile chiudere il conto.* | Il servizio non risponde o ha dato errore. | Controlla la connessione e riprova. |
+| *Il conto è già pagato al kiosk: non incassare di nuovo. Svuota gli importi scritti (contanti, carta, bancomat…) e premi di nuovo: lo scontrino porta il pagamento del kiosk.* | Hai scritto un importo su un conto che il cliente ha già pagato per intero al kiosk. Né il POS né la cassa automatica sono partiti (*La carta non è passata.*). | Svuota gli importi e tocca di nuovo **INCASSA E STAMPA**. |
+| *Con € … già pagati dal telefono o dal kiosk i pagamenti superano il conto di € …: correggi gli importi (restano da incassare € …).* | Carta, bancomat, buoni pasto o credito oltre quello che resta da pagare. | Scrivi solo quello che resta. |
+| *C'è un pagamento del kiosk da verificare: decidi da «Ordini dal kiosk» se è entrato.* | Sul conto c'è denaro del kiosk da verificare. | Decidi da [Ordini dal kiosk](ordini-kiosk.md#decidere-un-pagamento-da-verificare). |
+| *Su questo tavolo c'e' un pagamento dal telefono o dal kiosk: il conto si chiude con lo scontrino o la fattura, non senza documento, in camera o diviso.* | **CHIUDI SENZA DOCUMENTO**, **Camera** o **Dividi** su un conto con pagamenti del telefono o del kiosk. | Chiudi con **Scontrino** o **Fattura**. Un ordine pagato al kiosk si annulla solo con **Annulla e rimborsa**. |
+| *Non riesco a sapere dal servizio se il tavolo ha pagato dal telefono o dal kiosk: riprova fra un attimo.* / *Non riesco a sapere dal servizio se questo e' un ordine del kiosk: riprova fra un attimo.* | Il servizio non ha risposto. | Riprova fra un attimo. |
+| *Il conto e' cambiato (e' un ordine del kiosk: niente servizio ne' coperto): ricontrolla il totale, ora € …, e premi di nuovo.* | Il conto ha scoperto solo adesso che è un ordine del kiosk. | Ricontrolla il totale e tocca di nuovo il pulsante. |
+| *Ci sono articoli a peso da pesare: conferma i pesi prima di incassare.* | Ordine del kiosk con righe **DA PESARE**: la cassa torna alla comanda. | Pesa le righe (vedi [Comanda](comanda.md#un-ordine-del-kiosk-con-gli-articoli-a-peso)). |
+| **Carta da stornare** — *… La carta e' GIA' stata addebitata per € … (STAN …): questo conto non la puo' registrare, e ripetere STAMPA SCONTRINO non serve. …* | La carta è passata, ma il conto non la può registrare (per esempio è già pagato al kiosk). | Storna sul POS o rimborsa, poi **Stornata sul POS**; altrimenti **Guardo dopo**. Vedi [Carta da stornare](#carta-da-stornare). |
+| **Carta da stornare** — *… La carta e' GIA' stata addebitata qui per € … (STAN …), ma il conto l'ha chiuso un altro senza di lei: …* | Il conto è stato chiuso altrove mentre il POS addebitava. | Storna sul POS o rimborsa, poi **Stornata sul POS**: finché non lo fai, la mappa te lo ricorda. |
+| *Carta da stornare: € … addebitati su questo conto (STAN …). Il conto non si chiude con lei: stornala sul POS, poi premi …* | Hai risposto **Guardo dopo**. | Storna la carta, poi tocca il pulsante dell'incasso e rispondi **Stornata sul POS**. |
+| *La carta e' gia' stata addebitata per € … su questo conto, che resta aperto: rientra nel conto da questa cassa per chiuderlo (o per dire che l'hai stornata). Il palmare e le altre casse non lo sanno.* | Esci dal conto con una carta addebitata e non chiusa. | Rientra nel conto da questa cassa. |
 
 ## Note
 
@@ -380,7 +477,7 @@ tavolo come «preconto» sulla mappa della sala.
 - **Dopo la chiusura.** Con lo scontrino, la chiusura senza documento o l'addebito in camera: la comanda viene chiusa, il tavolo si libera (se non ha altre comande aperte), gli eventuali tavoli uniti tornano separati e torni alla mappa della sala (o all'elenco dell'asporto, se avevi aperto la comanda da lì). Un ordine d'asporto passa a «consegnato»; un ordine a domicilio no: la consegna la segna chi la fa.
 - **Incasso di una parte del conto.** Se dopo l'incasso il tavolo ha ancora voci da pagare, si torna alla [divisione](dividi-conto.md); quando l'ultimo conto è incassato la comanda si chiude e si torna alla mappa della sala.
 - **Due postazioni sullo stesso tavolo.** Finché stai incassando, la cassa non aggiorna il conto con le modifiche fatte altrove (un totale che cambia sotto un contante già contato è peggio di uno vecchio). Se non hai ancora cominciato, il conto si aggiorna da solo.
-- **Ricordo dell'incasso in corso.** Carta già addebitata, incasso della cassa automatica e denaro trattenuto restano ricordati per sette giorni, **solo sulla postazione** che li ha fatti, finché il conto non si chiude.
+- **Ricordo dell'incasso in corso.** Carta già addebitata, incasso della cassa automatica e denaro trattenuto restano ricordati per sette giorni, **solo sulla postazione** che li ha fatti, finché il conto non si chiude. Le [carte da stornare](#carta-da-stornare) restano finché non tocchi **Stornata sul POS**. Reinstallando l'app si perdono tutti.
 - **Buttare un conto con un trattenuto.** Prima di **Butta via** al banco, di rifiutare o segnare non ritirato un asporto e di liberare un tavolo, se la macchina ha trattenuto soldi su quel conto la cassa chiede: *La macchina ha trattenuto € Y su questo conto: restituiscili al cliente prima di proseguire.* Con **Annulla** non si cancella niente.
 - **Licenza dimostrativa.** Durante un incasso la finestra della versione dimostrativa non compare: viene rimandata a dopo.
 - **Conti documentati dallo Storico.** Aprendo il conto dallo [Storico conti](storico-conti.md) per emettere lo scontrino di un conto chiuso senza documento, si sceglie solo fra **Scontrino** e **Fattura**: terminale POS, cassa automatica, **Camera** e **CHIUDI SENZA DOCUMENTO** non entrano in gioco, perché i soldi sono già stati incassati. <!-- DA VERIFICARE: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto? -->
@@ -396,3 +493,4 @@ tavolo come «preconto» sulla mappa della sala.
 - [Impostazioni](impostazioni.md)
 - [Conto sul palmare](../palmare/conto.md)
 - [Self order](self-order.md)
+- [Ordini dal kiosk](ordini-kiosk.md)

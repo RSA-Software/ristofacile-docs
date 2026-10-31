@@ -188,6 +188,7 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 | *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | L'ordine è stato rifiutato, ma la sua comanda non si è eliminata. | <!-- DA VERIFICARE: come si recupera la comanda rimasta aperta sul tavolo dell'asporto? --> |
 | *Nessun operatore collegato: per annullare un ordine serve un operatore abilitato.* | **Rifiuta** / **Non ritirato** senza operatore collegato. | Collegati con un operatore abilitato. |
 | *… non e' abilitato a annullare un ordine. Il permesso si da' in Impostazioni -> Operatori.* | L'operatore collegato non ha il permesso di annullare. | Fai dare il permesso in [Operatori](operatori.md) o usa un operatore abilitato. |
+| *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | **Ritirato** su un asporto seguito dalle [Chiamate](chiamate.md) che non è ancora incassato. L'ordine resta in coda. | Tocca **Apri comanda**, incassa dal conto, poi segna il ritiro. |
 | *Operazione riuscita, ma lo stato dell'ordine d'asporto non si e' aggiornato.* | Compare nella comanda o nel conto: l'invio in cucina o l'incasso sono andati a buon fine, ma lo stato in coda no. | Aggiorna lo stato a mano dalla coda. |
 
 ## Note
@@ -207,7 +208,12 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
   [Chiamate](chiamate.md) e sul monitor in sala. Un asporto pagato **prima** che sia pronto non
   diventa *Ritirato* alla chiusura del conto: resta in coda *In produzione*, poi diventa *Pronto*, e
   il ritiro si segna da Chiamate con **Consegnato** o da qui con **Ritirato**. Se la cucina segna
-  consegnati i suoi piatti sul monitor di cucina, l'ordine diventa consegnato da solo.
+  consegnati i suoi piatti sul monitor di cucina, l'ordine diventa consegnato da solo. Con le
+  chiamate accese **un asporto si incassa prima di segnarlo ritirato**: su un ordine non ancora
+  incassato **Ritirato** risponde *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo
+  consegnato.* e l'ordine resta in coda. L'interruttore delle chiamate per gli asporti della cassa
+  sta in Menu ▸ [Kiosk](kiosk.md#linguetta-monitor) ▸ **Monitor**.
+- **Gli ordini del kiosk** non sono in questa coda: stanno in [Ordini dal kiosk](ordini-kiosk.md).
 - L'ora del nuovo ordine vale sempre per **oggi**: non si prende dalla cassa un ordine per un
   altro giorno.
 - Le vendite al banco usano lo stesso tavolo dell'asporto ma qui non compaiono: stanno in
@@ -222,6 +228,7 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 - [Conto](conto.md)
 - [Vendita al banco](vendita-al-banco.md)
 - [Chiamate](chiamate.md)
+- [Ordini dal kiosk](ordini-kiosk.md)
 - [Impostazioni](impostazioni.md)
 - [Operatori](operatori.md)
 - [Ordini sul palmare](../palmare/ordini.md)

@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-30 — **74 domande** su 37 pagine.
+Aggiornato al 2026-10-31 — **69 domande** su 36 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -45,24 +45,18 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 71: dal codice, gli articoli che puntano a un centro spento escono comunque sulla stampante comande della postazione con intestazione CUCINA. È il comportamento voluto?
 
-## Chiamate
-
-`docs/cassa/chiamate.md`
-
-- [ ] riga 62: quando la cassa avra' la schermata della configurazione dei kiosk, scrivere qui il percorso e le etichette esatte dei due campi (minuti dei numeri pronti sul monitor, chiamate anche per gli asporti della cassa).
-
 ## Comanda
 
 `docs/cassa/comanda.md`
 
-- [ ] riga 260: in questa schermata il pulsante IMPORTO LIBERO non compare mai (la modalita' banco viene attivata solo da una pagina che la cassa non usa piu'). Va documentato qui o solo in Vendita al banco?
+- [ ] riga 295: in questa schermata il pulsante IMPORTO LIBERO non compare mai (la modalita' banco viene attivata solo da una pagina che la cassa non usa piu'). Va documentato qui o solo in Vendita al banco?
 
 ## Conto
 
 `docs/cassa/conto.md`
 
 - [ ] riga 95: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
-- [ ] riga 386: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
+- [ ] riga 483: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Disponibilità
 
@@ -101,7 +95,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/mappa-sala.md`
 
-- [ ] riga 185: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
+- [ ] riga 213: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
 
 ## Menu online
 
@@ -117,7 +111,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/menu.md`
 
 - [ ] riga 88: nel codice di cassa e servizio questi due indicatori sono solo salvati, non tolgono coperto o servizio dal conto.
-- [ ] riga 196: dove si impostano giorni, orari e minimo di persone del menu (gestionale?). Il minimo di persone non risulta applicato in Comanda.
+- [ ] riga 208: dove si impostano giorni, orari e minimo di persone del menu (gestionale?). Il minimo di persone non risulta applicato in Comanda.
 
 ## Messaggi alla cucina
 
@@ -223,24 +217,20 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kiosk/configurazione.md`
 
-- [ ] riga 129: quando la cassa avra' la schermata della configurazione dei kiosk (Piano 8), scrivere qui il percorso e le etichette esatte.
-- [ ] riga 233: c'e' un modo di registrare la termica del kiosk dalla cassa senza passare dalla stampante preconto di una cassa (passi 2-3)?
-- [ ] riga 299: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
+- [ ] riga 301: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
 
 ## Installazione del kiosk
 
 `docs/kiosk/installazione.md`
 
 - [ ] riga 41: con quale pacchetto si installa RistoKiosk su Windows e su Android (installatore in preparazione, Piano 9).
-- [ ] riga 106: l'Accesso assegnato di Windows accetta RistoKiosk come app del chiosco (e' un programma classico, non un'app dello Store), o serve lo Shell Launcher / una configurazione a piu' app? Scrivere i passi esatti per Windows 10 e 11 Pro.
-- [ ] riga 159: prima dell'aggiornamento della cassa (Piano 8), chi e come chiude un ordine di prova del kiosk rimasto aperto (oggi solo con la rotta del servizio, come nel collaudo).
+- [ ] riga 107: l'Accesso assegnato di Windows accetta RistoKiosk come app del chiosco (e' un programma classico, non un'app dello Store), o serve lo Shell Launcher / una configurazione a piu' app? Scrivere i passi esatti per Windows 10 e 11 Pro.
 
 ## Pagamenti, per il personale
 
 `docs/kiosk/pagamenti.md`
 
-- [ ] riga 149: prima dell'aggiornamento della cassa (Piano 8), come chiude il personale il conto di un ordine del kiosk da verificare, con lo scontrino da emettere o da pagare alla cassa? Oggi lo si e' fatto solo dalla rotta del servizio (collaudo).
-- [ ] riga 255: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
+- [ ] riga 269: comportamento sul terminale ECR17 vero (pagato, rifiutato, risposta persa col cavo staccato, kiosk spento durante il PIN): la prova sul POS reale non e' ancora stata fatta; i casi di questa pagina sono stati provati con un POS finto e con casse automatiche finte.
 
 ## Accesso
 
@@ -266,4 +256,4 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/palmare/sala.md`
 
 - [ ] riga 88: lo stato "Prenotato" di un tavolo (tessera tutta azzurra) da chi viene impostato? Dal codice la prenotazione in arrivo si vede solo con l'ora e la banda azzurra a destra.
-- [ ] riga 182: come si scioglie un'unione dal palmare (riportare libero un tavolo "Unito a")? Dal codice sembra possibile con Separa dal tavolo principale verso il tavolo unito, ma va provato.
+- [ ] riga 183: come si scioglie un'unione dal palmare (riportare libero un tavolo "Unito a")? Dal codice sembra possibile con Separa dal tavolo principale verso il tavolo unito, ma va provato.

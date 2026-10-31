@@ -51,8 +51,10 @@ tastierini disegnati.
 
 **Tocca per ordinare**, i tasti delle lingue con il nome della lingua nella lingua stessa
 (**Italiano**, **English**, **Deutsch**, **Français**, **Español**: quelle tradotte nel menu) e
-**Accessibilità**. Sopra scorrono le foto dei piatti consigliati e delle sezioni del menu; senza
-foto c'è il nome del locale. In basso a destra il numero del kiosk (*Kiosk n. 1*, con *· demo* in
+**Accessibilità**. Sopra scorrono, una ogni 6 secondi, le **immagini dell'attesa** scelte in cassa
+(Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa**); senza, le foto dei piatti
+consigliati e delle sezioni del menu. In alto c'è il **logo**, se è stato scelto, altrimenti il nome
+del locale. In basso a destra il numero del kiosk (*Kiosk n. 1*, con *· demo* in
 modalità dimostrativa). Un tocco in qualunque punto comincia l'ordine; un tocco su una lingua lo
 comincia in quella lingua.
 
@@ -138,7 +140,8 @@ sceglie i piatti di ogni sezione e va avanti con **Continua**; all'ultima sezion
 ![Suggerimenti](../assets/img/kiosk/percorso-suggerimenti.png)
 
 Dopo che un piatto entra nel carrello, il kiosk propone fino a **quattro** abbinamenti: *Con
-ESPLOSIVA ti consigliamo…*. Prima gli abbinamenti scelti per quel piatto nel menu, altrimenti i
+ESPLOSIVA ti consigliamo…*. Prima gli abbinamenti scelti per quel piatto in cassa (Menu ▸
+[Kiosk](../cassa/kiosk.md#linguetta-suggerimenti) ▸ **Suggerimenti**), altrimenti i
 piatti consigliati delle categorie che nel carrello non ci sono ancora (per esempio una bibita e un
 dolce). Un tocco su una tessera la aggiunge (con la spunta), oppure apre il piatto se ha scelte
 obbligatorie. Il tasto in fondo dice **No, grazie** finché non si è aggiunto niente, poi
@@ -227,7 +230,8 @@ monitor di cucina. Sotto, che cosa fare:
 Con **Pago alla cassa** la termica stampa il **promemoria**: «ORDINE DAL KIOSK», il numero in
 grande, *Porta via* o *Segnaposto 12*, le righe (con *circa* per gli articoli a peso), il totale,
 un codice QR e *Vai alla cassa per pagare entro 30 minuti* (i minuti sono quelli della scadenza
-impostata sul servizio: nella schermata sopra, di prova, 1 minuto). Mentre stampa la vista dice *Un
+impostata in cassa: nella schermata sopra, di prova, 1 minuto). In cassa il promemoria si passa
+sotto il lettore per ritrovare l'ordine (vedi [Ordini dal kiosk](../cassa/ordini-kiosk.md)). Mentre stampa la vista dice *Un
 momento…*. La vista si chiude da sola dopo **10 secondi**, o con un tocco, e il kiosk torna
 all'attesa pronto per il cliente dopo.
 
@@ -293,7 +297,10 @@ carta.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| *Kiosk momentaneamente chiuso: ordina alla cassa* | Kiosk spenti o in pausa, o servizio irraggiungibile. | Accendi i kiosk o togli la pausa (assistenza); controlla che il servizio sia acceso. Il kiosk riprova da solo. |
+| *Kiosk momentaneamente chiuso: ordina alla cassa* | Kiosk spenti o in pausa, o servizio irraggiungibile. | Accendi i kiosk o togli la pausa dalla cassa, Menu ▸ [Kiosk](../cassa/kiosk.md); controlla che il servizio sia acceso. Il kiosk riprova da solo. |
+| *Questo ordine si paga alla cassa.* | La cassa ha preso l'ordine con **Prendi in cassa** mentre il cliente era ancora al kiosk. | Il cliente paga alla cassa: l'ordine è in [Ordini dal kiosk](../cassa/ordini-kiosk.md). |
+| *Il tuo ordine è già in cucina: per cambiarlo rivolgiti alla cassa.* | Il cliente ha cambiato un ordine «paga alla cassa» già partito per la cucina (con l'invio **subito**, sempre). Il kiosk mostra il numero del primo ordine e non ne manda un secondo. | Il cliente va alla cassa con quel numero. |
+| *Il tuo ordine è passato alla cassa: per cambiarlo rivolgiti lì.* | Il cliente ha cambiato un ordine che la cassa aveva già preso. | Il cliente va alla cassa. |
 | *Kiosk non attivo, ordina alla cassa* | La licenza del kiosk non c'è. | Attivala dalla [Configurazione](configurazione.md). |
 | *Kiosk da configurare: chiama il personale.* | Il kiosk non è collegato a nessun servizio. | Apri la configurazione e collega il servizio. |
 | *Le credenziali del servizio non sono valide: chiama il personale.* | Utente o password del kiosk rifiutati. | Correggili in configurazione. |
@@ -327,8 +334,13 @@ Gli esiti che chiedono il personale (*Pagamento da verificare: chiama il persona
 - **Gli ordini del kiosk** stanno sul tavolo virtuale dei kiosk, con il numero del giorno. In cucina
   il titolo è «Ordine 27 · Porta via» o «Ordine 27 · Segnaposto 12» (vedi
   [Monitor di cucina](../kds/monitor.md#gli-ordini-da-asporto-e-del-kiosk)).
-- **Il QR del promemoria** contiene il riferimento dell'ordine del kiosk: servirà alla cassa per
-  ritrovarlo con un lettore 2D, con un prossimo aggiornamento.
+- **Il QR del promemoria** contiene il riferimento dell'ordine del kiosk: in cassa, passato sotto
+  un lettore 2D, apre l'ordine in [Ordini dal kiosk](../cassa/ordini-kiosk.md).
+- **«Pago alla cassa» cambiato.** Se il cliente sceglie **Pago alla cassa**, l'invio non riceve
+  risposta e poi il cliente cambia idea (aggiunge un piatto, paga con la carta), il kiosk chiede al
+  servizio se il primo ordine è arrivato: se non c'è manda quello nuovo; se c'è e non è in cucina lo
+  annulla e manda quello nuovo; se è già in cucina mostra il suo numero con *Il tuo ordine è già in
+  cucina: per cambiarlo rivolgiti alla cassa.*
 
 ## Vedi anche
 

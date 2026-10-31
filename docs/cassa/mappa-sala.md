@@ -56,8 +56,9 @@ La schermata ha quattro zone.
   per ogni articolo che sta finendo (es. «Tiramisù: ultime 3 porzioni»), oppure il segno di spunta
   verde con «Nessun avviso · scorte a posto». In basso la **Legenda** dei colori.
 - **In basso, la barra dei comandi:** il gruppo **Sposta** / **Unisci** / **Separa** e i pulsanti
-  **Vendita al banco**, **Asporto e domicilio**, **Chiamate**, **Prenotazioni**, **Messaggi**.
-  **Chiamate** c'è solo quando i kiosk sono accesi e hanno la licenza. Quando uno fra
+  **Vendita al banco**, **Asporto e domicilio**, **Chiamate**, **Kiosk**, **Prenotazioni**,
+  **Messaggi**. **Chiamate** c'è solo quando i kiosk sono accesi e hanno la licenza; **Kiosk** solo
+  quando sono impostati i tavoli dei kiosk, e solo sulla cassa. Quando uno fra
   Sposta, Unisci e Separa è in corso, al posto dei pulsanti compaiono un riquadro arancione che dice
   cosa toccare adesso e il pulsante **Annulla**.
 
@@ -70,7 +71,8 @@ Ogni tessera mostra:
 - al centro, in azzurro, l'**ora della prenotazione** se il tavolo è prenotato per oggi; in questo
   caso anche il bordo destro della tessera diventa una banda azzurra;
 - sotto il numero la **descrizione del tavolo**, oppure il riquadro azzurro **Unito a 12** (il
-  tavolo fa parte del conto del 12) o **Asporto** (è il tavolo degli ordini d'asporto);
+  tavolo fa parte del conto del 12), **Asporto** (è il tavolo degli ordini d'asporto) o **Kiosk**
+  (è il tavolo virtuale degli ordini del kiosk: in basso dice «Ordini del kiosk»);
 - in basso, colorati come la barra, lo **stato e da quanto è aperto** il tavolo: es. «In cucina da
   25 min», «Occupato - appena aperto», «Preconto da 1h 40min». Sul tavolo dell'asporto al posto
   della durata c'è il numero di ordini in coda: «nessun ordine», «1 ordine», «3 ordini».
@@ -101,6 +103,8 @@ manda in cucina.
 | **Ora azzurra** (es. **20:30**) | Prenotazione confermata per oggi su quel tavolo, non ancora arrivata. Compare a partire dall'anticipo impostato (es. un'ora prima) e resta finché il cliente non viene segnato come arrivato. Con più prenotazioni sullo stesso tavolo si vede la più vicina. |
 | **Unito a N** | Il tavolo è unito al conto del tavolo N: non ha un conto suo. |
 | **Asporto** | È il tavolo virtuale degli ordini d'asporto e a domicilio. |
+| **Kiosk** · «Ordini del kiosk» | È un tavolo virtuale dei kiosk (quello di «mangio qui» o di «porto via», scelti in [Kiosk](kiosk.md)). Non mostra lo stato di un conto: gli ordini del kiosk sono tanti, e stanno in [Ordini dal kiosk](ordini-kiosk.md). Gli avvisi del kiosk non compaiono sulle tessere. |
+| **Kiosk · 3** (pulsante) | Il numero dice quanti ordini del kiosk chiedono qualcosa alla cassa adesso (da incassare, da verificare, scontrino da emettere…), senza contare quelli ancora in mano al cliente al kiosk. |
 | **Avvisi - Scorte in esaurimento** | Articoli sotto la soglia di avviso impostata in [Disponibilità](disponibilita.md), con le porzioni rimaste. |
 
 ## Pulsanti e comandi
@@ -115,6 +119,9 @@ manda in cucina.
 | **Vendita al banco** | Apre la [Vendita al banco](vendita-al-banco.md). |
 | **Asporto e domicilio** | Apre l'elenco degli ordini [Asporto e domicilio](asporto.md). |
 | **Chiamate** | Apre le [Chiamate](chiamate.md): i numeri degli ordini da ritirare al banco, in preparazione e pronti, e l'indirizzo del monitor in sala. C'è solo quando i kiosk sono accesi e hanno la licenza. |
+| **Kiosk** / **Kiosk · N** | Apre gli [Ordini dal kiosk](ordini-kiosk.md). |
+| **Tocco sul tavolo del kiosk** | Apre gli [Ordini dal kiosk](ordini-kiosk.md): non apre mai una comanda, nemmeno se il tavolo è anche quello dell'asporto. Sul palmare dice *Gli ordini del kiosk si gestiscono dalla cassa*. |
+| QR del promemoria del kiosk sotto il lettore | Apre gli [Ordini dal kiosk](ordini-kiosk.md) con quell'ordine in cima. Il lettore si ascolta anche durante Sposta, Unisci o Separa; al banco no. |
 | **Prenotazioni** | Apre le [Prenotazioni](prenotazioni.md). |
 | **Messaggi** | Apre i [Messaggi alla cucina](messaggi.md). |
 
@@ -155,12 +162,25 @@ manda in cucina.
 
 ![Righe da separare](../assets/img/cassa/mappa-sala-separa.png)
 
+### Ritrovare un ordine del kiosk
+
+![Il tavolo del kiosk sulla mappa](../assets/img/cassa/mappa-sala-kiosk.png)
+
+1. Il cliente arriva al banco con il promemoria del kiosk: passalo sotto il lettore, senza toccare
+   niente. In alternativa tocca **Kiosk** in basso, o la tessera **Kiosk** del tavolo dei kiosk.
+2. Si apre [Ordini dal kiosk](ordini-kiosk.md), con l'ordine del promemoria in cima.
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Il tavolo 13 e' unito al 12: si apre il conto del 12.* | Hai toccato un tavolo unito. | Nessuna azione: si apre il conto giusto. |
 | *Il tavolo 20 e' quello degli ordini d'asporto: sposta/unisci/separa non si applicano.* | Durante Sposta, Unisci o Separa hai toccato il tavolo dell'asporto. L'operazione viene annullata. | Gli ordini d'asporto si gestiscono da [Asporto e domicilio](asporto.md). |
+| *Il tavolo 1 e' quello degli ordini del kiosk: sposta, unisci e separa non si applicano.* | Durante Sposta, Unisci o Separa hai toccato un tavolo dei kiosk. L'operazione viene annullata. | Gli ordini del kiosk si gestiscono da [Ordini dal kiosk](ordini-kiosk.md). |
+| *Gli ordini del kiosk si gestiscono dalla cassa* | Sul palmare hai toccato il tavolo dei kiosk. | Usa la cassa. |
+| *Ordine del kiosk non trovato o già chiuso* | Hai passato sotto il lettore il promemoria di un ordine chiuso o che non c'è. | Nessuna azione: l'ordine è già incassato o annullato. |
+| *Ordine del kiosk non letto dal servizio.* | Il servizio non ha risposto alla lettura del promemoria. | Controlla il collegamento e passa di nuovo il promemoria. |
+| **Carta da stornare** — *…: conto chiuso altrove mentre il POS addebitava. La carta e' stata addebitata da questa cassa per € …* | Questa cassa ha addebitato una carta che non è finita in nessuno scontrino (vedi [Conto](conto.md#carta-da-stornare)). | Storna l'operazione sul POS o rimborsa il cliente, poi tocca **Stornata sul POS**; con **Guardo dopo** la domanda torna fra 10 minuti. |
 | *Il tavolo 13 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Unisci o Separa partendo da un tavolo unito. | Tocca il tavolo che tiene il conto. |
 | *Il tavolo 6 non ha un conto aperto.* | Unisci o Separa partendo da un tavolo senza conto. | Parti da un tavolo occupato. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Sposta partendo da un tavolo senza conto. | Parti da un tavolo occupato. |
@@ -179,6 +199,14 @@ manda in cucina.
   altri dispositivi. Se l'hai aperto per sbaglio, liberalo dalla Comanda con **LIBERA TAVOLO**.
 - La mappa si aggiorna da sola con le modifiche fatte da palmari e altre casse, ma non mentre è in
   corso Sposta, Unisci o Separa.
+- **I tavoli dei kiosk.** Se il tavolo di «mangio qui» o di «porto via» dei kiosk è anche il tavolo
+  dell'asporto di questa cassa, sulla mappa vince il kiosk: il tocco porta agli ordini del kiosk, e
+  la coda dell'asporto si apre solo da **Asporto e domicilio**. Gli ordini del kiosk non si
+  liberano e non si spostano dalla mappa: si incassano o si annullano da
+  [Ordini dal kiosk](ordini-kiosk.md).
+- **Le carte da stornare.** Ogni volta che la mappa compare, se questa cassa ha addebitato con il
+  POS una carta che non è finita in nessuno scontrino, la cassa lo ricorda con la domanda **Carta da
+  stornare**, una carta alla volta (vedi [Conto](conto.md#carta-da-stornare)).
 - La durata sulle tessere («da 25 min») è fotografata quando la mappa viene disegnata: si aggiorna
   al ricaricamento, non minuto per minuto.
 - Separando **solo i coperti**, senza nessuna riga, la finestra lo permette ma il servizio rifiuta
@@ -191,6 +219,7 @@ manda in cucina.
 - [Disponibilità](disponibilita.md)
 - [Asporto e domicilio](asporto.md)
 - [Chiamate](chiamate.md)
+- [Ordini dal kiosk](ordini-kiosk.md)
 - [Prenotazioni](prenotazioni.md)
 - [Vendita al banco](vendita-al-banco.md)
 - [Messaggi alla cucina](messaggi.md)

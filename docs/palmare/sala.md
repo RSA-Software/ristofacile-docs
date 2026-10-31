@@ -108,6 +108,7 @@ mappa si ricarica.
 | **Posti (es. 4p)** | I posti del tavolo, come impostati in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
 | **Unito a …** | Il tavolo fa parte di una tavolata: il conto sta sul tavolo indicato. |
 | **Asporto** | È il tavolo virtuale degli ordini d'asporto e a domicilio. |
+| **Kiosk** · «Ordini del kiosk» | È un tavolo virtuale dei kiosk: gli ordini del kiosk si gestiscono dalla cassa, in [Ordini dal kiosk](../cassa/ordini-kiosk.md). |
 | **Stato e durata** | Lo stato del tavolo con il tempo trascorso dall'apertura (es. «In corso da 40 min»). |
 | **Ora in azzurro** | Ora della prossima prenotazione confermata su quel tavolo, non ancora arrivata. |
 | **Legenda** | Il significato dei colori. |
@@ -193,6 +194,8 @@ mezza e mezza) le sue parti seguono il piatto.
 | **Tavolo libero** — *Vuoi occupare il tavolo 7?* | Hai toccato un tavolo libero. Aprendolo il tavolo risulta occupato. | **Occupa** per aprirlo, **Annulla** se era un tocco involontario. |
 | *Il tavolo 5 e' unito al 4: si apre il conto del 4.* | Hai toccato un tavolo unito. | Nessuna: lavori sul conto del tavolo principale. |
 | *Il tavolo 20 e' quello degli ordini d'asporto: sposta/unisci/separa non si applicano.* | Hai scelto il tavolo dell'asporto durante un'operazione. | Gli ordini d'asporto si gestiscono dagli [Ordini](ordini.md). |
+| *Gli ordini del kiosk si gestiscono dalla cassa* | Hai toccato il tavolo dei kiosk. | Usa la cassa ([Ordini dal kiosk](../cassa/ordini-kiosk.md)). |
+| *Il tavolo 1 e' quello degli ordini del kiosk: sposta, unisci e separa non si applicano.* | Hai scelto il tavolo dei kiosk durante un'operazione. | Gli ordini del kiosk si gestiscono dalla cassa. |
 | *Il tavolo 5 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Unione o separazione partendo da un tavolo unito. | Parti dal tavolo principale. |
 | *Il tavolo 7 non ha un conto aperto.* | Unione o separazione partendo da un tavolo libero. | Scegli un tavolo con un conto aperto. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Spostamento di un tavolo senza conto. | Scegli un tavolo aperto. |

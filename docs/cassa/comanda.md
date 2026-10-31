@@ -84,14 +84,21 @@ uscite, sotto compare lo stato in cucina e il pulsante **VIA** o **Trattieni**.
 
 Toccando una riga, la riga si apre sul posto: compaiono **−** quantità **+** e **DETTAGLI**. Sulle
 righe che non si possono più cambiare al posto di − e + c'è una scritta: «Gia' in cucina»,
-«Stornata» o «Il peso si cambia da DETTAGLI».
+«Stornata», «Il peso si cambia da DETTAGLI» o, su un articolo a peso di un ordine del kiosk,
+«Da pesare: il peso si conferma da DETTAGLI».
+
+![Una riga da pesare di un ordine del kiosk](../assets/img/cassa/comanda-da-pesare.png)
+
+Su un ordine del kiosk un articolo a peso porta sotto il nome, in ambra, **DA PESARE** con il peso
+indicativo scelto dal cliente: «DA PESARE · circa 0,2 kg», o «DA PESARE · 2 × circa 0,2 kg» per
+due porzioni.
 
 ## Campi e indicatori
 
 | Elemento | Descrizione |
 |---|---|
 | **Sala · Tavolo** | Il tavolo che stai lavorando. |
-| **Coperti** (es. **4 coperti**) | Numero di persone al tavolo. All'apertura vale i posti del tavolo. Si cambia con **−** e **+** nella pastiglia. Non scende sotto 1, né sotto i coperti già pagati, e non sale oltre i posti massimi del tavolo (più quelli dei tavoli uniti). |
+| **Coperti** (es. **4 coperti**) | Numero di persone al tavolo. All'apertura vale i posti del tavolo. Si cambia con **−** e **+** nella pastiglia. Non scende sotto 1, né sotto i coperti già pagati, e non sale oltre i posti massimi del tavolo (più quelli dei tavoli uniti). Su un ordine del kiosk la pastiglia non c'è: i coperti sono zero. |
 | **Conto unico** / **Conto 2** | Su quale conto finiscono i prossimi piatti. Vedi «Battere per conti separati». Accesa (un conto scelto) ha il bordo arancione. |
 | **aperto da …** | Da quanto è aperto il tavolo («aperto ora», «aperto da 25 min», «aperto da 1h 05m»). Si aggiorna da sola. |
 | **Non in linea** | Il servizio non ha risposto all'ultima operazione. Tocca la pastiglia per riprovare il collegamento; quando torna in linea sparisce. |
@@ -103,7 +110,8 @@ righe che non si possono più cambiare al posto di − e + c'è una scritta: «G
 | **Tessera della combinazione** | Nome della regola, numero di parti e regola di prezzo (es. «2 parti · Paghi la piu' cara»). Apre [Componi la pizza](mezza.md). Non compare durante una ricerca. |
 | **MENU INTERO** | Menu a prezzo fisso: apre la scelta di un piatto per sezione ([Menu fisso](menu-fisso.md)). |
 | **Coperti 4 × 2,00** | Riga informativa in fondo alla comanda: coperti per prezzo del coperto, con l'importo a destra. |
-| **Totale** | Totale del tavolo: righe non stornate (le offerte valgono zero) più i coperti, più l'eventuale percentuale di servizio della sala. Anche con un filtro sul conto attivo resta il totale di tutto il tavolo. |
+| **Totale** | Totale del tavolo: righe non stornate (le offerte valgono zero) più i coperti, più l'eventuale percentuale di servizio della sala. Anche con un filtro sul conto attivo resta il totale di tutto il tavolo. Su un ordine del kiosk niente coperti né servizio, qualunque sia la sala. |
+| **DA PESARE · circa 0,2 kg** | Articolo a peso di un ordine del kiosk, con il peso indicativo scelto dal cliente: va pesato prima del conto. |
 
 ## Pulsanti e comandi
 
@@ -136,6 +144,7 @@ offerto). La parte centrale è grigia e non si tocca quando la riga è già in c
 | **Modifica composizione** | Solo su una pizza composta non ancora inviata: riapre [Componi la pizza](mezza.md) con le parti già scelte. |
 | **QUANTITÀ** − / + | Come sulla riga aperta. Con la quantità a 1, il − toglie la riga. |
 | **CAMBIA PESO** | Al posto di − e + sulle righe a peso: riapre il tastierino del peso. |
+| **DA PESARE** · **CONFERMA IL PESO** | Su un articolo a peso di un ordine del kiosk, anche già in cucina: il peso indicativo («2 × circa 0,2 kg»), *Peso indicativo del kiosk: conferma quello vero prima del conto.* e il pulsante che apre il tastierino del peso. |
 | **Portata** | Elenco delle portate: sposta la riga in un'altra uscita. All'inserimento la riga prende la portata della sua sezione. |
 | **NOTA** | Testo libero per la cucina («Nota per la cucina…»). Si salva chiudendo la finestra. |
 | **Varianti** | Apre l'elenco delle varianti dell'articolo: si toccano per accenderle o spegnerle; per quelle che lo chiedono si sceglie l'intensità (es. «poco», «tanto · ×2»). I gruppi obbligatori sono segnati «obbligatoria». **Salva varianti** si accende solo se hai cambiato qualcosa. |
@@ -184,6 +193,21 @@ attesa del via». Le righe senza portata, e quelle delle portate segnate «parte
 2. Digita il peso **in grammi** (es. 350). Sotto vedi il peso in kg e l'importo.
 3. Tocca **CONFERMA**. La riga entra in comanda con il peso.
 
+### Un ordine del kiosk con gli articoli a peso
+
+Al kiosk il cliente sceglie un peso indicativo (per esempio due porzioni da circa 0,2 kg) e paga
+alla cassa: il prezzo vero si sa solo dopo la pesata.
+
+![Conferma del peso](../assets/img/cassa/comanda-conferma-peso.png)
+
+1. Apri l'ordine da [Ordini dal kiosk](ordini-kiosk.md) con **Apri**: la riga dice **DA PESARE**.
+2. Pesa il piatto quando è pronto.
+3. Tocca la riga, poi **DETTAGLI**.
+4. Tocca **CONFERMA IL PESO**: il tastierino parte dal peso indicativo, in grammi (es. 400).
+5. Scrivi il peso vero (es. 430) e tocca **CONFERMA**.
+6. La riga mostra il peso e il prezzo veri («0,430 kg · € 1,51») e il totale cambia. Ora **CONTO**
+   si apre.
+
 ### Battere per conti separati
 
 1. Tocca la pastiglia **Conto unico** in testata. Si apre «Su quale conto vanno i prossimi piatti?».
@@ -206,6 +230,9 @@ non si sposta. La divisione completa si fa da [Dividi conto](dividi-conto.md).
 3. Tocca **Vai al conto**. Si apre il [Conto](conto.md).
 
 ![Preconto](../assets/img/cassa/comanda-preconto.png)
+
+Sul preconto di un ordine del kiosk non ci sono coperti né servizio; se il cliente ha già pagato una
+parte al kiosk, sotto il **TOTALE** compaiono **Già pagato al kiosk** e **DA PAGARE**.
 
 ### Ristampare in cucina
 
@@ -236,6 +263,9 @@ non si sposta. La divisione completa si fa da [Dividi conto](dividi-conto.md).
 | *L'uscita Secondi e' gia' in lavorazione: non si puo' piu' trattenere.* | **Trattieni** su una portata che la cucina ha già preso in mano. | Nessuna azione. |
 | *Non c'e' niente da ristampare in cucina: nessuna riga inviata ha un centro di produzione.* | **Ristampa** senza righe destinate a una cucina. | Nessuna azione. |
 | *Stampante comande non configurata (Impostazioni).* | **Stampa** del preconto senza stampante. | Configura la stampante in [Impostazioni](impostazioni.md). |
+| *Ci sono articoli a peso da pesare: conferma i pesi prima di incassare.* | **CONTO** su un ordine del kiosk con righe **DA PESARE**. Compare anche dal conto, che riporta qui. | Pesa le righe con **DETTAGLI** ▸ **CONFERMA IL PESO**, poi tocca **CONTO**. |
+| *Non riesco a sapere dal servizio se questo e' un ordine del kiosk: riprova fra un attimo.* | Il servizio non ha risposto: senza saperlo, il preconto potrebbe portare coperto e servizio. | Riprova fra un attimo. |
+| *Non riesco a sapere dal servizio quanto e' gia' stato pagato al kiosk: riprova fra un attimo.* | Preconto di un ordine del kiosk senza risposta del servizio sui pagamenti. | Riprova fra un attimo. |
 | *Conto a zero* - *Non c'e' niente da incassare su questo tavolo. Vuoi chiuderlo e liberarlo senza emettere nessun documento?* | **CONTO** con il totale a zero. | **Chiudi tavolo** per liberarlo. Serve il permesso **Puo' chiudere il conto**. |
 | *Libera il tavolo* - *Su Sala Interna · Tavolo 12 non e' stato battuto niente. Vuoi liberarlo e tornare in sala?* | Conferma di LIBERA TAVOLO. | **Libera** per confermare. |
 | *Fine turno* - *Vuoi uscire? MARCO non firmera' piu' le comande su questo dispositivo, e per rientrare servira' il PIN.* | Tocco su **ESCI**. | **Esci** per confermare. |
@@ -254,6 +284,11 @@ non si sposta. La divisione completa si fa da [Dividi conto](dividi-conto.md).
 - Lo storno di un piatto già in cucina esce sul foglietto al successivo **INVIA IN CUCINA**. Al
   momento sul [Monitor di cucina](../kds/monitor.md) lo storno non compare: va avvisata la cucina.
 - Il preconto non è un documento fiscale e non chiude niente: il tavolo resta aperto.
+- **Gli ordini del kiosk** si aprono da [Ordini dal kiosk](ordini-kiosk.md), sempre sulla comanda
+  dell'ordine. Non hanno coperti né servizio, e non si liberano: si incassano, o si annullano da
+  Ordini dal kiosk. La carta di cucina, all'invio e alla ristampa, ha in testa
+  «Segnaposto 12 · Ordine 2» o «Porta via · Ordine 15», come quella che esce all'arrivo dell'ordine.
+  Il palmare non apre gli ordini del kiosk.
 - Se l'anagrafica articoli non risponde (triangolo giallo), le combinazioni come la pizza metà e
   metà non vengono proposte.
 - Nel riquadro dei piatti il pulsante **IMPORTO LIBERO** (riga a prezzo libero con aliquota IVA) è

@@ -20,7 +20,8 @@ che compare sul [monitor in sala](../cassa/chiamate.md#il-monitor-in-sala), nell
   **segnaposto** numerato e aspetta al tavolo: il vassoio gli viene portato lì. Chi porta via
   guarda il monitor in sala e ritira al banco quando il suo numero è pronto.
 - **Al personale**, che riceve l'ordine già in cucina e pagato; alla cassa arrivano solo gli avvisi
-  dei casi da sistemare (un pagamento da verificare, un resto da dare, uno scontrino da emettere).
+  dei casi da sistemare (un pagamento da verificare, un resto da dare, uno scontrino da emettere) e
+  gli ordini da incassare, tutti in [Ordini dal kiosk](../cassa/ordini-kiosk.md).
 
 ## Le tre configurazioni
 
@@ -33,8 +34,8 @@ queste tre:
 | **Scontrino con i piatti** | POS e/o rendiresto; la stampante fiscale è altrove nel locale | carta o contanti, al kiosk | esce sulla stampante fiscale del locale e arriva con i piatti: il cliente legge «Lo scontrino ti arriva con i piatti» |
 | **Si paga alla cassa** | nessuna periferica di pagamento (al più una stampante termica) | alla cassa | lo emette la cassa all'incasso |
 
-- Nelle prime due il kiosk **incassa**: per questo, sul servizio, al kiosk va assegnata una
-  stampante fiscale. Senza, il kiosk accetta solo «Pago alla cassa».
+- Nelle prime due il kiosk **incassa**: per questo, in cassa (Menu ▸ [Kiosk](../cassa/kiosk.md)),
+  al kiosk va assegnata una stampante fiscale. Senza, il kiosk accetta solo «Pago alla cassa».
 - Nella terza il kiosk stampa un **promemoria** con il numero e un codice QR, e il cliente va alla
   cassa a pagare. L'ordine va in cucina **subito** oppure **solo dopo l'incasso**, a scelta del
   locale (vedi [Configurazione](configurazione.md#le-impostazioni-del-servizio)).
@@ -46,11 +47,12 @@ queste tre:
 1. **Installazione**: il kiosk si installa come un'app e si blocca il sistema operativo perché il
    cliente non ne esca. Vedi [Installazione](installazione.md).
 2. **Configurazione**: con il PIN del kiosk si collega al servizio e si scelgono POS, rendiresto e
-   stampante; sul servizio si accendono i kiosk e si decide come lavorano. Vedi
-   [Configurazione](configurazione.md).
+   stampante; dalla cassa, voce [Kiosk](../cassa/kiosk.md), si accendono i kiosk e si decide come
+   lavorano. Vedi [Configurazione](configurazione.md).
 3. **Il cliente ordina**: nove schermate, dall'attesa al numero. Vedi
    [Percorso del cliente](percorso.md).
-4. **Il personale** interviene solo quando qualcosa non è andato liscio. Vedi
+4. **Il personale** incassa gli ordini «paga alla cassa» e interviene quando qualcosa non è andato
+   liscio. Vedi [Ordini dal kiosk](../cassa/ordini-kiosk.md) e
    [Pagamenti, per il personale](pagamenti.md).
 
 ## Licenza

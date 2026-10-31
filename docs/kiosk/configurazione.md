@@ -1,6 +1,6 @@
 ---
 title: Configurazione del kiosk
-description: "La configurazione del kiosk dietro il PIN - collegamento al servizio, numero, licenza, POS, rendiresto e stampante termica - e le impostazioni dei kiosk sul servizio: accensione, paga alla cassa, invio in cucina subito o dopo, segnaposto col QR."
+description: "La configurazione del kiosk dietro il PIN - collegamento al servizio, numero, licenza, POS, rendiresto e stampante termica - e le impostazioni di tutti i kiosk, che si cambiano dalla cassa: accensione, paga alla cassa, invio in cucina subito o dopo, segnaposto col QR."
 app: Kiosk
 percorso: "Attesa del kiosk ▸ tocco lungo di 3 secondi nell'angolo in alto a sinistra ▸ PIN"
 pagina: ConfigurazionePage, PinPage
@@ -11,7 +11,8 @@ pagina: ConfigurazionePage, PinPage
 La schermata del personale: si collega il kiosk al servizio del locale, gli si dà il suo numero, si
 attiva la licenza e si scelgono le periferiche (POS, rendiresto, stampante termica). Si apre solo
 con il **PIN del kiosk**, che non è il PIN degli operatori. In fondo a questa pagina ci sono anche
-le impostazioni che valgono per tutti i kiosk del locale e che stanno sul servizio.
+le impostazioni che valgono per tutti i kiosk del locale: stanno sul servizio e si cambiano dalla
+cassa, voce [Kiosk](../cassa/kiosk.md).
 
 !!! info "In sintesi"
 
@@ -36,8 +37,8 @@ ad accogliere i clienti.
 - Il POS, il rendiresto e la stampante termica di rete vanno prima **registrati sul servizio**
   dalla cassa, in [Impostazioni](../cassa/impostazioni.md) (**Pagamento con carta**,
   **Cassa automatica**, **Stampante preconto**): il kiosk li sceglie solo da quegli elenchi.
-- Il kiosk va **aggiunto alla configurazione dei kiosk sul servizio**, con il suo numero (vedi
-  [Le impostazioni del servizio](#le-impostazioni-del-servizio)).
+- Il kiosk va **aggiunto e associato in cassa**, voce [Kiosk](../cassa/kiosk.md), con il suo
+  numero (vedi [Le impostazioni del servizio](#le-impostazioni-del-servizio)).
 
 ## La schermata
 
@@ -124,25 +125,26 @@ Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qu
 ### Le impostazioni del servizio
 
 Alcune scelte valgono per **tutti i kiosk** del locale e stanno nella configurazione dei kiosk sul
-servizio. La cassa non ha ancora la schermata per cambiarle: per ora le imposta l'assistenza.
+servizio. Si cambiano dalla cassa, Menu ▸ **Kiosk**: le etichette esatte e i passi sono in
+[Kiosk](../cassa/kiosk.md).
 
-<!-- DA VERIFICARE: quando la cassa avra' la schermata della configurazione dei kiosk (Piano 8), scrivere qui il percorso e le etichette esatte. -->
-
-| Impostazione | Cosa decide |
-|---|---|
-| **Kiosk accesi** | Di partenza spenti. Spenti, i kiosk scrivono *Kiosk momentaneamente chiuso: ordina alla cassa*, e in cassa non ci sono né le [Chiamate](../cassa/chiamate.md) né il monitor in sala. |
-| **Pausa** | Ferma gli ordini su tutti i kiosk, che scrivono *Kiosk momentaneamente chiuso: ordina alla cassa*. |
-| **Menu** | Il menu che i kiosk mostrano: uno dei menu della cassa, oppure quello del sito. |
-| **Tavoli di «mangio qui» e «porto via»** | Il tavolo «virtuale» su cui finiscono gli ordini di chi mangia nel locale e di chi porta via (possono essere lo stesso). Il listino della loro sala decide i prezzi del kiosk. |
-| **Cameriere** | L'operatore a cui vanno le righe degli ordini del kiosk. |
-| **Paga alla cassa** | Accende «Pago alla cassa» fra i modi di pagamento. Un kiosk senza stampante fiscale paga sempre alla cassa, anche con questa spenta. |
-| **Invio in cucina** | Per gli ordini da pagare alla cassa: **subito** (alla conferma del cliente) oppure **dopo** (quando la cassa li incassa). Gli ordini pagati al kiosk vanno in cucina appena pagati. |
-| **Scadenza** | Dopo quanti minuti un ordine «paga alla cassa» non pagato si annulla da solo. Di partenza 30. Un ordine già mandato in cucina («subito») non si annulla: in cassa compare l'avviso *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* |
-| **Pesi** | I pesi proposti per gli articoli a peso. Di partenza 0,1 / 0,2 / 0,3 / 0,5 / 1 kg. |
-| **Colore** | Il colore principale del kiosk. |
-| **Minuti dei numeri pronti sul monitor**, **chiamate anche per gli asporti della cassa** | Vedi [Chiamate](../cassa/chiamate.md#prima-di-cominciare). |
-| **I kiosk** | Per ogni kiosk: il **numero** (1-99), una **descrizione** (compare nell'esito del collegamento), il **dispositivo** associato, la **stampante fiscale** dello scontrino (senza, il kiosk non incassa) e il **segnaposto col QR** (il kiosk legge il QR del segnaposto con il lettore). |
-| **Utenti dei kiosk** | I nomi degli utenti web dei kiosk: vedi [Installazione](installazione.md#lutente-web-del-kiosk). |
+| Impostazione | Dove, in cassa | Cosa decide |
+|---|---|---|
+| **Kiosk accesi** | Generale | Di partenza spenti. Spenti, i kiosk scrivono *Kiosk momentaneamente chiuso: ordina alla cassa*, e in cassa non ci sono né le [Chiamate](../cassa/chiamate.md) né il monitor in sala. |
+| **Pausa dei kiosk** | sopra le linguette | Ferma gli ordini su tutti i kiosk, che scrivono *Kiosk momentaneamente chiuso: ordina alla cassa*. La mette qualunque cassiere. |
+| **Menu dei kiosk** | Generale | Il menu che i kiosk mostrano: uno dei menu della cassa, oppure **Menu del sito**. |
+| **Tavolo virtuale per «mangio qui»** e **per «porto via»** | Generale | Il tavolo su cui finiscono gli ordini di chi mangia nel locale e di chi porta via (possono essere lo stesso). Il listino della loro sala decide i prezzi del kiosk. |
+| **Cameriere delle righe del kiosk** | Generale | L'operatore a cui vanno le righe degli ordini del kiosk. |
+| **«Paga alla cassa»** | Generale | Accende «Pago alla cassa» fra i modi di pagamento. Un kiosk senza stampante fiscale paga sempre alla cassa, anche con questa spenta. |
+| **Quando gli ordini «paga alla cassa» vanno in cucina** | Generale | **Subito, alla conferma dell'ordine** oppure **Dopo, quando l'ordine si incassa in cassa**. Gli ordini pagati al kiosk vanno in cucina appena pagati. |
+| **Minuti di scadenza** | Generale | Dopo quanti minuti un ordine «paga alla cassa» non pagato si annulla da solo. Di partenza 30. Un ordine già mandato in cucina («subito») non si annulla: in cassa compare l'avviso *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* |
+| **Pesi indicativi (kg)** | Generale | I pesi proposti per gli articoli a peso. Di partenza 0,1 / 0,2 / 0,3 / 0,5 / 1 kg. |
+| I kiosk: **NUMERO**, **DESCRIZIONE**, **DISPOSITIVO**, **STAMPANTE FISCALE**, **QR del segnaposto** | Kiosk | Per ogni kiosk: il numero (1-99), una descrizione (compare nell'esito del collegamento), il dispositivo associato, la stampante fiscale dello scontrino (senza, il kiosk non incassa) e il segnaposto col QR (il kiosk legge il QR del segnaposto con il lettore). |
+| **Utenti web dei kiosk** | Kiosk | I nomi degli utenti web dei kiosk: vedi [Installazione](installazione.md#lutente-web-del-kiosk). |
+| **Termiche dei kiosk** | Kiosk | Le termiche di rete dell'impianto, fra cui il kiosk sceglie la sua. |
+| **Immagini dell'attesa**, **Logo**, **Colore del locale** | Attesa | Le immagini che scorrono sull'attesa, il logo della fascia in alto e il colore dei bottoni. |
+| **Abbinamenti dei piatti** | Suggerimenti | Gli articoli che il kiosk propone dopo un piatto. |
+| **Minuti dei numeri pronti**, **Anche gli asporti della cassa** | Monitor | Vedi [Chiamate](../cassa/chiamate.md#prima-di-cominciare). |
 
 !!! note "Il numero dell'ordine sullo scontrino"
     Lo scontrino di un ordine del kiosk porta in testa il numero e dove va, per esempio
@@ -189,16 +191,18 @@ servizio. La cassa non ha ancora la schermata per cambiarle: per ora le imposta 
 2. Tocca **Salva e verifica**.
 3. La prima volta l'esito è *Collegato al servizio, ma: Questo dispositivo non è il kiosk n. 1:
    associalo dalla cassa.*: il servizio non sa ancora che questo dispositivo è il kiosk n. 1.
-4. Tocca **Copia** sotto **Identificativo del dispositivo** e manda il codice all'assistenza, che lo
-   associa al numero del kiosk sul servizio (vedi la nota sotto).
-5. Quando l'assistenza ha finito, tocca **Rileggi lo stato**.
+4. In cassa apri Menu ▸ **Kiosk**, linguetta **Kiosk**: in **Dispositivi che chiedono un numero**
+   compare il dispositivo, con le ultime 8 cifre dell'identificativo. Tocca **Associa al kiosk 1**,
+   scegli la stampante fiscale, tocca **Conferma** e poi **Salva** (vedi
+   [Kiosk](../cassa/kiosk.md#associare-un-kiosk-nuovo)).
+5. Sul kiosk tocca **Rileggi lo stato**.
 6. Compare *Collegato: questo è il kiosk n. 1 «…».*, e in **Dal servizio** la licenza e
    **Accesi**.
 
-!!! note "L'associazione del dispositivo, per ora, la fa l'assistenza"
-    I messaggi del kiosk dicono «associalo dalla cassa», ma la cassa non ha ancora la schermata dei
-    kiosk: arriverà con un prossimo aggiornamento. Fino ad allora il numero del kiosk e il suo
-    dispositivo li scrive l'assistenza nella configurazione dei kiosk sul servizio.
+!!! note "Riconoscere il dispositivo giusto"
+    In cassa il dispositivo si vede con le ultime 8 cifre dell'identificativo (es. «…1234abcd»):
+    sono le ultime 8 del codice che il kiosk mostra sotto **Identificativo del dispositivo**. Con
+    **Copia** lo copi per intero.
 
 ### Cambiare il numero del kiosk
 
@@ -223,14 +227,11 @@ servizio. La cassa non ha ancora la schermata per cambiarle: per ora le imposta 
 Il kiosk stampa in rete **solo su una stampante registrata sul servizio**: la termica non si
 scrive sul kiosk, si registra dalla cassa.
 
-1. Su una cassa apri Menu ▸ **Impostazioni** ▸ **Stampante preconto**.
-2. In **Indirizzo della stampante** scrivi l'indirizzo IP e la porta della termica del kiosk (di
-   solito 9100) e tocca **Salva**: la stampante entra fra le **Stampanti dell'impianto**.
-3. Il salvataggio la rende anche la stampante preconto di quella cassa: nella tendina
-   **Stampanti dell'impianto** scegli di nuovo la stampante che la cassa usava prima.
-4. Sul kiosk, in **Stampante termica**, tocca **Rileggi gli elenchi** e scegli la termica nuova.
-
-<!-- DA VERIFICARE: c'e' un modo di registrare la termica del kiosk dalla cassa senza passare dalla stampante preconto di una cassa (passi 2-3)? -->
+1. Su una cassa apri Menu ▸ **Kiosk**, linguetta **Kiosk**, riquadro **Termiche dei kiosk**, e tocca
+   **Aggiungi una termica**.
+2. Scrivi la descrizione, l'indirizzo IP e la porta della termica del kiosk (di solito 9100) e tocca
+   **Aggiungi**. La termica entra nell'impianto; la stampante preconto della cassa non cambia.
+3. Sul kiosk, in **Stampante termica**, tocca **Rileggi gli elenchi** e scegli la termica nuova.
 
 ### Collegare il lettore di QR dei segnaposto
 
@@ -246,8 +247,9 @@ Vale quando sul servizio è acceso il segnaposto col QR per questo kiosk (in **D
 4. Prova: nella schermata del segnaposto avvicina un cartoncino al lettore; il kiosk passa da solo
    al pagamento con quel numero.
 
-I cartoncini dei segnaposto con il QR li prepara il servizio in PDF, da 1 a 99: per ora li stampa
-l'assistenza.
+I cartoncini dei segnaposto con il QR si stampano dalla cassa, Menu ▸ **Kiosk**, linguetta
+**Segnaposti** (vedi [Kiosk](../cassa/kiosk.md#stampare-i-segnaposti)). Il **QR del segnaposto** si
+accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 
 ### Chiudere l'app
 
@@ -268,8 +270,8 @@ l'assistenza.
 | *Manca il nome utente.* / *Manca la password.* | Campo vuoto. | Compilalo. |
 | *Il servizio non risponde.* (seguito dal dettaglio) | Indirizzo sbagliato, servizio spento o rete assente. | Controlla l'indirizzo e che il servizio sia acceso e raggiungibile. |
 | *Il servizio rifiuta le credenziali: controlla nome utente e password.* | Utente o password sbagliati. | Correggili. |
-| *Collegato al servizio, ma: Questo dispositivo non è il kiosk n. 1: associalo dalla cassa.* | Al numero 1 è associato un altro dispositivo, o nessuno. | Copia l'identificativo e fallo associare dall'assistenza; oppure correggi il **Numero del kiosk**. |
-| *Collegato al servizio, ma: Il kiosk n. 2 non è configurato: aggiungilo dalla cassa.* | Sul servizio non c'è un kiosk con questo numero. | Fallo aggiungere dall'assistenza, o correggi il numero. |
+| *Collegato al servizio, ma: Questo dispositivo non è il kiosk n. 1: associalo dalla cassa.* | Al numero 1 è associato un altro dispositivo, o nessuno. | Associalo in cassa: Menu ▸ **Kiosk**, **Associa al kiosk 1**, poi **Salva**. Oppure correggi il **Numero del kiosk**. |
+| *Collegato al servizio, ma: Il kiosk n. 2 non è configurato: aggiungilo dalla cassa.* | Sul servizio non c'è un kiosk con questo numero. | In cassa, Menu ▸ **Kiosk**, tocca **Associa al kiosk 2** (o **Aggiungi un kiosk**) e salva; oppure correggi il numero. |
 | *Collegato al servizio, ma: Kiosk non attivo, ordina alla cassa* | La licenza del kiosk non c'è o è scaduta. | Attiva la licenza nel riquadro **Licenza digitale**. |
 | *Attenzione: le credenziali di questo kiosk non sono ristrette. …* | L'utente del kiosk non è fra gli utenti dei kiosk sul servizio. | Fallo aggiungere (vedi [Installazione](installazione.md#lutente-web-del-kiosk)). |
 | *Il numero del kiosk va da 1 a 99.* | Numero fuori misura. | Correggilo. |
@@ -303,5 +305,6 @@ l'assistenza.
 - [Installazione](installazione.md)
 - [Percorso del cliente](percorso.md)
 - [Pagamenti, per il personale](pagamenti.md)
+- [Kiosk, in cassa](../cassa/kiosk.md)
 - [Impostazioni della cassa](../cassa/impostazioni.md)
 - [Licenza digitale](../introduzione/licenza.md)
