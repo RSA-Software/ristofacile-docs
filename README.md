@@ -57,12 +57,13 @@ python tools/domande-aperte.py
 
 ## Pubblicazione
 
-Il repository non ha ancora un remoto. Per pubblicarlo come facile-docs:
+Il repository è [RSA-Software/ristofacile-docs](https://github.com/RSA-Software/ristofacile-docs)
+(pubblico, come facile-docs) e il sito è su
+<https://rsa-software.github.io/ristofacile-docs/> (GitHub Pages, sorgente *GitHub Actions*).
 
-1. creare su GitHub `RSA-Software/ristofacile-docs` e fare `git remote add origin …`;
-2. **Settings ▸ Pages ▸ Source** → *GitHub Actions*;
-3. controllare `site_url` e `repo_url` in `mkdocs.yml`;
-4. `git push` su `main`: il workflow compila e pubblica.
+Ogni `git push` su `main` fa partire `.github/workflows/pubblica-manuale.yml`, che compila con
+`mkdocs build --strict` e pubblica: prima di spingere conviene lanciare la stessa compilazione in
+locale. Se il sito passa al dominio definitivo, aggiornare `site_url` in `mkdocs.yml`.
 
 ## Schermate
 
