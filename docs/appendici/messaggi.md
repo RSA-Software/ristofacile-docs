@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-10-31 — **707 messaggi**.
+Aggiornato al 2026-11-05 — **707 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 

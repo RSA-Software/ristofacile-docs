@@ -298,8 +298,12 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 - **La finestra della modalità dimostrativa** compare solo quando il kiosk torna all'attesa, mai a
   metà di un ordine o di un pagamento.
 - **La stampa USB** su Windows usa una stampante installata nel PC; su Android la periferica USB
-  collegata al tablet.
-  <!-- DA VERIFICARE: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9). -->
+  collegata al tablet. Su Windows la termica deve comparire fra le stampanti: se collegandola
+  Windows la vede fra le periferiche ma non crea la stampante, aggiungila da Impostazioni ▸
+  **Bluetooth e dispositivi** ▸ **Stampanti e scanner**, sulla sua porta USB (per esempio
+  `USB005`), con il driver del produttore o con **Generic / Text Only**: il kiosk le manda i comandi
+  ESC/POS così come sono, e il driver non conta.
+  <!-- DA VERIFICARE: la stampa sulla termica USB su Android (permesso al primo collegamento e al ricollegamento) non e' ancora stata provata su una stampante vera: manca il cavo OTG (Piano 9, Task 7). Su Windows provata il 5/11 con una ORDERMAN ST30. -->
 
 ## Vedi anche
 

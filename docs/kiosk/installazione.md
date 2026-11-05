@@ -115,17 +115,32 @@ copia.
 1. Installa RistoKiosk sul tablet.
 2. Aprilo una prima volta e scegli il PIN del kiosk (vedi
    [Configurazione](configurazione.md#il-primo-avvio)).
-3. Nelle impostazioni di Android accendi il **blocco dell'app** (a seconda del produttore si chiama
-   «Blocco app», «Fissa app» o «Blocco schermo sull'app»), con la richiesta del PIN o della
-   sequenza del tablet per sbloccarla.
-4. Apri RistoKiosk e bloccalo sullo schermo dal menu delle app recenti.
-5. Con una **stampante termica USB**: collegala, poi nella configurazione del kiosk scegli
+3. Nelle impostazioni di Android accendi il **blocco dell'app**. A seconda del produttore si chiama
+   «Blocco app su schermo», «Blocco app», «Fissa app» o «Blocco schermo sull'app». Su un tablet
+   Lenovo con Android 13 sta in Impostazioni ▸ **Sblocco e sicurezza** ▸ **Altre impostazioni di
+   sicurezza** ▸ **Blocco app su schermo**:
+   - accendi **Usa Blocco app su schermo** e conferma l'avviso con **OK**;
+   - accendi **Blocca dispositivo dopo lo sblocco app**, così per sbloccare l'app serve il PIN o la
+     sequenza del tablet. Se il tablet non ha ancora un blocco schermo, Android ti chiede di
+     sceglierne uno (PIN, sequenza o password): senza, chiunque sblocca l'app.
+4. Apri RistoKiosk e bloccalo sullo schermo dal menu delle app recenti: tocca il tasto
+   **Panoramica** (il quadrato), poi l'**icona** di RistoKiosk in cima alla sua anteprima e
+   **Blocca su schermo**. Sul Lenovo, nello stesso menu, «Blocco su app» è un'altra cosa: non serve.
+   Android mostra *L'app è bloccata sullo schermo*: tocca **OK**.
+5. Prova che il blocco ha preso: tocca **Home**. Il kiosk deve restare a video. Se compare la
+   schermata delle app, il blocco non è partito: ripeti il punto 4.
+6. Con una **stampante termica USB**: collegala (su un tablet con una sola porta USB serve un cavo o
+   un adattatore OTG), poi nella configurazione del kiosk scegli
    **USB (collegata al kiosk)**, la stampante, e tocca **Usa questa stampante** (o
    **Stampa di prova**). Android chiede se permettere a RistoKiosk di usare la periferica: tocca
    **Consenti**.
 
 L'app da sola tiene il tablet in orizzontale, nasconde le barre di sistema (si riaffacciano solo
 per un attimo strisciando dal bordo), tiene lo schermo acceso e ignora il tasto Indietro.
+
+**Togliere il blocco dell'app**, per lavorare sul tablet: striscia dal bordo in basso per far
+comparire i tasti, poi tieni premuti **insieme** Indietro e Panoramica. Il tablet si blocca e chiede
+il suo PIN (o la sequenza).
 
 **Il permesso USB** si chiede in tre momenti: nella configurazione (scelta della stampante o
 **Stampa di prova**), all'avvio dell'app e **ogni volta che la stampante scelta si ricollega**. Di

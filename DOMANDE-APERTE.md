@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-10-31 — **69 domande** su 36 pagine.
+Aggiornato al 2026-11-05 — **69 domande** su 36 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -217,7 +217,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kiosk/configurazione.md`
 
-- [ ] riga 302: la stampa sulla termica USB (Windows e Android) non e' ancora stata provata su una stampante vera (Piano 9).
+- [ ] riga 306: la stampa sulla termica USB su Android (permesso al primo collegamento e al ricollegamento) non e' ancora stata provata su una stampante vera: manca il cavo OTG (Piano 9, Task 7). Su Windows provata il 5/11 con una ORDERMAN ST30.
 
 ## Installazione del kiosk
 
