@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-05 — **69 domande** su 36 pagine.
+Aggiornato al 2026-11-05 — **68 domande** su 36 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -224,7 +224,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/kiosk/installazione.md`
 
 - [ ] riga 41: con quale pacchetto si installa RistoKiosk su Windows e su Android (installatore in preparazione, Piano 9).
-- [ ] riga 107: l'Accesso assegnato di Windows accetta RistoKiosk come app del chiosco (e' un programma classico, non un'app dello Store), o serve lo Shell Launcher / una configurazione a piu' app? Scrivere i passi esatti per Windows 10 e 11 Pro.
 
 ## Pagamenti, per il personale
 

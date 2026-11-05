@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-05 — **707 messaggi**.
+Aggiornato al 2026-11-05 — **709 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -536,6 +536,7 @@ Aggiornato al 2026-11-05 — **707 messaggi**.
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
 | *Non sono riuscito a leggere l'immagine.* | Cassa: [Menu online](../cassa/menu-online.md) | Il file scelto non si apre. | Scegli un altro file PNG o JPG. |
 | *Non sono riuscito a segnare l'ordine 27: riprova* (seguito dal dettaglio) | Cassa: [Chiamate](../cassa/chiamate.md) | Il tocco non è arrivato al servizio. La tessera resta dov'era. | Controlla la rete e tocca di nuovo. |
+| *Non è stato possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di sistema.* (codice 0x80004005, su fondo blu) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato è nella forma a una sola app, che non avvia RistoKiosk. | Applica il file a più app (vedi [Windows](../kiosk/installazione.md#windows)) e riavvia. |
 | *N tavoli non hanno cambiato ordine. L'elenco viene ricaricato.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Lo spostamento non è stato salvato per alcuni tavoli. | Controlla l'ordine e ripeti lo spostamento. |
 | *Numero di coperti non valido.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Coperti vuoti, zero o non numerici. | Scrivi un numero maggiore di zero. |
 | *Numero di coperti non valido.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Coperti vuoti o zero. | Scrivi un numero maggiore di zero. |
@@ -593,6 +594,7 @@ Aggiornato al 2026-11-05 — **707 messaggi**.
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Comanda](../cassa/comanda.md) | Troppe varianti accese nello stesso gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Varianti](../cassa/varianti.md) | Hai cercato di accendere una variante oltre il massimo del gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Salse".* | Palmare: [Comanda](../palmare/comanda.md) | Hai superato il massimo di un gruppo di varianti. | Spegni una variante prima di accenderne un'altra. |
+| *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Windows](../kiosk/installazione.md#windows)) e riavvia. |
 | *Questa immagine c'è già fra quelle dell'attesa.* | Cassa: [Kiosk](../cassa/kiosk.md) | Stessa immagine caricata due volte. | Nessuna azione. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Cassa: [Comanda](../cassa/comanda.md) | Omaggio su una parte di una pizza composta. | Offri la riga principale. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Palmare: [Comanda](../palmare/comanda.md) | Omaggio su una parte di un piatto composto. | Offri il piatto intero. |
