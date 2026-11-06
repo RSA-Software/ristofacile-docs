@@ -35,8 +35,8 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
   archivi c-tree non sono supportati.
 - Un **posto Kiosk** libero sulla licenza RistoFacile del locale, oppure la modalità dimostrativa
   (vedi [Licenza digitale](../introduzione/licenza.md)).
-- Per un totem Windows: un PC con Windows 10 o 11 e lo schermo del totem; per un tablet: Android usato in
-  orizzontale (un tablet da 10 pollici va bene).
+- Per un totem Windows: un PC con Windows 10 o 11 e lo schermo del totem; per un tablet: Android, in
+  orizzontale o in verticale (un tablet da 10 pollici va bene).
 - Le periferiche che si useranno: POS, rendiresto, stampante termica (di rete o USB), lettore di
   QR 2D a tastiera per i segnaposto.
 
@@ -258,8 +258,15 @@ dall'esecuzione automatica di Windows), la seconda si chiude da sola.
    (*Consentire all'app RistoKiosk di accedere a …?*): tocca **OK** (su altri tablet il tasto può
    chiamarsi **Consenti**).
 
-L'app da sola tiene il tablet in orizzontale, nasconde le barre di sistema (si riaffacciano solo
-per un attimo strisciando dal bordo), tiene lo schermo acceso e ignora il tasto Indietro.
+L'app da sola tiene il kiosk nel verso scelto in **Orientamento dello schermo** (di partenza
+orizzontale, vedi [Configurazione](configurazione.md#orientamento-dello-schermo-solo-android)),
+nasconde le barre di sistema (si riaffacciano solo per un attimo strisciando dal bordo), tiene lo
+schermo acceso e ignora il tasto Indietro.
+
+**Il verso del tablet.** Monta il tablet nel verso scelto in **Orientamento dello schermo** e
+lascia accesa la rotazione automatica di Android. Su alcuni tablet (per esempio i Lenovo) lo
+schermo non gira da solo all'avvio: se il kiosk parte in una striscia stretta al centro, con lo
+sfondo ai lati, il tablet è nell'altro verso. Giralo, oppure cambia la scelta nella configurazione.
 
 **Togliere il blocco dell'app**, per lavorare sul tablet: striscia dal bordo in basso per far
 comparire i tasti, poi tieni premuti **insieme** Indietro e Panoramica. Il tablet si blocca e chiede

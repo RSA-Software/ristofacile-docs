@@ -59,6 +59,7 @@ all'attesa. Il PIN si scrive sempre con i tasti a video: la tastiera del disposi
 - **Numero del kiosk**;
 - **POS (carta)**, **Rendiresto (contanti)** e **Stampante termica**;
 - **Tema**;
+- **Orientamento dello schermo**, solo su Android;
 - **Licenza digitale**, come nelle impostazioni del palmare;
 - **PIN del kiosk** ed **Esci**.
 
@@ -126,6 +127,18 @@ Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qu
 | Elemento | Descrizione |
 |---|---|
 | **Tema** | **Come il locale** (di partenza), **Chiaro** o **Scuro**. Con **Come il locale** il kiosk segue il tema scelto in cassa, Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa** ▸ **Tema chiaro**, e sotto si legge *Il locale ha il tema chiaro: si sceglie dalla cassa, nella scheda Kiosk.* (o *scuro*). Con **Chiaro** o **Scuro**: *Questo kiosk ha il suo tema, qualunque sia quello del locale.* Il tema scelto qui vale subito. |
+
+### Orientamento dello schermo (solo Android)
+
+| Elemento | Descrizione |
+|---|---|
+| **Orientamento** | Come si dispone il kiosk sul tablet. Sotto il titolo: *Orizzontale e verticale si possono capovolgere; automatico segue il tablet quando lo si gira. Vale subito.* |
+| **Orizzontale** | Di partenza. Il kiosk resta orizzontale: si può capovolgere, ma non girare in verticale. |
+| **Verticale** | Il kiosk resta verticale, anche capovolto. Il menu mette le categorie a sinistra e il carrello in una fascia in basso. |
+| **Automatico (segue il tablet)** | Il kiosk gira quando si gira il tablet. |
+
+La scelta vale subito, senza riavviare l'app. Su Windows il riquadro non c'è: l'orientamento lo
+decide lo schermo del totem. Come montare il tablet: vedi [Installazione](installazione.md#android).
 
 ### Licenza digitale, PIN, Esci
 
