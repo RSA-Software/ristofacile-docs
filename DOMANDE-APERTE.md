@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-06 — **67 domande** su 35 pagine.
+Aggiornato al 2026-11-06 — **66 domande** su 34 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -212,12 +212,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/kds/monitor.md`
 
 - [ ] riga 216: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
-
-## Configurazione del kiosk
-
-`docs/kiosk/configurazione.md`
-
-- [ ] riga 327: su Android il permesso quando la stampante si stacca e si ricollega, e se il kiosk si apre da solo al collegamento della ORDERMAN (filtro USB del fix 8 del Piano 9, prova non ancora conclusa).
 
 ## Pagamenti, per il personale
 

@@ -266,8 +266,10 @@ comparire i tasti, poi tieni premuti **insieme** Indietro e Panoramica. Il table
 il suo PIN (o la sequenza).
 
 **Il permesso USB** si chiede in tre momenti: nella configurazione (scelta della stampante o
-**Stampa di prova**), all'avvio dell'app e **ogni volta che la stampante scelta si ricollega**. Di
-solito capita all'avvio o quando colleghi la stampante, con il personale davanti; ma se la
+**Stampa di prova**), all'avvio dell'app e **ogni volta che la stampante scelta si ricollega**. Con
+la **ORDERMAN ST30** il kiosk la riconosce da solo: collegandola con il kiosk chiuso Android chiede
+se aprire RistoKiosk (rispondi sì: il permesso è già dato), e un ricollegamento con il kiosk aperto
+non chiede niente (vedi [Configurazione](configurazione.md#note)). Con un'altra termica, se la
 stampante si stacca e si riattacca durante un ordine (per esempio un cavo che fa contatto) la
 richiesta di Android può comparire anche davanti al cliente: in quel caso tocca tu **OK**.
 Le stampe del cliente non aspettano il permesso: se manca, non escono e il kiosk va avanti lo

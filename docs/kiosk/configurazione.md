@@ -323,8 +323,21 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
   cavo OTG) compare nell'elenco con il suo nome e il suo codice, per esempio *Printer-80
   (1FC9:2016)*; al primo **Usa questa stampante** Android chiede *Consentire all'app RistoKiosk di
   accedere a Printer-80?*: tocca **OK**. Provata su Windows e su Android con una ORDERMAN ST30:
-  stampa di prova, promemoria e tagliandi.
-  <!-- DA VERIFICARE: su Android il permesso quando la stampante si stacca e si ricollega, e se il kiosk si apre da solo al collegamento della ORDERMAN (filtro USB del fix 8 del Piano 9, prova non ancora conclusa). -->
+  stampa di prova, promemoria e tagliandi. I tagliandi («da verificare», resto da ricevere, «hai
+  versato» e il ritiro) sono lunghi circa 8 cm, con il numero in grande.
+- **La ORDERMAN ST30 su Android** il kiosk la riconosce da solo:
+    - collegandola con il kiosk chiuso, Android chiede se aprire RistoKiosk: rispondi sì, e il kiosk
+      si apre con il permesso della stampante già dato. La casella *Apri sempre RistoKiosk quando si
+      collega Printer-80* lo fa aprire da solo a ogni collegamento;
+    - staccandola e riattaccandola con il kiosk aperto non compare niente (al più l'avviso di Android
+      sull'alimentazione USB): il kiosk riprende da solo a stampare;
+    - se alla richiesta hai risposto **No** o **Annulla**, il kiosk non stampa sulla termica finché
+      non riapri la configurazione (PIN) e tocchi **Usa questa stampante**, poi **OK**.
+
+    Con un'altra termica USB il permesso lo chiede il kiosk quando la stampante si collega, oppure lo
+    dai dalla configurazione.
+- **Il lettore 2D sul tablet** non è stato provato: sul tablet di prova l'unica porta USB serviva
+  alla termica. Su un tablet con una porta sola, lettore e termica insieme vogliono un hub USB.
 
 ## Vedi anche
 
