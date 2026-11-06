@@ -55,7 +55,9 @@ tastierini disegnati.
 **Accessibilità**. Sopra scorrono, una ogni 6 secondi, le **immagini dell'attesa** scelte in cassa
 (Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa**); senza, le foto dei piatti
 consigliati e delle sezioni del menu. In alto c'è il **logo**, se è stato scelto, altrimenti il nome
-del locale. In basso a destra il numero del kiosk (*Kiosk n. 1*, con *· demo* in
+del locale; con il solo logo e nessuna foto da far scorrere, il logo sta grande al centro. Le foto
+riempiono lo schermo e si tagliano sopra e sotto (o ai lati): conviene prepararle nella forma dello
+schermo, 1080×1920 sul totem in verticale, 1920×1080 in orizzontale. In basso a destra il numero del kiosk (*Kiosk n. 1*, con *· demo* in
 modalità dimostrativa e *· solo alla cassa* se il kiosk non ha né POS né rendiresto e i clienti
 pagano alla cassa). Un tocco in qualunque punto comincia l'ordine; un tocco su una lingua lo
 comincia in quella lingua.

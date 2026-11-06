@@ -160,6 +160,11 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 
 - **Piatti da chiedere al cameriere.** Nella composizione del [Menu](menu.md), un piatto con
   **Ordinabile dal telefono** spento si vede sul telefono ma si ordina al cameriere.
+- **I tavoli virtuali del kiosk** non prendono ordini dal telefono: non hanno codice né cartoncino
+  (**Stampa tutti i cartoncini** li salta), e un QR che punta a uno di loro, o a un tavolo con un
+  ordine del kiosk aperto, mostra al cliente *Questo tavolo non accetta ordini dal telefono:
+  ordina al kiosk o chiedi al personale.* Così il conto di un ordine del kiosk non si mescola con i
+  pagamenti dal telefono.
 - **Il prezzo lo decide la cassa.** Il telefono mostra i prezzi del menu online, ma il servizio li
   ricalcola all'invio: se nel frattempo sono cambiati, il cliente vede il totale nuovo e deve
   confermare di nuovo. Un piatto esaurito non si può ordinare.

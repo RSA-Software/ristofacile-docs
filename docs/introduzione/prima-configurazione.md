@@ -39,7 +39,11 @@ Tieni a portata di mano:
 - un collegamento a **Internet** per l'attivazione della licenza;
 - per le stampanti, i POS e il registratore telematico: i loro indirizzi in rete.
 
-Dispositivi e servizio devono stare nella stessa rete del locale.
+Dispositivi e servizio devono stare nella stessa rete del locale. Il servizio del locale parla in
+`http`, senza certificato: cassa, palmare e monitor di cucina lo accettano su Windows e su Android.
+Su iPhone, iPad e Mac l'indirizzo in `http` va scritto con l'**IP** del computer del servizio (per
+esempio `http://192.168.1.50:8080`) o con il suo nome senza dominio: un nome con il dominio (come
+`servizio.miolocale.it`) in `http` non si raggiunge.
 
 ## La schermata
 

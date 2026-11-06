@@ -83,7 +83,7 @@ All'apertura è selezionata la voce **Turno**. La voce scelta è evidenziata con
 
 | Elemento | Descrizione |
 |---|---|
-| **Indirizzo** (riquadro **Servizio**) | L'indirizzo del servizio RistoFacile del locale, con la porta: per esempio `http://192.168.1.50:8080`. Si scrive a mano: chiedilo a chi ha installato il servizio. |
+| **Indirizzo** (riquadro **Servizio**) | L'indirizzo del servizio RistoFacile del locale, con la porta: per esempio `http://192.168.1.50:8080`. Si scrive a mano: chiedilo a chi ha installato il servizio. Su iPad e Mac, in `http`, scrivi l'IP o il nome del computer senza dominio (vedi [Prima configurazione](../introduzione/prima-configurazione.md#prima-di-cominciare)). |
 | **Utente** (riquadro **Accesso**) | Il nome utente con cui la cassa si presenta al servizio. |
 | **Password** | La password di quell'utente. Non viene mai rimostrata: se ne è già salvata una compare *Password già salvata: lascia vuoto per non modificarla.* |
 | **Salva e connetti** | Salva i tre dati e prova subito una lettura vera dal servizio (l'elenco delle sale). Durante la prova gira la rotellina. |

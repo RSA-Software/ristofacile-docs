@@ -57,11 +57,15 @@ senza far pagare di nuovo il cliente.
 - **Sotto**, l'esito dell'ultima operazione (per esempio *Ordine 9: annullato.*).
 - **L'elenco**: una riga per ordine, dal più urgente (prima il denaro da decidere, poi gli scontrini
   da emettere, poi gli incassi; gli ordini ancora in mano al cliente in fondo) e, a parità, dal più
-  vecchio. Senza ordini: *Nessun ordine del kiosk aperto.*
+  vecchio: gli ordini di un altro giorno stanno in cima fra quelli del loro stato. Senza ordini:
+  *Nessun ordine del kiosk aperto.*
 
 Ogni riga mostra:
 
 - a sinistra il **numero** dell'ordine, grande, e sotto dove va: **Segnaposto 12** o **Porta via**;
+  per un ordine di un altro giorno, sotto il numero anche la data (per esempio *31/10*), perché il
+  numero riparte ogni giorno e un ordine vecchio rimasto aperto può avere lo stesso numero di uno
+  di oggi;
 - al centro lo **stato** (vedi la tabella), il kiosk e l'ora (*Kiosk 1 · 17:43*) e i bollini:
   **€ … da verificare**, **in cucina**, **da pesare**, **conto aperto in cassa**;
 - a destra il **totale** e, se il cliente ha già pagato al kiosk, *già pagato € …*;
@@ -197,8 +201,8 @@ Un ordine già in cucina non si annulla: si incassa.
 1. Sull'ordine pagato (*scontrino da emettere* o *resto da incassare*) tocca **Annulla e rimborsa**.
 2. Conferma con **Annulla e rimborsa**.
 3. Compare *Ordine 4: annullato. Rimborsa € 3,00 al cliente (l'avviso del rimborso resta finché non
-   lo segni visto).* e in alto l'avviso 💶 *Ordine 4 annullato dalla cassa: rimborsa € 3,00 (pagati
-   al kiosk con la carta).*
+   lo segni visto).* e in alto l'avviso 💶 *Ordine 4 annullato dalla cassa (MARCO): rimborsa
+   € 3,00 (pagati al kiosk con la carta).*, con il nome dell'operatore che l'ha annullato.
 4. Rimborsa il cliente: la carta si storna sul POS, i contanti si rendono a mano.
 5. **Solo dopo aver rimborsato davvero**, tocca **Visto** sull'avviso e rispondi **Sì, fatto**: il
    servizio segna il denaro come rimborsato e l'avviso sparisce da tutte le postazioni. Se il
@@ -290,6 +294,9 @@ Un ordine già in cucina non si annulla: si incassa.
 - **La carta del POS di questa cassa.** Se la carta passa sul POS della cassa e poi il conto non si
   può chiudere con lei (il kiosk ha registrato il pagamento intanto, o il conto l'ha chiuso un'altra
   postazione), la cassa chiede di stornarla: vedi [Conto](conto.md#carta-da-stornare).
+- **Chi ha fatto cosa.** Verifica, **Annulla l'ordine** e **Annulla e rimborsa** mandano al
+  servizio anche l'operatore della cassa: il suo nome resta nel registro del servizio e negli
+  avvisi di rimborso.
 - **Il lettore** ascolta in questa schermata e sulla mappa della sala, non al banco. Un codice che
   non è un promemoria del kiosk (per esempio il QR di un segnaposto) non fa niente.
 

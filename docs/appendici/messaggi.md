@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-06 — **712 messaggi**.
+Aggiornato al 2026-11-06 — **713 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -192,7 +192,7 @@ Aggiornato al 2026-11-06 — **712 messaggi**.
 | *Il pagamento non è partito: rivolgiti alla cassa con il numero 28.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il servizio ha rifiutato il pagamento prima di cominciare. | Nessun soldo preso: il cliente paga in cassa o ricomincia l'ordine. |
 | *Il pagamento non è riuscito: puoi riprovare o scegliere un altro modo.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Carta rifiutata, pagamento annullato sul POS, contanti annullati. | Riprova, o scegli un altro modo. |
 | *Il pagamento è preso: stiamo registrando l’ordine 26, rivolgiti alla cassa se non parte.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Pagamento preso, servizio irraggiungibile. | Rimetti in funzione il servizio o la rete: il kiosk registra da solo. |
-| *Il pagamento è registrato ma l'ordine era scaduto: rivolgiti alla cassa con il numero 27* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il cliente ha pagato un ordine che il servizio aveva già annullato per scadenza. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
+| *Il pagamento è registrato ma l'ordine era già chiuso (annullato o scaduto): rivolgiti alla cassa con il numero 27* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il cliente ha pagato un ordine che il servizio aveva già chiuso, per la scadenza o per un annullo al kiosk. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
 | *Il piatto e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Con un conto acceso in Comanda, l'assegnazione non è riuscita. | Assegnala da [Dividi conto](../cassa/dividi-conto.md). |
 | *Il piatto e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Palmare: [Comanda](../palmare/comanda.md) | Su un tavolo diviso il piatto è entrato ma non è stato assegnato al conto. | Assegnalo da **Dividi** nel [Conto](../palmare/conto.md). |
 | *Il piatto e' in comanda, ma queste parti non sono state scritte: …. Aprilo dalla comanda per completarlo, o toglilo e ribattilo.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Il servizio ha accettato la pizza ma non tutte le parti. | Correggi la pizza da **Modifica composizione** o toglila e ribattila. |
@@ -415,6 +415,7 @@ Aggiornato al 2026-11-06 — **712 messaggi**.
 | *L'ordine è fermo al kiosk: prima prendilo in cassa da «Ordini dal kiosk» («Prendi in cassa»), poi incassalo.* | Cassa: [Conto](../cassa/conto.md) | L'ordine è ancora in mano al kiosk. | Tocca **Prendi in cassa** in [Ordini dal kiosk](../cassa/ordini-kiosk.md#prendere-in-cassa-un-ordine-fermo-al-kiosk). |
 | *L'ordine è già in cucina: incassalo, non si annulla* | Cassa: [Ordini dal kiosk](../cassa/ordini-kiosk.md) | **Annulla l'ordine** su un ordine già in cucina. | Incassalo. |
 | *L'ordine è già pagato al kiosk. Lo scontrino si emette da «Ordini dal kiosk» in cassa («Emetti lo scontrino»), non dal conto.* | Cassa: [Conto](../cassa/conto.md) | Lo stesso, con gli importi vuoti. | Come sopra. |
+| *Lo sconto non è stato salvato: …* (uscendo con la freccia indietro) | Cassa: [Conto](../cassa/conto.md) | Il conto ha un documento in sospeso, un pagamento del kiosk da verificare, un pagamento dal telefono in corso, oppure lo sconto lo porterebbe sotto quanto già pagato al kiosk o dal telefono. Il motivo è scritto dopo i due punti. | Lo sconto si registra incassando: rientra nel conto quando il caso è risolto. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Cassa: [Conto](../cassa/conto.md) | Hai scelto **Fattura** dopo che lo scontrino era già uscito. | Emetti la fattura dal gestionale. |
 | *Lo scontrino di questo conto e' gia' stato emesso: la fattura va fatta dal gestionale.* | Palmare: [Conto](../palmare/conto.md) | Fattura dopo lo scontrino. | Fai la fattura dal gestionale. |
 | *Lo scontrino di questo conto potrebbe essere uscito: premi INCASSA E STAMPA, il servizio controlla la stampante.* | Cassa: [Conto](../cassa/conto.md) | **CHIUDI SENZA DOCUMENTO** dopo un esito incerto della stampante. | Tocca di nuovo il pulsante di incasso. |

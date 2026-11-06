@@ -100,10 +100,10 @@ pagamento, **Ho controllato io**.
 | 💶 *Resto non dato, ordine 22 (kiosk 1): € 4,00 da dare al cliente.* | L'ordine è pagato e in cucina; il cliente deve ricevere il resto dalla cassa. |
 | 🧾 *Scontrino da emettere per l'ordine 27 (kiosk 1): …* | Il cliente ha pagato al kiosk e l'ordine è in cucina, ma lo scontrino non è uscito (per esempio la stampante fiscale è spenta). Il testo dice il motivo. Con *Scontrino da verificare* il kiosk non sa se lo scontrino è uscito: controlla prima sulla stampante. Lo scontrino si emette da [Ordini dal kiosk](../cassa/ordini-kiosk.md#emettere-lo-scontrino-di-un-ordine-pagato-al-kiosk). |
 | 💶 *Rimborso di € …, ordine 27 (kiosk 1): …* | Il kiosk ha incassato più del conto, o il conto è sceso sotto quello che il cliente ha pagato (per esempio *… pagati al kiosk (contanti) e rimasti fuori dallo scontrino. Rimborsa il cliente.*): la differenza va restituita. |
-| 💶 *Ordine 4 annullato dalla cassa: rimborsa € 3,00 (pagati al kiosk con la carta).* | Hai annullato con **Annulla e rimborsa** un ordine pagato al kiosk. |
+| 💶 *Ordine 4 annullato dalla cassa (MARCO): rimborsa € 3,00 (pagati al kiosk con la carta).* | Hai annullato con **Annulla e rimborsa** un ordine pagato al kiosk. Fra parentesi l'operatore che l'ha annullato; anche gli avvisi di rimborso nati da una verifica nominano chi l'ha fatta (*… la cassa (MARCO) ha verificato …*). |
 | ⏰ *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* | Un ordine «paga alla cassa» mandato in cucina subito, e non ancora incassato. |
-| *Cliente GIÀ ADDEBITATO, ordine 27 (kiosk 1), …* | Il pagamento è arrivato su un ordine già scaduto e annullato, che non è stato preparato. Non far pagare di nuovo: rifai l'ordine o rimborsa. |
-| *Pagamento da verificare, ordine 27 (kiosk 1): pagato al kiosk … su un ordine già chiuso.* | Il cliente può aver pagato due volte: controlla. |
+| *Cliente GIÀ ADDEBITATO, ordine 27 (kiosk 1), …: pagato al kiosk … su un ordine già chiuso (annullato o scaduto), che non è stato preparato; …* | Il pagamento è arrivato su un ordine che il servizio aveva già chiuso, per la scadenza o perché il cliente l'aveva annullato al kiosk: non è stato preparato. Non far pagare di nuovo: rifai l'ordine e chiudilo con questo pagamento, oppure rimborsa. |
+| *Pagamento da verificare, ordine 27 (kiosk 1): pagato al kiosk … su un ordine già chiuso.* | Il cliente può aver pagato due volte: controlla, e rimborsa se serve. Il suo **Visto** chiede se hai rimborsato (vedi sotto). |
 
 Gli avvisi di soldi (resto, rimborso, pagamento su un ordine già chiuso) restano finché non tocchi
 **Visto**, anche a conto chiuso, e **Visto** chiede prima conferma:
@@ -115,7 +115,13 @@ Gli avvisi di soldi (resto, rimborso, pagamento su un ordine già chiuso) restan
 controllato il pagamento sul POS o sul rendiresto? L'avviso sparisce per tutte le postazioni: la
 verifica si fa da «Ordini dal kiosk».*). Un tocco fuori dalla domanda vale **Non ancora**.
 Sugli avvisi di rimborso del kiosk **Sì, fatto** registra anche il rimborso sul servizio: rispondi
-così solo dopo aver reso davvero i soldi. Se il servizio non riesce a registrarlo, l'avviso resta
+così solo dopo aver reso davvero i soldi. Sul pagamento arrivato su un ordine già chiuso la domanda
+è un'altra (**Avviso di denaro**): *Il cliente ha pagato al kiosk € … su un ordine già chiuso. Hai
+rimborsato il cliente? Con «Sì, rimborsato» il rimborso si registra; con «No, non serve» (per
+esempio l'ordine rifatto e chiuso con questo pagamento) il denaro resta da rimborsare nel registro.
+L'avviso sparisce per tutte le postazioni.*, con **Non ancora**, **Sì, rimborsato** e **No, non
+serve**. I rimborsi dei pagamenti dal telefono non lo chiedono: li registra il portale del
+pagamento. Se il servizio non riesce a registrarlo, l'avviso resta
 a video con *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».*
 (senza risposta: *Il servizio non risponde: l'avviso resta. Riprova con «visto» fra poco.*). Gli avvisi *Pagamento da verificare* e *Scontrino da emettere* di un
 ordine ancora aperto, una volta visti, escono dal riquadro ma restano legati all'ordine finché il
@@ -251,7 +257,7 @@ Se alla riaccensione il servizio non risponde:
 | *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».* (in cassa e sul palmare) | Il servizio non è riuscito a registrare il rimborso al «visto» dell'avviso. | Tocca di nuovo **Visto** fra poco. |
 | *Il servizio non risponde: l'avviso resta. Riprova con «visto» fra poco.* | Il «visto» di un avviso di soldi non ha avuto risposta. | Controlla il collegamento e riprova. |
 | *Il pagamento non è partito: rivolgiti alla cassa con il numero 28.* | Il servizio ha rifiutato il pagamento prima di cominciare. | Nessun soldo preso: il cliente paga in cassa o ricomincia l'ordine. |
-| *Il pagamento è registrato ma l'ordine era scaduto: rivolgiti alla cassa con il numero 27* | Il cliente ha pagato un ordine che il servizio aveva già annullato per scadenza. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
+| *Il pagamento è registrato ma l'ordine era già chiuso (annullato o scaduto): rivolgiti alla cassa con il numero 27* | Il cliente ha pagato un ordine che il servizio aveva già chiuso, per la scadenza o per un annullo al kiosk. | In cassa c'è l'avviso *Cliente GIÀ ADDEBITATO*: rifai l'ordine senza farlo pagare, o rimborsa. |
 | *Questo kiosk non emette scontrini: rivolgiti alla cassa.* | Al kiosk è stata tolta la stampante fiscale mentre il cliente pagava. | Vedi l'avviso in cassa. |
 | *Il pagamento non copre il conto: rivolgiti alla cassa.* | L'importo pagato è minore del conto. | Vedi l'avviso in cassa: incassa la differenza. |
 | *Il servizio non risponde da oltre 2 minuti durante l'incasso: controlla il rendiresto e il conto in cassa.* (vista Fermo) | La rete o il servizio sono caduti mentre il cliente pagava in contanti. | Rimetti in funzione la rete o il servizio, poi PIN e **Riprova**. |
