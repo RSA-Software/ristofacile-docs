@@ -37,8 +37,10 @@ queste tre:
 - Nelle prime due il kiosk **incassa**: per questo, in cassa (Menu ▸ [Kiosk](../cassa/kiosk.md)),
   al kiosk va assegnata una stampante fiscale. Senza, il kiosk accetta solo «Pago alla cassa».
 - Nella terza il kiosk stampa un **promemoria** con il numero e un codice QR, e il cliente va alla
-  cassa a pagare. L'ordine va in cucina **subito** oppure **solo dopo l'incasso**, a scelta del
-  locale (vedi [Configurazione](configurazione.md#le-impostazioni-del-servizio)).
+  cassa a pagare. Con «paga alla cassa» acceso l'ordine va in cucina **subito** oppure **solo
+  dopo l'incasso**, a scelta del locale; con «paga alla cassa» spento va in cucina solo dopo
+  l'incasso (vedi [Configurazione](configurazione.md#le-impostazioni-del-servizio)). Anche un kiosk
+  con la stampante fiscale ma senza POS né rendiresto lavora così.
 - «Pago alla cassa» si può accendere anche accanto alla carta e ai contanti; con gli **articoli a
   peso** è l'unico modo, perché il prezzo esatto si conosce solo dopo la pesata.
 
