@@ -80,7 +80,8 @@ stati mandati in cucina.
 - **La griglia dei piatti**: ogni tessera ha il nome, il prezzo (per i piatti a peso il prezzo al
   chilo, es. «€ 45,00/kg»), un pulsante **i** in alto a destra per gli allergeni e, se serve, il
   riquadro **ULTIME 3** (scorte basse, in ambra) o **ESAURITO** (in rosso). Un piatto esaurito non
-  si può battere.
+  si può battere. Accanto al prezzo, al più tre icone degli allergeni (tratteggiate per le tracce)
+  e **+n** per quelli che non ci stanno, come sul kiosk.
 - **Le tessere di composizione**: se la sezione ha piatti componibili (es. pizze mezza e mezza), le
   prime tessere della griglia sono le regole di composizione, in arancione («½ Mezza e mezza») con
   la scritta «componi».

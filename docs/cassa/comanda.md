@@ -104,7 +104,7 @@ due porzioni.
 | **Non in linea** | Il servizio non ha risposto all'ultima operazione. Tocca la pastiglia per riprovare il collegamento; quando torna in linea sparisce. |
 | **Triangolo giallo** | L'anagrafica degli articoli del gestionale non risponde: sulle tessere compare il codice al posto del nome. Toccalo per la spiegazione. |
 | **OPERATORE** | Chi è entrato con l'accesso. Il tocco serve a uscire dal turno. |
-| **Tessera del piatto** | Nome e prezzo («€ 8,00»; per i piatti a peso «€ 25,00/kg»). In ricerca mostra anche la sezione di provenienza. Il cerchietto **i** in alto a destra apre gli allergeni. |
+| **Tessera del piatto** | Nome e prezzo («€ 8,00»; per i piatti a peso «€ 25,00/kg»). In ricerca mostra anche la sezione di provenienza. Il cerchietto **i** in alto a destra apre gli allergeni. Accanto al prezzo, al più tre icone degli allergeni: prima quelli che il piatto contiene, a tratto pieno, poi le tracce, con l'icona tratteggiata; **+n** dice quanti altri ce ne sono. Su una tessera stretta si tagliano prima il **+n** e le icone, mai il prezzo. |
 | **ULTIME 3** | Il piatto sta finendo: si può ancora vendere. |
 | **ESAURITO** | Il piatto è finito: la tessera è sbiadita e il tocco non fa nulla. |
 | **Tessera della combinazione** | Nome della regola, numero di parti e regola di prezzo (es. «2 parti · Paghi la piu' cara»). Apre [Componi la pizza](mezza.md). Non compare durante una ricerca. |

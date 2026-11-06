@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-05 — **709 messaggi**.
+Aggiornato al 2026-11-06 — **708 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -167,7 +167,6 @@ Aggiornato al 2026-11-05 — **709 messaggi**.
 | *Il dispositivo … è già del kiosk N: toglilo da lì prima.* | Cassa: [Kiosk](../cassa/kiosk.md) | Lo stesso dispositivo su due kiosk. | Togli il dispositivo dall'altro kiosk, o togli quel kiosk. |
 | *Il giornale dei pagamenti del kiosk non si legge (spostato in pagamento.json.corrotto): controlla il POS, il rendiresto e gli ordini del kiosk in cassa.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il file dei pagamenti del kiosk è rovinato. | Controlla le periferiche e gli avvisi in cassa, poi PIN e **Riprova**. |
 | *Il giornale dei pagamenti è bloccato da un altro programma: non si sa quale pagamento c'era.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Un altro programma (per esempio un antivirus o un backup) tiene aperto il file dei pagamenti. | Chiudi quel programma, poi PIN e **Riprova**. |
-| *Il kiosk non ha modi di pagamento: configura un POS o un rendiresto, oppure accendi «paga alla cassa».* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il kiosk incassa ma non ha periferiche, e «paga alla cassa» è spento. | Scegli un POS o un rendiresto in configurazione, o fai accendere «paga alla cassa». |
 | *Il menu e' in comanda, ma non e' stato possibile assegnarlo al Conto 2: resta da assegnare.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Con un conto acceso in Comanda, l'assegnazione non è riuscita. | Assegnalo da [Dividi conto](../cassa/dividi-conto.md). |
 | *Il menu e' in comanda, ma questi piatti non sono stati scritti: …. Battili dalle loro sezioni.* | Cassa: [Menu fisso](../cassa/menu-fisso.md) | Il servizio ha accettato il menu ma non tutti i piatti. | Batti i piatti mancanti dalle loro sezioni in Comanda. |
 | *Il menu non esiste piu'.* | Cassa: [Menu](../cassa/menu.md) | Il menu è stato eliminato da un'altra postazione. | Torna all'elenco. |

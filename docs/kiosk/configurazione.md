@@ -58,6 +58,7 @@ all'attesa. Il PIN si scrive sempre con i tasti a video: la tastiera del disposi
   servizio (**Dal servizio**) e l'identificativo del dispositivo;
 - **Numero del kiosk**;
 - **POS (carta)**, **Rendiresto (contanti)** e **Stampante termica**;
+- **Tema**;
 - **Licenza digitale**, come nelle impostazioni del palmare;
 - **PIN del kiosk** ed **Esci**.
 
@@ -79,6 +80,7 @@ all'attesa. Il PIN si scrive sempre con i tasti a video: la tastiera del disposi
 | **Dal servizio** ▸ **Incassa** | **Sì: ha una stampante fiscale** oppure **No: senza stampante fiscale si paga solo alla cassa**. |
 | **Dal servizio** ▸ **Segnaposto col QR** | **Sì: col lettore di QR** oppure **No: col tastierino**. |
 | **Dal servizio** ▸ **Paga alla cassa** | **Sì** se è acceso «paga alla cassa» per i kiosk. |
+| Avviso in grassetto sotto **Dal servizio** | *Solo alla cassa: questo kiosk non ha né POS né rendiresto, e i clienti pagano alla cassa anche con «paga alla cassa» spento. Gli ordini vanno in cucina dopo il pagamento.* Compare quando il kiosk incassa, «paga alla cassa» è spento e non c'è né un POS né un rendiresto: il kiosk lavora lo stesso, solo con **Pago alla cassa**. |
 | **Identificativo del dispositivo (da associare al kiosk in cassa)** | Il codice di questo PC o tablet, lungo 64 caratteri. Il servizio accetta gli ordini di un kiosk solo dal dispositivo associato al suo numero. |
 
 Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qui.
@@ -103,6 +105,9 @@ Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qu
 |---|---|
 | **Rendiresto** | Le casse automatiche registrate sul servizio, con quello che sanno fare: per esempio *1 · CashDro ingresso · contanti, annullo dal kiosk*. Con PagAmico e VNE con il POS collegato compare anche *carta sulla macchina*: in quel caso la carta si paga sulla macchina e il POS separato non serve. Con Cashlogy compare *annullo solo dalla macchina*. L'elenco non mostra indirizzi né password. |
 | Riga di esito | Per esempio *Questo kiosk incassa i contanti su 1 · CashDro ingresso.* |
+| Avviso del doppio POS | *La carta va al POS scelto: il POS della cassa automatica non si usa. Se il POS è quello della cassa automatica, lascia POS su Nessuno.* Compare quando c'è un POS scelto e il rendiresto ha anche lui il POS (PagAmico o VNE con la *carta sulla macchina*). È solo un avviso: il kiosk lavora lo stesso. |
+
+![L'avviso del doppio POS](../assets/img/kiosk/configurazione-doppio-pos.png)
 
 ### Stampante termica
 
@@ -112,7 +117,15 @@ Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qu
 | **Stampante del servizio** | Con **Di rete**: le stampanti registrate sul servizio. Il kiosk stampa solo su una di queste. |
 | **Stampante USB** | Con **USB**: su Windows le stampanti installate nel PC, su Android le periferiche USB collegate al tablet. |
 | Riga di esito | Per esempio *Promemoria e tagliandi su Termica ingresso.*, oppure *Nessuna stampante termica: senza promemoria la vista finale dice il numero da dire alla cassa.* |
-| **La stampante fiscale è in questo kiosk** | *Sì: alla fine il cliente legge «Ritira lo scontrino». No: «Lo scontrino ti arriva con i piatti».* Cambia solo il testo della schermata finale: quale stampante fiscale emette lo scontrino lo decide il servizio. Di partenza è acceso. |
+| **La stampante fiscale è in questo kiosk** | *Sì: alla fine il cliente legge «Ritira lo scontrino». No: «Lo scontrino ti arriva con i piatti».* Cambia il testo della schermata finale e il **tagliando del ritiro**: spento, chi porta via riceve dalla termica il tagliando con il suo numero (vedi [Percorso del cliente](percorso.md#9-il-numero)). Quale stampante fiscale emette lo scontrino lo decide il servizio. Di partenza è acceso. |
+
+### Tema
+
+![Il tema del kiosk](../assets/img/kiosk/configurazione-tema.png)
+
+| Elemento | Descrizione |
+|---|---|
+| **Tema** | **Come il locale** (di partenza), **Chiaro** o **Scuro**. Con **Come il locale** il kiosk segue il tema scelto in cassa, Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa** ▸ **Tema chiaro**, e sotto si legge *Il locale ha il tema chiaro: si sceglie dalla cassa, nella scheda Kiosk.* (o *scuro*). Con **Chiaro** o **Scuro**: *Questo kiosk ha il suo tema, qualunque sia quello del locale.* Il tema scelto qui vale subito. |
 
 ### Licenza digitale, PIN, Esci
 
@@ -135,14 +148,14 @@ servizio. Si cambiano dalla cassa, Menu ▸ **Kiosk**: le etichette esatte e i p
 | **Menu dei kiosk** | Generale | Il menu che i kiosk mostrano: uno dei menu della cassa, oppure **Menu del sito**. |
 | **Tavolo virtuale per «mangio qui»** e **per «porto via»** | Generale | Il tavolo su cui finiscono gli ordini di chi mangia nel locale e di chi porta via (possono essere lo stesso). Il listino della loro sala decide i prezzi del kiosk. |
 | **Cameriere delle righe del kiosk** | Generale | L'operatore a cui vanno le righe degli ordini del kiosk. |
-| **«Paga alla cassa»** | Generale | Accende «Pago alla cassa» fra i modi di pagamento. Un kiosk senza stampante fiscale paga sempre alla cassa, anche con questa spenta. |
-| **Quando gli ordini «paga alla cassa» vanno in cucina** | Generale | **Subito, alla conferma dell'ordine** oppure **Dopo, quando l'ordine si incassa in cassa**. Gli ordini pagati al kiosk vanno in cucina appena pagati. |
-| **Minuti di scadenza** | Generale | Dopo quanti minuti un ordine «paga alla cassa» non pagato si annulla da solo. Di partenza 30. Un ordine già mandato in cucina («subito») non si annulla: in cassa compare l'avviso *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* |
+| **«Paga alla cassa»** | Generale | Accende «Pago alla cassa» fra i modi di pagamento. Anche spenta, pagano alla cassa i clienti di un kiosk senza stampante fiscale, di un kiosk senza né POS né rendiresto e chi ha nel carrello un articolo a peso; con «paga alla cassa» spento questi ordini vanno in cucina **solo dopo il pagamento** in cassa (le righe a peso subito, per la pesata). |
+| **Quando gli ordini «paga alla cassa» vanno in cucina** | Generale | Solo con «paga alla cassa» acceso: **Subito, alla conferma dell'ordine** oppure **Dopo, quando l'ordine si incassa in cassa**. Gli ordini pagati al kiosk vanno in cucina appena pagati. |
+| **Minuti di scadenza** | Generale | Dopo quanti minuti un ordine da pagare alla cassa, non pagato e non in cucina, si annulla da solo; vale anche con «paga alla cassa» spento. Di partenza 30. Un ordine già mandato in cucina («subito») non si annulla: in cassa compare l'avviso *Ordine 27 non pagato (kiosk 1, porta via): è in cucina e dopo 30 minuti non è ancora passato dalla cassa.* |
 | **Pesi indicativi (kg)** | Generale | I pesi proposti per gli articoli a peso. Di partenza 0,1 / 0,2 / 0,3 / 0,5 / 1 kg. |
 | I kiosk: **NUMERO**, **DESCRIZIONE**, **DISPOSITIVO**, **STAMPANTE FISCALE**, **QR del segnaposto** | Kiosk | Per ogni kiosk: il numero (1-99), una descrizione (compare nell'esito del collegamento), il dispositivo associato, la stampante fiscale dello scontrino (senza, il kiosk non incassa) e il segnaposto col QR (il kiosk legge il QR del segnaposto con il lettore). |
 | **Utenti web dei kiosk** | Kiosk | I nomi degli utenti web dei kiosk: vedi [Installazione](installazione.md#lutente-web-del-kiosk). |
 | **Termiche dei kiosk** | Kiosk | Le termiche di rete dell'impianto, fra cui il kiosk sceglie la sua. |
-| **Immagini dell'attesa**, **Logo**, **Colore del locale** | Attesa | Le immagini che scorrono sull'attesa, il logo della fascia in alto e il colore dei bottoni. |
+| **Immagini dell'attesa**, **Logo**, **Logo per il tema chiaro**, **Colore del locale**, **Tema chiaro** | Attesa | Le foto che scorrono sull'attesa, il logo della fascia in alto (e quello per i kiosk col tema chiaro), il colore dei bottoni e il tema del locale, che ogni kiosk segue se nel suo riquadro **Tema** c'è **Come il locale**. |
 | **Abbinamenti dei piatti** | Suggerimenti | Gli articoli che il kiosk propone dopo un piatto. |
 | **Minuti dei numeri pronti**, **Anche gli asporti della cassa** | Monitor | Vedi [Chiamate](../cassa/chiamate.md#prima-di-cominciare). |
 

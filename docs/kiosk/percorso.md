@@ -35,7 +35,8 @@ segnaposto e aspetta al tavolo: il vassoio gli viene portato lì.
 - Il menu dei kiosk impostato sul servizio. I piatti, le foto, le varianti, gli ingredienti, gli
   allergeni e i consigliati vengono dal [Menu](../cassa/menu.md) della cassa, come per il
   [self order](../cassa/self-order.md).
-- Almeno un modo di pagamento: POS, rendiresto, oppure «paga alla cassa».
+- I modi di pagamento: POS, rendiresto, «paga alla cassa». Un kiosk senza POS né rendiresto fa
+  pagare alla cassa.
 
 ## La schermata
 
@@ -55,7 +56,8 @@ tastierini disegnati.
 (Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa**); senza, le foto dei piatti
 consigliati e delle sezioni del menu. In alto c'è il **logo**, se è stato scelto, altrimenti il nome
 del locale. In basso a destra il numero del kiosk (*Kiosk n. 1*, con *· demo* in
-modalità dimostrativa). Un tocco in qualunque punto comincia l'ordine; un tocco su una lingua lo
+modalità dimostrativa e *· solo alla cassa* se il kiosk non ha né POS né rendiresto e i clienti
+pagano alla cassa). Un tocco in qualunque punto comincia l'ordine; un tocco su una lingua lo
 comincia in quella lingua.
 
 ![Kiosk chiuso](../assets/img/kiosk/percorso-attesa-chiuso.png)
@@ -67,7 +69,6 @@ risponde al tocco:
 |---|---|---|
 | **Kiosk chiuso** | *Kiosk momentaneamente chiuso: ordina alla cassa* | Kiosk spenti o in pausa sul servizio, oppure servizio irraggiungibile (il kiosk riprova ogni 30 secondi). |
 | **Kiosk non attivo** | il messaggio del servizio, per esempio *Kiosk non attivo, ordina alla cassa* o *Questo dispositivo non è il kiosk n. 1: associalo dalla cassa.* | Licenza assente, kiosk non configurato o non associato a questo dispositivo. |
-| **Kiosk non utilizzabile** | *Il kiosk non ha modi di pagamento: configura un POS o un rendiresto, oppure accendi «paga alla cassa».* | Il kiosk incassa ma non ha né POS né rendiresto, e «paga alla cassa» è spento. |
 | **Kiosk fuori servizio** | *Stiamo registrando un pagamento: per ora ordina alla cassa.* | Un pagamento già preso non è ancora registrato sul servizio (vedi [Pagamenti](pagamenti.md#il-pagamento-e-preso-ma-non-registrato)). |
 | **Kiosk fermo** | *Chiama il personale.* | Serve il personale: vedi [la vista Fermo](pagamenti.md#la-vista-fermo). |
 
@@ -93,12 +94,12 @@ all'attesa. La scelta decide il listino e se più avanti si chiede il segnaposto
 
 ![Menu](../assets/img/kiosk/percorso-menu.png)
 
-- **In alto**, la fascia con la scelta fatta (**Porto via** o **Mangio qui**), il tasto della
-  lingua (per cambiarla a metà ordine) e **Annulla**.
+- **In alto**, la fascia con la scelta fatta (**Porto via** o **Mangio qui**), **Allergeni** (se
+  il menu ne ha), il tasto della lingua (per cambiarla a metà ordine) e **Annulla**.
 - **A sinistra**, le categorie del menu; con i menu composti c'è anche **Menu a prezzo fisso**.
-- **Al centro**, i piatti a tessere con foto, nome e prezzo. Un piatto consigliato porta
-  **Consigliato**; un piatto esaurito o non ordinabile resta a video in grigio, con **Esaurito**, e
-  non si tocca. Un articolo a peso ha il prezzo «al kg».
+- **Al centro**, i piatti a tessere con foto, nome, ingredienti e prezzo. Un piatto consigliato
+  porta **Consigliato**; un piatto esaurito o non ordinabile resta a video in grigio, con
+  **Esaurito**, e non si tocca. Un articolo a peso ha il prezzo «al kg».
 - **Il carrello** (a destra in orizzontale, in basso in verticale): *Non hai ancora scelto
   niente.*, oppure i pezzi e il totale (*1 pezzo · 3,00 €*), e **Vai al conto**.
 
@@ -109,6 +110,30 @@ con i pezzi, il totale e **Vai al conto**.
 
 **Annulla** con il carrello pieno chiede *Vuoi annullare l’ordine?* (**Sì** / **No**); con il
 carrello vuoto torna subito all'attesa.
+
+![Le tessere con gli ingredienti e gli allergeni](../assets/img/kiosk/percorso-tessere.png)
+
+**La tessera del piatto.** Sotto il nome gli **ingredienti**, al più su due righe (in una categoria
+dove nessun piatto li ha la riga non c'è). Accanto al prezzo le **icone degli allergeni**, al più
+tre: prima quelli che il piatto contiene, a tratto pieno, poi quelli di cui può contenere tracce,
+con l'icona **tratteggiata**. Se il piatto ne ha di più, o un allergene non ha l'icona, dopo le
+icone c'è **+n** (per esempio *+2*). Su una tessera stretta si tagliano le icone, mai il prezzo.
+Gli allergeni completi, con il nome, sono nel piatto.
+
+![La legenda degli allergeni](../assets/img/kiosk/percorso-allergeni.png)
+
+**Allergeni** apre la legenda: le icone degli allergeni dei piatti del menu, ognuna con il suo nome
+nella lingua del cliente, e in fondo *Icona tratteggiata: può contenere tracce*. Si chiude con
+**Chiudi** o con un tocco fuori, e si chiude da sola aprendo le lingue o un piatto.
+
+**Tema chiaro o scuro.** Il kiosk è scuro di partenza. Il titolare può scegliere il tema chiaro per
+tutti i kiosk, in cassa (Menu ▸ [Kiosk](../cassa/kiosk.md#linguetta-attesa) ▸ **Attesa** ▸
+**Tema chiaro**), oppure dare a un kiosk un tema suo, nella sua
+[configurazione](configurazione.md#tema). Un cambio dalla cassa arriva al kiosk quando torna
+all'attesa: il cliente che sta ordinando finisce con il tema di prima. Col tema chiaro l'attesa usa
+il **logo per il tema chiaro**, se c'è.
+
+![Il menu col tema chiaro](../assets/img/kiosk/percorso-tema-chiaro.png)
 
 ### 4. Piatto
 
@@ -181,8 +206,14 @@ Il numero si scrive con il tastierino (al più due cifre, da 1 a 99: *Scrivi un 
 - **Carta / bancomat**: il kiosk ha un POS, o un rendiresto con il POS;
 - **Contanti**: il kiosk ha un rendiresto;
 - **Pago alla cassa**: acceso sul servizio, oppure il kiosk non ha la stampante fiscale, oppure
-  nel carrello c'è un articolo a peso (*Con gli articoli a peso si paga alla cassa, dopo la
-  pesata.*).
+  non ha né POS né rendiresto, oppure nel carrello c'è un articolo a peso (*Con gli articoli a
+  peso si paga alla cassa, dopo la pesata.*).
+
+![Solo «Pago alla cassa»](../assets/img/kiosk/percorso-pagamento-cassa.png)
+
+Un kiosk senza POS né rendiresto propone solo **Pago alla cassa**, anche con «paga alla cassa»
+spento sul servizio: il cliente paga in cassa con il promemoria o con il suo numero. In quel caso,
+come per il kiosk senza stampante fiscale, l'ordine va in cucina solo dopo il pagamento.
 
 Toccato un modo, il kiosk manda l'ordine al servizio (*Invio in corso…*) e comincia l'incasso.
 Mentre paga, il cliente vede:
@@ -219,7 +250,7 @@ monitor di cucina. Sotto, che cosa fare:
 | Pagato, scontrino uscito, stampante fiscale nel kiosk | *Ritira lo scontrino* |
 | Pagato, scontrino uscito, stampante fiscale altrove | *Lo scontrino ti arriva con i piatti* |
 | Pagato, scontrino non ancora emesso, mangia qui | *Lo scontrino te lo consegniamo con i piatti* |
-| Pagato, scontrino non ancora emesso, porta via | *Ritira lo scontrino alla cassa* |
+| Pagato, scontrino non ancora emesso, porta via | *Lo scontrino te lo dà la cassa* |
 | Pago alla cassa, con la termica | *Vai alla cassa con questo foglio* e *Vai alla cassa per pagare entro 30 minuti* |
 | Pago alla cassa, senza termica o se la stampa non è uscita | *Di’ alla cassa il numero 27* |
 | In fondo, mangia qui | *Ti portiamo il vassoio al segnaposto 12* |
@@ -235,12 +266,22 @@ sotto il lettore per ritrovare l'ordine (vedi [Ordini dal kiosk](../cassa/ordini
 momento…*. La vista si chiude da sola dopo **10 secondi**, o con un tocco, e il kiosk torna
 all'attesa pronto per il cliente dopo.
 
+**Il tagliando del ritiro.** Chi porta via e ha pagato al kiosk riceve dalla termica un tagliando
+con «ORDINE», il numero in grande, «PORTA VIA» e *Ritira al banco quando chiamano il numero*, nella
+lingua del cliente, quando lo scontrino **non** esce sul kiosk: la stampante fiscale non è nel
+kiosk (interruttore **La stampante fiscale è in questo kiosk** spento, vedi
+[Configurazione](configurazione.md#stampante-termica)), oppure lo scontrino non è stato emesso, e
+allora il tagliando dice anche *Lo scontrino te lo dà la cassa*. Se lo scontrino esce sul kiosk il
+tagliando non serve: lo scontrino porta già il numero. Chi mangia qui non lo riceve (aspetta il
+vassoio al segnaposto), e senza termica resta il numero a video.
+
 ## Campi e indicatori
 
 | Elemento | Descrizione |
 |---|---|
-| **Kiosk n. 1** / **Kiosk n. 1 · demo** (attesa) | Il numero del kiosk; *demo* in modalità dimostrativa. |
+| **Kiosk n. 1** / **Kiosk n. 1 · demo** / **Kiosk n. 1 · solo alla cassa** (attesa) | Il numero del kiosk; *demo* in modalità dimostrativa; *solo alla cassa* quando il kiosk non ha né POS né rendiresto. |
 | **Consigliato** (tessera) | Piatto segnato consigliato nel menu. |
+| Icone degli allergeni e **+n** (tessera) | Al più tre allergeni del piatto, l'icona tratteggiata per le tracce; **+n** quelli che non ci stanno. |
 | **Esaurito** (tessera) | Piatto esaurito: resta in grigio e non si tocca. |
 | **… al kg** (tessera) | Articolo venduto a peso. |
 | **obbligatorio** / **facoltativo** · **al massimo N** (piatto) | Le regole del gruppo di varianti. |
@@ -257,6 +298,7 @@ all'attesa pronto per il cliente dopo.
 | **Accessibilità** | Porta il percorso nella metà bassa dello schermo, con testi grandi e alto contrasto, fino alla fine dell'ordine. |
 | **Mangio qui** / **Porto via** | Sceglie dove mangia il cliente. |
 | Tasto della lingua (menu) | Apre l'elenco delle lingue: il menu si rilegge nella lingua scelta. |
+| **Allergeni** (menu) / **Chiudi** | Apre e chiude la legenda delle icone degli allergeni. |
 | **Annulla** | Ricomincia da zero (con conferma se il carrello non è vuoto). |
 | Tocco su una tessera | Apre il piatto. |
 | **Aggiungi · prezzo** / **Aggiungi il menu · prezzo** | Mette nel carrello il piatto o il menu composto. |
@@ -305,7 +347,6 @@ carta.
 | *Kiosk da configurare: chiama il personale.* | Il kiosk non è collegato a nessun servizio. | Apri la configurazione e collega il servizio. |
 | *Le credenziali del servizio non sono valide: chiama il personale.* | Utente o password del kiosk rifiutati. | Correggili in configurazione. |
 | *Configurazione del kiosk da rifare: chiama il personale* | Il PIN del kiosk salvato sul dispositivo non si legge più. | Tieni premuto 3 secondi l'angolo in alto a sinistra e scegli un PIN nuovo. |
-| *Il kiosk non ha modi di pagamento: configura un POS o un rendiresto, oppure accendi «paga alla cassa».* | Il kiosk incassa ma non ha periferiche, e «paga alla cassa» è spento. | Scegli un POS o un rendiresto in configurazione, o fai accendere «paga alla cassa». |
 | *Il menu non si carica: riprova o ordina alla cassa.* | Il menu non è arrivato dal servizio dopo **Dove mangi?**. | Tocca **Riprova**; se insiste, controlla il servizio. |
 | *Il servizio non risponde: riprova fra poco o ordina alla cassa.* | Il servizio non ha risposto all'invio dell'ordine. | Riprova; se insiste, controlla il servizio. |
 | *Il menu è cambiato: controlla il tuo ordine.* / *Non più disponibili: …* | Mentre il cliente ordinava un piatto è finito o il menu è cambiato. | Il cliente controlla il carrello e sceglie altro. |

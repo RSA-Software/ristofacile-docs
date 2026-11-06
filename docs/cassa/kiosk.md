@@ -88,9 +88,12 @@ kiosk** o **Kiosk 2**) con **Annulla** e **Conferma**.
   **Aggiungi un'immagine**. Ogni immagine ha **Usa come logo** e **Togli**; quella scelta come logo
   porta il bollino **LOGO**.
 - **Logo**: l'anteprima del logo, **Carica un logo a parte** e **Nessun logo**.
+- **Logo per il tema chiaro (facoltativo)**: l'anteprima su un fondo chiaro, **Carica il logo per
+  il tema chiaro** e **Nessuno**.
 - **Colore del locale**: otto tinte da toccare (Verde, Arancione, Rosso, Bordeaux, Blu, Blu notte,
   Viola, Antracite), il campo **#RRGGBB** e l'anteprima del bottone del kiosk («Tocca per
   ordinare»).
+- **Tema chiaro**: l'interruttore del tema del locale.
 
 ### Linguetta Suggerimenti
 
@@ -124,9 +127,9 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | **Tavolo virtuale per «mangio qui»** / **per «porto via»** | Il tavolo su cui finiscono gli ordini di chi mangia nel locale e di chi porta via; può essere lo stesso per tutti e due. Il listino della sua sala decide i prezzi del kiosk. **Nessuno** = non impostato. Sotto: *Nel database un tavolo virtuale non ha un segno che lo distingua: sceglilo fra quelli che non usi in sala, per esempio di una sala «Kiosk».* |
 | Riquadro ambra sotto un tavolo | *Questo è anche il tavolo dell'asporto di questa cassa: usa un tavolo virtuale a parte.* Vedi le Note. |
 | **Cameriere delle righe del kiosk** | L'operatore a cui vanno le righe degli ordini del kiosk, oppure **Nessuno**. |
-| **«Paga alla cassa»** | *Il cliente può scegliere di pagare alla cassa invece che al kiosk.* Un kiosk senza stampante fiscale paga sempre alla cassa, anche con questo spento. |
+| **«Paga alla cassa»** | *Il cliente può scegliere di pagare alla cassa invece che al kiosk.* Sotto: *Spento: i clienti dei kiosk senza stampante fiscale o senza POS né rendiresto pagano comunque alla cassa, e i piatti vanno in cucina solo dopo il pagamento (quelli a peso subito, per la pesata). Per mandarli in cucina subito, accendilo e scegli «subito».* |
 | **Quando gli ordini «paga alla cassa» vanno in cucina** | Solo con «Paga alla cassa» acceso: **Subito, alla conferma dell'ordine** oppure **Dopo, quando l'ordine si incassa in cassa**. Gli ordini pagati al kiosk vanno in cucina appena pagati. |
-| **Minuti di scadenza** | Solo con «Paga alla cassa» acceso, da 1 a 1440 (di partenza 30): *Dopo questi minuti un ordine «paga alla cassa» non pagato e non in cucina si annulla da solo.* |
+| **Minuti di scadenza** | Da 1 a 1440 (di partenza 30), sempre a video: *Dopo questi minuti un ordine da pagare alla cassa, non pagato e non in cucina, si annulla da solo. Vale anche con «paga alla cassa» spento, per gli ordini dei kiosk senza stampante fiscale o senza POS né rendiresto.* |
 | **Pesi indicativi (kg)** | I pesi che il kiosk propone per gli articoli a peso, separati da punto e virgola, maggiori di 0 e fino a 100 kg (es. 0,1; 0,2; 0,5). In cassa poi si pesa il vero (vedi [Comanda](comanda.md#un-ordine-del-kiosk-con-gli-articoli-a-peso)). Vuoto = 0,1; 0,2; 0,3; 0,5; 1. |
 
 ### Kiosk
@@ -152,7 +155,9 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | **Immagini dell'attesa** | *Scorrono sul kiosk, una ogni 6 secondi, al posto delle foto dei piatti.* JPEG o PNG fino a 4 MB, al più 12 contando il logo. Senza immagini: *Nessuna immagine: il kiosk fa scorrere le foto dei piatti consigliati e delle sezioni.* |
 | **Immagine N · non più nel servizio** | L'immagine non c'è più sul servizio: toglila, o ricaricala. |
 | **Logo** | Il logo sta in una fascia in alto sul kiosk, al posto del nome del locale. Scelto fra le immagini: *Il logo sta nella fascia in alto ed è anche fra le immagini che scorrono.* Caricato a parte: *Il logo sta nella fascia in alto, sopra le immagini che scorrono.* Senza: *Nessun logo: in alto il kiosk mostra il nome del locale.* |
+| **Logo per il tema chiaro (facoltativo)** | *Per un logo scuro che sul fondo chiaro si vede meglio: i kiosk col tema chiaro usano questo, gli altri il logo qui sopra.* Senza: *Nessuno: col tema chiaro il kiosk usa il logo qui sopra.* Come il logo, sta fuori dalle 12 foto dell'attesa. |
 | **Colore del locale** | *Il colore dei bottoni e delle fasce del kiosk: una delle tinte, o scritto a mano.* Si scrive come **#RRGGBB** (es. #18794F); vuoto = il verde del kiosk. Il testo sopra il colore è bianco o nero, quello che si legge meglio. |
+| **Tema chiaro** | *Spento: i kiosk sono scuri, come la cassa. Ogni kiosk segue il tema del locale, a meno che nella sua configurazione non ne sia scelto un altro.* Con un servizio non ancora aggiornato, al posto dell'interruttore (e dei pulsanti del logo per il tema chiaro): *Il servizio non lo conosce ancora: aggiornalo per sceglierlo.* |
 
 ### Suggerimenti
 
@@ -190,6 +195,8 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | **Togli** (immagine) | Toglie l'immagine; il file si cancella dal servizio dopo **Salva** (*Immagine tolta: Salva per renderla effettiva.*). Un'immagine appena caricata e mai salvata si cancella subito (*Immagine tolta.*). |
 | **Carica un logo a parte** | Carica un logo che sta solo nella fascia in alto e non scorre: *Logo caricato: Salva per renderlo effettivo.* |
 | **Nessun logo** | Toglie il logo: in alto torna il nome del locale. |
+| **Carica il logo per il tema chiaro** / **Nessuno** | Carica il logo che usano i kiosk col tema chiaro (*Logo per il tema chiaro caricato: Salva per renderlo effettivo.*), oppure lo toglie (*Logo per il tema chiaro tolto: Salva per renderlo effettivo.*). |
+| Interruttore **Tema chiaro** | Sceglie il tema del locale; vale con **Salva**. |
 | Tocco su una tinta | Scrive il suo colore nel campo **#RRGGBB**. |
 | **Piatto** (Suggerimenti) | Apre l'elenco degli articoli per scegliere il piatto, poi ne legge gli abbinamenti. |
 | **Aggiungi un abbinamento** | Apre l'elenco degli articoli: quello scelto si aggiunge in fondo e si salva subito. |
@@ -249,7 +256,9 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 2. Ripeti per le altre immagini (al più 12, logo compreso).
 3. Per il logo tocca **Usa come logo** su una delle immagini, oppure **Carica un logo a parte**.
 4. Tocca una tinta, o scrivi il colore in **#RRGGBB**.
-5. Tocca **Salva**. Il kiosk mostra le immagini e il logo alla prossima lettura dello stato (entro
+5. Se vuoi i kiosk chiari, accendi **Tema chiaro** e, se il logo è chiaro e sul fondo chiaro non si
+   vede, tocca **Carica il logo per il tema chiaro** e scegli una versione scura del logo.
+6. Tocca **Salva**. Il kiosk mostra le immagini e il logo alla prossima lettura dello stato (entro
    un minuto).
 
 ### Suggerire le bibite con un piatto
@@ -331,6 +340,15 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 - **La voce Kiosk c'è sempre** nel menu, anche senza kiosk: senza licenze lo dice il riquadro ambra.
 - **Ordinabile dal kiosk.** Un piatto si toglie dai kiosk nella composizione del [Menu](menu.md),
   con **Ordinabile dal kiosk**.
+- **«Paga alla cassa» e gli ordini a peso.** Non cambiare «paga alla cassa» né l'invio in cucina
+  mentre ci sono ordini del kiosk con articoli a peso ancora aperti: il servizio decide quando
+  mandare in cucina il resto dell'ordine al momento dell'incasso, con le impostazioni di quel
+  momento. Un ordine nato con «paga alla cassa» spento (la riga a peso già in cucina, le altre in
+  attesa del pagamento) e incassato dopo aver acceso «paga alla cassa» con **subito** lascia le
+  altre righe in attesa del via, che per gli ordini del kiosk di solito nessuno dà. Se succede, dai
+  il via a mano dalla [comanda](comanda.md) o dal palmare.
+- **Il tema** cambiato da qui arriva a un kiosk quando torna all'attesa: il cliente che sta
+  ordinando finisce con il tema di prima.
 
 ## Vedi anche
 
