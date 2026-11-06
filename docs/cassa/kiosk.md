@@ -275,7 +275,12 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 
 1. Linguetta **Segnaposti**: scrivi **Dal numero** e **Al numero** (es. da 1 a 12).
 2. Tocca **Stampa**: si apre il PDF, sei segnaposti per foglio A4, ciascuno con il numero e il QR.
-3. Stampalo, ritaglia i segnaposti e mettili accanto ai kiosk.
+3. Stampalo su fogli **A4**, con una stampante normale, ritaglia i segnaposti e mettili accanto ai
+   kiosk.
+
+!!! warning "I segnaposti non si stampano sulla termica"
+    Il PDF è fatto per il foglio A4. Stampato su una termica da 80 mm si riduce alla larghezza del
+    rotolo: il QR viene di 8-9 mm di lato e il numero si legge a fatica.
 
 ## Controlli e messaggi
 

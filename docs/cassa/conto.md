@@ -372,7 +372,9 @@ DOCUMENTO** o con l'addebito in camera no.
     L'elenco delle carte da stornare, come la carta addebitata su un conto aperto, sta solo sulla
     postazione che ha addebitato: il palmare e le altre casse non lo vedono, e **reinstallare l'app
     lo cancella**. L'elenco non scade; la carta addebitata su un conto aperto si ricorda per sette
-    giorni. Uscendo da un conto con la carta addebitata e non chiusa la cassa avvisa: *La carta e'
+    giorni. Se l'elenco salvato sulla postazione si rovina, la cassa lo legge vuoto e le carte di
+    prima non vengono più ricordate: ne resta una copia nei dati dell'app, che l'assistenza può
+    leggere. Uscendo da un conto con la carta addebitata e non chiusa la cassa avvisa: *La carta e'
     gia' stata addebitata per € … su questo conto, che resta aperto: rientra nel conto da questa
     cassa per chiuderlo (o per dire che l'hai stornata). Il palmare e le altre casse non lo sanno.*
 

@@ -160,9 +160,11 @@ servizio. Si cambiano dalla cassa, Menu ▸ **Kiosk**: le etichette esatte e i p
 | **Minuti dei numeri pronti**, **Anche gli asporti della cassa** | Monitor | Vedi [Chiamate](../cassa/chiamate.md#prima-di-cominciare). |
 
 !!! note "Il numero dell'ordine sullo scontrino"
-    Lo scontrino di un ordine del kiosk porta in testa il numero e dove va, per esempio
-    «ORDINE 27 - SEGNAPOSTO 12» o «ORDINE 27 - PORTA VIA». Questa riga la stampano **solo le
-    stampanti fiscali RCH**: sulle altre marche lo scontrino esce senza.
+    Lo scontrino di un ordine del kiosk porta il numero e dove va, per esempio
+    «ORDINE 27 - SEGNAPOSTO 12» o «ORDINE 27 - PORTA VIA», in una riga **in fondo**, dopo i piatti e
+    prima del totale, da qualunque stampante esca (quella del kiosk o la cassa che chiude il conto).
+    La stampano le stampanti fiscali **Epson**, **RCH**, **3i**, **DTR** e **Axon**; con **Custom** e
+    **Ditron** lo scontrino esce senza.
 
 ## Pulsanti e comandi
 
@@ -262,7 +264,8 @@ Vale quando sul servizio è acceso il segnaposto col QR per questo kiosk (in **D
    al pagamento con quel numero.
 
 I cartoncini dei segnaposto con il QR si stampano dalla cassa, Menu ▸ **Kiosk**, linguetta
-**Segnaposti** (vedi [Kiosk](../cassa/kiosk.md#stampare-i-segnaposti)). Il **QR del segnaposto** si
+**Segnaposti**, su fogli A4 e non sulla termica (vedi
+[Kiosk](../cassa/kiosk.md#stampare-i-segnaposti)). Il **QR del segnaposto** si
 accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 
 ### Chiudere l'app
@@ -293,7 +296,7 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 | *Nessun rendiresto configurato sul servizio.* | Sul servizio non c'è nessuna cassa automatica. | Registrala dalla cassa, in Impostazioni ▸ **Cassa automatica**. |
 | *Il rendiresto scelto (id 1) non c'è più sul servizio: scegline un altro.* | La macchina è stata tolta dal servizio. | Scegli un'altra macchina, o **Nessun rendiresto**. |
 | *La stampante USB scelta (…) non è collegata.* | La termica USB è staccata o spenta. | Ricollegala e tocca **Rileggi gli elenchi**. |
-| *Permesso USB negato: collega di nuovo la stampante e tocca «Consenti».* | Su Android non hai dato il permesso alla stampante. | Stacca e ricollega la stampante e tocca **Consenti**. |
+| *Permesso USB negato: collega di nuovo la stampante e tocca «Consenti».* | Su Android non hai dato il permesso alla stampante. | Stacca e ricollega la stampante e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Queste credenziali sono di un kiosk: si stampa solo sulle stampanti configurate nel servizio.* | La stampante scelta non è (più) fra quelle registrate sul servizio. | Registrala dalla cassa e sceglila di nuovo dall'elenco. |
 
 ## Note
@@ -316,8 +319,12 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
   Windows la vede fra le periferiche ma non crea la stampante, aggiungila da Impostazioni ▸
   **Bluetooth e dispositivi** ▸ **Stampanti e scanner**, sulla sua porta USB (per esempio
   `USB005`), con il driver del produttore o con **Generic / Text Only**: il kiosk le manda i comandi
-  ESC/POS così come sono, e il driver non conta.
-  <!-- DA VERIFICARE: la stampa sulla termica USB su Android (permesso al primo collegamento e al ricollegamento) non e' ancora stata provata su una stampante vera: manca il cavo OTG (Piano 9, Task 7). Su Windows provata il 5/11 con una ORDERMAN ST30. -->
+  ESC/POS così come sono, e il driver non conta. Su Android la termica collegata al tablet (con il
+  cavo OTG) compare nell'elenco con il suo nome e il suo codice, per esempio *Printer-80
+  (1FC9:2016)*; al primo **Usa questa stampante** Android chiede *Consentire all'app RistoKiosk di
+  accedere a Printer-80?*: tocca **OK**. Provata su Windows e su Android con una ORDERMAN ST30:
+  stampa di prova, promemoria e tagliandi.
+  <!-- DA VERIFICARE: su Android il permesso quando la stampante si stacca e si ricollega, e se il kiosk si apre da solo al collegamento della ORDERMAN (filtro USB del fix 8 del Piano 9, prova non ancora conclusa). -->
 
 ## Vedi anche
 

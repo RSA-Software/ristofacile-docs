@@ -254,8 +254,9 @@ dall'esecuzione automatica di Windows), la seconda si chiude da sola.
 6. Con una **stampante termica USB**: collegala (su un tablet con una sola porta USB serve un cavo o
    un adattatore OTG), poi nella configurazione del kiosk scegli
    **USB (collegata al kiosk)**, la stampante, e tocca **Usa questa stampante** (o
-   **Stampa di prova**). Android chiede se permettere a RistoKiosk di usare la periferica: tocca
-   **Consenti**.
+   **Stampa di prova**). Android chiede se permettere a RistoKiosk di usare la periferica
+   (*Consentire all'app RistoKiosk di accedere a …?*): tocca **OK** (su altri tablet il tasto può
+   chiamarsi **Consenti**).
 
 L'app da sola tiene il tablet in orizzontale, nasconde le barre di sistema (si riaffacciano solo
 per un attimo strisciando dal bordo), tiene lo schermo acceso e ignora il tasto Indietro.
@@ -268,7 +269,7 @@ il suo PIN (o la sequenza).
 **Stampa di prova**), all'avvio dell'app e **ogni volta che la stampante scelta si ricollega**. Di
 solito capita all'avvio o quando colleghi la stampante, con il personale davanti; ma se la
 stampante si stacca e si riattacca durante un ordine (per esempio un cavo che fa contatto) la
-richiesta di Android può comparire anche davanti al cliente: in quel caso tocca tu **Consenti**.
+richiesta di Android può comparire anche davanti al cliente: in quel caso tocca tu **OK**.
 Le stampe del cliente non aspettano il permesso: se manca, non escono e il kiosk va avanti lo
 stesso (vedi [Pagamenti](pagamenti.md#note)).
 
@@ -318,7 +319,7 @@ lavora come prima.
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Queste credenziali sono di un kiosk: operazione non permessa.* | Con l'utente di un kiosk si è tentata un'operazione che non è del kiosk (per esempio da una cassa collegata con quell'utente). | Collega la cassa con il suo utente; l'utente del kiosk serve solo al kiosk. |
-| *Permesso USB della stampante non dato: dallo dalla configurazione del kiosk (scegli la stampante o «Stampa di prova»).* | Su Android la stampante USB non ha ancora il permesso. | Apri la configurazione, scegli la stampante o tocca **Stampa di prova** e tocca **Consenti**. |
+| *Permesso USB della stampante non dato: dallo dalla configurazione del kiosk (scegli la stampante o «Stampa di prova»).* | Su Android la stampante USB non ha ancora il permesso. | Apri la configurazione, scegli la stampante o tocca **Stampa di prova** e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Non è stato possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di sistema.* (codice 0x80004005, su fondo blu) | Su Windows l'Accesso assegnato è nella forma a una sola app, che non avvia RistoKiosk. | Applica il file a più app (vedi [Windows](#windows)) e riavvia. |
 | *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Windows](#windows)) e riavvia. |
 

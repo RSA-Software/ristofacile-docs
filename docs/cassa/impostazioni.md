@@ -231,6 +231,22 @@ va persa.
     La stampante fiscale che avevi configurato prima diventa da sola la **predefinita**, con
     numero uguale al numero di cassa della ditta (oppure 1). Non devi rifare niente.
 
+!!! warning "Numeri di cassa e scontrini in sospeso"
+
+    Uno scontrino rimasto **in sospeso** (la stampante non ha detto se è uscito, vedi
+    [Conto](conto.md)) si riprende sulla stampante che ha **il suo numero di cassa**: il numero è
+    l'identità della cassa. Per questo:
+
+    - se elimini una stampante e ne aggiungi un'altra con **lo stesso numero**, anche su un altro
+      registratore, gli scontrini in sospeso della prima si riprendono sulla nuova;
+    - se dopo l'aggiornamento cambi il **numero di cassa della ditta** nel gestionale, la stampante
+      nata dall'aggiornamento non è più quella «di prima»: i suoi scontrini escono con il suo numero
+      (che per la licenza può contare come una cassa in più), e gli scontrini in sospeso di prima
+      dell'aggiornamento si riprendono sulla stampante che ha il numero nuovo.
+
+    Prima di eliminare una stampante o di cambiare il numero di cassa della ditta, risolvi gli
+    scontrini in sospeso.
+
 Le **Chiusure giornaliere** si fanno solo dalla cassa: il palmare non ha i pulsanti della Z.
 
 ### Pagamento con carta
@@ -297,6 +313,9 @@ La cassa automatica è solo della cassa: il palmare non la usa.
 
 - **CashDro.** La cassa le parla in https. La CashDro non eroga denaro su comando: un rimborso o un resto che la macchina non ha dato si consegnano a mano.
   <!-- DA VERIFICARE: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota). -->
+- **Una macchina, un programma.** La stessa CashDro o lo stesso Cashlogy Connector non vanno
+  pilotati insieme dal gestionale Facile e da RistoFacile: i due programmi si rubano le operazioni.
+  Se nel locale c'è anche Facile, la macchina la usa uno dei due.
 - **Cashlogy.** La cassa non parla con la macchina ma con il **Cashlogy Connector**, il programma di Cashlogy installato sul PC collegato alla macchina. **Il Connector va avviato su quel PC**: la cassa non lo avvia. La finestra di pagamento la apre il Connector, e un incasso già avviato si annulla solo da quella finestra. Se il Connector è stato riavviato e gli incassi non partono, tocca **Verifica stato**: rimette in contatto la cassa con il Connector.
   <!-- DA VERIFICARE: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector. -->
 
