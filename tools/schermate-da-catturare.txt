@@ -11,6 +11,7 @@ cassa/fatture-pdf.png
 cassa/fatture-scheda.png
 cassa/impostazioni-ditta.png
 cassa/impostazioni-fattura.png
+cassa/kiosk-attesa.png
 cassa/menu-fisso.png
 cassa/menu-online-sincronizzazione.png
 cassa/menu-online-stile.png
@@ -28,6 +29,7 @@ cassa/vendita-al-banco-peso.png
 cassa/vendita-al-banco-prezzo-libero.png
 introduzione/licenza-demo.png
 kds/monitor-operatore.png
+kiosk/percorso-accessibilita.png
 palmare/comanda-dettagli.png
 palmare/comanda-menu-fisso.png
 palmare/comanda-tablet.png

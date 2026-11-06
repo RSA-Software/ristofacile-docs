@@ -152,7 +152,7 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 
 | Elemento | Descrizione |
 |---|---|
-| **Immagini dell'attesa** | *Scorrono sul kiosk, una ogni 6 secondi, al posto delle foto dei piatti.* JPEG o PNG fino a 4 MB, al più 12 contando il logo. Senza immagini: *Nessuna immagine: il kiosk fa scorrere le foto dei piatti consigliati e delle sezioni.* |
+| **Immagini dell'attesa** | Le foto che scorrono sul kiosk, al più 12; il logo e il logo per il tema chiaro non contano. Il testo sopra le conta, per esempio *3 foto dell'attesa, al più 12: scorrono sul kiosk, una ogni 6 secondi, al posto delle foto dei piatti. JPEG o PNG fino a 4 MB; il logo e il logo per il tema chiaro non contano.* Senza foto: *Nessuna foto dell'attesa: il kiosk fa scorrere le foto dei piatti consigliati e delle sezioni. …* Misura consigliata: 1080×1920 per un kiosk in verticale, 1920×1080 in orizzontale. |
 | **Immagine N · non più nel servizio** | L'immagine non c'è più sul servizio: toglila, o ricaricala. |
 | **Logo** | Il logo sta in una fascia in alto sul kiosk, al posto del nome del locale. Scelto fra le immagini: *Il logo sta nella fascia in alto ed è anche fra le immagini che scorrono.* Caricato a parte: *Il logo sta nella fascia in alto, sopra le immagini che scorrono.* Senza: *Nessun logo: in alto il kiosk mostra il nome del locale.* |
 | **Logo per il tema chiaro (facoltativo)** | *Per un logo scuro che sul fondo chiaro si vede meglio: i kiosk col tema chiaro usano questo, gli altri il logo qui sopra.* Senza: *Nessuno: col tema chiaro il kiosk usa il logo qui sopra.* Come il logo, sta fuori dalle 12 foto dell'attesa. |
@@ -201,7 +201,7 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | **Piatto** (Suggerimenti) | Apre l'elenco degli articoli per scegliere il piatto, poi ne legge gli abbinamenti. |
 | **Aggiungi un abbinamento** | Apre l'elenco degli articoli: quello scelto si aggiunge in fondo e si salva subito. |
 | Frecce su / giù, **Togli** (abbinamento) | Spostano o tolgono l'abbinamento; si salva subito: *Abbinamenti salvati: il kiosk li propone dalla prossima lettura del menu.* |
-| **Stampa** (Segnaposti) | Prepara il PDF dei segnaposti scelti, sei per foglio A4, e lo mostra (finestra **Segnaposti dei kiosk**) per stamparlo. |
+| **Stampa** (Segnaposti) | Prepara il PDF dei segnaposti scelti, sei per foglio A4, e lo mostra (finestra **Segnaposti dei kiosk**). Il suo **Stampa**, su Windows, apre il PDF con l'app dei PDF del PC, da cui si stampa (vedi [Fatture](fatture.md)). |
 | **Salva** | Salva la configurazione: *Salvato: i kiosk sono accesi.*, *Salvato: i kiosk sono accesi ma in pausa.* oppure *Salvato: i kiosk sono spenti.* |
 
 ## Come si fa
@@ -253,7 +253,9 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 ### Scegliere le immagini dell'attesa e il logo
 
 1. Linguetta **Attesa**: tocca **Aggiungi un'immagine** e scegli un JPEG o un PNG.
-2. Ripeti per le altre immagini (al più 12, logo compreso).
+2. Ripeti per le altre immagini (al più 12 foto; il logo e il logo per il tema chiaro non
+   contano). Su Windows la finestra dei file si apre nella cartella dell'ultima immagine scelta, la
+   prima volta in **Immagini**.
 3. Per il logo tocca **Usa come logo** su una delle immagini, oppure **Carica un logo a parte**.
 4. Tocca una tinta, o scrivi il colore in **#RRGGBB**.
 5. Se vuoi i kiosk chiari, accendi **Tema chiaro** e, se il logo è chiaro e sul fondo chiaro non si
@@ -303,8 +305,10 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | *Immagine troppo grande: 6720 KB, al massimo 4096 KB.* | File oltre 4 MB. | Riducilo. |
 | *Immagine non valida: il file è vuoto.* | File vuoto. | Scegline un altro. |
 | *Questa immagine c'è già fra quelle dell'attesa.* | Stessa immagine caricata due volte. | Nessuna azione. |
-| *Ci sono già 12 immagini dell'attesa: eliminane una prima di aggiungerne un'altra.* | Limite raggiunto. | Togli un'immagine. |
-| *Ci sono già 12 immagini dell'attesa, contando quelle tolte: il servizio le cancella col Salva. Salva per liberare il posto, poi aggiungi l'immagine.* | Le immagini tolte occupano il posto fino al **Salva**. | Tocca **Salva**, poi aggiungi. |
+| *Ci sono già 12 foto dell'attesa: eliminane una prima di aggiungerne un'altra.* | Limite raggiunto: compare prima che si apra la finestra dei file. | Togli una foto. |
+| *Il servizio ha già 16 immagini del kiosk, contando quelle tolte: le cancella col Salva. Salva per liberare il posto, poi aggiungi l'immagine.* | Fra foto, loghi e immagini tolte o sostituite e non ancora salvate, il servizio ne tiene al più 16: le tolte occupano il posto fino al **Salva**. | Tocca **Salva**, poi aggiungi. |
+| *Il servizio ha già 16 immagini del kiosk, contando quelle caricate o tolte e non ancora salvate: salva, o eliminane una, prima di aggiungerne un'altra.* | Lo stesso limite, detto dal servizio. | Come sopra. |
+| *Ci sono 13 foto dell'attesa, al più 12: togline una e salva di nuovo.* | Al **Salva** le foto dell'attesa sono più di 12. | Togli le foto in più e tocca **Salva**. |
 | *Un'immagine dell'attesa non c'era più nel servizio (eliminata da un'altra postazione, o caricata più di un'ora fa e mai salvata): l'ho tolta dalla configurazione. Ricaricala se serve.* | Al **Salva** un'immagine non c'era più sul servizio. | Ricaricala, se serve. |
 | *Per caricare le immagini dei kiosk serve il permesso del menu online in scrittura.* | Permesso mancante. | Fai caricare a chi ha il permesso. |
 | *Un piatto ha al più 4 abbinamenti.* | Quinto abbinamento. | Togline uno. |

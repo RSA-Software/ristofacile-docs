@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-06 — **708 messaggi**.
+Aggiornato al 2026-11-06 — **712 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -68,10 +68,10 @@ Aggiornato al 2026-11-06 — **708 messaggi**.
 | *Categoria non trovata in anagrafica.* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | La categoria scelta non esiste più. | Scegline un'altra. |
 | *C'e' un incasso in corso su questo conto: finiscilo prima, poi apri l'avviso.* | Cassa: [Ordini dal kiosk](../cassa/ordini-kiosk.md) | Hai toccato **Apri** su un avviso mentre il conto sotto sta incassando (POS, cassa automatica, scontrino). Il conto resta. | Finisci l'incasso, poi tocca di nuovo **Apri**. |
 | **Chiudi senza documento** — *Il tavolo verra' chiuso e liberato per € 42,00 SENZA emettere nessuno scontrino. Procedere?* | Palmare: [Conto](../palmare/conto.md) | Conferma della chiusura senza documento. | **Chiudi** o **Annulla**. |
+| *Ci sono 13 foto dell'attesa, al più 12: togline una e salva di nuovo.* | Cassa: [Kiosk](../cassa/kiosk.md) | Al **Salva** le foto dell'attesa sono più di 12. | Togli le foto in più e tocca **Salva**. |
 | *Ci sono articoli a peso da pesare: conferma i pesi prima di incassare.* | Cassa: [Comanda](../cassa/comanda.md) | **CONTO** su un ordine del kiosk con righe **DA PESARE**. Compare anche dal conto, che riporta qui. | Pesa le righe con **DETTAGLI** ▸ **CONFERMA IL PESO**, poi tocca **CONTO**. |
 | *Ci sono articoli a peso da pesare: conferma i pesi prima di incassare.* | Cassa: [Conto](../cassa/conto.md) | Ordine del kiosk con righe **DA PESARE**: la cassa torna alla comanda. | Pesa le righe (vedi [Comanda](../cassa/comanda.md#un-ordine-del-kiosk-con-gli-articoli-a-peso)). |
-| *Ci sono già 12 immagini dell'attesa, contando quelle tolte: il servizio le cancella col Salva. Salva per liberare il posto, poi aggiungi l'immagine.* | Cassa: [Kiosk](../cassa/kiosk.md) | Le immagini tolte occupano il posto fino al **Salva**. | Tocca **Salva**, poi aggiungi. |
-| *Ci sono già 12 immagini dell'attesa: eliminane una prima di aggiungerne un'altra.* | Cassa: [Kiosk](../cassa/kiosk.md) | Limite raggiunto. | Togli un'immagine. |
+| *Ci sono già 12 foto dell'attesa: eliminane una prima di aggiungerne un'altra.* | Cassa: [Kiosk](../cassa/kiosk.md) | Limite raggiunto: compare prima che si apra la finestra dei file. | Togli una foto. |
 | *Ci sono modifiche non salvate: la pagina non si rilegge finché non salvi.* | Cassa: [Kiosk](../cassa/kiosk.md) | Sei tornato sulla schermata con modifiche non salvate. | Tocca **Salva**, oppure esci e rientra dopo averle annullate. |
 | *Codice non disponibile: «…» e' gia' usato da un altro articolo. Scegline un altro.* | Cassa: [Articoli](../cassa/articoli.md) | Il codice è stato preso nel frattempo (anche da un'altra postazione). | Scegli un altro codice. |
 | *Codice non disponibile: il N e' gia' in uso.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Alla creazione hai scelto un codice già usato. | Scegli un altro codice. |
@@ -213,6 +213,8 @@ Aggiornato al 2026-11-06 — **708 messaggi**.
 | *Il server licenze ha rifiutato la richiesta (codice* … *). Contatta l'assistenza.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Risposta inattesa del server. | Contatta l'assistenza con il codice. |
 | *Il server licenze non risponde. Controlla la connessione.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Manca Internet o il server non risponde. | Controlla la rete e riprova. |
 | *Il server licenze non risponde. Controlla la connessione.* | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | Attivazione senza Internet. | Collega il dispositivo a Internet e riprova. |
+| *Il servizio ha già 16 immagini del kiosk, contando quelle caricate o tolte e non ancora salvate: salva, o eliminane una, prima di aggiungerne un'altra.* | Cassa: [Kiosk](../cassa/kiosk.md) | Lo stesso limite, detto dal servizio. | Come sopra. |
+| *Il servizio ha già 16 immagini del kiosk, contando quelle tolte: le cancella col Salva. Salva per liberare il posto, poi aggiungi l'immagine.* | Cassa: [Kiosk](../cassa/kiosk.md) | Fra foto, loghi e immagini tolte o sostituite e non ancora salvate, il servizio ne tiene al più 16: le tolte occupano il posto fino al **Salva**. | Tocca **Salva**, poi aggiungi. |
 | *Il servizio non conosce ancora i messaggi alla cucina: va aggiornato.* | Cassa: [Messaggi alla cucina](../cassa/messaggi.md) | Il servizio installato è più vecchio della cassa: **INVIA** resta spento. | Fai aggiornare il servizio RistoFacile. |
 | *Il servizio non conosce ancora i messaggi alla cucina: va aggiornato.* | Palmare: [Messaggi alla cucina](../palmare/messaggi.md) | Il servizio installato è di una versione precedente. **INVIA** resta spento. | Fai aggiornare il servizio. |
 | *Il servizio non ha ancora dato una risposta definitiva: il kiosk continua a provare e mostra l'esito appena arriva.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | **Riprova** senza risposta entro 30 secondi. | Aspetta: l'esito arriva da solo quando il servizio risponde. |
@@ -676,6 +678,7 @@ Aggiornato al 2026-11-06 — **708 messaggi**.
 | *"Spaghetti" non ha un prezzo in listino: entra in comanda ma NON comparira' sul conto. Sistema il listino prima di incassare.* | Cassa: [Comanda](../cassa/comanda.md) | Il piatto non ha prezzo nel listino della sala. | Inserisci il prezzo in [Articoli](../cassa/articoli.md) prima di incassare. |
 | *Stai emettendo una fattura: e' quello il documento del conto. Per chiudere senza documento torna su Scontrino.* | Cassa: [Conto](../cassa/conto.md) | **CHIUDI SENZA DOCUMENTO** con **Fattura** scelta. | Torna su **Scontrino**. |
 | *Stai emettendo una fattura: e' quello il documento del conto. Per chiudere senza documento torna su Scontrino.* | Palmare: [Conto](../palmare/conto.md) | Chiusura senza documento con la fattura scelta. | Scegli **Scontrino**. |
+| *Stampa del documento non riuscita.* / *Stampa del documento non riuscita: il PDF non si e' aperto.* | Cassa: [Fatture](../cassa/fatture.md) | Il PDF non si è potuto preparare o aprire. | Riprova; se insiste, chiudi e riapri il documento. |
 | *Stampa della copia di cortesia fallita.* / *La fattura e' stata emessa ma non si e' potuta aprire a schermo.* | Cassa: [Conto](../cassa/conto.md) | Problema di stampa o di visualizzazione dopo l'emissione. | La fattura è emessa: ristampala o aprila dalla schermata [Fatture](../cassa/fatture.md). |
 | *Stampa della fattura non riuscita.* | Cassa: [Fatture](../cassa/fatture.md) | La stampa del PDF dalla schermata del documento non è partita. | Controlla la stampante di sistema e riprova. |
 | *Stampa di prova non riuscita.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | La stampante non ha stampato. | Controlla che sia accesa, in rete e con la carta. |
@@ -732,4 +735,5 @@ Aggiornato al 2026-11-06 — **708 messaggi**.
 | **Varianti senza gruppo** — «Sono rimaste da un gruppo eliminato e in comanda non compaiono. Aprine una e scegli il suo nuovo gruppo, oppure eliminala.» | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Hai toccato **Senza gruppo**. | Ricolloca o elimina le varianti. |
 | *Verifica della stampante fiscale fallita.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il registratore non risponde o segnala un errore. | Leggi il dettaglio e controlla il registratore. |
 | *Verifica stato in corso...* | Cassa: [Centri di produzione](../cassa/centri-di-produzione.md) | La verifica è partita. | Attendi l'esito (pochi secondi). |
+| *Windows non ha aperto il PDF: serve un'app per i PDF (per esempio Edge o Acrobat) impostata come predefinita.* | Cassa: [Fatture](../cassa/fatture.md) | **Stampa** su un PC senza un'app predefinita per i PDF. | Imposta un'app per i PDF in Windows (App predefinite) e tocca di nuovo **Stampa**. |
 | *«…» è già fra gli utenti dei kiosk.* | Cassa: [Kiosk](../cassa/kiosk.md) | Utente già in elenco. | Nessuna azione. |

@@ -95,7 +95,7 @@ questi comandi:
 |---|---|
 | Frecce sinistra/destra | Pagina precedente/successiva, con l'indicazione *pagina/totale*. Compaiono solo se la fattura ha più di una pagina. |
 | Lente − / lente + | Riduce o ingrandisce il documento; in mezzo la percentuale di ingrandimento. |
-| **Stampa** | Stampa il PDF. <!-- DA VERIFICARE: su Windows si apre la finestra di stampa del sistema per scegliere la stampante? Comportamento su tablet non Windows. --> |
+| **Stampa** | Su Windows apre il PDF con l'app dei PDF del PC (per esempio Edge o Acrobat): da lì si stampa con la sua finestra di stampa, scegliendo la stampante. Sugli altri dispositivi stampa il PDF da questa finestra. <!-- DA VERIFICARE: comportamento della stampa sul tablet Android e su iPad (provata solo su Windows). --> |
 | **Chiudi** | Torna all'elenco delle fatture. |
 
 ## Come si fa
@@ -135,6 +135,8 @@ questi comandi:
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
 | *Nessuna fattura in questo periodo.* | Nel periodo (e con la ricerca scritta) non ci sono fatture della cassa. | Allarga il periodo o cancella la ricerca e premi **Invio**. |
+| *Windows non ha aperto il PDF: serve un'app per i PDF (per esempio Edge o Acrobat) impostata come predefinita.* | **Stampa** su un PC senza un'app predefinita per i PDF. | Imposta un'app per i PDF in Windows (App predefinite) e tocca di nuovo **Stampa**. |
+| *Stampa del documento non riuscita.* / *Stampa del documento non riuscita: il PDF non si e' aperto.* | Il PDF non si è potuto preparare o aprire. | Riprova; se insiste, chiudi e riapri il documento. |
 | *Elenco delle fatture non caricato.* | Il servizio non ha risposto o ha dato errore; sotto il titolo c'è il dettaglio. | Controlla il collegamento al servizio e riprova cambiando una data o premendo **Invio** nella ricerca. |
 | *Manca l'indirizzo: questo cliente non ne ha uno in anagrafica, scrivilo qui.* | Hai toccato **Manda** con il campo dell'indirizzo vuoto. | Scrivi l'indirizzo e tocca di nuovo **Manda**. |
 | *Mando di nuovo la fattura n. … a …?* | Conferma prima dell'invio. | **Manda** per spedire, **Annulla** per lasciar stare. |

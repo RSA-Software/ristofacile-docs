@@ -300,7 +300,8 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 
 - **Tutto schermo.** Su Windows il kiosk si apre a tutto schermo sempre sullo **schermo
   principale**: sul totem, lo schermo del kiosk deve essere quello principale (vedi
-  [Installazione](installazione.md#windows)).
+  [Installazione](installazione.md#windows)). Se la finestra esce dal tutto schermo, o viene
+  spostata su un altro schermo, il kiosk torna da solo a tutto schermo, sullo schermo dove si trova.
 - **I due minuti.** La configurazione e la pagina del PIN lasciate senza tocchi per due minuti
   tornano all'attesa; anche scrivere nei campi conta come un tocco.
 - **Il PIN è solo di questo kiosk.** Si salva sul dispositivo e non si confronta con i PIN degli

@@ -79,9 +79,12 @@ tolto dalla pausa torna ad accogliere da solo.
 
 ![Accessibilità](../assets/img/kiosk/percorso-accessibilita.png)
 
-Il tasto **Accessibilità** dell'attesa porta tutto il percorso nella **metà bassa** dello schermo,
-raggiungibile da chi è seduto, con testi più grandi e colori ad alto contrasto (giallo e nero).
-Vale fino alla fine di quell'ordine: il cliente dopo trova il kiosk normale.
+Il tasto **Accessibilità** dell'attesa porta il percorso nella **metà bassa** dello schermo,
+raggiungibile da chi è seduto, con testi più grandi e colori ad alto contrasto (fondo nero, testi
+bianchi, avvisi gialli), uguali con il tema chiaro e con quello scuro. L'attesa resta a tutto
+schermo: le foto nella metà alta, e nella metà bassa il logo, **Tocca per ordinare**, le lingue e
+**Accessibilità**; dalla vista dopo tutto il resto sta nella metà bassa. Vale fino alla fine di
+quell'ordine: il cliente dopo trova il kiosk normale.
 
 ### 2. Dove mangi?
 

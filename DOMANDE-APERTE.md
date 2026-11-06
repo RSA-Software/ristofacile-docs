@@ -27,9 +27,9 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/articoli.md`
 
-- [ ] riga 100: la scritta dice di scrivere il prezzo dopo il primo salvataggio, ma il campo è già modificabile e il codice salva il prezzo anche al primo salvataggio. Quale delle due è voluta?
-- [ ] riga 248: chi carica l'elenco degli allergeni e come?
-- [ ] riga 266: confermare che un articolo modificato da due casse offline non dia avviso di conflitto (vince l'ultima sincronizzazione).
+- [ ] riga 102: la scritta dice di scrivere il prezzo dopo il primo salvataggio, ma il campo è già modificabile e il codice salva il prezzo anche al primo salvataggio. Quale delle due è voluta?
+- [ ] riga 250: chi carica l'elenco degli allergeni e come?
+- [ ] riga 268: confermare che un articolo modificato da due casse offline non dia avviso di conflitto (vince l'ultima sincronizzazione).
 
 ## Asporto e domicilio
 
@@ -78,7 +78,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 33: confermare che l'annullo/nota di credito si fa dal gestionale Facile e con quale maschera, per poterlo citare.
 - [ ] riga 42: dove si configura l'invio delle email del servizio (server SMTP, mittente) e se è a carico dell'installatore.
-- [ ] riga 98: su Windows si apre la finestra di stampa del sistema per scegliere la stampante? Comportamento su tablet non Windows.
+- [ ] riga 98: comportamento della stampa sul tablet Android e su iPad (provata solo su Windows).
 
 ## Impostazioni
 
@@ -217,7 +217,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kiosk/configurazione.md`
 
-- [ ] riga 319: la stampa sulla termica USB su Android (permesso al primo collegamento e al ricollegamento) non e' ancora stata provata su una stampante vera: manca il cavo OTG (Piano 9, Task 7). Su Windows provata il 5/11 con una ORDERMAN ST30.
+- [ ] riga 320: la stampa sulla termica USB su Android (permesso al primo collegamento e al ricollegamento) non e' ancora stata provata su una stampante vera: manca il cavo OTG (Piano 9, Task 7). Su Windows provata il 5/11 con una ORDERMAN ST30.
 
 ## Pagamenti, per il personale
 

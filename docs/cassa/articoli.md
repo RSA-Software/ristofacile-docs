@@ -51,8 +51,10 @@ scrive il peso e la riga si calcola da sola.
   attesa») e l'esito dell'ultima sincronizzazione. A destra il pulsante **Sincronizza**, la cui
   icona gira mentre la sincronizzazione è in corso.
 - **Sotto**, la casella **Cerca per codice o descrizione** e il pulsante **+ Nuovo articolo**.
-- **Al centro, la griglia** con le colonne **CODICE**, **DESCRIZIONE** e **STATO**; nella colonna
-  **STATO** compare **In attesa** per gli articoli modificati e non ancora inviati. Gli articoli sono
+- **Al centro, la griglia** con le colonne **CODICE**, **DESCRIZIONE**, **FOTO** e **STATO**; in
+  **FOTO** l'icona dell'immagine dice che l'articolo ha la foto (con il mouse sopra, *L'articolo ha
+  la foto*), anche senza collegamento; nella colonna **STATO** compare **In attesa** per gli
+  articoli modificati e non ancora inviati. Gli articoli sono
   in ordine di codice (i codici numerici in ordine di valore: 9 prima di 100); con una ricerca, in
   ordine di pertinenza (prima il codice uguale, poi i codici che cominciano così, poi le
   descrizioni).
@@ -123,7 +125,7 @@ prima: allergeni e traduzioni si agganciano al codice dell'articolo.»
 
 | Elemento | Descrizione |
 |---|---|
-| **Immagine** | L'anteprima della foto, oppure *Nessuna immagine per questo articolo.* Massimo 5 MB. |
+| **Immagine** | L'anteprima della foto, grande quanto la colonna, oppure *Nessuna immagine per questo articolo.* Massimo 5 MB. Sotto, sempre: *La foto si salva subito, senza Salva.*; dopo **Scegli immagine** o **Rimuovi** compare per qualche secondo **Foto salvata.** o **Foto tolta.** |
 | **Allergeni** | Apre la pagina degli allergeni. |
 | **Descrizioni in altre lingue** | Apre la pagina delle traduzioni. |
 
@@ -163,7 +165,7 @@ Il codice della nuova voce è il primo libero; la voce creata risulta subito sce
 | **Duplica** | Apre una scheda nuova (**Copia di …**) con i dati dell'articolo; scrivi il nuovo codice e salva. Al salvataggio vengono copiati anche prezzo, immagine, allergeni e traduzioni. |
 | **Elimina articolo** | Elimina l'articolo, dopo conferma. |
 | **+** accanto a IVA, Reparto, Cat. Merceologica | Apre la finestra per creare la voce al volo; **Crea** la salva, **Annulla** chiude. |
-| **Scegli immagine** / **Rimuovi** | Carica una foto dal dispositivo / toglie la foto (dopo conferma). L'immagine si salva subito, senza **Salva**. |
+| **Scegli immagine** / **Rimuovi** | Carica una foto dal dispositivo / toglie la foto (dopo conferma). L'immagine si salva subito, senza **Salva**, e il segno nella colonna **FOTO** dell'elenco si aggiorna. Su Windows la finestra dei file si apre nella cartella dell'ultima immagine scelta, la prima volta in **Immagini**. |
 | Tocco su un allergene | Ne cambia lo stato. **Salva** registra e torna alla scheda; **Annulla** torna senza registrare. |
 | **+ Aggiungi lingua** | Apre la scelta della lingua (finestra **Scegli la lingua**). Le lingue già presenti e l'italiano non si possono scegliere. |
 | **Rimuovi** (lingua) | Toglie la lingua; la cancellazione avviene con **Salva**. |
@@ -265,7 +267,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
   inviata.
   <!-- DA VERIFICARE: confermare che un articolo modificato da due casse offline non dia avviso di conflitto (vince l'ultima sincronizzazione). -->
 - Immagine, allergeni e traduzioni **non** funzionano senza collegamento: si salvano direttamente
-  sul servizio.
+  sul servizio. La foto dell'articolo è anche quella del piatto sul kiosk.
 - L'eliminazione non cancella davvero l'articolo: lo segna come eliminato, e sparisce dagli elenchi.
 - Gli articoli creati dalla cassa per vendere i menu interi non compaiono in questo elenco.
 - Gli allergeni si consultano in [Comanda](comanda.md) e possono comparire nel

@@ -115,8 +115,8 @@ in automatico all'accensione, senza password. La procedura è provata su **Windo
 
 1. Installa RistoKiosk sul PC (di partenza in `C:\Facile\RistoKiosk`).
 2. Imposta lo schermo del totem come **schermo principale** di Windows. Il kiosk si apre a tutto
-   schermo sempre sullo schermo principale; spostarlo su un altro schermo con la tastiera lo fa
-   uscire dal tutto schermo.
+   schermo sempre sullo schermo principale; spostato su un altro schermo con la tastiera, torna da
+   solo a tutto schermo su quello.
 3. Controlla che nel menu Start di tutti gli utenti ci sia il collegamento **RistoKiosk**, per
    esempio `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\RistoKiosk.lnk`: il suo
    percorso serve nel file del passo seguente.
