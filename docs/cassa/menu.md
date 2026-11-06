@@ -210,7 +210,7 @@ Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.
   in sottofondo (vedi [Articoli](articoli.md)).
 - **Casse non aggiornate.** Una cassa di una versione precedente non conosce **Ordinabile dal
   kiosk**: quando salva un piatto lo riaccende, e il piatto torna sui kiosk. Aggiorna tutte le casse
-  insieme (vedi [Installazione del kiosk](../kiosk/installazione.md#aggiornare-servizio-casse-e-kiosk)).
+  insieme (vedi [Installazione del kiosk](../kiosk/installazione.md#aggiornare-un-impianto-al-kiosk)).
 - Gli articoli che il kiosk propone dopo un piatto (gli abbinamenti) non si scelgono qui ma in
   Menu ▸ [Kiosk](kiosk.md#linguetta-suggerimenti) ▸ **Suggerimenti**.
 

@@ -31,6 +31,8 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
 ## Prima di cominciare
 
 - Il servizio RistoFacile installato e acceso nel locale, raggiungibile dalla rete del kiosk.
+- L'archivio del locale su **PostgreSQL**: RistoFacile e il kiosk lavorano su PostgreSQL; gli
+  archivi c-tree non sono supportati.
 - Un **posto Kiosk** libero sulla licenza RistoFacile del locale, oppure la modalità dimostrativa
   (vedi [Licenza digitale](../introduzione/licenza.md)).
 - Per un totem Windows: un PC con Windows 10 o 11 e lo schermo del totem; per un tablet: Android usato in
@@ -38,7 +40,10 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
 - Le periferiche che si useranno: POS, rendiresto, stampante termica (di rete o USB), lettore di
   QR 2D a tastiera per i segnaposto.
 
-<!-- DA VERIFICARE: con quale pacchetto si installa RistoKiosk su Windows e su Android (installatore in preparazione, Piano 9). -->
+**Il programma.** Il pacchetto d'installazione del kiosk è in preparazione: per ora RistoKiosk lo
+installa chi ha installato il servizio (rivenditore o assistenza). Sul totem Windows va nella
+cartella `C:\Facile\RistoKiosk`, con i componenti di Windows che servono anche alla cassa; sul
+tablet Android si installa l'app RistoKiosk. Da lì in poi valgono i passi di questa pagina.
 
 ## La schermata
 
@@ -103,6 +108,8 @@ in automatico all'accensione, senza password. La procedura è provata su **Windo
     **a una sola app** scritta a mano non lo avvia: all'accesso compare su fondo blu *Non è stato
     possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di
     sistema.* con il codice di errore 0x80004005.
+
+![L'errore della modalità chiosco a una sola app](../assets/img/kiosk/installazione-windows-errore.png)
 
 **Prima di bloccare il PC:**
 
@@ -201,6 +208,8 @@ amministratore qualsiasi:
   Gestione attività, niente desktop. Dopo **Blocca**, alla schermata di blocco basta **Accedi**
   sull'account **Kiosk**, senza password, e si torna al kiosk com'era.
 
+![Ctrl+Alt+Canc sul totem](../assets/img/kiosk/installazione-windows-ctrl-alt-canc.png)
+
 Per questo sul totem non lasciare una tastiera collegata: con il pulsante di spegnimento chi la
 usa può spegnere o riavviare il PC. Tutto quello che serve al personale passa dalla configurazione
 del kiosk, con il PIN.
@@ -230,10 +239,16 @@ dall'esecuzione automatica di Windows), la seconda si chiude da sola.
    - accendi **Blocca dispositivo dopo lo sblocco app**, così per sbloccare l'app serve il PIN o la
      sequenza del tablet. Se il tablet non ha ancora un blocco schermo, Android ti chiede di
      sceglierne uno (PIN, sequenza o password): senza, chiunque sblocca l'app.
+
+    ![Blocco app su schermo, su un tablet Lenovo](../assets/img/kiosk/installazione-android-blocco.png)
+
 4. Apri RistoKiosk e bloccalo sullo schermo dal menu delle app recenti: tocca il tasto
    **Panoramica** (il quadrato), poi l'**icona** di RistoKiosk in cima alla sua anteprima e
    **Blocca su schermo**. Sul Lenovo, nello stesso menu, «Blocco su app» è un'altra cosa: non serve.
    Android mostra *L'app è bloccata sullo schermo*: tocca **OK**.
+
+    ![Blocca su schermo, dalle app recenti](../assets/img/kiosk/installazione-android-recenti.png)
+
 5. Prova che il blocco ha preso: tocca **Home**. Il kiosk deve restare a video. Se compare la
    schermata delle app, il blocco non è partito: ripeti il punto 4.
 6. Con una **stampante termica USB**: collegala (su un tablet con una sola porta USB serve un cavo o
@@ -260,14 +275,19 @@ stesso (vedi [Pagamenti](pagamenti.md#note)).
 **La rete.** Il kiosk Android parla con il servizio in `http` sulla rete del locale: nella
 configurazione si scrive l'indirizzo con `http://`, come per le casse.
 
-### Aggiornare servizio, casse e kiosk
+### Aggiornare un impianto al kiosk
 
-Con l'aggiornamento che porta in cassa la voce **Kiosk** e gli **Ordini dal kiosk**:
+Con l'aggiornamento che porta il kiosk, e in cassa la voce **Kiosk** e gli **Ordini dal kiosk**:
 
 1. **Ferma i kiosk** prima di cominciare (sul kiosk, **Esci dall'app**), a un'ora senza clienti: i
    kiosk restano senza ordini finché l'aggiornamento non è finito.
 2. Aggiorna **prima il servizio**. Le schermate nuove della cassa e del kiosk chiedono al servizio
-   cose che un servizio vecchio non sa.
+   cose che un servizio vecchio non sa: per esempio un kiosk nuovo senza POS né rendiresto, con un
+   servizio vecchio, non riesce a mandare i clienti a pagare alla cassa, e la cassa nuova nasconde
+   il tema e il logo per il tema chiaro (*Il servizio non lo conosce ancora: aggiornalo per
+   sceglierlo.*). Controlla anche che **l'ora** del computer del servizio, e del computer del
+   database PostgreSQL se è un altro, sia giusta e uguale sui due: le scadenze degli ordini del
+   kiosk si calcolano con tutti e due.
 3. Aggiorna **i kiosk insieme al servizio**: un kiosk della versione di prima, con il servizio nuovo,
    non riesce a segnalare un pagamento da verificare (il servizio rifiuta la segnalazione). Lasciali
    comunque senza ordini.
@@ -282,7 +302,9 @@ Con l'aggiornamento che porta in cassa la voce **Kiosk** e gli **Ordini dal kios
      già rimborsato, e il servizio registra il rimborso come fatto.
 5. Sulla TV del monitor in sala ricarica la pagina **una volta a mano** (riaprila, o tasto F5): la
    pagina di prima non sa ricaricarsi da sola. Dagli aggiornamenti successivi si ricarica da sola
-   quando il servizio cambia (vedi [Chiamate](../cassa/chiamate.md#il-monitor-in-sala)).
+   quando il servizio cambia (vedi [Chiamate](../cassa/chiamate.md#il-monitor-in-sala)). Subito
+   dopo l'aggiornamento il monitor può mostrare di nuovo, per i minuti dei numeri pronti, i
+   numeri pronti o consegnati delle ultime 12 ore: succede una volta sola.
 6. In cassa apri Menu ▸ [Kiosk](../cassa/kiosk.md) e controlla la configurazione: quello che prima
    scriveva l'assistenza (kiosk, dispositivi, utenti web) ora si vede e si cambia da lì.
 7. Per ultimi **riaccendi i kiosk**: avvia RistoKiosk e, se li avevi spenti, accendi **Kiosk accesi**
