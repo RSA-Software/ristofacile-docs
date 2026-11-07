@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-06 — **713 messaggi**.
+Aggiornato al 2026-11-07 — **715 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -136,6 +136,7 @@ Aggiornato al 2026-11-06 — **713 messaggi**.
 | **Elimina variante** — *Eliminare definitivamente la variante "…"? Vanno tolti prima i suoi prezzi.* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Hai toccato **Elimina variante**. | **Elimina** o **Annulla**. |
 | *Eliminazione non riuscita: …* | Cassa: [Articoli](../cassa/articoli.md) | Il servizio ha rifiutato l'eliminazione. | Leggi il motivo. |
 | *Eliminazione salvata in locale. Verra' applicata quando torna la connessione.* | Cassa: [Articoli](../cassa/articoli.md) | Eliminazione senza rete. | Nessuna azione. |
+| Errore di Windows Installer alla fine del setup del kiosk, poi *Installazione terminata prematuramente* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Il blocco del PC non è riuscito: il setup torna indietro e il PC resta com'era. | Leggi il motivo in `C:\ProgramData\RSA\RistoFacile\kiosk-setup.log` e chiama l'assistenza. |
 | *Esistono gia' tutti i tavoli di questo intervallo.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Tutti i numeri dell'intervallo sono già usati. | Scegli un altro intervallo. |
 | *Esportazione del QR non riuscita.* | Cassa: [Menu online](../cassa/menu-online.md) | Il file non si è potuto scrivere (o **JPG** toccato su un dispositivo diverso dalla cassa Windows). | Leggi il dettaglio; usa **PDF**. |
 | *Fattura …: documento prodotto ma non apribile a schermo.* | Cassa: [Fatture](../cassa/fatture.md) | Il PDF è stato prodotto ma la schermata del documento non si è aperta. | Riprova **Apri il PDF**. |
@@ -596,7 +597,7 @@ Aggiornato al 2026-11-06 — **713 messaggi**.
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Comanda](../cassa/comanda.md) | Troppe varianti accese nello stesso gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Varianti](../cassa/varianti.md) | Hai cercato di accendere una variante oltre il massimo del gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Salse".* | Palmare: [Comanda](../palmare/comanda.md) | Hai superato il massimo di un gruppo di varianti. | Spegni una variante prima di accenderne un'altra. |
-| *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Windows](../kiosk/installazione.md#windows)) e riavvia. |
+| *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso: il blocco è stato fatto a mano senza spegnerla. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Il blocco a mano](../kiosk/installazione.md#il-blocco-a-mano)) e riavvia. |
 | *Questa immagine c'è già fra quelle dell'attesa.* | Cassa: [Kiosk](../cassa/kiosk.md) | Stessa immagine caricata due volte. | Nessuna azione. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Cassa: [Comanda](../cassa/comanda.md) | Omaggio su una parte di una pizza composta. | Offri la riga principale. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Palmare: [Comanda](../palmare/comanda.md) | Omaggio su una parte di un piatto composto. | Offri il piatto intero. |
@@ -696,6 +697,7 @@ Aggiornato al 2026-11-06 — **713 messaggi**.
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Cassa: [Conto](../cassa/conto.md) | Il servizio non ha una stampante fiscale. Il conto resta aperto. | Configura la stampante fiscale, oppure chiudi senza documento e documenta più tardi dallo Storico. |
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Palmare: [Conto](../palmare/conto.md) | Nessuna stampante fiscale. | Chiudi senza documento e documenta poi dalla cassa ([Storico conti](../cassa/storico-conti.md)). |
 | *Su questo ordine c'è denaro del kiosk: usa «Annulla e rimborsa»* | Cassa: [Ordini dal kiosk](../cassa/ordini-kiosk.md) | **Annulla l'ordine** su un ordine con denaro del kiosk. | Usa **Annulla e rimborsa**, o decidi prima la verifica. |
+| *Su questo PC il kiosk non si può bloccare: serve Windows 11 Pro, Enterprise o Education, versione 22H2 o successiva. Si possono installare le altre postazioni.* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Nel setup è stata scelta la postazione kiosk su Windows Home, su Windows 10 o su una versione di Windows 11 prima della 22H2. | Usa un PC con Windows 11 Pro (o Enterprise, Education) aggiornato, oppure aggiorna l'edizione di Windows. |
 | *Su questo tavolo c'e' un pagamento dal telefono: il conto si chiude con lo scontrino o la fattura, non senza documento, in camera o diviso.* | Cassa: [Self order](../cassa/self-order.md) | Nel conto ci sono pagamenti dal telefono, o un pagamento in corso. | Chiudi con **Scontrino** o **Fattura**. |
 | *Su questo tavolo c'e' un pagamento dal telefono o dal kiosk: il conto si chiude con lo scontrino o la fattura, non senza documento, in camera o diviso.* | Cassa: [Conto](../cassa/conto.md) | **CHIUDI SENZA DOCUMENTO**, **Camera** o **Dividi** su un conto con pagamenti del telefono o del kiosk. | Chiudi con **Scontrino** o **Fattura**. Un ordine pagato al kiosk si annulla solo con **Annulla e rimborsa**. |
 | *Su questo tavolo e' gia' stato battuto qualcosa: si chiude dal conto, non si libera.* | Cassa: [Comanda](../cassa/comanda.md) | LIBERA TAVOLO su un tavolo con righe. | Chiudi il tavolo dal [Conto](../cassa/conto.md). |

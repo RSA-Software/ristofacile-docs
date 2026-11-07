@@ -35,15 +35,16 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
   archivi c-tree non sono supportati.
 - Un **posto Kiosk** libero sulla licenza RistoFacile del locale, oppure la modalità dimostrativa
   (vedi [Licenza digitale](../introduzione/licenza.md)).
-- Per un totem Windows: un PC con Windows 10 o 11 e lo schermo del totem; per un tablet: Android, in
+- Per un totem Windows: un PC con **Windows 11 Pro, Enterprise o Education, versione 22H2 o
+  successiva** (non Windows Home, non Windows 10) e lo schermo del totem; per un tablet: Android, in
   orizzontale o in verticale (un tablet da 10 pollici va bene).
 - Le periferiche che si useranno: POS, rendiresto, stampante termica (di rete o USB), lettore di
   QR 2D a tastiera per i segnaposto.
 
-**Il programma.** Il pacchetto d'installazione del kiosk è in preparazione: per ora RistoKiosk lo
-installa chi ha installato il servizio (rivenditore o assistenza). Sul totem Windows va nella
-cartella `C:\Facile\RistoKiosk`, con i componenti di Windows che servono anche alla cassa; sul
-tablet Android si installa l'app RistoKiosk. Da lì in poi valgono i passi di questa pagina.
+**Il programma.** Sul totem Windows RistoKiosk si installa con il setup di RistoFacile
+(**RistoFacileSetup.exe**), scegliendo la postazione kiosk: il setup lo mette in
+`C:\Facile\RistoKiosk` e blocca il PC (vedi [Windows](#windows)). Sul tablet Android si installa
+l'app RistoKiosk. Da lì in poi valgono i passi di questa pagina.
 
 ## La schermata
 
@@ -100,7 +101,10 @@ Con l'elenco vuoto nessuno è ristretto e il kiosk lo segnala in configurazione.
 
 Il totem si blocca con l'**Accesso assegnato** di Windows nella forma **a più app**, con
 RistoKiosk come unica app permessa e avviata da sola. Windows crea un account **Kiosk** che entra
-in automatico all'accensione, senza password. La procedura è provata su **Windows 11 Pro**.
+in automatico all'accensione, senza password. Lo fa il **setup di RistoFacile** con la postazione
+kiosk, che spegne anche la Game Bar di Windows (senza, a ogni accensione comparirebbe davanti al
+kiosk *Questa app è stata bloccata dall'amministratore di sistema.*). La procedura è provata su
+**Windows 11 Pro**.
 
 !!! warning "Non usare la procedura guidata delle Impostazioni"
     **Impostazioni ▸ Account ▸ Altri utenti ▸ Chiosco** propone solo le app dello Store e Microsoft
@@ -111,15 +115,83 @@ in automatico all'accensione, senza password. La procedura è provata su **Windo
 
 ![L'errore della modalità chiosco a una sola app](../assets/img/kiosk/installazione-windows-errore.png)
 
-**Prima di bloccare il PC:**
+**Installare il kiosk:**
 
-1. Installa RistoKiosk sul PC (di partenza in `C:\Facile\RistoKiosk`).
-2. Imposta lo schermo del totem come **schermo principale** di Windows. Il kiosk si apre a tutto
+1. Imposta lo schermo del totem come **schermo principale** di Windows. Il kiosk si apre a tutto
    schermo sempre sullo schermo principale; spostato su un altro schermo con la tastiera, torna da
    solo a tutto schermo su quello.
-3. Controlla che nel menu Start di tutti gli utenti ci sia il collegamento **RistoKiosk**, per
-   esempio `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\RistoKiosk.lnk`: il suo
-   percorso serve nel file del passo seguente.
+2. Entra in Windows con un account **amministratore** e avvia **RistoFacileSetup.exe**.
+3. Alla scelta del tipo di postazione tocca **Postazione kiosk: solo il kiosk self-service,
+   collegato al Server. Il PC si blocca sul kiosk (Windows 11 Pro).**, poi **Avanti** e **Installa**.
+   Se Windows non è adatto compare *Su questo PC il kiosk non si può bloccare: serve Windows 11 Pro,
+   Enterprise o Education, versione 22H2 o successiva. Si possono installare le altre postazioni.*,
+   e il setup non va avanti con il kiosk.
+4. Alla fine Windows chiede di riavviare il PC: rispondi **Sì**.
+
+Se il blocco non riesce, il setup si ferma con un errore di Windows Installer e torna indietro: il PC
+resta com'era, senza kiosk. Il motivo è scritto in `C:\ProgramData\RSA\RistoFacile\kiosk-setup.log`.
+
+**Il primo avvio nel chiosco**, dopo il riavvio:
+
+1. Dopo il riavvio entra da solo l'account **Kiosk** e si apre RistoKiosk a tutto schermo, senza
+   barra delle applicazioni.
+2. Scegli il PIN del kiosk e collega il kiosk al servizio (vedi
+   [Configurazione](configurazione.md#il-primo-avvio)). Le impostazioni valgono per l'account
+   **Kiosk**: quelle fatte prima con un altro account non le vede.
+3. Tocca **Torna all'attesa**.
+4. Riavvia ancora il PC: deve tornare da solo su *Tocca per ordinare*, senza che nessuno tocchi
+   niente. RistoKiosk parte 10-15 secondi dopo l'avvio di Windows.
+
+**Cosa può fare chi ha una tastiera.** Sul totem, con l'Accesso assegnato:
+
+- **Alt+Tab**, **Windows+D**, **Windows+R**, **Ctrl+Maiusc+Esc** e **Alt+F4** non fanno niente;
+- il tasto **Windows** apre un menu Start ridotto, con la sola icona di RistoKiosk, la ricerca
+  (che non accetta testo) e il pulsante di spegnimento, e per quel momento ricompare la barra;
+- **Ctrl+Alt+Canc** mostra solo **Blocca** e **Annulla**, più accessibilità e spegnimento: niente
+  Gestione attività, niente desktop. Dopo **Blocca**, alla schermata di blocco basta **Accedi**
+  sull'account **Kiosk**, senza password, e si torna al kiosk com'era.
+
+![Ctrl+Alt+Canc sul totem](../assets/img/kiosk/installazione-windows-ctrl-alt-canc.png)
+
+Per questo sul totem non lasciare una tastiera collegata: con il pulsante di spegnimento chi la
+usa può spegnere o riavviare il PC. Tutto quello che serve al personale passa dalla configurazione
+del kiosk, con il PIN.
+
+**Uscire dal kiosk.** Con **Esci dall'app** (vedi
+[Configurazione](configurazione.md#chiudere-lapp)) RistoKiosk si chiude e resta il **desktop
+vuoto**: solo lo sfondo, senza icone, barra o menu col tasto destro, e Windows non riapre il
+kiosk da solo. Per riaprirlo: tasto **Windows** e l'icona **RistoKiosk**, oppure riavvia il PC.
+
+**Lavorare sul PC.** Premi **Ctrl+Alt+Canc**, tocca **Blocca** e, alla schermata di blocco,
+scegli l'account dell'amministratore. Il kiosk non si apre per l'amministratore: parte solo
+nell'account **Kiosk**.
+
+**Aggiornare il totem.** Con **RistoFacileAggiornamento.exe** (o RistoFacileSetup.exe), dall'account
+dell'amministratore, davanti al totem o da remoto:
+
+1. Fallo a un'ora senza clienti: l'aggiornamento **chiude il kiosk**, anche se è aperto nell'account
+   **Kiosk**, e un ordine a metà si perde. Prima di cominciare compare la pagina **Aggiornamento del
+   kiosk**: *Durante l'aggiornamento il kiosk di questo PC si chiude: farlo a un'ora senza clienti. Alla
+   fine il PC va riavviato e il kiosk riparte da solo.*
+2. Alla fine Windows chiede di riavviare il PC (se ci sono altri utenti collegati lo dice): rispondi **Sì**.
+3. Dopo il riavvio il kiosk riparte da solo, ancora bloccato, con il suo PIN e il suo collegamento.
+
+Da remoto, con uno strumento di assistenza come AnyDesk o TeamViewer **installato come servizio**
+(accesso non presidiato), non serve permettere niente nell'Accesso assegnato: lo strumento lavora
+anche con il kiosk bloccato e alla schermata di accesso. Il riavvio fa cadere il collegamento:
+ricollegati e controlla che il kiosk sia ripartito. Un aggiornamento lanciato senza schermate
+riavvia il PC da solo alla fine.
+
+**Togliere il kiosk.** Da **Impostazioni ▸ App ▸ App installate ▸ RistoFacile**: con **Modifica** togli
+**Kiosk**, oppure disinstalla RistoFacile. Il setup toglie il blocco e rimette la Game Bar com'era: al
+riavvio torna la schermata di accesso normale. Windows cancella l'account **Kiosk** ma lascia la sua
+cartella in `C:\Users` (per esempio `kioskUser0`), che si può cancellare a mano. Se poi rimetti il kiosk,
+Windows crea un account **Kiosk** nuovo: PIN del kiosk e collegamento al servizio vanno rifatti.
+
+#### Il blocco a mano
+
+Solo se il setup non si può usare (per esempio con «Tutto», dove il kiosk non si blocca per non
+coprire la cassa). Gli stessi passi li fa il setup con la postazione kiosk.
 
 **Il file dell'Accesso assegnato.** Con il Blocco note salva questo testo come
 `C:\Facile\kiosk.xml`. Se RistoKiosk o il suo collegamento stanno in un'altra cartella, correggi i
@@ -188,43 +260,10 @@ amministratore qualsiasi:
     dall'amministratore di sistema.*: Windows prova ad aprire la Game Bar e l'Accesso assegnato la
     blocca.
 
-**Il primo avvio nel chiosco:**
+Per togliere il blocco a mano rifai l'applicazione con, al posto della seconda riga del file
+`applica-kiosk.ps1`, la riga `$o.Configuration = $null`.
 
-1. Riavvia il PC: entra da solo l'account **Kiosk** e si apre RistoKiosk a tutto schermo, senza
-   barra delle applicazioni.
-2. Scegli il PIN del kiosk e collega il kiosk al servizio (vedi
-   [Configurazione](configurazione.md#il-primo-avvio)). Le impostazioni valgono per l'account
-   **Kiosk**: quelle fatte prima con un altro account non le vede.
-3. Tocca **Torna all'attesa**.
-4. Riavvia ancora il PC: deve tornare da solo su *Tocca per ordinare*, senza che nessuno tocchi
-   niente. RistoKiosk parte 10-15 secondi dopo l'avvio di Windows.
-
-**Cosa può fare chi ha una tastiera.** Sul totem, con l'Accesso assegnato:
-
-- **Alt+Tab**, **Windows+D**, **Windows+R**, **Ctrl+Maiusc+Esc** e **Alt+F4** non fanno niente;
-- il tasto **Windows** apre un menu Start ridotto, con la sola icona di RistoKiosk, la ricerca
-  (che non accetta testo) e il pulsante di spegnimento, e per quel momento ricompare la barra;
-- **Ctrl+Alt+Canc** mostra solo **Blocca** e **Annulla**, più accessibilità e spegnimento: niente
-  Gestione attività, niente desktop. Dopo **Blocca**, alla schermata di blocco basta **Accedi**
-  sull'account **Kiosk**, senza password, e si torna al kiosk com'era.
-
-![Ctrl+Alt+Canc sul totem](../assets/img/kiosk/installazione-windows-ctrl-alt-canc.png)
-
-Per questo sul totem non lasciare una tastiera collegata: con il pulsante di spegnimento chi la
-usa può spegnere o riavviare il PC. Tutto quello che serve al personale passa dalla configurazione
-del kiosk, con il PIN.
-
-**Uscire dal kiosk.** Con **Esci dall'app** (vedi
-[Configurazione](configurazione.md#chiudere-lapp)) RistoKiosk si chiude e resta il **desktop
-vuoto**: solo lo sfondo, senza icone, barra o menu col tasto destro, e Windows non riapre il
-kiosk da solo. Per riaprirlo: tasto **Windows** e l'icona **RistoKiosk**, oppure riavvia il PC.
-
-**Lavorare sul PC.** Premi **Ctrl+Alt+Canc**, tocca **Blocca** e, alla schermata di blocco,
-scegli l'account dell'amministratore. Per togliere il blocco rifai **Applicare il blocco** con, al
-posto della seconda riga del file `applica-kiosk.ps1`, la riga `$o.Configuration = $null`.
-
-Su un PC RistoKiosk gira in una sola copia: se parte una seconda volta (per esempio anche
-dall'esecuzione automatica di Windows), la seconda si chiude da sola.
+Su un PC RistoKiosk gira in una sola copia: se parte una seconda volta, la seconda si chiude da sola.
 
 ### Android
 
@@ -330,7 +369,9 @@ lavora come prima.
 | *Queste credenziali sono di un kiosk: operazione non permessa.* | Con l'utente di un kiosk si è tentata un'operazione che non è del kiosk (per esempio da una cassa collegata con quell'utente). | Collega la cassa con il suo utente; l'utente del kiosk serve solo al kiosk. |
 | *Permesso USB della stampante non dato: dallo dalla configurazione del kiosk (scegli la stampante o «Stampa di prova»).* | Su Android la stampante USB non ha ancora il permesso. | Apri la configurazione, scegli la stampante o tocca **Stampa di prova** e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Non è stato possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di sistema.* (codice 0x80004005, su fondo blu) | Su Windows l'Accesso assegnato è nella forma a una sola app, che non avvia RistoKiosk. | Applica il file a più app (vedi [Windows](#windows)) e riavvia. |
-| *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Windows](#windows)) e riavvia. |
+| *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso: il blocco è stato fatto a mano senza spegnerla. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Il blocco a mano](#il-blocco-a-mano)) e riavvia. |
+| *Su questo PC il kiosk non si può bloccare: serve Windows 11 Pro, Enterprise o Education, versione 22H2 o successiva. Si possono installare le altre postazioni.* | Nel setup è stata scelta la postazione kiosk su Windows Home, su Windows 10 o su una versione di Windows 11 prima della 22H2. | Usa un PC con Windows 11 Pro (o Enterprise, Education) aggiornato, oppure aggiorna l'edizione di Windows. |
+| Errore di Windows Installer alla fine del setup del kiosk, poi *Installazione terminata prematuramente* | Il blocco del PC non è riuscito: il setup torna indietro e il PC resta com'era. | Leggi il motivo in `C:\ProgramData\RSA\RistoFacile\kiosk-setup.log` e chiama l'assistenza. |
 
 ## Note
 
@@ -347,7 +388,8 @@ lavora come prima.
     già in cucina. Un ordine da verificare si decide prima con **Il denaro è entrato?**.
 - **Uscire dall'app** si può solo dalla configurazione, con **Esci dall'app**: vedi
   [Configurazione](configurazione.md#chiudere-lapp). Per lavorare sul PC si passa all'account
-  dell'amministratore (vedi [Windows](#windows)); sul tablet va tolto il blocco dell'app.
+  dell'amministratore (vedi [Windows](#windows)): il kiosk non si apre per l'amministratore; sul tablet
+  va tolto il blocco dell'app.
 - **Il kiosk non legge il QR con la fotocamera**: per i segnaposto col QR serve un lettore 2D
   esterno.
 
