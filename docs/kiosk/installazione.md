@@ -188,6 +188,13 @@ riavvio torna la schermata di accesso normale. Windows cancella l'account **Kios
 cartella in `C:\Users` (per esempio `kioskUser0`), che si può cancellare a mano. Se poi rimetti il kiosk,
 Windows crea un account **Kiosk** nuovo: PIN del kiosk e collegamento al servizio vanno rifatti.
 
+**Riparare il kiosk.** Una riparazione di RistoFacile su un kiosk bloccato fa come un aggiornamento:
+chiude il kiosk, rimette il blocco e alla fine riavvia il PC.
+
+**Cassa e kiosk sullo stesso PC.** Su un PC bloccato sul kiosk la **Modifica** non aggiunge la cassa, il
+monitor di cucina o il servizio: il setup si ferma con un messaggio e non cambia niente. Per avere il
+kiosk insieme al resto installa la postazione **Tutto**, che non blocca il PC.
+
 #### Il blocco a mano
 
 Solo se il setup non si può usare (per esempio con «Tutto», dove il kiosk non si blocca per non
