@@ -286,7 +286,12 @@ Su un PC RistoKiosk gira in una sola copia: se parte una seconda volta, la secon
 
 ### Android
 
-1. Installa RistoKiosk sul tablet.
+1. Installa RistoKiosk sul tablet con il file **com.rsa.ristokiosk.apk** (firmato RSA): copialo sul
+   tablet (cavo USB, chiavetta o email) e aprilo dall'app **File**. La prima volta Android dice che
+   l'installazione di app sconosciute da quella fonte non è consentita: tocca **Impostazioni**,
+   accendi **Consenti da questa fonte**, torna indietro e tocca **Installa**. Se sul tablet c'è un
+   RistoKiosk di prova installato da Visual Studio (firma diversa), Android rifiuta l'aggiornamento:
+   disinstallalo prima (si perdono PIN e collegamento, da rifare).
 2. Aprilo una prima volta e scegli il PIN del kiosk (vedi
    [Configurazione](configurazione.md#il-primo-avvio)).
 3. Nelle impostazioni di Android accendi il **blocco dell'app**. A seconda del produttore si chiama
