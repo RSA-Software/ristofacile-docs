@@ -128,8 +128,8 @@ kiosk *Questa app è stata bloccata dall'amministratore di sistema.*). La proced
    e il setup non va avanti con il kiosk.
 4. Alla fine Windows chiede di riavviare il PC: rispondi **Sì**.
 
-Se il blocco non riesce, il setup si ferma con un errore di Windows Installer e torna indietro: il PC
-resta com'era, senza kiosk. Il motivo è scritto in `C:\ProgramData\RSA\RistoFacile\kiosk-setup.log`.
+Se il blocco non riesce, il setup si ferma con l'errore 1722 («Un passo dell'installazione non è riuscito») e torna indietro: il PC
+resta com'era, senza kiosk. Il motivo è scritto in `C:\Program Files\RSA\RistoFacile\kiosk-setup.log`.
 
 **Il primo avvio nel chiosco**, dopo il riavvio:
 
@@ -378,7 +378,7 @@ lavora come prima.
 | *Non è stato possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di sistema.* (codice 0x80004005, su fondo blu) | Su Windows l'Accesso assegnato è nella forma a una sola app, che non avvia RistoKiosk. | Applica il file a più app (vedi [Windows](#windows)) e riavvia. |
 | *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso: il blocco è stato fatto a mano senza spegnerla. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Il blocco a mano](#il-blocco-a-mano)) e riavvia. |
 | *Su questo PC il kiosk non si può bloccare: serve Windows 11 Pro, Enterprise o Education, versione 22H2 o successiva. Si possono installare le altre postazioni.* | Nel setup è stata scelta la postazione kiosk su Windows Home, su Windows 10 o su una versione di Windows 11 prima della 22H2. | Usa un PC con Windows 11 Pro (o Enterprise, Education) aggiornato, oppure aggiorna l'edizione di Windows. |
-| Errore di Windows Installer alla fine del setup del kiosk, poi *Installazione terminata prematuramente* | Il blocco del PC non è riuscito: il setup torna indietro e il PC resta com'era. | Leggi il motivo in `C:\ProgramData\RSA\RistoFacile\kiosk-setup.log` e chiama l'assistenza. |
+| Errore 1722 «Un passo dell'installazione non è riuscito» alla fine del setup del kiosk, poi *Installazione terminata prematuramente* | Il blocco del PC non è riuscito: il setup torna indietro e il PC resta com'era. | Leggi il motivo in `C:\Program Files\RSA\RistoFacile\kiosk-setup.log` e chiama l'assistenza. |
 
 ## Note
 
