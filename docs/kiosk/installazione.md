@@ -178,7 +178,9 @@ dell'amministratore, davanti al totem o da remoto:
 
 Da remoto, con uno strumento di assistenza come AnyDesk o TeamViewer **installato come servizio**
 (accesso non presidiato), non serve permettere niente nell'Accesso assegnato: lo strumento lavora
-anche con il kiosk bloccato e alla schermata di accesso. Il riavvio fa cadere il collegamento:
+anche con il kiosk bloccato e alla schermata di accesso. Collegandoti vedi il kiosk: per passare
+all'amministratore manda **Ctrl+Alt+Canc** dal menu dello strumento (in AnyDesk **Azioni**: la tastiera
+da sola non lo inoltra), poi **Blocca** e l'account dell'amministratore. Il riavvio fa cadere il collegamento:
 ricollegati e controlla che il kiosk sia ripartito. Un aggiornamento lanciato senza schermate
 riavvia il PC da solo alla fine.
 
