@@ -188,6 +188,16 @@ riavvio torna la schermata di accesso normale. Windows cancella l'account **Kios
 cartella in `C:\Users` (per esempio `kioskUser0`), che si può cancellare a mano. Se poi rimetti il kiosk,
 Windows crea un account **Kiosk** nuovo: PIN del kiosk e collegamento al servizio vanno rifatti.
 
+Se il setup non riesce a togliere il blocco (errore 1722 su *TogliBloccoKiosk*, il motivo è in
+`C:\Program Files\RSA\RistoFacile\kiosk-setup.log`), la rimozione torna indietro e il PC resta com'era.
+Togli il blocco a mano (vedi [Il blocco a mano](#il-blocco-a-mano)), poi disinstalla da **Windows
+PowerShell** aperto come amministratore, dicendo al setup di non toccare il blocco:
+
+```powershell
+$p = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*', 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName -eq 'RistoFacile' -and $_.PSChildName -like '{*' }
+msiexec /x $p.PSChildName RF_SALTA_BLOCCO=1
+```
+
 **Riparare il kiosk.** Una riparazione di RistoFacile su un kiosk bloccato fa come un aggiornamento:
 chiude il kiosk, rimette il blocco e alla fine riavvia il PC.
 
