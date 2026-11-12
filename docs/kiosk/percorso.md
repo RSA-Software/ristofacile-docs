@@ -353,6 +353,7 @@ carta.
 | *Le credenziali del servizio non sono valide: chiama il personale.* | Utente o password del kiosk rifiutati. | Correggili in configurazione. |
 | *Configurazione del kiosk da rifare: chiama il personale* | Il PIN del kiosk salvato sul dispositivo non si legge più. | Tieni premuto 3 secondi l'angolo in alto a sinistra e scegli un PIN nuovo. |
 | *Il menu non si carica: riprova o ordina alla cassa.* | Il menu non è arrivato dal servizio dopo **Dove mangi?**. | Tocca **Riprova**; se insiste, controlla il servizio. |
+| *«Mangio qui» non è disponibile al kiosk in questo momento: ordina alla cassa.* | L'[IVA di somministrazione](../cassa/impostazioni.md#iva-di-somministrazione) è accesa ma la sua aliquota non è valida, oppure in Facile il Reparto Cassa è **DA REPARTI**: lo scontrino non potrebbe uscire. Il motivo preciso è nel giornale del servizio. | Il cliente può scegliere **Porto via** o ordinare alla cassa; sistema l'aliquota in Impostazioni ▸ Dati fiscali. |
 | *Il servizio non risponde: riprova fra poco o ordina alla cassa.* | Il servizio non ha risposto all'invio dell'ordine. | Riprova; se insiste, controlla il servizio. |
 | *Il menu è cambiato: controlla il tuo ordine.* / *Non più disponibili: …* | Mentre il cliente ordinava un piatto è finito o il menu è cambiato. | Il cliente controlla il carrello e sceglie altro. |
 | *I prezzi sono cambiati: controlla il totale.* | Un prezzo è cambiato dopo che il piatto è entrato nel carrello. | Il cliente controlla il totale nuovo e conferma di nuovo. |

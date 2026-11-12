@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-07 — **66 domande** su 34 pagine.
+Aggiornato al 2026-11-12 — **65 domande** su 33 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -56,7 +56,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/conto.md`
 
 - [ ] riga 95: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito.
-- [ ] riga 507: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
+- [ ] riga 511: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Disponibilità
 
@@ -89,7 +89,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 - [ ] riga 270: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
 - [ ] riga 315: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
 - [ ] riga 320: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
-- [ ] riga 342: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 344: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
 
 ## Mappa della sala
 
@@ -164,12 +164,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/statistiche.md`
 
 - [ ] riga 141: la schermata è accessibile a qualunque operatore? Nel codice non si vede un controllo dei permessi.
-
-## Storico conti
-
-`docs/cassa/storico-conti.md`
-
-- [ ] riga 135: come compaiono qui le vendite al banco e gli ordini d'asporto (sala/tavolo mostrati).
 
 ## Tabelle di base
 

@@ -336,6 +336,8 @@ alla fattura elettronica e valgono per tutto l'impianto.
 | **Iscritta al Registro delle Imprese** | **SI'** / **NO**. Con **SI'**, per una persona giuridica, compaiono **Ufficio** (sigla della provincia), **Numero REA** e **Natura** (codice numerico). |
 | **Capitale sociale** | Compare solo per le nature giuridiche che lo richiedono. |
 | **Socio unico** | **SI'** / **NO**; compare solo per la natura che lo prevede. |
+| **IVA di somministrazione sul consumo nel locale** | **SI'** / **NO**. Con **SI'** tutto quello che si consuma nel locale esce con l'aliquota scelta sotto (vedi [IVA di somministrazione](#iva-di-somministrazione)). |
+| **Aliquota di somministrazione** | Tocca per scegliere l'aliquota (di solito l'IVA al 10%); *Nessuna: scegli l'aliquota* se non scelta. Deve avere il reparto della stampante fiscale e una percentuale maggiore di zero. Si salva anche a interruttore spento. |
 | **Per la fattura elettronica** | *Tutto a posto: la fattura elettronica può uscire.* oppure, in giallo, l'elenco di cosa manca. |
 | **Salva dati ditta** | Salva sul servizio. |
 
@@ -472,6 +474,17 @@ con i pulsanti **Attiva** e **Disattiva questo dispositivo**. È descritto nella
 
 Finché la finestra della ricarica è aperta la macchina non incassa.
 
+### Accendere l'IVA di somministrazione
+
+1. In Facile apri Archivi ▸ Ditte ▸ Modifica, premi **F7 - Impo. Prot.** e controlla che
+   **Reparto Cassa** sia **DA ALIQUOTE IVA**: con **DA REPARTI** l'IVA di somministrazione non si
+   accende.
+2. Nella cassa tocca **Dati fiscali**, linguetta **Ditta**.
+3. Tocca **NO** accanto a **IVA di somministrazione sul consumo nel locale**: diventa **SI'**.
+4. Tocca **Aliquota di somministrazione** e scegli l'aliquota (per esempio *IVA AL 10%*).
+5. Tocca **Salva dati ditta**: da questo momento tavoli, banco e kiosk «mangio qui» escono con
+   quell'aliquota.
+
 ### Spostare il tavolo dell'asporto
 
 1. Tocca **Sala**, linguetta **Tavolo asporto**.
@@ -512,12 +525,51 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Ricarica della cassa automatica.* (con *…premi di nuovo RICARICA per riprenderla.*) | La ricarica non si è aperta o la cassa ha perso il contatto con la macchina. | Tocca di nuovo **Ricarica**: riprende la ricarica rimasta aperta. |
 | *Salvataggio dei dati della ditta non riuscito.* | Il servizio ha rifiutato i dati o non risponde. | Leggi il dettaglio e riprova. |
 | *Dati della ditta salvati. Restano 2 cose da sistemare per la fattura elettronica.* | Mancano ancora dati obbligatori. | Completa quanto elencato in **Per la fattura elettronica**. |
+| *Salvataggio dei dati della ditta non riuscito.* con *Scegli un'aliquota con il reparto della cassa, oppure spegni l'IVA di somministrazione.* | **IVA di somministrazione** accesa senza aliquota. | Scegli l'aliquota o rimetti **NO**. |
+| *Salvataggio dei dati della ditta non riuscito.* con *… Aliquota IVA di somministrazione non impostata o non valida …* | L'aliquota scelta non esiste più, non ha il reparto della stampante fiscale o è allo 0%. | Scegli un'altra aliquota, oppure dai a questa il reparto in Tabelle di base ▸ Aliquote IVA. |
+| *Salvataggio dei dati della ditta non riuscito.* con *… IVA di somministrazione accesa con il reparto di cassa preso dal reparto dell'articolo: in Facile apri Archivi → Ditte → Modifica, premi F7 - Impo. Prot. e metti «Reparto Cassa» su «DA ALIQUOTE IVA».* | In Facile il reparto della stampante si prende dal reparto dell'articolo: lo scontrino non uscirebbe sull'aliquota di somministrazione. | Fai come dice il messaggio in Facile, poi salva di nuovo. |
 | *Salvataggio della configurazione fattura non riuscito.* | Il servizio non risponde. | Riprova. |
 | *Impossibile leggere i codici addebito dell'hotel:* … | Il servizio non risponde. | Controlla la connessione. |
 | *Il modello ha un errore e non e' stato salvato:* … | Il modello di stampa contiene un errore. | Correggi la riga segnalata in rosso. |
 | *Stampante comande non configurata: impostala nella sezione "Stampante preconto".* | **Stampa di prova** di un modello senza stampante. | Imposta la **Stampante preconto**. |
 
 ## Note
+
+### IVA di somministrazione
+
+Quello che si consuma nel locale è *somministrazione* e ha l'IVA al 10%, qualunque sia l'aliquota
+dell'articolo; quello che si porta via ha l'aliquota dell'articolo. Con l'interruttore acceso la
+cassa lo applica da sola su scontrino, fattura e movimenti di magazzino:
+
+| Dove | Aliquota |
+|---|---|
+| Tavolo di sala, anche con il [self order](self-order.md) | di somministrazione |
+| [Vendita al banco](vendita-al-banco.md) | di somministrazione (il banco conta sempre come consumo nel locale) |
+| [Kiosk](../kiosk/index.md), «Mangio qui» | di somministrazione |
+| [Asporto e domicilio](asporto.md), ordini dal sito, kiosk «Porto via» | quella dell'articolo |
+
+- Prendono l'aliquota di somministrazione anche **coperto** e **servizio**. Le righe con un'aliquota
+  allo 0% (esenti, non imponibili, non soggette) tengono la loro.
+- Spento l'interruttore, ogni riga esce con l'aliquota del suo articolo.
+- Se l'aliquota scelta non è più valida (cancellata, senza reparto o allo 0%), nel locale
+  scontrino e fattura **non escono**: preconto e totali invece si vedono lo stesso. Il kiosk
+  rifiuta «Mangio qui» prima che il cliente paghi.
+- Ogni aliquota usata dagli articoli, anche quelle esenti, deve avere il suo reparto della stampante
+  fiscale: una riga esente senza reparto finisce sul reparto di ripiego della stampante.
+
+!!! warning "Il tavolo dell'asporto su ogni cassa e palmare"
+
+    La cassa riconosce l'asporto dal tavolo virtuale scelto in **Sala ▸ Tavolo asporto**. Su un
+    dispositivo dove quel tavolo non è scelto, una comanda aperta sul tavolo dell'asporto conta come
+    un tavolo di sala ed esce al 10%. Sceglilo su ogni cassa e su ogni palmare.
+
+!!! warning "Impostazione condivisa con Facile e HotWin"
+
+    Interruttore e aliquota sono gli stessi della ditta di Facile («Documenti con IVA per
+    somministraz.» e «IVA Somministr. Pubblico») e l'aliquota è anche l'«IVA clienti» di HotWin:
+    cambiarli dalla cassa li cambia anche lì. In Facile **Reparto Cassa** deve restare
+    **DA ALIQUOTE IVA**: se torna su **DA REPARTI**, nel locale scontrino e fattura non escono
+    finché non lo rimetti.
 
 - **Cosa vale per chi.** Collegamento, turno, tavolo dell'asporto, stampante scelta, terminale POS
   e cassa automatica in uso, i tre valori di **Mappa e servizio** e il tema valgono solo per questa

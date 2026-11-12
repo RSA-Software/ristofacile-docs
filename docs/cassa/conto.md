@@ -497,6 +497,10 @@ tavolo come «preconto» sulla mappa della sala.
 
 ## Note
 
+- Con l'[IVA di somministrazione](impostazioni.md#iva-di-somministrazione) accesa, al tavolo righe,
+  coperto e servizio escono con l'aliquota di somministrazione, anche se l'articolo ha un'aliquota
+  diversa; le righe allo 0% tengono la loro.
+
 - **Prima i soldi, poi il documento.** Con **INCASSA E STAMPA** la cassa fa nell'ordine: carta sul terminale, contanti nella cassa automatica, documento. Se un passo non riesce non esce nessun documento e il conto resta aperto.
 - **Dopo la chiusura.** Con lo scontrino, la chiusura senza documento o l'addebito in camera: la comanda viene chiusa, il tavolo si libera (se non ha altre comande aperte), gli eventuali tavoli uniti tornano separati e torni alla mappa della sala (o all'elenco dell'asporto, se avevi aperto la comanda da lì). Un ordine d'asporto passa a «consegnato»; un ordine a domicilio no: la consegna la segna chi la fa.
 - **Incasso di una parte del conto.** Se dopo l'incasso il tavolo ha ancora voci da pagare, si torna alla [divisione](dividi-conto.md); quando l'ultimo conto è incassato la comanda si chiude e si torna alla mappa della sala.

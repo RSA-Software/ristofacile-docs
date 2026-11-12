@@ -62,7 +62,7 @@ La schermata ha tre parti:
 | **Tutti i camerieri** | Tendina del cameriere che ha servito il tavolo (solo operatori attivi). |
 | Riepilogo (in alto a destra) | Numero di conti, totale e media a coperto del periodo filtrato, es. *18 conti · 1.240,00 € · 31,00 € a coperto*; sotto, il totale per modo di pagamento (Contanti, Bancomat, Carta, Buoni, Assegni, Credito) e quanti conti non hanno il pagamento registrato. |
 | Data e orario (riga) | Giorno e orario di apertura → chiusura, es. *20:15 → 22:40*. |
-| Tavolo (riga) | Sala e tavolo, es. *Sala interna · Tavolo 12*; sotto coperti, numero di voci e cameriere (es. *4 cop. · 12 voci · Marco*). |
+| Tavolo (riga) | Sala e tavolo, es. *Sala interna · Tavolo 12*; per le vendite che non sono di un tavolo, *Vendita al banco*, *Asporto*, *Domicilio* o *Kiosk*. Sotto coperti, numero di voci e cameriere (es. *4 cop. · 12 voci · Marco*). |
 | Pastiglia del documento (riga) | Come è stato chiuso il conto: **SCONTRINO n** (verde), **FATTURA n** (blu), **IN CAMERA** (blu, addebito sulla camera dell'hotel), **SENZA DOCUMENTO** (rosso), **NON REGISTRATO** (giallo, vedi Note). Su un tavolo diviso in più conti compare **n DOCUMENTI**. |
 | Pagamento (riga) | Importi per modo di pagamento, es. *Contanti 40,00 · Bancomat 30,00*, oppure *Pagamento non registrato*. |
 | Totale (riga) | Totale del conto. |
@@ -132,7 +132,9 @@ La schermata ha tre parti:
 
 - Lo storico mostra solo i conti **chiusi**; i tavoli ancora aperti sono nella
   [Mappa della sala](mappa-sala.md).
-  <!-- DA VERIFICARE: come compaiono qui le vendite al banco e gli ordini d'asporto (sala/tavolo mostrati). -->
+- Le vendite al banco, gli ordini d'asporto e a domicilio e quelli del kiosk compaiono con *Vendita
+  al banco*, *Asporto*, *Domicilio* o *Kiosk* al posto della sala e del tavolo; lo stesso testo
+  esce sul promemoria.
 - L'elenco mostra al massimo i 200 conti più recenti del periodo, e il riepilogo in alto somma solo
   quelli. Per i totali di periodi lunghi usa le [Statistiche](statistiche.md), che contano tutti i
   conti.
