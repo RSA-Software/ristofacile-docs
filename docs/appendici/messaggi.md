@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-12 — **720 messaggi**.
+Aggiornato al 2026-11-13 — **721 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -387,6 +387,7 @@ Aggiornato al 2026-11-12 — **720 messaggi**.
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Conto](../cassa/conto.md) | La stampante scelta per questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in Impostazioni ▸ **Stampanti fiscali** ▸ **Stampante di questa postazione**; nel frattempo puoi usare CHIUDI SENZA DOCUMENTO. |
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | Palmare: [Conto](../palmare/conto.md) | La stampante scelta per questo palmare è stata tolta dall'elenco. | Scegline un'altra in Impostazioni ▸ **Stampanti fiscali**; nel frattempo usa CHIUDI SENZA DOCUMENTO se sei abilitato. |
+| *La stampante RCHWeb non riporta nella risposta il numero del documento, la chiusura e lo stato: va attivata la risposta estesa sulla cassa …* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Con la marca **RCHWeb**, sul registratore la risposta estesa del web service è spenta. | Sul registratore: **SERVICE ▸ Connettività ▸ Ethernet**, **WEBSRV: Risp. estesa** su **SI** e **Protocollo PC** su **STANDARD**. |
 | *La stampante USB scelta (…) non è collegata.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La termica USB è staccata o spenta. | Ricollegala e tocca **Rileggi gli elenchi**. |
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *La vendita che avevi aperto e' stata incassata da un'altra cassa. …* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Un'altra cassa ha ripreso e incassato questa vendita. | Niente: la schermata si azzera, le righe sono già pagate. |

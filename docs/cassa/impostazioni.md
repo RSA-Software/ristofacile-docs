@@ -179,11 +179,32 @@ la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne 
 |---|---|
 | **Numero** | Da 1 a 99, diverso per ogni stampante. È anche il **numero di cassa** che compare sugli scontrini di quella stampante e che conta per la licenza. **+ NUOVA** propone il primo numero libero. Quando correggi una stampante il numero non si cambia (la scheda dice *Il numero è il numero di cassa sugli scontrini e nella licenza: per cambiarlo elimina la stampante e aggiungila di nuovo.*). |
 | **Descrizione** | Il nome che riconosci, per esempio *Cassa 1*, *Banco bar*. |
-| **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**. |
+| **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**, **RCHWeb**. Per i registratori RCH vedi [RCH o RCHWeb](#rch-o-rchweb) qui sotto. |
 | **Indirizzo (IP o IP:porta)** | L'indirizzo del registratore in rete, per esempio `192.168.1.100`. Con **Ditron** si scrive la porta logica del driver WinEcrCom, perché il Ditron è collegato al computer del servizio. |
 | **Predefinita** | La usano le postazioni che non ne scelgono una. Ce n'è una sola: scegliendo questa, l'altra smette di esserlo. |
 | **Verifica** | Interroga il registratore con i valori che hai scritto, prima di salvare. |
 | **Elimina** | Toglie la stampante dall'elenco (chiede conferma). Compare solo quando ne correggi una. La conferma dice anche se la usa questa postazione o il [self order](self-order.md) per lo scontrino del saldo dal telefono. |
+
+#### RCH o RCHWeb
+
+I registratori RCH Print!F RT si collegano in due modi, che sul registratore sono alternativi:
+
+| Marca | Come funziona | Cosa serve sul registratore |
+|---|---|---|
+| **RCH** | RistoFacile manda i comandi e il registratore non risponde: lo scontrino si registra senza numero, azzeramento e matricola letti dalla macchina, e un comando rifiutato si vede solo sul display. | Protocollo **XON-XOFF** sulla porta di rete. |
+| **RCHWeb** | Il registratore risponde a ogni comando: RistoFacile sa se lo scontrino è uscito e ne registra numero, azzeramento e matricola; se un documento resta aperto lo annulla da solo. | Protocollo **STANDARD** sulla porta di rete e **risposta estesa** del web service. |
+
+Con **RCHWeb** l'indirizzo è quello del registratore, senza porta. Sul registratore, dal menu
+**SERVICE ▸ Connettività ▸ Ethernet**, il tecnico imposta **Protocollo PC** su **STANDARD** e
+**WEBSRV: Risp. estesa** su **SI**. Se manca la risposta estesa, **Verifica** lo dice; se il
+protocollo è rimasto XON-XOFF gli scontrini escono ma sul display del registratore compare
+l'errore E20 a ogni comando.
+
+!!! note "Un centesimo in contanti"
+
+    I pagamenti in contanti si arrotondano ai cinque centesimi: su uno scontrino da 0,01 €
+    pagato in contanti il registratore stampa *sconto a pagare 0,01* e *importo pagato 0,00*. Non
+    è un errore.
 
 **Su questa postazione** (a destra):
 
@@ -511,6 +532,7 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *L'identificativo 2 e' usato da piu' di una stampante fiscale.* | Hai dato a due stampanti lo stesso numero. | Scegli un numero libero (da 1 a 99). |
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
 | *Verifica della stampante fiscale fallita.* | Il registratore non risponde o segnala un errore. | Leggi il dettaglio e controlla il registratore. |
+| *La stampante RCHWeb non riporta nella risposta il numero del documento, la chiusura e lo stato: va attivata la risposta estesa sulla cassa …* | Con la marca **RCHWeb**, sul registratore la risposta estesa del web service è spenta. | Sul registratore: **SERVICE ▸ Connettività ▸ Ethernet**, **WEBSRV: Risp. estesa** su **SI** e **Protocollo PC** su **STANDARD**. |
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Numero o porta del terminale non validi. | Correggi il campo. |
 | *Scegli un terminale dall'elenco.* | **Usa su questa cassa** senza un terminale scelto. | Tocca un terminale in elenco. |
 | *Nessun terminale sull'impianto. Premi NUOVO per aggiungerne uno.* | L'impianto non ha terminali. | Tocca **+  NUOVO**. |
