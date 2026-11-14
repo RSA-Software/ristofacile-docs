@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-13 — **721 messaggi**.
+Aggiornato al 2026-11-14 — **723 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -112,6 +112,7 @@ Aggiornato al 2026-11-13 — **721 messaggi**.
 | *Digita prima l'importo sul tastierino, poi PREZZO LIBERO.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | **PREZZO LIBERO** senza importo digitato. | Digita l'importo, poi riprova. |
 | *Digita prima quanto deve costare, poi premi PREZZO.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | **CAMBIA PREZZO** o **€** senza importo digitato. | Digita il prezzo, poi riprova. |
 | *Digita quanti pezzi prima di PER.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | **PER** toccato senza un numero digitato. | Digita la quantità, poi **PER**. |
+| *Documento emesso; la stampante non ha riportato il numero del documento: va letto sullo scontrino.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Con la marca **CustomWeb**, il registratore ha emesso lo scontrino ma non ne ha comunicato il numero (succede con le versioni meno recenti del suo programma interno). | Leggi il numero sullo scontrino stampato. Se succede a ogni scontrino, il tecnico aggiorna il registratore. |
 | *Durata non valida.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | La durata della prenotazione non è valida. |  |
 | *Durata non valida.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | Durata vuota o zero. | Scrivi la durata in minuti. |
 | *"…" e' gia' in questa sezione.* | Cassa: [Menu](../cassa/menu.md) | L'articolo c'è già nella sezione. | Nessuna azione. |
@@ -380,6 +381,7 @@ Aggiornato al 2026-11-13 — **721 messaggi**.
 | *La riga e' stornata: …* / *La riga e' in omaggio: …* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Su una riga stornata o in omaggio non si cambiano prezzo e varianti. | Per la riga in omaggio: togli l'omaggio, modifica, rimettilo. |
 | *L'articolo da duplicare non esiste piu'.* / *Articolo non trovato.* | Cassa: [Articoli](../cassa/articoli.md) | L'articolo è stato eliminato nel frattempo. | Torna all'elenco. |
 | *L'articolo e' obbligatorio.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Voce senza articolo. | Scegli l'articolo. |
+| *La stampante CustomWeb non ha confermato lo scontrino (…): non si sa se e' uscito. Controlla sul giornale della stampante prima di riemetterlo.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Con la marca **CustomWeb**, la risposta del registratore non è arrivata e non è stato possibile capire se lo scontrino è uscito. | Guarda se lo scontrino è stato stampato; se serve fai una lettura del giornale dal registratore. Riemetti solo se non è uscito. |
 | *La stampante fiscale non ha risposto: …* | Palmare: [Conto](../palmare/conto.md) | Lo scontrino potrebbe essere uscito. | Tocca di nuovo il pulsante di incasso: il servizio controlla e non ristampa. Non rifar passare la carta. |
 | *La stampante fiscale non ha risposto: … Premi di nuovo INCASSA E STAMPA: il servizio controlla se lo scontrino e' uscito e non lo ristampa.* | Cassa: [Conto](../cassa/conto.md) | Comunicazione con la stampante interrotta: lo scontrino potrebbe essere uscito. Gli importi si bloccano. | Tocca di nuovo il pulsante: il servizio verifica sulla stampante e non emette due volte. |
 | *La stampante fiscale n. X non è configurata (manca l'indirizzo).* | Cassa: [Conto](../cassa/conto.md) | La stampante scelta non ha l'indirizzo. | Scrivilo nella scheda della stampante, in Impostazioni ▸ **Stampanti fiscali**. |

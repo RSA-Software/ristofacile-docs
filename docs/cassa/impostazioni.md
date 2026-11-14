@@ -179,7 +179,7 @@ la pastiglia verde **QUI**. Tocca una stampante per correggerla; **+ NUOVA** ne 
 |---|---|
 | **Numero** | Da 1 a 99, diverso per ogni stampante. È anche il **numero di cassa** che compare sugli scontrini di quella stampante e che conta per la licenza. **+ NUOVA** propone il primo numero libero. Quando correggi una stampante il numero non si cambia (la scheda dice *Il numero è il numero di cassa sugli scontrini e nella licenza: per cambiarlo elimina la stampante e aggiungila di nuovo.*). |
 | **Descrizione** | Il nome che riconosci, per esempio *Cassa 1*, *Banco bar*. |
-| **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**, **RCHWeb**. Per i registratori RCH vedi [RCH o RCHWeb](#rch-o-rchweb) qui sotto. |
+| **Marca** | **Epson**, **DTR**, **3i**, **RCH**, **Custom**, **Axon**, **Ditron**, **RCHWeb**, **CustomWeb** (versione beta). Per i registratori RCH vedi [RCH o RCHWeb](#rch-o-rchweb), per i Custom [Custom o CustomWeb](#custom-o-customweb), qui sotto. |
 | **Indirizzo (IP o IP:porta)** | L'indirizzo del registratore in rete, per esempio `192.168.1.100`. Con **Ditron** si scrive la porta logica del driver WinEcrCom, perché il Ditron è collegato al computer del servizio. |
 | **Predefinita** | La usano le postazioni che non ne scelgono una. Ce n'è una sola: scegliendo questa, l'altra smette di esserlo. |
 | **Verifica** | Interroga il registratore con i valori che hai scritto, prima di salvare. |
@@ -205,6 +205,30 @@ l'errore E20 a ogni comando.
     I pagamenti in contanti si arrotondano ai cinque centesimi: su uno scontrino da 0,01 €
     pagato in contanti il registratore stampa *sconto a pagare 0,01* e *importo pagato 0,00*. Non
     è un errore.
+
+#### Custom o CustomWeb
+
+Anche i registratori Custom si collegano in due modi:
+
+| Marca | Come funziona | Per quali registratori |
+|---|---|---|
+| **Custom** | RistoFacile manda i comandi (protocollo XON-XOFF) e il registratore non risponde: lo scontrino si registra senza numero, azzeramento e matricola letti dalla macchina, e un comando rifiutato si vede solo sul display. | Tutti i Custom collegati in rete con il protocollo XON-XOFF. |
+| **CustomWeb** (versione beta) | Il registratore risponde a ogni documento: RistoFacile sa se lo scontrino è uscito e ne registra numero, azzeramento e matricola; se un documento resta aperto lo annulla da solo. | Solo quelli di terza generazione, che hanno il web service: K3-F RT, K3-N RT, Q3X-F RT, Q3X-N RT, P3-N RT, JSmart RT, Big Plus RT, KubeX-F RT, VKP80III-F RT, Fusion, Edge e le loro versioni *-N*. |
+
+Con **CustomWeb** l'indirizzo è quello del registratore, senza porta. Il tecnico deve aver
+impostato sul registratore il collegamento di rete con il protocollo XML del web service.
+**Verifica** interroga il registratore e mostra modello, matricola e ultimo documento.
+
+Con **CustomWeb** non si fanno dal programma versamenti, prelievi e stampa del giornale:
+RistoFacile risponde che la funzione non è supportata su questa marca. Gli sconti arrivano al
+registratore sempre come importo.
+
+!!! warning "CustomWeb è in versione beta"
+
+    Il collegamento **CustomWeb** è in **versione beta**: è scritto sul manuale del costruttore e non è ancora stato
+    provato su un registratore Custom. Prima di usarlo in un locale va collaudato sulla macchina
+    con il tecnico: uno scontrino, un reso, un annullo e una chiusura, controllando che numero e
+    azzeramento registrati siano quelli stampati.
 
 **Su questa postazione** (a destra):
 
@@ -533,6 +557,8 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *La stampante fiscale n. X non è nell'elenco del servizio.* | La stampante scelta da questa postazione è stata tolta dall'elenco. | Scegli un'altra stampante in **Stampante di questa postazione**. |
 | *Verifica della stampante fiscale fallita.* | Il registratore non risponde o segnala un errore. | Leggi il dettaglio e controlla il registratore. |
 | *La stampante RCHWeb non riporta nella risposta il numero del documento, la chiusura e lo stato: va attivata la risposta estesa sulla cassa …* | Con la marca **RCHWeb**, sul registratore la risposta estesa del web service è spenta. | Sul registratore: **SERVICE ▸ Connettività ▸ Ethernet**, **WEBSRV: Risp. estesa** su **SI** e **Protocollo PC** su **STANDARD**. |
+| *Documento emesso; la stampante non ha riportato il numero del documento: va letto sullo scontrino.* | Con la marca **CustomWeb**, il registratore ha emesso lo scontrino ma non ne ha comunicato il numero (succede con le versioni meno recenti del suo programma interno). | Leggi il numero sullo scontrino stampato. Se succede a ogni scontrino, il tecnico aggiorna il registratore. |
+| *La stampante CustomWeb non ha confermato lo scontrino (…): non si sa se e' uscito. Controlla sul giornale della stampante prima di riemetterlo.* | Con la marca **CustomWeb**, la risposta del registratore non è arrivata e non è stato possibile capire se lo scontrino è uscito. | Guarda se lo scontrino è stato stampato; se serve fai una lettura del giornale dal registratore. Riemetti solo se non è uscito. |
 | *L'id del terminale dev'essere un numero maggiore di zero.* / *La porta dev'essere un numero maggiore di zero.* | Numero o porta del terminale non validi. | Correggi il campo. |
 | *Scegli un terminale dall'elenco.* | **Usa su questa cassa** senza un terminale scelto. | Tocca un terminale in elenco. |
 | *Nessun terminale sull'impianto. Premi NUOVO per aggiungerne uno.* | L'impianto non ha terminali. | Tocca **+  NUOVO**. |
