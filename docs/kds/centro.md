@@ -68,6 +68,7 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 | **Utente** | L'utente con cui il monitor si collega al servizio. |
 | **Password** | La password. Se è già salvata, lasciando il campo vuoto resta quella. |
 | **Esito della connessione** | In verde quando il monitor è collegato. |
+| Riga della versione | Sotto l'esito: la versione del monitor e, quando il servizio ha risposto, quella del servizio. Sotto ancora, in ambra, l'eventuale avviso di versioni che non vanno d'accordo. |
 | **Questo monitor mostra i piatti di** | Il centro scelto, con tipo e codice. |
 | **Tessere dei centri** | I centri attivi di tipo **Monitor KDS** o **Stampante + KDS**. |
 | **Scuro / Chiaro / Sistema** | Il tema del monitor. Lo scuro è quello di partenza: stanca meno gli occhi nei turni lunghi; in una cucina molto illuminata si legge meglio il chiaro. |
@@ -111,6 +112,8 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 | *Impossibile caricare le stazioni. (…)* | Il servizio non ha restituito i centri. | Controlla il collegamento e riprova **Salva e connetti**. |
 | *Nessun centro da mostrare a monitor. Sul KDS compaiono solo i centri di tipo «Monitor KDS» o «Stampante + KDS»: imposta il tipo del centro dalla Cassa → Centri di produzione.* | Nessun centro adatto al monitor. | Imposta il tipo del centro dalla cassa ([Centri di produzione](../cassa/centri-di-produzione.md)). |
 | *Scegli prima un centro di produzione (passo 2).* | Manca la scelta del centro. | Tocca una tessera. |
+| *Il servizio è più vecchio di questa app: va aggiornato il server.* | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è più vecchia del servizio: va aggiornata.* | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 
 ## Note
 
@@ -119,6 +122,8 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 - La scelta del centro e il tema valgono solo per questo monitor.
 - Il monitor ha la sua copia di indirizzo e credenziali del servizio, separata da quella della cassa
   e dei palmari.
+- Quando e come il monitor controlla di andare d'accordo con il servizio: vedi
+  [Versione e compatibilità col servizio](../cassa/impostazioni.md#versione-e-compatibilita-col-servizio).
 
 ## Vedi anche
 

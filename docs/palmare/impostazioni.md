@@ -68,6 +68,7 @@ digitale**. Ogni riquadro ha i suoi pulsanti e, sotto, la riga con l'esito.
 | **Base URL** | L'indirizzo del servizio del locale, per esempio `http://192.168.1.50:8080`. |
 | **Utente**, **Password** | Come sulla cassa. A differenza della cassa, qui non compare la riga che avvisa della password già salvata: lasciando vuota la password resta comunque quella salvata. |
 | **Salva e connetti** | Salva e verifica il collegamento. Sotto: *Connesso a* (indirizzo) *come* (utente)*.* oppure *Non configurato.* |
+| **Versione** | La versione di questo palmare e, quando il servizio ha risposto, quella del servizio. Sotto, in ambra, l'eventuale avviso di versioni che non vanno d'accordo: vedi [Versione e compatibilità col servizio](../cassa/impostazioni.md#versione-e-compatibilita-col-servizio). |
 
 ### Asporto
 

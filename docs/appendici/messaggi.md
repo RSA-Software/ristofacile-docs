@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-14 — **723 messaggi**.
+Aggiornato al 2026-11-17 — **725 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -228,6 +228,7 @@ Aggiornato al 2026-11-14 — **723 messaggi**.
 | *Il servizio non risponde: riprova fra poco o ordina alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il servizio non ha risposto all'invio dell'ordine. | Riprova; se insiste, controlla il servizio. |
 | *Il servizio non risponde.* (seguito dal dettaglio) | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Indirizzo sbagliato, servizio spento o rete assente. | Controlla l'indirizzo e che il servizio sia acceso e raggiungibile. |
 | *Il servizio rifiuta le credenziali: controlla nome utente e password.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Utente o password sbagliati. | Correggili. |
+| *Il servizio è più vecchio di questa app: va aggiornato il server.* | Cassa: [Impostazioni](../cassa/impostazioni.md) · Monitor di cucina: [Scelta del centro](../kds/centro.md) · Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Il supplemento deve essere un numero.* | Cassa: [Menu](../cassa/menu.md) | Supplemento non valido. | Correggi il supplemento. |
 | *Il supplemento dev'essere un numero maggiore o uguale a zero.* | Cassa: [Regole di composizione](../cassa/regole-di-composizione.md) | Supplemento non valido. | Correggi il supplemento. |
 | *Il tavolo 13 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Unisci o Separa partendo da un tavolo unito. | Tocca il tavolo che tiene il conto. |
@@ -602,6 +603,7 @@ Aggiornato al 2026-11-14 — **723 messaggi**.
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Comanda](../cassa/comanda.md) | Troppe varianti accese nello stesso gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Aggiunte".* | Cassa: [Varianti](../cassa/varianti.md) | Hai cercato di accendere una variante oltre il massimo del gruppo. | Spegnine una prima di accenderne un'altra. |
 | *Puoi scegliere al massimo 2 opzioni per "Salse".* | Palmare: [Comanda](../palmare/comanda.md) | Hai superato il massimo di un gruppo di varianti. | Spegni una variante prima di accenderne un'altra. |
+| *Questa app è più vecchia del servizio: va aggiornata.* | Cassa: [Impostazioni](../cassa/impostazioni.md) · Monitor di cucina: [Scelta del centro](../kds/centro.md) · Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Questa app è stata bloccata dall'amministratore di sistema.* (all'accensione, davanti al kiosk) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato blocca la Game Bar, che Windows apre all'accesso: il blocco è stato fatto a mano senza spegnerla. | Tocca **Chiudi**, poi spegni la Game Bar (vedi [Il blocco a mano](../kiosk/installazione.md#il-blocco-a-mano)) e riavvia. |
 | *Questa immagine c'è già fra quelle dell'attesa.* | Cassa: [Kiosk](../cassa/kiosk.md) | Stessa immagine caricata due volte. | Nessuna azione. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Cassa: [Comanda](../cassa/comanda.md) | Omaggio su una parte di una pizza composta. | Offri la riga principale. |

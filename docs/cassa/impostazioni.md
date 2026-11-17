@@ -88,6 +88,8 @@ All'apertura è selezionata la voce **Turno**. La voce scelta è evidenziata con
 | **Password** | La password di quell'utente. Non viene mai rimostrata: se ne è già salvata una compare *Password già salvata: lascia vuoto per non modificarla.* |
 | **Salva e connetti** | Salva i tre dati e prova subito una lettura vera dal servizio (l'elenco delle sale). Durante la prova gira la rotellina. |
 | Riga di esito | *Connesso a* (indirizzo) *come* (utente)*.* se tutto è a posto, *Non configurato.* se la cassa non è collegata. |
+| **Versione** | La versione di questa cassa e, quando il servizio ha risposto, la sua versione e il livello con cui si parlano: per esempio *App 1.0 (build 1) · Servizio 2.026.11.0 · API 1*. È il dato da dare all'assistenza. |
+| Riquadro ambra sotto la versione | Compare solo quando cassa e servizio non vanno d'accordo, e dice quale dei due va aggiornato (vedi [Note](#versione-e-compatibilita-col-servizio)). |
 
 Sotto la voce **Connessione**, a sinistra, si legge l'indirizzo in uso.
 
@@ -547,6 +549,8 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Seleziona una sala e un tavolo per l'asporto.* | **Salva tavolo asporto** senza sala o tavolo. | Tocca prima la sala, poi il tavolo. |
 | *Il tavolo asporto configurato (sala 2, tavolo 99) non esiste piu' in anagrafica: riselezionalo.* | Il tavolo scelto è stato cancellato. | Scegli un altro tavolo e salva. |
 | *Impossibile caricare sale e tavoli:* … | La cassa non è collegata al servizio. | Sistema prima la **Connessione**. |
+| *Il servizio è più vecchio di questa app: va aggiornato il server.* | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è più vecchia del servizio: va aggiornata.* | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Inserisci l'indirizzo IP della stampante comande.* | **Salva**, **Stampa di prova** o **Verifica stato** con l'indirizzo vuoto. | Scrivi l'indirizzo IP. |
 | *Porta della stampante comande non valida (di solito 9100).* | Porta non numerica o fuori intervallo. | Correggi la porta. |
 | *Salvata solo su questa cassa (*indirizzo*): l'impianto non risponde (*…*).* | Il servizio non risponde: la stampante è stata salvata solo su questa cassa. | Riprova quando il servizio è raggiungibile, per averla nell'elenco dell'impianto. |
@@ -582,6 +586,18 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Stampante comande non configurata: impostala nella sezione "Stampante preconto".* | **Stampa di prova** di un modello senza stampante. | Imposta la **Stampante preconto**. |
 
 ## Note
+
+### Versione e compatibilità col servizio
+
+La cassa, il palmare, il monitor di cucina e il kiosk chiedono al servizio la sua versione e controllano di andare d'accordo con lui:
+
+- all'avvio dell'app;
+- quando l'app torna in primo piano;
+- dopo **Salva e connetti** (sul kiosk, **Salva e verifica**).
+
+Se non vanno d'accordo compare una volta l'avviso *Il servizio è più vecchio di questa app: va aggiornato il server.* oppure *Questa app è più vecchia del servizio: va aggiornata.*, e lo stesso testo resta nel riquadro ambra sotto la **Versione**. L'avviso non blocca: si continua a lavorare, ma conviene aggiornare subito, perché qualche funzione può non andare. Lo stesso avviso non si ripete a ogni ritorno in primo piano; ricompare se cambia, o dopo un nuovo **Salva e connetti**.
+
+Se il servizio non risponde, o non è un servizio RistoFacile, l'avviso non compare: è un problema di collegamento e lo dice lo **Stato** della connessione.
 
 ### IVA di somministrazione
 

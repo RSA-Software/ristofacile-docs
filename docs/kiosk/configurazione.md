@@ -75,6 +75,8 @@ all'attesa. Il PIN si scrive sempre con i tasti a video: la tastiera del disposi
 | **Nome utente del kiosk** | L'utente web dedicato al kiosk (non quello di una cassa). |
 | **Password** | La sua password. Se è già salvata il campo dice *Lascia vuoto per non cambiarla*. |
 | Riga di esito | Per esempio *Collegato: questo è il kiosk n. 1 «Ingresso».*, oppure il motivo per cui non va (vedi «Controlli e messaggi»). |
+| Riga della versione | Sotto l'esito: la versione del kiosk e, quando il servizio ha risposto, quella del servizio. |
+| Riquadro ambra sotto la versione | Compare se kiosk e servizio non vanno d'accordo e dice quale va aggiornato. È l'unico posto dove il kiosk lo dice: davanti c'è il cliente, quindi nessun avviso compare a schermo. Vedi [Versione e compatibilità col servizio](../cassa/impostazioni.md#versione-e-compatibilita-col-servizio). |
 | Avviso in giallo | *Attenzione: le credenziali di questo kiosk non sono ristrette. …*: il nome utente non è fra gli utenti dei kiosk sul servizio. Vedi [Installazione](installazione.md#lutente-web-del-kiosk). |
 | **Dal servizio** ▸ **Licenza** | **Licenza Kiosk attiva**, **Demo** o **Senza licenza**. |
 | **Dal servizio** ▸ **Kiosk** | **Accesi**, **In pausa** o **Spenti dalla cassa**. |
@@ -311,6 +313,8 @@ accende kiosk per kiosk nella sua scheda, linguetta **Kiosk**.
 | *La stampante USB scelta (…) non è collegata.* | La termica USB è staccata o spenta. | Ricollegala e tocca **Rileggi gli elenchi**. |
 | *Permesso USB negato: collega di nuovo la stampante e tocca «Consenti».* | Su Android non hai dato il permesso alla stampante. | Stacca e ricollega la stampante e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Queste credenziali sono di un kiosk: si stampa solo sulle stampanti configurate nel servizio.* | La stampante scelta non è (più) fra quelle registrate sul servizio. | Registrala dalla cassa e sceglila di nuovo dall'elenco. |
+| *Il servizio è più vecchio di questa app: va aggiornato il server.* | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è più vecchia del servizio: va aggiornata.* | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 
 ## Note
 
