@@ -93,6 +93,10 @@ All'apertura è selezionata la voce **Turno**. La voce scelta è evidenziata con
 
 Sotto la voce **Connessione**, a sinistra, si legge l'indirizzo in uso.
 
+Sul PC del servizio la cassa installata dal setup (postazione **Server**) trova la connessione già
+pronta: al primo avvio si collega da sola come **RISTO**. Lo fa una volta sola e mai sopra una
+connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano.
+
 <!-- DA VERIFICARE: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'. -->
 
 ### Sala

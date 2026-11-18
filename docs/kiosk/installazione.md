@@ -42,7 +42,7 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
   QR 2D a tastiera per i segnaposto.
 
 **Il programma.** Sul totem Windows RistoKiosk si installa con il setup di RistoFacile
-(**RistoFacileSetup.exe**), scegliendo la postazione kiosk: il setup lo mette in
+(**RistoFacileSetup_<versione>.exe**, per esempio *RistoFacileSetup_1.2.5.exe*), scegliendo la postazione kiosk: il setup lo mette in
 `C:\Facile\RistoKiosk` e blocca il PC (vedi [Windows](#windows)). Sul tablet Android si installa
 l'app RistoKiosk. Da lì in poi valgono i passi di questa pagina.
 
@@ -120,7 +120,7 @@ kiosk *Questa app è stata bloccata dall'amministratore di sistema.*). La proced
 1. Imposta lo schermo del totem come **schermo principale** di Windows. Il kiosk si apre a tutto
    schermo sempre sullo schermo principale; spostato su un altro schermo con la tastiera, torna da
    solo a tutto schermo su quello.
-2. Entra in Windows con un account **amministratore** e avvia **RistoFacileSetup.exe**.
+2. Entra in Windows con un account **amministratore** e avvia **RistoFacileSetup_<versione>.exe**.
 3. Alla scelta del tipo di postazione tocca **Postazione kiosk: solo il kiosk self-service,
    collegato al Server. Il PC si blocca sul kiosk (Windows 11 Pro).**, poi **Avanti** e **Installa**.
    Se Windows non è adatto compare *Su questo PC il kiosk non si può bloccare: serve Windows 11 Pro,
@@ -166,7 +166,7 @@ kiosk da solo. Per riaprirlo: tasto **Windows** e l'icona **RistoKiosk**, oppure
 scegli l'account dell'amministratore. Il kiosk non si apre per l'amministratore: parte solo
 nell'account **Kiosk**.
 
-**Aggiornare il totem.** Con **RistoFacileAggiornamento.exe** (o RistoFacileSetup.exe), dall'account
+**Aggiornare il totem.** Con **RistoFacileAggiornamento_<versione>.exe** (o RistoFacileSetup_<versione>.exe), dall'account
 dell'amministratore, davanti al totem o da remoto:
 
 1. Fallo a un'ora senza clienti: l'aggiornamento **chiude il kiosk**, anche se è aperto nell'account

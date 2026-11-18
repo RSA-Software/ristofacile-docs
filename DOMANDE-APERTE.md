@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-17 — **65 domande** su 33 pagine.
+Aggiornato al 2026-11-18 — **62 domande** su 31 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -15,13 +15,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 59: con il tunnel sullo stesso PC, oltre a 127.0.0.1 serve anche ::1?
 - [ ] riga 75: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay.
-
-## Accesso operatore
-
-`docs/cassa/accesso.md`
-
-- [ ] riga 42: su un'installazione nuova, senza nessun operatore attivo, da questa schermata non si entra e non c'e' un pulsante per andare avanti. Come si crea il primo operatore (dal gestionale Facile? da un'altra cassa?)
-- [ ] riga 107: vedi "Prima di cominciare", da qui non si raggiunge la schermata Operatori.
 
 ## Articoli
 
@@ -84,12 +77,12 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/impostazioni.md`
 
-- [ ] riga 96: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
-- [ ] riga 162: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
-- [ ] riga 317: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
-- [ ] riga 362: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
-- [ ] riga 367: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
-- [ ] riga 391: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 100: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
+- [ ] riga 166: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
+- [ ] riga 321: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
+- [ ] riga 366: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
+- [ ] riga 371: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
+- [ ] riga 395: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
 
 ## Mappa della sala
 
@@ -194,12 +187,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 - [ ] riga 132: cosa fare se il vecchio dispositivo e' rotto o perso e non si puo' disattivare (lo libera l'assistenza RSA?).
 - [ ] riga 179: il modulo del monitor di cucina e' compreso in tutte le edizioni o va acquistato a parte? La cassa lo chiede sempre all'attivazione.
 - [ ] riga 203: dopo una scadenza, confermare che basta riavviare l'app con Internet (in demo il controllo giornaliero non gira) e che non serve riscrivere il seriale.
-
-## Prima configurazione
-
-`docs/introduzione/prima-configurazione.md`
-
-- [ ] riga 113: al punto 4 si entra in Operatori senza essere ancora entrati come operatore (la cassa e' arrivata alle Impostazioni da sola perche' non era collegata). Confermare che e' il percorso previsto per creare il primo operatore; se la cassa viene riavviata prima di crearlo, la schermata di accesso mostra "Nessun operatore attivo..." senza un pulsante per proseguire.
 
 ## Monitor
 

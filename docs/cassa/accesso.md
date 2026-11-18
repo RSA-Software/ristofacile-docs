@@ -36,10 +36,11 @@ stesso operatore, senza ripassare da questa schermata, finché qualcuno non esce
 ## Prima di cominciare
 
 - Il servizio RistoFacile deve essere configurato (indirizzo, utente e password): se non lo è, la
-  cassa salta questa schermata e apre direttamente le [Impostazioni](impostazioni.md).
+  cassa salta questa schermata e apre direttamente le [Impostazioni](impostazioni.md). La cassa
+  installata dal setup sul PC del servizio (postazione **Server**) parte già collegata.
 - Deve esistere almeno un operatore attivo, creato in [Operatori](operatori.md). Il PIN è quello
-  impostato nella sua scheda.
-  <!-- DA VERIFICARE: su un'installazione nuova, senza nessun operatore attivo, da questa schermata non si entra e non c'e' un pulsante per andare avanti. Come si crea il primo operatore (dal gestionale Facile? da un'altra cassa?) -->
+  impostato nella sua scheda. Su un database nuovo non ce n'è ancora nessuno: la schermata mostra
+  **CREA IL PRIMO OPERATORE** (vedi [Creare il primo operatore](#creare-il-primo-operatore)).
 
 ## La schermata
 
@@ -77,6 +78,7 @@ in fondo.
 | **NON SONO IO** | Torna all'elenco dei nomi, cancellando il PIN digitato. Sui dispositivi Android fa lo stesso il tasto Indietro; nell'elenco dei nomi il tasto Indietro non fa nulla. |
 | **RIPROVA** | Compare solo se l'elenco degli operatori non si è potuto leggere: rilegge l'elenco. |
 | **IMPOSTAZIONI BACKEND** | Compare solo se l'elenco degli operatori non si è potuto leggere: apre le [Impostazioni](impostazioni.md) per controllare il collegamento al servizio. |
+| **CREA IL PRIMO OPERATORE** | Compare solo quando il servizio non ha nessun operatore attivo (database nuovo): apre [Operatori](operatori.md) per creare il primo. |
 
 ## Come si fa
 
@@ -89,6 +91,16 @@ in fondo.
 ### Entrare senza PIN
 
 1. Tocca la tessera con il tuo nome (senza lucchetto). Si apre subito la Mappa della sala.
+
+### Creare il primo operatore
+
+Su un database nuovo, per esempio subito dopo l'installazione del server, non c'è ancora nessun
+operatore.
+
+1. Su **Chi sei?** compare *Nessun operatore attivo in anagrafica: crea il primo per poter entrare.*
+   Tocca **CREA IL PRIMO OPERATORE**.
+2. Si apre [Operatori](operatori.md): crea l'operatore con il suo **PIN**, che è obbligatorio, e salva.
+3. Chiudi e riapri la cassa: su **Chi sei?** compare il nuovo nome. Toccalo e digita il PIN.
 
 ### Cedere la cassa a un collega
 
@@ -104,7 +116,7 @@ in fondo.
 | *Operatore non piu' attivo. Chiedi a chi gestisce l'anagrafica.* | L'operatore è stato disattivato mentre la schermata era aperta. | Fai riattivare l'operatore in [Operatori](operatori.md). |
 | *Digita il PIN.* | È stato premuto Invio con la casella vuota. | Digita il PIN. |
 | *Accesso non riuscito.* (seguito dal dettaglio) | Il servizio non ha risposto alla verifica. | Riprova; se persiste, controlla il collegamento al servizio. |
-| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | Non c'è nessun operatore attivo. | Crea o riattiva un operatore. <!-- DA VERIFICARE: vedi "Prima di cominciare", da qui non si raggiunge la schermata Operatori. --> |
+| *Nessun operatore attivo in anagrafica: crea il primo per poter entrare.* | Non c'è nessun operatore attivo (database nuovo, o tutti disattivati). | Tocca **CREA IL PRIMO OPERATORE**, oppure riattiva un operatore in [Operatori](operatori.md). |
 | *Impossibile leggere gli operatori dal server. Controlla la connessione e le impostazioni del backend.* (seguito dal dettaglio) | Il servizio non risponde o i dati di collegamento sono sbagliati. | Tocca **RIPROVA**; se non basta, **IMPOSTAZIONI BACKEND**. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato a una versione che espone api/v1/risto/accesso. Fino ad allora da qui non si entra.* | Il servizio installato è più vecchio della cassa. | Fai aggiornare il servizio RistoFacile. |
 

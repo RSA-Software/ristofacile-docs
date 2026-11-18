@@ -84,6 +84,12 @@ I dati da inserire, app per app:
 
 ### 1. La cassa
 
+Sul PC del servizio, installato con il setup (postazione **Server**), la cassa parte già collegata
+al servizio come utente **RISTO**: si apre **Chi sei?** con *Nessun operatore attivo in anagrafica:
+crea il primo per poter entrare.* Tocca **CREA IL PRIMO OPERATORE**, crea l'operatore (punto 4),
+riapri la cassa ed entra con il tuo nome; poi continua dal punto 3 (Licenza) e dal punto 6.
+Sulle altre casse:
+
 1. Avvia RistoFacile. Dopo *Verifica della licenza...* si apre **Impostazioni** (sulla voce
    **Turno**).
 2. Tocca **Connessione**. Scrivi **Indirizzo**, **Utente** e **Password** del servizio e tocca
@@ -110,7 +116,8 @@ I dati da inserire, app per app:
 La cassa è pronta: in **Turno** si legge il tuo nome, sotto **Connessione** l'indirizzo del
 servizio.
 
-<!-- DA VERIFICARE: al punto 4 si entra in Operatori senza essere ancora entrati come operatore (la cassa e' arrivata alle Impostazioni da sola perche' non era collegata). Confermare che e' il percorso previsto per creare il primo operatore; se la cassa viene riavviata prima di crearlo, la schermata di accesso mostra "Nessun operatore attivo..." senza un pulsante per proseguire. -->
+Se la cassa viene riavviata prima di creare l'operatore, **Chi sei?** mostra **CREA IL PRIMO
+OPERATORE**: porta alla stessa pagina del punto 4 (vedi [Accesso](../cassa/accesso.md#creare-il-primo-operatore)).
 
 ### 2. I palmari
 
@@ -158,7 +165,7 @@ Vedi anche [Scelta del centro](../kds/centro.md) e [Monitor](../kds/monitor.md).
 | *Nessun centro da mostrare a monitor. Sul KDS compaiono solo i centri di tipo «Monitor KDS» o «Stampante + KDS»: imposta il tipo del centro dalla Cassa → Centri di produzione.* | Nessun centro adatto al monitor. | Imposta il tipo del centro dalla cassa. |
 | *Scegli prima un centro di produzione (passo 2).* | **APRI MONITOR** senza un centro. | Tocca una tessera al passo 2. |
 | *Il server licenze non risponde. Controlla la connessione.* | Attivazione senza Internet. | Collega il dispositivo a Internet e riprova. |
-| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | All'accesso non c'è nessun operatore. | Crea un operatore dalla cassa in Menu ▸ **Operatori**. |
+| *Nessun operatore attivo in anagrafica: crea il primo per poter entrare.* | All'accesso non c'è nessun operatore. | Tocca **CREA IL PRIMO OPERATORE**. Sul palmare il messaggio dice di crearlo dalla cassa. |
 
 ## Note
 

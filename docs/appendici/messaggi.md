@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-17 — **725 messaggi**.
+Aggiornato al 2026-11-18 — **725 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -488,9 +488,9 @@ Aggiornato al 2026-11-17 — **725 messaggi**.
 | *Nessun listino disponibile.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Non ci sono listini. | — |
 | *Nessun messaggio mandato oggi.* | Cassa: [Messaggi alla cucina](../cassa/messaggi.md) | Nessun messaggio recente. | Nessuna azione. |
 | *Nessun messaggio mandato oggi.* | Palmare: [Messaggi alla cucina](../palmare/messaggi.md) | Nessun invio nella giornata. | Nessuna. |
-| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Non c'è nessun operatore attivo. | Crea o riattiva un operatore. |
+| *Nessun operatore attivo in anagrafica: crea il primo per poter entrare.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Non c'è nessun operatore attivo (database nuovo, o tutti disattivati). | Tocca **CREA IL PRIMO OPERATORE**, oppure riattiva un operatore in [Operatori](../cassa/operatori.md). |
+| *Nessun operatore attivo in anagrafica: crea il primo per poter entrare.* | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | All'accesso non c'è nessun operatore. | Tocca **CREA IL PRIMO OPERATORE**. Sul palmare il messaggio dice di crearlo dalla cassa. |
 | *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | Palmare: [Accesso](../palmare/accesso.md) | Il locale non ha operatori attivi. | Crea almeno un operatore dalla cassa in [Operatori](../cassa/operatori.md), poi chiudi e riapri l'app. |
-| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | All'accesso non c'è nessun operatore. | Crea un operatore dalla cassa in Menu ▸ **Operatori**. |
 | *Nessun operatore collegato: per annullare un ordine serve un operatore abilitato.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | **Rifiuta** / **Non ritirato** senza operatore collegato. | Collegati con un operatore abilitato. |
 | *Nessun operatore collegato: per … serve un operatore abilitato.* | Cassa: [Ordini dal kiosk](../cassa/ordini-kiosk.md) | Nessun operatore in turno. | Entra con il tuo PIN. |
 | *Nessun operatore in turno: con «solo i miei tavoli» non riceverai avvisi. Esci e rientra con il tuo PIN, oppure spegni «solo i miei».* | Palmare: [Impostazioni](../palmare/impostazioni.md) | **Solo i miei tavoli** acceso senza nessuno in turno. | Entra con il tuo nome o spegni **Solo i miei tavoli**. |
