@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-18 — **725 messaggi**.
+Aggiornato al 2026-11-19 — **727 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -716,6 +716,8 @@ Aggiornato al 2026-11-18 — **725 messaggi**.
 | *Su questo tavolo non c'e' niente da separare.* | Palmare: [Sala](../palmare/sala.md) | Il conto non ha né piatti né coperti da spostare. | Nessuna. |
 | **Svuota conto** — *Rimettere tutto quello che c'e' su Conto 2 fra le voci da dividere?* | Palmare: [Conto](../palmare/conto.md) | Hai toccato il pulsante per svuotare il conto. | **Svuota** o **Annulla**. |
 | *"Tagliata": manca la scelta obbligatoria (Cottura). Sceglila prima di inviare.* | Palmare: [Comanda](../palmare/comanda.md) | All'invio un piatto non ha una variante obbligatoria. | Scegli la variante nella finestra che si apre e reinvia. |
+| *Talloncini non stampati: il servizio non risponde. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Al momento di stampare il monitor non ha raggiunto il servizio. | Avvisa il cameriere a voce; controlla la rete e il servizio. |
+| *Talloncino di … non stampato: …* | Monitor di cucina: [Monitor](../kds/monitor.md) | La stampante del centro non ha stampato il talloncino di quel tavolo (dopo i due punti il motivo, es. stampante spenta o irraggiungibile). | Avvisa il cameriere a voce; controlla la stampante. Il talloncino non viene ristampato. |
 | *Tavoli non letti: …* | Cassa: [Storico conti](../cassa/storico-conti.md) | Non è stato possibile leggere i tavoli della sala scelta. | Riprova scegliendo di nuovo la sala. |
 | *Tavolo in pausa: si riprende da Self order, linguetta Pausa.* | Cassa: [Self order](../cassa/self-order.md) | Dopo il blocco di un telefono hai messo in pausa il tavolo. | Riprendi il tavolo dalla linguetta **Pausa**. |
 | **Tavolo libero** — *Vuoi occupare il tavolo 7?* | Palmare: [Sala](../palmare/sala.md) | Hai toccato un tavolo libero. Aprendolo il tavolo risulta occupato. | **Occupa** per aprirlo, **Annulla** se era un tocco involontario. |

@@ -206,6 +206,29 @@ girano.
 3. Quando tutto è pronto tocca **Tutto pronto** nella testata del tavolo.
 4. Tutti i piatti del tavolo passano in **PRONTO**.
 
+### Il talloncino dei piatti pronti
+
+Se nella [scelta del centro](centro.md#accendere-il-talloncino-dei-piatti-pronti) è acceso
+**Talloncino quando i piatti sono pronti**, il monitor stampa un foglietto per ogni tavolo con i
+piatti appena segnati pronti, da dare al cameriere perché sappia dove portarli.
+
+1. Segna pronti i piatti come al solito, uno alla volta o con **Tutto pronto**.
+2. Il monitor aspetta **15 secondi dall'ultimo piatto segnato pronto**: se nel frattempo ne segni
+   altri, l'attesa riparte.
+3. Esce un talloncino per tavolo (o per ordine da asporto) sulla stampante del centro, con il nome
+   del centro, il tavolo, data e ora, e i piatti con le quantità e le varianti.
+
+Esempio: segni pronte in fila 2 capricciose del tavolo 1, 1 capricciosa del tavolo 2 e una
+margherita del tavolo 1. Escono due talloncini: tavolo 1 con 2 capricciose e 1 margherita, tavolo 2
+con 1 capricciosa.
+
+- Un piatto riportato indietro con la freccia prima della stampa non va sul talloncino.
+- Se esci dal tabellone (per esempio con **Centro**) prima dei 15 secondi, il talloncino esce subito.
+- Ogni monitor stampa solo i piatti segnati pronti su di lui.
+- Se i piatti di un tavolo vengono segnati pronti a più di 15 secondi l'uno dall'altro, per quel
+  tavolo escono più talloncini.
+- Al momento il talloncino non si ristampa.
+
 ### Correggere un tocco sbagliato
 
 1. Trova il piatto nella colonna in cui è finito per errore.
@@ -223,6 +246,8 @@ Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *Impossibile riportare indietro il ticket. (…)* | Il servizio non ha registrato il ritorno indietro. | Riprova. |
 | *Impossibile aggiornare i ticket. (…)* / *Aggiornamento dei ticket non riuscito.* | Il servizio non risponde. L'ora di «Aggiornato alle» resta ferma. | Controlla la rete e il servizio; il monitor riprova da solo. |
+| *Talloncino di … non stampato: …* | La stampante del centro non ha stampato il talloncino di quel tavolo (dopo i due punti il motivo, es. stampante spenta o irraggiungibile). | Avvisa il cameriere a voce; controlla la stampante. Il talloncino non viene ristampato. |
+| *Talloncini non stampati: il servizio non risponde. (…)* | Al momento di stampare il monitor non ha raggiunto il servizio. | Avvisa il cameriere a voce; controlla la rete e il servizio. |
 | *RistoFacile in modalità demo* | Una cassa del locale è in prova. | Nessuna: il monitor funziona. |
 | *Il monitor di cucina è un modulo aggiuntivo di RistoFacile e la licenza digitale di questo ristorante non lo comprende.* | La licenza non comprende il monitor di cucina. Le comande non vengono mostrate. | Contatta il rivenditore. Quando il modulo viene attivato le comande ricompaiono da sole alla verifica successiva (il monitor chiede ogni ora, e a ogni riapertura del tabellone). |
 
