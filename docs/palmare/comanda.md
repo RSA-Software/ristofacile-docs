@@ -120,7 +120,8 @@ comparire «Gia' in cucina», «Stornata» o «Il peso si cambia da DETTAGLI».
 - **NOTA**: «Nota per la cucina…», si salva quando chiudi la finestra;
 - **Varianti**: apre le varianti del piatto, a gruppi; per le varianti che lo prevedono compare la
   riga «… · intensità» con le scelte (es. «poco», «molto»). Si confermano con **Salva varianti**;
-- in fondo **Allergeni**, **Omaggio** (o **Togli omaggio**) e **Storna**.
+- in fondo **Allergeni**, **Omaggio** (o **Togli omaggio**) e **Storna**, e sotto **Sposta su un
+  altro tavolo**.
 
 Quantità, uscita, nota e varianti si possono cambiare solo finché il piatto non è stato mandato in
 cucina: dopo l'invio quella parte della finestra è sbiadita. Allergeni, omaggio e storno restano
@@ -217,6 +218,7 @@ se ne sceglie uno solo, toccare un altro piatto sostituisce quello scelto.
 | **Allergeni** | Mostra gli allergeni del piatto. |
 | **Omaggio / Togli omaggio** | Offre il piatto (vale zero sul conto) o toglie l'offerta. |
 | **Storna** | Annulla il piatto: resta in comanda barrato e non si paga. |
+| **Sposta su un altro tavolo** | Porta il piatto su un altro tavolo, che si tocca in sala: vedi [Spostare un piatto su un altro tavolo](sala.md#spostare-un-piatto-su-un-altro-tavolo). |
 | **VIA** | Fa partire in cucina una portata in attesa. |
 | **Trattieni** | Ferma in attesa una portata che la cucina non ha ancora iniziato. |
 | **INVIA IN CUCINA** | Manda in cucina tutti i piatti da inviare (e gli storni da comunicare). |

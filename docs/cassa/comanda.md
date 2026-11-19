@@ -151,6 +151,7 @@ offerto). La parte centrale è grigia e non si tocca quando la riga è già in c
 | **Allergeni** | Mostra gli allergeni del piatto. Sempre disponibile. |
 | **Omaggio** / **Togli omaggio** | Offre la riga (prezzo a zero, con conferma) o annulla l'omaggio. Serve il permesso **Puo' applicare sconti**. Sempre disponibile, anche su righe già in cucina. |
 | **Storna** | Storna la riga: resta in comanda barrata in rosso e non conta più nel totale. Serve il permesso **Puo' stornare righe**. Sempre disponibile. |
+| **Sposta su un altro tavolo** | Porta la riga su un altro tavolo, che si tocca sulla mappa: vedi [Spostare un piatto su un altro tavolo](mappa-sala.md#spostare-un-piatto-su-un-altro-tavolo). Non compare sulle righe stornate, sulle parti di un piatto composto o di un menu e nella vendita al banco. |
 | **X** (o tocco fuori) | Chiude la finestra, salvando la nota. |
 
 ## Come si fa

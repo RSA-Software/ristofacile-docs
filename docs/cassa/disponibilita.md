@@ -115,6 +115,19 @@ Le porzioni rimaste sono: **Iniziale** meno **Venduta** meno **Impegnata**.
 4. Tocca **Salva**. Man mano che le porzioni vanno in cucina, **Impegnata** cresce; sotto la soglia
    in Comanda compare «ULTIME N», a zero il piatto diventa esaurito.
 
+### L'esistenza di magazzino
+
+Un articolo **gestito a magazzino** in Facile che qui non ha una voce valida oggi prende la sua
+disponibilità dall'esistenza di Facile: esistenza, meno l'ordinato dei clienti, meno l'impegnato,
+meno i piatti già partiti in cucina sui conti ancora aperti. Compare come «Disp. N» sulle tessere
+della [Vendita al banco](vendita-al-banco.md).
+
+- Il deposito si sceglie in [Impostazioni ▸ Dati fiscali](impostazioni.md#dati-fiscali), alla voce
+  **Deposito della disponibilità**.
+- A zero l'articolo risulta **Esaurito** solo se in Facile è acceso il blocco delle vendite sotto
+  esistenza; altrimenti si continua a vendere.
+- Appena crei una voce per l'articolo, vale la voce e non più l'esistenza.
+
 ## Controlli e messaggi
 
 | Messaggio | Causa | Cosa fare |

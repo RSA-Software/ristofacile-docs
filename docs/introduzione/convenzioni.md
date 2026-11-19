@@ -54,8 +54,8 @@ I tasti della tastiera, dove servono, sono scritti così: ++f2++, ++enter++.
 
 - Le etichette di campi e pulsanti sono in **grassetto** e scritte **esattamente** come a video,
   maiuscole comprese: **INVIA IN CUCINA**, **Preconto**, **CONTO**.
-- I messaggi e le scritte dell'app sono in *corsivo*, anche loro esatti: *Vuoi occupare il tavolo
-  14?*
+- I messaggi e le scritte dell'app sono in *corsivo*, anche loro esatti: *Quanti
+  coperti?*
 - Molti testi delle app usano l'apostrofo al posto della vocale accentata: «Puo'», «e'», «gia'»,
   «piu'». Il manuale li riporta **come compaiono**, così li ritrovi con la ricerca: il permesso si
   chiama **Puo' applicare sconti**, il messaggio dice *Parte di questo tavolo e' gia' stata

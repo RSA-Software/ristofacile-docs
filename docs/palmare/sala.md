@@ -141,8 +141,22 @@ aggiorna mentre stai facendo uno spostamento, un'unione o una separazione.
 
 1. Se serve, tocca il campo della sala e scegli la sala.
 2. Tocca il tavolo libero.
-3. Alla domanda *Vuoi occupare il tavolo 7?* tocca **Occupa**.
+3. Alla domanda *Quanti coperti?* scegli i coperti con **−** e **+** e tocca **Occupa il tavolo**.
+   Con **Annulla** torni in sala e il tavolo resta libero.
 4. Si apre la [Comanda](comanda.md) del tavolo; tornando in sala il tavolo è viola (**Occupato**).
+
+### Spostare un piatto su un altro tavolo
+
+1. Apri la [Comanda](comanda.md) del tavolo e tocca la riga del piatto (**DETTAGLI** sulla cassa).
+2. Tocca **Sposta su un altro tavolo**: torni alla mappa, dove in basso compare **Sposta piatto** con
+   il nome del piatto e l'istruzione «tocca il tavolo di destinazione».
+3. Tocca il tavolo di destinazione e conferma con **Sposta**.
+
+Su un tavolo libero si apre un conto nuovo, senza coperti. Su un tavolo che ha già un conto, o che è
+unito a un altro, il piatto si aggiunge a quel conto. La riga passa intera, con la sua quantità, le
+varianti e lo stato in cucina. Il tavolo di partenza resta aperto anche se rimane senza righe.
+**Annulla** nella conferma lascia la scelta attiva: puoi toccare un altro tavolo; **Annulla** in
+basso rinuncia allo spostamento.
 
 ### Spostare i clienti su un altro tavolo
 
@@ -191,7 +205,7 @@ mezza e mezza) le sue parti seguono il piatto.
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
-| **Tavolo libero** — *Vuoi occupare il tavolo 7?* | Hai toccato un tavolo libero. Aprendolo il tavolo risulta occupato. | **Occupa** per aprirlo, **Annulla** se era un tocco involontario. |
+| **Tavolo 7** — *Quanti coperti?* | Hai toccato un tavolo libero. Il tavolo si occupa solo quando confermi i coperti. | Scegli i coperti con **−** e **+** e tocca **Occupa il tavolo**; **Annulla** torna alla sala e il tavolo resta libero. |
 | *Il tavolo 5 e' unito al 4: si apre il conto del 4.* | Hai toccato un tavolo unito. | Nessuna: lavori sul conto del tavolo principale. |
 | *Il tavolo 20 e' quello degli ordini d'asporto: sposta/unisci/separa non si applicano.* | Hai scelto il tavolo dell'asporto durante un'operazione. | Gli ordini d'asporto si gestiscono dagli [Ordini](ordini.md). |
 | *Gli ordini del kiosk si gestiscono dalla cassa* | Hai toccato il tavolo dei kiosk. | Usa la cassa ([Ordini dal kiosk](../cassa/ordini-kiosk.md)). |

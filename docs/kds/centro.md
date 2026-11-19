@@ -2,7 +2,7 @@
 title: Scelta del centro
 description: La configurazione del monitor di cucina - collegamento al servizio, scelta del centro di produzione da mostrare e tema chiaro o scuro.
 app: Monitor di cucina
-percorso: "All'avvio dell'app (dal tabellone: pastiglia Centro)"
+percorso: "All'avvio dell'app (dal tabellone: Impostazioni, Apri la configurazione)"
 pagina: StazionePage
 ---
 
@@ -14,7 +14,7 @@ tema. È la prima schermata che compare ogni volta che l'app si avvia; da qui si
 
 !!! info "In sintesi"
 
-    - **Dove si trova:** all'avvio dell'app; dal tabellone, pastiglia **Centro** in alto a destra
+    - **Dove si trova:** all'avvio dell'app; dal tabellone, pastiglia **Impostazioni** in alto a destra, poi **Apri la configurazione**
     - **Chi la usa:** installatore, titolare (una volta); chi accende il monitor (ogni giorno, per toccare **APRI MONITOR**)
     - **Disponibile anche su:** solo monitor di cucina
 
@@ -54,8 +54,9 @@ A destra:
 - **2 Centro di produzione**: in alto il riquadro della scelta, «Questo monitor mostra i piatti
   di» seguito dal nome del centro scelto e dal suo tipo e codice (es. «Monitor KDS · codice 2»);
   finché non c'è una scelta dice «Nessun centro selezionato» in giallo e «Scegli qui sotto quale
-  cucina/bar guarda questo monitor.». Sotto, le tessere dei centri disponibili, con nome e tipo: il
-  centro scelto ha il segno di spunta.
+  cucina/bar guarda questo monitor.». Sotto, la riga **Lampeggio dei piatti che escono insieme** con
+  il suo cursore dei minuti, e le tessere dei centri disponibili, con nome e tipo: il centro scelto
+  ha il segno di spunta.
 
 In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro accanto compare
 «Scegli prima un centro di produzione (passo 2).».
@@ -71,6 +72,7 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 | Riga della versione | Sotto l'esito: la versione del monitor e, quando il servizio ha risposto, quella del servizio. Sotto ancora, in ambra, l'eventuale avviso di versioni che non vanno d'accordo. |
 | **Questo monitor mostra i piatti di** | Il centro scelto, con tipo e codice. |
 | **Talloncino quando i piatti sono pronti** | Interruttore, spento all'inizio. Acceso, quando segni pronti dei piatti esce sulla stampante del centro un foglietto per tavolo da dare al cameriere: vedi [Il talloncino dei piatti pronti](monitor.md#il-talloncino-dei-piatti-pronti). Compare solo se il centro scelto ha una stampante. |
+| **Lampeggio dei piatti che escono insieme** | «Per quanti minuti lampeggia un piatto rimasto indietro rispetto a quello di un altro reparto. Zero lo spegne, l'ultima tacca non smette.» Un cursore da **0** a **∞**, di partenza su **1**: a **0** nessun segnale; da **1** a **9** la card lampeggia per quei minuti, poi resta velata di blu; su **∞** lampeggia finché il piatto resta indietro. Sotto il cursore una frase dice la scelta fatta (es. «Lampeggia per 1 minuto, poi resta acceso fisso.»). Vedi [I piatti che escono insieme](monitor.md#i-piatti-che-escono-insieme). |
 | **Tessere dei centri** | I centri attivi di tipo **Monitor KDS** o **Stampante + KDS**. |
 | **Scuro / Chiaro / Sistema** | Il tema del monitor. Lo scuro è quello di partenza: stanca meno gli occhi nei turni lunghi; in una cucina molto illuminata si legge meglio il chiaro. |
 
@@ -81,6 +83,7 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 | **Salva e connetti** | Salva indirizzo e credenziali, si collega al servizio e carica i centri. |
 | **Tessera di un centro** | Sceglie il centro. La scelta resta memorizzata sul monitor. |
 | **Talloncino quando i piatti sono pronti** | Accende o spegne il talloncino dei piatti pronti. La scelta resta memorizzata sul monitor. |
+| **Cursore del lampeggio** | Trascinalo per scegliere per quanti minuti il tabellone fa lampeggiare i piatti rimasti indietro. La scelta resta memorizzata sul monitor. |
 | **Scuro / Chiaro / Sistema** | Cambia il tema subito. |
 | **APRI MONITOR** | Apre il [tabellone](monitor.md) del centro scelto. È spento finché non scegli un centro. |
 
@@ -99,7 +102,7 @@ In basso a destra il pulsante **APRI MONITOR**; finché non è scelto un centro 
 
 ### Accendere il talloncino dei piatti pronti
 
-1. Sul tabellone tocca la pastiglia **Centro** in alto a destra.
+1. Sul tabellone tocca la pastiglia **Impostazioni** in alto a destra, poi **Apri la configurazione**.
 2. In **2 Centro di produzione**, sotto il centro scelto, accendi **Talloncino quando i piatti sono pronti**.
 3. Tocca **APRI MONITOR**: da qui in avanti i piatti segnati pronti escono anche sul talloncino.
 
@@ -108,7 +111,7 @@ Se l'interruttore non c'è, il centro non ha una stampante: impostala dalla cass
 
 ### Cambiare il centro di un monitor
 
-1. Sul tabellone tocca la pastiglia **Centro** in alto a destra.
+1. Sul tabellone tocca la pastiglia **Impostazioni** in alto a destra, poi **Apri la configurazione**.
 2. Tocca la tessera del nuovo centro.
 3. Tocca **APRI MONITOR**.
 
@@ -130,7 +133,8 @@ Se l'interruttore non c'è, il centro non ha una stampante: impostala dalla cass
 
 - All'avvio l'app si apre sempre su questa schermata, anche se il centro è già scelto: il tabellone
   si apre solo toccando **APRI MONITOR**.
-- La scelta del centro, il tema e il talloncino dei piatti pronti valgono solo per questo monitor.
+- La scelta del centro, il tema, il talloncino dei piatti pronti e il lampeggio valgono solo per
+  questo monitor.
 - Il monitor ha la sua copia di indirizzo e credenziali del servizio, separata da quella della cassa
   e dei palmari.
 - Quando e come il monitor controlla di andare d'accordo con il servizio: vedi

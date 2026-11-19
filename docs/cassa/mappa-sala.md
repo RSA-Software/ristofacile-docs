@@ -131,7 +131,9 @@ manda in cucina.
 
 1. Se serve, tocca la pastiglia della sala in alto.
 2. Tocca il tavolo. Compare «Apertura tavolo…».
-3. Si apre la [Comanda](comanda.md) del tavolo; tornando alla mappa il tavolo è viola (**Occupato**)
+3. Se il tavolo è libero la cassa chiede *Quanti coperti?*: scegli con **−** e **+** e tocca
+   **Occupa il tavolo**. Con **Annulla** torni alla mappa e il tavolo resta libero.
+4. Si apre la [Comanda](comanda.md) del tavolo; tornando alla mappa il tavolo è viola (**Occupato**)
    se non hai battuto niente.
 
 ### Spostare un tavolo
@@ -161,6 +163,19 @@ manda in cucina.
    destinazione si apre un conto nuovo con le righe e i coperti scelti.
 
 ![Righe da separare](../assets/img/cassa/mappa-sala-separa.png)
+
+### Spostare un piatto su un altro tavolo
+
+1. Apri la [Comanda](comanda.md) del tavolo e tocca la riga del piatto (**DETTAGLI** sulla cassa).
+2. Tocca **Sposta su un altro tavolo**: torni alla mappa, dove in basso compare **Sposta piatto** con
+   il nome del piatto e l'istruzione «tocca il tavolo di destinazione».
+3. Tocca il tavolo di destinazione e conferma con **Sposta**.
+
+Su un tavolo libero si apre un conto nuovo, senza coperti. Su un tavolo che ha già un conto, o che è
+unito a un altro, il piatto si aggiunge a quel conto. La riga passa intera, con la sua quantità, le
+varianti e lo stato in cucina. Il tavolo di partenza resta aperto anche se rimane senza righe.
+**Annulla** nella conferma lascia la scelta attiva: puoi toccare un altro tavolo; **Annulla** in
+basso rinuncia allo spostamento.
 
 ### Ritrovare un ordine del kiosk
 
@@ -195,8 +210,9 @@ manda in cucina.
 
 - Se il servizio non è ancora configurato, aprendo la mappa la cassa passa da sola alle
   [Impostazioni](impostazioni.md).
-- Toccare un tavolo libero **apre il conto** sul servizio: il tavolo risulta occupato anche sugli
-  altri dispositivi. Se l'hai aperto per sbaglio, liberalo dalla Comanda con **LIBERA TAVOLO**.
+- Il conto di un tavolo libero **si apre sul servizio quando confermi i coperti**: da lì il tavolo
+  risulta occupato anche sugli altri dispositivi. Se l'hai aperto per sbaglio, liberalo dalla
+  Comanda con **LIBERA TAVOLO**.
 - La mappa si aggiorna da sola con le modifiche fatte da palmari e altre casse, ma non mentre è in
   corso Sposta, Unisci o Separa.
 - **I tavoli dei kiosk.** Se il tavolo di «mangio qui» o di «porto via» dei kiosk è anche il tavolo

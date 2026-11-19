@@ -66,10 +66,10 @@ La mappa si aggiorna da sola quando un collega lavora dal palmare o da un'altra 
 
 Quattro persone si siedono al tavolo 14.
 
-- **Sulla cassa** tocca il tavolo 14: si apre direttamente la [Comanda](../cassa/comanda.md) del
-  tavolo, con **4 coperti** (quanti sono i posti del tavolo).
+- **Sulla cassa** tocca il tavolo 14: la cassa chiede *Quanti coperti?* e propone **4** (i posti
+  del tavolo); tocca **Occupa il tavolo** e si apre la [Comanda](../cassa/comanda.md).
 - **Sul palmare** il cameriere tocca il tavolo 14 nella [Sala](../palmare/sala.md); il palmare
-  chiede *Vuoi occupare il tavolo 14?* e lui tocca **Occupa**.
+  chiede *Quanti coperti?* e lui tocca **Occupa il tavolo**.
 
 In tutti e due i casi il tavolo risulta occupato su tutti i dispositivi. Se le persone sono di
 più o di meno, cambia i coperti con **−** e **+** nella testata della comanda.

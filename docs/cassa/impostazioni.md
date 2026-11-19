@@ -389,6 +389,7 @@ alla fattura elettronica e valgono per tutto l'impianto.
 | **Socio unico** | **SI'** / **NO**; compare solo per la natura che lo prevede. |
 | **IVA di somministrazione sul consumo nel locale** | **SI'** / **NO**. Con **SI'** tutto quello che si consuma nel locale esce con l'aliquota scelta sotto (vedi [IVA di somministrazione](#iva-di-somministrazione)). |
 | **Aliquota di somministrazione** | Tocca per scegliere l'aliquota (di solito l'IVA al 10%); *Nessuna: scegli l'aliquota* se non scelta. Deve avere il reparto della stampante fiscale e una percentuale maggiore di zero. Si salva anche a interruttore spento. |
+| **Deposito della disponibilità** | Il deposito di Facile da cui la cassa prende l'esistenza degli articoli gestiti a magazzino che non hanno una voce in [Disponibilità](disponibilita.md#lesistenza-di-magazzino). Di partenza *Quello della ditta*. Non è il deposito attivo della ditta, da cui gli scontrini scaricano: se ne scegli un altro, le vendite della cassa non lo fanno scendere. |
 | **Per la fattura elettronica** | *Tutto a posto: la fattura elettronica può uscire.* oppure, in giallo, l'elenco di cosa manca. |
 | **Salva dati ditta** | Salva sul servizio. |
 

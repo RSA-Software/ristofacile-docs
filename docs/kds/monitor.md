@@ -28,7 +28,7 @@ cuoco tocca quelli che inizia (vanno **IN LAVORAZIONE**), li tocca quando sono f
 **PRONTO**: in sala il cameriere lo vede sul palmare) e li tocca di nuovo quando escono dal passe
 (spariscono). Il colore e il tempo di ogni piatto dicono quali sono in ritardo.
 
-Esempio: alle 20:40 la colonna IN CODA mostra «Sala principale - Tavolo 12» con tre piatti da 15
+Esempio: alle 20:40 la colonna IN CODA mostra «Tavolo 12 - Sala principale» con tre piatti da 15
 minuti, il bordo giallo: è il tavolo da fare per primo.
 
 ## Prima di cominciare
@@ -53,7 +53,8 @@ Da sinistra:
 - la pastiglia del **raggruppamento**: **Portata** oppure **Tavolo** (vedi sotto);
 - la pastiglia dell'**operatore**: il nome di chi lavora al centro, oppure «Seleziona operatore» in
   arancione;
-- la pastiglia **Centro**, che torna alla [Scelta del centro](centro.md).
+- la pastiglia **Impostazioni**, che apre [le impostazioni del tabellone](#le-impostazioni-del-tabellone) e, da lì,
+  la [Scelta del centro](centro.md).
 
 ### Le tre colonne
 
@@ -71,18 +72,38 @@ a ogni colonna compare «1 / 3» fra due frecce, oppure «tutto a schermo» quan
 nascosto. Le pagine girano da sole ogni otto secondi; toccando una freccia (o un piatto) la rotazione
 si ferma per 25 secondi, così chi sta leggendo una pagina non se la vede cambiare sotto gli occhi.
 
+### La colonna IN CODA divisa
+
+![IN CODA divisa in due colonne](../assets/img/kds/monitor-coda-divisa.png)
+
+Sugli schermi larghi (un monitor Full HD) la colonna **IN CODA** è larga il doppio delle altre due e
+si può dividere in più colonne affiancate, come quelle di un giornale: i piatti che starebbero nella
+pagina successiva compaiono accanto. Il contatore in fondo conta le schermate: con IN CODA divisa in
+due, «1 / 2» vuol dire che a schermo ci sono le prime due pagine di quattro.
+
+In testa alla colonna, prima del conteggio, c'è un pulsantino con il simbolo delle colonne e un
+numero (es. «2»): dice in quante colonne è divisa IN CODA. Di partenza sono due. Toccandolo passi
+alla divisione successiva - una colonna, due e, dove lo schermo lo permette, tre - e poi di nuovo a
+una. La scelta resta memorizzata su questo monitor.
+
+Il massimo dipende dalla larghezza dello schermo: il monitor non divide oltre il punto in cui i
+titoli dei gruppi non si leggerebbero più. Sugli schermi stretti (un tablet) le tre colonne restano
+larghe uguali e il pulsantino non c'è.
+
 ### I gruppi
 
 Dentro ogni colonna i piatti sono raggruppati su due livelli, con la pastiglia del raggruppamento:
 
 - **Portata** (di partenza): prima la portata (es. «Antipasti», «Primi», «Senza portata»), nell'ordine
   in cui escono, e dentro ogni portata i tavoli. Serve a sapere «quanti antipasti devo fare».
-- **Tavolo**: prima il tavolo (es. «Sala principale - Tavolo 12», oppure «n. 27 · Asporto - Rossi -
+- **Tavolo**: prima il tavolo (es. «Tavolo 12 - Sala principale», oppure «n. 27 · Asporto - Rossi -
   ritiro 20:30»), dal più vecchio, e dentro ogni tavolo le portate. Serve a far uscire un tavolo tutto
-  insieme.
+  insieme. Il tavolo sta prima della sala perché, se la colonna è stretta, il monitor taglia la fine
+  del titolo.
 
-Ogni gruppo ha una testata con il nome, il conteggio e l'attesa più lunga (es. «3 piatti · da 12'»;
-«in attesa» per i gruppi fermi; «adesso» per quelli appena arrivati). Un gruppo che continua dalla
+Ogni gruppo ha una testata con il nome e l'attesa più lunga (es. «da 12'»; «in attesa» per i gruppi
+fermi; «adesso» per quelli appena arrivati). La riga della portata, sotto il tavolo, porta anche il
+conteggio dei piatti (es. «3 piatti · da 12'»); quella del tavolo no, per lasciare posto al nome. Un gruppo che continua dalla
 pagina precedente porta «(segue)»; un gruppo in attesa porta «· IN ATTESA».
 
 ### Gli ordini da asporto e del kiosk
@@ -116,6 +137,9 @@ Ogni piatto è una card con:
 
 - la **quantità** in un riquadro (es. «2×»);
 - il **nome del piatto**, su più righe se serve;
+- sotto il nome, le **varianti** (es. «SENZA BASILICO») e, in blu, i piatti degli altri centri che
+  **escono insieme** a questo (es. «» CON 1 COSTATA · CUCINA»: vedi
+  [I piatti che escono insieme](#i-piatti-che-escono-insieme));
 - la **nota** del cameriere, in giallo (es. «senza cipolla»);
 - a destra il **tempo** in minuti (es. «12'»; «—» se non è disponibile). In IN CODA e IN
   LAVORAZIONE è l'attesa da quando il piatto è arrivato in cucina; in PRONTO è da quanto il piatto
@@ -124,6 +148,42 @@ Ogni piatto è una card con:
   **tornare indietro** di uno stato.
 
 I piatti **in attesa** del via sono sbiaditi e non si possono toccare.
+
+### La forma compatta
+
+Il tabellone ha due densità, che si scelgono dalla pastiglia **Impostazioni**:
+
+- **Normale**: una card per piatto, con il suo bordo colorato e la sua attesa.
+- **Compatta** (di partenza): un riquadro per tavolo e i piatti in riga dentro il riquadro, senza
+  card. Ne entrano molti di più per pagina.
+
+Nella forma compatta:
+
+- la testata del riquadro porta il tavolo in grande, la sala in piccolo, l'attesa più lunga del
+  tavolo (es. «19'») e il pulsante con il **doppio chevron** arancione, che manda avanti tutti i
+  piatti del riquadro;
+- la barra a sinistra del riquadro, il nome del tavolo e l'attesa prendono il colore del tempo;
+- ogni piatto è una riga: quantità, nome e, sotto, varianti, nota e righe blu dei piatti che escono
+  insieme. Il tocco sulla riga manda avanti il piatto;
+- in **IN LAVORAZIONE** e **PRONTO** a destra della riga resta la freccia per tornare indietro, e in
+  **PRONTO** il tempo di preparazione («prep. 8'»);
+- la colonna **IN CODA** si può dividere in più sottocolonne che nella forma normale.
+
+### Le impostazioni del tabellone
+
+La pastiglia **Impostazioni** apre un riquadro sopra il tabellone. Le scelte valgono subito, si
+vedono sul tabellone dietro e restano memorizzate su quel monitor.
+
+| Voce | Scelte |
+|---|---|
+| **Densità** | **Normale** o **Compatta**. |
+| **Riga della portata** | **Sempre**, oppure **Solo se serve**: il nome della portata compare solo nei tavoli che ne hanno più di una. |
+| **Piatti che escono insieme** | **Una riga**: la riga blu «» CON ...» sta su una riga e si taglia se è lunga. **Per intero**: va a capo. |
+| **Attesa su ogni piatto** | **Sì**: l'attesa compare anche accanto a ogni piatto. **No**: resta solo sul tavolo. |
+| **Centro, server e aspetto** | **Apri la configurazione** porta alla [Scelta del centro](centro.md). |
+
+Le tre voci di mezzo valgono solo con la densità compatta. Si chiude con la **X** o toccando fuori
+dal riquadro.
 
 ### I colori del tempo
 
@@ -136,6 +196,35 @@ Il colore è sul bordo della card, sul tempo e sulle barre colorate a sinistra d
 gruppo diventa rosso quando c'è un piatto in ritardo grave. In PRONTO le soglie sono più strette:
 un piatto pronto da sei minuti si sta raffreddando.
 
+### I piatti che escono insieme
+
+![Piatti rimasti indietro rispetto a un altro centro](../assets/img/kds/monitor-esce-insieme.png)
+
+Quando un piatto deve uscire insieme a piatti preparati da un altro centro (stesso tavolo, stessa
+portata), sotto il nome compare in blu una riga per ognuno, con quantità, piatto e centro: «» CON 1
+COSTATA · CUCINA».
+
+Se l'altro centro è più avanti - il suo piatto è già in lavorazione o pronto mentre il tuo è in una
+colonna precedente - il tuo piatto è **rimasto indietro** e il monitor lo segnala:
+
+- sotto la riga blu compare **GIÀ IN LAVORAZIONE** oppure **GIÀ PRONTO**;
+- la card si vela di blu e **lampeggia lentamente** per il tempo scelto (un minuto, se non l'hai
+  cambiato), poi resta velata senza lampeggiare.
+
+Il segnale sparisce da solo quando il piatto raggiunge la colonna dell'altro. Esempio: la costata
+del tavolo 7 è in lavorazione in cucina e la capricciosa dello stesso tavolo è ancora in coda in
+pizzeria: sul monitor della pizzeria la capricciosa lampeggia con «GIÀ IN LAVORAZIONE»; appena il
+pizzaiolo la tocca, smette.
+
+Per quanti minuti dura il lampeggio si sceglie nella [Scelta del centro](centro.md), col cursore
+della riga **Lampeggio dei piatti che escono insieme**: a **0** restano solo le righe blu, su **∞**
+lampeggia finché il piatto resta indietro.
+
+- I piatti **in attesa** del via non lampeggiano: non è ancora il loro momento.
+- Se l'altro centro lavora solo con la stampante, senza monitor, il monitor non sa a che punto è il
+  suo piatto: la riga blu c'è, il segnale no.
+- Il monitor si aggiorna ogni quattro secondi: il segnale arriva con qualche secondo di ritardo.
+
 ## Campi e indicatori
 
 | Elemento | Descrizione |
@@ -147,8 +236,11 @@ un piatto pronto da sei minuti si sta raffreddando.
 | **Conteggio della colonna** | I piatti da fare, esclusi quelli in attesa. |
 | **+N in attesa** | Piatti fermi in attesa del via del cameriere. |
 | **1 / 3** / **tutto a schermo** | La pagina mostrata della colonna. |
+| **Pulsantino delle colonne** (in testa a IN CODA) | In quante colonne è divisa IN CODA. Solo sugli schermi larghi. |
 | **2×** | La quantità del piatto. |
 | **Nota in giallo** | La nota del cameriere per la cucina. |
+| **Riga blu «» CON …»** | Un piatto di un altro centro che esce insieme a questo. |
+| **GIÀ IN LAVORAZIONE** / **GIÀ PRONTO** | L'altro centro è più avanti: questo piatto è rimasto indietro. |
 | **12'** | Minuti d'attesa (o al passe, in PRONTO). |
 | **prep. 8'** / **al passe** | Solo in PRONTO: quanto ci è voluto a preparare il piatto. |
 
@@ -161,9 +253,11 @@ un piatto pronto da sei minuti si sta raffreddando.
 | **Avvia / Pronto / Consegna** (testata di un gruppo interno) | Fa avanzare insieme tutti i piatti del gruppo. |
 | **Avvia tutto / Tutto pronto / Tutto consegnato** (testata del tavolo, solo nel raggruppamento per **Tavolo**) | Fa avanzare insieme tutti i piatti del tavolo in quella colonna. |
 | **Frecce in fondo alla colonna** | Pagina precedente / successiva. |
+| **Pulsantino delle colonne** (in testa a IN CODA) | Passa alla divisione successiva della colonna IN CODA: una, due o tre colonne, secondo la larghezza dello schermo. La scelta resta memorizzata su questo monitor. |
 | **Portata / Tavolo** | Cambia il raggruppamento. La scelta resta memorizzata su questo monitor. |
 | **Operatore** | Apre la finestra **Chi lavora in questo centro**. |
-| **Centro** | Torna alla [Scelta del centro](centro.md). |
+| **Impostazioni** | Apre [le impostazioni del tabellone](#le-impostazioni-del-tabellone): densità, riga della portata, piatti che escono insieme, attesa su ogni piatto e **Apri la configurazione**, che torna alla [Scelta del centro](centro.md). |
+| **Doppio chevron** (forma compatta) | Manda avanti tutti i piatti del riquadro, come **Avvia tutto**, **Tutto pronto** e **Tutto consegnato** della forma normale. |
 | **LETTO** | Chiude il messaggio dalla sala (vedi sotto). |
 
 Su un gruppo spezzato fra due pagine, i pulsanti del gruppo fanno avanzare solo i piatti che si
@@ -222,12 +316,15 @@ Esempio: segni pronte in fila 2 capricciose del tavolo 1, 1 capricciosa del tavo
 margherita del tavolo 1. Escono due talloncini: tavolo 1 con 2 capricciose e 1 margherita, tavolo 2
 con 1 capricciosa.
 
-- Un piatto riportato indietro con la freccia prima della stampa non va sul talloncino.
-- Se esci dal tabellone (per esempio con **Centro**) prima dei 15 secondi, il talloncino esce subito.
+- Un piatto riportato indietro prima della stampa non va sul talloncino, nemmeno se lo riporta indietro un
+  altro monitor; lo stesso vale per un piatto tolto dalla comanda in cassa.
+- Se esci dal tabellone (per esempio con **Impostazioni** e **Apri la configurazione**) prima dei 15 secondi, il talloncino esce subito.
 - Ogni monitor stampa solo i piatti segnati pronti su di lui.
 - Se i piatti di un tavolo vengono segnati pronti a più di 15 secondi l'uno dall'altro, per quel
   tavolo escono più talloncini.
 - Al momento il talloncino non si ristampa.
+- Se la stampante non stampa, il monitor ti avvisa **una volta sola**: l'avviso ricompare solo dopo che un
+  talloncino è tornato a uscire e la stampante si è fermata di nuovo.
 
 ### Correggere un tocco sbagliato
 
@@ -246,8 +343,8 @@ Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *Impossibile riportare indietro il ticket. (…)* | Il servizio non ha registrato il ritorno indietro. | Riprova. |
 | *Impossibile aggiornare i ticket. (…)* / *Aggiornamento dei ticket non riuscito.* | Il servizio non risponde. L'ora di «Aggiornato alle» resta ferma. | Controlla la rete e il servizio; il monitor riprova da solo. |
-| *Talloncino di … non stampato: …* | La stampante del centro non ha stampato il talloncino di quel tavolo (dopo i due punti il motivo, es. stampante spenta o irraggiungibile). | Avvisa il cameriere a voce; controlla la stampante. Il talloncino non viene ristampato. |
-| *Talloncini non stampati: il servizio non risponde. (…)* | Al momento di stampare il monitor non ha raggiunto il servizio. | Avvisa il cameriere a voce; controlla la rete e il servizio. |
+| *Talloncino di … non stampato: … Non lo ripeto finché un talloncino non torna a uscire: intanto avvisa i camerieri a voce.* | La stampante del centro non ha stampato il talloncino di quel tavolo (dopo i due punti il motivo, es. stampante spenta o irraggiungibile). | Avvisa i camerieri a voce e controlla la stampante: finché non riparte, i talloncini successivi mancano **senza altri avvisi**. Il talloncino non viene ristampato. |
+| *Talloncini non stampati: il servizio non risponde. (…) Non lo ripeto finché un talloncino non torna a uscire: intanto avvisa i camerieri a voce.* | Al momento di stampare il monitor non ha raggiunto il servizio. | Avvisa i camerieri a voce; controlla la rete e il servizio. Anche questo avviso esce una volta sola. |
 | *RistoFacile in modalità demo* | Una cassa del locale è in prova. | Nessuna: il monitor funziona. |
 | *Il monitor di cucina è un modulo aggiuntivo di RistoFacile e la licenza digitale di questo ristorante non lo comprende.* | La licenza non comprende il monitor di cucina. Le comande non vengono mostrate. | Contatta il rivenditore. Quando il modulo viene attivato le comande ricompaiono da sole alla verifica successiva (il monitor chiede ogni ora, e a ogni riapertura del tabellone). |
 

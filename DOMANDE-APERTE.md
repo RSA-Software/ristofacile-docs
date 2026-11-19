@@ -192,7 +192,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kds/monitor.md`
 
-- [ ] riga 239: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
+- [ ] riga 297: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
 
 ## Pagamenti, per il personale
 
