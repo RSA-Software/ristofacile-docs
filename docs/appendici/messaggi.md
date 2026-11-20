@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-20 — **784 messaggi**.
+Aggiornato al 2026-11-20 — **785 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -757,6 +757,7 @@ Aggiornato al 2026-11-20 — **784 messaggi**.
 | *Stiamo registrando un pagamento: per ora ordina alla cassa.* | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Kiosk fuori servizio finché il pagamento non è registrato. | Come sopra. |
 | *Storico dei conti non caricato.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Il servizio non ha risposto o ha dato errore; sotto c'è il dettaglio. | Controlla il collegamento al servizio; poi cambia un filtro o premi **Invio** nella ricerca per riprovare. |
 | *Sul conto c'e' il servizio N%, ma in anagrafica manca l'articolo SERVIZIO con la sua aliquota IVA, o la sua aliquota non ha un reparto della cassa: va creato o sistemato prima di emettere il documento.* | Cassa: [Conto](../cassa/conto.md) | La sala ha il servizio ma l'articolo SERVIZIO manca o è incompleto. | Crea o sistema l'articolo in [Articoli](../cassa/articoli.md). |
+| *Su questa cassa non sono attivi:* (elenco dei moduli) *… non compreso nella licenza* oppure *… gia' in uso su N dispositivi su N acquistati* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | La licenza è attiva, ma senza quei moduli. | Per un modulo da acquistare chiedi a RSA: arriva da solo entro un giorno. Per uno già tutto in uso, disattiva la licenza sulla cassa che non lo usa più. |
 | *Su questo conto e' gia' stato incassato qualcosa (carta, contanti o scontrino): non si puo' piu' addebitare in camera.* | Cassa: [Conto](../cassa/conto.md) | **Camera** scelta dopo un incasso già avvenuto. | Completa l'incasso con lo scontrino. |
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Cassa: [Conto](../cassa/conto.md) | Il servizio non ha una stampante fiscale. Il conto resta aperto. | Configura la stampante fiscale, oppure chiudi senza documento e documenta più tardi dallo Storico. |
 | *Su questo impianto non c'e' una stampante fiscale configurata: per liberare il tavolo usa CHIUDI SENZA DOCUMENTO, e lo scontrino lo emetti piu' tardi da Storico conti.* | Palmare: [Conto](../palmare/conto.md) | Nessuna stampante fiscale. | Chiudi senza documento e documenta poi dalla cassa ([Storico conti](../cassa/storico-conti.md)). |
