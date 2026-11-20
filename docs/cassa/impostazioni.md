@@ -88,7 +88,7 @@ All'apertura è selezionata la voce **Turno**. La voce scelta è evidenziata con
 | **Password** | La password di quell'utente. Non viene mai rimostrata: se ne è già salvata una compare *Password già salvata: lascia vuoto per non modificarla.* |
 | **Salva e connetti** | Salva i tre dati e prova subito una lettura vera dal servizio (l'elenco delle sale). Durante la prova gira la rotellina. |
 | Riga di esito | *Connesso a* (indirizzo) *come* (utente)*.* se tutto è a posto, *Non configurato.* se la cassa non è collegata. |
-| **Versione** | La versione di questa cassa e, quando il servizio ha risposto, la sua versione e il livello con cui si parlano: per esempio *App 1.0 (build 1) · Servizio 2.026.11.0 · API 1*. È il dato da dare all'assistenza. |
+| **Versione** | La versione di questa cassa e, quando il servizio ha risposto, la sua versione e il livello con cui si parlano: per esempio *App 2.026.11.3 · Servizio 2.026.11.0 · API 1*. Come si legge il numero è spiegato in [Versione e compatibilità col servizio](#versione-e-compatibilita-col-servizio). È il dato da dare all'assistenza. |
 | Riquadro ambra sotto la versione | Compare solo quando cassa e servizio non vanno d'accordo, e dice quale dei due va aggiornato (vedi [Note](#versione-e-compatibilita-col-servizio)). |
 
 Sotto la voce **Connessione**, a sinistra, si legge l'indirizzo in uso.
@@ -599,7 +599,16 @@ La cassa, il palmare, il monitor di cucina e il kiosk chiedono al servizio la su
 - quando l'app torna in primo piano;
 - dopo **Salva e connetti** (sul kiosk, **Salva e verifica**).
 
-Se non vanno d'accordo compare una volta l'avviso *Il servizio è più vecchio di questa app: va aggiornato il server.* oppure *Questa app è più vecchia del servizio: va aggiornata.*, e lo stesso testo resta nel riquadro ambra sotto la **Versione**. L'avviso non blocca: si continua a lavorare, ma conviene aggiornare subito, perché qualche funzione può non andare. Lo stesso avviso non si ripete a ogni ritorno in primo piano; ricompare se cambia, o dopo un nuovo **Salva e connetti**.
+**Come si legge il numero di versione.** App e servizio hanno la stessa forma, per esempio *2.026.11.3*: il primo numero è sempre 2, il secondo è l'anno (026 = 2026), il terzo è la versione di Facile (B11) e il quarto è la build dell'app. Quindi *2.026.11.3* vuol dire «per Facile 2026 B11, build 3 dell'app». A ogni cambio di anno o di versione di Facile tutte le app vengono ripubblicate e la build riparte da 0. Il setup per Windows prende lo stesso nome (*RistoFacile 2.026.11.00*, file *RistoFacileSetup_2.026.11.00.exe* e *RistoFacileAggiornamento_2.026.11.00.exe*) e ha la sua build. Nella pagina della licenza la release compare nella forma *2026 B11.00*.
+
+Se non vanno d'accordo compare una volta un avviso, e lo stesso testo resta nel riquadro ambra sotto la **Versione**. Se è il livello dell'API a non essere compatibile, l'avviso è *Il servizio è più vecchio di questa app: va aggiornato il server.* oppure *Questa app è più vecchia del servizio: va aggiornata.*
+
+Se invece il livello dell'API va bene ma app e servizio sono di release diverse (cambia l'anno o la versione di Facile), l'avviso dice quale dei due aggiornare:
+
+- *Questa app è la 2.026.11.3, il servizio la 2.026.12.0: va aggiornata l'app.*
+- *Questa app è la 2.026.12.0, il servizio la 2.026.11.0: va aggiornato il server.*
+
+Il kiosk non mostra mai avvisi a schermo: lo dice solo nel riquadro ambra della configurazione. L'avviso non blocca: si continua a lavorare, ma conviene aggiornare subito, perché qualche funzione può non andare. Lo stesso avviso non si ripete a ogni ritorno in primo piano; ricompare se cambia, o dopo un nuovo **Salva e connetti**.
 
 Se il servizio non risponde, o non è un servizio RistoFacile, l'avviso non compare: è un problema di collegamento e lo dice lo **Stato** della connessione.
 

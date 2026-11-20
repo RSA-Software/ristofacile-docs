@@ -42,7 +42,7 @@ collegato al servizio con un **utente web suo**, che può fare solo quello che s
   QR 2D a tastiera per i segnaposto.
 
 **Il programma.** Sul totem Windows RistoKiosk si installa con il setup di RistoFacile
-(**RistoFacileSetup_<versione>.exe**, per esempio *RistoFacileSetup_1.2.5.exe*), scegliendo la postazione kiosk: il setup lo mette in
+(**RistoFacileSetup_<versione>.exe**, per esempio *RistoFacileSetup_2.026.11.00.exe*), scegliendo la postazione kiosk: il setup lo mette in
 `C:\Facile\RistoKiosk` e blocca il PC (vedi [Windows](#windows)). Sul tablet Android si installa
 l'app RistoKiosk. Da lì in poi valgono i passi di questa pagina.
 
