@@ -1,6 +1,6 @@
 ---
 title: Impostazioni
-description: Le impostazioni della cassa - collegamento al servizio, turno, sala, stampanti, POS, cassa automatica, dati fiscali, aspetto, menu online, hotel e licenza digitale.
+description: Le impostazioni della cassa - collegamento al servizio, turno, sala, stampanti, POS, cassa automatica, dati fiscali, aspetto, sito del menu, hotel e licenza digitale.
 app: Cassa
 percorso: Menu ▸ Impostazioni
 pagina: ImpostazioniPage
@@ -10,7 +10,7 @@ pagina: ImpostazioniPage
 
 Da qui si prepara la cassa al lavoro: a quale servizio si collega, chi è in turno, su quali
 stampanti, terminali POS e casse automatiche lavora, i dati fiscali della ditta, l'aspetto
-dell'app, il menu online, l'addebito in camera e la licenza digitale. È la schermata del
+dell'app, il sito del menu, l'addebito in camera e la licenza digitale. È la schermata del
 titolare o di chi installa l'impianto; il cassiere la apre di solito solo per uscire dal turno.
 
 !!! info "In sintesi"
@@ -24,10 +24,11 @@ titolare o di chi installa l'impianto; il cassiere la apre di solito solo per us
 ## A cosa serve
 
 Alcune impostazioni valgono **solo per questa cassa** (il servizio a cui si collega, il tavolo
-dell'asporto, quale stampante (anche fiscale), quale POS e quale cassa automatica usa, il tema), altre valgono
+dell'asporto, quale stampante (anche fiscale), quale POS e quale cassa automatica usa, il tema, il
+sito del menu), altre valgono
 **per tutto l'impianto** e le vedono tutte le postazioni (l'elenco delle stampanti, dei terminali
 POS e delle casse automatiche, l'elenco delle stampanti fiscali, i modelli di stampa, i dati della ditta, il
-menu online, il codice di addebito in camera). Ogni pannello lo dice nella sua riga di
+codice di addebito in camera). Ogni pannello lo dice nella sua riga di
 descrizione o nel messaggio che compare dopo il salvataggio.
 
 Esempio: in un locale con due casse al banco, ciascuna con il suo registratore, le due stampanti
@@ -51,7 +52,7 @@ La schermata è divisa in due:
 
 - **a sinistra** l'elenco delle voci: **Turno**, **Connessione**, **Sala**, **Stampante preconto**,
   **Modelli di stampa**, **Stampanti fiscali**, **Pagamento con carta**, **Cassa automatica**,
-  **Dati fiscali**, **Aspetto**, **Menu online**, **Hotel**, **Licenza**. Sotto ogni nome, in
+  **Dati fiscali**, **Aspetto**, **Sito del menu**, **Hotel**, **Licenza**. Sotto ogni nome, in
   piccolo, c'è lo stato attuale (per esempio chi è in turno, l'indirizzo del servizio, il terminale
   POS in uso; per le stampanti fiscali, per esempio, *2 · qui n. 2*, cioè 2 stampanti e questa
   cassa usa la n. 2);
@@ -422,11 +423,11 @@ alla fattura elettronica e valgono per tutto l'impianto.
 |---|---|
 | **Tema**: **Scuro**, **Chiaro**, **Sistema** | Tocca uno dei tre riquadri: il tema cambia subito e resta salvato su questa cassa. **Sistema** segue l'impostazione chiara/scura di Windows o del tablet. Il tema proposto è **Scuro**. |
 
-### Menu online
+### Sito del menu
 
-*Indirizzo e QR code del menu che i clienti consultano dal tavolo.* Ha tre linguette:
-**Qrcode**, **Sincronizzazione** e **Stile**. È descritto nella scheda
-[Menu online](menu-online.md). Esiste solo sulla cassa.
+*Il menu online del locale: aspetto, contenuti e pubblicazione via FTP.* Ha dieci linguette, con
+l'anteprima del sito a destra. È descritto nella scheda [Sito del menu](sito-menu.md). Esiste solo
+sulla cassa.
 
 ### Hotel
 
@@ -657,9 +658,9 @@ cassa lo applica da sola su scontrino, fattura e movimenti di magazzino:
     finché non lo rimetti.
 
 - **Cosa vale per chi.** Collegamento, turno, tavolo dell'asporto, stampante scelta, terminale POS
-  e cassa automatica in uso, i tre valori di **Mappa e servizio** e il tema valgono solo per questa
-  cassa. Elenco delle stampanti, dei terminali e delle macchine, elenco delle stampanti fiscali, modelli di
-  stampa, dati fiscali, menu online e codice di addebito in camera valgono per tutto l'impianto.
+  e cassa automatica in uso, i tre valori di **Mappa e servizio**, il tema e il sito del menu valgono solo
+  per questa cassa. Elenco delle stampanti, dei terminali e delle macchine, elenco delle stampanti fiscali, modelli di
+  stampa, dati fiscali e codice di addebito in camera valgono per tutto l'impianto.
 - L'elenco delle stampanti fiscali si gestisce dalla cassa; il [palmare](../palmare/impostazioni.md)
   lo legge e sceglie la propria stampante.
 - **Salva** e **Togli** della cassa automatica rileggono l'elenco dal servizio e cambiano solo la macchina a video: le modifiche fatte nel frattempo da un'altra cassa restano.
@@ -675,7 +676,7 @@ cassa lo applica da sola su scontrino, fattura e movimenti di magazzino:
 
 - [Prima configurazione](../introduzione/prima-configurazione.md)
 - [Licenza digitale](../introduzione/licenza.md)
-- [Menu online](menu-online.md)
+- [Sito del menu](sito-menu.md)
 - [Accesso operatore](accesso.md)
 - [Sale e tavoli](sale-e-tavoli.md)
 - [Asporto e domicilio](asporto.md)

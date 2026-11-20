@@ -1,6 +1,3 @@
 cassa/conto-cassa-automatica.png
 cassa/conto-pos.png
-cassa/menu-online-sincronizzazione.png
-cassa/menu-online-stile.png
 introduzione/licenza-demo.png
-palmare/impostazioni-fiscale.png

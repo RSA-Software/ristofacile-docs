@@ -40,7 +40,7 @@ sono nell'uscita dei secondi, aspettano il **VIA** del cameriere, come se le ave
 - Il servizio deve essere raggiungibile dai telefoni dei clienti da internet, con un indirizzo
   `https`: lo prepara chi installa il servizio (vedi
   [Pubblicare il self order su internet](../appendici/self-order-internet.md)).
-- I piatti che il cliente vede sono quelli del [Menu online](menu-online.md): sistemalo prima.
+- I piatti che il cliente vede sono quelli dei menu scelti nel [Sito del menu](sito-menu.md), linguetta **Menu e note**, e salvati con **Salva**: sistemalo prima.
 - Sale e tavoli devono esistere (vedi [Sale e tavoli](sale-e-tavoli.md)).
 - Per il pagamento dal telefono il servizio deve avere configurato Nexi.
 
@@ -186,5 +186,5 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 - [Mappa della sala](mappa-sala.md)
 - [Comanda](comanda.md)
 - [Conto](conto.md)
-- [Menu online](menu-online.md)
+- [Sito del menu](sito-menu.md)
 - [Pubblicare il self order su internet](../appendici/self-order-internet.md)

@@ -271,7 +271,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 - L'eliminazione non cancella davvero l'articolo: lo segna come eliminato, e sparisce dagli elenchi.
 - Gli articoli creati dalla cassa per vendere i menu interi non compaiono in questo elenco.
 - Gli allergeni si consultano in [Comanda](comanda.md) e possono comparire nel
-  [menu online](menu-online.md).
+  [sito del menu](sito-menu.md).
 
 ## Vedi anche
 
@@ -280,4 +280,4 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 - [Sale e tavoli](sale-e-tavoli.md)
 - [Vendita al banco](vendita-al-banco.md)
 - [Disponibilità](disponibilita.md)
-- [Menu online](menu-online.md)
+- [Sito del menu](sito-menu.md)

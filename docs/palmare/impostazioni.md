@@ -29,7 +29,7 @@ Le voci sono le stesse della cassa e funzionano allo stesso modo: questa scheda 
 
 Rispetto alla cassa, sul palmare:
 
-- **non ci sono** Modelli di stampa, Cassa automatica, Dati fiscali, Menu online e Hotel, e
+- **non ci sono** Modelli di stampa, Cassa automatica, Dati fiscali, Sito del menu e Hotel, e
   nella parte della sala manca il **Tagliando di via in cucina**;
 - **c'è in più** il **Richiamo dalla cucina**;
 - stampanti, terminali POS e stampante fiscale **si scelgono o si leggono, ma non si
