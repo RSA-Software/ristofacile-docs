@@ -1,3 +1,1 @@
-cassa/conto-cassa-automatica.png
-cassa/conto-pos.png
 introduzione/licenza-demo.png
