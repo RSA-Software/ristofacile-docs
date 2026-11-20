@@ -48,7 +48,7 @@ La schermata ha tre colonne.
 - **FRASI PRONTE** (centro): l'elenco delle frasi pronte, con il pulsante **MODIFICA** in alto; sotto,
   la casella del messaggio («Scrivi il messaggio, o tocca una frase») e i pulsanti **Cancella**,
   **Salva come frase** e **INVIA**.
-- **INVIATI OGGI** (destra): i messaggi mandati, dal più recente, con testo, ora, centro, chi l'ha
+- **ULTIMI INVIATI** (destra): i messaggi mandati, dal più recente, con testo, ora, centro, chi l'ha
   scritto e lo stato.
 
 ## Campi e indicatori
@@ -75,7 +75,7 @@ Lo stato si aggiorna da solo ogni pochi secondi finché la schermata è aperta.
 | **MODIFICA** / **FATTO** | Entra ed esce dalla modifica delle frasi pronte. |
 | **Cancella** | Svuota la casella del messaggio. |
 | **Salva come frase** | Aggiunge il testo della casella alle frasi pronte. Spento con la casella vuota. |
-| **INVIA** | Manda il messaggio ai centri scelti: compare in **INVIATI OGGI**, sui monitor dei centri e, per i centri su carta, esce il foglietto. Spento con la casella vuota. |
+| **INVIA** | Manda il messaggio ai centri scelti: compare in **ULTIMI INVIATI**, sui monitor dei centri e, per i centri su carta, esce il foglietto. Spento con la casella vuota. |
 
 ## Come si fa
 
@@ -83,7 +83,7 @@ Lo stato si aggiorna da solo ogni pochi secondi finché la schermata è aperta.
 
 1. In **A CHI** tocca il centro (es. «Cucina»), o **Tutti**.
 2. Tocca una frase pronta (es. «Accelerare») e completa il testo (es. «Accelerare il 12»).
-3. Tocca **INVIA**. La casella si svuota e il messaggio compare in **INVIATI OGGI** come **NON
+3. Tocca **INVIA**. La casella si svuota e il messaggio compare in **ULTIMI INVIATI** come **NON
    LETTO** (o **STAMPATO** per i centri su carta).
 4. Quando in cucina lo segnano come letto, lo stato diventa **LETTO** con l'ora e il nome.
 
@@ -111,7 +111,9 @@ Lo stato si aggiorna da solo ogni pochi secondi finché la schermata è aperta.
 ## Note
 
 - Le frasi pronte sono condivise: chi le modifica da una cassa o da un palmare le cambia per tutti.
-- La colonna **INVIATI OGGI** mostra i messaggi di tutti, non solo i tuoi. <!-- DA VERIFICARE: il titolo dice "oggi", ma il servizio restituisce i messaggi di oggi e di ieri. Va corretto il titolo o il servizio? -->
+- La colonna **ULTIMI INVIATI** mostra i messaggi di tutti, non solo i tuoi, mandati oggi e ieri:
+  chi lavora a cavallo della mezzanotte ritrova anche quelli della sera prima. Di ogni messaggio si
+  vede solo l'ora.
 - Sul monitor di cucina il messaggio resta in evidenza finché qualcuno non tocca il tasto per segnarlo
   letto: vedi [Monitor di cucina](../kds/monitor.md).
 - Sui centri solo su carta non c'è conferma di lettura: lo stato si ferma a **STAMPATO**.

@@ -99,8 +99,8 @@ Le righe **Dal servizio** sono in sola lettura: si cambiano sul servizio, non qu
 | Elemento | Descrizione |
 |---|---|
 | **Terminale** | I terminali registrati sul servizio. Il kiosk non annulla un pagamento con la carta: il cliente segue le istruzioni sul terminale. |
-| **Id con cui il kiosk si presenta al POS (finisce sulla ricevuta)** | Proposto `KIOSK1` per il kiosk n. 1, `KIOSK2` per il n. 2 e così via. Al più 16 caratteri. |
-| Riga di esito | Per esempio *Questo kiosk incassa con la carta su POS ingresso, id cassa KIOSK1.* |
+| **Id con cui il kiosk si presenta al POS (finisce sulla ricevuta)** | Proposto `901` per il kiosk n. 1, `902` per il n. 2 e così via. Solo cifre, al massimo 8: il POS lo vuole numerico. |
+| Riga di esito | Per esempio *Questo kiosk incassa con la carta su POS ingresso, id cassa 901.* |
 
 ### Rendiresto (contanti)
 

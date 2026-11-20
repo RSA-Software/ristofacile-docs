@@ -104,7 +104,7 @@ In fondo, fissi, **Annulla** e **Salva**.
 | **Conferma** / **Conferma prenotazione** | La prenotazione passa a **Confermata**. |
 | **Arrivato** / **Cliente arrivato** | Apre (o riprende) il conto del tavolo assegnato con i coperti della prenotazione, segna la prenotazione come arrivata e porta nella [Comanda](comanda.md). Compare «Apertura tavolo…». |
 | **Modifica** | Apre il modulo della prenotazione. |
-| **Annulla** (nella scheda) | Annulla una prenotazione **Da confermare**, dopo conferma. |
+| **Annulla** (nella scheda) | Annulla una prenotazione **Da confermare** o **Confermata** (per esempio il cliente disdice), dopo conferma. |
 | **Non presentato** | Segna come non presentato un cliente con prenotazione **Confermata**, dopo conferma. |
 | **Salva** | Salva la prenotazione e torna all'elenco. |
 | **Annulla** (nel modulo) | Torna all'elenco senza salvare. |

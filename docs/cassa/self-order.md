@@ -252,9 +252,15 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
   quando le fasce del giorno sono finite, l'asporto online risulta chiuso.
 - **Asporto online: il tavolo.** Il link è quello del tavolo virtuale dell'asporto scelto su
   questa cassa in Impostazioni ▸ Sala: se lo cambi, il link cambia e quello vecchio va sostituito
-  sul sito e sui social.
-  <!-- DA VERIFICARE: come arriva in cassa un ordine dell'asporto online (avviso, elenco Asporto, comanda in cucina) e come si chiude al ritiro: il pagamento con la carta fatto online compare gia' nel conto come per il self order? -->
-  <!-- DA VERIFICARE: il tavolo dell'asporto si sceglie per ogni cassa, ma l'asporto online e' unico per l'impianto: quale tavolo vale se due casse ne hanno scelto uno diverso? (al Salva vince quello della cassa che salva) -->
+  sul sito e sui social. L'asporto online è uno solo per tutto il locale: vale il tavolo della
+  cassa che ha salvato per ultima questa scheda. Sceglila sempre dalla stessa cassa, o scegli lo
+  stesso tavolo dell'asporto su tutte le casse.
+- **Asporto online: in cassa.** Un ordine compare solo quando è pagato: in quel momento parte la
+  comanda per la cucina (carta e monitor) e l'ordine entra nell'elenco
+  [Asporto e domicilio](asporto.md) con la pastiglia viola **ONLINE** e la scritta *Pagato online*,
+  con un avviso in cassa. Al ritiro apri il conto dall'elenco: il pagamento con la carta fatto online
+  è già nel conto, come per il self order al tavolo, e la cassa emette lo scontrino. Sugli ordini
+  del sito non si paga il servizio della sala.
 - **Asporto online: ordini non pagati.** Il cliente paga subito con la carta; un ordine non pagato
   entro 20 minuti si annulla da solo.
 
