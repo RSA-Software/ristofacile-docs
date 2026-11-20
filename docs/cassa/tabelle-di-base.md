@@ -87,7 +87,7 @@ usare lo stesso codice del gestionale.
 | **Codice \*** | Numero dell'aliquota. Proposto il primo libero. Dopo il salvataggio non si cambia più. |
 | **Descrizione \*** | Es. IVA 10%, ESENTE ART. 10. |
 | **Aliquota %** | La percentuale, da 0 a 100. |
-| **Reparto cassa** | Sezione **Registratore telematico**. «Il reparto su cui la RT registra le righe degli articoli con questa aliquota. Deve corrispondere a come e' programmata la stampante fiscale.» Usa un numero da 1 a 9: è il limite che la scheda articolo impone quando crea un'aliquota al volo. <!-- DA VERIFICARE: qui non c'è controllo sul massimo; un reparto oltre 9 funziona con la stampante fiscale? --> |
+| **Reparto cassa** | Sezione **Registratore telematico**. «Il reparto su cui la RT registra le righe degli articoli con questa aliquota. Deve corrispondere a come e' programmata la stampante fiscale.» Un reparto oltre 9 funziona se la stampante ha quel reparto programmato, entro il massimo della marca: 40 per le XonXoff 3i, 99 per le altre XonXoff, RCH e Custom, 999 per le Custom collegate in rete; Epson, Ditron e Axon ricevono il numero così com'è. Oltre il massimo la riga finisce su un altro reparto, cioè su un'aliquota sbagliata. La scheda articolo, quando crea un'aliquota al volo, propone solo da 1 a 9. |
 | **Tipo** | Sezione **Classificazione fiscale**. Uno dei 14 tipi di legge: Imponibile, Esente, Non imponibile, Non soggetto, Ritenuta d'acconto, Non imp. art. 8/2, Rettifica, Export / import, Crediti diversi, Corrispettivi ventilazione, Escluso art. 15, Regime del margine, Reverse charge, Assolta in altro stato UE. |
 | **Natura (fattura elettronica)** | Compare solo per i tipi che la prevedono (es. Esente → N4; Non imponibile → N3.1 … N3.6) e dichiara perché l'imposta non si applica. Ritoccare la natura scelta la toglie. |
 
@@ -152,8 +152,9 @@ scegli il listino nella casella **Listino** e scrivi il **Prezzo**.
 ## Note
 
 - Eliminare un reparto, una categoria o un listino **non** è bloccato se qualche articolo li usa:
-  gli articoli restano senza.
-  <!-- DA VERIFICARE: cosa succede a una sala il cui listino viene eliminato (torna al listino di default?) -->
+  gli articoli restano senza. Un listino invece non si elimina se lo usa una sala o un menu
+  (compare *Impossibile eliminare.*): prima assegna alla sala o al menu un altro listino.
+  Eliminando un listino si cancellano anche i suoi prezzi.
 - Le categorie spente in **Vendita al banco** non compaiono nella [Vendita al banco](vendita-al-banco.md).
 - Il pulsante **Ristorante** delle categorie al momento non cambia niente nelle app: in sala si
   vende dal [Menu](menu.md), non dalle categorie.

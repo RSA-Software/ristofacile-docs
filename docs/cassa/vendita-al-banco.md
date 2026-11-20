@@ -281,9 +281,13 @@ automatica, stampante fiscale, fattura) vedi [Conto](conto.md).
   servizio come al tavolo (vedi [Conto](conto.md)).
 - Le vendite al banco non compaiono nell'elenco [Asporto e domicilio](asporto.md), anche se usano
   lo stesso tavolo virtuale.
-
-<!-- DA VERIFICARE: se la sala del tavolo dell'asporto ha una percentuale di servizio, il totale della finestra Incasso la aggiunge, mentre il TOTALE del carrello no: e' voluto al banco? -->
-<!-- DA VERIFICARE: durante l'emissione dello scontrino (fino a qualche minuto con alcune stampanti) la finestra Incasso non mostra un indicatore di attesa: confermare cosa vede il cassiere a video. -->
+- **Servizio.** La vendita al banco paga il servizio della sala in cui sta il tavolo dell'asporto:
+  la finestra Incasso e lo scontrino lo aggiungono, il **TOTALE** del carrello no. Il tavolo
+  dell'asporto va quindi messo in una sala senza percentuale di servizio (vedi
+  [Sale e tavoli](sale-e-tavoli.md)).
+- **Durante l'emissione** dello scontrino o della fattura (con alcune stampanti anche qualche
+  minuto) la schermata si vela e compare *Attendi...*: finché il documento non è uscito non si tocca
+  niente.
 
 ## Vedi anche
 

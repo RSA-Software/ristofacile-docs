@@ -237,8 +237,9 @@ addebita di nuovo la carta.
 - Sul palmare non c'è la cassa automatica: i contanti si incassano a mano.
 - Sul conto diviso lo sconto non si applica (vale solo sul conto intero).
 - Durante l'incasso la schermata non si aggiorna con le modifiche fatte da altri dispositivi.
-
-<!-- DA VERIFICARE: sul palmare non c'è una riga di stato nella schermata del conto: i messaggi informativi del modello (es. "Carta autorizzata (STAN ...)", "Fattura n. ... di € ...", "La carta e' GIA' stata addebitata ...: premi ...") non compaiono. È voluto? -->
+- Sopra i pulsanti, una riga grigia dice com'è andato l'ultimo passo dell'incasso, per esempio
+  *Carta autorizzata (STAN …)* o *Fattura n. … di € …*; se la carta è già stata addebitata ricorda
+  di toccare di nuovo il pulsante per emettere il documento.
 
 ## Vedi anche
 

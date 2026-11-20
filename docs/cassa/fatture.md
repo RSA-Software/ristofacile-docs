@@ -28,9 +28,14 @@ commercialista chiede di rivedere un documento. Per esempio: un cliente telefona
 fattura della cena aziendale di martedì non gli è arrivata; scrivi il nome della ditta, apri la
 fattura e la rimandi all'indirizzo che ti detta.
 
-Una fattura emessa è a registro: da qui **non si modifica e non si annulla**. L'annullo (nota di
-credito) non nasce dalla cassa.
-<!-- DA VERIFICARE: confermare che l'annullo/nota di credito si fa dal gestionale Facile e con quale maschera, per poterlo citare. -->
+Una fattura emessa è a registro: da qui **non si modifica e non si annulla**. L'annullo si fa dal
+gestionale Facile:
+
+- una fattura già trasmessa al Sistema di Interscambio non si annulla: si emette una **nota di
+  credito**, da **Vendite ▸ Fatture ▸ Inserimento** con la tipologia **TD04 - NOTA CREDITO**. La
+  nota di credito è un documento a parte: in questo elenco la fattura originale resta com'è;
+- una fattura non ancora trasmessa si annulla da **Vendite ▸ Fatture ▸ Modifica**: apri la fattura
+  e tocca **Annulla** nella barra. Qui la ritrovi con la pastiglia **ANNULLATA**.
 
 ## Prima di cominciare
 
@@ -95,7 +100,7 @@ questi comandi:
 |---|---|
 | Frecce sinistra/destra | Pagina precedente/successiva, con l'indicazione *pagina/totale*. Compaiono solo se la fattura ha più di una pagina. |
 | Lente − / lente + | Riduce o ingrandisce il documento; in mezzo la percentuale di ingrandimento. |
-| **Stampa** | Su Windows apre il PDF con l'app dei PDF del PC (per esempio Edge o Acrobat): da lì si stampa con la sua finestra di stampa, scegliendo la stampante. Sugli altri dispositivi stampa il PDF da questa finestra. <!-- DA VERIFICARE: comportamento della stampa sul tablet Android e su iPad (provata solo su Windows). --> |
+| **Stampa** | Su Windows apre il PDF con l'app dei PDF del PC (per esempio Edge o Acrobat): da lì si stampa con la sua finestra di stampa, scegliendo la stampante. Sul tablet Android e sull'iPad apre la finestra di stampa del sistema (su iPad AirPrint): si stampa su una stampante raggiungibile dal tablet, non da quella del servizio. Se la stampa non parte compare *Stampa del documento non riuscita.* |
 | **Chiudi** | Torna all'elenco delle fatture. |
 
 ## Come si fa

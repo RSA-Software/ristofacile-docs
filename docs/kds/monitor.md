@@ -332,8 +332,9 @@ con 1 capricciosa.
 2. Tocca la freccia accanto alla card.
 3. Il piatto torna nella colonna precedente.
 
-Un piatto già consegnato (sparito da PRONTO) non torna indietro dal monitor.
-<!-- DA VERIFICARE: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito? -->
+Un piatto già consegnato (sparito da PRONTO) non torna indietro e il monitor non tiene uno
+storico dei consegnati. Il piatto resta comunque nella comanda in cassa: se va ancora preparato,
+avvisa la cucina a voce o con un [messaggio](../cassa/messaggi.md).
 
 ## Controlli e messaggi
 

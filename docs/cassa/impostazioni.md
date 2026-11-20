@@ -112,9 +112,8 @@ Sotto la voce **Connessione**, a sinistra, si legge l'esito dell'ultima prova (p
 
 Sul PC del servizio la cassa installata dal setup (postazione **Server**) trova la connessione già
 pronta: al primo avvio si collega da sola come **RISTO**. Lo fa una volta sola e mai sopra una
-connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano.
-
-<!-- DA VERIFICARE: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'. -->
+connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano. Su ogni
+altro dispositivo l'indirizzo del servizio si scrive a mano.
 
 ### Sala
 
@@ -213,7 +212,20 @@ stampante in uso.
 | **Stampa di prova** | Stampa il modello sulla stampante di cassa di questa cassa. |
 | **Ripristina predefinito** | Cancella il modello dell'impianto e torna alla stampa di fabbrica (chiede conferma). |
 
-<!-- DA VERIFICARE: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa. -->
+#### Campi e condizioni
+
+**+ Campo** propone solo i dati del punto in cui sta la riga: fuori dagli elenchi i dati del
+documento, dentro un elenco quelli di ogni sua voce. **quando?** propone sempre *Stampala sempre*
+e, per ogni dato dello stesso punto, *Solo se c'e'* quel dato. Il **Tagliando di via** usa gli
+stessi dati della **Comanda di cucina**.
+
+| Documento | Fuori dagli elenchi | Elenchi (**+ Elenco**) e loro dati |
+|---|---|---|
+| Comanda di cucina, Tagliando di via | Centro di produzione, Uscita, Tavolo, Cameriere, Data e ora | **Piatti** (*PER OGNI PIATTO*): Piatto, Quantita', Nome del piatto · **Dettagli** (*PER OGNI DETTAGLIO*): Dettaglio · **Piatti tolti** (*PER OGNI PIATTO TOLTO*): Piatto tolto, Quantita', Nome del piatto · **Ristampa** (*SOLO SULLE COPIE*): Numero della copia, Ora dell'invio |
+| Preconto | Nome locale, Tavolo, Cameriere, Data e ora, Totale | **Piatti**: Piatto, Quantita', Nome del piatto, Prezzo · **Dettagli**: Dettaglio · **Coperti e servizio** (*PER COPERTI E SERVIZIO*): Voce coperti o servizio, Importo coperti o servizio |
+| Messaggio | Centro di produzione, Chi scrive, Data e ora | **Messaggio** (*PER OGNI RIGA DEL MESSAGGIO*): Riga del messaggio |
+
+Dentro **Dettagli** e **Messaggio** *quando?* propone solo *Stampala sempre*.
 
 ### Stampanti fiscali
 
@@ -361,7 +373,11 @@ L'elenco dei terminali vale per tutto l'impianto; quale terminale usa questa cas
 | **ID cassa** (riquadro **Su questa cassa**) | Il numero con cui questa cassa si presenta al terminale. Proposto `1`. |
 | **Questa cassa incassa le carte su** | In fondo al pannello: il terminale in uso, oppure *Nessun terminale: le carte si battono a mano sul POS*. Lo stesso testo compare sotto la voce, a sinistra. |
 
-<!-- DA VERIFICARE: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?). -->
+L'**ID cassa** serve solo al pagamento con la carta: è il codice con cui la cassa si presenta al
+terminale a ogni pagamento e compare sulle ricevute e sui riepiloghi del POS. Scrivilo in cifre,
+al massimo 8: la cassa lo completa con zeri a sinistra (`1` diventa `00000001`). Due casse sullo
+stesso terminale funzionano anche con lo stesso numero; dare un numero diverso a ciascuna serve a
+distinguerle sulle ricevute del POS.
 
 Al momento si gestiscono solo i terminali POS standard collegati in rete; i POS in cloud (per
 esempio SumUp) non si configurano da qui.
@@ -441,11 +457,16 @@ aggiornato.*): fai aggiornare il servizio.
 | **Ragione sociale**, **Ragione sociale (seconda riga)** | Il nome della ditta come va in fattura (fino a 45 caratteri per riga). Per una persona fisica che non è ditta individuale le due caselle diventano **Cognome** e **Nome**. |
 | **Partita IVA**, **Codice fiscale** | 11 e 16 caratteri al massimo. La partita IVA è anche l'utente dell'invio allo SdI. |
 | **Regime fiscale** (riquadro **Sede**) | Tocca per scegliere da un elenco (da *RF01 Ordinario* a *RF19 Regime forfettario*). Se manca: *Non impostato: la fattura elettronica non esce*. |
-| **Indirizzo**, **CAP**, **Città**, **Prov.** | La sede da scrivere in fattura. CAP di 5 cifre, provincia di 2 lettere. |
+| **Indirizzo**, **CAP**, **Città**, **Prov.** | Il domicilio fiscale della ditta, quello che va in fattura (nel gestionale Facile è la linguetta *Domicilio - Titolare* della ditta), non la sede legale. CAP di 5 cifre, provincia di 2 lettere. |
 | **Nazione** | *Vuota vale Italia. Fuori dall'Italia la provincia non serve.* |
 | **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
-<!-- DA VERIFICARE: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale. -->
+Il codice di **Natura** giuridica è quello della tabella dell'Agenzia delle Entrate (Tabella B
+delle istruzioni del modello Redditi): i più comuni sono **1** società in accomandita per azioni,
+**2** società a responsabilità limitata, **3** società per azioni, **24** società in nome
+collettivo, **25** società in accomandita semplice. Sono validi i codici da 1 a 44 e da 50 a 58;
+per gli altri chiedi al commercialista. Con 1, 2 e 3 serve anche il capitale sociale, con 2 anche
+il socio unico.
 
 #### Fattura
 
@@ -478,12 +499,13 @@ Il collegamento con Digithera, che trasmette le fatture elettroniche allo SdI.
 |---|---|
 | **Codice di abilitazione all'invio** (riquadro **Digithera**) | Il codice numerico (fino a 9 cifre) che abilita la ditta all'invio. |
 | **Server**, **Porta** | Dove si collega il servizio per trasmettere (porta proposta: 21). |
-| **TLS**, **Passivo** | **SI'** / **NO**, secondo quanto indicato per il collegamento. |
+| **TLS**, **Passivo** | **SI'** / **NO**. La fattura parte verso il server con un collegamento FTP: **TLS** lo cifra, **Passivo** usa la modalità passiva, quella che passa dai firewall e dai router. |
 | Riga della password | *Password presente: la manda il server delle licenze a ogni controllo del credito.* oppure *Password non ancora arrivata: la manda il server delle licenze al primo invio.* La password non si scrive qui. |
 | **Per l'invio allo SdI** | *Tutto a posto: le fatture possono partire.* oppure, in giallo, l'elenco di cosa manca. Sotto: *L'utente dell'invio è la partita IVA della ditta: la trovi nella linguetta Ditta.* e *Ogni invio consuma un credito: il server delle licenze lo controlla prima di trasmettere.* |
 | **Salva** | Salva sul servizio i dati di tutte le linguette. |
 
-<!-- DA VERIFICARE: che cosa sono "TLS" e "Passivo" nel collegamento con Digithera (connessione cifrata e modalita' passiva FTP?) e chi fornisce codice di abilitazione, server e porta. -->
+Codice di abilitazione, server, porta e le scelte **TLS** e **Passivo** li fornisce RSA con il
+servizio di invio delle fatture elettroniche, come la password e il credito degli invii.
 
 #### IVA e scontrini
 
@@ -623,7 +645,9 @@ Il riepilogo degli incassi del giorno, di tutto il locale, e la conta del casset
 | Differenza | Sotto la conta: *Eccedenza € …*, *Ammanco € …* oppure *Cassa in pari*. |
 | Riga dello stato | *Conta il cassetto e scrivi i contanti.* prima; *Chiusa alle 23:40 da …* dopo, con il nome dell'utente con cui la cassa è collegata al servizio (non l'operatore in turno). Chiusa la cassa, **Fondo cassa** e **Contanti contati** non si modificano più. |
 
-<!-- DA VERIFICARE: l'atteso somma i contanti incassati da tutto il locale; in un locale con piu' casse, ognuna col suo cassetto, si contano tutti i cassetti insieme e si scrive la somma in "Contanti contati"? -->
+La chiusura cassa è una sola per tutto il locale: l'atteso somma i contanti incassati da tutte le
+casse. Con più cassetti, scrivi in **Fondo cassa** la somma dei fondi e in **Contanti contati** la
+somma di quanto conti in tutti i cassetti.
 
 **3 · Chiusura fiscale (Z)**
 

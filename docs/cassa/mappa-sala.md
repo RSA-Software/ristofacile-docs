@@ -228,8 +228,8 @@ basso rinuncia allo spostamento.
   stornare**, una carta alla volta (vedi [Conto](conto.md#carta-da-stornare)).
 - La durata sulle tessere («da 25 min») è fotografata quando la mappa viene disegnata: si aggiorna
   al ricaricamento, non minuto per minuto.
-- Separando **solo i coperti**, senza nessuna riga, la finestra lo permette ma il servizio rifiuta
-  l'operazione. <!-- DA VERIFICARE: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto? -->
+- Separando **solo i coperti**, senza nessuna riga, sul tavolo di destinazione si apre un conto con
+  quei coperti, che vengono tolti dal conto di partenza.
 
 ## Vedi anche
 

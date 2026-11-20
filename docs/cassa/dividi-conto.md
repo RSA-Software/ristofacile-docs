@@ -121,7 +121,7 @@ In alto il titolo **Dividi il conto** e, a destra, i coperti ancora da pagare co
 - **Divisione condivisa.** I conti si salvano sul servizio a ogni tocco: un'altra cassa o un palmare che apre lo stesso tavolo vede la stessa divisione, e la schermata si aggiorna da sola con le modifiche fatte altrove (non mentre un tuo tocco è ancora in corso).
 - **Conto vuoto.** Un conto appena aperto esiste solo su questa schermata finché non gli assegni qualcosa: se esci, un conto rimasto vuoto sparisce.
 - **Parti uguali.** Al momento non è possibile dividere un conto in parti uguali in automatico: la riga **Parti uguali** del [Conto](conto.md) dice solo la quota a testa. Per incassare a persone diverse si assegnano le voci ai conti.
-- **Voci a prezzo zero.** Le voci senza prezzo proprio (per esempio le parti di un piatto composto, il cui prezzo sta sul piatto) non compaiono fra quelle da dividere: si spostano con il piatto a cui appartengono. <!-- DA VERIFICARE: confermare che le componenti di un piatto composto (mezza e mezza, menu fisso) seguano davvero il piatto principale quando questo viene assegnato a un conto. -->
+- **Voci a prezzo zero.** Le voci senza prezzo proprio (per esempio le parti di una mezza e mezza o le portate di un menu a prezzo fisso, il cui prezzo sta tutto sul piatto principale) non compaiono fra quelle da dividere e non escono sullo scontrino: il conto a cui assegni il piatto principale paga il piatto intero. In cucina le parti escono comunque insieme al piatto.
 - Le voci si possono anche mandare su un conto già mentre si prende la comanda, scegliendo il conto attivo nella [Comanda](comanda.md): qui le ritrovi già assegnate.
 
 ## Vedi anche

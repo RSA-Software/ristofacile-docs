@@ -129,7 +129,10 @@ passaggio a parte.
    alla pagina della licenza (non si può più usare finché non viene riattivato).
 3. Sul **nuovo** dispositivo attiva la licenza con lo stesso seriale.
 
-<!-- DA VERIFICARE: cosa fare se il vecchio dispositivo e' rotto o perso e non si puo' disattivare (lo libera l'assistenza RSA?). -->
+Se il vecchio dispositivo è rotto o perso e non si può disattivare, chiedi all'assistenza RSA di
+liberarne il posto, poi attiva il nuovo con lo stesso seriale. Se il vecchio dispositivo si
+riaccende, al controllo successivo torna alla pagina della licenza con *Questo dispositivo è stato
+disattivato.*
 
 Se reinstalli l'app sullo **stesso** dispositivo non serve riattivarla: al primo avvio con
 Internet la licenza viene ripresa da sola.
@@ -176,7 +179,9 @@ Se il servizio non risponde, il monitor usa l'ultima risposta avuta per **7 gior
 appena installato lavora normalmente per 7 giorni anche se non ha mai avuto una risposta. Quando
 il modulo torna disponibile, le comande ricompaiono da sole.
 
-<!-- DA VERIFICARE: il modulo del monitor di cucina e' compreso in tutte le edizioni o va acquistato a parte? La cassa lo chiede sempre all'attivazione. -->
+Il monitor di cucina è un **modulo venduto a parte**: per usarlo va aggiunto alla licenza digitale
+del ristorante. Se lo acquisti dopo aver attivato la cassa, chiedi a RSA di assegnarlo alla tua
+cassa, oppure disattiva e riattiva la licenza sulla cassa: il modulo si prende all'attivazione.
 
 ## Senza Internet
 

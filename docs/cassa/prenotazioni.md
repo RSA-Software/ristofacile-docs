@@ -76,8 +76,8 @@ tavolo (*4 coperti · Sala 1, tavolo 12*, oppure *Nessun tavolo assegnato*), l'*
 
 ![Modulo Prenotazione](../assets/img/cassa/prenotazioni-modulo.png)
 
-Due riquadri: **Cliente** (nome, telefono, coperti, note) e **Quando e dove** (data, ora e i
-tavoli della sala come pulsanti). In fondo **Annulla** e **Salva**.
+Due riquadri: **Cliente** (nome, telefono, coperti, note) e **Quando e dove** (data, ora, le sale
+e i tavoli della sala scelta come pulsanti). In fondo **Annulla** e **Salva**.
 
 ## Campi e indicatori
 
@@ -89,7 +89,8 @@ tavoli della sala come pulsanti). In fondo **Annulla** e **Salva**.
 | **Note** | Facoltative (*Allergie, seggiolone, tavolo tranquillo...*). |
 | **Data** | Giorno della prenotazione. |
 | **Ora** | Ora di arrivo. |
-| **Tavolo** | I tavoli della sala: tocca un tavolo per assegnarlo, toccalo di nuovo per toglierlo. Senza tavolo la prenotazione finisce in **Senza tavolo**. |
+| **Sala** | Le sale del locale: toccane una per vederne i tavoli. Serve a spostare la prenotazione in un'altra sala o a dare un tavolo a una prenotazione **Senza tavolo**. |
+| **Tavolo** | I tavoli della sala scelta: tocca un tavolo per assegnarlo, toccalo di nuovo per toglierlo. Senza tavolo la prenotazione finisce in **Senza tavolo**. |
 | Avviso di capacità | *Attenzione: il tavolo ha al massimo N posti, la prenotazione ne richiede M.* Non impedisce di salvare. |
 | Avviso di doppia assegnazione | *Attenzione: questo tavolo e' gia' assegnato ad un'altra prenotazione in questa data.* Non impedisce di salvare. |
 | **Stato** | *Da confermare* (appena creata), *Confermata*. Le prenotazioni arrivate, annullate o non presentate escono dal registro. |
@@ -111,7 +112,7 @@ prenotazioni nuove e dalla cassa non si modifica.
 | **Conferma** | Solo *Da confermare*: la prenotazione diventa *Confermata*. |
 | **Cliente arrivato** | Solo *Confermata*: apre la comanda del tavolo con i coperti della prenotazione e ti porta nella [Comanda](comanda.md). La prenotazione esce dal registro. |
 | **Modifica** | Apre il modulo con i dati della prenotazione. |
-| **Annulla** (scheda) | Solo *Da confermare*: chiede conferma e annulla la prenotazione. |
+| **Annulla** (scheda) | *Da confermare* e *Confermata* (per esempio il cliente disdice): chiede conferma e annulla la prenotazione. |
 | **Non presentato** | Solo *Confermata*: chiede conferma e segna il cliente come non presentato. |
 | **Salva** | Salva la prenotazione e torna al registro. |
 | **Annulla** (modulo) | Chiude il modulo senza salvare. |
@@ -169,12 +170,11 @@ prenotazioni nuove e dalla cassa non si modifica.
   salva comunque.
 - **Cliente arrivato su un tavolo già aperto**: se sul tavolo c'è già una comanda aperta, la
   prenotazione viene collegata a quella e non se ne apre un'altra.
-- Al momento una prenotazione **confermata** non si annulla dalla scheda: l'unica uscita, oltre
-  all'arrivo, è **Non presentato**. <!-- DA VERIFICARE: e' voluto che una prenotazione confermata non si possa annullare (es. il cliente disdice)? -->
-- Il modulo non ha la scelta della sala: mostra i tavoli della sala da cui è stato aperto (o,
-  in modifica, della sala del tavolo già assegnato). Per questo dalla cassa non si sposta una
-  prenotazione in un'altra sala e non si dà un tavolo a una prenotazione senza tavolo: si fa dal
-  [palmare](../palmare/prenotazioni.md), che nel modulo ha la scelta della sala.
+- Una prenotazione **confermata** che il cliente disdice si annulla con **Annulla**; se il
+  cliente non si presenta e non ha avvisato, usa **Non presentato**.
+- Il modulo si apre sulla sala da cui l'hai aperto (in modifica, su quella della prenotazione).
+  Per spostare la prenotazione in un'altra sala, o per dare un tavolo a una prenotazione senza
+  tavolo, tocca la sala e poi il tavolo, e salva.
 - Una nuova prenotazione creata con **+ Nuova prenotazione** mentre è scelta la pastiglia
   **Senza tavolo** nasce senza sala e senza tavolo.
 - **Prenotazioni sulla mappa**: le prenotazioni confermate compaiono sulle tessere dei tavoli

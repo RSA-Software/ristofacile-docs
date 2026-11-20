@@ -66,13 +66,19 @@ Nexi e il locale non vede mai la carta.
 - Le credenziali (indirizzo del servizio di Nexi e chiave API) stanno nel file `cfg\nexi.json` del
   servizio, lo stesso usato dagli altri pagamenti Nexi della suite. Senza, l'interruttore
   **Pagamento dal telefono** non si accende.
-- Per le prove si usa l'ambiente di prova di Nexi (sandbox); in produzione l'indirizzo e la chiave
-  del locale.
+- Le credenziali si scrivono nel gestionale Facile, da **Utility ▸ Impostazioni Sistemi di
+  Pagamento Elettronico**: scegli **NEXI XPAY** e compila **Nexi XPay URL** e **Token**. Facile
+  salva il file nella cartella `cfg` di Facile: se il servizio è installato in un'altra cartella,
+  copia `nexi.json` nella cartella `cfg` del servizio.
+- L'indirizzo è `https://xpay.nexigroup.com/api/phoenix-0.0/psp/api` in produzione e
+  `https://xpaysandbox.nexigroup.com/api/phoenix-0.0/psp/api` per le prove (sandbox). Scrivilo così,
+  senza `/v1` in fondo: il servizio lo aggiunge da solo.
+- La chiave API di produzione la genera il locale dal portale Nexi Business: **XPay Back Office ▸
+  Admin ▸ APIKey ▸ Add new APIKey**, scegliendo il terminale. Quella di prova si trova nell'area
+  di registrazione del sito per sviluppatori di Nexi.
 - Il PC del servizio deve avere l'**ora italiana**: la scadenza dei link di pagamento (15 minuti) si
   calcola sull'ora del PC.
 - I rimborsi (un pagamento arrivato dopo la chiusura del conto) si fanno dal portale di Nexi.
-
-<!-- DA VERIFICARE: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay. -->
 
 ## Licenza
 
