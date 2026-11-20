@@ -112,8 +112,10 @@ I due pulsanti restano spenti per qualche secondo, con il conto alla rovescia (*
 5. Tocca **Attiva**.
 6. Compare *Licenza attivata.* e lo stato mostra codice, cliente, edizione e scadenza.
 
-Attivando la cassa si chiede insieme anche il modulo del monitor di cucina: non serve un
-passaggio a parte.
+Attivando la cassa si chiedono insieme anche i moduli (monitor di cucina, self order, asporto
+online): non serve un passaggio a parte. Se la licenza non ne comprende uno, o se è già tutto in
+uso su altre casse, sotto *Licenza attivata.* compare *Su questa cassa non sono attivi:* con
+l'elenco dei moduli mancanti e il motivo.
 
 ### Attivare un palmare
 
@@ -180,8 +182,8 @@ appena installato lavora normalmente per 7 giorni anche se non ha mai avuto una 
 il modulo torna disponibile, le comande ricompaiono da sole.
 
 Il monitor di cucina è un **modulo venduto a parte**: per usarlo va aggiunto alla licenza digitale
-del ristorante. Se lo acquisti dopo aver attivato la cassa, chiedi a RSA di assegnarlo alla tua
-cassa, oppure disattiva e riattiva la licenza sulla cassa: il modulo si prende all'attivazione.
+del ristorante. Se lo acquisti dopo aver attivato la cassa non devi fare niente: la cassa lo
+prende da sola al controllo giornaliero della licenza, entro un giorno.
 
 ## Senza Internet
 
@@ -220,6 +222,7 @@ cassa, oppure disattiva e riattiva la licenza sulla cassa: il modulo si prende a
 | *Troppi tentativi: riprova fra* … *minuti.* | Troppe richieste in poco tempo. | Aspetta e riprova. |
 | *Il server licenze non risponde. Controlla la connessione.* | Manca Internet o il server non risponde. | Controlla la rete e riprova. |
 | *Licenza attivata, ma il dispositivo non riesce a salvarla: vale solo per questa sessione.* | Il dispositivo non riesce a scrivere la licenza. | Riprova l'attivazione; se si ripete, chiama l'assistenza. |
+| *Su questa cassa non sono attivi:* (elenco dei moduli) *… non compreso nella licenza* oppure *… gia' in uso su N dispositivi su N acquistati* | La licenza è attiva, ma senza quei moduli. | Per un modulo da acquistare chiedi a RSA: arriva da solo entro un giorno. Per uno già tutto in uso, disattiva la licenza sulla cassa che non lo usa più. |
 | *Questo dispositivo non ha una licenza attiva.* | **Disattiva** su un dispositivo senza licenza. | Nessuna azione. |
 | *Questo dispositivo è stato disattivato.* | Il posto del dispositivo è stato liberato. | Riattiva con il seriale. |
 | *La licenza è stata revocata.* | La licenza è stata revocata. | Contatta RSA. |
