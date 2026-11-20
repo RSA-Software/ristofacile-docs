@@ -12,3 +12,11 @@ Manuale utente MkDocs Material di **RistoFacile** (cassa, palmare, monitor di cu
 - `core.autocrlf=true`, file in UTF-8.
 - Le immagini segnaposto sono elencate in `tools/schermate-da-catturare.txt`.
 - Mai nomi di persone vere o dati di clienti nelle schermate (oscurare prima di pubblicare).
+
+## Guida contestuale (F1 nelle app)
+
+La cassa apre `<sito>/guida/<codice>/` nel pannello della guida. `guida.yml` (radice del repo) dice a quale
+pagina e paragrafo porta ogni codice; l'hook `tools/hooks/guida.py` lo verifica a ogni build (pagina o
+ancora mancante = build fallita) e scrive i rimandi in `site/guida/`. I codici li dichiara l'app in
+`RistoCore/Services/Guida/CodiciGuida.cs`: un codice nuovo va lì e qui, e `tools/verifica-guida.py` li confronta.
+**Rinominando una pagina o un titolo citato in `guida.yml`** si aggiorna la destinazione, mai il codice.

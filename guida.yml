@@ -1,0 +1,52 @@
+# Guida contestuale (F1) delle app: codice -> pagina del manuale [#ancora].
+# I codici li dichiara l'app in RistoCore/Services/Guida/CodiciGuida.cs (C:\RSA.NET\RistoFacile).
+# La build (hook tools/hooks/guida.py) verifica pagina e ancora e scrive site/guida/<codice>/index.html,
+# un rimando alla pagina. Riorganizzando il manuale si aggiorna qui la destinazione, mai il codice.
+# tools/verifica-guida.py controlla che ogni codice dell'app abbia la sua riga.
+
+cassa: cassa/index.md
+licenza: introduzione/licenza.md
+cassa.accesso: cassa/accesso.md
+cassa.mappa-sala: cassa/mappa-sala.md
+cassa.comanda: cassa/comanda.md
+cassa.varianti: cassa/varianti.md
+cassa.mezza: cassa/mezza.md
+cassa.menu-fisso: cassa/menu-fisso.md
+cassa.conto: cassa/conto.md
+cassa.dividi-conto: cassa/dividi-conto.md
+cassa.banco: cassa/vendita-al-banco.md
+cassa.asporto: cassa/asporto.md
+cassa.chiamate: cassa/chiamate.md
+cassa.ordini-kiosk: cassa/ordini-kiosk.md
+cassa.prenotazioni: cassa/prenotazioni.md
+cassa.messaggi: cassa/messaggi.md
+cassa.fatture: cassa/fatture.md
+cassa.storico-conti: cassa/storico-conti.md
+cassa.statistiche: cassa/statistiche.md
+cassa.operatori: cassa/operatori.md
+cassa.sale-e-tavoli: cassa/sale-e-tavoli.md
+cassa.centri-di-produzione: cassa/centri-di-produzione.md
+cassa.tabelle-di-base: cassa/tabelle-di-base.md
+cassa.menu: cassa/menu.md
+cassa.articoli: cassa/articoli.md
+cassa.modificatori: cassa/modificatori.md
+cassa.varianti-anagrafica: cassa/varianti-anagrafica.md
+cassa.disponibilita: cassa/disponibilita.md
+cassa.regole-di-composizione: cassa/regole-di-composizione.md
+cassa.portate: cassa/portate.md
+cassa.impostazioni: cassa/impostazioni.md
+cassa.impostazioni.turno: cassa/impostazioni.md#turno
+cassa.impostazioni.connessione: cassa/impostazioni.md#connessione
+cassa.impostazioni.sala: cassa/impostazioni.md#sala
+cassa.impostazioni.stampante-preconto: cassa/impostazioni.md#stampante-preconto
+cassa.impostazioni.modelli-di-stampa: cassa/impostazioni.md#modelli-di-stampa
+cassa.impostazioni.stampanti-fiscali: cassa/impostazioni.md#stampanti-fiscali
+cassa.impostazioni.pagamento-con-carta: cassa/impostazioni.md#pagamento-con-carta
+cassa.impostazioni.cassa-automatica: cassa/impostazioni.md#cassa-automatica
+cassa.impostazioni.dati-fiscali: cassa/impostazioni.md#dati-fiscali
+cassa.impostazioni.aspetto: cassa/impostazioni.md#aspetto
+cassa.impostazioni.hotel: cassa/impostazioni.md#hotel
+cassa.impostazioni.licenza: cassa/impostazioni.md#licenza
+cassa.sito-menu: cassa/menu-online.md
+cassa.self-order: cassa/self-order.md
+cassa.kiosk: cassa/kiosk.md
