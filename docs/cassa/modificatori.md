@@ -54,7 +54,7 @@ In fondo alla scheda: **Elimina modificatore** a sinistra, **Annulla** e **Salva
 | Elemento | Descrizione |
 |---|---|
 | **Descrizione \*** | Obbligatoria (es. POCO COTTO, EXTRA), in maiuscolo. È il testo che si aggiunge tra parentesi alla variante sulla riga della comanda. |
-| **Sigla** | Abbreviazione di due o tre caratteri (es. PC). «La sigla e' quello che esce stampato sul ticket di cucina, dove lo spazio e' poco.» <!-- DA VERIFICARE: nel codice della cassa la riga della variante stampata porta la Descrizione del modificatore, non la Sigla. Dove viene usata la sigla? --> |
+| **Sigla** | Abbreviazione di due o tre caratteri (es. PC). «La sigla e' quello che esce stampato sul ticket di cucina, dove lo spazio e' poco.» Al momento la sigla si vede solo in questo elenco: sulla riga della comanda e sul ticket di cucina la variante porta la **Descrizione** del modificatore. |
 | **Ordine** | La posizione del modificatore fra i pulsanti d'intensità che compaiono sotto la variante in Comanda. Per un modificatore nuovo si propone l'ultimo ordine più 10. |
 | **Moltiplicatore di prezzo** | Tre pulsanti rapidi, **Gratis** (0), **Prezzo pieno** (1), **Doppio** (2), e il campo **×** per un valore qualsiasi (es. 1,5). «Moltiplica il prezzo della variante a cui il modificatore viene applicato: 0 la regala, 1 la lascia com'e', 2 la raddoppia.» |
 

@@ -29,7 +29,7 @@ Le voci sono le stesse della cassa e funzionano allo stesso modo: questa scheda 
 
 Rispetto alla cassa, sul palmare:
 
-- **non ci sono** Modelli di stampa, Cassa automatica, Dati fiscali, Sito del menu e Hotel, e
+- **non ci sono** Modelli di stampa, Cassa automatica, Dati ditta, Sito del menu e Hotel, e
   nella parte della sala manca il **Tagliando di via in cucina**;
 - **c'è in più** il **Richiamo dalla cucina**;
 - stampanti, terminali POS e stampante fiscale **si scelgono o si leggono, ma non si
@@ -89,9 +89,22 @@ dalla cassa.*
 | **Stampa di prova**, **Verifica stato** | Come sulla cassa, sulla stampante scelta. |
 
 Indirizzo e porta non si scrivono qui: una stampante nuova, o una da correggere o togliere, si
-gestisce da [Impostazioni della cassa ▸ Stampante preconto](../cassa/impostazioni.md#stampante-preconto).
+gestisce da [Impostazioni della cassa ▸ Stampante di cassa](../cassa/impostazioni.md#stampante-di-cassa).
 Con l'impianto senza stampanti la riga di esito dice *Nessuna stampante sull'impianto: si
 aggiungono dalla cassa.*
+
+### Stampa della fattura
+
+*Come esce la copia della fattura sulla stampante preconto di questo dispositivo.*
+
+| Elemento | Descrizione |
+|---|---|
+| **Normale** | La fattura stampata come testo, come il preconto. |
+| **80 colonne** | La fattura impaginata da un modello Crystal da 80 mm. |
+| **Modello** | Solo con **80 colonne**: *Il modello Crystal da 80 mm, per esempio 60001. Vuoto: quello impostato sulla ditta in Facile.* (fino a 5 cifre). |
+
+La scelta (con la spunta) vale per questo palmare. Sulla cassa è nella linguetta **Fattura** di
+[Impostazioni ▸ Dati ditta](../cassa/impostazioni.md#dati-ditta).
 
 ### Prenotazioni in mappa e Aggiornamento automatico
 

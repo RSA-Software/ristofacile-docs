@@ -83,9 +83,7 @@ mappa si ricarica.
 | <span class="stato corso"></span> ambra | **In corso** | Sono stati battuti dei piatti, non ancora mandati in cucina. |
 | <span class="stato cucina"></span> rosso | **In cucina** | La comanda è stata inviata in cucina. |
 | <span class="stato conto"></span> verde | **Preconto / Conto** | È stato fatto il preconto o si sta facendo il conto. |
-| <span class="stato prenotato"></span> azzurro | **Prenotato** | Tavolo riservato. Anche il tavolo dell'asporto è azzurro. |
-
-<!-- DA VERIFICARE: lo stato "Prenotato" di un tavolo (tessera tutta azzurra) da chi viene impostato? Dal codice la prenotazione in arrivo si vede solo con l'ora e la banda azzurra a destra. -->
+| <span class="stato prenotato"></span> azzurro | **Asporto e kiosk** | Il tavolo dell'asporto (sotto, il numero degli ordini, per esempio «2 ordini») e quelli del kiosk («Ordini del kiosk»). Un tavolo prenotato non diventa azzurro: si riconosce dall'ora e dalla banda azzurra. |
 
 !!! note "Sul tablet"
 
@@ -194,7 +192,10 @@ del conto, lo spostamento si ferma con un avviso.
 I coperti già pagati restano sul tavolo di partenza. Se un piatto è composto (per esempio una pizza
 mezza e mezza) le sue parti seguono il piatto.
 
-<!-- DA VERIFICARE: come si scioglie un'unione dal palmare (riportare libero un tavolo "Unito a")? Dal codice sembra possibile con Separa dal tavolo principale verso il tavolo unito, ma va provato. -->
+Per sciogliere un'unione usa **Separa tavolo**: tocca il tavolo che tiene il conto e, come
+destinazione, il tavolo unito. Il legame si scioglie e sul tavolo si apre un conto con i piatti
+scelti. Serve almeno un piatto da spostare: non c'è un comando per riportare libero un tavolo
+unito senza spostarci niente.
 ### Cambiare sala
 
 1. Tocca il campo con il nome della sala.

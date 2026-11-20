@@ -33,8 +33,8 @@ Esempio: la veranda ha un coperto di 2,50 € e il 10% di servizio, la sala inte
 
 ## Prima di cominciare
 
-- Se una sala deve usare un listino diverso da quello normale, il listino deve già esistere.
-  <!-- DA VERIFICARE: dove si creano i listini (gestionale Facile?) -->
+- Se una sala deve usare un listino diverso da quello normale, il listino deve già esistere: si crea in
+  [Tabelle di base](tabelle-di-base.md#aggiungere-un-listino-per-la-terrazza).
 
 ## La schermata
 
@@ -78,7 +78,7 @@ Il codice della sala è assegnato in automatico (il primo numero libero).
 | **Codice** | Il numero del tavolo. Si sceglie solo alla creazione (viene proposto il primo libero); poi non si cambia più. |
 | **Posti** | Numero di posti, maggiore di zero. |
 | **Descrizione** | Il nome del tavolo (es. TAVOLO 12 VERANDA). Se vuota, il tavolo si chiama «Tavolo» seguito dal numero. |
-| **Posti massimi (0 = come i posti)** | Il massimo di posti a cui il tavolo si può allargare. Non può essere meno di **Posti**. Con i tasti **+** della tessera non si va oltre questo valore. <!-- DA VERIFICARE: i posti massimi hanno effetto anche in vendita o nelle prenotazioni? Nel codice della cassa sono usati solo come limite dei tasti +. --> |
+| **Posti massimi (0 = come i posti)** | Il massimo di posti a cui il tavolo si può allargare. Non può essere meno di **Posti**. Con i tasti **+** della tessera non si va oltre questo valore. Vale anche in sala: aprendo il tavolo e in Comanda i coperti non lo superano, e su questo tavolo non si sposta né si separa un conto con più coperti. Nelle prenotazioni è solo un avviso. |
 
 **Pannello «Aggiungi tavoli»**
 

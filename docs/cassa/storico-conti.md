@@ -33,7 +33,7 @@ documento, si emette il documento mancante.
 
 ## Prima di cominciare
 
-- Per **Promemoria** serve la stampante preconto, che si imposta in [Impostazioni](impostazioni.md).
+- Per **Promemoria** serve la stampante di cassa, che si imposta in [Impostazioni](impostazioni.md).
 - I filtri per sala, tavolo e cameriere usano le sale e gli operatori definiti in
   [Sale e tavoli](sale-e-tavoli.md) e [Operatori](operatori.md).
 
@@ -80,7 +80,7 @@ La schermata ha tre parti:
 | **Oggi** / **Ieri** | Porta il periodo a quel giorno e ricarica. |
 | **Azzera** | Rimette tutti i filtri come all'apertura (oggi, tutte le sale, tutti i tavoli, tutti i camerieri, ricerca vuota). Compare solo se un filtro è cambiato. |
 | Tocco su una riga | Apre la scheda del conto. Toccando di nuovo la stessa riga la scheda si chiude. |
-| **Promemoria** | Stampa sulla stampante preconto un *PROMEMORIA CONTO* non fiscale con le voci, il totale e i pagamenti. Compare solo se la stampante preconto è configurata. |
+| **Promemoria** | Stampa sulla stampante di cassa un *PROMEMORIA CONTO* non fiscale con le voci, il totale e i pagamenti. Compare solo se la stampante di cassa è configurata. |
 | **Incassa ed emetti** | Compare solo su un conto chiuso **senza documento**. Apre la schermata del [Conto](conto.md) su quel conto per emettere ora lo scontrino o la fattura. |
 | **Emetti** (accanto a un documento) | Compare su un singolo conto di un tavolo diviso chiuso senza documento. Apre il [Conto](conto.md) con le sole voci e i coperti di quel conto, per emetterne lo scontrino. |
 
@@ -99,7 +99,7 @@ La schermata ha tre parti:
 1. Trova il conto (periodo, ricerca o filtri).
 2. Tocca la riga: a destra si apre la scheda.
 3. Tocca **Promemoria**.
-4. La stampante preconto stampa il foglietto e compare *Promemoria del conto … stampato.*
+4. La stampante di cassa stampa il foglietto e compare *Promemoria del conto … stampato.*
 
 ### Emettere il documento di un conto chiuso senza
 
@@ -124,8 +124,8 @@ La schermata ha tre parti:
 | *Sale e camerieri non si sono letti: resta il filtro per data.* | Non è stato possibile leggere sale e operatori. | Usa il filtro per data; riapri la schermata più tardi. |
 | *Tavoli non letti: …* | Non è stato possibile leggere i tavoli della sala scelta. | Riprova scegliendo di nuovo la sala. |
 | *Righe del conto non lette.* | Le voci del conto scelto non si sono lette. | Tocca di nuovo la riga per riprovare. |
-| *Nessuna stampante preconto configurata: si imposta in Impostazioni.* | Manca la stampante preconto. | Configurala in [Impostazioni](impostazioni.md). |
-| *Promemoria non stampato.* | Il conto non si è riletto (*Il conto non si e' riletto.*) o la stampante ha segnalato un errore. | Controlla la stampante preconto e riprova. |
+| *Nessuna stampante di cassa configurata: si imposta in Impostazioni → Stampante di cassa.* | Manca la stampante di cassa. | Configurala in [Impostazioni](impostazioni.md). |
+| *Promemoria non stampato.* | Il conto non si è riletto (*Il conto non si e' riletto.*) o la stampante ha segnalato un errore. | Controlla la stampante di cassa e riprova. |
 | *Questo conto si documenta con lo scontrino: la fattura va fatta dal gestionale.* | Nel Conto aperto con **Emetti** hai scelto la fattura. | Emetti lo scontrino, oppure fai la fattura dal gestionale. |
 
 ## Note
@@ -154,4 +154,4 @@ La schermata ha tre parti:
 - [Dividi conto](dividi-conto.md)
 - [Fatture](fatture.md)
 - [Statistiche](statistiche.md)
-- [Impostazioni](impostazioni.md) — stampante preconto
+- [Impostazioni](impostazioni.md) — stampante di cassa

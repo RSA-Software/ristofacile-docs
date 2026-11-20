@@ -16,9 +16,8 @@ sulla cassa e sul monitor di cucina, e viceversa.
 - **Al titolare in sala**, per controllare i tavoli aperti e il proprio turno.
 
 Prima di cominciare il turno ogni cameriere entra con il proprio PIN (vedi [Accesso](accesso.md)):
-tutto quello che batte viene firmato con il suo nome. Il palmare occupa un posto della licenza
-digitale del locale (vedi [Licenza digitale](../introduzione/licenza.md)).
-<!-- DA VERIFICARE: confermare che il palmare occupi un "posto Mobile" della licenza e come va detto all'utente. -->
+tutto quello che batte viene firmato con il suo nome. Il palmare occupa un posto **Mobile** della
+licenza digitale del locale (vedi [Licenza digitale](../introduzione/licenza.md)).
 
 ## Le linguette in basso
 

@@ -56,6 +56,10 @@ già prima del salvataggio. Sopra l'anteprima:
 - **Telefono** / **Desktop**: il sito come appare su un telefono o su un computer;
 - **Rileggi menu**: rilegge dal servizio menu, piatti, foto e note, se nel frattempo sono cambiati.
 
+Sugli schermi stretti (una finestra della cassa larga meno di circa 1100 punti, o un tablet) i
+campi e l'anteprima non stanno affiancati: in basso compare il pulsante **Anteprima**, che mostra
+il sito al posto dei campi, e **Torna ai campi** riporta indietro.
+
 Sotto l'anteprima due righe di stato: quando è stata aggiornata (*Anteprima aggiornata alle* …) e
 quanti piatti sono stati letti (*Menu letto: N piatti*, seguito dagli eventuali avvisi).
 
@@ -184,6 +188,7 @@ Note e foto delle sezioni stanno sul servizio: le vedono tutte le casse.
 | Linguette | Passano da un gruppo di impostazioni all'altro. |
 | **Telefono** / **Desktop** | Cambiano la misura dell'anteprima. |
 | **Rileggi menu** | Rilegge dal servizio menu, piatti e note e rifà l'anteprima. |
+| **Anteprima** / **Torna ai campi** | Solo sugli schermi stretti: passano dai campi all'anteprima e ritorno. |
 | **Salva** | Salva tutte le linguette su questa cassa: *Salvato alle* (ora). Passa anche al self order i menu scelti e l'aspetto (colori, caratteri, angoli, logo). **Non** pubblica il sito. |
 | **Annulla modifiche** | Dopo la conferma (*Torno all'ultima versione salvata?*) riporta tutto all'ultimo salvataggio. |
 | **Scegli** / **Togli** | Logo e foto di copertina (linguetta **Aspetto**). |

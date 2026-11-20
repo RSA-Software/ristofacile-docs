@@ -85,7 +85,7 @@ menu. Sotto, tre colonne:
 | **MENU** | Il nome del menu (**Nome del menu**), in maiuscolo. Obbligatorio. |
 | **DESCRIZIONE ESTESA** | Facoltativa, **per il menu online (opzionale)**. |
 | **OPZIONI** ▸ **Attivo** | Spento, il menu non compare in Comanda. |
-| **OPZIONI** ▸ **Coperto incluso**, **Servizio incluso** | Segnano che il prezzo del menu comprende coperto e servizio. <!-- DA VERIFICARE: nel codice di cassa e servizio questi due indicatori sono solo salvati, non tolgono coperto o servizio dal conto. --> |
+| **OPZIONI** ▸ **Coperto incluso**, **Servizio incluso** | Segnano che il prezzo del menu comprende coperto e servizio. Al momento sono solo un'annotazione: coperto e servizio si aggiungono comunque al conto. |
 | **PREZZO FISSO** | Vuoto (**solo carta**): il menu si vende solo piatto per piatto. Con un prezzo, in Comanda compare anche **MENU INTERO**. |
 | **Reparto**, **IVA** | Obbligatori: il menu venduto intero finisce sullo scontrino con questo reparto e questa aliquota. |
 
@@ -202,10 +202,10 @@ Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.
   il listino della sala (vedi [Sale e tavoli](sale-e-tavoli.md)).
 - Per vendere il menu la cassa crea da sola un articolo con lo stesso nome, il reparto e l'IVA
   scelti; non compare nell'elenco [Articoli](articoli.md).
-- I giorni e gli orari di validità di un menu non si impostano da qui, ma vengono rispettati in
-  Comanda: un menu fuori orario non mostra le sue sezioni. Il numero minimo di persone (etichetta
-  **min N pers.**) si vede nell'elenco ma non si imposta da qui.
-  <!-- DA VERIFICARE: dove si impostano giorni, orari e minimo di persone del menu (gestionale?). Il minimo di persone non risulta applicato in Comanda. -->
+- I giorni e gli orari di validità di un menu e il numero minimo di persone al momento non si
+  impostano da nessuna schermata. Se un menu li ha, giorni e orari vengono rispettati in Comanda (un
+  menu fuori orario non mostra le sue sezioni); il minimo di persone (etichetta **min N pers.**) si
+  vede nell'elenco ma in Comanda non viene controllato.
 - Il catalogo articoli si apre subito dalla copia salvata sul dispositivo e si aggiorna dal servizio
   in sottofondo (vedi [Articoli](articoli.md)).
 - **Casse non aggiornate.** Una cassa di una versione precedente non conosce **Ordinabile dal

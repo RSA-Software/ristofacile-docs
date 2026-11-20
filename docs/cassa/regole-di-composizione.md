@@ -114,8 +114,8 @@ In fondo alla scheda **Elimina regola**, **Annulla** e **Salva**.
 
 - Il prezzo di ogni parte è il prezzo intero del piatto scelto (con l'eventuale supplemento del
   menu), non la sua frazione: con **Media pesata** le parti valgono tutte uguale.
-- Una regola salvata su questa cassa è subito visibile nella sua Comanda.
-  <!-- DA VERIFICARE: sulle altre casse e sui palmari già aperti la regola nuova compare solo al riavvio dell'app? (le regole stanno in memoria per tutta la sessione) -->
+- Una regola salvata su questa cassa è subito visibile nella sua Comanda; sulle altre casse e sui
+  palmari già aperti compare solo dopo aver chiuso e riaperto l'app.
 
 ## Vedi anche
 

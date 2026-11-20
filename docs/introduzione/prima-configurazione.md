@@ -102,11 +102,11 @@ Sulle altre casse:
 5. Torna in Menu ▸ Impostazioni ▸ **Turno** e tocca **Accedi**: scegli il tuo nome (e digita il
    PIN). Si apre la mappa della sala con il tuo nome in turno.
 6. Completa le impostazioni della cassa (vedi [Impostazioni](../cassa/impostazioni.md)):
-    - **Stampante preconto**: la stampante vicino alla cassa;
+    - **Stampante di cassa**: la stampante vicino alla cassa;
     - **Stampanti fiscali**: i registratori telematici (uno per cassa, se ne hai più d'uno) e quale usa questa cassa;
     - **Pagamento con carta** e **Cassa automatica**, se ci sono;
     - **Sala ▸ Tavolo asporto**, se fai asporto o domicilio;
-    - **Dati fiscali**, se emetti fatture elettroniche.
+    - **Dati ditta**, se emetti fatture elettroniche.
 7. Prepara l'anagrafica del locale, se il servizio non l'ha già:
    [Sale e tavoli](../cassa/sale-e-tavoli.md),
    [Centri di produzione](../cassa/centri-di-produzione.md),
@@ -124,7 +124,7 @@ OPERATORE**: porta alla stessa pagina del punto 4 (vedi [Accesso](../cassa/acces
 1. Avvia RistoApp sul palmare. Dopo *Verifica della licenza...* si apre **Impostazioni**.
 2. Nel riquadro **Connessione** scrivi **Base URL**, **Utente** e **Password** e tocca **Salva e
    connetti**. Deve comparire *Connesso a* (indirizzo) *come* (utente)*.*
-3. In **Stampante preconto** scegli la stampante su cui il cameriere stamperà il preconto.
+3. In **Stampante di cassa** scegli la stampante su cui il cameriere stamperà il preconto.
 4. In **Asporto** scegli sala e tavolo dell'asporto e tocca **Salva tavolo asporto**, se il
    cameriere prende ordini da asporto.
 5. Scorri fino al riquadro **Licenza digitale**: scrivi il **Seriale**, dai al palmare un

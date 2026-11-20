@@ -38,7 +38,7 @@ ripartisce le voci su più conti e li fa incassare uno per uno, ciascuno con il 
 - Per usare **Sconto** e **Abbuono**, l'operatore deve avere **Puo' applicare sconti** e uno **Sconto massimo** in [Operatori](operatori.md).
 - Per **CHIUDI SENZA DOCUMENTO** e per l'addebito in camera, l'operatore deve avere **Puo' chiudere il conto** in [Operatori](operatori.md).
 - Se la sala del tavolo prevede una percentuale di servizio ([Sale e tavoli](sale-e-tavoli.md)), in [Articoli](articoli.md) deve esistere l'articolo **SERVIZIO** con un'aliquota IVA che abbia un reparto della cassa.
-- Facoltativi, in [Impostazioni](impostazioni.md): **Pagamento con carta** (il terminale POS di questa postazione), **Cassa automatica**, **Stampante preconto** (ricevuta del POS, copia di cortesia della fattura, tagliando dell'addebito in camera), **Hotel** (addebito in camera).
+- Facoltativi, in [Impostazioni](impostazioni.md): **Pagamento con carta** (il terminale POS di questa postazione), **Cassa automatica**, **Stampante di cassa** (ricevuta del POS, copia di cortesia della fattura, tagliando dell'addebito in camera), **Hotel** (addebito in camera).
 
 ## La schermata
 
@@ -92,7 +92,7 @@ tetto con l'abbuono.
 | **Carta** | Importo pagato con carta di credito. |
 | **Bancomat** | Importo pagato con bancomat. |
 | **Buoni pasto** | Importo pagato con buoni pasto. |
-| **Credito** | Importo non riscosso: conta come pagamento ai fini della copertura del totale. <!-- DA VERIFICARE: come viene stampato sullo scontrino l'importo in "Credito" (voce "non riscosso" della stampante fiscale?) e a chi va intestato il credito. --> |
+| **Credito** | Importo non riscosso: conta come pagamento ai fini della copertura del totale. Sullo scontrino esce come pagamento «non riscosso»; la cassa non lo lega a nessun cliente. |
 | **Totale** | Il totale del conto, ripetuto accanto ai pagamenti. |
 | **Pagato** | Somma degli importi scritti nei cinque metodi. |
 | **Residuo** | In rosso: quanto manca per coprire il totale. Finché c'è un residuo il conto non si incassa. |
@@ -185,7 +185,7 @@ questa postazione:
 1. Scrivi l'importo in **Carta** o **Bancomat** (anche insieme ai contanti).
 2. Tocca **INCASSA E STAMPA**.
 3. Compare il riquadro *€ X sul terminale: fai passare la carta…* con una barra che si svuota e il tempo che resta (*Ancora N s*): la cassa aspetta il terminale fino a due minuti e mezzo. Confronta l'importo con quello sul display del POS.
-4. Il cliente paga sul terminale. Se la stampante preconto è configurata, esce la ricevuta del POS.
+4. Il cliente paga sul terminale. Se la stampante di cassa è configurata, esce la ricevuta del POS.
 5. Subito dopo il servizio emette lo scontrino e il conto si chiude.
 
 ![Attesa del terminale POS](../assets/img/cassa/conto-pos.png)
@@ -386,9 +386,9 @@ DOCUMENTO** o con l'addebito in camera no.
 4. Se vuoi trasmettere subito la fattura all'Agenzia delle Entrate, accendi **Invia all'Agenzia** nella scheda del cliente.
 5. Scrivi gli importi dei pagamenti e tocca **INCASSA ED EMETTI FATTURA**.
 6. Il servizio emette la fattura: la stampante fiscale non viene usata. Il conto si chiude e torni alla mappa della sala.
-7. Compare la domanda *Fattura n. … emessa* con le scelte **Stampa la copia di cortesia** (sulla stampante preconto), **Apri la fattura** (il PDF a schermo) e **Niente**.
+7. Compare la domanda *Fattura n. … emessa* con le scelte **Stampa la copia di cortesia** (sulla stampante di cassa), **Apri la fattura** (il PDF a schermo) e **Niente**.
 
-Se la stampante preconto non è configurata e il PDF si apre dentro l'app, la fattura si apre
+Se la stampante di cassa non è configurata e il PDF si apre dentro l'app, la fattura si apre
 subito senza domanda.
 
 ### Addebitare il conto in camera
@@ -399,7 +399,7 @@ Solo con l'hotel collegato ([Impostazioni](impostazioni.md) ▸ **Hotel**) e per
 1. Tocca **Camera**. Si apre l'elenco degli ospiti in casa.
 2. Tocca l'ospite.
 3. Tocca **ADDEBITA IN CAMERA** e conferma con **Addebita**.
-4. L'importo va sul conto della camera; sulla stampante preconto esce il tagliando da far firmare all'ospite. Torni alla mappa della sala.
+4. L'importo va sul conto della camera; sulla stampante di cassa esce il tagliando da far firmare all'ospite. Torni alla mappa della sala.
 
 ### Chiudere un conto senza documento
 
@@ -417,7 +417,7 @@ scontrino si può emettere più tardi dallo [Storico conti](storico-conti.md).
 ### Stampare il preconto prima di incassare
 
 Il preconto non si stampa da questa schermata ma dalla [Comanda](comanda.md): **Preconto** mostra
-l'anteprima (*documento non valido ai fini fiscali*), **Stampa** la manda alla stampante preconto
+l'anteprima (*documento non valido ai fini fiscali*), **Stampa** la manda alla stampante di cassa
 e **Vai al conto** porta qui. Il preconto non chiude e non incassa niente: segna soltanto il
 tavolo come «preconto» sulla mappa della sala.
 
@@ -444,7 +444,7 @@ tavolo come «preconto» sulla mappa della sala.
 | *Questo conto e' in incasso da un'altra postazione, con uno scontrino in sospeso: l'incasso va finito da li'. Il conto resta aperto.* | Un'altra cassa sta incassando lo stesso tavolo. | Finisci l'incasso dall'altra postazione. |
 | *Pagamento con carta non riuscito: … Il conto resta aperto: nessun documento e' stato emesso.* | Il terminale ha rifiutato la carta. | Riprova o cambia metodo. |
 | *Nessuna risposta dal terminale: … IL PAGAMENTO POTREBBE ESSERE PASSATO LO STESSO. …* | Il terminale non ha risposto in tempo. | Controlla sul POS (o stampa l'ultima ricevuta) **prima** di riprovare. |
-| *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Problema sulla stampante preconto. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
+| *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Problema sulla stampante di cassa. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
 | **Cassa automatica** — *… Vuoi incassare i contanti a mano e proseguire con la chiusura?* | La macchina è occupata, non ha accettato l'incasso o non ha incassato niente. | **Incasso a mano** per proseguire incassando tu, **Annulla** per lasciare il conto aperto. |
 | *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Hai toccato **Chiudi trattenendo**, o la macchina ha chiuso l'incasso a metà. | Tocca di nuovo **INCASSA E STAMPA** (la macchina chiede solo la differenza) o copri il resto con un altro metodo. |
 | *La macchina ha gia' trattenuto € Y: incassa a mano solo € X. Proseguire con la chiusura?* | La macchina non può incassare e su questo conto c'è già un trattenuto. | Incassa a mano solo l'importo indicato. |
@@ -469,7 +469,7 @@ tavolo come «preconto» sulla mappa della sala.
 | *Lo scontrino di questo conto potrebbe essere uscito: premi INCASSA E STAMPA, il servizio controlla la stampante.* | **CHIUDI SENZA DOCUMENTO** dopo un esito incerto della stampante. | Tocca di nuovo il pulsante di incasso. |
 | *Su questo conto e' gia' stato incassato qualcosa (carta, contanti o scontrino): non si puo' piu' addebitare in camera.* | **Camera** scelta dopo un incasso già avvenuto. | Completa l'incasso con lo scontrino. |
 | *… non e' abilitato a chiudere un conto senza scontrino: l'addebito in camera lo fa chi ha "Puo' chiudere".* | Addebito in camera da un operatore non abilitato. | Fai addebitare a un operatore abilitato. |
-| *Addebito registrato, ma la stampante del preconto non e' configurata: il tagliando da firmare non e' uscito.* | Manca la stampante preconto. | L'addebito è fatto; fai firmare a mano. |
+| *Addebito registrato, ma la stampante del preconto non e' configurata: il tagliando da firmare non e' uscito.* | Manca la stampante di cassa. | L'addebito è fatto; fai firmare a mano. |
 | *Il conto era gia' stato chiuso da un'altra postazione: non e' stato addebitato niente in camera.* | Il conto era già chiuso altrove. | Nessuna azione. |
 | *Impossibile leggere gli ospiti in casa dall'hotel.* | Il collegamento con l'hotel non risponde. | Riprova; verifica [Impostazioni](impostazioni.md) ▸ **Hotel**. |
 | *Conto N incassato. Restano € X da incassare su questo tavolo.* | Hai incassato una parte del conto e il tavolo ha ancora voci da pagare. | Si torna alla divisione: incassa gli altri conti. |

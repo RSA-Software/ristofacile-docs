@@ -151,7 +151,7 @@ prenotazioni nuove e dalla cassa non si modifica.
 |---|---|---|
 | *Il nome del cliente e' obbligatorio.* | **Salva** con il nome vuoto. | Scrivi il nome. |
 | *Numero di coperti non valido.* | Coperti vuoti, zero o non numerici. | Scrivi un numero maggiore di zero. |
-| *Durata non valida.* | La durata della prenotazione non è valida. | <!-- DA VERIFICARE: dalla cassa la durata non si vede ne' si modifica: in che caso puo' comparire questo messaggio? --> |
+| *Durata non valida.* | Hai modificato una prenotazione salvata senza durata: sulla cassa il campo della durata non c'è. | Correggi la prenotazione dal [palmare](../palmare/prenotazioni.md), nel campo **Durata (minuti)**. |
 | *Attenzione: il tavolo ha al massimo N posti, la prenotazione ne richiede M. Salvare lo stesso? Al loro arrivo servira' unire un altro tavolo.* | Al **Salva**, i coperti superano i posti del tavolo. | **Salva** per tenere il tavolo, **Cambia tavolo** per sceglierne un altro. |
 | *Annullare questa prenotazione? Uscira' dal registro.* | Conferma di **Annulla** nella scheda. | **Annulla prenotazione** per procedere, **Indietro** per tenerla. |
 | *Segnare il cliente come non presentato? Uscira' dal registro.* | Conferma di **Non presentato**. | **Conferma** per procedere, **Indietro** per tenerla. |
@@ -172,7 +172,9 @@ prenotazioni nuove e dalla cassa non si modifica.
 - Al momento una prenotazione **confermata** non si annulla dalla scheda: l'unica uscita, oltre
   all'arrivo, è **Non presentato**. <!-- DA VERIFICARE: e' voluto che una prenotazione confermata non si possa annullare (es. il cliente disdice)? -->
 - Il modulo non ha la scelta della sala: mostra i tavoli della sala da cui è stato aperto (o,
-  in modifica, della sala del tavolo già assegnato). <!-- DA VERIFICARE: dalla cassa come si sposta una prenotazione in un'altra sala, e come si assegna un tavolo a una prenotazione "Senza tavolo" (in modifica il modulo non carica i tavoli di nessuna sala)? -->
+  in modifica, della sala del tavolo già assegnato). Per questo dalla cassa non si sposta una
+  prenotazione in un'altra sala e non si dà un tavolo a una prenotazione senza tavolo: si fa dal
+  [palmare](../palmare/prenotazioni.md), che nel modulo ha la scelta della sala.
 - Una nuova prenotazione creata con **+ Nuova prenotazione** mentre è scelta la pastiglia
   **Senza tavolo** nasce senza sala e senza tavolo.
 - **Prenotazioni sulla mappa**: le prenotazioni confermate compaiono sulle tessere dei tavoli

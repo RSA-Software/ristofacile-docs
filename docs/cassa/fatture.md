@@ -36,10 +36,10 @@ credito) non nasce dalla cassa.
 
 - Le fatture compaiono qui solo se sono state emesse dalla cassa, dal [Conto](conto.md). Le
   fatture fatte dal gestionale non sono in questo elenco.
-- Per **Copia di cortesia** serve la stampante preconto, che si imposta in
+- Per **Copia di cortesia** serve la stampante di cassa, che si imposta in
   [Impostazioni](impostazioni.md).
-- Per **Manda** il servizio deve essere in grado di spedire email.
-  <!-- DA VERIFICARE: dove si configura l'invio delle email del servizio (server SMTP, mittente) e se è a carico dell'installatore. -->
+- Per **Manda** il servizio deve sapere da quale casella spedire: si imposta in
+  [Impostazioni ▸ Dati ditta](impostazioni.md#posta-e-sms), linguetta **Posta e SMS**.
 
 ## La schermata
 
@@ -83,7 +83,7 @@ Sotto i filtri una riga di stato dice quante fatture sono state trovate (es. *12
 | **Oggi** | Porta il periodo a oggi–oggi e ricarica l'elenco. |
 | Tocco su una riga | Apre la scheda della fattura a destra. Toccando di nuovo la stessa riga la scheda si chiude. |
 | **Manda** | Rimanda la fattura in PDF all'indirizzo scritto in **RIMANDA PER EMAIL**, dopo una conferma. |
-| **Copia di cortesia** | Stampa sulla stampante preconto una copia **non fiscale** della fattura, con le righe, il totale e la dicitura *Documento di cortesia. L'originale e' la fattura elettronica intestata al cliente.* Compare solo se la stampante preconto è configurata e la fattura non è annullata. |
+| **Copia di cortesia** | Stampa sulla stampante di cassa una copia **non fiscale** della fattura, con le righe, il totale e la dicitura *Documento di cortesia. L'originale e' la fattura elettronica intestata al cliente.* Compare solo se la stampante di cassa è configurata e la fattura non è annullata. |
 | **Apri il PDF** | Apre il PDF della fattura dentro la cassa (vedi sotto). È disponibile anche sulle fatture annullate. |
 
 Il PDF si apre in una schermata a tutto schermo con, in alto, il titolo (es. *Fattura 12/A*) e
@@ -121,7 +121,7 @@ questi comandi:
 
 1. Apri la scheda della fattura.
 2. Tocca **Copia di cortesia**.
-3. La stampante preconto stampa la copia e sotto i filtri compare
+3. La stampante di cassa stampa la copia e sotto i filtri compare
    *Copia di cortesia della fattura n. … ristampata.*
 
 ### Rivedere e stampare il PDF
@@ -142,8 +142,8 @@ questi comandi:
 | *Mando di nuovo la fattura n. … a …?* | Conferma prima dell'invio. | **Manda** per spedire, **Annulla** per lasciar stare. |
 | *La fattura non e' stata spedita.* | L'invio non è riuscito; il dettaglio dice perché (es. *Fattura non inviata per email: il PDF non e' stato prodotto.*), oppure *Il servizio non ha detto perche'.* | Leggi il dettaglio; se il problema è la configurazione delle email del servizio, avvisa l'assistenza. |
 | *La fattura non si e' potuta riaprire.* | Il servizio non è riuscito a produrre il PDF; il dettaglio dice perché (es. *Il servizio non ha prodotto nessun documento.*). | Riprova; se persiste, avvisa l'assistenza. |
-| *Nessuna stampante preconto configurata: si imposta in Impostazioni.* | Manca la stampante preconto. | Configurala in [Impostazioni](impostazioni.md). |
-| *Copia di cortesia non stampata.* | Le righe della fattura non si sono lette (*Le righe della fattura non si sono lette.*) o la stampante ha segnalato un errore. | Controlla la stampante preconto (accesa, carta, collegamento) e riprova. |
+| *Nessuna stampante di cassa configurata: si imposta in Impostazioni → Stampante di cassa.* | Manca la stampante di cassa. | Configurala in [Impostazioni](impostazioni.md). |
+| *Copia di cortesia non stampata.* | Le righe della fattura non si sono lette (*Le righe della fattura non si sono lette.*) o la stampante ha segnalato un errore. | Controlla la stampante di cassa (accesa, carta, collegamento) e riprova. |
 | *Stampa della fattura non riuscita.* | La stampa del PDF dalla schermata del documento non è partita. | Controlla la stampante di sistema e riprova. |
 | *Fattura …: documento prodotto ma non apribile a schermo.* | Il PDF è stato prodotto ma la schermata del documento non si è aperta. | Riprova **Apri il PDF**. |
 
@@ -164,4 +164,4 @@ questi comandi:
 
 - [Conto](conto.md) — dove si emette la fattura
 - [Storico conti](storico-conti.md)
-- [Impostazioni](impostazioni.md) — stampante preconto
+- [Impostazioni](impostazioni.md) — stampante di cassa

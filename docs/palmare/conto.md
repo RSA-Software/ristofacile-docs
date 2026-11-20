@@ -117,7 +117,7 @@ Il pulsante di incasso dice cosa succederà: **INCASSA E STAMPA** (scontrino),
 | **Sconto** | Percentuale di sconto sul conto intero. Sotto: «Massimo 10% per Mario» oppure «Mario non e' abilitato agli sconti». |
 | **Abbuono** | «Sconto in euro, oltre alla percentuale». |
 | **Sconto applicato** | Il totale di sconto e abbuono. |
-| **Contanti / Carta / Bancomat / Buoni pasto / Credito** | Quanto paga il cliente con ciascun metodo. Toccando il **nome** del metodo il campo si riempie con quello che manca. <!-- DA VERIFICARE: «Credito» è il «non riscosso» (importo lasciato a credito del cliente)? Come va spiegato all'utente? --> |
+| **Contanti / Carta / Bancomat / Buoni pasto / Credito** | Quanto paga il cliente con ciascun metodo. Toccando il **nome** del metodo il campo si riempie con quello che manca. **Credito** è l'importo non riscosso: conta per coprire il totale, sullo scontrino esce come pagamento «non riscosso» e non è legato a nessun cliente. |
 | **Servizio** | La percentuale di servizio della sala, se c'è. |
 | **Totale** | Quello che si paga: voci meno sconto, più servizio. |
 | **Parti uguali** | Totale diviso per i coperti ancora da pagare, arrotondato per eccesso. Compare sul conto intero con almeno due coperti. |

@@ -198,9 +198,7 @@ il modulo torna disponibile, le comande ricompaiono da sole.
   programma funziona in modalità dimostrativa finché non la rinnovi.* e la finestra della demo ha
   il titolo *L I C E N Z A   S C A D U T A   I L* (data). Dopo una scadenza i giorni di demo
   partono da 16, quindi la finestra compare da subito. Dopo il rinnovo, riavvia l'app con
-  Internet: la licenza torna attiva.
-
-<!-- DA VERIFICARE: dopo una scadenza, confermare che basta riavviare l'app con Internet (in demo il controllo giornaliero non gira) e che non serve riscrivere il seriale. -->
+  Internet: la licenza torna attiva, senza riscrivere il seriale.
 
 ## Controlli e messaggi
 

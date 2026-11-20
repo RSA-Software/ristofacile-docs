@@ -36,7 +36,7 @@ ad accogliere i clienti.
   kiosk** (vedi [Installazione](installazione.md#lutente-web-del-kiosk)).
 - Il POS, il rendiresto e la stampante termica di rete vanno prima **registrati sul servizio**
   dalla cassa, in [Impostazioni](../cassa/impostazioni.md) (**Pagamento con carta**,
-  **Cassa automatica**, **Stampante preconto**): il kiosk li sceglie solo da quegli elenchi.
+  **Cassa automatica**, **Stampante di cassa**): il kiosk li sceglie solo da quegli elenchi.
 - Il kiosk va **aggiunto e associato in cassa**, voce [Kiosk](../cassa/kiosk.md), con il suo
   numero (vedi [Le impostazioni del servizio](#le-impostazioni-del-servizio)).
 
@@ -261,7 +261,7 @@ scrive sul kiosk, si registra dalla cassa.
 1. Su una cassa apri Menu ▸ **Kiosk**, linguetta **Kiosk**, riquadro **Termiche dei kiosk**, e tocca
    **Aggiungi una termica**.
 2. Scrivi la descrizione, l'indirizzo IP e la porta della termica del kiosk (di solito 9100) e tocca
-   **Aggiungi**. La termica entra nell'impianto; la stampante preconto della cassa non cambia.
+   **Aggiungi**. La termica entra nell'impianto; la stampante di cassa della cassa non cambia.
 3. Sul kiosk, in **Stampante termica**, tocca **Rileggi gli elenchi** e scegli la termica nuova.
 
 ### Collegare il lettore di QR dei segnaposto

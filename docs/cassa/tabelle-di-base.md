@@ -121,7 +121,8 @@ usare lo stesso codice del gestionale.
 4. Tocca **Salva**.
 5. Assegna il listino alla sala in [Sale e tavoli](sale-e-tavoli.md).
 
-<!-- DA VERIFICARE: i prezzi del nuovo listino si inseriscono dalla scheda articolo della cassa o solo dal gestionale? -->
+I prezzi del nuovo listino si scrivono nella scheda di ogni articolo in [Articoli](articoli.md):
+scegli il listino nella casella **Listino** e scrivi il **Prezzo**.
 
 ### Correggere una voce mentre compili un articolo
 
@@ -154,7 +155,8 @@ usare lo stesso codice del gestionale.
   gli articoli restano senza.
   <!-- DA VERIFICARE: cosa succede a una sala il cui listino viene eliminato (torna al listino di default?) -->
 - Le categorie spente in **Vendita al banco** non compaiono nella [Vendita al banco](vendita-al-banco.md).
-  <!-- DA VERIFICARE: l'interruttore «Ristorante» ha effetto sulla cassa? Nel codice della cassa la vendita al tavolo parte dal Menu, non dalle categorie. -->
+- Il pulsante **Ristorante** delle categorie al momento non cambia niente nelle app: in sala si
+  vende dal [Menu](menu.md), non dalle categorie.
 - Un'aliquota senza **Reparto cassa** si riconosce dalla pastiglia **senza reparto**: le sue righe
   escono sul reparto di ripiego dello scontrino.
 

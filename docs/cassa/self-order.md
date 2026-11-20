@@ -1,9 +1,9 @@
 ---
 title: Self order
-description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, avvisi in sala, conto con i pagamenti dal telefono.
+description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, asporto online con ritiro e pagamento dal link, avvisi in sala, conto con i pagamenti dal telefono.
 app: Cassa
-percorso: Menu ▸ Self order
-pagina: SelfOrderPage
+percorso: Menu ▸ Impostazioni ▸ Self order
+pagina: ImpostazioniPage (pannello Self order, SelfOrderPannello)
 ---
 
 # Self order
@@ -11,11 +11,13 @@ pagina: SelfOrderPage
 Con il self order il cliente inquadra il QR sul tavolo, sfoglia il menu sul proprio telefono, manda
 l'ordine in cucina, chiama il cameriere, chiede il conto e, se lo accendi, paga tutto o la sua quota.
 Da questa schermata il titolare accende il servizio, lo mette in pausa e stampa i cartoncini con i
-QR; in sala cassa e palmare ricevono gli avvisi dei telefoni.
+QR; in sala cassa e palmare ricevono gli avvisi dei telefoni. Dalla stessa schermata si accende
+anche l'**asporto online**: il cliente ordina da casa con un link, sceglie l'ora di ritiro e paga
+subito con la carta.
 
 !!! info "In sintesi"
 
-    - **Dove si trova:** Menu ▸ Self order
+    - **Dove si trova:** Menu ▸ Impostazioni ▸ **Self order**
     - **Chi la usa:** titolare (impostazioni, cartoncini); cassiere e camerieri (avvisi, pausa, conto)
     - **Disponibile anche su:** gli avvisi e il blocco del telefono anche sul [Palmare](../palmare/index.md); le impostazioni solo sulla cassa
 
@@ -33,6 +35,12 @@ comanda, e al conto trova già scalato quello che il tavolo ha pagato dal telefo
 Un esempio: il tavolo 5 ordina due antipasti e due pizze. Gli antipasti partono subito; le pizze, che
 sono nell'uscita dei secondi, aspettano il **VIA** del cameriere, come se le avesse battute lui.
 
+L'**asporto online** usa lo stesso menu per chi ordina da casa: il link si mette sul sito, sui
+social o in un QR stampato. Il cliente sceglie un'ora di ritiro fra quelle libere e paga subito
+con la carta; l'ordine entra sul tavolo virtuale dell'asporto e lo scontrino si emette quando il
+cliente passa a ritirare. Esempio: con ritiro dalle 19:00 alle 22:30 a fasce di 15 minuti e 20
+minuti di preparazione, chi ordina alle 19:10 può scegliere il ritiro dalle 19:30 in poi.
+
 ## Prima di cominciare
 
 - La licenza deve comprendere il modulo **Self order** (vedi [Licenza digitale](../introduzione/licenza.md));
@@ -43,22 +51,33 @@ sono nell'uscita dei secondi, aspettano il **VIA** del cameriere, come se le ave
 - I piatti che il cliente vede sono quelli dei menu scelti nel [Sito del menu](sito-menu.md), linguetta **Menu e note**, e salvati con **Salva**: sistemalo prima.
 - Sale e tavoli devono esistere (vedi [Sale e tavoli](sale-e-tavoli.md)).
 - Per il pagamento dal telefono il servizio deve avere configurato Nexi.
+- Per l'**asporto online**: il modulo **Asporto online** nella licenza (con la licenza in prova
+  funziona finché dura la prova), Nexi configurato nel servizio (si paga solo con Nexi),
+  l'**Indirizzo pubblico** scritto nella linguetta **Attivazione** e il tavolo dell'asporto scelto
+  in [Impostazioni ▸ Sala ▸ Tavolo asporto](impostazioni.md#sala).
 
 ## La schermata
 
 ![Self order](../assets/img/cassa/self-order.png)
 
-La schermata ha tre linguette in alto: **Attivazione**, **Pausa** e **Codici QR**. In basso a
-sinistra compare l'esito dell'ultima operazione.
+È un pannello delle [Impostazioni](impostazioni.md#self-order): *Ordini dal telefono del cliente,
+col QR sul tavolo. Vale per tutte le casse.* Ha quattro linguette in alto: **Attivazione**,
+**Pausa**, **Codici QR** e **Asporto online**. In basso a sinistra compare l'esito dell'ultima
+operazione.
 
 - **Attivazione**: gli interruttori del self order e del pagamento dal telefono, l'indirizzo
   pubblico e i limiti, con il pulsante **Salva**.
 - **Pausa**: la pausa di tutto il locale e, sotto, l'elenco dei tavoli con la pausa di ciascuno.
 - **Codici QR**: l'elenco dei tavoli con il loro codice e i pulsanti per stampare i cartoncini.
+- **Asporto online**: a sinistra il riquadro **Ordini da casa** (accensione, pausa e link per
+  ordinare), a destra il riquadro **Ritiro** (orari, giorni di chiusura e fasce); in basso
+  **Salva**, **Copia il link** e **Stampa il QR**.
 
 ![Linguetta Pausa](../assets/img/cassa/self-order-pausa.png)
 
 ![Linguetta Codici QR](../assets/img/cassa/self-order-codici.png)
+
+![Linguetta Asporto online](../assets/img/cassa/self-order-asporto-online.png)
 
 ## Campi e indicatori
 
@@ -74,6 +93,21 @@ sinistra compare l'esito dell'ultima operazione.
 | Riga della licenza | Dice se il modulo è in licenza, in prova o assente. |
 | Codice del tavolo (linguetta **Codici QR**) | Il codice di sei caratteri che sta nel QR del tavolo, oppure *senza codice*. |
 
+Nella linguetta **Asporto online**:
+
+| Elemento | Descrizione |
+|---|---|
+| Riga della licenza (riquadro **Ordini da casa**) | Senza il modulo, in un riquadro ambra: *L'asporto online e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* Con la licenza in prova: *Licenza in prova: l'asporto online funziona finche' dura la prova.* |
+| **Asporto online acceso** | **SI** / **NO**. *Il cliente ordina dal link, sceglie l'ora di ritiro e paga subito con la carta. Lo scontrino si emette al ritiro, dalla cassa.* Spento, il link mostra solo il menu. |
+| **In pausa** | **SI** / **NO**. *In pausa il link mostra il menu, ma non si ordina: per una serata piena o la cucina ferma.* |
+| **Link per ordinare** | L'indirizzo da dare ai clienti, con sotto dove entrano gli ordini: *Gli ordini online entrano sul tavolo asporto (*sala*,* tavolo*). Il link va sul sito, sui social o sul QR.* È il link del tavolo virtuale dell'asporto: aprendo la linguetta, se quel tavolo non ha ancora un codice, la cassa glielo dà da sola. Se manca qualcosa la riga lo dice: *Configura prima il tavolo asporto in Impostazioni: gli ordini online entrano li'.* oppure *Scrivi l'indirizzo pubblico nella scheda Attivazione: senza, il link non si puo' comporre.* |
+| **Orari di ritiro** (riquadro **Ritiro**) | Le fasce in cui si può ritirare, separate da virgole: per esempio `12:00-14:30, 19:00-22:30`. *Solo per il giorno stesso, dentro la giornata: un orario non passa la mezzanotte.* Due orari non si possono sovrapporre. |
+| **Giorni di chiusura** | **LUN**, **MAR**, **MER**, **GIO**, **VEN**, **SAB**, **DOM**: tocca i giorni in cui l'asporto online è chiuso (diventano arancioni). In quei giorni non si ordina. |
+| **Fascia ogni (minuti)** | Ogni quanti minuti il cliente può scegliere l'ora di ritiro, da 5 a 60 (proposta: 15). |
+| **Preparazione (minuti)** | Il tempo minimo fra l'ordine e il ritiro, da 0 a 180 (proposta: 20). *La prima fascia proposta e' almeno dopo il tempo di preparazione.* |
+| **Ordini per fascia** | Quanti ordini al massimo per ogni fascia; *0 = senza limite* (è la proposta). Una fascia piena non si può più scegliere. |
+| *Un ordine non pagato entro 20 minuti si annulla da solo.* | Promemoria sotto le fasce. |
+
 ## Pulsanti e comandi
 
 | Comando | Effetto |
@@ -85,17 +119,44 @@ sinistra compare l'esito dell'ultima operazione.
 | **Genera i codici mancanti** (Codici QR) | Dà il codice ai tavoli che non lo hanno ancora; quelli che lo hanno lo tengono. |
 | **Cartoncino** accanto a un tavolo | Prepara il PDF del solo cartoncino di quel tavolo. |
 | **Dai il codice** / **Codice nuovo** accanto a un tavolo | Dà il primo codice al tavolo, oppure lo cambia: il cartoncino già stampato smette di funzionare. |
+| **SI** / **NO** (Asporto online) | Accendono o spengono **Asporto online acceso** e **In pausa**; la scelta vale dopo **Salva**. |
+| Giorno della settimana (Asporto online) | Lo segna come giorno di chiusura, o lo toglie. |
+| **Salva** (Asporto online) | Salva accensione, pausa, orari, giorni e fasce sul servizio. Sotto compare *Salvato: l'asporto online e' acceso.*, *Salvato: l'asporto online e' in pausa.* oppure *Salvato: l'asporto online e' spento, il link mostra solo il menu.* |
+| **Copia il link** (Asporto online) | Copia il link per ordinare negli appunti, da incollare sul sito o sui social: *Link copiato.* |
+| **Stampa il QR** (Asporto online) | Prepara il PDF con il QR del link per ordinare, da stampare (per esempio per la vetrina o i volantini). |
 
 ## Come si fa
 
 ### Accendere il self order la prima volta
 
-1. Apri Menu ▸ **Self order**, linguetta **Attivazione**.
+1. Apri Menu ▸ **Impostazioni** ▸ **Self order**, linguetta **Attivazione**.
 2. Scrivi l'**Indirizzo pubblico** che ti ha dato chi ha installato il servizio.
 3. Accendi **Self order acceso** (e, se vuoi, **Pagamento dal telefono**).
 4. Tocca **Salva**: sotto compare *Salvato: il self order e' acceso.*
 5. Passa alla linguetta **Codici QR** e tocca **Genera i codici mancanti**.
 6. Tocca **Stampa tutti i cartoncini**, stampa il PDF e metti ogni cartoncino sul suo tavolo.
+
+### Accendere l'asporto online
+
+1. Controlla che in [Impostazioni ▸ Sala](impostazioni.md#sala), linguetta **Tavolo asporto**, sia
+   scelto il tavolo dell'asporto, e che nella linguetta **Attivazione** di questa schermata ci sia
+   l'**Indirizzo pubblico**.
+2. Apri Menu ▸ **Impostazioni** ▸ **Self order**, linguetta **Asporto online**: sotto **Link per
+   ordinare** compare il link.
+3. Scrivi gli **Orari di ritiro**, per esempio `19:00-22:30`, e tocca i **Giorni di chiusura**.
+4. Controlla **Fascia ogni (minuti)**, **Preparazione (minuti)** e **Ordini per fascia**.
+5. Tocca **NO** accanto ad **Asporto online acceso**: diventa **SI**.
+6. Tocca **Salva**: sotto compare *Salvato: l'asporto online e' acceso.*
+7. Tocca **Copia il link** e incollalo sul sito o sui social, oppure **Stampa il QR** e stampa il
+   PDF.
+
+### Fermare per una sera l'asporto online
+
+1. Apri la linguetta **Asporto online**.
+2. Tocca **NO** accanto a **In pausa**: diventa **SI**.
+3. Tocca **Salva**: compare *Salvato: l'asporto online e' in pausa.* Il link mostra il menu ma non
+   si ordina.
+4. Per riprendere rimetti **In pausa** su **NO** e tocca **Salva**.
 
 ### Servire un tavolo che ordina dal telefono
 
@@ -131,6 +192,16 @@ sinistra compare l'esito dell'ultima operazione.
 | *Su questo tavolo c'e' un pagamento dal telefono: il conto si chiude con lo scontrino o la fattura, non senza documento, in camera o diviso.* | Nel conto ci sono pagamenti dal telefono, o un pagamento in corso. | Chiudi con **Scontrino** o **Fattura**. |
 | *Non riesco a sapere dal servizio se il tavolo ha pagato dal telefono: riprova fra un attimo.* | Il servizio non ha risposto alla domanda sui pagamenti. | Riprova; se insiste, controlla il collegamento. |
 | *Il conto e' cambiato mentre lo incassavi (un ordine dal telefono o un'altra postazione): ricontrolla il totale, ora € …, e premi di nuovo.* | Mentre eri sul conto è arrivato un ordine o un pagamento dal telefono. | Ricontrolla il totale e incassa di nuovo. |
+| *L'asporto online e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* | **Salva** con **Asporto online acceso** su **SI**, ma la licenza non comprende il modulo. | Chiedi il modulo al rivenditore. |
+| *Nexi non e' configurato nel servizio (cfg\nexi.json): l'asporto online si paga solo con Nexi e non si puo' accendere.* | Il servizio non ha le credenziali di Nexi. | Rivolgiti a chi ha installato il servizio. |
+| *Configura prima il tavolo asporto in Impostazioni* | **Salva** dell'asporto online senza tavolo dell'asporto su questa cassa. | Scegli il tavolo in Impostazioni ▸ **Sala**, linguetta **Tavolo asporto**. |
+| *Scrivi prima l'indirizzo pubblico nella scheda Attivazione: senza, il link dell'asporto non porta da nessuna parte.* | Hai acceso l'asporto online senza indirizzo pubblico. | Scrivi l'**Indirizzo pubblico** nella linguetta **Attivazione** e salva. |
+| *Gli orari vanno scritti come 12:00-14:30, 19:00-22:30.* | Un orario di ritiro non si legge. | Correggi **Orari di ritiro**. |
+| *Senza orari di ritiro non si puo' ordinare: scrivine almeno uno.* | Asporto online acceso senza orari. | Scrivi almeno un orario. |
+| *Passo, preparazione e massimo per fascia sono numeri interi.* | Una delle tre caselle delle fasce non è un numero intero. | Correggi la casella. |
+| *Impossibile salvare l'asporto online.* con *Asporto online: …* | Il servizio ha rifiutato i dati: per esempio *Asporto online: due orari si sovrappongono.*, *Asporto online: l'orario 22:00-01:00 finisce prima di cominciare (oltre la mezzanotte non si può).*, *Asporto online: il passo delle fasce va da 5 a 60 minuti.*, *Asporto online: il tempo di preparazione va da 0 a 180 minuti.* | Correggi come dice il messaggio e salva di nuovo. |
+| *Il tavolo asporto (sala 2, tavolo 99) non esiste piu': sceglilo di nuovo in Impostazioni.* | Il tavolo dell'asporto scelto su questa cassa è stato cancellato. | Scegline un altro in Impostazioni ▸ **Sala** ▸ **Tavolo asporto**. |
+| *Impossibile preparare il codice del tavolo asporto:* … | Aprendo la linguetta **Asporto online**, il servizio non ha dato il codice al tavolo dell'asporto. | Controlla la connessione e riapri la linguetta. |
 
 Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 
@@ -174,6 +245,18 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
   servizio chiude il tavolo da solo ed emette lo scontrino sulla stampante fiscale scelta per il saldo dal telefono (la predefinita, se non ne hai scelta una).
 - Se chiudi il conto in cassa mentre un cliente sta pagando, il suo pagamento viene annullato; se
   arriva lo stesso, resta da rimborsare e compare l'avviso 💶.
+- **Asporto online: le fasce di ritiro.** Le ore proposte al cliente partono dall'inizio di ogni
+  orario e vanno avanti di **Fascia ogni (minuti)** fino alla fine compresa (con `19:00-22:30` e 15
+  minuti: 19:00, 19:15 … 22:30). Si vedono solo quelle che cadono almeno **Preparazione (minuti)**
+  dopo il momento dell'ordine, e solo per il giorno stesso. Nei **Giorni di chiusura**, in pausa o
+  quando le fasce del giorno sono finite, l'asporto online risulta chiuso.
+- **Asporto online: il tavolo.** Il link è quello del tavolo virtuale dell'asporto scelto su
+  questa cassa in Impostazioni ▸ Sala: se lo cambi, il link cambia e quello vecchio va sostituito
+  sul sito e sui social.
+  <!-- DA VERIFICARE: come arriva in cassa un ordine dell'asporto online (avviso, elenco Asporto, comanda in cucina) e come si chiude al ritiro: il pagamento con la carta fatto online compare gia' nel conto come per il self order? -->
+  <!-- DA VERIFICARE: il tavolo dell'asporto si sceglie per ogni cassa, ma l'asporto online e' unico per l'impianto: quale tavolo vale se due casse ne hanno scelto uno diverso? (al Salva vince quello della cassa che salva) -->
+- **Asporto online: ordini non pagati.** Il cliente paga subito con la carta; un ordine non pagato
+  entro 20 minuti si annulla da solo.
 
 !!! warning "Con pagamenti dal telefono, solo scontrino o fattura"
 
@@ -186,5 +269,7 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 - [Mappa della sala](mappa-sala.md)
 - [Comanda](comanda.md)
 - [Conto](conto.md)
+- [Asporto e domicilio](asporto.md)
+- [Impostazioni](impostazioni.md)
 - [Sito del menu](sito-menu.md)
 - [Pubblicare il self order su internet](../appendici/self-order-internet.md)

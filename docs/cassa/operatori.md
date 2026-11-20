@@ -67,7 +67,7 @@ In fondo, sempre visibili anche se la scheda scorre: **Elimina operatore** a sin
 | **Cognome** | Facoltativo. Nome e cognome, se ci sono, sono quello che si vede nell'elenco. |
 | **Descrizione \* (badge in cassa)** | Obbligatoria. Il nome breve con cui l'operatore compare nella schermata di accesso, nel riquadro dell'operatore in Comanda e nei messaggi dell'app (es. *«MARCO non è abilitato ad applicare sconti.»*). Si scrive in maiuscolo mentre digiti. |
 | **Telefono**, **Cellulare** | Recapiti, facoltativi. |
-| **Badge** | Codice del badge dell'operatore, facoltativo. <!-- DA VERIFICARE: il campo Badge viene solo salvato; nessuna schermata dell'app lo legge (non si entra col badge). A cosa serve? --> |
+| **Badge** | Codice del badge dell'operatore, facoltativo. Al momento è solo un'annotazione: non si entra col badge. |
 | **PIN di accesso** | Obbligatorio, da 1 a 8 cifre, non può cominciare per zero. Si vede solo come pallini; per un operatore che ha già un PIN la casella dice **PIN impostato**, per uno senza **Nessun PIN**. Toccala (o tocca **Digita**) per scriverlo con il tastierino. |
 | **Attivo** | Spento, l'operatore non compare più fra quelli che possono entrare e l'accesso gli viene rifiutato. Resta in elenco con la pastiglia **Disattivo**. |
 | **Puo' liberare i tavoli** | Permette di liberare un tavolo aperto su cui non è stato battuto nulla. |
@@ -125,8 +125,8 @@ Se non tocchi **Digita**, il PIN esistente resta quello che era.
 2. Spegni **Attivo**.
 3. Tocca **Salva**. Nell'elenco compare la pastiglia **Disattivo** e l'operatore non può più entrare.
 
-Disattivare è preferibile a eliminare quando l'operatore ha già lavorato.
-<!-- DA VERIFICARE: eliminare un operatore che compare su comande e conti già chiusi è consentito? Cosa succede allo storico? -->
+Un operatore che ha già firmato delle comande non si può eliminare: si disattiva, e le comande e i
+conti già fatti restano com'erano.
 
 ## Controlli e messaggi
 
@@ -138,6 +138,7 @@ Disattivare è preferibile a eliminare quando l'operatore ha già lavorato.
 | *Il PIN deve essere un numero da 1 a 8 cifre.* | PIN non valido. | Correggi il PIN. |
 | **Modifiche non salvate** — *La scheda di "…" ha modifiche non salvate. Vuoi abbandonarle?* | Hai toccato un altro operatore o **+ Nuovo operatore** senza salvare. | **Abbandona** per perdere le modifiche, **Resta qui** per tornare alla scheda. |
 | **Elimina operatore** — *Eliminare definitivamente l'operatore "…"? L'operazione non e' reversibile.* | Hai toccato **Elimina operatore**. | **Elimina** per confermare, **Annulla** per rinunciare. |
+| *L'operatore ha firmato delle comande: non si puo' cancellare, disattivalo.* | Hai eliminato un operatore che ha già lavorato. | Spegni **Attivo** e tocca **Salva**. |
 | *Un'altra postazione ha modificato questi dati prima di te: adesso vedi la versione aggiornata, rifai la modifica e salva.* | Lo stesso operatore è stato modificato da un'altra cassa mentre lo modificavi. | La scheda è già ricaricata: rifai la modifica e salva. |
 | *Un'altra postazione ha eliminato questi dati mentre li stavi modificando: non ci sono piu' e non c'e' niente da salvare.* | L'operatore è stato eliminato da un'altra cassa. | Nessuna azione. |
 | *Impossibile caricare gli operatori.* / *Impossibile salvare l'operatore.* / *Impossibile eliminare l'operatore.* / *Impossibile determinare il prossimo codice operatore.* | Il servizio non risponde o rifiuta l'operazione; sotto compare il dettaglio. | Controlla il collegamento al servizio e riprova. |

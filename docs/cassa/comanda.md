@@ -42,7 +42,7 @@ serviti tocchi **VIA** sul gruppo dei primi.
 - Le portate (antipasti, primi, secondi…): [Portate](portate.md).
 - Varianti e intensità: [Varianti](varianti-anagrafica.md) e [Modificatori](modificatori.md).
 - Il prezzo del coperto si imposta sulla sala, in [Sale e tavoli](sale-e-tavoli.md).
-- La stampante del preconto: [Impostazioni](impostazioni.md) ▸ Stampante preconto.
+- La stampante di cassa: [Impostazioni](impostazioni.md) ▸ Stampante di cassa.
 
 ## La schermata
 
@@ -226,7 +226,7 @@ non si sposta. La divisione completa si fa da [Dividi conto](dividi-conto.md).
 
 1. Tocca **Preconto**. Si apre l'anteprima **PRECONTO** - «documento non valido ai fini fiscali»
    con il nome del locale, il tavolo, data e ora, coperti, operatore, le righe e il **TOTALE**.
-2. Tocca **Stampa** per stamparlo sulla stampante del preconto (sotto compare «Stampa in corso…»,
+2. Tocca **Stampa** per stamparlo sulla stampante di cassa (sotto compare «Stampa in corso…»,
    poi «Preconto stampato.»).
 3. Tocca **Vai al conto**. Si apre il [Conto](conto.md).
 
@@ -292,8 +292,8 @@ parte al kiosk, sotto il **TOTALE** compaiono **Già pagato al kiosk** e **DA PA
   Il palmare non apre gli ordini del kiosk.
 - Se l'anagrafica articoli non risponde (triangolo giallo), le combinazioni come la pizza metà e
   metà non vengono proposte.
-- Nel riquadro dei piatti il pulsante **IMPORTO LIBERO** (riga a prezzo libero con aliquota IVA) è
-  previsto solo per la vendita al banco. <!-- DA VERIFICARE: in questa schermata il pulsante IMPORTO LIBERO non compare mai (la modalita' banco viene attivata solo da una pagina che la cassa non usa piu'). Va documentato qui o solo in Vendita al banco? -->
+- In questa schermata non c'è un tasto per battere una riga a importo libero: si batte con
+  **PREZZO LIBERO** nella [Vendita al banco](vendita-al-banco.md).
 
 ## Vedi anche
 

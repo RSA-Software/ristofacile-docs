@@ -69,7 +69,7 @@ In fondo alla scheda **Elimina portata**, **Annulla** e **Salva**.
 | Elemento | Descrizione |
 |---|---|
 | **Aspetta il via** / **Parte subito** | «All'invio parte la prima portata della comanda; le altre restano in attesa in cucina (in grigio sul monitor) finche' il cameriere non da' il via dal palmare o dalla cassa. Una portata che parte subito va in cucina insieme alla prima, a ogni invio.» |
-| **Attesa consigliata (minuti)** | «Solo un promemoria per chi da' il via: non ferma e non fa partire niente da sola.» <!-- DA VERIFICARE: l'attesa consigliata non risulta mostrata in Comanda, sul palmare o sul monitor di cucina; dove la vede chi dà il via? --> |
+| **Attesa consigliata (minuti)** | «Solo un promemoria per chi da' il via: non ferma e non fa partire niente da sola.» Al momento si vede solo in questo elenco, accanto alla portata (per esempio «(10')»): in Comanda, sul palmare e sul monitor di cucina non compare. |
 
 ## Pulsanti e comandi
 

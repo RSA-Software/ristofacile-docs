@@ -138,7 +138,7 @@ Toccando una fetta o una colonna dei grafici compare il valore.
   non è stato registrato, il conto contribuisce con importo zero: non si sa quale parte spetti ai
   conti filtrati.
 - Gli articoli senza categoria merceologica compaiono sotto *Senza categoria*.
-<!-- DA VERIFICARE: la schermata è accessibile a qualunque operatore? Nel codice non si vede un controllo dei permessi. -->
+- La schermata è aperta a tutti gli operatori: non c'è un permesso che la limiti.
 
 ## Vedi anche
 

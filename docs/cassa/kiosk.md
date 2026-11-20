@@ -2,7 +2,7 @@
 title: Kiosk
 description: "La configurazione dei kiosk dalla cassa - accensione e pausa, menu e tavoli virtuali, dispositivi, stampanti, utenti web, immagini dell'attesa, suggerimenti, monitor in sala e segnaposti."
 app: Cassa
-percorso: Menu ▸ Kiosk
+percorso: Menu ▸ Impostazioni ▸ Kiosk
 pagina: KioskImpostazioniPage
 ---
 
@@ -17,7 +17,7 @@ kiosk stesso (collegamento, numero, POS, rendiresto) è in
 
 !!! info "In sintesi"
 
-    - **Dove si trova:** Menu ▸ **Kiosk** (subito sotto **Self order**)
+    - **Dove si trova:** Menu ▸ **Impostazioni** ▸ **Kiosk** (subito sotto **Self order**)
     - **Chi la usa:** titolare (configurazione); qualunque cassiere (pausa)
     - **Disponibile anche su:** solo cassa
 
@@ -49,15 +49,22 @@ scrivono *Kiosk momentaneamente chiuso: ordina alla cassa* finché non riprendi.
 
 ![Kiosk, linguetta Generale](../assets/img/cassa/kiosk.png)
 
-In alto il titolo **Kiosk** e sei linguette: **Generale**, **Kiosk**, **Attesa**, **Suggerimenti**,
+In alto il titolo **Kiosk** e sette linguette: **Generale**, **Pagamento**, **Kiosk**, **Attesa**, **Suggerimenti**,
 **Monitor** e **Segnaposti**. Sotto le linguette, su tutte, il riquadro **Pausa dei kiosk** con lo
 stato (*I kiosk prendono gli ordini.* oppure *I kiosk sono in pausa: mostrano «ordina alla
 cassa».*) e il pulsante **Metti in pausa i kiosk** o **Riprendi gli ordini**.
 
 In basso a sinistra l'esito dell'ultima operazione e *Ultima modifica* con data, ora e chi ha
-salvato; in basso a destra **Salva**, che vale per le linguette Generale, Kiosk, Attesa e Monitor.
+salvato; in basso a destra **Salva**, che vale per le linguette Generale, Pagamento, Kiosk, Attesa e Monitor.
 Suggerimenti e Segnaposti non hanno **Salva**: i suggerimenti si salvano a ogni tocco, i segnaposti
 si stampano e basta.
+
+### Linguetta Pagamento
+
+![Kiosk, linguetta Pagamento](../assets/img/cassa/kiosk-pagamento.png)
+
+Due riquadri: **Pagamento alla cassa**, con l'interruttore «Paga alla cassa», e **Scadenza e pesi**,
+con i minuti dopo cui un ordine non pagato si annulla e i pesi proposti per gli articoli a peso.
 
 ### Linguetta Kiosk
 
@@ -127,6 +134,13 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 | **Tavolo virtuale per «mangio qui»** / **per «porto via»** | Il tavolo su cui finiscono gli ordini di chi mangia nel locale e di chi porta via; può essere lo stesso per tutti e due. Il listino della sua sala decide i prezzi del kiosk. **Nessuno** = non impostato. Sotto: *Nel database un tavolo virtuale non ha un segno che lo distingua: sceglilo fra quelli che non usi in sala, per esempio di una sala «Kiosk».* |
 | Riquadro ambra sotto un tavolo | *Questo è anche il tavolo dell'asporto di questa cassa: usa un tavolo virtuale a parte.* Vedi le Note. |
 | **Cameriere delle righe del kiosk** | L'operatore a cui vanno le righe degli ordini del kiosk, oppure **Nessuno**. |
+
+### Pagamento
+
+Due riquadri: **Pagamento alla cassa** e **Scadenza e pesi**.
+
+| Elemento | Descrizione |
+|---|---|
 | **«Paga alla cassa»** | *Il cliente può scegliere di pagare alla cassa invece che al kiosk.* Sotto: *Spento: i clienti dei kiosk senza stampante fiscale o senza POS né rendiresto pagano comunque alla cassa, e i piatti vanno in cucina solo dopo il pagamento (quelli a peso subito, per la pesata). Per mandarli in cucina subito, accendilo e scegli «subito».* |
 | **Quando gli ordini «paga alla cassa» vanno in cucina** | Solo con «Paga alla cassa» acceso: **Subito, alla conferma dell'ordine** oppure **Dopo, quando l'ordine si incassa in cassa**. Gli ordini pagati al kiosk vanno in cucina appena pagati. |
 | **Minuti di scadenza** | Da 1 a 1440 (di partenza 30), sempre a video: *Dopo questi minuti un ordine da pagare alla cassa, non pagato e non in cucina, si annulla da solo. Vale anche con «paga alla cassa» spento, per gli ordini dei kiosk senza stampante fiscale o senza POS né rendiresto.* |
@@ -208,7 +222,7 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
 
 ### Accendere i kiosk la prima volta
 
-1. Apri Menu ▸ **Kiosk**, linguetta **Generale**.
+1. Apri Menu ▸ **Impostazioni** ▸ **Kiosk**, linguetta **Generale**.
 2. Scegli il **Menu dei kiosk**.
 3. Scegli il **Tavolo virtuale per «mangio qui»** e quello **per «porto via»**.
 4. Scegli il **Cameriere delle righe del kiosk**.
@@ -222,7 +236,7 @@ legge quando ha «QR del segnaposto» acceso.* I campi **Dal numero** e **Al num
    [Configurazione del kiosk](../kiosk/configurazione.md#collegare-il-kiosk-al-servizio)): il kiosk
    dice *Questo dispositivo non è il kiosk n. 2: associalo dalla cassa.* oppure *Il kiosk n. 2 non è
    configurato: aggiungilo dalla cassa.*
-2. In cassa apri Menu ▸ **Kiosk**, linguetta **Kiosk**: in **Dispositivi che chiedono un numero**
+2. In cassa apri Menu ▸ **Impostazioni** ▸ **Kiosk**, linguetta **Kiosk**: in **Dispositivi che chiedono un numero**
    compare *Il dispositivo … chiede il numero 2*. Se non c'è, esci dalla schermata e rientra.
 3. Tocca **Associa al kiosk 2**: si apre la scheda con il dispositivo già scelto.
 4. Scrivi la **DESCRIZIONE** e scegli la **STAMPANTE FISCALE** (o **Nessuna: si paga solo alla

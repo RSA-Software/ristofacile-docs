@@ -101,7 +101,8 @@ la riga di modifica:
 Se una variante ha sia un prezzo per tutti i piatti sia uno per un piatto preciso, su quel piatto
 vale il secondo.
 
-<!-- DA VERIFICARE: nel codice della Comanda contano solo i prezzi «Tutti i listini»; un prezzo legato a un listino preciso non viene mai applicato. È un limite noto o un difetto? -->
+Al momento in Comanda valgono solo i prezzi per **Tutti** i listini: un prezzo legato a un listino
+preciso non viene applicato.
 
 ## Pulsanti e comandi
 

@@ -60,7 +60,7 @@ gg/mm/aaaa»). In fondo **Elimina voce**, **Annulla** e **Salva**.
 | **Articolo \*** | Il piatto, scelto con la finestra **Cerca articolo**. Si sceglie solo su una voce nuova. |
 | **Vale sempre** | «Spento, vale solo per la giornata scelta qui sotto - il giorno dopo il piatto torna ordinabile da solo.» Si sceglie solo su una voce nuova. |
 | **Giorno** | Compare se **Vale sempre** è spento: il giorno di validità. |
-| **Motivo** | Es. «finito il pescato». «Compare in elenco e sulla riga della comanda: e' quello che il cameriere ripete al tavolo.» <!-- DA VERIFICARE: nel codice della Comanda (cassa e palmare) il motivo non risulta mostrato; compare solo in questo elenco. --> |
+| **Motivo** | Es. «finito il pescato». «Compare in elenco e sulla riga della comanda: e' quello che il cameriere ripete al tavolo.» Al momento il motivo compare solo nell'elenco di questa schermata: in Comanda, sulla cassa e sul palmare, non si vede. |
 
 **Stato**
 
@@ -73,7 +73,7 @@ gg/mm/aaaa»). In fondo **Elimina voce**, **Annulla** e **Salva**.
 | Elemento | Descrizione |
 |---|---|
 | **Iniziale** | Le porzioni disponibili. Zero: il piatto non è gestito a porzioni. |
-| **Venduta** | Non modificabile. <!-- DA VERIFICARE: chi aggiorna la quantità «Venduta»? Nel codice di cassa e servizio non risulta aggiornata in automatico. --> |
+| **Venduta** | Non modificabile. Al momento non viene aggiornata: le porzioni uscite si contano in **Impegnata**. |
 | **Impegnata** | Non modificabile. Le porzioni inviate in cucina: cresce quando una riga parte per la cucina e cala se la riga viene stornata. |
 | **Avvisa sotto** | «Sotto la soglia di avviso la cassa segnala le scorte basse, prima che il piatto finisca davvero.» In Comanda il piatto mostra «ULTIME N». Zero: nessun avviso. |
 | **Esaurisci da solo** | «Consumata la quantita' iniziale, il piatto passa a Esaurito da se'.» |
@@ -122,7 +122,7 @@ disponibilità dall'esistenza di Facile: esistenza, meno l'ordinato dei clienti,
 meno i piatti già partiti in cucina sui conti ancora aperti. Compare come «Disp. N» sulle tessere
 della [Vendita al banco](vendita-al-banco.md).
 
-- Il deposito si sceglie in [Impostazioni ▸ Dati fiscali](impostazioni.md#dati-fiscali), alla voce
+- Il deposito si sceglie in [Impostazioni ▸ Dati ditta](impostazioni.md#dati-ditta), alla voce
   **Deposito della disponibilità**.
 - A zero l'articolo risulta **Esaurito** solo se in Facile è acceso il blocco delle vendite sotto
   esistenza; altrimenti si continua a vendere.
@@ -148,7 +148,9 @@ della [Vendita al banco](vendita-al-banco.md).
   elimina la voce e creane una nuova.
 - Un piatto esaurito resta visibile in Comanda, spento: non viene mai nascosto.
 - Lo stato non vale per il [sito del menu](sito-menu.md): è una copia del menu fatta quando lo si pubblica.
-  <!-- DA VERIFICARE: in Comanda la voce applicata è la prima trovata per l'articolo, senza guardare il giorno: una voce «solo per il giorno X» sembra restare valida anche nei giorni dopo, e con una voce «sempre» e una del giorno vince quella «sempre». Va verificato a schermo. -->
+- Una voce per un giorno vale solo quel giorno. Non tenere per lo stesso piatto una voce
+  **Vale sempre** e una del giorno: in Comanda vale quella «sempre», mentre le porzioni impegnate si
+  contano su quella del giorno.
 
 ## Vedi anche
 

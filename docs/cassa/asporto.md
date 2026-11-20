@@ -125,11 +125,8 @@ l'indirizzo.
 | Pronto (asporto) | **Ritirato** | **Segna ritirato**, **Non ritirato** | Ritirato (esce dalla coda) |
 | Pronto (domicilio) | **Parte** | **Parte la consegna**, **Non consegnato** | In consegna |
 | In consegna | **Consegnato** | **Segna consegnato**, **Non consegnato** | Consegnato (esce dalla coda) |
-| Programmato | — | — | — |
 
 Un ordine creato dalla cassa nasce **Ricevuto**.
-
-<!-- DA VERIFICARE: chi porta un ordine nello stato "Programmato"? Dalla cassa non c'e' nessun comando che lo imposti ne' che lo faccia avanzare. -->
 
 ## Come si fa
 
@@ -180,12 +177,12 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 | *Nessun tavolo configurato per l'asporto: impostalo in Impostazioni.* | Manca il tavolo dell'asporto. | Impostalo in Impostazioni ▸ Sala ▸ **Tavolo asporto**. |
 | *Impossibile creare l'ordine. (…)* | Il servizio ha rifiutato o non ha risposto. Tra parentesi il motivo. | Controlla la connessione; prima di riprovare chiudi il modulo e guarda se l'ordine è già in coda, per non crearlo due volte. |
 | *Il backend non ha restituito l'ordine appena aperto.* | Il servizio non ha restituito l'ordine creato. | Ricarica la schermata e controlla se l'ordine è in coda prima di rifarlo. |
-| *Ordine aperto, ma l'indirizzo di consegna non si e' salvato.* | L'ordine a domicilio è stato creato ma senza indirizzo. | Segna l'indirizzo nelle note della comanda o avvisa il fattorino. <!-- DA VERIFICARE: dalla cassa si puo' correggere l'indirizzo di un ordine gia' creato? Non risulta un comando di modifica. --> |
+| *Ordine aperto, ma l'indirizzo di consegna non si e' salvato.* | L'ordine a domicilio è stato creato ma senza indirizzo. | L'indirizzo non si può più correggere dalla cassa: scrivilo nelle note della comanda o avvisa il fattorino. |
 | *Impossibile caricare gli ordini asporto.* | Il servizio non risponde. | Controlla la connessione e riapri la schermata. |
 | *Impossibile aggiornare lo stato dell'ordine.* | Il cambio di stato non è stato salvato. | Riprova. |
 | *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Conferma di **Rifiuta**. | **Rifiuta** per procedere, **Annulla** per lasciare l'ordine. |
 | *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* (o *non consegnato*) | Conferma di **Non ritirato** / **Non consegnato**. | **Conferma** per procedere, **Annulla** per lasciare l'ordine. |
-| *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | L'ordine è stato rifiutato, ma la sua comanda non si è eliminata. | <!-- DA VERIFICARE: come si recupera la comanda rimasta aperta sul tavolo dell'asporto? --> |
+| *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | L'ordine è stato rifiutato, ma la sua comanda non si è eliminata. | Dalla cassa non si recupera: l'ordine è uscito dalla coda e il tavolo dell'asporto apre solo la coda. |
 | *Nessun operatore collegato: per annullare un ordine serve un operatore abilitato.* | **Rifiuta** / **Non ritirato** senza operatore collegato. | Collegati con un operatore abilitato. |
 | *… non e' abilitato a annullare un ordine. Il permesso si da' in Impostazioni -> Operatori.* | L'operatore collegato non ha il permesso di annullare. | Fai dare il permesso in [Operatori](operatori.md) o usa un operatore abilitato. |
 | *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | **Ritirato** su un asporto seguito dalle [Chiamate](chiamate.md) che non è ancora incassato. L'ordine resta in coda. | Tocca **Apri comanda**, incassa dal conto, poi segna il ritiro. |

@@ -99,7 +99,7 @@ In fondo: **Elimina articolo** e **Duplica** a sinistra, **Annulla** e **Salva**
 |---|---|
 | **Listino** | Il listino del prezzo mostrato sotto. Si propone il listino 1; toccandolo si apre la finestra **Scegli listino** e il prezzo si ricarica per il listino scelto. |
 | **Venduto a peso** | «Bistecche, pesce: in comanda si digita il peso.» |
-| **Prezzo** / **Prezzo al chilo** | Il prezzo nel listino scelto, a porzione oppure al chilo se l'articolo è venduto a peso. Sotto, la nota «Prezzo della porzione nel listino scelto.» oppure «In comanda si digita il peso in grammi e il totale della riga si calcola da qui.». Su un articolo nuovo compare «Il prezzo si scrive dopo il primo salvataggio.» <!-- DA VERIFICARE: la scritta dice di scrivere il prezzo dopo il primo salvataggio, ma il campo è già modificabile e il codice salva il prezzo anche al primo salvataggio. Quale delle due è voluta? --> |
+| **Prezzo** / **Prezzo al chilo** | Il prezzo nel listino scelto, a porzione oppure al chilo se l'articolo è venduto a peso. Sotto, la nota «Prezzo della porzione nel listino scelto.» oppure «In comanda si digita il peso in grammi e il totale della riga si calcola da qui.». Su un articolo nuovo compare «Il prezzo si scrive dopo il primo salvataggio.», ma il prezzo scritto si salva già insieme all'articolo. |
 
 **Classificazione**
 
@@ -247,7 +247,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 | **Rimuovi immagine** — *Togliere l'immagine dall'articolo "…"?* | Hai toccato **Rimuovi**. | **Rimuovi** o **Annulla**. |
 | *L'aliquota dev'essere una percentuale fra 0 e 100.* | Finestra **Nuova aliquota IVA**. | Correggi l'aliquota. |
 | *Il reparto cassa dev'essere un numero da 1 a 9: e' il reparto del registratore su cui esce la riga di scontrino.* | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 9. |
-| *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Mancano gli allergeni sull'impianto. | <!-- DA VERIFICARE: chi carica l'elenco degli allergeni e come? --> |
+| *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Mancano gli allergeni sull'impianto. | L'elenco (i 14 allergeni di legge) lo carica il gestionale Facile: dalla cassa non si può caricare. |
 | *Alcuni allergeni non sono stati salvati: …* | Il servizio ha rifiutato una parte delle modifiche. | Riprova. |
 | *L'elenco nazioni non e' caricato su questo impianto: caricalo da Facile, altrimenti non c'e' nessuna lingua da scegliere.* / *L'elenco nazioni e' vuoto su questo impianto: va caricato da Facile.* | Mancano le nazioni. | Caricale dal gestionale Facile. |
 | *Non c'e' nessun'altra lingua da aggiungere per questo articolo.* | Tutte le lingue sono già presenti. | — |
@@ -264,8 +264,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
   la rete, ne rilegge i primi 500 dal servizio). Per trovare un articolo che non compare, cercalo:
   con la rete la ricerca interroga anche il servizio.
 - Se lo stesso articolo viene modificato su due casse senza collegamento, vale l'ultima modifica
-  inviata.
-  <!-- DA VERIFICARE: confermare che un articolo modificato da due casse offline non dia avviso di conflitto (vince l'ultima sincronizzazione). -->
+  inviata, senza avvisi.
 - Immagine, allergeni e traduzioni **non** funzionano senza collegamento: si salvano direttamente
   sul servizio. La foto dell'articolo è anche quella del piatto sul kiosk.
 - L'eliminazione non cancella davvero l'articolo: lo segna come eliminato, e sparisce dagli elenchi.

@@ -53,10 +53,10 @@ del proxy: per riconoscere i clienti il servizio legge l'indirizzo vero che il p
 **solo** se la richiesta arriva da un proxy che conosce.
 
 Scrivi in **Proxy fidati** l'indirizzo da cui il proxy o il tunnel si collega al servizio,
-separando più indirizzi con una virgola (per un proxy sullo stesso PC del servizio, di solito
-`127.0.0.1`). Senza proxy lascia il campo vuoto.
-
-<!-- DA VERIFICARE: con il tunnel sullo stesso PC, oltre a 127.0.0.1 serve anche ::1? -->
+separando più indirizzi con una virgola. Per un proxy sullo stesso PC del servizio scrivi
+`127.0.0.1, ::1`: il servizio riconosce solo gli indirizzi scritti qui, così come sono, e il proxy
+può collegarsi con l'indirizzo locale IPv4 (`127.0.0.1`) o con quello IPv6 (`::1`). Senza proxy
+lascia il campo vuoto.
 
 ## Pagamento dal telefono (Nexi)
 
