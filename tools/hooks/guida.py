@@ -16,13 +16,18 @@ from mkdocs.exceptions import PluginError
 FORMA_CODICE = re.compile(r"^[a-z0-9-]+(\.[a-z0-9-]+)*$")
 
 _mappa = {}   # codice -> (pagina .md, ancora o "")
-_pagine = {}  # pagina .md -> (url, insieme degli id dell'indice)
+_url = {}     # pagina .md -> url, per tutte le pagine (anche quelle che --dirty non ricostruisce)
+_ids_pagina = {}  # pagina .md -> id dell'indice, solo per le pagine ricostruite in questa build
+_guida_yml = None
 
 
 def on_config(config):
+    global _guida_yml
     _mappa.clear()
-    _pagine.clear()
+    _url.clear()
+    _ids_pagina.clear()
     percorso = os.path.join(os.path.dirname(config.config_file_path), "guida.yml")
+    _guida_yml = percorso
     with open(percorso, encoding="utf-8") as f:
         dati = yaml.safe_load(f) or {}
     for codice, destinazione in dati.items():
@@ -34,6 +39,19 @@ def on_config(config):
     return config
 
 
+def on_serve(server, config, builder):
+    # guida.yml sta fuori da docs/: senza questo mkdocs serve non ricostruisce quando cambia.
+    if _guida_yml:
+        server.watch(_guida_yml)
+    return server
+
+
+def on_files(files, config):
+    for f in files.documentation_pages():
+        _url[f.src_uri] = f.url
+    return files
+
+
 def _ids(voci):
     for voce in voci:
         yield voce.id
@@ -41,18 +59,20 @@ def _ids(voci):
 
 
 def on_page_content(html_pagina, page, config, files):
-    _pagine[page.file.src_uri] = (page.url, set(_ids(page.toc)))
+    _ids_pagina[page.file.src_uri] = set(_ids(page.toc))
     return html_pagina
 
 
 def on_post_build(config):
     errori = []
     for codice, (pagina, ancora) in sorted(_mappa.items()):
-        if pagina not in _pagine:
+        if pagina not in _url:
             errori.append(f"{codice}: la pagina {pagina} non c'e'")
             continue
-        url, ids = _pagine[pagina]
-        if ancora and ancora not in ids:
+        url = _url[pagina]
+        # Con --dirty le pagine non ricostruite non hanno l'indice: l'ancora si verifica solo su quelle ricostruite.
+        ids = _ids_pagina.get(pagina)
+        if ancora and ids is not None and ancora not in ids:
             errori.append(f"{codice}: in {pagina} manca il paragrafo #{ancora}")
             continue
         destinazione = "../../" + url + ("#" + ancora if ancora else "")

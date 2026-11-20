@@ -53,9 +53,13 @@ I tasti della tastiera, dove servono, sono scritti così: ++f2++, ++enter++.
 ## La guida dentro la cassa
 
 Sulla cassa Windows questo manuale si apre anche dall'app: tocca **?** in alto a destra, accanto al
-titolo della schermata, oppure premi ++f1++. A destra compare la pagina del manuale che parla della
-schermata in uso; la cassa si restringe a sinistra e resta utilizzabile. Se cambi schermata con la
-guida aperta, la guida la segue; nelle **Impostazioni** si apre al paragrafo della voce scelta.
+titolo della schermata, oppure premi ++f1++. In **Comanda** il **?** sta in testata, accanto
+all'operatore; alla **Vendita al banco** si apre da **FUNZIONI ▸ GUIDA**.
+
+A destra compare la pagina del manuale che parla della schermata in uso; la cassa si restringe a
+sinistra e resta utilizzabile. Sugli schermi piccoli (15" a 1024 punti) restringerla la taglierebbe:
+lì la guida copre la parte destra della cassa finché non la chiudi. Se cambi schermata con la guida
+aperta, la guida la segue; nelle **Impostazioni** si apre al paragrafo della voce scelta.
 
 Per chiuderla tocca **✕**, premi di nuovo ++f1++ oppure, dentro alla guida, ++esc++. **Apri nel
 browser** mostra la stessa pagina nel browser del computer. La guida è su internet: se la cassa non è
