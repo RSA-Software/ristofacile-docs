@@ -184,7 +184,7 @@ questa postazione:
 
 1. Scrivi l'importo in **Carta** o **Bancomat** (anche insieme ai contanti).
 2. Tocca **INCASSA E STAMPA**.
-3. Compare il riquadro *€ X sul terminale: fai passare la carta…* con una barra che si svuota e il tempo che resta (*Ancora N s*): la cassa aspetta il terminale fino a 75 secondi. Confronta l'importo con quello sul display del POS.
+3. Compare il riquadro *€ X sul terminale: fai passare la carta…* con una barra che si svuota e il tempo che resta (*Ancora N s*): la cassa aspetta il terminale fino a due minuti e mezzo. Confronta l'importo con quello sul display del POS.
 4. Il cliente paga sul terminale. Se la stampante preconto è configurata, esce la ricevuta del POS.
 5. Subito dopo il servizio emette lo scontrino e il conto si chiude.
 
