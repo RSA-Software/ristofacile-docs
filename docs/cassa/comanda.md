@@ -51,11 +51,11 @@ serviti tocchi **VIA** sul gruppo dei primi.
 La schermata ha una testata e tre colonne.
 
 - **Testata.** Al centro la pastiglia con sala e tavolo (es. «Sala Interna · Tavolo 12») e accanto
-  le pastiglie dei **coperti** (con **−** e **+**), del **conto** su cui si sta battendo
-  (**Conto unico** se non si divide) e dell'**apertura** (es. «aperto da 25 min»). Compaiono solo
-  in caso di problemi la pastiglia **Non in linea** (collegamento al servizio perso) e un
-  triangolo giallo (anagrafica articoli non raggiungibile). A destra il riquadro **OPERATORE** con
-  il nome di chi è entrato e la scritta **ESCI**.
+  le pastiglie dei **coperti** (con **−** e **+**) e del **conto** su cui si sta battendo
+  (**Conto unico** se non si divide). Compaiono solo quando servono la pastiglia **Non in linea**
+  (collegamento al servizio perso), un triangolo giallo (anagrafica articoli non raggiungibile) e
+  l'icona blu delle **persone** (un altro dispositivo è sullo stesso tavolo). A destra il riquadro
+  **OPERATORE** con il nome di chi è entrato e la scritta **ESCI**.
 - **Colonna sinistra - le sezioni.** Raggruppate sotto il nome del menu a cui appartengono (le
   sezioni senza menu stanno sotto **Altro**). Ogni sezione mostra il nome e il numero di piatti;
   quella aperta ha il bordo arancione. Un menu venduto a prezzo fisso ha in testa la tessera
@@ -63,8 +63,9 @@ La schermata ha una testata e tre colonne.
 - **Colonna centrale - i piatti.** In cima, solo nelle sezioni che le prevedono, le tessere delle
   **combinazioni** (es. la pizza metà e metà). Sotto, una tessera per piatto con nome e prezzo. In
   fondo la casella **Cerca in tutto il menu…**.
-- **Colonna destra - la comanda.** Il titolo **Comanda** con il numero di righe (es. «6 righe · 2
-  da inviare»), l'elenco delle righe raggruppate per portata, la riga dei coperti, il **Totale** e i
+- **Colonna destra - la comanda.** Il titolo **Comanda** con accanto da quanto è aperto il tavolo
+  (l'orologio, es. «25 min») e, se il self order è acceso, la **chiave** del PIN del tavolo; a
+  destra il numero di righe (es. «6 righe · 2 da inviare»), l'elenco delle righe raggruppate per portata, la riga dei coperti, il **Totale** e i
   pulsanti **INVIA IN CUCINA** (o **LIBERA TAVOLO**), **Ristampa**, **Preconto** e **CONTO**.
 
 ### Le righe della comanda
@@ -100,9 +101,11 @@ due porzioni.
 | **Sala · Tavolo** | Il tavolo che stai lavorando. |
 | **Coperti** (es. **4 coperti**) | Numero di persone al tavolo. All'apertura vale i posti del tavolo. Si cambia con **−** e **+** nella pastiglia. Non scende sotto 1, né sotto i coperti già pagati, e non sale oltre i posti massimi del tavolo (più quelli dei tavoli uniti). Su un ordine del kiosk la pastiglia non c'è: i coperti sono zero. |
 | **Conto unico** / **Conto 2** | Su quale conto finiscono i prossimi piatti. Vedi «Battere per conti separati». Accesa (un conto scelto) ha il bordo arancione. |
-| **aperto da …** | Da quanto è aperto il tavolo («aperto ora», «aperto da 25 min», «aperto da 1h 05m»). Si aggiorna da sola. |
+| **Orologio** (accanto a **Comanda**) | Da quanto è aperto il tavolo («ora», «25 min», «1h 05m»). Si aggiorna da solo; col mouse fermo sopra si legge «aperto da …». |
+| **Chiave** (accanto a **Comanda**) | Il PIN del tavolo per il self order. Toccala: si apre «PIN 0866» con *Dillo ai clienti del tavolo: serve per ordinare dal telefono col QR. Cambia a ogni apertura del tavolo.* Compare solo con il self order acceso, sui tavoli della sala (non al banco né sull'asporto). Vedi [Self order](self-order.md#il-pin-del-tavolo). |
 | **Non in linea** | Il servizio non ha risposto all'ultima operazione. Tocca la pastiglia per riprovare il collegamento; quando torna in linea sparisce. |
 | **Triangolo giallo** | L'anagrafica degli articoli del gestionale non risponde: sulle tessere compare il codice al posto del nome. Toccalo per la spiegazione. |
+| **Persone** (icona blu) | Un altro dispositivo è sullo stesso tavolo. Toccala per sapere chi: «Tavolo condiviso» con *Al tavolo anche …* oppure *Conto aperto da …* (qualcuno sta per incassare). Non blocca niente: quello che batti si somma al suo. |
 | **OPERATORE** | Chi è entrato con l'accesso. Il tocco serve a uscire dal turno. |
 | **Tessera del piatto** | Nome e prezzo («€ 8,00»; per i piatti a peso «€ 25,00/kg»). In ricerca mostra anche la sezione di provenienza. Il cerchietto **i** in alto a destra apre gli allergeni. Accanto al prezzo, al più tre icone degli allergeni: prima quelli che il piatto contiene, a tratto pieno, poi le tracce, con l'icona tratteggiata; **+n** dice quanti altri ce ne sono. Su una tessera stretta si tagliano prima il **+n** e le icone, mai il prezzo. |
 | **ULTIME 3** | Il piatto sta finendo: si può ancora vendere. |

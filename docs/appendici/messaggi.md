@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-20 — **785 messaggi**.
+Aggiornato al 2026-11-20 — **788 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -630,12 +630,14 @@ Aggiornato al 2026-11-20 — **785 messaggi**.
 | *Permesso USB della stampante non dato: dallo dalla configurazione del kiosk (scegli la stampante o «Stampa di prova»).* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Android la stampante USB non ha ancora il permesso. | Apri la configurazione, scegli la stampante o tocca **Stampa di prova** e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Permesso USB negato: collega di nuovo la stampante e tocca «Consenti».* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Su Android non hai dato il permesso alla stampante. | Stacca e ricollega la stampante e tocca **OK** (o **Consenti**) nella richiesta di Android. |
 | *Per «MOZZARELLA» scegli come.* / *Scegli «Cottura».* / *Per «Cottura» scegli almeno 1.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Manca una scelta obbligatoria nel piatto o nel menu composto. | Completa la scelta indicata. |
+| *Per ordinare serve il PIN del tavolo: te lo dà il cameriere.* | Cassa: [Self order](../cassa/self-order.md) | Il cliente ha scelto **Guarda solo il menu** e prova a ordinare. | Il cameriere gli dice il PIN; il cliente tocca **Inserisci il PIN**. |
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | Cassa: [Comanda](../cassa/comanda.md) | **+** su un menu a prezzo fisso. | Tocca di nuovo **MENU INTERO**. |
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | Palmare: [Comanda](../palmare/comanda.md) | **+** su un menu a prezzo fisso. | Aggiungi un altro menu da «MENU INTERO». |
 | *PIN del titolare sbagliato.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Apri il registro** con un PIN sbagliato. Il tentativo finisce nel registro come **NOTA**. | Riscrivi il PIN. |
 | *PIN errato.* | Cassa: [Accesso operatore](../cassa/accesso.md) | Il PIN digitato non corrisponde a quello dell'operatore. | Ridigita il PIN. Se l'hai dimenticato, fattelo reimpostare da chi gestisce gli [Operatori](../cassa/operatori.md). |
 | *PIN errato.* | Palmare: [Accesso](../palmare/accesso.md) | Il PIN non corrisponde. Le cifre digitate vengono cancellate. | Ridigita il PIN; se l'hai dimenticato fattelo reimpostare dalla cassa in [Operatori](../cassa/operatori.md). |
 | *PIN sbagliato: ancora 4 tentativi.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Il PIN non è giusto. | Riprova. |
+| *PIN sbagliato: controllalo con il cameriere.* | Cassa: [Self order](../cassa/self-order.md) | Le cifre non sono quelle del tavolo. | Ripeti il PIN al cliente: guardalo con la chiave nella comanda. |
 | *Porta della stampante comande non valida (di solito 9100).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Porta non numerica o fuori intervallo. | Correggi la porta. |
 | **Posti del tavolo** — *… Salvare lo stesso? Al loro arrivo servira' unire un altro tavolo.* | Palmare: [Prenotazioni](../palmare/prenotazioni.md) | **Salva** con un tavolo troppo piccolo. | **Salva** oppure **Cambia tavolo**. |
 | *PREFERITI e IN EVIDENZA stanno sempre in testa: non si spostano.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Si è provato a spostare una delle due tessere fisse. | — |
@@ -782,6 +784,7 @@ Aggiornato al 2026-11-20 — **785 messaggi**.
 | *Troppi errori: PIN bloccato per 5 minuti.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Cinque PIN sbagliati di fila. | Aspetta 5 minuti: intanto anche il PIN giusto risponde *PIN bloccato: riprova fra 5 minuti.* |
 | *Troppi PIN sbagliati: riprova fra qualche minuto.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Troppi PIN sbagliati di fila: il registro si blocca per qualche minuto. | Aspetta e riprova. |
 | *Troppi tentativi: riprova fra* … *minuti.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Troppe richieste in poco tempo. | Aspetta e riprova. |
+| *Troppi tentativi: riprova fra … minuti o chiedi al cameriere.* | Cassa: [Self order](../cassa/self-order.md) | Cinque PIN sbagliati per quel tavolo dalla stessa connessione: da lì non si prova più per 30 minuti. I telefoni collegati al Wi-Fi del locale escono su internet con la stessa connessione, quindi si fermano insieme. | Il cliente aspetta, oppure ordina al cameriere. |
 | *Tutte le parti sono gia' assegnate: tocca la parte da sostituire, poi scegli il nuovo gusto.* | Cassa: [Componi la pizza](../cassa/mezza.md) | Tocco su un gusto con tutte le parti piene. | Tocca prima la parte da cambiare. |
 | *Tutte le parti sono gia' assegnate: tocca la parte da sostituire, poi scegli il nuovo gusto.* | Palmare: [Comanda](../palmare/comanda.md) | In **Componi il piatto**, tutte le parti sono piene. | Tocca la parte da cambiare, poi il gusto. |
 | *Un'altra cassa ha buttato la vendita che avevi aperto: …* (**Rimetti** / **Azzera**) | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Un'altra cassa ha buttato la vendita mentre la stavi battendo. | **Rimetti** riporta le righe su una vendita nuova; **Azzera** le lascia perdere. |

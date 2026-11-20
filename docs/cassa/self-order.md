@@ -1,6 +1,6 @@
 ---
 title: Self order
-description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, asporto online con ritiro e pagamento dal link, avvisi in sala, conto con i pagamenti dal telefono.
+description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, PIN del tavolo, asporto online con ritiro e pagamento dal link, avvisi in sala, conto con i pagamenti dal telefono.
 app: Cassa
 percorso: Menu ▸ Impostazioni ▸ Self order
 pagina: ImpostazioniPage (pannello Self order, SelfOrderPannello)
@@ -27,7 +27,8 @@ subito con la carta.
 
 Il tavolo lo apre sempre il personale: finché il tavolo non è aperto, chi inquadra il QR vede il
 menu ma non può ordinare (il telefono dice *Il tavolo non è ancora aperto: chiedi al cameriere di
-aprirlo, poi inquadra di nuovo il QR.*). Da lì in poi i clienti ordinano da soli, anche più telefoni sullo stesso
+aprirlo, poi inquadra di nuovo il QR.*). Aperto il tavolo, il cameriere dice ai clienti il **PIN
+del tavolo** (vedi *Il PIN del tavolo* più sotto). Da lì in poi i clienti ordinano da soli, anche più telefoni sullo stesso
 tavolo, e le loro righe finiscono nella stessa comanda del cameriere: in cucina escono come quelle
 battute dalla cassa, rispettando le uscite. Il cameriere vede subito l'avviso sulla mappa e sulla
 comanda, e al conto trova già scalato quello che il tavolo ha pagato dal telefono.
@@ -165,6 +166,26 @@ Nella linguetta **Asporto online**:
 3. Tocca **Apri** per andare alla comanda, oppure **Visto** per togliere l'avviso; **✕** chiude il riquadro senza segnarlo visto.
 4. Nella [Comanda](comanda.md) le righe del telefono hanno la scritta *dal telefono*; si mandano in cucina da sole, e le uscite dopo la prima aspettano il tuo **VIA**.
 
+### Il PIN del tavolo
+
+Il QR del cartoncino da solo non basta per ordinare: chi lo fotografa potrebbe ordinare anche da
+fuori dal locale. Per questo ogni tavolo aperto ha un **PIN di 4 cifre**, che il cameriere dice ai
+clienti quando si siedono.
+
+1. Apri il tavolo dalla [Mappa della sala](mappa-sala.md).
+2. Nella [Comanda](comanda.md) tocca la **chiave**: sulla cassa sta accanto al titolo **Comanda**,
+   sul telefono in alto a destra, nel titolo; sul tablet è una pastiglia nella fascia in alto.
+3. Si apre l'avviso con il PIN, per esempio «PIN 0866». Di' le quattro cifre ai clienti e tocca
+   **OK**.
+4. Il cliente inquadra il QR: il telefono mostra **PIN del tavolo** (*Per ordinare dal telefono
+   inserisci le 4 cifre che ti dà il cameriere.*). Scrive le cifre e tocca **Entra**.
+
+!!! warning "Il PIN cambia a ogni apertura del tavolo"
+
+    Quando il tavolo si chiude e si riapre, il PIN è nuovo: quello dei clienti di prima non vale più
+    e non possono ordinare sul conto dei nuovi. Resta invece lo stesso finché il tavolo è aperto,
+    anche se il servizio si riavvia.
+
 ### Fermare un telefono che ordina a sproposito
 
 1. Nella comanda tocca una riga con *dal telefono*.
@@ -214,6 +235,15 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 | 🖨 | *Comanda di … dal telefono non stampata: è in cucina sul monitor, ristampala dalla cassa* | Ristampa la comanda dalla cassa. |
 | 💳 | *… ha pagato tutto dal telefono, ma lo scontrino non è uscito (…): emettilo dalla cassa* | Apri il conto ed emetti lo scontrino. |
 | 💶 | *…: € … pagati dal telefono su un conto già chiuso, da rimborsare dal portale Nexi (operazione …)* | Rimborsa il cliente dal portale Nexi. |
+| 🔒 | *…: molti PIN sbagliati dal telefono. Se non sono i clienti al tavolo, qualcuno prova a indovinarlo* | Chiedi al tavolo se hanno sbagliato loro; se no, metti il tavolo in pausa dalla linguetta **Pausa**. |
+
+Sul telefono del cliente, per il PIN:
+
+| Messaggio | Causa | Cosa fare |
+|---|---|---|
+| *Per ordinare serve il PIN del tavolo: te lo dà il cameriere.* | Il cliente ha scelto **Guarda solo il menu** e prova a ordinare. | Il cameriere gli dice il PIN; il cliente tocca **Inserisci il PIN**. |
+| *PIN sbagliato: controllalo con il cameriere.* | Le cifre non sono quelle del tavolo. | Ripeti il PIN al cliente: guardalo con la chiave nella comanda. |
+| *Troppi tentativi: riprova fra … minuti o chiedi al cameriere.* | Cinque PIN sbagliati per quel tavolo dalla stessa connessione: da lì non si prova più per 30 minuti. I telefoni collegati al Wi-Fi del locale escono su internet con la stessa connessione, quindi si fermano insieme. | Il cliente aspetta, oppure ordina al cameriere. |
 
 ## Note
 
@@ -229,6 +259,10 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
     ![La quota da pagare](../assets/img/cassa/self-order-telefono-quota.png){ .telefono }
     ![Il pagamento riuscito](../assets/img/cassa/self-order-telefono-pagato.png){ .telefono }
 
+- **Il PIN sul telefono del cliente.** Il telefono lo ricorda per 6 ore: chi lo ha scritto non lo
+  riscrive a ogni ordine. Senza PIN il cliente può comunque sfogliare il menu con **Guarda solo il
+  menu**, e inserirlo dopo con **Inserisci il PIN**. Dopo 15 PIN sbagliati sullo stesso tavolo, da
+  qualunque telefono, in cassa e sul palmare arriva l'avviso 🔒.
 - **Piatti da chiedere al cameriere.** Nella composizione del [Menu](menu.md), un piatto con
   **Ordinabile dal telefono** spento si vede sul telefono ma si ordina al cameriere.
 - **I tavoli virtuali del kiosk** non prendono ordini dal telefono: non hanno codice né cartoncino

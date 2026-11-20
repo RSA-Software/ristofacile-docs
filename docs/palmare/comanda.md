@@ -45,7 +45,15 @@ quando è il momento, con il pulsante **VIA**.
 
 ![Comanda - scheda MENU](../assets/img/palmare/comanda.png){ .telefono }
 
-In alto, nel titolo, la sala e il tavolo (es. «Sala principale · Tavolo 12»). Sotto, quattro zone.
+In alto, nel titolo, il tavolo e la sala (es. «Tavolo 12 · Sala principale»): se il nome è lungo si
+taglia la sala, mai il numero del tavolo. A destra del titolo, solo quando servono:
+
+- la **chiave**: il PIN del tavolo per il self order. Toccala e si apre «PIN 0866»: dillo ai clienti
+  del tavolo (vedi [Self order](../cassa/self-order.md#il-pin-del-tavolo));
+- l'icona blu delle **persone**: un altro dispositivo è sullo stesso tavolo. Toccala per sapere chi
+  («Al tavolo anche …», oppure «Conto aperto da …» se qualcuno sta incassando).
+
+Sotto il titolo, quattro zone.
 
 **1. La fascia del tavolo**, con delle piccole pastiglie:
 
@@ -190,6 +198,8 @@ se ne sceglie uno solo, toccare un altro piatto sostituisce quello scelto.
 | **Coperti (– 4 coperti +)** | Il numero di persone al tavolo. All'apertura vale quanto i posti del tavolo. Non scende sotto 1 né sotto i coperti già pagati, e non supera i posti massimi del tavolo (più quelli dei tavoli uniti). |
 | **1 conto / Conto N** | Su quale conto vanno i prossimi piatti, quando il tavolo paga diviso. Vedi *Battere per conti separati*. |
 | **Orologio** | Da quanto è aperto il tavolo. Si aggiorna da solo. |
+| **Chiave** (in alto a destra) | Il PIN del tavolo per il self order: toccala per vederlo. C'è solo con il self order acceso, sui tavoli della sala. Sul tablet è una pastiglia accanto ai coperti. |
+| **Persone** (icona blu, in alto a destra) | Un altro dispositivo è sullo stesso tavolo: toccala per sapere chi. Non blocca niente. Sul tablet è una pastiglia nella fascia in alto. |
 | **Non in linea** | Il servizio non ha risposto. Toccalo per riprovare. |
 | **Cerca in tutto il menu…** | Ricerca per nome in tutte le sezioni. |
 | **Campo della sezione** | La sezione aperta; toccalo per cambiarla o per scegliere un menu a prezzo fisso. |
