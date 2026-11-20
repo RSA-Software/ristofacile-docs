@@ -605,7 +605,7 @@ La cassa, il palmare, il monitor di cucina e il kiosk chiedono al servizio la su
 
 - **Formato:** il primo numero è sempre 2, il secondo è l'anno (026 = 2026), il terzo è la versione di Facile (B11), il quarto è la build dell'app.
 - **Build:** a ogni cambio di anno o di versione di Facile tutte le app vengono ripubblicate e la build riparte da 0.
-- **Setup per Windows:** prende lo stesso nome (*RistoFacile 2.026.11.00*, file *RistoFacileSetup_2.026.11.00.exe* e *RistoFacileAggiornamento_2.026.11.00.exe*) e ha la sua build.
+- **Setup per Windows:** i file si chiamano *RistoFacileSetup_2.026.11.00.exe* e *RistoFacileAggiornamento_2.026.11.00.exe* e hanno la loro build. In Windows, in *App installate*, compare come *RistoFacile* con versione *2.26.1100* (= 2.026.11.00: Windows accetta solo tre numeri, quindi versione di Facile e build del setup sono uniti).
 - **Licenza:** nella pagina della licenza la release compare nella forma *2026 B11.00*.
 
 Se non vanno d'accordo compare una volta un avviso, e lo stesso testo resta nel riquadro ambra sotto la **Versione**. Se è il livello dell'API a non essere compatibile, l'avviso è *Il servizio è più vecchio di questa app: va aggiornato il server.* oppure *Questa app è più vecchia del servizio: va aggiornata.*
