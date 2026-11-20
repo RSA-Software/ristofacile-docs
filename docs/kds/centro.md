@@ -125,6 +125,8 @@ Se l'interruttore non c'è, il centro non ha una stampante: impostala dalla cass
 | *Scegli prima un centro di produzione (passo 2).* | Manca la scelta del centro. | Tocca una tessera. |
 | *Il servizio è più vecchio di questa app: va aggiornato il server.* | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Questa app è più vecchia del servizio: va aggiornata.* | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è la 2.026.11.3, il servizio la 2.026.12.0: va aggiornata l'app.* | App e servizio sono di release diverse (cambia l'anno o la versione di Facile) e quella dell'app è la più vecchia. Il livello dell'API è compatibile. Vedi [Versione e compatibilità col servizio](../cassa/impostazioni.md#versione-e-compatibilita-col-servizio). | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è la 2.026.12.0, il servizio la 2.026.11.0: va aggiornato il server.* | App e servizio sono di release diverse e quella del servizio è la più vecchia. Il livello dell'API è compatibile. Vedi [Versione e compatibilità col servizio](../cassa/impostazioni.md#versione-e-compatibilita-col-servizio). | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 
 ## Note
 

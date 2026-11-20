@@ -555,6 +555,8 @@ Finché la finestra della ricarica è aperta la macchina non incassa.
 | *Impossibile caricare sale e tavoli:* … | La cassa non è collegata al servizio. | Sistema prima la **Connessione**. |
 | *Il servizio è più vecchio di questa app: va aggiornato il server.* | Il servizio del locale è di una versione precedente a questa app: non conosce ancora tutto quello che l'app gli chiede. Compare anche quando il servizio è così vecchio da non saper dire la sua versione. | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Questa app è più vecchia del servizio: va aggiornata.* | Il servizio è stato aggiornato e non accetta più questa versione dell'app. | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è la 2.026.11.3, il servizio la 2.026.12.0: va aggiornata l'app.* | App e servizio sono di release diverse (cambia l'anno o la versione di Facile) e quella dell'app è la più vecchia. Il livello dell'API è compatibile. Vedi [Versione e compatibilità col servizio](#versione-e-compatibilita-col-servizio). | Aggiorna l'app. Intanto si continua a lavorare, ma qualche funzione può non andare. |
+| *Questa app è la 2.026.12.0, il servizio la 2.026.11.0: va aggiornato il server.* | App e servizio sono di release diverse e quella del servizio è la più vecchia. Il livello dell'API è compatibile. Vedi [Versione e compatibilità col servizio](#versione-e-compatibilita-col-servizio). | Fai aggiornare il servizio sul computer dove è installato. Intanto si continua a lavorare, ma qualche funzione può non andare. |
 | *Inserisci l'indirizzo IP della stampante comande.* | **Salva**, **Stampa di prova** o **Verifica stato** con l'indirizzo vuoto. | Scrivi l'indirizzo IP. |
 | *Porta della stampante comande non valida (di solito 9100).* | Porta non numerica o fuori intervallo. | Correggi la porta. |
 | *Salvata solo su questa cassa (*indirizzo*): l'impianto non risponde (*…*).* | Il servizio non risponde: la stampante è stata salvata solo su questa cassa. | Riprova quando il servizio è raggiungibile, per averla nell'elenco dell'impianto. |
@@ -599,7 +601,12 @@ La cassa, il palmare, il monitor di cucina e il kiosk chiedono al servizio la su
 - quando l'app torna in primo piano;
 - dopo **Salva e connetti** (sul kiosk, **Salva e verifica**).
 
-**Come si legge il numero di versione.** App e servizio hanno la stessa forma, per esempio *2.026.11.3*: il primo numero è sempre 2, il secondo è l'anno (026 = 2026), il terzo è la versione di Facile (B11) e il quarto è la build dell'app. Quindi *2.026.11.3* vuol dire «per Facile 2026 B11, build 3 dell'app». A ogni cambio di anno o di versione di Facile tutte le app vengono ripubblicate e la build riparte da 0. Il setup per Windows prende lo stesso nome (*RistoFacile 2.026.11.00*, file *RistoFacileSetup_2.026.11.00.exe* e *RistoFacileAggiornamento_2.026.11.00.exe*) e ha la sua build. Nella pagina della licenza la release compare nella forma *2026 B11.00*.
+**Come si legge il numero di versione.** App e servizio hanno la stessa forma, per esempio *2.026.11.3*, cioè «per Facile 2026 B11, build 3 dell'app»:
+
+- **Formato:** il primo numero è sempre 2, il secondo è l'anno (026 = 2026), il terzo è la versione di Facile (B11), il quarto è la build dell'app.
+- **Build:** a ogni cambio di anno o di versione di Facile tutte le app vengono ripubblicate e la build riparte da 0.
+- **Setup per Windows:** prende lo stesso nome (*RistoFacile 2.026.11.00*, file *RistoFacileSetup_2.026.11.00.exe* e *RistoFacileAggiornamento_2.026.11.00.exe*) e ha la sua build.
+- **Licenza:** nella pagina della licenza la release compare nella forma *2026 B11.00*.
 
 Se non vanno d'accordo compare una volta un avviso, e lo stesso testo resta nel riquadro ambra sotto la **Versione**. Se è il livello dell'API a non essere compatibile, l'avviso è *Il servizio è più vecchio di questa app: va aggiornato il server.* oppure *Questa app è più vecchia del servizio: va aggiornata.*
 
