@@ -222,5 +222,5 @@ Per un piatto finito solo per stasera usa invece [Disponibilità](disponibilita.
 - [Comanda](comanda.md)
 - [Menu fissi](menu-fisso.md)
 - [Disponibilità](disponibilita.md)
-- [Menu online](menu-online.md)
+- [Sito del menu](sito-menu.md)
 - [Kiosk](kiosk.md)

@@ -45,7 +45,7 @@ Il menu laterale si apre con il pulsante in alto a sinistra. In testa porta la s
 | **Disponibilità** | Piatti esauriti, sospesi o fuori stagione, e le porzioni disponibili. Vedi [Disponibilità](disponibilita.md). |
 | **Regole di composizione** | Le regole della pizza mezza e mezza e il calcolo del suo prezzo. Vedi [Regole di composizione](regole-di-composizione.md). |
 | **Portate** | Le uscite (antipasti, primi, secondi…) e quali aspettano il via. Vedi [Portate](portate.md). |
-| **Impostazioni** | Collegamento al servizio, turno, sala, stampanti, POS, cassa automatica, dati fiscali, aspetto, [menu online](menu-online.md), hotel e licenza. Vedi [Impostazioni](impostazioni.md). |
+| **Impostazioni** | Collegamento al servizio, turno, sala, stampanti, POS, cassa automatica, dati fiscali, aspetto, [sito del menu](sito-menu.md), hotel e licenza. Vedi [Impostazioni](impostazioni.md). |
 
 L'indice di questo manuale, nella scheda **Cassa**, segue le stesse voci nello stesso ordine.
 

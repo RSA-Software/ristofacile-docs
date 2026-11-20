@@ -147,7 +147,7 @@ della [Vendita al banco](vendita-al-banco.md).
 - Articolo, validità (sempre o giorno) non si cambiano su una voce già salvata: per cambiarli
   elimina la voce e creane una nuova.
 - Un piatto esaurito resta visibile in Comanda, spento: non viene mai nascosto.
-- Lo stato vale anche per il [menu online](menu-online.md).
+- Lo stato non vale per il [sito del menu](sito-menu.md): è una copia del menu fatta quando lo si pubblica.
   <!-- DA VERIFICARE: in Comanda la voce applicata è la prima trovata per l'articolo, senza guardare il giorno: una voce «solo per il giorno X» sembra restare valida anche nei giorni dopo, e con una voce «sempre» e una del giorno vince quella «sempre». Va verificato a schermo. -->
 
 ## Vedi anche
@@ -155,4 +155,4 @@ della [Vendita al banco](vendita-al-banco.md).
 - [Comanda](comanda.md)
 - [Menu](menu.md)
 - [Articoli](articoli.md)
-- [Menu online](menu-online.md)
+- [Sito del menu](sito-menu.md)

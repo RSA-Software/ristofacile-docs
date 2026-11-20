@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-19 — **62 domande** su 31 pagine.
+Aggiornato al 2026-11-20 — **58 domande** su 30 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -42,7 +42,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/comanda.md`
 
-- [ ] riga 295: in questa schermata il pulsante IMPORTO LIBERO non compare mai (la modalita' banco viene attivata solo da una pagina che la cassa non usa piu'). Va documentato qui o solo in Vendita al banco?
+- [ ] riga 296: in questa schermata il pulsante IMPORTO LIBERO non compare mai (la modalita' banco viene attivata solo da una pagina che la cassa non usa piu'). Va documentato qui o solo in Vendita al banco?
 
 ## Conto
 
@@ -57,7 +57,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 63: nel codice della Comanda (cassa e palmare) il motivo non risulta mostrato; compare solo in questo elenco.
 - [ ] riga 76: chi aggiorna la quantità «Venduta»? Nel codice di cassa e servizio non risulta aggiornata in automatico.
-- [ ] riga 138: in Comanda la voce applicata è la prima trovata per l'articolo, senza guardare il giorno: una voce «solo per il giorno X» sembra restare valida anche nei giorni dopo, e con una voce «sempre» e una del giorno vince quella «sempre». Va verificato a schermo.
+- [ ] riga 151: in Comanda la voce applicata è la prima trovata per l'articolo, senza guardare il giorno: una voce «solo per il giorno X» sembra restare valida anche nei giorni dopo, e con una voce «sempre» e una del giorno vince quella «sempre». Va verificato a schermo.
 
 ## Dividi il conto
 
@@ -77,27 +77,18 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/impostazioni.md`
 
-- [ ] riga 100: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
-- [ ] riga 166: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
-- [ ] riga 321: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
-- [ ] riga 366: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
-- [ ] riga 371: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
-- [ ] riga 395: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 101: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
+- [ ] riga 167: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
+- [ ] riga 322: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
+- [ ] riga 367: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
+- [ ] riga 372: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
+- [ ] riga 397: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
 
 ## Mappa della sala
 
 `docs/cassa/mappa-sala.md`
 
-- [ ] riga 216: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
-
-## Menu online
-
-`docs/cassa/menu-online.md`
-
-- [ ] riga 73: il campo Token si puo' modificare ma "Salva indirizzo" salva solo indirizzo e nome del sito; dopo il salvataggio il campo torna al token del servizio. Confermare se il token va solo letto (allora andrebbe reso non modificabile) o se deve potersi scrivere da qui.
-- [ ] riga 88: ogni quanto il servizio del locale manda il menu aggiornato (piatti, prezzi, foto) al servizio su Internet, e se serve fare qualcosa dopo aver cambiato il menu.
-- [ ] riga 111: quale permesso serve per modificare lo stile del menu online e dove si assegna.
-- [ ] riga 157: dopo quanto tempo il nuovo aspetto si vede sul telefono dei clienti.
+- [ ] riga 232: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto?
 
 ## Menu
 
@@ -192,7 +183,7 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/kds/monitor.md`
 
-- [ ] riga 297: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
+- [ ] riga 336: c'è un modo per recuperare un piatto toccato per errore in PRONTO (consegnato) e quindi sparito?
 
 ## Pagamenti, per il personale
 
@@ -224,4 +215,4 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/palmare/sala.md`
 
 - [ ] riga 88: lo stato "Prenotato" di un tavolo (tessera tutta azzurra) da chi viene impostato? Dal codice la prenotazione in arrivo si vede solo con l'ora e la banda azzurra a destra.
-- [ ] riga 183: come si scioglie un'unione dal palmare (riportare libero un tavolo "Unito a")? Dal codice sembra possibile con Separa dal tavolo principale verso il tavolo unito, ma va provato.
+- [ ] riga 197: come si scioglie un'unione dal palmare (riportare libero un tavolo "Unito a")? Dal codice sembra possibile con Separa dal tavolo principale verso il tavolo unito, ma va provato.
