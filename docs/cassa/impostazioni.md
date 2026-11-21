@@ -457,12 +457,13 @@ aggiornato.*): fai aggiornare il servizio.
 | **Ragione sociale**, **Ragione sociale (seconda riga)** | Il nome della ditta come va in fattura (fino a 45 caratteri per riga). Per una persona fisica che non è ditta individuale le due caselle diventano **Cognome** e **Nome**. |
 | **Partita IVA**, **Codice fiscale** | 11 e 16 caratteri al massimo. La partita IVA è anche l'utente dell'invio allo SdI. |
 | **Regime fiscale** (riquadro **Sede**) | Tocca per scegliere da un elenco (da *RF01 Ordinario* a *RF19 Regime forfettario*). Se manca: *Non impostato: la fattura elettronica non esce*. |
-| **Indirizzo**, **CAP**, **Città**, **Prov.** | Il domicilio fiscale della ditta, quello che va in fattura (nel gestionale Facile è la linguetta *Domicilio - Titolare* della ditta), non la sede legale. CAP di 5 cifre, provincia di 2 lettere. |
+| **Indirizzo**, **CAP**, **Città**, **Prov.** | La sede legale della ditta, cioè l'indirizzo che va nella fattura elettronica. Nel gestionale Facile sono i campi del domicilio fiscale (linguetta *Domicilio - Titolare* della ditta). CAP di 5 cifre, provincia di 2 lettere. |
 | **Nazione** | *Vuota vale Italia. Fuori dall'Italia la provincia non serve.* |
 | **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 Il codice di **Natura** giuridica è quello della tabella dell'Agenzia delle Entrate (Tabella B
-delle istruzioni del modello Redditi): i più comuni sono **1** società in accomandita per azioni,
+delle istruzioni del modello Redditi; la stessa tabella è nelle
+[istruzioni del modello 770](https://www1.agenziaentrate.gov.it/modulistica/dichiarazione/1997/modelli/770/770ter6.pdf)): i più comuni sono **1** società in accomandita per azioni,
 **2** società a responsabilità limitata, **3** società per azioni, **24** società in nome
 collettivo, **25** società in accomandita semplice. Sono validi i codici da 1 a 44 e da 50 a 58;
 per gli altri chiedi al commercialista. Con 1, 2 e 3 serve anche il capitale sociale, con 2 anche

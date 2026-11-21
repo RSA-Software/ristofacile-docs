@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-21 — **817 messaggi**.
+Aggiornato al 2026-11-21 — **821 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -148,6 +148,8 @@ Aggiornato al 2026-11-21 — **817 messaggi**.
 | **Elimina variante** — *Eliminare definitivamente la variante "…"? Vanno tolti prima i suoi prezzi.* | Cassa: [Varianti](../cassa/varianti-anagrafica.md) | Hai toccato **Elimina variante**. | **Elimina** o **Annulla**. |
 | *Eliminazione non riuscita: …* | Cassa: [Articoli](../cassa/articoli.md) | Il servizio ha rifiutato l'eliminazione. | Leggi il motivo. |
 | *Eliminazione salvata in locale. Verra' applicata quando torna la connessione.* | Cassa: [Articoli](../cassa/articoli.md) | Eliminazione senza rete. | Nessuna azione. |
+| *Emettere la nota di credito della fattura n. … del …, … €?* | Cassa: [Fatture](../cassa/fatture.md) | Conferma prima di emettere la nota. | **Emetti** per emetterla, **Annulla** per lasciar stare. |
+| *… era già accreditata dalla nota n. …: non se ne è fatta un'altra* | Cassa: [Fatture](../cassa/fatture.md) | La fattura aveva già una nota di credito (anche fatta dal gestionale). | Niente: la nota c'è già. |
 | Errore 1722 «Un passo dell'installazione non è riuscito» alla fine del setup del kiosk, poi *Installazione terminata prematuramente* | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Il blocco del PC non è riuscito: il setup torna indietro e il PC resta com'era. | Leggi il motivo in `C:\Program Files\RSA\RistoFacile\kiosk-setup.log` e chiama l'assistenza. |
 | *Esistono gia' tutti i tavoli di questo intervallo.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Tutti i numeri dell'intervallo sono già usati. | Scegli un altro intervallo. |
 | *Esportazione del QR non riuscita.* | Cassa: [Sito del menu](../cassa/sito-menu.md) | Il file non si è potuto scrivere. | Leggi il dettaglio e riprova. |
@@ -228,7 +230,7 @@ Aggiornato al 2026-11-21 — **817 messaggi**.
 | *Il punto vendita dev'essere un numero maggiore o uguale a zero.* / *Il canale dev'essere un numero maggiore o uguale a zero.* | Cassa: [Disponibilità](../cassa/disponibilita.md) | Dati interni non validi. | Ricrea la voce. |
 | *Il rendiresto scelto (id 1) non c'è più sul servizio: scegline un altro.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | La macchina è stata tolta dal servizio. | Scegli un'altra macchina, o **Nessun rendiresto**. |
 | *Il rendiresto è occupato: rivolgiti alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il rendiresto sta già incassando per un'altra postazione. | Il cliente riprova più tardi, paga con la carta o va alla cassa. Il kiosk non riprova da solo. |
-| *Il reparto cassa dev'essere un numero da 1 a 9: e' il reparto del registratore su cui esce la riga di scontrino.* | Cassa: [Articoli](../cassa/articoli.md) | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 9. |
+| *Il reparto cassa dev'essere un numero da 1 a 99: e' il reparto del registratore su cui esce la riga di scontrino (alcune stampanti ne hanno meno).* | Cassa: [Articoli](../cassa/articoli.md) | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 99 che la tua stampante fiscale abbia. |
 | *Il self order al tavolo e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* | Cassa: [Self order](../cassa/self-order.md) | La licenza non comprende il modulo. | Chiedi il modulo al rivenditore. |
 | *Il seriale non è scritto correttamente.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Il seriale non ha la forma giusta. | Ricopialo con attenzione. |
 | *Il server licenze ha rifiutato la richiesta (codice* … *). Contatta l'assistenza.* | Guida introduttiva: [Licenza digitale](../introduzione/licenza.md) | Risposta inattesa del server. | Contatta l'assistenza con il codice. |
@@ -603,6 +605,8 @@ Aggiornato al 2026-11-21 — **817 messaggi**.
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
 | *Non sono riuscito a segnare l'ordine 27: riprova* (seguito dal dettaglio) | Cassa: [Chiamate](../cassa/chiamate.md) | Il tocco non è arrivato al servizio. La tessera resta dov'era. | Controlla la rete e tocca di nuovo. |
 | *Non è stato possibile avviare l'app. Premi CTRL+ALT+CANC per disconnetterti o contatta l'amministratore di sistema.* (codice 0x80004005, su fondo blu) | Kiosk: [Installazione del kiosk](../kiosk/installazione.md) | Su Windows l'Accesso assegnato è nella forma a una sola app, che non avvia RistoKiosk. | Applica il file a più app (vedi [Windows](../kiosk/installazione.md#windows)) e riavvia. |
+| *Nota di credito non emessa.* con *L'importo della nota (€ …) non torna con quello della fattura (€ …): la nota non è stata emessa, chiama l'assistenza.* | Cassa: [Fatture](../cassa/fatture.md) | Ricalcolando la nota (per esempio perché nel frattempo è cambiata l'IVA del cliente) il totale non è uguale a quello della fattura: la nota non si emette. | Chiama l'assistenza. |
+| *Nota di credito non emessa.* con *Nei dati della ditta manca la causale dei resi (magazzino/contabile): falla impostare dall'assistenza. La nota di credito non è stata emessa.* | Cassa: [Fatture](../cassa/fatture.md) | Nel gestionale la ditta non ha le causali dei resi. | Chiama l'assistenza. |
 | *Note e foto delle sezioni si salvano solo su database PostgreSQL: qui non sono disponibili.* | Cassa: [Sito del menu](../cassa/sito-menu.md) | Il servizio usa un database che non le prevede. | Nota, foto e note dei piatti non si possono usare; il resto del sito sì. |
 | *Note non salvate.* / *Foto della sezione non salvata.* / *Foto della sezione non tolta.* | Cassa: [Sito del menu](../cassa/sito-menu.md) | Il servizio non ha preso la modifica. | Leggi il dettaglio e riprova. |
 | *N tavoli non hanno cambiato ordine. L'elenco viene ricaricato.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Lo spostamento non è stato salvato per alcuni tavoli. | Controlla l'ordine e ripeti lo spostamento. |

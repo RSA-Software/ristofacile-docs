@@ -137,7 +137,7 @@ prima: allergeni e traduzioni si agganciano al codice dell'articolo.»
 |---|---|
 | **Descrizione \*** | Obbligatoria. |
 | **Aliquota %** | Solo per l'IVA, da 0 a 100. |
-| **Reparto cassa (1-9) \*** | Solo per l'IVA. «E' il reparto del registratore telematico su cui esce la riga di scontrino.» |
+| **Reparto cassa (1-99) \*** | Solo per l'IVA. «E' il reparto del registratore telematico su cui esce la riga di scontrino.» Alcune stampanti fiscali, secondo marca e modello, hanno meno reparti: un numero più alto esce sull'ultimo reparto della stampante. |
 
 Il codice della nuova voce è il primo libero; la voce creata risulta subito scelta nella scheda.
 
@@ -248,7 +248,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 | *Immagine troppo grande (… MB): il limite e' 5 MB.* | Foto oltre 5 MB. | Riduci la foto. |
 | **Rimuovi immagine** — *Togliere l'immagine dall'articolo "…"?* | Hai toccato **Rimuovi**. | **Rimuovi** o **Annulla**. |
 | *L'aliquota dev'essere una percentuale fra 0 e 100.* | Finestra **Nuova aliquota IVA**. | Correggi l'aliquota. |
-| *Il reparto cassa dev'essere un numero da 1 a 9: e' il reparto del registratore su cui esce la riga di scontrino.* | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 9. |
+| *Il reparto cassa dev'essere un numero da 1 a 99: e' il reparto del registratore su cui esce la riga di scontrino (alcune stampanti ne hanno meno).* | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 99 che la tua stampante fiscale abbia. |
 | *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Mancano gli allergeni sull'impianto. | L'elenco (i 14 allergeni di legge) lo carica il servizio da solo, al suo avvio, quando è vuoto: fai riavviare il servizio. Se resta vuoto, sull'archivio manca la tabella degli allergeni: va aggiornato l'archivio con Facile, poi si riavvia il servizio. Dalla cassa l'elenco non si carica. |
 | *Alcuni allergeni non sono stati salvati: …* | Il servizio ha rifiutato una parte delle modifiche. | Riprova. |
 | *L'elenco nazioni non e' caricato su questo impianto: caricalo da Facile, altrimenti non c'e' nessuna lingua da scegliere.* / *L'elenco nazioni e' vuoto su questo impianto: va caricato da Facile.* | Mancano le nazioni. | Caricale dal gestionale Facile. |
