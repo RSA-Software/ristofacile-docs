@@ -125,12 +125,14 @@ In fondo, fissi anche con la tastiera aperta, **Annulla** e **Crea ordine**.
 | **Apri comanda** | Apre la [Comanda](comanda.md) dell'ordine per battere o correggere i piatti. Compare «Apertura ordine…». |
 | **Rifiuta** | Solo per un ordine **Ricevuto**: lo elimina, dopo conferma. |
 | **Non ritirato / Non consegnato** | Per un ordine **Pronto** (o **In consegna**): lo elimina, dopo conferma. |
+| **Libera la comanda** | Su un ordine rifiutato o non ritirato rimasto in coda con la comanda ancora aperta (*La comanda di questo ordine e' rimasta aperta: liberala per chiuderlo.*): libera la comanda ed elimina l'ordine, dopo conferma. Serve il permesso di annullare. |
 | **Crea ordine** | Crea l'ordine e apre subito la sua comanda. |
 | **Annulla** (nel modulo) | Torna alla coda senza creare niente. |
 
 Gli stati avanzano così: **Ricevuto** ▸ **Confermato** ▸ **In produzione** ▸ **Pronto** ▸
 **Ritirato**; per il domicilio **Pronto** ▸ **In consegna** ▸ **Consegnato**. Ritirato, consegnato,
-rifiutato e non ritirato escono dalla coda.
+rifiutato e non ritirato escono dalla coda. Un ordine rifiutato o non ritirato esce solo dopo che la
+sua comanda è stata liberata: se la liberazione non riesce resta in coda.
 
 ## Come si fa
 
@@ -154,7 +156,13 @@ rifiutato e non ritirato escono dalla coda.
 1. Tocca la riga dell'ordine **Pronto**.
 2. Nella scheda tocca **Non ritirato**.
 3. Conferma con **Conferma**.
-4. L'ordine e i suoi piatti vengono eliminati e l'ordine esce dalla coda.
+4. La comanda dell'ordine si libera e l'ordine esce dalla coda. Se la comanda non si può liberare
+   compare *L'ordine resta in coda: la comanda non si e' potuta liberare. Riprova.*: l'ordine resta
+   com'era e si riprova.
+
+Se un ordine rifiutato o non ritirato è rimasto in coda con la scritta *La comanda di questo ordine
+e' rimasta aperta: liberala per chiuderlo.*, apri la scheda, tocca **Libera la comanda** e conferma
+con **Libera**.
 
 ## Controlli e messaggi
 
@@ -166,8 +174,10 @@ rifiutato e non ritirato escono dalla coda.
 | *Nessun tavolo configurato per l'asporto: impostalo in Impostazioni.* | Manca il tavolo dell'asporto. | Sceglilo in [Impostazioni](impostazioni.md). |
 | **Rifiuta ordine** — *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Hai toccato **Rifiuta**. | **Rifiuta** o **Annulla**. |
 | **Non ritirato** — *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* | Hai toccato **Non ritirato** (o **Non consegnato**). | **Conferma** o **Annulla**. |
-| *Mario non e' abilitato a annullare un ordine. Il permesso si da' in Impostazioni -> Operatori.* | Rifiuto o non ritirato senza permesso. | Chiedi a un collega abilitato. |
-| *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | L'ordine è stato eliminato ma la sua comanda no. | Chiudila dalla cassa. |
+| *Mario non e' abilitato a annullare un ordine. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Rifiuto o non ritirato senza permesso. | Chiedi a un collega abilitato. |
+| *L'ordine resta in coda: la comanda non si e' potuta liberare. Riprova.* | Rifiuto o non ritirato: la comanda dell'ordine non si è potuta liberare. | Riprova più tardi. |
+| **Libera la comanda** — *L'ordine rifiutato ha ancora la comanda aperta. Liberarla? L'ordine e le sue righe vengono eliminati.* (o *non ritirato*, *non consegnato*) | Hai toccato **Libera la comanda**. | **Libera** o **Annulla**. |
+| *La comanda non si e' potuta liberare: l'ordine resta in coda.* | **Libera la comanda** non è riuscito. | Riprova più tardi. |
 | *Ordine aperto, ma l'indirizzo di consegna non si e' salvato.* | Il servizio non ha registrato l'indirizzo. | Controlla l'ordine dalla cassa. |
 | *Impossibile creare l'ordine. (…)* / *Impossibile aggiornare lo stato dell'ordine.* / *Impossibile caricare gli ordini asporto.* | Il servizio non risponde o rifiuta. | Controlla la rete e riprova. |
 | *Nessun ordine in coda* — *Tocca "+ Asporto" o "+ Domicilio" per crearne uno* | La coda è vuota. | Nessuna. |

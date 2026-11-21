@@ -47,13 +47,13 @@ Il titolo è **Messaggi alla cucina**. La schermata ha tre fasce:
 - **FRASI PRONTE**: le frasi salvate, in pastiglie che vanno a capo, con il pulsante **MODIFICA**.
   Sotto, la casella del testo («Scrivi il messaggio, o tocca una frase») e i pulsanti **Cancella**,
   **Salva frase** e **INVIA**;
-- **INVIATI OGGI**: i messaggi mandati oggi, con il testo, l'ora, il centro e chi l'ha mandato, e a
-  destra lo stato. È l'unica parte che scorre, e si aggiorna da sola ogni pochi secondi.
+- **ULTIMI INVIATI**: i messaggi mandati di recente (oggi e ieri), con il testo, l'ora (per quelli
+  di ieri «ieri 23:50»), il centro e chi l'ha mandato, e a destra lo stato. È l'unica parte che scorre, e si aggiorna da sola ogni pochi secondi.
 
 !!! note "Sul tablet"
 
     Sul tablet le tre fasce diventano tre colonne affiancate: **A CHI** a sinistra, le frasi e il
-    testo al centro (il pulsante si chiama **Salva come frase**), **INVIATI OGGI** a destra.
+    testo al centro (il pulsante si chiama **Salva come frase**), **ULTIMI INVIATI** a destra.
 
 ## Campi e indicatori
 
@@ -85,7 +85,7 @@ Il titolo è **Messaggi alla cucina**. La schermata ha tre fasce:
 2. In **A CHI** tocca **CUCINA** (o i centri che servono).
 3. Tocca una frase pronta, oppure scrivi il messaggio nella casella.
 4. Tocca **INVIA**.
-5. Il messaggio compare in **INVIATI OGGI** come **NON LETTO**; quando in cucina toccano **LETTO** sul
+5. Il messaggio compare in **ULTIMI INVIATI** come **NON LETTO**; quando in cucina toccano **LETTO** sul
    monitor diventa **LETTO** con l'ora e il nome.
 
 ### Aggiungere una frase pronta
@@ -112,7 +112,7 @@ Il titolo è **Messaggi alla cucina**. La schermata ha tre fasce:
 | *Il messaggio non e' partito.* | Il servizio ha rifiutato l'invio (sotto compare il motivo). | Riprova. |
 | *Non e' stato possibile salvare le frasi.* | Il servizio non ha salvato le frasi. | Riprova. |
 | *Impossibile caricare: …* | Il servizio non risponde. | Controlla la rete e riapri la schermata. |
-| *Nessun messaggio mandato oggi.* | Nessun invio nella giornata. | Nessuna. |
+| *Nessun messaggio mandato di recente.* | Nessun invio oggi o ieri. | Nessuna. |
 
 ## Note
 

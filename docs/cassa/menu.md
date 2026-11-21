@@ -49,8 +49,7 @@ di lavoro a 15 €, un piatto per sezione), oltre che piatto per piatto.
 ![Elenco dei menu](../assets/img/cassa/menu.png)
 
 Una riga per menu, in ordine di codice: il nome, la descrizione estesa (se c'è), il codice e il
-prezzo fisso, le etichette **min N pers.**, **Coperto incluso**, **Servizio incluso** quando
-valgono, e a destra lo stato **Attivo** (verde) o **Disattivo** (rosso). In alto il pulsante
+prezzo fisso, l'etichetta **min N pers.** quando vale, e a destra lo stato **Attivo** (verde) o **Disattivo** (rosso). In alto il pulsante
 **+ Nuovo menu**. Toccando una riga si apre la composizione del menu.
 
 ### La composizione del menu
@@ -85,7 +84,6 @@ menu. Sotto, tre colonne:
 | **MENU** | Il nome del menu (**Nome del menu**), in maiuscolo. Obbligatorio. |
 | **DESCRIZIONE ESTESA** | Facoltativa, **per il menu online (opzionale)**. |
 | **OPZIONI** ▸ **Attivo** | Spento, il menu non compare in Comanda. |
-| **OPZIONI** ▸ **Coperto incluso**, **Servizio incluso** | Segnano che il prezzo del menu comprende coperto e servizio. Al momento sono solo un'annotazione: coperto e servizio si aggiungono comunque al conto. |
 | **PREZZO FISSO** | Vuoto (**solo carta**): il menu si vende solo piatto per piatto. Con un prezzo, in Comanda compare anche **MENU INTERO**. |
 | **Reparto**, **IVA** | Obbligatori: il menu venduto intero finisce sullo scontrino con questo reparto e questa aliquota. |
 
@@ -116,7 +114,7 @@ menu. Sotto, tre colonne:
 | Comando | Effetto |
 |---|---|
 | **+ Nuovo menu** | Apre la composizione di un menu nuovo. |
-| **Attivo** / **Coperto incluso** / **Servizio incluso** | Accendono e spengono l'opzione (da salvare con **Salva menu**). |
+| **Attivo** | Accende e spegne il menu (da salvare con **Salva menu**). |
 | **Salva menu** | Salva la testata. Su un menu nuovo, dopo il salvataggio si sbloccano le sezioni. |
 | Cestino | Elimina il menu, dopo conferma. |
 | **+ Sezione** | Apre la finestra **Nuova sezione**. È spento finché il menu non è salvato. |

@@ -428,7 +428,7 @@ tavolo come «preconto» sulla mappa della sala.
 | *Nessuna voce da incassare su questo conto.* | Il conto non ha voci da pagare. | Torna alla comanda. Un tavolo a zero si chiude dalla comanda stessa, toccando **CONTO**: la cassa propone di chiuderlo senza documento. |
 | *Mancano € X da ripartire fra i metodi di pagamento: il conto non si puo' chiudere finche' l'importo non e' coperto per intero.* | Gli importi scritti non coprono il totale. | Completa i pagamenti, o tocca il nome di un metodo per mettere l'importo esatto. |
 | *… non e' abilitato ad applicare sconti.* | L'operatore in turno non ha **Puo' applicare sconti**. Il valore scritto viene tolto. | Fai applicare lo sconto a un operatore abilitato. |
-| *… non ha uno sconto massimo impostato: va messo in Impostazioni -> Operatori.* | L'operatore è abilitato agli sconti ma con **Sconto massimo** a zero. | Imposta lo sconto massimo in [Operatori](operatori.md). |
+| *… non ha uno sconto massimo impostato: va messo dalla cassa, in Menu ▸ Operatori.* | L'operatore è abilitato agli sconti ma con **Sconto massimo** a zero. | Imposta lo sconto massimo in [Operatori](operatori.md). |
 | *Sconto N% oltre il massimo consentito a … (M%).* | Lo sconto complessivo (percentuale più abbuono) supera il tetto dell'operatore. | Riduci sconto o abbuono. |
 | *Manca: …* | Con **Fattura**: al cliente manca un dato obbligatorio per la fattura elettronica. | Tocca il cliente e completa la scheda. |
 | *Per la fattura serve ancora: …* | Hai toccato **Usa questo cliente** con dati mancanti. | Completa i campi elencati. |

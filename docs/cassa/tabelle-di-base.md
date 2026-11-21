@@ -74,7 +74,7 @@ In fondo alla scheda: il pulsante per eliminare (**Elimina reparto**, **Elimina 
 |---|---|
 | **Codice \*** | Numero della voce. Proposto il primo libero; alla creazione puoi cambiarlo per allinearlo al gestionale. Dopo il salvataggio non si cambia più. |
 | **Descrizione \*** | Il nome della voce, in maiuscolo (es. CUCINA, BAR). |
-| **Dove si vende** | Solo per le categorie: due pulsanti, **Vendita al banco** e **Ristorante**, accesi o spenti indipendentemente. Sotto, una frase riassume la scelta (es. *Solo al banco: in sala questa categoria non compare.*). |
+| **Dove si vende** | Solo per le categorie: due pulsanti, **Vendita al banco** e **Ristorante**, accesi o spenti indipendentemente. Al banco conta **Vendita al banco**; in sala si vende ciò che sta nel [Menu](menu.md), e **Ristorante** lo usa il gestionale Facile. Sotto, una frase riassume la scelta (es. *Al banco si vede. In sala si vende cio' che sta nel Menu; il flag Ristorante lo usa il gestionale Facile.* oppure *Al banco questa categoria non compare. In sala si vende cio' che sta nel Menu.*). |
 
 Sotto i campi, una nota ricorda cosa non si tocca da qui: per le categorie, che le altre colonne
 della tabella (sconti per listino, provvigioni) restano invariate; per i reparti, che conviene
@@ -142,7 +142,9 @@ scegli il listino nella casella **Listino** e scrivi il **Prezzo**.
 | *Nessun reparto impostato: gli articoli con questa aliquota usciranno sul reparto di ripiego dello scontrino.* | Aliquota salvata senza **Reparto cassa** (il salvataggio avviene lo stesso). | Imposta il reparto appena lo conosci. |
 | *La voce non esiste piu': l'elenco e' stato ricaricato.* | La voce toccata è stata eliminata nel frattempo. | Nessuna azione. |
 | **Modifiche non salvate** — *La scheda di "…" ha modifiche non salvate. Vuoi abbandonarle?* | Hai cambiato voce o tabella senza salvare. | **Abbandona** o **Resta qui**. |
-| **Elimina** — *Eliminare definitivamente "…"? Gli articoli che la usano resteranno senza.* | Eliminazione di reparto, categoria o listino. | **Elimina** o **Annulla**. |
+| **Elimina** — *Eliminare definitivamente "…"? Gli articoli che la usano resteranno senza.* | Eliminazione di un reparto o di una categoria. | **Elimina** o **Annulla**. |
+| **Elimina** — *Eliminare definitivamente "…"? Si cancellano anche i suoi prezzi. Se lo usa una sala o un menu non si elimina.* | Eliminazione di un listino. | **Elimina** o **Annulla**. |
+| *Impossibile eliminare.* con *… il listino e' usato da una sala o da un menu* | Il listino è assegnato a una sala in [Sale e tavoli](sale-e-tavoli.md) o a un menu in [Menu](menu.md): il servizio non lo elimina. | Assegna alla sala o al menu un altro listino, poi riprova. |
 | **Elimina aliquota** — *Eliminare definitivamente l'aliquota "…"? L'operazione non e' reversibile.* | Eliminazione di un'aliquota. | **Elimina** o **Annulla**. |
 | *Impossibile eliminare l'aliquota (verificare che non sia assegnata a degli articoli).* | L'aliquota è usata da qualche articolo, oppure il servizio non risponde. | Cambia prima l'aliquota agli articoli. |
 | *Un'altra postazione ha modificato questi dati prima di te: adesso vedi la versione aggiornata, rifai la modifica e salva.* | Modifica concorrente da un'altra postazione. | Rifai la modifica e salva. |
@@ -151,12 +153,13 @@ scegli il listino nella casella **Listino** e scrivi il **Prezzo**.
 
 ## Note
 
-- Eliminare un reparto, una categoria o un listino **non** è bloccato se qualche articolo li usa:
-  gli articoli restano senza.
-  <!-- DA VERIFICARE: cosa succede a una sala il cui listino viene eliminato (torna al listino di default?) -->
+- Eliminare un reparto o una categoria **non** è bloccato se qualche articolo li usa: gli
+  articoli restano senza.
+- Un listino usato da una sala o da un menu **non si elimina**: il servizio lo rifiuta. Eliminando
+  un listino che nessuno usa si cancellano anche tutti i suoi prezzi.
 - Le categorie spente in **Vendita al banco** non compaiono nella [Vendita al banco](vendita-al-banco.md).
-- Il pulsante **Ristorante** delle categorie al momento non cambia niente nelle app: in sala si
-  vende dal [Menu](menu.md), non dalle categorie.
+- Il pulsante **Ristorante** delle categorie non cambia niente nelle app, lo usa il gestionale
+  Facile: in sala si vende ciò che sta nel [Menu](menu.md), non dalle categorie.
 - Un'aliquota senza **Reparto cassa** si riconosce dalla pastiglia **senza reparto**: le sue righe
   escono sul reparto di ripiego dello scontrino.
 

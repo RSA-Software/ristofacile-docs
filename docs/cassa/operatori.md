@@ -67,7 +67,6 @@ In fondo, sempre visibili anche se la scheda scorre: **Elimina operatore** a sin
 | **Cognome** | Facoltativo. Nome e cognome, se ci sono, sono quello che si vede nell'elenco. |
 | **Descrizione \* (badge in cassa)** | Obbligatoria. Il nome breve con cui l'operatore compare nella schermata di accesso, nel riquadro dell'operatore in Comanda e nei messaggi dell'app (es. *«MARCO non è abilitato ad applicare sconti.»*). Si scrive in maiuscolo mentre digiti. |
 | **Telefono**, **Cellulare** | Recapiti, facoltativi. |
-| **Badge** | Codice del badge dell'operatore, facoltativo. Al momento è solo un'annotazione: non si entra col badge. |
 | **PIN di accesso** | Obbligatorio, da 1 a 8 cifre, non può cominciare per zero. Si vede solo come pallini; per un operatore che ha già un PIN la casella dice **PIN impostato**, per uno senza **Nessun PIN**. Toccala (o tocca **Digita**) per scriverlo con il tastierino. |
 | **Attivo** | Spento, l'operatore non compare più fra quelli che possono entrare e l'accesso gli viene rifiutato. Resta in elenco con la pastiglia **Disattivo**. |
 | **Puo' liberare i tavoli** | Permette di liberare un tavolo aperto su cui non è stato battuto nulla. |
@@ -76,6 +75,7 @@ In fondo, sempre visibili anche se la scheda scorre: **Elimina operatore** a sin
 | **Sconto massimo** | In %, solo cifre intere. È il tetto dello sconto sul conto, calcolato sullo sconto effettivo (percentuale più abbuono). **Zero vuol dire nessuno sconto**, non «nessun limite». L'omaggio di una riga non tiene conto del tetto. |
 | **Puo' chiudere il conto** | Permette di chiudere un conto **senza documento fiscale**, di chiudere un tavolo con il conto a zero e di addebitare il conto in camera (con il collegamento all'hotel). Il normale incasso con scontrino non richiede questo permesso. |
 | **Puo' annullare la comanda** | Permette di annullare una vendita al banco e un ordine d'asporto. |
+| **Puo' fare la fine giornata (chiusura cassa e Z)** | Permette di chiudere la giornata (produzione, chiusura della cassa e Z delle stampanti fiscali) e di correggere la chiusura cassa, in [Impostazioni ▸ Fine giornata](impostazioni.md#fine-giornata). Dopo l'aggiornamento che l'ha introdotto è **spento per tutti**: il titolare lo deve accendere a chi chiude la giornata. |
 
 Tutta la riga di un permesso è sensibile al tocco, non solo l'interruttore.
 
@@ -147,12 +147,12 @@ Messaggi che compaiono **altrove** a chi non ha il permesso:
 
 | Messaggio | Dove |
 |---|---|
-| *… non e' abilitato a liberare i tavoli. Il permesso si da' in Impostazioni -> Operatori.* (e simili per *stornare le righe*, *annullare un ordine*, *annullare una vendita*) | Comanda, Vendita al banco, Asporto |
-| *… non e' abilitato ad applicare sconti.* / *… non ha uno sconto massimo impostato: va messo in Impostazioni -> Operatori.* / *Sconto …% oltre il massimo consentito a … (…%).* | Conto |
+| *… non e' abilitato a liberare i tavoli. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e simili per *stornare le righe*, *annullare un ordine*, *annullare una vendita*) | Comanda, Vendita al banco, Asporto |
+| *… non e' abilitato a fare la fine giornata. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e *… a correggere la chiusura cassa.*) | Impostazioni ▸ Fine giornata |
+| *… non e' abilitato ad applicare sconti.* / *… non ha uno sconto massimo impostato: va messo dalla cassa, in Menu ▸ Operatori.* / *Sconto …% oltre il massimo consentito a … (…%).* | Conto |
 | *… non e' abilitato a chiudere un conto senza documento fiscale.* | Conto |
 
-Nei messaggi il percorso è indicato come «Impostazioni -> Operatori»: la voce si trova in realtà
-direttamente nel menu, **Menu ▸ Operatori**.
+Sul palmare i messaggi sono gli stessi: il permesso si dà sempre dalla cassa.
 
 ## Note
 

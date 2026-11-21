@@ -80,7 +80,11 @@ con sotto il prezzo pieno barrato e il pacchetto regalo.
 
 Le righe sono raggruppate per portata, con l'ultima battuta in cima al suo gruppo. In testa a ogni
 gruppo c'è il nome della portata e il numero di piatti (es. «PRIMI · 4»); quando la comanda ha più
-uscite, sotto compare lo stato in cucina e il pulsante **VIA** o **Trattieni**.
+uscite, sotto compare lo stato in cucina e il pulsante **VIA** o **Trattieni**. Su una portata
+ferma con un'attesa consigliata (impostata in [Portate](portate.md)), accanto a «in attesa del
+via» compare il promemoria: «in attesa del via · via consigliato alle 21:15», contato da quando la
+portata prima è pronta, oppure «in attesa del via · via consigliato 10' dopo la portata prima» se
+la portata prima non è ancora pronta. È solo un promemoria: il via lo dai tu.
 
 Toccando una riga, la riga si apre sul posto: compaiono **−** quantità **+** e **DETTAGLI**. Sulle
 righe che non si possono più cambiare al posto di − e + c'è una scritta: «Gia' in cucina»,
@@ -106,7 +110,7 @@ due porzioni.
 | **OPERATORE** | Chi è entrato con l'accesso. Il tocco serve a uscire dal turno. |
 | **Tessera del piatto** | Nome e prezzo («€ 8,00»; per i piatti a peso «€ 25,00/kg»). In ricerca mostra anche la sezione di provenienza. Il cerchietto **i** in alto a destra apre gli allergeni. Accanto al prezzo, al più tre icone degli allergeni: prima quelli che il piatto contiene, a tratto pieno, poi le tracce, con l'icona tratteggiata; **+n** dice quanti altri ce ne sono. Su una tessera stretta si tagliano prima il **+n** e le icone, mai il prezzo. |
 | **ULTIME 3** | Il piatto sta finendo: si può ancora vendere. |
-| **ESAURITO** | Il piatto è finito: la tessera è sbiadita e il tocco non fa nulla. |
+| **ESAURITO** | Il piatto è finito: la tessera è sbiadita e non si aggiunge alla comanda. Sotto il bollo compare il **Motivo** scritto in [Disponibilità](disponibilita.md) (per esempio «finito il pescato»), da ripetere al tavolo. Toccando la tessera compare l'avviso *Orata e' esaurito: finito il pescato.* (senza motivo: *Orata e' esaurito.*). |
 | **Tessera della combinazione** | Nome della regola, numero di parti e regola di prezzo (es. «2 parti · Paghi la piu' cara»). Apre [Componi la pizza](mezza.md). Non compare durante una ricerca. |
 | **MENU INTERO** | Menu a prezzo fisso: apre la scelta di un piatto per sezione ([Menu fisso](menu-fisso.md)). |
 | **Coperti 4 × 2,00** | Riga informativa in fondo alla comanda: coperti per prezzo del coperto, con l'importo a destra. |
@@ -256,10 +260,12 @@ parte al kiosk, sotto il **TOTALE** compaiono **Già pagato al kiosk** e **DA PA
 | *4 coperti sono gia' stati pagati: non si puo' scendere sotto.* | **−** sui coperti oltre quelli già incassati. | Nessuna azione. |
 | *Sala Interna · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | **+** sui coperti oltre i posti massimi. | Unisci un tavolo dalla [Mappa della sala](mappa-sala.md) o alza i posti massimi in [Sale e tavoli](sale-e-tavoli.md). |
 | *MARCO non e' abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Omaggio senza il permesso. | Fallo fare a un operatore abilitato. |
-| *MARCO non e' abilitato a stornare le righe. Il permesso si da' in Impostazioni -> Operatori.* (e *… a liberare i tavoli.*) | Storno o LIBERA TAVOLO senza il permesso. | Fallo fare a un operatore abilitato, o concedi il permesso in [Operatori](operatori.md). |
+| *MARCO non e' abilitato a stornare le righe. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e *… a liberare i tavoli.*) | Storno o LIBERA TAVOLO senza il permesso. | Fallo fare a un operatore abilitato, o concedi il permesso in [Operatori](operatori.md). |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Omaggio su una parte di una pizza composta. | Offri la riga principale. |
 | *Su questo tavolo e' gia' stato battuto qualcosa: si chiude dal conto, non si libera.* | LIBERA TAVOLO su un tavolo con righe. | Chiudi il tavolo dal [Conto](conto.md). |
 | *Comanda inviata in cucina, ma la STAMPA su "Cucina" e' fallita:* (seguito dal dettaglio) | Le righe sono in cucina ma il foglietto non è uscito. | Controlla la stampante e tocca **Ristampa**. |
+| *Il centro PIZZERIA e' spento: i suoi piatti sono usciti sulla stampante di ripiego.* (con più centri: *I centri … sono spenti: i loro piatti sono usciti sulla stampante di ripiego.*) | All'invio in cucina, un piatto appartiene a un centro spento in [Centri di produzione](centri-di-produzione.md#un-centro-spento): il ticket, con il nome del centro in testa, è uscito sul ripiego. | Controlla che il ticket arrivi al reparto giusto, o riaccendi il centro. |
+| *Orata e' esaurito: finito il pescato.* / *Orata e' esaurito.* | Tocco su una tessera **ESAURITO**: il piatto non si aggiunge. Il motivo è quello scritto in [Disponibilità](disponibilita.md). | Proponi un altro piatto. |
 | *L'uscita Secondi era gia' stata avviata.* | Un collega ha già dato il via da un altro dispositivo. | Nessuna azione. |
 | *L'uscita Secondi e' gia' in lavorazione: non si puo' piu' trattenere.* | **Trattieni** su una portata che la cucina ha già preso in mano. | Nessuna azione. |
 | *Non c'e' niente da ristampare in cucina: nessuna riga inviata ha un centro di produzione.* | **Ristampa** senza righe destinate a una cucina. | Nessuna azione. |

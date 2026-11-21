@@ -244,8 +244,8 @@ Lo stesso vale per le categorie. Il nuovo ordine è salvato in archivio e vale p
 | *Tocca prima la riga del carrello a cui attaccare la variante.* | Variante toccata senza riga selezionata. | Seleziona la riga, poi la variante. |
 | *La riga e' stornata: …* / *La riga e' in omaggio: …* | Su una riga stornata o in omaggio non si cambiano prezzo e varianti. | Per la riga in omaggio: togli l'omaggio, modifica, rimettilo. |
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
-| *… non e' abilitato a stornare le righe. Il permesso si da' in Impostazioni -> Operatori.* | Manca il permesso **Puo' stornare righe**. | Come sopra, o assegna il permesso in [Operatori](operatori.md). |
-| *… non e' abilitato a annullare una vendita. Il permesso si da' in Impostazioni -> Operatori.* | Cestino su una vendita in attesa senza il permesso **Puo' annullare la comanda**. | Come sopra. |
+| *… non e' abilitato a stornare le righe. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Manca il permesso **Puo' stornare righe**. | Come sopra, o assegna il permesso in [Operatori](operatori.md). |
+| *… non e' abilitato a annullare una vendita. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Cestino su una vendita in attesa senza il permesso **Puo' annullare la comanda**. | Come sopra. |
 | *Le tessere si spostano dentro una categoria: scegline una qui sotto. L'ordine di PREFERITI e IN EVIDENZA si imposta dalla scheda dell'articolo.* | **SPOSTA** usato su PREFERITI o IN EVIDENZA. | Scegli una categoria merceologica, oppure imposta le posizioni sulla scheda dell'articolo. |
 | *PREFERITI e IN EVIDENZA stanno sempre in testa: non si spostano.* | Si è provato a spostare una delle due tessere fisse. | — |
 | *Non c'e' niente da incassare: batti prima gli articoli.* | **INCASSA** con il carrello vuoto. | Batti gli articoli. |

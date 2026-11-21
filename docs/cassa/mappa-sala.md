@@ -160,7 +160,8 @@ manda in cucina.
 4. Con **−** e **+** di **Coperti da spostare** indica quanti coperti passano sull'altro tavolo
    (al massimo quelli del tavolo di partenza non ancora pagati).
 5. Tocca **Scegli il tavolo**, poi tocca il tavolo libero di destinazione. Sul tavolo di
-   destinazione si apre un conto nuovo con le righe e i coperti scelti.
+   destinazione si apre un conto nuovo con le righe e i coperti scelti. Si possono separare anche
+   solo i coperti, senza righe.
 
 ![Righe da separare](../assets/img/cassa/mappa-sala-separa.png)
 
@@ -228,8 +229,10 @@ basso rinuncia allo spostamento.
   stornare**, una carta alla volta (vedi [Conto](conto.md#carta-da-stornare)).
 - La durata sulle tessere («da 25 min») è fotografata quando la mappa viene disegnata: si aggiorna
   al ricaricamento, non minuto per minuto.
-- Separando **solo i coperti**, senza nessuna riga, la finestra lo permette ma il servizio rifiuta
-  l'operazione. <!-- DA VERIFICARE: la finestra dice "Nessuna riga: puoi comunque separare solo i coperti.", ma il servizio risponde "nessuna riga da separare" se non si sceglie almeno una riga. Quale dei due comportamenti e' quello voluto? -->
+- Si possono separare **anche solo i coperti**, senza nessuna riga: per esempio due persone che si
+  spostano a un altro tavolo prima di ordinare. Se il conto non ha righe la finestra lo dice
+  («Nessuna riga: puoi comunque separare solo i coperti.»): scegli i coperti e il tavolo di
+  destinazione, che si apre con i soli coperti.
 
 ## Vedi anche
 

@@ -43,7 +43,8 @@ Dall'alto:
   di ciascuna (es. «12 articoli»); la sezione aperta ha il bordo arancione;
 - **la griglia dei piatti** della sezione, con le stesse tessere della comanda: nome, prezzo (per i
   piatti a peso il prezzo al chilo, «/kg»), il pulsante **i** degli allergeni, e i riquadri
-  **ULTIME 3** (in ambra) o **ESAURITO** (in rosso). Toccare la tessera non fa niente.
+  **ULTIME 3** (in ambra) o **ESAURITO** (in rosso), con sotto il motivo scritto in cassa (es.
+  «finito il pescato»). Toccare la tessera non fa niente.
 
 Toccando **i** si apre il pannello **ALLERGENI** con il nome del piatto e, per ogni allergene,
 «contiene» oppure «puo' contenere tracce».
@@ -62,7 +63,7 @@ Toccando **i** si apre il pannello **ALLERGENI** con il nome del piatto e, per o
 | **Campo della sezione** | La sezione aperta; toccalo per cambiarla. |
 | **Prezzo** | Il prezzo del listino predefinito del locale, compreso l'eventuale supplemento del menu. |
 | **ULTIME N** | Restano N porzioni. |
-| **ESAURITO** | Il piatto è finito. |
+| **ESAURITO** | Il piatto è finito. Sotto, il motivo scritto in cassa in [Disponibilità](../cassa/disponibilita.md), da ripetere al cliente. |
 | **i** | Gli allergeni del piatto. |
 
 ## Pulsanti e comandi

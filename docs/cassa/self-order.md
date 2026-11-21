@@ -54,7 +54,8 @@ minuti di preparazione, chi ordina alle 19:10 può scegliere il ritiro dalle 19:
 - Per l'**asporto online**: il modulo **Asporto online** nella licenza (con la licenza in prova
   funziona finché dura la prova), Nexi configurato nel servizio (si paga solo con Nexi),
   l'**Indirizzo pubblico** scritto nella linguetta **Attivazione** e il tavolo dell'asporto scelto
-  in [Impostazioni ▸ Sala ▸ Tavolo asporto](impostazioni.md#sala).
+  in [Impostazioni ▸ Sala ▸ Tavolo asporto](impostazioni.md#sala). Il tavolo serve solo per
+  accenderlo: per spegnere l'asporto online, o salvarne le impostazioni da spento, non serve.
 
 ## La schermata
 
@@ -194,7 +195,7 @@ Nella linguetta **Asporto online**:
 | *Il conto e' cambiato mentre lo incassavi (un ordine dal telefono o un'altra postazione): ricontrolla il totale, ora € …, e premi di nuovo.* | Mentre eri sul conto è arrivato un ordine o un pagamento dal telefono. | Ricontrolla il totale e incassa di nuovo. |
 | *L'asporto online e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* | **Salva** con **Asporto online acceso** su **SI**, ma la licenza non comprende il modulo. | Chiedi il modulo al rivenditore. |
 | *Nexi non e' configurato nel servizio (cfg\nexi.json): l'asporto online si paga solo con Nexi e non si puo' accendere.* | Il servizio non ha le credenziali di Nexi. | Rivolgiti a chi ha installato il servizio. |
-| *Configura prima il tavolo asporto in Impostazioni* | **Salva** dell'asporto online senza tavolo dell'asporto su questa cassa. | Scegli il tavolo in Impostazioni ▸ **Sala**, linguetta **Tavolo asporto**. |
+| *Configura prima il tavolo asporto in Impostazioni* | **Salva** dell'asporto online acceso senza tavolo dell'asporto su questa cassa. Spento si salva lo stesso, e resta il tavolo che il servizio aveva già. | Scegli il tavolo in Impostazioni ▸ **Sala**, linguetta **Tavolo asporto**. |
 | *Scrivi prima l'indirizzo pubblico nella scheda Attivazione: senza, il link dell'asporto non porta da nessuna parte.* | Hai acceso l'asporto online senza indirizzo pubblico. | Scrivi l'**Indirizzo pubblico** nella linguetta **Attivazione** e salva. |
 | *Gli orari vanno scritti come 12:00-14:30, 19:00-22:30.* | Un orario di ritiro non si legge. | Correggi **Orari di ritiro**. |
 | *Senza orari di ritiro non si puo' ordinare: scrivine almeno uno.* | Asporto online acceso senza orari. | Scrivi almeno un orario. |

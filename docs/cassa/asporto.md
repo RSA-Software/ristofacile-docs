@@ -114,6 +114,7 @@ l'indirizzo.
 | **Apri comanda** | Apre la comanda dell'ordine (per aggiungere piatti, mandarli in cucina, andare al [conto](conto.md)). |
 | **Rifiuta** | Solo per un ordine *Ricevuto*. Chiede conferma ed elimina l'ordine e le sue righe. |
 | **Non ritirato** / **Non consegnato** | Per un ordine *Pronto* (o *In consegna*, se a domicilio). Chiede conferma ed elimina l'ordine e le sue righe. |
+| **Libera la comanda** | Solo su un ordine rifiutato o non ritirato rimasto in coda perché la sua comanda è ancora aperta (nella scheda: *La comanda di questo ordine e' rimasta aperta: liberala per chiuderlo.*). Serve il permesso di annullare. Dopo conferma libera la comanda, ed elimina l'ordine e le sue righe. |
 
 ### Gli stati dell'ordine
 
@@ -165,7 +166,20 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 1. Tocca la riga dell'ordine.
 2. Tocca **Rifiuta** (ordine *Ricevuto*) oppure **Non ritirato** / **Non consegnato**
    (ordine *Pronto* o *In consegna*).
-3. Conferma. L'ordine sparisce dalla coda e la sua comanda viene eliminata.
+3. Conferma. La cassa libera prima la comanda dell'ordine; riuscito, l'ordine sparisce dalla coda.
+
+Se la comanda non si può liberare (per esempio è in corso un incasso, o la rete non risponde) compare
+*L'ordine resta in coda: la comanda non si e' potuta liberare. Riprova.*: l'ordine resta in coda com'era
+e si riprova più tardi.
+
+### Chiudere un ordine con la comanda rimasta aperta
+
+Un ordine rifiutato o non ritirato la cui comanda è rimasta aperta resta in coda: nella scheda si
+legge *La comanda di questo ordine e' rimasta aperta: liberala per chiuderlo.*
+
+1. Tocca la riga dell'ordine.
+2. Tocca **Libera la comanda**.
+3. Conferma con **Libera**. La comanda si libera e l'ordine esce dalla coda.
 
 ## Controlli e messaggi
 
@@ -182,16 +196,18 @@ Un ordine creato dalla cassa nasce **Ricevuto**.
 | *Impossibile aggiornare lo stato dell'ordine.* | Il cambio di stato non è stato salvato. | Riprova. |
 | *Rifiutare questo ordine? L'ordine e le sue righe vengono eliminati.* | Conferma di **Rifiuta**. | **Rifiuta** per procedere, **Annulla** per lasciare l'ordine. |
 | *Segnare l'ordine come non ritirato? L'ordine e le sue righe vengono eliminati.* (o *non consegnato*) | Conferma di **Non ritirato** / **Non consegnato**. | **Conferma** per procedere, **Annulla** per lasciare l'ordine. |
-| *Ordine tolto dalla coda, ma la comanda e' rimasta aperta sul tavolo.* | L'ordine è stato rifiutato, ma la sua comanda non si è eliminata. | Dalla cassa non si recupera: l'ordine è uscito dalla coda e il tavolo dell'asporto apre solo la coda. |
+| *L'ordine resta in coda: la comanda non si e' potuta liberare. Riprova.* | **Rifiuta**, **Non ritirato** o **Non consegnato**: la comanda dell'ordine non si è potuta liberare (incasso in corso, rete). L'ordine non cambia stato. | Riprova più tardi. |
+| **Libera la comanda** — *L'ordine rifiutato ha ancora la comanda aperta. Liberarla? L'ordine e le sue righe vengono eliminati.* (o *non ritirato*, *non consegnato*) | Hai toccato **Libera la comanda**. | **Libera** per procedere, **Annulla** per lasciare l'ordine. |
+| *La comanda non si e' potuta liberare: l'ordine resta in coda.* | **Libera la comanda** non è riuscito. | Riprova più tardi. |
 | *Nessun operatore collegato: per annullare un ordine serve un operatore abilitato.* | **Rifiuta** / **Non ritirato** senza operatore collegato. | Collegati con un operatore abilitato. |
-| *… non e' abilitato a annullare un ordine. Il permesso si da' in Impostazioni -> Operatori.* | L'operatore collegato non ha il permesso di annullare. | Fai dare il permesso in [Operatori](operatori.md) o usa un operatore abilitato. |
+| *… non e' abilitato a annullare un ordine. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | L'operatore collegato non ha il permesso di annullare. | Fai dare il permesso in [Operatori](operatori.md) o usa un operatore abilitato. |
 | *L'ordine 27 non e' ancora incassato: incassalo prima di segnarlo consegnato.* | **Ritirato** su un asporto seguito dalle [Chiamate](chiamate.md) che non è ancora incassato. L'ordine resta in coda. | Tocca **Apri comanda**, incassa dal conto, poi segna il ritiro. |
 | *Operazione riuscita, ma lo stato dell'ordine d'asporto non si e' aggiornato.* | Compare nella comanda o nel conto: l'invio in cucina o l'incasso sono andati a buon fine, ma lo stato in coda no. | Aggiorna lo stato a mano dalla coda. |
 
 ## Note
 
 !!! warning "Rifiuta, Non ritirato e Non consegnato eliminano la comanda"
-    L'ordine esce dalla coda e la sua comanda, con tutte le righe, viene eliminata. Non si
+    La comanda dell'ordine, con tutte le righe, viene liberata e l'ordine esce dalla coda. Non si
     può tornare indietro.
 
 - **Mandare in cucina fa avanzare l'ordine da solo**: un ordine *Ricevuto* o *Confermato* passa

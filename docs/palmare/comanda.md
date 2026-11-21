@@ -80,7 +80,7 @@ stati mandati in cucina.
 - **La griglia dei piatti**: ogni tessera ha il nome, il prezzo (per i piatti a peso il prezzo al
   chilo, es. «€ 45,00/kg»), un pulsante **i** in alto a destra per gli allergeni e, se serve, il
   riquadro **ULTIME 3** (scorte basse, in ambra) o **ESAURITO** (in rosso). Un piatto esaurito non
-  si può battere. Accanto al prezzo, al più tre icone degli allergeni (tratteggiate per le tracce)
+  si può battere: toccandolo compare un avviso con il motivo scritto in cassa, in Disponibilità. Accanto al prezzo, al più tre icone degli allergeni (tratteggiate per le tracce)
   e **+n** per quelli che non ci stanno, come sul kiosk.
 - **Le tessere di composizione**: se la sezione ha piatti componibili (es. pizze mezza e mezza), le
   prime tessere della griglia sono le regole di composizione, in arancione («½ Mezza e mezza») con
@@ -194,10 +194,10 @@ se ne sceglie uno solo, toccare un altro piatto sostituisce quello scelto.
 | **Cerca in tutto il menu…** | Ricerca per nome in tutte le sezioni. |
 | **Campo della sezione** | La sezione aperta; toccalo per cambiarla o per scegliere un menu a prezzo fisso. |
 | **ULTIME N** | Il piatto sta finendo: restano N porzioni. Si può ancora battere. |
-| **ESAURITO** | Il piatto è finito: toccarlo non fa nulla. |
+| **ESAURITO** | Il piatto è finito e non si batte. Sul tablet sotto il bollo compare il motivo scritto in cassa in [Disponibilità](../cassa/disponibilita.md) (es. «finito il pescato»), da ripetere al tavolo. Toccando la tessera compare l'avviso *Orata e' esaurito: finito il pescato.* (senza motivo: *Orata e' esaurito.*). |
 | **i** | Mostra gli **ALLERGENI** del piatto: per ognuno «contiene» oppure «puo' contenere tracce». |
 | **Titolo di portata (es. PRIMI · 3)** | Le righe di quella portata e quante sono. |
-| **Stato dell'uscita** | Sotto il titolo della portata: «da inviare», «in attesa del via» (in ambra), «in preparazione», «2 pronti» o «pronta» (in verde), «servita». |
+| **Stato dell'uscita** | Sotto il titolo della portata: «da inviare», «in attesa del via» (in ambra), «in preparazione», «2 pronti» o «pronta» (in verde), «servita». Su una portata con l'attesa consigliata (impostata in cassa, in [Portate](../cassa/portate.md)) «in attesa del via» porta il promemoria: «in attesa del via · via consigliato alle 21:15», contato da quando la portata prima è pronta, oppure «… · via consigliato 10' dopo la portata prima» se non lo è ancora. |
 | **Cappello da cuoco** | Il piatto è già in cucina. |
 | **Conto 2 × 1 · 1 da assegnare** | Su un tavolo diviso, a quali conti è assegnato il piatto. |
 | **solo Conto 2 · € 24,00** | Compare nella scheda COMANDA quando batti per un conto: toccalo per vedere solo le righe di quel conto (e quelle non ancora assegnate). |
@@ -337,9 +337,10 @@ da questo palmare; uscendo e rientrando nel tavolo si ristampa tutto quello già
 | **Offri la casa** — *Offrire "Tiramisù" per € 6,00?* | Hai toccato **Omaggio**. | **Offri** o **Annulla**. |
 | *Mario non e' abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | L'operatore non ha il permesso degli sconti. | Fai fare l'omaggio a un collega abilitato. |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Omaggio su una parte di un piatto composto. | Offri il piatto intero. |
-| *Mario non e' abilitato a stornare le righe. Il permesso si da' in Impostazioni -> Operatori.* | L'operatore non può stornare. | Fai stornare a un collega abilitato. |
-| *Mario non e' abilitato a liberare i tavoli. Il permesso si da' in Impostazioni -> Operatori.* | L'operatore non può liberare i tavoli. | Chiedi a un collega abilitato. |
+| *Mario non e' abilitato a stornare le righe. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | L'operatore non può stornare. | Fai stornare a un collega abilitato. |
+| *Mario non e' abilitato a liberare i tavoli. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | L'operatore non può liberare i tavoli. | Chiedi a un collega abilitato. |
 | *L'uscita Secondi era gia' stata avviata.* | Il via l'ha già dato un altro dispositivo. | Nessuna. |
+| *Orata e' esaurito: finito il pescato.* / *Orata e' esaurito.* | Tocco su un piatto **ESAURITO**: non si batte. | Proponi un altro piatto. |
 | *L'uscita Secondi e' gia' in lavorazione: non si puo' piu' trattenere.* | La cucina l'ha già iniziata. | Nessuna. |
 | *Comanda inviata in cucina, ma la STAMPA su "CUCINA" e' fallita:* | I piatti sono in cucina ma la stampante non ha stampato. | Controlla la stampante e usa **Ristampa**. |
 | *Non c'e' niente da ristampare in cucina: nessuna riga inviata ha un centro di produzione.* | **Ristampa** senza righe che vadano in cucina. | Nessuna. |
