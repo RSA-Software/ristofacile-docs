@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-21 — **798 messaggi**.
+Aggiornato al 2026-11-21 — **802 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -127,6 +127,7 @@ Aggiornato al 2026-11-21 — **798 messaggi**.
 | *Elenco delle fatture non caricato.* | Cassa: [Fatture](../cassa/fatture.md) | Il servizio non ha risposto o ha dato errore; sotto il titolo c'è il dettaglio. | Controlla il collegamento al servizio e riprova cambiando una data o premendo **Invio** nella ricerca. |
 | *Elenco non aggiornato: il server non risponde.* | Cassa: [Articoli](../cassa/articoli.md) | Finestra di scelta: la rilettura dopo la matita non è riuscita. | Riprova più tardi. |
 | *Elenco non aggiornato: il servizio non risponde.* | Cassa: [Ordini dal kiosk](../cassa/ordini-kiosk.md) | L'aggiornamento automatico non è riuscito. | L'elenco riprova da solo; controlla il collegamento. |
+| *Elenco non disponibile: il servizio non risponde. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | In **Richiama**: il servizio non ha risposto. | Controlla la rete e riapri **Richiama**. |
 | **Elimina aliquota** — *Eliminare definitivamente l'aliquota "…"? L'operazione non e' reversibile.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Eliminazione di un'aliquota. | **Elimina** o **Annulla**. |
 | **Elimina articolo** — *Eliminare l'articolo "…"?* (senza rete: *… Verra' applicato appena torna la connessione.*) | Cassa: [Articoli](../cassa/articoli.md) | Hai toccato **Elimina articolo**. | **Elimina** o **Annulla**. |
 | **Elimina centro** — *Eliminare definitivamente il centro "…"? L'operazione non e' reversibile.* | Cassa: [Centri di produzione](../cassa/centri-di-produzione.md) | Hai toccato **Elimina centro**. | **Elimina** o **Annulla**. |
@@ -234,6 +235,7 @@ Aggiornato al 2026-11-21 — **798 messaggi**.
 | *Il server licenze non risponde. Controlla la connessione.* | Guida introduttiva: [Prima configurazione](../introduzione/prima-configurazione.md) | Attivazione senza Internet. | Collega il dispositivo a Internet e riprova. |
 | *Il server* … *non esiste: controlla l'host.* | Cassa: [Sito del menu](../cassa/sito-menu.md) | Host scritto male. | Correggi **Host**. |
 | *Il server non supporta FTPS: togli la spunta FTPS solo se il server e' vostro e la rete e' sicura.* | Cassa: [Sito del menu](../cassa/sito-menu.md) | Server senza connessione cifrata. | Chiedi a chi gestisce l'hosting; spegni **Connessione cifrata (FTPS)** solo nel caso detto. |
+| *Il servizio di RistoFacile non sa ancora richiamare i piatti consegnati: va aggiornato.* | Monitor di cucina: [Monitor](../kds/monitor.md) | Il servizio è di una versione precedente. | Fai aggiornare il servizio. |
 | *Il servizio ha già 16 immagini del kiosk, contando quelle caricate o tolte e non ancora salvate: salva, o eliminane una, prima di aggiungerne un'altra.* | Cassa: [Kiosk](../cassa/kiosk.md) | Lo stesso limite, detto dal servizio. | Come sopra. |
 | *Il servizio ha già 16 immagini del kiosk, contando quelle tolte: le cancella col Salva. Salva per liberare il posto, poi aggiungi l'immagine.* | Cassa: [Kiosk](../cassa/kiosk.md) | Fra foto, loghi e immagini tolte o sostituite e non ancora salvate, il servizio ne tiene al più 16: le tolte occupano il posto fino al **Salva**. | Tocca **Salva**, poi aggiungi. |
 | *Il servizio non conosce ancora il registro: va aggiornato.* | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio è di una versione precedente al registro. | Fai aggiornare il servizio. |
@@ -338,6 +340,7 @@ Aggiornato al 2026-11-21 — **798 messaggi**.
 | *Impossibile preparare la prenotazione.* / *Impossibile caricare la prenotazione.* | Cassa: [Prenotazioni](../cassa/prenotazioni.md) | Il modulo non ha potuto leggere sale, tavoli o la prenotazione. | Chiudi il modulo e riprova. |
 | *Impossibile preparare la vendita al banco.* | Cassa: [Vendita al banco](../cassa/vendita-al-banco.md) | Errore all'apertura della schermata. | Controlla la connessione e riapri la schermata. |
 | *Impossibile raggiungere il servizio.* (…) / *Il registro non risponde.* (…) | Cassa: [Impostazioni](../cassa/impostazioni.md) | Il servizio non risponde. | Controlla la **Connessione**. |
+| *Impossibile richiamare il piatto. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Il servizio non ha riportato in PRONTO il piatto scelto in **Richiama**. | Riprova; se un altro monitor l'ha già richiamato, è di nuovo in PRONTO. |
 | *Impossibile riportare indietro il ticket. (…)* | Monitor di cucina: [Monitor](../kds/monitor.md) | Il servizio non ha registrato il ritorno indietro. | Riprova. |
 | *Impossibile salvare gli abbinamenti del piatto.* / *Impossibile leggere gli abbinamenti del piatto.* | Cassa: [Kiosk](../cassa/kiosk.md) | Il servizio non risponde. | Riprova. |
 | *Impossibile salvare la configurazione dei kiosk.* / *Impossibile cambiare la pausa dei kiosk.* | Cassa: [Kiosk](../cassa/kiosk.md) | Il servizio non risponde. | Controlla il collegamento e riprova. |
@@ -545,6 +548,7 @@ Aggiornato al 2026-11-21 — **798 messaggi**.
 | *Nessun ordine in coda* — *Tocca "+ Asporto" o "+ Domicilio" per crearne uno* | Palmare: [Ordini](../palmare/ordini.md) | La coda è vuota. | Nessuna. |
 | *Nessun ordine in questo stato* — *Tocca "Tutti" per rivedere l'intera coda* | Palmare: [Ordini](../palmare/ordini.md) | Il filtro scelto non ha ordini. | Tocca **Tutti**. |
 | *Nessun pagamento in sospeso su questo kiosk.* (vista Fermo) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il kiosk è fermo ma non ha pagamenti a metà. | PIN e **Riprova** per tornare ad accogliere i clienti. |
+| *Nessun piatto consegnato negli ultimi 30 minuti.* | Monitor di cucina: [Monitor](../kds/monitor.md) | In **Richiama**: niente da recuperare. | — |
 | *Nessun rendiresto configurato sul servizio.* | Kiosk: [Configurazione del kiosk](../kiosk/configurazione.md) | Sul servizio non c'è nessuna cassa automatica. | Registrala dalla cassa, in Impostazioni ▸ **Cassa automatica**. |
 | *Nessun reparto impostato: gli articoli con questa aliquota usciranno sul reparto di ripiego dello scontrino.* | Cassa: [Tabelle di base](../cassa/tabelle-di-base.md) | Aliquota salvata senza **Reparto cassa** (il salvataggio avviene lo stesso). | Imposta il reparto appena lo conosci. |
 | *Nessun tavolo configurato per l'asporto: impostalo in Impostazioni.* | Cassa: [Asporto e domicilio](../cassa/asporto.md) | Manca il tavolo dell'asporto. | Impostalo in Impostazioni ▸ Sala ▸ **Tavolo asporto**. |

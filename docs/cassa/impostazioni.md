@@ -114,7 +114,7 @@ Sul PC del servizio la cassa installata dal setup (postazione **Server**) trova 
 pronta: al primo avvio si collega da sola come **RISTO**. Lo fa una volta sola e mai sopra una
 connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano.
 
-<!-- DA VERIFICARE: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'. -->
+L'indirizzo del servizio si scrive sempre a mano: la cassa non lo cerca da sola.
 
 ### Sala
 
@@ -624,7 +624,10 @@ Il riepilogo degli incassi del giorno, di tutto il locale, e la conta del casset
 | Riga dello stato | *Conta il cassetto e scrivi i contanti.* prima; *Chiusa alle 23:40 da …* dopo, con il nome dell'operatore in turno che ha chiuso. Dopo una correzione: *Corretta alle 23:55 da …. Motivo: ….* Chiusa la cassa, **Fondo cassa** e **Contanti contati** si modificano solo con **Correggi cassa**. |
 | **Motivo della correzione** | Compare solo dopo **Correggi cassa**, con i pulsanti **Salva correzione** e **Annulla**. Obbligatorio: resta nel registro delle chiusure. |
 
-<!-- DA VERIFICARE: l'atteso somma i contanti incassati da tutto il locale; in un locale con piu' casse, ognuna col suo cassetto, si contano tutti i cassetti insieme e si scrive la somma in "Contanti contati"? -->
+!!! note "Più casse, più cassetti"
+    L'atteso somma i contanti incassati da **tutto il locale**. Con più casse, ognuna col suo
+    cassetto, conta tutti i cassetti insieme e scrivi la somma in **Contanti contati**; anche il
+    **Fondo cassa** è la somma dei fondi.
 
 **3 · Chiusura fiscale (Z)**
 
