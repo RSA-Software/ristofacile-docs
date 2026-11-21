@@ -336,6 +336,8 @@ con 1 capricciosa.
 Un piatto toccato per errore in PRONTO passa a consegnato e sparisce dal tabellone, dove la freccia
 non lo raggiunge più. Per recuperarlo:
 
+![Richiama in pronto](../assets/img/kds/monitor-richiama.png)
+
 1. Tocca la pastiglia **Richiama** in alto.
 2. Si apre **RICHIAMA IN PRONTO**: i piatti del centro segnati consegnati negli ultimi 30 minuti,
    dal più recente (al massimo 20), ognuno con quantità, piatto, tavolo e ora della consegna.

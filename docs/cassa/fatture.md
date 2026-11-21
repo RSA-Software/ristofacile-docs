@@ -1,6 +1,6 @@
 ---
 title: Fatture
-description: Elenco delle fatture emesse dalla cassa, per ritrovarle, riaprirne il PDF, rimandarle per email o ristamparne una copia di cortesia.
+description: Elenco delle fatture emesse dalla cassa, per ritrovarle, riaprirne il PDF, rimandarle per email, ristamparne una copia di cortesia o emetterne la nota di credito.
 app: Cassa
 percorso: Menu ▸ Fatture
 pagina: FatturePage
@@ -9,8 +9,9 @@ pagina: FatturePage
 # Fatture
 
 Qui ritrovi le fatture già emesse dalla cassa: le cerchi per periodo, cliente, numero o tavolo,
-ne riapri il PDF, le rimandi per email al cliente o ne ristampi una copia di cortesia. Serve al
-cassiere e al titolare quando un cliente chiede di nuovo la sua fattura.
+ne riapri il PDF, le rimandi per email al cliente, ne ristampi una copia di cortesia o ne emetti la
+**nota di credito**. Serve al cassiere e al titolare quando un cliente chiede di nuovo la sua
+fattura, o quando una fattura va stornata.
 
 !!! info "In sintesi"
 
@@ -28,19 +29,22 @@ commercialista chiede di rivedere un documento. Per esempio: un cliente telefona
 fattura della cena aziendale di martedì non gli è arrivata; scrivi il nome della ditta, apri la
 fattura e la rimandi all'indirizzo che ti detta.
 
-Una fattura emessa è a registro: da qui **non si modifica e non si annulla**. L'annullo si fa dal
-gestionale Facile:
+Una fattura emessa è a registro: da qui **non si modifica**. Per stornarla si emette la sua
+**nota di credito** direttamente da qui, con il tasto **Nota di credito** della scheda (vedi
+[Emettere la nota di credito di una fattura](#emettere-la-nota-di-credito-di-una-fattura)): la nota
+porta la data di oggi, le stesse righe e lo stesso importo della fattura, e nella fattura
+elettronica è un **TD04** collegato alla fattura d'origine.
 
-- una fattura già trasmessa al Sistema di Interscambio non si annulla: si emette una **nota di
-  credito**, da **Vendite ▸ Fatture ▸ Inserimento** con la tipologia **TD04 - NOTA CREDITO**. La
-  nota di credito è un documento a parte: in questo elenco la fattura originale resta com'è;
-- una fattura non ancora trasmessa si annulla da **Vendite ▸ Fatture ▸ Modifica**: apri la fattura
-  e tocca **Annulla** nella barra. Qui la ritrovi con la pastiglia **ANNULLATA**.
+Una fattura non ancora trasmessa al Sistema di Interscambio si può anche annullare dal gestionale
+Facile, da **Vendite ▸ Fatture ▸ Modifica**: apri la fattura e tocca **Annulla** nella barra. Qui la
+ritrovi con la pastiglia **ANNULLATA**.
 
 ## Prima di cominciare
 
-- Le fatture compaiono qui solo se sono state emesse dalla cassa, dal [Conto](conto.md). Le
-  fatture fatte dal gestionale non sono in questo elenco.
+- Le fatture compaiono qui solo se sono state emesse dalla cassa, dal [Conto](conto.md), insieme
+  alle note di credito emesse da qui. Le fatture fatte dal gestionale non sono in questo elenco.
+- Per la **nota di credito** nei dati della ditta devono esserci le causali dei resi (di magazzino
+  e contabile): le imposta l'assistenza nel gestionale.
 - Per **Copia di cortesia** serve la stampante di cassa, che si imposta in
   [Impostazioni](impostazioni.md).
 - Per **Manda** il servizio deve sapere da quale casella spedire: si imposta in
@@ -73,9 +77,12 @@ Sotto i filtri una riga di stato dice quante fatture sono state trovate (es. *12
 | Cliente (riga) | Ragione sociale del cliente intestatario. |
 | Provenienza (riga) | Da dove nasce la fattura, es. *Tavolo 1/5 · Comanda 87 · Conto 2*, oppure *Resto del conto* quando è stata fatturata la parte restante di un tavolo diviso. |
 | **ANNULLATA** (pastiglia rossa) | La fattura è stata annullata dal gestionale: resta in elenco, ma non vale più. |
+| **NOTA DI CREDITO** (pastiglia ambra) | La riga è una nota di credito: il totale ha il segno meno. |
+| **ACCREDITATA** (pastiglia rossa) | Per questa fattura c'è già una nota di credito: non se ne può emettere un'altra. |
 | **SDI** (pastiglia verde) | La fattura elettronica è stata trasmessa. È solo un'indicazione: da qui non si ritrasmette nulla. |
 | Totale (riga) | Totale del documento in euro. |
-| **FATTURA N. …** (scheda) | Titolo della scheda, con la pastiglia **INVIATA SDI** se la fattura è stata trasmessa. |
+| **FATTURA N. …** / **NOTA DI CREDITO N. …** (scheda) | Titolo della scheda, con la pastiglia **INVIATA SDI** se il documento è stato trasmesso. |
+| **DOCUMENTO COLLEGATO** | Su una nota: *Nota di credito della fattura n. … del …*. Su una fattura accreditata: *Accreditata dalla nota n. …*. |
 | **DATA** | Data della fattura. |
 | **TOTALE** | Totale della fattura. |
 | **CLIENTE** | Intestatario, con sotto la provenienza (tavolo, comanda, conto). |
@@ -88,6 +95,7 @@ Sotto i filtri una riga di stato dice quante fatture sono state trovate (es. *12
 | **Oggi** | Porta il periodo a oggi–oggi e ricarica l'elenco. |
 | Tocco su una riga | Apre la scheda della fattura a destra. Toccando di nuovo la stessa riga la scheda si chiude. |
 | **Manda** | Rimanda la fattura in PDF all'indirizzo scritto in **RIMANDA PER EMAIL**, dopo una conferma. |
+| **Nota di credito** | Emette la nota di credito della fattura scelta, dopo una conferma (vedi [Emettere la nota di credito di una fattura](#emettere-la-nota-di-credito-di-una-fattura)). Su una fattura annullata o già accreditata è spento; su una nota di credito non c'è. |
 | **Copia di cortesia** | Stampa sulla stampante di cassa una copia **non fiscale** della fattura, con le righe, il totale e la dicitura *Documento di cortesia. L'originale e' la fattura elettronica intestata al cliente.* Compare solo se la stampante di cassa è configurata e la fattura non è annullata. |
 | **Apri il PDF** | Apre il PDF della fattura dentro la cassa (vedi sotto). È disponibile anche sulle fatture annullate. |
 
@@ -122,6 +130,22 @@ questi comandi:
 4. Nella finestra *Rimanda la fattura* tocca **Manda**.
 5. Sotto i filtri compare *Fattura n. … rimandata a …*.
 
+### Emettere la nota di credito di una fattura
+
+![Nota di credito nell'elenco](../assets/img/cassa/fatture-scheda.png)
+
+1. Apri la scheda della fattura.
+2. Tocca **Nota di credito**.
+3. La finestra chiede *Emettere la nota di credito della fattura n. … del …, … €?* e ricorda che
+   la nota porta la data di oggi e lo stesso contenuto della fattura, che non restituisce soldi
+   dalla cassa e che non parte da sola per lo SdI. Tocca **Emetti**.
+4. In cima all'elenco compare la nota, con la pastiglia **NOTA DI CREDITO** e il totale col meno;
+   la fattura prende la pastiglia **ACCREDITATA**. Sotto i filtri compare *Nota di credito n. …
+   emessa. Per l'Agenzia: spuntala e premi «Invia allo SdI».*
+5. Spunta la nota e tocca **Invia allo SdI** per mandarla all'Agenzia delle Entrate.
+6. Il rimborso al cliente si fa a parte: la nota non toglie soldi dalla cassa e non entra nella
+   [Fine giornata](impostazioni.md#fine-giornata).
+
 ### Ristampare una copia di cortesia
 
 1. Apri la scheda della fattura.
@@ -139,6 +163,10 @@ questi comandi:
 
 | Messaggio | Causa | Cosa fare |
 |---|---|---|
+| *Emettere la nota di credito della fattura n. … del …, … €?* | Conferma prima di emettere la nota. | **Emetti** per emetterla, **Annulla** per lasciar stare. |
+| *Nota di credito non emessa.* con *Nei dati della ditta manca la causale dei resi (magazzino/contabile): falla impostare dall'assistenza. La nota di credito non è stata emessa.* | Nel gestionale la ditta non ha le causali dei resi. | Chiama l'assistenza. |
+| *Nota di credito non emessa.* con *L'importo della nota (€ …) non torna con quello della fattura (€ …): la nota non è stata emessa, chiama l'assistenza.* | Ricalcolando la nota (per esempio perché nel frattempo è cambiata l'IVA del cliente) il totale non è uguale a quello della fattura: la nota non si emette. | Chiama l'assistenza. |
+| *… era già accreditata dalla nota n. …: non se ne è fatta un'altra* | La fattura aveva già una nota di credito (anche fatta dal gestionale). | Niente: la nota c'è già. |
 | *Nessuna fattura in questo periodo.* | Nel periodo (e con la ricerca scritta) non ci sono fatture della cassa. | Allarga il periodo o cancella la ricerca e premi **Invio**. |
 | *Windows non ha aperto il PDF: serve un'app per i PDF (per esempio Edge o Acrobat) impostata come predefinita.* | **Stampa** su un PC senza un'app predefinita per i PDF. | Imposta un'app per i PDF in Windows (App predefinite) e tocca di nuovo **Stampa**. |
 | *Stampa del documento non riuscita.* / *Stampa del documento non riuscita: il PDF non si e' aperto.* | Il PDF non si è potuto preparare o aprire. | Riprova; se insiste, chiudi e riapri il documento. |
@@ -164,6 +192,10 @@ questi comandi:
   ne' si ristampa.*: restano solo la consultazione e **Apri il PDF**.
 - La pastiglia **SDI** è informativa: dalla cassa la fattura elettronica non si ritrasmette.
 - La copia di cortesia non è un documento fiscale: l'originale è la fattura elettronica.
+- La nota di credito è sempre dell'intera fattura, con la stessa numerazione e lo stesso registro
+  delle fatture. Note parziali e rimborsi si fanno dal gestionale.
+- Una nota di credito fatta dal gestionale che richiama la fattura conta anche qui: la fattura
+  risulta accreditata e il tasto è spento.
 
 ## Vedi anche
 

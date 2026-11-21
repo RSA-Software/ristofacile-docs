@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-21 — **7 domande** su 4 pagine.
+Aggiornato al 2026-11-21 — **6 domande** su 3 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -23,12 +23,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 426: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
 - [ ] riga 431: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
-
-## Self order
-
-`docs/cassa/self-order.md`
-
-- [ ] riga 71: schermata da rifare con la linguetta Pagamento (le linguette in alto ora sono cinque), e da catturare quella della linguetta Pagamento.
 
 ## Pagamenti, per il personale
 

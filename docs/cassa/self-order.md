@@ -68,7 +68,6 @@ minuti di preparazione, chi ordina alle 19:10 può scegliere il ritiro dalle 19:
 
 ![Self order](../assets/img/cassa/self-order.png)
 
-<!-- DA VERIFICARE: schermata da rifare con la linguetta Pagamento (le linguette in alto ora sono cinque), e da catturare quella della linguetta Pagamento. -->
 
 È un pannello delle [Impostazioni](impostazioni.md#self-order): *Ordini dal telefono del cliente,
 col QR sul tavolo. Vale per tutte le casse.* Ha cinque linguette in alto: **Attivazione**,
@@ -91,6 +90,8 @@ dell'ultima operazione.
 ![Linguetta Codici QR](../assets/img/cassa/self-order-codici.png)
 
 ![Linguetta Asporto online](../assets/img/cassa/self-order-asporto-online.png)
+
+![Linguetta Pagamento](../assets/img/cassa/self-order-pagamento.png)
 
 ## Campi e indicatori
 
