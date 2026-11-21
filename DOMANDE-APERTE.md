@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-21 — **14 domande** su 8 pagine.
+Aggiornato al 2026-11-21 — **18 domande** su 8 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -13,7 +13,10 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/appendici/self-order-internet.md`
 
-- [ ] riga 75: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay.
+- [ ] riga 74: in quale sezione del back-office di Nexi XPay (e del suo ambiente di prova) si crea la chiave API: «Impostazioni ▸ Chiavi API» non è stato controllato sul portale.
+- [ ] riga 75: in quale sezione del portale di SumUp si crea la chiave API e dove si legge il codice esercente.
+- [ ] riga 76: in quale sezione del portale di Revolut Business (e del suo ambiente di prova) si legge la chiave segreta per i pagamenti online.
+- [ ] riga 77: in quale sezione del portale di Dojo si crea la chiave segreta (sk_prod_ / sk_sandbox_).
 
 ## Dividi il conto
 
@@ -42,7 +45,8 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 `docs/cassa/self-order.md`
 
-- [ ] riga 258: come arriva in cassa un ordine dell'asporto online (avviso, elenco Asporto, comanda in cucina) e come si chiude al ritiro: il pagamento con la carta fatto online compare gia' nel conto come per il self order?
+- [ ] riga 70: schermata da rifare con la linguetta Pagamento (le linguette in alto ora sono cinque), e da catturare quella della linguetta Pagamento.
+- [ ] riga 342: come arriva in cassa un ordine dell'asporto online (avviso, elenco Asporto, comanda in cucina) e come si chiude al ritiro: il pagamento con la carta fatto online compare gia' nel conto come per il self order?
 
 ## Tabelle di base
 

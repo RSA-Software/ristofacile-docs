@@ -1,6 +1,6 @@
 ---
 title: Pubblicare il self order su internet
-description: Per chi installa il servizio - la porta pubblica del self order, l'indirizzo https, il proxy o il tunnel, Nexi per i pagamenti dal telefono e la licenza.
+description: Per chi installa il servizio - la porta pubblica del self order, l'indirizzo https, il proxy o il tunnel, i fornitori del pagamento dal telefono (Nexi XPay, SumUp, Revolut, Dojo) e la licenza.
 ---
 
 # Pubblicare il self order su internet
@@ -58,21 +58,76 @@ separando più indirizzi con una virgola. Per un proxy sullo stesso PC del servi
 può collegarsi con l'indirizzo locale IPv4 (`127.0.0.1`) o con quello IPv6 (`::1`). Senza proxy
 lascia il campo vuoto.
 
-## Pagamento dal telefono (Nexi)
+## Pagamento dal telefono
 
-Il pagamento dal telefono usa Nexi XPay con i link di pagamento: il cliente paga sulla pagina di
-Nexi e il locale non vede mai la carta.
+Il pagamento dal telefono, e quello dell'asporto online, passa da un link di pagamento di uno di
+questi quattro fornitori: il cliente paga sulla pagina del fornitore e il locale non vede mai la
+carta. Il locale ne sceglie uno, con il suo conto presso il fornitore.
 
-- Le credenziali (indirizzo del servizio di Nexi e chiave API) stanno nel file `cfg\nexi.json` del
-  servizio, lo stesso usato dagli altri pagamenti Nexi della suite. Senza, l'interruttore
-  **Pagamento dal telefono** non si accende.
-- Per le prove si usa l'ambiente di prova di Nexi (sandbox); in produzione l'indirizzo e la chiave
-  del locale.
+| Fornitore | Cosa serve | Dove si prende la chiave | Prove |
+|---|---|---|---|
+| **Nexi XPay** | Chiave API | Back-office XPay, *Impostazioni ▸ Chiavi API* | Ambiente di prova separato, con la sua chiave |
+| **SumUp** | Chiave API e codice esercente | Portale di SumUp | Un indirizzo solo: si prova con la chiave di prova |
+| **Revolut** | Chiave segreta | Portale di Revolut Business | Ambiente di prova separato, con la sua chiave |
+| **Dojo** | Chiave segreta | Portale di Dojo | Un indirizzo solo: la chiave di prova comincia con `sk_sandbox_`, quella vera con `sk_prod_` |
+
+<!-- DA VERIFICARE: in quale sezione del back-office di Nexi XPay (e del suo ambiente di prova) si crea la chiave API: «Impostazioni ▸ Chiavi API» non è stato controllato sul portale. -->
+<!-- DA VERIFICARE: in quale sezione del portale di SumUp si crea la chiave API e dove si legge il codice esercente. -->
+<!-- DA VERIFICARE: in quale sezione del portale di Revolut Business (e del suo ambiente di prova) si legge la chiave segreta per i pagamenti online. -->
+<!-- DA VERIFICARE: in quale sezione del portale di Dojo si crea la chiave segreta (sk_prod_ / sk_sandbox_). -->
+
+### Dove si scrivono le chiavi
+
+- **Dalla cassa**: Menu ▸ Impostazioni ▸ **Self order**, linguetta **Pagamento** (vedi
+  [Scegliere il fornitore del pagamento](../cassa/self-order.md#scegliere-il-fornitore-del-pagamento)).
+  Serve il permesso **Pagamenti dal telefono**. Le chiavi si scrivono ma non si rileggono: la casella
+  dice solo *impostata*.
+- **Da Facile**: *Utility ▸ Impostazioni Sistemi di Pagamento Elettronico*, con le stesse
+  credenziali.
+
+In tutti e due i casi le chiavi finiscono negli stessi file del servizio, usati anche dagli altri
+pagamenti della suite: `cfg\nexi.json`, `cfg\sumup.json`, `cfg\revolut.json` e `cfg\dojo.json`. Se
+Facile e il servizio sono installati in cartelle diverse, il file scritto da Facile va copiato nella
+cartella `cfg` del servizio. Un file che manca, vuoto, rovinato o con le credenziali a metà vale
+come fornitore non configurato: **Pagamento dal telefono** e **Asporto online acceso** non si
+accendono.
+
+Gli indirizzi dei fornitori li scrive la cassa al **Salva**, secondo **Ambiente di prova**:
+
+| Fornitore | Produzione | Prova |
+|---|---|---|
+| Nexi XPay | `https://xpay.nexigroup.com/api/phoenix-0.0/psp/api` | `https://xpaysandbox.nexigroup.com/api/phoenix-0.0/psp/api` |
+| SumUp | `https://api.sumup.com` | lo stesso |
+| Revolut | `https://merchant.revolut.com/api` | `https://sandbox-merchant.revolut.com/api` |
+| Dojo | `https://api.dojo.tech` | lo stesso |
+
+Un indirizzo diverso, scritto da Facile, al primo **Salva** dalla cassa diventa uno di questi.
+
+### Cambiare fornitore
+
+Il fornitore nuovo vale per i pagamenti che partono dopo il **Salva**. Quelli già partiti si
+chiudono, si annullano e scadono con il fornitore di prima, che deve restare configurato finché non
+sono finiti: al massimo 15 minuti, la durata di un link. Se intanto le sue chiavi spariscono, quei
+pagamenti restano in sospeso.
+
+### Come si comportano i fornitori
+
+- **Lingua.** La pagina di Nexi XPay segue la lingua scelta sul telefono; quelle di SumUp, Revolut e
+  Dojo sono nella lingua che decide il fornitore.
+- **Rinuncia.** Nexi XPay e Dojo hanno un indirizzo di rinuncia: il cliente che rinuncia torna al
+  menu del locale e il pagamento si annulla. SumUp e Revolut no: il cliente torna indietro da sé e
+  tocca **Ho rinunciato al pagamento**, oppure il link scade dopo 15 minuti.
+- **Pagamenti da confermare.** Con Revolut e Dojo un pagamento autorizzato ma non ancora incassato
+  dal fornitore resta *in verifica*: conta come pagato solo quando il fornitore lo incassa. Anche una
+  risposta del fornitore che il servizio non capisce vale *in verifica*, mai *rifiutato*: il link
+  non si annulla e la quota non si libera per sbaglio.
+
+### Ora del PC e rimborsi
+
 - Il PC del servizio deve avere l'**ora italiana**: la scadenza dei link di pagamento (15 minuti) si
   calcola sull'ora del PC.
-- I rimborsi (un pagamento arrivato dopo la chiusura del conto) si fanno dal portale di Nexi.
-
-<!-- DA VERIFICARE: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay. -->
+- I rimborsi (per esempio un pagamento arrivato dopo la chiusura del conto) si fanno dal portale del
+  fornitore con cui il cliente ha pagato: l'avviso 💶 della cassa lo nomina.
 
 ## Licenza
 
