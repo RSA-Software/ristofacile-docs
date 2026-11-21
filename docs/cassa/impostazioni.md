@@ -358,10 +358,8 @@ L'elenco dei terminali vale per tutto l'impianto; quale terminale usa questa cas
 | **Descrizione** | Il nome che vedi in elenco, per esempio *POS banco*. |
 | **ID terminale** | Il codice del terminale scritto sul POS (per esempio `00000001`); non è il **Numero**. |
 | **Indirizzo IP** / **Porta** | Dove si trova il terminale in rete. Porta proposta: `10000`. |
-| **ID cassa** (riquadro **Su questa cassa**) | Il numero con cui questa cassa si presenta al terminale. Proposto `1`. |
+| **ID cassa** (riquadro **Su questa cassa**) | Il numero con cui questa cassa si presenta al terminale: il POS lo stampa sulla ricevuta, e serve a capire da quale cassa è partito un pagamento. Solo cifre, al massimo 8. Proposto `1`; con più casse sullo stesso terminale dai a ciascuna un numero diverso. I kiosk si presentano da soli come `900` più il loro numero (`901`, `902`...). |
 | **Questa cassa incassa le carte su** | In fondo al pannello: il terminale in uso, oppure *Nessun terminale: le carte si battono a mano sul POS*. Lo stesso testo compare sotto la voce, a sinistra. |
-
-<!-- DA VERIFICARE: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?). -->
 
 Al momento si gestiscono solo i terminali POS standard collegati in rete; i POS in cloud (per
 esempio SumUp) non si configurano da qui.

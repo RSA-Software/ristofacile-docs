@@ -283,7 +283,9 @@ automatica, stampante fiscale, fattura) vedi [Conto](conto.md).
   lo stesso tavolo virtuale.
 
 <!-- DA VERIFICARE: se la sala del tavolo dell'asporto ha una percentuale di servizio, il totale della finestra Incasso la aggiunge, mentre il TOTALE del carrello no: e' voluto al banco? -->
-<!-- DA VERIFICARE: durante l'emissione dello scontrino (fino a qualche minuto con alcune stampanti) la finestra Incasso non mostra un indicatore di attesa: confermare cosa vede il cassiere a video. -->
+- **Mentre esce lo scontrino** (con alcune stampanti ci vuole qualche minuto) la finestra
+  Incasso si copre di un velo scuro con la rotellina e la scritta *Attendi...*: finché non sparisce,
+  **Annulla** e **Senza documento** non si toccano.
 
 ## Vedi anche
 

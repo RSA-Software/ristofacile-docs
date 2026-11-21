@@ -1,7 +1,7 @@
 # Domande aperte del manuale RistoFacile
 
 Elenco generato da tutti i marcatori `DA VERIFICARE` presenti nelle schede.
-Aggiornato al 2026-11-21 — **23 domande** su 12 pagine.
+Aggiornato al 2026-11-21 — **19 domande** su 10 pagine.
 
 Ogni voce corrisponde a un commento HTML dentro la pagina indicata, alla riga
 indicata: rispondendo alla domanda, la correzione va fatta nella pagina e il
@@ -14,12 +14,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/appendici/self-order-internet.md`
 
 - [ ] riga 75: da quale maschera di Facile si compilano le credenziali di Nexi, e l'indirizzo di produzione di Nexi XPay.
-
-## Conto
-
-`docs/cassa/conto.md`
-
-- [ ] riga 511: in questa modalità, sul conto intero, il riquadro "Dividi il conto" e i campi Sconto/Abbuono restano visibili e utilizzabili su una comanda già chiusa: è voluto?
 
 ## Dividi il conto
 
@@ -40,18 +34,11 @@ marcatore va tolto. Per rigenerare questo elenco:
 
 - [ ] riga 117: la ricerca del servizio per nome del sito e' stata tolta (commit 96b9f62 del repo RistoFacile); confermare che l'indirizzo si scrive sempre a mano e che non tornera'.
 - [ ] riga 216: elenco dei campi proposti da "+ Campo" e delle condizioni di "quando?" per ciascun documento: valutare una scheda dedicata ai modelli di stampa.
-- [ ] riga 364: a cosa serve in pratica "ID cassa" (con due casse sullo stesso terminale va dato un numero diverso a ciascuna?).
-- [ ] riga 409: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
-- [ ] riga 414: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
-- [ ] riga 447: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
-- [ ] riga 485: che cosa sono "TLS" e "Passivo" nel collegamento con Digithera (connessione cifrata e modalita' passiva FTP?) e chi fornisce codice di abilitazione, server e porta.
-- [ ] riga 629: l'atteso somma i contanti incassati da tutto il locale; in un locale con piu' casse, ognuna col suo cassetto, si contano tutti i cassetti insieme e si scrive la somma in "Contanti contati"?
-
-## Prenotazioni
-
-`docs/cassa/prenotazioni.md`
-
-- [ ] riga 173: e' voluto che una prenotazione confermata non si possa annullare (es. il cliente disdice)?
+- [ ] riga 407: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota).
+- [ ] riga 412: Cashlogy provata solo con un Connector finto; su una macchina vera vanno confermati il formato delle risposte e il riavvio del Connector.
+- [ ] riga 445: tabella dei codici "Natura" (quale codice corrisponde a SPA, SRL, ecc.) e se Indirizzo/CAP/Citta' sono la sede legale o il domicilio fiscale.
+- [ ] riga 483: che cosa sono "TLS" e "Passivo" nel collegamento con Digithera (connessione cifrata e modalita' passiva FTP?) e chi fornisce codice di abilitazione, server e porta.
+- [ ] riga 627: l'atteso somma i contanti incassati da tutto il locale; in un locale con piu' casse, ognuna col suo cassetto, si contano tutti i cassetti insieme e si scrive la somma in "Contanti contati"?
 
 ## Self order
 
@@ -71,7 +58,6 @@ marcatore va tolto. Per rigenerare questo elenco:
 `docs/cassa/vendita-al-banco.md`
 
 - [ ] riga 285: se la sala del tavolo dell'asporto ha una percentuale di servizio, il totale della finestra Incasso la aggiunge, mentre il TOTALE del carrello no: e' voluto al banco?
-- [ ] riga 286: durante l'emissione dello scontrino (fino a qualche minuto con alcune stampanti) la finestra Incasso non mostra un indicatore di attesa: confermare cosa vede il cassiere a video.
 
 ## Licenza digitale
 
