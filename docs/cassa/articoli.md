@@ -37,7 +37,9 @@ scrive il peso e la riga si calcola da sola.
 
 - Le aliquote IVA, i reparti e le categorie in [Tabelle di base](tabelle-di-base.md) (si possono
   anche creare al volo dalla scheda dell'articolo).
-- Per gli allergeni: l'elenco degli allergeni caricato sull'impianto.
+- Per gli allergeni: l'elenco degli allergeni sull'impianto. Se è vuoto, il servizio carica da
+  solo all'avvio i 14 allergeni del Regolamento UE 1169/2011, anche senza il gestionale Facile; un
+  elenco che ha già almeno un allergene non viene toccato.
 - Per le traduzioni: l'elenco delle nazioni caricato dal gestionale Facile.
 
 ## La schermata
@@ -99,7 +101,7 @@ In fondo: **Elimina articolo** e **Duplica** a sinistra, **Annulla** e **Salva**
 |---|---|
 | **Listino** | Il listino del prezzo mostrato sotto. Si propone il listino 1; toccandolo si apre la finestra **Scegli listino** e il prezzo si ricarica per il listino scelto. |
 | **Venduto a peso** | «Bistecche, pesce: in comanda si digita il peso.» |
-| **Prezzo** / **Prezzo al chilo** | Il prezzo nel listino scelto, a porzione oppure al chilo se l'articolo è venduto a peso. Sotto, la nota «Prezzo della porzione nel listino scelto.» oppure «In comanda si digita il peso in grammi e il totale della riga si calcola da qui.». Su un articolo nuovo compare «Il prezzo si scrive dopo il primo salvataggio.», ma il prezzo scritto si salva già insieme all'articolo. |
+| **Prezzo** / **Prezzo al chilo** | Il prezzo nel listino scelto, a porzione oppure al chilo se l'articolo è venduto a peso. Sotto, la nota «Prezzo della porzione nel listino scelto.» oppure «In comanda si digita il peso in grammi e il totale della riga si calcola da qui.». Anche su un articolo nuovo il prezzo scritto si salva insieme all'articolo, al primo salvataggio. |
 
 **Classificazione**
 
@@ -247,7 +249,7 @@ La finestra **Scegli listino** è descritta in [Sale e tavoli](sale-e-tavoli.md)
 | **Rimuovi immagine** — *Togliere l'immagine dall'articolo "…"?* | Hai toccato **Rimuovi**. | **Rimuovi** o **Annulla**. |
 | *L'aliquota dev'essere una percentuale fra 0 e 100.* | Finestra **Nuova aliquota IVA**. | Correggi l'aliquota. |
 | *Il reparto cassa dev'essere un numero da 1 a 9: e' il reparto del registratore su cui esce la riga di scontrino.* | Finestra **Nuova aliquota IVA**. | Scrivi un reparto da 1 a 9. |
-| *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Mancano gli allergeni sull'impianto. | L'elenco (i 14 allergeni di legge) lo carica il gestionale Facile: dalla cassa non si può caricare. |
+| *L'elenco allergeni non e' stato ancora caricato su questo impianto.* | Mancano gli allergeni sull'impianto. | L'elenco (i 14 allergeni di legge) lo carica il servizio da solo, al suo avvio, quando è vuoto: fai riavviare il servizio. Se resta vuoto, sull'archivio manca la tabella degli allergeni: va aggiornato l'archivio con Facile, poi si riavvia il servizio. Dalla cassa l'elenco non si carica. |
 | *Alcuni allergeni non sono stati salvati: …* | Il servizio ha rifiutato una parte delle modifiche. | Riprova. |
 | *L'elenco nazioni non e' caricato su questo impianto: caricalo da Facile, altrimenti non c'e' nessuna lingua da scegliere.* / *L'elenco nazioni e' vuoto su questo impianto: va caricato da Facile.* | Mancano le nazioni. | Caricale dal gestionale Facile. |
 | *Non c'e' nessun'altra lingua da aggiungere per questo articolo.* | Tutte le lingue sono già presenti. | — |

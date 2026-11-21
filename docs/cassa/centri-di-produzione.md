@@ -68,7 +68,7 @@ destra **Stampante** (dove esce la carta) oppure, per un centro solo monitor, il
 |---|---|
 | **Descrizione \*** | Obbligatoria. Il nome del reparto (es. CUCINA, BAR, PASTICCERIA). È anche l'intestazione del ticket stampato. |
 | **Tipo** | Tre pulsanti: **Stampante**, **Monitor KDS**, **Stampante + KDS**. «Decide dove esce la comanda: su carta, a monitor, o tutt'e due.» |
-| **Attivo** | «Un centro spento resta qui e si puo' riaccendere, ma non instrada piu' comande.» Un centro spento non compare più fra quelli sceglibili sul monitor di cucina né come ripiego. Gli articoli legati a un centro spento escono sulla stampante comande della postazione, con intestazione CUCINA (per gli ordini dal telefono e dal kiosk, sulla stampante del self order o su quella predefinita del servizio); se la postazione non ha una stampante comande non esce nulla. |
+| **Attivo** | «Un centro spento resta qui e si puo' riaccendere. Non stampa sulla sua stampante: i suoi piatti escono sul ripiego, col suo nome.» Un centro spento non stampa e non manda niente al monitor di cucina, e non compare più fra quelli sceglibili sul monitor né come ripiego; i suoi piatti però non si perdono: vedi [Un centro spento](#un-centro-spento) nelle note. |
 | **Indirizzo stampante** | Solo per **Stampante** e **Stampante + KDS**. «IP (o IP:porta) della stampante di rete ESC/POS. Senza porta si usa la 9100.» Es. 192.168.1.50 oppure 192.168.1.50:9100. |
 | **Copie** | Quante copie del ticket escono a ogni invio. Si stampano al massimo 5 copie anche se ne scrivi di più. |
 | **Se non risponde, stampa su** | Il centro di ripiego: se la stampante di questo centro rifiuta la stampa, il ticket esce su quella del centro scelto qui. Si possono scegliere solo centri attivi che stampano su carta. Ritoccare il centro già scelto lo toglie. |
@@ -138,6 +138,23 @@ anche il ticket stampato, scegli Stampante + KDS.»
   per ultima, alla stampante comande impostata nella postazione (Menu ▸ Impostazioni).
 - Le copie restano quelle del centro di origine anche quando si stampa sul ripiego.
 - Il monitor di cucina mostra solo i centri attivi di tipo **Monitor KDS** o **Stampante + KDS**.
+
+### Un centro spento
+
+Spegnere un centro (interruttore **Attivo**) non fa sparire le comande dei suoi piatti:
+
+- i piatti del centro spento escono sul **ripiego**, seguendo la catena dei centri di ripiego e
+  saltando quelli spenti; per ultima, sulla stampante comande della postazione (per gli ordini dal
+  telefono e dal kiosk, sulla stampante del self order o su quella predefinita del servizio);
+- in testa al ticket c'è il **nome vero del centro** (per esempio PIZZERIA), non CUCINA: chi lo
+  riceve sa a quale reparto è destinato;
+- in [Comanda](comanda.md) la cassa avvisa: *Il centro PIZZERIA e' spento: i suoi piatti sono usciti sulla stampante di
+  ripiego.* (con più centri: *I centri … sono spenti: i loro piatti sono usciti sulla stampante di
+  ripiego.*);
+- vale anche per gli ordini che stampa il servizio: palmare, kiosk e self order.
+
+Se il centro spento non ha ripieghi e la postazione non ha una stampante comande, i suoi piatti non
+escono da nessuna parte.
 
 ## Vedi anche
 

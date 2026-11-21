@@ -145,7 +145,7 @@ Ogni piatto è una card con:
   LAVORAZIONE è l'attesa da quando il piatto è arrivato in cucina; in PRONTO è da quanto il piatto
   aspetta al passe, e sotto c'è il tempo di preparazione (es. «prep. 8'») o «al passe»;
 - accanto alla card, nelle colonne IN LAVORAZIONE e PRONTO, il pulsante con la freccia per
-  **tornare indietro** di uno stato.
+  **tornare indietro** di uno stato. Un piatto già consegnato si recupera con **Richiama**.
 
 I piatti **in attesa** del via sono sbiaditi e non si possono toccare.
 
@@ -256,6 +256,7 @@ lampeggia finché il piatto resta indietro.
 | **Pulsantino delle colonne** (in testa a IN CODA) | Passa alla divisione successiva della colonna IN CODA: una, due o tre colonne, secondo la larghezza dello schermo. La scelta resta memorizzata su questo monitor. |
 | **Portata / Tavolo** | Cambia il raggruppamento. La scelta resta memorizzata su questo monitor. |
 | **Operatore** | Apre la finestra **Chi lavora in questo centro**. |
+| **Richiama** | Apre **RICHIAMA IN PRONTO**: i piatti di questo centro consegnati negli ultimi 30 minuti, dal più recente. Toccandone uno torna in PRONTO (vedi [Correggere un tocco sbagliato](#correggere-un-tocco-sbagliato)). |
 | **Impostazioni** | Apre [le impostazioni del tabellone](#le-impostazioni-del-tabellone): densità, riga della portata, piatti che escono insieme, attesa su ogni piatto e **Apri la configurazione**, che torna alla [Scelta del centro](centro.md). |
 | **Doppio chevron** (forma compatta) | Manda avanti tutti i piatti del riquadro, come **Avvia tutto**, **Tutto pronto** e **Tutto consegnato** della forma normale. |
 | **LETTO** | Chiude il messaggio dalla sala (vedi sotto). |
@@ -332,9 +333,25 @@ con 1 capricciosa.
 2. Tocca la freccia accanto alla card.
 3. Il piatto torna nella colonna precedente.
 
-Un piatto già consegnato (sparito da PRONTO) non torna indietro e il monitor non tiene uno
-storico dei consegnati. Il piatto resta comunque nella comanda in cassa: se va ancora preparato,
-avvisa la cucina a voce o con un [messaggio](../cassa/messaggi.md).
+Un piatto toccato per errore in PRONTO passa a consegnato e sparisce dal tabellone, dove la freccia
+non lo raggiunge più. Per recuperarlo:
+
+1. Tocca la pastiglia **Richiama** in alto.
+2. Si apre **RICHIAMA IN PRONTO**: i piatti del centro segnati consegnati negli ultimi 30 minuti,
+   dal più recente (al massimo 20), ognuno con quantità, piatto, tavolo e ora della consegna.
+3. Tocca il piatto da recuperare: torna in **PRONTO** e l'elenco si chiude.
+
+Se non c'è niente da recuperare l'elenco dice *Nessun piatto consegnato negli ultimi 30 minuti.*
+Un piatto consegnato da più tempo non si richiama dal monitor, ma resta comunque nella comanda in
+cassa: se va ancora preparato, avvisa la cucina a voce o con un [messaggio](../cassa/messaggi.md).
+
+- Non compaiono i piatti di un tavolo con il conto già chiuso né quelli di un ordine d'asporto
+  rifiutato, non ritirato o annullato.
+- Il piatto richiamato riprende il tempo al passe da quando era stato segnato pronto. Il palmare del
+  cameriere non riceve un secondo avviso e il talloncino dei pronti non si ristampa (se non era
+  ancora uscito, esce una volta sola).
+- Un ordine d'asporto già incassato che, consegnato dal monitor, è uscito dalle **Chiamate** e dal
+  monitor in sala non ci torna: il richiamo riguarda solo il tabellone della cucina.
 
 ## Controlli e messaggi
 
@@ -343,6 +360,10 @@ avvisa la cucina a voce o con un [messaggio](../cassa/messaggi.md).
 | *Impossibile avanzare il ticket. (…)* | Il servizio non ha registrato il tocco. | Il monitor rilegge lo stato vero: ritocca il piatto se serve. |
 | *L'avanzamento e' andato a buon fine solo in parte. (…)* | Con un pulsante di gruppo, alcuni piatti sono avanzati e altri no. | Controlla i piatti rimasti e toccali uno per uno. |
 | *Impossibile riportare indietro il ticket. (…)* | Il servizio non ha registrato il ritorno indietro. | Riprova. |
+| *Impossibile richiamare il piatto. (…)* | Il servizio non ha riportato in PRONTO il piatto scelto in **Richiama**. | Riprova; se un altro monitor l'ha già richiamato, è di nuovo in PRONTO. |
+| *Nessun piatto consegnato negli ultimi 30 minuti.* | In **Richiama**: niente da recuperare. | — |
+| *Il servizio di RistoFacile non sa ancora richiamare i piatti consegnati: va aggiornato.* | Il servizio è di una versione precedente. | Fai aggiornare il servizio. |
+| *Elenco non disponibile: il servizio non risponde. (…)* | In **Richiama**: il servizio non ha risposto. | Controlla la rete e riapri **Richiama**. |
 | *Impossibile aggiornare i ticket. (…)* / *Aggiornamento dei ticket non riuscito.* | Il servizio non risponde. L'ora di «Aggiornato alle» resta ferma. | Controlla la rete e il servizio; il monitor riprova da solo. |
 | *Talloncino di … non stampato: … Non lo ripeto finché un talloncino non torna a uscire: intanto avvisa i camerieri a voce.* | La stampante del centro non ha stampato il talloncino di quel tavolo (dopo i due punti il motivo, es. stampante spenta o irraggiungibile). | Avvisa i camerieri a voce e controlla la stampante: finché non riparte, i talloncini successivi mancano **senza altri avvisi**. Il talloncino non viene ristampato. |
 | *Talloncini non stampati: il servizio non risponde. (…) Non lo ripeto finché un talloncino non torna a uscire: intanto avvisa i camerieri a voce.* | Al momento di stampare il monitor non ha raggiunto il servizio. | Avvisa i camerieri a voce; controlla la rete e il servizio. Anche questo avviso esce una volta sola. |

@@ -48,8 +48,8 @@ La schermata ha tre colonne.
 - **FRASI PRONTE** (centro): l'elenco delle frasi pronte, con il pulsante **MODIFICA** in alto; sotto,
   la casella del messaggio («Scrivi il messaggio, o tocca una frase») e i pulsanti **Cancella**,
   **Salva come frase** e **INVIA**.
-- **ULTIMI INVIATI** (destra): i messaggi mandati, dal più recente, con testo, ora, centro, chi l'ha
-  scritto e lo stato.
+- **ULTIMI INVIATI** (destra): i messaggi mandati di recente (oggi e ieri), dal più recente, con
+  testo, ora, centro, chi l'ha scritto e lo stato.
 
 ## Campi e indicatori
 
@@ -58,7 +58,7 @@ La schermata ha tre colonne.
 | **Tessera del centro** | Nome del centro e dove riceve: **monitor**, **carta** o **monitor e carta**. Tocca per sceglierlo o toglierlo; se ne possono scegliere più di uno. |
 | **Casella del messaggio** | Testo libero, fino a 500 caratteri. Toccare una frase pronta la aggiunge in fondo al testo già scritto. |
 | **Frasi pronte** | Frasi salvate, le stesse per tutte le casse e i palmari del locale. |
-| **Messaggio inviato** | Testo (fino a tre righe), poi ora · centro · mittente (es. «20:35 · Cucina · MARCO»), poi lo stato. Con più centri scelti compare un messaggio per centro. |
+| **Messaggio inviato** | Testo (fino a tre righe), poi ora · centro · mittente (es. «20:35 · Cucina · MARCO»; per un messaggio di ieri «ieri 23:50 · Cucina · MARCO»), poi lo stato. Con più centri scelti compare un messaggio per centro. |
 | **NON LETTO** (giallo) | Il messaggio è sul monitor del centro e nessuno l'ha ancora segnato come letto. |
 | **LETTO 20:41 · Mario** (verde) | Letto dal monitor, con l'ora e il nome di chi l'ha segnato. |
 | **STAMPATO** (grigio) | Centro solo su carta: il foglietto è uscito. Su questi centri «letto» non arriva mai. |
@@ -106,14 +106,14 @@ Lo stato si aggiorna da solo ogni pochi secondi finché la schermata è aperta.
 | *Impossibile caricare:* (seguito dal dettaglio) | Il servizio non risponde. | Esci e rientra nella schermata. |
 | *Nessun centro di produzione attivo.* | Non ci sono centri attivi. | Creali in [Centri di produzione](centri-di-produzione.md). |
 | *Nessuna frase pronta. Scrivi un messaggio e tocca "Salva come frase".* | L'elenco delle frasi è vuoto. | Facoltativo: prepara le frasi più usate. |
-| *Nessun messaggio mandato oggi.* | Nessun messaggio recente. | Nessuna azione. |
+| *Nessun messaggio mandato di recente.* | Nessun messaggio mandato oggi o ieri. | Nessuna azione. |
 
 ## Note
 
 - Le frasi pronte sono condivise: chi le modifica da una cassa o da un palmare le cambia per tutti.
-- La colonna **ULTIMI INVIATI** mostra i messaggi di tutti, non solo i tuoi, mandati oggi e ieri:
+- La colonna **ULTIMI INVIATI** mostra i messaggi di tutti, non solo i tuoi, di oggi e di ieri:
   chi lavora a cavallo della mezzanotte ritrova anche quelli della sera prima. Di ogni messaggio si
-  vede solo l'ora.
+  vede l'ora, senza la data: quelli di ieri hanno l'ora preceduta da «ieri».
 - Sul monitor di cucina il messaggio resta in evidenza finché qualcuno non tocca il tasto per segnarlo
   letto: vedi [Monitor di cucina](../kds/monitor.md).
 - Sui centri solo su carta non c'è conferma di lettura: lo stato si ferma a **STAMPATO**.

@@ -24,7 +24,7 @@ perché. La usa il titolare, il responsabile di sala o la cucina che comunica co
 
 Alle nove il pescato è finito: invece di avvisare a voce ogni cameriere, lo si segna **Esaurito**
 con il motivo «finito il pescato». Da quel momento in Comanda, sulla cassa e sul palmare, il piatto
-compare spento con la scritta **ESAURITO** e non si può più aggiungere.
+compare spento con la scritta **ESAURITO** e, sotto, il motivo, e non si può più aggiungere.
 
 Si possono anche contare le porzioni: la cucina prepara 12 porzioni di lasagna; scrivi 12 come
 quantità **Iniziale**, accendi **Esaurisci da solo** e una soglia di avviso di 3. Ogni porzione
@@ -60,7 +60,7 @@ gg/mm/aaaa»). In fondo **Elimina voce**, **Annulla** e **Salva**.
 | **Articolo \*** | Il piatto, scelto con la finestra **Cerca articolo**. Si sceglie solo su una voce nuova. |
 | **Vale sempre** | «Spento, vale solo per la giornata scelta qui sotto - il giorno dopo il piatto torna ordinabile da solo.» Si sceglie solo su una voce nuova. |
 | **Giorno** | Compare se **Vale sempre** è spento: il giorno di validità. |
-| **Motivo** | Es. «finito il pescato». «Compare in elenco e sulla riga della comanda: e' quello che il cameriere ripete al tavolo.» Al momento il motivo compare solo nell'elenco di questa schermata: in Comanda, sulla cassa e sul palmare, non si vede. |
+| **Motivo** | Es. «finito il pescato». «Compare in elenco e sulla tessera del piatto esaurito, in cassa e sul palmare: e' quello che il cameriere ripete al tavolo.» Il motivo compare sotto il bollo **ESAURITO** della tessera in Comanda (cassa e palmare tablet) e nella linguetta Menu del palmare; toccando il piatto esaurito in Comanda compare l'avviso con il motivo (*Orata e' esaurito: finito il pescato.*). |
 
 **Stato**
 
@@ -73,12 +73,19 @@ gg/mm/aaaa»). In fondo **Elimina voce**, **Annulla** e **Salva**.
 | Elemento | Descrizione |
 |---|---|
 | **Iniziale** | Le porzioni disponibili. Zero: il piatto non è gestito a porzioni. |
-| **Venduta** | Non modificabile. Al momento non viene aggiornata: le porzioni uscite si contano in **Impegnata**. |
-| **Impegnata** | Non modificabile. Le porzioni inviate in cucina: cresce quando una riga parte per la cucina e cala se la riga viene stornata. |
+| **Uscite** | Non modificabile. Le porzioni mandate in cucina: cresce quando una riga parte per la cucina e cala se la riga viene stornata. Su una voce che vale sempre le uscite si sommano giorno dopo giorno: non si azzerano a mezzanotte. |
 | **Avvisa sotto** | «Sotto la soglia di avviso la cassa segnala le scorte basse, prima che il piatto finisca davvero.» In Comanda il piatto mostra «ULTIME N». Zero: nessun avviso. |
 | **Esaurisci da solo** | «Consumata la quantita' iniziale, il piatto passa a Esaurito da se'.» |
 
-Le porzioni rimaste sono: **Iniziale** meno **Venduta** meno **Impegnata**.
+Le porzioni rimaste sono: **Iniziale** meno **Uscite**.
+
+**Più voci per lo stesso piatto**
+
+Lo stesso piatto può avere più voci valide insieme, per esempio una che vale sempre e una solo per
+oggi. In questo caso vale **la più restrittiva**, ovunque: in cassa, al banco, sul palmare, al kiosk
+e negli avvisi della mappa della sala. Prima la voce esaurita; se nessuna lo è, quella con le scorte
+basse e meno porzioni; se no, fra quelle con le porzioni contate, quella che ne ha meno. Motivo e
+porzioni mostrati sono quelli della voce che vale.
 
 ## Pulsanti e comandi
 
@@ -99,7 +106,7 @@ Le porzioni rimaste sono: **Iniziale** meno **Venduta** meno **Impegnata**.
 3. Spegni **Vale sempre** e controlla che il **Giorno** sia oggi.
 4. Lascia lo stato **Esaurito** e scrivi il **Motivo**.
 5. Tocca **Salva**. La voce compare in cima all'elenco; in Comanda il piatto è spento con la
-   scritta **ESAURITO**.
+   scritta **ESAURITO** e, sotto, il motivo.
 
 ### Rimettere in vendita un piatto
 
@@ -112,7 +119,7 @@ Le porzioni rimaste sono: **Iniziale** meno **Venduta** meno **Impegnata**.
 1. Crea la voce del piatto con stato **Disponibile**.
 2. In **Iniziale** scrivi le porzioni (es. 12) e in **Avvisa sotto** la soglia (es. 3).
 3. Accendi **Esaurisci da solo**.
-4. Tocca **Salva**. Man mano che le porzioni vanno in cucina, **Impegnata** cresce; sotto la soglia
+4. Tocca **Salva**. Man mano che le porzioni vanno in cucina, **Uscite** cresce; sotto la soglia
    in Comanda compare «ULTIME N», a zero il piatto diventa esaurito.
 
 ### L'esistenza di magazzino

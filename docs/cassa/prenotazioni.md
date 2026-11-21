@@ -89,7 +89,7 @@ e i tavoli della sala scelta come pulsanti). In fondo **Annulla** e **Salva**.
 | **Note** | Facoltative (*Allergie, seggiolone, tavolo tranquillo...*). |
 | **Data** | Giorno della prenotazione. |
 | **Ora** | Ora di arrivo. |
-| **Sala** | Le sale del locale: toccane una per vederne i tavoli. Serve a spostare la prenotazione in un'altra sala o a dare un tavolo a una prenotazione **Senza tavolo**. |
+| **Sala** | Le sale come pulsanti: quella scelta mostra i suoi tavoli. Proposta quella da cui hai aperto il modulo (in modifica, quella della prenotazione). Serve a spostare la prenotazione in un'altra sala o a dare un tavolo a una prenotazione **Senza tavolo**. |
 | **Tavolo** | I tavoli della sala scelta: tocca un tavolo per assegnarlo, toccalo di nuovo per toglierlo. Senza tavolo la prenotazione finisce in **Senza tavolo**. |
 | Avviso di capacità | *Attenzione: il tavolo ha al massimo N posti, la prenotazione ne richiede M.* Non impedisce di salvare. |
 | Avviso di doppia assegnazione | *Attenzione: questo tavolo e' gia' assegnato ad un'altra prenotazione in questa data.* Non impedisce di salvare. |
@@ -170,11 +170,11 @@ prenotazioni nuove e dalla cassa non si modifica.
   salva comunque.
 - **Cliente arrivato su un tavolo già aperto**: se sul tavolo c'è già una comanda aperta, la
   prenotazione viene collegata a quella e non se ne apre un'altra.
-- Una prenotazione **confermata** che il cliente disdice si annulla con **Annulla**; se il
-  cliente non si presenta e non ha avvisato, usa **Non presentato**.
-- Il modulo si apre sulla sala da cui l'hai aperto (in modifica, su quella della prenotazione).
-  Per spostare la prenotazione in un'altra sala, o per dare un tavolo a una prenotazione senza
-  tavolo, tocca la sala e poi il tavolo, e salva.
+- Una prenotazione **confermata** si annulla dalla scheda come una richiesta, per esempio se il
+  cliente disdice; se il cliente non si presenta e non ha avvisato, usa **Non presentato**.
+- Per spostare la prenotazione in un'altra sala, o per dare un tavolo a una prenotazione senza
+  tavolo, nel modulo tocca la **Sala** e poi il tavolo, e salva, come sul
+  [palmare](../palmare/prenotazioni.md).
 - Una nuova prenotazione creata con **+ Nuova prenotazione** mentre è scelta la pastiglia
   **Senza tavolo** nasce senza sala e senza tavolo.
 - **Prenotazioni sulla mappa**: le prenotazioni confermate compaiono sulle tessere dei tavoli

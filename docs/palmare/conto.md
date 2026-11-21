@@ -125,6 +125,7 @@ Il pulsante di incasso dice cosa succederà: **INCASSA E STAMPA** (scontrino),
 | **Documento** | **Scontrino** (predefinito), **Fattura** o **Camera**. |
 | **Scegli il cliente** | Con la fattura: il cliente a cui è intestata (vedi sotto). |
 | **Scegli la camera** | Con l'addebito in camera: l'ospite dell'hotel a cui addebitare. |
+| Riga dello stato | In piccolo, sotto la scelta del cliente: i messaggi informativi dell'incasso, al più tre righe. Per esempio la carta autorizzata o da stornare (*Carta da stornare: € … addebitati su questo conto (STAN …)*), *La carta e' GIA' stata addebitata (€ …*…: dice cosa premere per finire l'incasso), *Lo scontrino di questo conto e' GIA' stato emesso*…, *Copia di cortesia della fattura n. … stampata.* Sono gli stessi messaggi della riga di stato del [Conto sulla cassa](../cassa/conto.md). |
 
 Con la **Fattura** si apre la finestra **Cliente della fattura**: cerchi per «P.IVA, codice fiscale o
 nome», scegli il cliente dai risultati oppure tocchi **Cliente nuovo** e compili la scheda (Persona o
@@ -206,7 +207,7 @@ addebita di nuovo la carta.
 |---|---|---|
 | *Mancano € 5,00 da ripartire fra i metodi di pagamento: il conto non si puo' chiudere finche' l'importo non e' coperto per intero.* | I pagamenti scritti non coprono il totale. | Completa il pagamento. |
 | *Nessuna voce da incassare su questo conto.* | Il conto è vuoto. | Nessuna. |
-| *Mario non e' abilitato ad applicare sconti.* / *Mario non ha uno sconto massimo impostato: va messo in Impostazioni -> Operatori.* | Lo sconto non è permesso all'operatore. Il valore torna quello di prima. | Fai fare lo sconto a chi è abilitato. |
+| *Mario non e' abilitato ad applicare sconti.* / *Mario non ha uno sconto massimo impostato: va messo dalla cassa, in Menu ▸ Operatori.* | Lo sconto non è permesso all'operatore. Il valore torna quello di prima. | Fai fare lo sconto a chi è abilitato. |
 | *Sconto 15% oltre il massimo consentito a Mario (10%).* | Sconto più abbuono superano il massimo dell'operatore. L'incasso è bloccato. | Riduci lo sconto. |
 | *Mario non e' abilitato a chiudere un conto senza documento fiscale.* | **CHIUDI SENZA DOCUMENTO** senza permesso. | Chiedi a un collega abilitato. |
 | **Chiudi senza documento** — *Il tavolo verra' chiuso e liberato per € 42,00 SENZA emettere nessuno scontrino. Procedere?* | Conferma della chiusura senza documento. | **Chiudi** o **Annulla**. |
@@ -237,9 +238,6 @@ addebita di nuovo la carta.
 - Sul palmare non c'è la cassa automatica: i contanti si incassano a mano.
 - Sul conto diviso lo sconto non si applica (vale solo sul conto intero).
 - Durante l'incasso la schermata non si aggiorna con le modifiche fatte da altri dispositivi.
-- Sopra i pulsanti, una riga grigia dice com'è andato l'ultimo passo dell'incasso, per esempio
-  *Carta autorizzata (STAN …)* o *Fattura n. … di € …*; se la carta è già stata addebitata ricorda
-  di toccare di nuovo il pulsante per emettere il documento.
 
 ## Vedi anche
 

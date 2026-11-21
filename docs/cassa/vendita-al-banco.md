@@ -244,8 +244,8 @@ Lo stesso vale per le categorie. Il nuovo ordine è salvato in archivio e vale p
 | *Tocca prima la riga del carrello a cui attaccare la variante.* | Variante toccata senza riga selezionata. | Seleziona la riga, poi la variante. |
 | *La riga e' stornata: …* / *La riga e' in omaggio: …* | Su una riga stornata o in omaggio non si cambiano prezzo e varianti. | Per la riga in omaggio: togli l'omaggio, modifica, rimettilo. |
 | *Non sei abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Manca il permesso **Puo' applicare sconti**. | Fai fare l'operazione a un operatore abilitato. |
-| *… non e' abilitato a stornare le righe. Il permesso si da' in Impostazioni -> Operatori.* | Manca il permesso **Puo' stornare righe**. | Come sopra, o assegna il permesso in [Operatori](operatori.md). |
-| *… non e' abilitato a annullare una vendita. Il permesso si da' in Impostazioni -> Operatori.* | Cestino su una vendita in attesa senza il permesso **Puo' annullare la comanda**. | Come sopra. |
+| *… non e' abilitato a stornare le righe. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Manca il permesso **Puo' stornare righe**. | Come sopra, o assegna il permesso in [Operatori](operatori.md). |
+| *… non e' abilitato a annullare una vendita. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Cestino su una vendita in attesa senza il permesso **Puo' annullare la comanda**. | Come sopra. |
 | *Le tessere si spostano dentro una categoria: scegline una qui sotto. L'ordine di PREFERITI e IN EVIDENZA si imposta dalla scheda dell'articolo.* | **SPOSTA** usato su PREFERITI o IN EVIDENZA. | Scegli una categoria merceologica, oppure imposta le posizioni sulla scheda dell'articolo. |
 | *PREFERITI e IN EVIDENZA stanno sempre in testa: non si spostano.* | Si è provato a spostare una delle due tessere fisse. | — |
 | *Non c'e' niente da incassare: batti prima gli articoli.* | **INCASSA** con il carrello vuoto. | Batti gli articoli. |
@@ -281,13 +281,11 @@ automatica, stampante fiscale, fattura) vedi [Conto](conto.md).
   servizio come al tavolo (vedi [Conto](conto.md)).
 - Le vendite al banco non compaiono nell'elenco [Asporto e domicilio](asporto.md), anche se usano
   lo stesso tavolo virtuale.
-- **Servizio.** La vendita al banco paga il servizio della sala in cui sta il tavolo dell'asporto:
-  la finestra Incasso e lo scontrino lo aggiungono, il **TOTALE** del carrello no. Il tavolo
-  dell'asporto va quindi messo in una sala senza percentuale di servizio (vedi
-  [Sale e tavoli](sale-e-tavoli.md)).
-- **Durante l'emissione** dello scontrino o della fattura (con alcune stampanti anche qualche
-  minuto) la schermata si vela e compare *Attendi...*: finché il documento non è uscito non si tocca
-  niente.
+- **Niente servizio al banco.** La percentuale di servizio della sala del tavolo dell'asporto non
+  si applica alle vendite al banco: si paga il **TOTALE** del carrello.
+- **Mentre esce lo scontrino o la fattura** (con alcune stampanti ci vuole qualche minuto) la
+  finestra Incasso si copre di un velo scuro con la rotellina e la scritta *Attendi...*: finché il
+  documento non è uscito e il velo non sparisce, **Annulla** e **Senza documento** non si toccano.
 
 ## Vedi anche
 
