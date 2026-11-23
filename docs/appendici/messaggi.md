@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-21 — **821 messaggi**.
+Aggiornato al 2026-11-23 — **822 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -25,11 +25,8 @@ Aggiornato al 2026-11-21 — **821 messaggi**.
 
 | Messaggio | Dove | Causa | Cosa fare |
 |---|---|---|---|
-| *3 coperti non stanno sul tavolo ...: ha al massimo 2 posti. Scegli un altro tavolo.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Separa verso un tavolo con meno posti dei coperti scelti. | Tocca un altro tavolo. |
 | *4 coperti sono gia' stati pagati: non si puo' scendere sotto.* | Cassa: [Comanda](../cassa/comanda.md) | **−** sui coperti oltre quelli già incassati. | Nessuna azione. |
 | *4 coperti sono gia' stati pagati: non si puo' scendere sotto.* | Palmare: [Comanda](../palmare/comanda.md) | Togli coperti già incassati. | Nessuna. |
-| *6 coperti non stanno sul tavolo Finestra: ha al massimo 4 posti.* | Palmare: [Sala](../palmare/sala.md) | Il tavolo di destinazione ha meno posti dei coperti. Nella separazione il messaggio aggiunge *Scegli un altro tavolo.* | Scegli un tavolo più grande, oppure unisci prima un altro tavolo. |
-| *6 coperti non stanno sul tavolo ...: ha al massimo 4 posti.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Sposta verso un tavolo con meno posti dei coperti del conto. | Scegli un tavolo più grande, o alza i posti massimi del tavolo in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
 | *Accesso non riuscito.* (con il dettaglio) | Palmare: [Accesso](../palmare/accesso.md) | Il servizio non ha risposto alla verifica. | Riprova; se persiste controlla la rete del palmare. |
 | *Accesso non riuscito.* (seguito dal dettaglio) | Cassa: [Accesso operatore](../cassa/accesso.md) | Il servizio non ha risposto alla verifica. | Riprova; se persiste, controlla il collegamento al servizio. |
 | *Addebito registrato, ma la stampante del preconto non e' configurata: il tagliando da firmare non e' uscito.* | Cassa: [Conto](../cassa/conto.md) | Manca la stampante di cassa. | L'addebito è fatto; fai firmare a mano. |
@@ -273,6 +270,10 @@ Aggiornato al 2026-11-21 — **821 messaggi**.
 | *Il tavolo asporto (sala 2, tavolo 99) non esiste piu': sceglilo di nuovo in Impostazioni.* | Cassa: [Self order](../cassa/self-order.md) | Il tavolo dell'asporto scelto su questa cassa è stato cancellato. | Scegline un altro in Impostazioni ▸ **Sala** ▸ **Tavolo asporto**. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Sposta partendo da un tavolo senza conto. | Parti da un tavolo occupato. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Palmare: [Sala](../palmare/sala.md) | Spostamento di un tavolo senza conto. | Scegli un tavolo aperto. |
+| *Il tavolo Finestra ha 4 posti e ora ha 6 coperti: serve un altro tavolo accanto (Unisci), o alza i posti massimi in Impostazioni -> Sale.* | Palmare: [Sala](../palmare/sala.md) | Hai spostato o separato su un tavolo con meno posti dei coperti. L'operazione è già fatta: è solo un avviso. | Unisci un tavolo accanto, o fai alzare i posti dalla cassa. |
+| *Il tavolo ... ha 4 posti e ora ha 6 coperti: serve un altro tavolo accanto (Unisci), o alza i posti massimi in Impostazioni -> Sale.* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Hai spostato o separato su un tavolo con meno posti dei coperti. Lo spostamento o la separazione sono già fatti: è solo un avviso. | Unisci un tavolo accanto, o alza i posti massimi del tavolo in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
+| *Il tavolo ha 4 posti: va bene lo stesso, ma serve un altro tavolo accanto (Unisci dalla mappa).* | Cassa: [Mappa della sala](../cassa/mappa-sala.md) | Aprendo il tavolo hai scelto più coperti dei suoi posti massimi. Compare sotto il numero e non impedisce di occupare il tavolo. | Tocca **Occupa il tavolo**, poi unisci un tavolo accanto dalla mappa. |
+| *Il tavolo ha 4 posti: va bene lo stesso, ma serve un altro tavolo accanto (Unisci dalla mappa).* | Palmare: [Sala](../palmare/sala.md) | Aprendo il tavolo hai scelto più coperti dei suoi posti massimi. Non impedisce di occupare il tavolo. | Tocca **Occupa il tavolo**, poi unisci un tavolo accanto. |
 | *Il tavolo ha al massimo N posti: per andare oltre alza prima i posti massimi dalla sua scheda.* | Cassa: [Sale e tavoli](../cassa/sale-e-tavoli.md) | Hai toccato **+** oltre i posti massimi. | Alza i **Posti massimi** nella scheda del tavolo. |
 | *Il tuo ordine è già in cucina: per cambiarlo rivolgiti alla cassa.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il cliente ha cambiato un ordine «paga alla cassa» già partito per la cucina (con l'invio **subito**, sempre). Il kiosk mostra il numero del primo ordine e non ne manda un secondo. | Il cliente va alla cassa con quel numero. |
 | *Il tuo ordine è passato alla cassa: per cambiarlo rivolgiti lì.* | Kiosk: [Percorso del cliente](../kiosk/percorso.md) | Il cliente ha cambiato un ordine che la cassa aveva già preso. | Il cliente va alla cassa. |
@@ -712,8 +713,8 @@ Aggiornato al 2026-11-21 — **821 messaggi**.
 | *Rimborso non registrato: riprova fra poco. L'avviso resta: riprova con «visto».* (in cassa e sul palmare) | Kiosk: [Pagamenti, per il personale](../kiosk/pagamenti.md) | Il servizio non è riuscito a registrare il rimborso al «visto» dell'avviso. | Tocca di nuovo **Visto** fra poco. |
 | **Rimuovi immagine** — *Togliere l'immagine dall'articolo "…"?* | Cassa: [Articoli](../cassa/articoli.md) | Hai toccato **Rimuovi**. | **Rimuovi** o **Annulla**. |
 | *RistoFacile in modalità demo* | Monitor di cucina: [Monitor](../kds/monitor.md) | Una cassa del locale è in prova. | Nessuna: il monitor funziona. |
-| *Sala Interna · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | Cassa: [Comanda](../cassa/comanda.md) | **+** sui coperti oltre i posti massimi. | Unisci un tavolo dalla [Mappa della sala](../cassa/mappa-sala.md) o alza i posti massimi in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
-| *Sala principale · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | Palmare: [Comanda](../palmare/comanda.md) | Superati i posti del tavolo. | Unisci un tavolo dalla [Sala](../palmare/sala.md) o fai alzare i posti dalla cassa. |
+| *Sala Interna · Tavolo 12 ha 4 posti: con 5 coperti serve un altro tavolo accanto (Unisci dalla mappa), o alza i posti massimi in Impostazioni -> Sale.* | Cassa: [Comanda](../cassa/comanda.md) | **+** sui coperti oltre i posti massimi. Il coperto è aggiunto: è solo un avviso. | Unisci un tavolo dalla [Mappa della sala](../cassa/mappa-sala.md) o alza i posti massimi in [Sale e tavoli](../cassa/sale-e-tavoli.md). |
+| *Sala principale · Tavolo 12 ha 4 posti: con 5 coperti serve un altro tavolo accanto (Unisci dalla mappa), o alza i posti massimi in Impostazioni -> Sale.* | Palmare: [Comanda](../palmare/comanda.md) | Superati i posti del tavolo. Il coperto è aggiunto: è solo un avviso. | Unisci un tavolo dalla [Sala](../palmare/sala.md) o fai alzare i posti dalla cassa. |
 | *Sale e camerieri non si sono letti: resta il filtro per data.* | Cassa: [Storico conti](../cassa/storico-conti.md) | Non è stato possibile leggere sale e operatori. | Usa il filtro per data; riapri la schermata più tardi. |
 | *Sale e camerieri non si sono letti: restano periodo e documento.* | Cassa: [Statistiche](../cassa/statistiche.md) | Non è stato possibile leggere sale e operatori. | Usa gli altri filtri; riapri la schermata più tardi. |
 | *Salva prima il menu: le sezioni hanno bisogno di un menu a cui appartenere.* | Cassa: [Menu](../cassa/menu.md) | Hai provato ad aggiungere una sezione a un menu non salvato. | Tocca **Salva menu**. |

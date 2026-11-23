@@ -132,7 +132,9 @@ manda in cucina.
 1. Se serve, tocca la pastiglia della sala in alto.
 2. Tocca il tavolo. Compare «Apertura tavolo…».
 3. Se il tavolo è libero la cassa chiede *Quanti coperti?*: scegli con **−** e **+** e tocca
-   **Occupa il tavolo**. Con **Annulla** torni alla mappa e il tavolo resta libero.
+   **Occupa il tavolo**. Con **Annulla** torni alla mappa e il tavolo resta libero. Puoi scegliere
+   più coperti dei posti massimi del tavolo: sotto il numero compare un avviso, ma i coperti restano
+   quelli scelti. Poi unisci un tavolo accanto.
 4. Si apre la [Comanda](comanda.md) del tavolo; tornando alla mappa il tavolo è viola (**Occupato**)
    se non hai battuto niente.
 
@@ -200,8 +202,8 @@ basso rinuncia allo spostamento.
 | *Il tavolo 13 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Unisci o Separa partendo da un tavolo unito. | Tocca il tavolo che tiene il conto. |
 | *Il tavolo 6 non ha un conto aperto.* | Unisci o Separa partendo da un tavolo senza conto. | Parti da un tavolo occupato. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Sposta partendo da un tavolo senza conto. | Parti da un tavolo occupato. |
-| *6 coperti non stanno sul tavolo ...: ha al massimo 4 posti.* | Sposta verso un tavolo con meno posti dei coperti del conto. | Scegli un tavolo più grande, o alza i posti massimi del tavolo in [Sale e tavoli](sale-e-tavoli.md). |
-| *3 coperti non stanno sul tavolo ...: ha al massimo 2 posti. Scegli un altro tavolo.* | Separa verso un tavolo con meno posti dei coperti scelti. | Tocca un altro tavolo. |
+| *Il tavolo ha 4 posti: va bene lo stesso, ma serve un altro tavolo accanto (Unisci dalla mappa).* | Aprendo il tavolo hai scelto più coperti dei suoi posti massimi. Compare sotto il numero e non impedisce di occupare il tavolo. | Tocca **Occupa il tavolo**, poi unisci un tavolo accanto dalla mappa. |
+| *Il tavolo ... ha 4 posti e ora ha 6 coperti: serve un altro tavolo accanto (Unisci), o alza i posti massimi in Impostazioni -> Sale.* | Hai spostato o separato su un tavolo con meno posti dei coperti. Lo spostamento o la separazione sono già fatti: è solo un avviso. | Unisci un tavolo accanto, o alza i posti massimi del tavolo in [Sale e tavoli](sale-e-tavoli.md). |
 | *Su questo tavolo non c'e' niente da separare.* | Il conto non ha righe separabili né coperti non pagati. | Nessuna azione. |
 | *Scegli almeno una riga o qualche coperto da separare.* | **Scegli il tavolo** senza aver scelto niente. | Spunta almeno una riga o aumenta i coperti. |
 | *Impossibile spostare il tavolo.* / *Impossibile unire i tavoli.* / *Impossibile separare il tavolo.* (seguiti dal dettaglio) | Il servizio ha rifiutato l'operazione, ad esempio perché il tavolo di destinazione è già occupato o unito a un altro conto, o perché c'entra un ordine del kiosk (*Gli ordini del kiosk non si spostano, non si uniscono e non si separano: gestiscili da «Ordini dal kiosk»*). | Leggi il dettaglio e scegli un altro tavolo; un ordine del kiosk si gestisce da [Ordini dal kiosk](ordini-kiosk.md). |

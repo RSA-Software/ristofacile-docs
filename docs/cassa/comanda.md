@@ -103,7 +103,7 @@ due porzioni.
 | Elemento | Descrizione |
 |---|---|
 | **Sala · Tavolo** | Il tavolo che stai lavorando. |
-| **Coperti** (es. **4 coperti**) | Numero di persone al tavolo. All'apertura vale i posti del tavolo. Si cambia con **−** e **+** nella pastiglia. Non scende sotto 1, né sotto i coperti già pagati, e non sale oltre i posti massimi del tavolo (più quelli dei tavoli uniti). Su un ordine del kiosk la pastiglia non c'è: i coperti sono zero. |
+| **Coperti** (es. **4 coperti**) | Numero di persone al tavolo. All'apertura vale i posti del tavolo. Si cambia con **−** e **+** nella pastiglia. Non scende sotto 1, né sotto i coperti già pagati, Può superare i posti massimi del tavolo (più quelli dei tavoli uniti): al primo coperto oltre compare un avviso, ma il numero resta. Su un ordine del kiosk la pastiglia non c'è: i coperti sono zero. |
 | **Conto unico** / **Conto 2** | Su quale conto finiscono i prossimi piatti. Vedi «Battere per conti separati». Accesa (un conto scelto) ha il bordo arancione. |
 | **Orologio** (accanto a **Comanda**) | Da quanto è aperto il tavolo («ora», «25 min», «1h 05m»). Si aggiorna da solo; col mouse fermo sopra si legge «aperto da …». |
 | **Chiave** (accanto a **Comanda**) | Il PIN del tavolo per il self order. Toccala: si apre «PIN 0866» con *Dillo ai clienti del tavolo: serve per ordinare dal telefono col QR. Cambia a ogni apertura del tavolo.* Compare solo con il self order acceso, sui tavoli della sala (non al banco né sull'asporto). Vedi [Self order](self-order.md#il-pin-del-tavolo). |
@@ -261,7 +261,7 @@ parte al kiosk, sotto il **TOTALE** compaiono **Già pagato al kiosk** e **DA PA
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | **+** su un menu a prezzo fisso. | Tocca di nuovo **MENU INTERO**. |
 | *Questo piatto fa parte di un menu: per aggiungerne un altro battilo dalla sua sezione.* | **+** su un piatto che fa parte di un menu. | Batti il piatto dalla sua sezione. |
 | *4 coperti sono gia' stati pagati: non si puo' scendere sotto.* | **−** sui coperti oltre quelli già incassati. | Nessuna azione. |
-| *Sala Interna · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | **+** sui coperti oltre i posti massimi. | Unisci un tavolo dalla [Mappa della sala](mappa-sala.md) o alza i posti massimi in [Sale e tavoli](sale-e-tavoli.md). |
+| *Sala Interna · Tavolo 12 ha 4 posti: con 5 coperti serve un altro tavolo accanto (Unisci dalla mappa), o alza i posti massimi in Impostazioni -> Sale.* | **+** sui coperti oltre i posti massimi. Il coperto è aggiunto: è solo un avviso. | Unisci un tavolo dalla [Mappa della sala](mappa-sala.md) o alza i posti massimi in [Sale e tavoli](sale-e-tavoli.md). |
 | *MARCO non e' abilitato ad applicare sconti: l'omaggio va concesso da chi lo e'.* | Omaggio senza il permesso. | Fallo fare a un operatore abilitato. |
 | *MARCO non e' abilitato a stornare le righe. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e *… a liberare i tavoli.*) | Storno o LIBERA TAVOLO senza il permesso. | Fallo fare a un operatore abilitato, o concedi il permesso in [Operatori](operatori.md). |
 | *Questa riga non ha un prezzo suo: l'omaggio va messo sulla riga principale.* | Omaggio su una parte di una pizza composta. | Offri la riga principale. |

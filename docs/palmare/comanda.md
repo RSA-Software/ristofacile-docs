@@ -195,7 +195,7 @@ se ne sceglie uno solo, toccare un altro piatto sostituisce quello scelto.
 
 | Elemento | Descrizione |
 |---|---|
-| **Coperti (– 4 coperti +)** | Il numero di persone al tavolo. All'apertura vale quanto i posti del tavolo. Non scende sotto 1 né sotto i coperti già pagati, e non supera i posti massimi del tavolo (più quelli dei tavoli uniti). |
+| **Coperti (– 4 coperti +)** | Il numero di persone al tavolo. All'apertura vale quanto i posti del tavolo. Non scende sotto 1 né sotto i coperti già pagati, Può superare i posti massimi del tavolo (più quelli dei tavoli uniti): al primo coperto oltre compare un avviso, ma il numero resta. |
 | **1 conto / Conto N** | Su quale conto vanno i prossimi piatti, quando il tavolo paga diviso. Vedi *Battere per conti separati*. |
 | **Orologio** | Da quanto è aperto il tavolo. Si aggiorna da solo. |
 | **Chiave** (in alto a destra) | Il PIN del tavolo per il self order: toccala per vederlo. C'è solo con il self order acceso, sui tavoli della sala. Sul tablet è una pastiglia accanto ai coperti. |
@@ -339,7 +339,7 @@ da questo palmare; uscendo e rientrando nel tavolo si ristampa tutto quello già
 | *Puoi scegliere al massimo 2 opzioni per "Salse".* | Hai superato il massimo di un gruppo di varianti. | Spegni una variante prima di accenderne un'altra. |
 | *"Cottura" e' obbligatoria: scegli almeno 1 opzione.* | **Salva varianti** senza una scelta obbligatoria. | Scegli una variante del gruppo. |
 | *4 coperti sono gia' stati pagati: non si puo' scendere sotto.* | Togli coperti già incassati. | Nessuna. |
-| *Sala principale · Tavolo 12 ha al massimo 4 posti. Per sedere piu' persone unisci un altro tavolo, o alza i posti massimi in Impostazioni -> Sale.* | Superati i posti del tavolo. | Unisci un tavolo dalla [Sala](sala.md) o fai alzare i posti dalla cassa. |
+| *Sala principale · Tavolo 12 ha 4 posti: con 5 coperti serve un altro tavolo accanto (Unisci dalla mappa), o alza i posti massimi in Impostazioni -> Sale.* | Superati i posti del tavolo. Il coperto è aggiunto: è solo un avviso. | Unisci un tavolo dalla [Sala](sala.md) o fai alzare i posti dalla cassa. |
 | *Per un altro menu tocca di nuovo il tasto del menu: ognuno ha le sue scelte.* | **+** su un menu a prezzo fisso. | Aggiungi un altro menu da «MENU INTERO». |
 | *Questo piatto fa parte di un menu: per aggiungerne un altro battilo dalla sua sezione.* | **+** su un piatto di un menu. | Batti il piatto dalla sua sezione. |
 | *Su questo tavolo e' gia' stato battuto qualcosa: si chiude dal conto, non si libera.* | **LIBERA TAVOLO** su un tavolo con righe. | Chiudi il tavolo dal [Conto](conto.md). |
