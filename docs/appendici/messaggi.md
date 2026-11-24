@@ -8,7 +8,7 @@ description: Elenco alfabetico dei messaggi di cassa, palmare, monitor di cucina
 Tutti i messaggi documentati nelle schede, in un elenco solo. Cerca il
 testo comparso a video con il campo di ricerca in alto.
 
-Aggiornato al 2026-11-20 — **788 messaggi**.
+Aggiornato al 2026-11-24 — **789 messaggi**.
 
 !!! note "Come leggere la colonna «Dove»"
 
@@ -368,6 +368,7 @@ Aggiornato al 2026-11-20 — **788 messaggi**.
 | *La carta e' gia' stata addebitata per € … su questo conto, che resta aperto: rientra nel conto da questa cassa per chiuderlo (o per dire che l'hai stornata). Il palmare e le altre casse non lo sanno.* | Cassa: [Conto](../cassa/conto.md) | Esci dal conto con una carta addebitata e non chiusa. | Rientra nel conto da questa cassa. |
 | *La carta e' stata addebitata ma la ricevuta del POS non e' stata stampata.* | Cassa: [Conto](../cassa/conto.md) | Problema sulla stampante di cassa. La carta è addebitata. | Non ripassare la carta; il conto prosegue. |
 | *La CashDro vuole l'utente e la password POS creati sulla macchina (li da' CashDro o il rivenditore).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** di una CashDro senza **Utente POS** o **Password POS**. | Scrivi utente e password. |
+| *La Cashmatic vuole l'utente e la password con cui collegarsi alla macchina (li da' Cashmatic o il rivenditore).* | Cassa: [Impostazioni](../cassa/impostazioni.md) | **Salva** di una Cashmatic senza **Utente** o **Password**. | Scrivi utente e password. |
 | *La cassa automatica ha gia' trattenuto € Y in contanti su questo conto: i contanti non possono essere meno di € Y.* | Cassa: [Conto](../cassa/conto.md) | Hai messo in **Contanti** meno del già trattenuto. | Correggi i contanti, oppure tocca **Restituito** se hai reso i soldi al cliente. |
 | *La cassa automatica ha trattenuto € X: e' un incasso PARZIALE, non un annullo. …* | Cassa: [Conto](../cassa/conto.md) | Hai toccato **Chiudi trattenendo**, o la macchina ha chiuso l'incasso a metà. | Tocca di nuovo **INCASSA E STAMPA** (la macchina chiede solo la differenza) o copri il resto con un altro metodo. |
 | *La cassa automatica impostata su questa postazione non risulta piu' configurata sul servizio: …* | Cassa: [Conto](../cassa/conto.md) | La macchina scelta in Impostazioni non esiste più sul servizio. | Sistema [Impostazioni](../cassa/impostazioni.md) ▸ **Cassa automatica**. |

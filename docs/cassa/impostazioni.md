@@ -394,12 +394,13 @@ L'elenco delle macchine vale per tutto l'impianto; quale macchina usa questa cas
 | **Macchine** | L'elenco delle casse automatiche dell'impianto; quella usata da questa cassa porta **IN USO**. Tocca una macchina per aprirne la scheda, o **+  NUOVA** per aggiungerne una. |
 | **Numero** | Il numero della macchina nell'impianto (maggiore di zero). |
 | **Descrizione** | Il nome in elenco, per esempio *Self ingresso*. |
-| **Marca** | **PagAmico**, **VNE**, **CashDro** o **Cashlogy**. I campi e i pulsanti della scheda cambiano con la marca: vedi [Le marche](#le-marche-delle-casse-automatiche). |
+| **Marca** | **PagAmico**, **VNE**, **CashDro**, **Cashlogy** o **Cashmatic**. I campi e i pulsanti della scheda cambiano con la marca: vedi [Le marche](#le-marche-delle-casse-automatiche). |
 | **Indirizzo IP** | Dove si trova la macchina in rete. Obbligatorio. |
-| **Porta** | Vuota = la porta di fabbrica della marca (è mostrata in grigio nel campo): 9100 per PagAmico, 443 per VNE e CashDro (80 se l'indirizzo della CashDro comincia con `http://`), 8092 per Cashlogy. |
+| **Porta** | Vuota = la porta di fabbrica della marca (è mostrata in grigio nel campo): 9100 per PagAmico, 443 per VNE e CashDro (80 se l'indirizzo della CashDro comincia con `http://`), 8092 per Cashlogy, 50301 per Cashmatic. |
 | **Password erogazione** | Solo per PagAmico: la password di erogazione impostata sulla macchina. Senza, la macchina rifiuta i comandi che danno denaro (resto, prelievo). |
 | **Utente POS** / **Password POS** | Solo per CashDro, obbligatori: l'utente e la password creati sulla macchina, che li danno CashDro o il rivenditore. |
-| **Impronta del certificato (facoltativa)** | Solo per CashDro: *Lasciala vuota alla prima prova: il servizio scrive nel giornale quella vista.* Copiata qui dal giornale, il servizio parla solo con quella macchina. Sono 64 cifre esadecimali; i due punti si possono lasciare. |
+| **Utente** / **Password** | Solo per Cashmatic, obbligatori: l'utente e la password con cui la cassa si collega alla macchina, che li danno Cashmatic o il rivenditore. |
+| **Impronta del certificato (facoltativa)** | Solo per CashDro e Cashmatic: *Lasciala vuota alla prima prova: il servizio scrive nel giornale quella vista.* Copiata qui dal giornale, il servizio parla solo con quella macchina. Sono 64 cifre esadecimali; i due punti si possono lasciare. |
 | **POS collegato alla macchina** | Solo per PagAmico e VNE, le macchine che hanno anche un POS. **SI'**: *la carta la incassa la macchina.* **NO**: *la carta va sul POS del bancone.* |
 | **Questa cassa incassa i contanti su** | In fondo al pannello: la macchina in uso, oppure *Nessuna macchina: i contanti si incassano a mano*. |
 
@@ -420,9 +421,12 @@ La cassa automatica è solo della cassa: il palmare non la usa.
 | **VNE** | sì | sì, se ha il POS | sì | sì | dal pannello della macchina | sì |
 | **CashDro** | sì, solo contanti | no | no | no | dal pannello della macchina | sì |
 | **Cashlogy** | sì, solo contanti | no | no | sì | dalla finestra del Connector | dalla finestra del Connector |
+| **Cashmatic** | sì, solo contanti | no | sì | sì | sì | sì |
 
 - **CashDro.** La cassa le parla in https. La CashDro non eroga denaro su comando: un rimborso o un resto che la macchina non ha dato si consegnano a mano.
   <!-- DA VERIFICARE: CashDro provata solo con una macchina finta; su una macchina vera vanno confermati annullo, ripresa dopo un riavvio e certificato (se cambia a ogni riavvio, l'impronta va lasciata vuota). -->
+- **Cashmatic.** È la Cashmatic SelfPay: la cassa le parla in https sulla porta 50301, con l'utente e la password della macchina. Quando il cliente ha inserito tutto l'importo, **Annulla e restituisci** sparisce: la macchina sta già dando il resto e il pagamento non si annulla più.
+  <!-- DA VERIFICARE: Cashmatic provata solo con il simulatore CTS_REST di Cashmatic; su una macchina vera vanno confermati ricarica (il simulatore non conta il denaro caricato) e certificato. -->
 - **Una macchina, un programma.** La stessa CashDro o lo stesso Cashlogy Connector non vanno
   pilotati insieme dal gestionale Facile e da RistoFacile: i due programmi si rubano le operazioni.
   Se nel locale c'è anche Facile, la macchina la usa uno dei due.
@@ -932,6 +936,7 @@ spenta) e tocca di nuovo **Chiudi la giornata**: le fasi già fatte non si ripet
 | *Inserisci l'indirizzo IP della cassa automatica.* | **Salva** senza indirizzo. | Scrivi l'indirizzo. |
 | *La porta dev'essere un numero maggiore di zero (lasciala vuota per quella di fabbrica).* | Porta non valida. | Correggi o svuota il campo. |
 | *La CashDro vuole l'utente e la password POS creati sulla macchina (li da' CashDro o il rivenditore).* | **Salva** di una CashDro senza **Utente POS** o **Password POS**. | Scrivi utente e password. |
+| *La Cashmatic vuole l'utente e la password con cui collegarsi alla macchina (li da' Cashmatic o il rivenditore).* | **Salva** di una Cashmatic senza **Utente** o **Password**. | Scrivi utente e password. |
 | *L'impronta del certificato e' fatta di 64 cifre esadecimali (i due punti si possono lasciare).* … | L'impronta scritta non è valida. | Ricopiala dal giornale del servizio, o lasciala vuota. |
 | *Non riesco a leggere le casse automatiche dal servizio: finche' non le leggo, non si salva …* / *Le casse automatiche dell'impianto non si leggono dal servizio: non salvo, …* | Il servizio non ha dato l'elenco delle macchine. **Salva** e **Togli** sono bloccati, perché salvare sostituirebbe l'elenco dell'impianto con la sola macchina a video. | Riapri la pagina quando il servizio risponde. Se il dettaglio parla del file delle casse automatiche danneggiato, va corretto o tolto sul PC del servizio. |
 | *Scrivi l'importo da prelevare, per esempio 50 o 12,50.* | **Preleva** senza un importo valido. | Scrivi l'importo. |

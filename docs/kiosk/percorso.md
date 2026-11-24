@@ -226,7 +226,7 @@ Mentre paga, il cliente vede:
 - con la carta: *Segui le istruzioni sul POS*. Non c'è **Annulla**: il pagamento si conclude o si
   annulla sul terminale;
 - con i contanti: *Inserisci banconote e monete*, con *Inserito*, *Mancano* e *Resto* che si
-  aggiornano ogni secondo, e **Annulla** se la macchina lo permette (con la Cashlogy invece *Concludi
+  aggiornano ogni secondo, e **Annulla** se la macchina lo permette e manca ancora qualcosa (con la Cashlogy invece *Concludi
   o annulla sulla finestra della cassa*).
 
 ![Incasso in contanti](../assets/img/kiosk/percorso-contanti.png)

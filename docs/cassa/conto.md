@@ -221,9 +221,11 @@ Mentre la macchina incassa, nel riquadro ci sono due pulsanti con effetti oppost
 | Comando | Effetto |
 |---|---|
 | **Annulla e restituisci** | La macchina restituisce tutto quello che il cliente ha inserito: **niente è incassato** e il conto resta aperto. |
-| **Chiudi trattenendo** | Solo PagAmico e VNE. La macchina tiene quello che è stato inserito: è un **incasso parziale**, non un annullo. L'importo trattenuto viene scritto in **Contanti** e il conto resta aperto per coprire il resto. |
+| **Chiudi trattenendo** | Solo PagAmico, VNE e Cashmatic. La macchina tiene quello che è stato inserito: è un **incasso parziale**, non un annullo. L'importo trattenuto viene scritto in **Contanti** e il conto resta aperto per coprire il resto. |
 
 Con la Cashlogy nel riquadro non c'è nessun pulsante: si legge *Per annullare: dalla finestra del Cashlogy Connector.*
+
+Quando il cliente ha inserito tutto l'importo, **Annulla e restituisci** sparisce e si legge *importo raggiunto, la macchina sta dando il resto…*: da lì il pagamento non si annulla più.
 
 Gli esiti possibili:
 
