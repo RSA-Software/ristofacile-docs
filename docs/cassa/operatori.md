@@ -1,6 +1,6 @@
 ---
 title: Operatori
-description: Anagrafica di camerieri e cassieri - nome, PIN di accesso e permessi su sconti, storni, chiusura dei conti.
+description: Anagrafica di camerieri e cassieri - nome, PIN di accesso e permessi su sconti, storni, chiusura dei conti, fine giornata e pagamenti dal telefono.
 app: Cassa
 percorso: Menu ▸ Operatori
 pagina: OperatoriPage
@@ -67,7 +67,6 @@ In fondo, sempre visibili anche se la scheda scorre: **Elimina operatore** a sin
 | **Cognome** | Facoltativo. Nome e cognome, se ci sono, sono quello che si vede nell'elenco. |
 | **Descrizione \* (badge in cassa)** | Obbligatoria. Il nome breve con cui l'operatore compare nella schermata di accesso, nel riquadro dell'operatore in Comanda e nei messaggi dell'app (es. *«MARCO non è abilitato ad applicare sconti.»*). Si scrive in maiuscolo mentre digiti. |
 | **Telefono**, **Cellulare** | Recapiti, facoltativi. |
-| **Badge** | Codice del badge dell'operatore, facoltativo. Al momento è solo un'annotazione: non si entra col badge. |
 | **PIN di accesso** | Obbligatorio, da 1 a 8 cifre, non può cominciare per zero. Si vede solo come pallini; per un operatore che ha già un PIN la casella dice **PIN impostato**, per uno senza **Nessun PIN**. Toccala (o tocca **Digita**) per scriverlo con il tastierino. |
 | **Attivo** | Spento, l'operatore non compare più fra quelli che possono entrare e l'accesso gli viene rifiutato. Resta in elenco con la pastiglia **Disattivo**. |
 | **Puo' liberare i tavoli** | Permette di liberare un tavolo aperto su cui non è stato battuto nulla. |
@@ -76,6 +75,8 @@ In fondo, sempre visibili anche se la scheda scorre: **Elimina operatore** a sin
 | **Sconto massimo** | In %, solo cifre intere. È il tetto dello sconto sul conto, calcolato sullo sconto effettivo (percentuale più abbuono). **Zero vuol dire nessuno sconto**, non «nessun limite». L'omaggio di una riga non tiene conto del tetto. |
 | **Puo' chiudere il conto** | Permette di chiudere un conto **senza documento fiscale**, di chiudere un tavolo con il conto a zero e di addebitare il conto in camera (con il collegamento all'hotel). Il normale incasso con scontrino non richiede questo permesso. |
 | **Puo' annullare la comanda** | Permette di annullare una vendita al banco e un ordine d'asporto. |
+| **Puo' fare la fine giornata (chiusura cassa e Z)** | Permette di chiudere la giornata (produzione, chiusura della cassa e Z delle stampanti fiscali) e di correggere la chiusura cassa, in [Impostazioni ▸ Fine giornata](impostazioni.md#fine-giornata). Dopo l'aggiornamento che l'ha introdotto è **spento per tutti**: il titolare lo deve accendere a chi chiude la giornata. |
+| **Pagamenti dal telefono** | Sotto: *Fornitore e credenziali del pagamento dal telefono*. Permette di scegliere il fornitore con cui pagano i clienti dal telefono (Nexi XPay, SumUp, Revolut o Dojo) e di scriverne le chiavi, nella linguetta **Pagamento** del [Self order](self-order.md#scegliere-il-fornitore-del-pagamento). Senza il permesso la linguetta si vede ma non si cambia niente. Dopo l'aggiornamento che l'ha introdotto è **spento per tutti**: il titolare lo accende solo a chi gestisce i pagamenti. Vedi anche la nota sull'aggiornamento di casse e palmari. |
 
 Tutta la riga di un permesso è sensibile al tocco, non solo l'interruttore.
 
@@ -147,12 +148,13 @@ Messaggi che compaiono **altrove** a chi non ha il permesso:
 
 | Messaggio | Dove |
 |---|---|
-| *… non e' abilitato a liberare i tavoli. Il permesso si da' in Impostazioni -> Operatori.* (e simili per *stornare le righe*, *annullare un ordine*, *annullare una vendita*) | Comanda, Vendita al banco, Asporto |
-| *… non e' abilitato ad applicare sconti.* / *… non ha uno sconto massimo impostato: va messo in Impostazioni -> Operatori.* / *Sconto …% oltre il massimo consentito a … (…%).* | Conto |
+| *… non e' abilitato a liberare i tavoli. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e simili per *stornare le righe*, *annullare un ordine*, *annullare una vendita*) | Comanda, Vendita al banco, Asporto |
+| *… non e' abilitato a fare la fine giornata. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e *… a correggere la chiusura cassa.*) | Impostazioni ▸ Fine giornata |
+| *… non e' abilitato a cambiare il pagamento dal telefono. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | Impostazioni ▸ Self order, linguetta **Pagamento** |
+| *… non e' abilitato ad applicare sconti.* / *… non ha uno sconto massimo impostato: va messo dalla cassa, in Menu ▸ Operatori.* / *Sconto …% oltre il massimo consentito a … (…%).* | Conto |
 | *… non e' abilitato a chiudere un conto senza documento fiscale.* | Conto |
 
-Nei messaggi il percorso è indicato come «Impostazioni -> Operatori»: la voce si trova in realtà
-direttamente nel menu, **Menu ▸ Operatori**.
+Sul palmare i messaggi sono gli stessi: il permesso si dà sempre dalla cassa.
 
 ## Note
 
@@ -161,6 +163,10 @@ direttamente nel menu, **Menu ▸ Operatori**.
   Su un'altra cassa o un palmare dove lo stesso operatore è già entrato, i permessi si rileggono
   alla prossima apertura di una comanda o di un conto.
 - Il PIN salvato non si può rileggere: la scheda dice solo se c'è (**PIN impostato**).
+- **Dopo l'aggiornamento del servizio aggiorna anche tutte le casse e i palmari.** Una cassa o un
+  palmare con l'app di prima non conosce i permessi **Puo' fare la fine giornata (chiusura cassa e
+  Z)** e **Pagamenti dal telefono**: se da lì si salva un operatore, quei permessi gli si spengono.
+  Si riaccendono da questa schermata, da una cassa aggiornata.
 
 ## Vedi anche
 

@@ -42,7 +42,7 @@ Comanda.
 
 - **A sinistra, l'elenco**: in alto **MODIFICATORI** e il numero di modificatori; una tessera per
   modificatore con il nome e, sotto, il moltiplicatore (**Gratis**, **Prezzo pieno**, **Doppio** o
-  «Molt. 1,5») e la sigla. L'elenco segue l'**ordine** impostato. In fondo **+ Nuovo modificatore**.
+  «Molt. 1,5»). L'elenco segue l'**ordine** impostato. In fondo **+ Nuovo modificatore**.
 - **A destra, la scheda** del modificatore toccato, con la sezione **Dati modificatore**. Finché
   non ne scegli uno compare **Tocca un modificatore** con «Un modificatore e' un'intensita' che
   moltiplica il prezzo di una variante: poco, molto, extra. Non e' una nota libera.»
@@ -53,9 +53,8 @@ In fondo alla scheda: **Elimina modificatore** a sinistra, **Annulla** e **Salva
 
 | Elemento | Descrizione |
 |---|---|
-| **Descrizione \*** | Obbligatoria (es. POCO COTTO, EXTRA), in maiuscolo. È il testo che si aggiunge tra parentesi alla variante sulla riga della comanda. |
-| **Sigla** | Abbreviazione di due o tre caratteri (es. PC). «La sigla e' quello che esce stampato sul ticket di cucina, dove lo spazio e' poco.» Al momento la sigla si vede solo in questo elenco: sulla riga della comanda e sul ticket di cucina la variante porta la **Descrizione** del modificatore. |
-| **Ordine** | La posizione del modificatore fra i pulsanti d'intensità che compaiono sotto la variante in Comanda. Per un modificatore nuovo si propone l'ultimo ordine più 10. |
+| **Descrizione \*** | Obbligatoria (es. POCO COTTO, EXTRA), in maiuscolo. È il testo che si aggiunge tra parentesi alla variante sulla riga della comanda, ed è quello che esce sul ticket di cucina. |
+| **Ordine** | La posizione del modificatore fra i pulsanti d'intensità che compaiono sotto la variante in Comanda («L'ordine e' la sequenza dei chip d'intensita' sotto la variante in comanda.»). Per un modificatore nuovo si propone l'ultimo ordine più 10. |
 | **Moltiplicatore di prezzo** | Tre pulsanti rapidi, **Gratis** (0), **Prezzo pieno** (1), **Doppio** (2), e il campo **×** per un valore qualsiasi (es. 1,5). «Moltiplica il prezzo della variante a cui il modificatore viene applicato: 0 la regala, 1 la lascia com'e', 2 la raddoppia.» |
 
 ## Pulsanti e comandi
@@ -73,9 +72,9 @@ In fondo alla scheda: **Elimina modificatore** a sinistra, **Annulla** e **Salva
 ### Creare il modificatore «EXTRA» che costa una volta e mezza
 
 1. Tocca **+ Nuovo modificatore**.
-2. In **Descrizione \*** scrivi EXTRA, in **Sigla** EX.
+2. In **Descrizione \*** scrivi EXTRA.
 3. Nel campo **×** scrivi 1,5.
-4. Tocca **Salva**. Nell'elenco compare EXTRA con «Molt. 1,5 - sigla EX».
+4. Tocca **Salva**. Nell'elenco compare EXTRA con «Molt. 1,5».
 
 ### Cambiare l'ordine dei pulsanti d'intensità
 

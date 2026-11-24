@@ -104,7 +104,7 @@ titolo, e resta a video finché non lo risolvi.
 | *Accesso non riuscito.* (con il dettaglio) | Il servizio non ha risposto alla verifica. | Riprova; se persiste controlla la rete del palmare. |
 | *Impossibile leggere gli operatori dal server. Controlla la connessione e le impostazioni del backend.* (con il dettaglio) | Il servizio non risponde o il collegamento non è giusto. | Tocca **RIPROVA**; se non basta tocca **IMPOSTAZIONI BACKEND** e controlla la Connessione. |
 | *Il backend risponde ma non conosce l'accesso operatori: va aggiornato…* | Il servizio del locale è più vecchio dell'app. | Fai aggiornare il servizio: fino ad allora non si entra. |
-| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Impostazioni - Operatori) prima di poter entrare.* | Il locale non ha operatori attivi. | Crea almeno un operatore dalla cassa, in Menu ▸ [Operatori](../cassa/operatori.md) (non nelle Impostazioni), poi chiudi e riapri l'app: qui non c'è un pulsante per rileggere l'elenco. |
+| *Nessun operatore attivo in anagrafica. Creane uno dalla cassa (Menu ▸ Operatori) prima di poter entrare.* | Il locale non ha operatori attivi. | Crea almeno un operatore dalla cassa, in Menu ▸ [Operatori](../cassa/operatori.md), poi chiudi e riapri l'app: qui non c'è un pulsante per rileggere l'elenco. |
 
 ## Note
 

@@ -140,7 +140,9 @@ aggiorna mentre stai facendo uno spostamento, un'unione o una separazione.
 1. Se serve, tocca il campo della sala e scegli la sala.
 2. Tocca il tavolo libero.
 3. Alla domanda *Quanti coperti?* scegli i coperti con **−** e **+** e tocca **Occupa il tavolo**.
-   Con **Annulla** torni in sala e il tavolo resta libero.
+   Con **Annulla** torni in sala e il tavolo resta libero. Puoi scegliere più coperti dei posti
+   massimi del tavolo: sotto il numero compare un avviso, ma i coperti restano quelli scelti. Poi
+   unisci un tavolo accanto.
 4. Si apre la [Comanda](comanda.md) del tavolo; tornando in sala il tavolo è viola (**Occupato**).
 
 ### Spostare un piatto su un altro tavolo
@@ -214,7 +216,8 @@ unito senza spostarci niente.
 | *Il tavolo 5 e' gia' unito a un altro conto: parti dal tavolo che tiene il conto.* | Unione o separazione partendo da un tavolo unito. | Parti dal tavolo principale. |
 | *Il tavolo 7 non ha un conto aperto.* | Unione o separazione partendo da un tavolo libero. | Scegli un tavolo con un conto aperto. |
 | *Il tavolo di partenza non ha una comanda aperta.* | Spostamento di un tavolo senza conto. | Scegli un tavolo aperto. |
-| *6 coperti non stanno sul tavolo Finestra: ha al massimo 4 posti.* | Il tavolo di destinazione ha meno posti dei coperti. Nella separazione il messaggio aggiunge *Scegli un altro tavolo.* | Scegli un tavolo più grande, oppure unisci prima un altro tavolo. |
+| *Il tavolo ha 4 posti: va bene lo stesso, ma serve un altro tavolo accanto (Unisci dalla mappa).* | Aprendo il tavolo hai scelto più coperti dei suoi posti massimi. Non impedisce di occupare il tavolo. | Tocca **Occupa il tavolo**, poi unisci un tavolo accanto. |
+| *Il tavolo Finestra ha 4 posti e ora ha 6 coperti: serve un altro tavolo accanto (Unisci), o alza i posti massimi in Impostazioni -> Sale.* | Hai spostato o separato su un tavolo con meno posti dei coperti. L'operazione è già fatta: è solo un avviso. | Unisci un tavolo accanto, o fai alzare i posti dalla cassa. |
 | *Su questo tavolo non c'e' niente da separare.* | Il conto non ha né piatti né coperti da spostare. | Nessuna. |
 | *Scegli almeno una riga o qualche coperto da separare.* | **Scegli il tavolo** senza aver scelto nulla. | Spunta almeno un piatto o un coperto. |
 | *Impossibile spostare il tavolo.* / *Impossibile unire i tavoli.* / *Impossibile separare il tavolo.* | Il servizio ha rifiutato l'operazione; sotto compare il motivo (es. tavolo di destinazione già occupato). | Leggi il motivo, scegli un altro tavolo e riprova. |

@@ -112,8 +112,10 @@ Sotto la voce **Connessione**, a sinistra, si legge l'esito dell'ultima prova (p
 
 Sul PC del servizio la cassa installata dal setup (postazione **Server**) trova la connessione già
 pronta: al primo avvio si collega da sola come **RISTO**. Lo fa una volta sola e mai sopra una
-connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano. Su ogni
-altro dispositivo l'indirizzo del servizio si scrive a mano.
+connessione già salvata; cucina e kiosk, anche sullo stesso PC, si collegano a mano.
+
+Su ogni altro dispositivo l'indirizzo del servizio si scrive sempre a mano: la cassa non lo cerca
+da sola.
 
 ### Sala
 
@@ -370,14 +372,13 @@ L'elenco dei terminali vale per tutto l'impianto; quale terminale usa questa cas
 | **Descrizione** | Il nome che vedi in elenco, per esempio *POS banco*. |
 | **ID terminale** | Il codice del terminale scritto sul POS (per esempio `00000001`); non è il **Numero**. |
 | **Indirizzo IP** / **Porta** | Dove si trova il terminale in rete. Porta proposta: `10000`. |
-| **ID cassa** (riquadro **Su questa cassa**) | Il numero con cui questa cassa si presenta al terminale. Proposto `1`. |
+| **ID cassa** (riquadro **Su questa cassa**) | Il numero con cui questa cassa si presenta al terminale: il POS lo stampa sulla ricevuta, e serve a capire da quale cassa è partito un pagamento. Solo cifre, al massimo 8. Proposto `1`; con più casse sullo stesso terminale dai a ciascuna un numero diverso. I kiosk si presentano da soli come `900` più il loro numero (`901`, `902`...). |
 | **Questa cassa incassa le carte su** | In fondo al pannello: il terminale in uso, oppure *Nessun terminale: le carte si battono a mano sul POS*. Lo stesso testo compare sotto la voce, a sinistra. |
 
 L'**ID cassa** serve solo al pagamento con la carta: è il codice con cui la cassa si presenta al
-terminale a ogni pagamento e compare sulle ricevute e sui riepiloghi del POS. Scrivilo in cifre,
-al massimo 8: la cassa lo completa con zeri a sinistra (`1` diventa `00000001`). Due casse sullo
-stesso terminale funzionano anche con lo stesso numero; dare un numero diverso a ciascuna serve a
-distinguerle sulle ricevute del POS.
+terminale a ogni pagamento e compare sulle ricevute e sui riepiloghi del POS. La cassa lo completa
+con zeri a sinistra (`1` diventa `00000001`). Due casse sullo stesso terminale funzionano anche con
+lo stesso numero; dare un numero diverso a ciascuna serve a distinguerle sulle ricevute del POS.
 
 Al momento si gestiscono solo i terminali POS standard collegati in rete; i POS in cloud (per
 esempio SumUp) non si configurano da qui.
@@ -440,9 +441,8 @@ Sotto il titolo compare il nome della ditta; sotto la voce, a sinistra, si legge
 **Fattura**, **Invio SdI**, **IVA e scontrini**, **Posta e SMS** e **OpenAPI**. Sono i dati della
 ditta di Facile: valgono per tutto l'impianto e, cambiati qui, cambiano anche in Facile.
 
-Ogni linguetta ha in fondo il suo pulsante di salvataggio (**Salva dati ditta** nella linguetta
-**Ditta**, **Salva** nelle altre): tutti salvano **insieme i dati di tutte le linguette**, non solo
-quelli della linguetta aperta. Sotto il pulsante compare l'esito: *Dati della ditta salvati: la
+Ogni linguetta ha in fondo il suo pulsante **Salva dati ditta**: tutti salvano **insieme i dati di
+tutte le linguette**, non solo quelli della linguetta aperta. Sotto il pulsante compare l'esito: *Dati della ditta salvati: la
 fattura elettronica ha tutto quello che le serve.* oppure *Dati della ditta salvati. Restano 2 cose
 da sistemare per la fattura elettronica.*
 
@@ -461,12 +461,13 @@ aggiornato.*): fai aggiornare il servizio.
 | **Ragione sociale**, **Ragione sociale (seconda riga)** | Il nome della ditta come va in fattura (fino a 45 caratteri per riga). Per una persona fisica che non è ditta individuale le due caselle diventano **Cognome** e **Nome**. |
 | **Partita IVA**, **Codice fiscale** | 11 e 16 caratteri al massimo. La partita IVA è anche l'utente dell'invio allo SdI. |
 | **Regime fiscale** (riquadro **Sede**) | Tocca per scegliere da un elenco (da *RF01 Ordinario* a *RF19 Regime forfettario*). Se manca: *Non impostato: la fattura elettronica non esce*. |
-| **Indirizzo**, **CAP**, **Città**, **Prov.** | Il domicilio fiscale della ditta, quello che va in fattura (nel gestionale Facile è la linguetta *Domicilio - Titolare* della ditta), non la sede legale. CAP di 5 cifre, provincia di 2 lettere. |
+| **Indirizzo**, **CAP**, **Città**, **Prov.** | La sede legale della ditta, cioè l'indirizzo che va nella fattura elettronica. Nel gestionale Facile sono i campi del domicilio fiscale (linguetta *Domicilio - Titolare* della ditta). CAP di 5 cifre, provincia di 2 lettere. |
 | **Nazione** | *Vuota vale Italia. Fuori dall'Italia la provincia non serve.* |
 | **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 Il codice di **Natura** giuridica è quello della tabella dell'Agenzia delle Entrate (Tabella B
-delle istruzioni del modello Redditi): i più comuni sono **1** società in accomandita per azioni,
+delle istruzioni del modello Redditi; la stessa tabella è nelle
+[istruzioni del modello 770](https://www1.agenziaentrate.gov.it/modulistica/dichiarazione/1997/modelli/770/770ter6.pdf)): i più comuni sono **1** società in accomandita per azioni,
 **2** società a responsabilità limitata, **3** società per azioni, **24** società in nome
 collettivo, **25** società in accomandita semplice. Sono validi i codici da 1 a 44 e da 50 a 58;
 per gli altri chiedi al commercialista. Con 1, 2 e 3 serve anche il capitale sociale, con 2 anche
@@ -488,7 +489,7 @@ il socio unico.
 | **Cod. dest.** | Il codice destinatario della ditta, 7 caratteri. *PEC e codice destinatario della ditta valgono per i clienti che non hanno né l'uno né l'altro.* |
 | **NORMALE** / **80 COLONNE** (riquadro **Stampa della fattura**) | Come esce la copia della fattura sulla stampante di cassa di questa postazione. **NORMALE**: *Il testo della fattura, come il preconto.* **80 COLONNE**: la fattura impaginata da un modello Crystal da 80 mm. *Vale subito per questa postazione.* |
 | **modello** | Solo con **80 COLONNE**: il numero del modello Crystal da 80 mm, per esempio 60001; vuoto, vale quello impostato sulla ditta in Facile. |
-| **Salva** | Salva sul servizio i dati di tutte le linguette. |
+| **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 Coperto e abbuono, che prima stavano in questa linguetta, ora sono in
 [Sala](#sala), linguetta **Coperto e conto**.
@@ -506,7 +507,7 @@ Il collegamento con Digithera, che trasmette le fatture elettroniche allo SdI.
 | **TLS**, **Passivo** | **SI'** / **NO**. La fattura parte verso il server con un collegamento FTP: **TLS** lo cifra, **Passivo** usa la modalità passiva, quella che passa dai firewall e dai router. |
 | Riga della password | *Password presente: la manda il server delle licenze a ogni controllo del credito.* oppure *Password non ancora arrivata: la manda il server delle licenze al primo invio.* La password non si scrive qui. |
 | **Per l'invio allo SdI** | *Tutto a posto: le fatture possono partire.* oppure, in giallo, l'elenco di cosa manca. Sotto: *L'utente dell'invio è la partita IVA della ditta: la trovi nella linguetta Ditta.* e *Ogni invio consuma un credito: il server delle licenze lo controlla prima di trasmettere.* |
-| **Salva** | Salva sul servizio i dati di tutte le linguette. |
+| **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 Codice di abilitazione, server, porta e le scelte **TLS** e **Passivo** li fornisce RSA con il
 servizio di invio delle fatture elettroniche, come la password e il credito degli invii.
@@ -521,7 +522,7 @@ servizio di invio delle fatture elettroniche, come la password e il credito degl
 | **Aliquota di somministrazione** | Tocca per scegliere l'aliquota (di solito l'IVA al 10%); *Nessuna: scegli l'aliquota* se non scelta. Deve avere il reparto della stampante fiscale e una percentuale maggiore di zero. Si salva anche a interruttore spento. |
 | **Registro degli scontrini** (riquadro **Scontrini**) | Tocca per scegliere il registro (da **A** a **Z**, poi da **AA** a **ZZ**). *Ogni registro ha la sua numerazione. È il «Registro Scontrini» di Facile: cambiarlo qui lo cambia anche lì.* |
 | **Deposito della disponibilità** (riquadro **Disponibilità**) | Il deposito di Facile da cui la cassa prende l'esistenza degli articoli gestiti a magazzino che non hanno una riga in [Disponibilità](disponibilita.md#lesistenza-di-magazzino): l'esistenza di quel deposito, tolti l'ordinato dei clienti, l'impegnato e i piatti già partiti in cucina. Di partenza *Quello della ditta* (con il nome del deposito). Non è il deposito attivo della ditta, da cui gli scontrini scaricano: se ne scegli un altro, le vendite della cassa non lo fanno scendere. *A zero l'articolo risulta esaurito solo se in Facile è acceso il blocco delle vendite sotto esistenza.* |
-| **Salva** | Salva sul servizio i dati di tutte le linguette. |
+| **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 #### Posta e SMS
 
@@ -530,12 +531,12 @@ servizio di invio delle fatture elettroniche, come la password e il credito degl
 | Elemento | Descrizione |
 |---|---|
 | **Invio per email** | *La casella da cui parte la copia della fattura per il cliente.* |
-| **Server**, **Porta** | Il server di posta in uscita (per esempio `smtp.esempio.it`) e la porta (per esempio `587`). |
+| **Server**, **Porta** | Il server di posta in uscita (per esempio `smtp.esempio.it`) e la porta: nella casella si legge *es. 587*, ma vuota la porta non è impostata e va scritta. |
 | **Utente**, **Password** | Le credenziali della casella. Sotto la password: *Non impostata*, *Impostata - lascia vuoto per non cambiarla* oppure *Verra' sostituita al salvataggio*. |
 | **SSL**, **TLS** | **SI'** / **NO**, secondo quanto richiede il fornitore della posta. |
 | Avviso in giallo | *La copia per email non partirebbe:* seguito da cosa manca. |
 | **Mittente** (riquadro **SMS**) | Il nome che compare come mittente degli SMS ai clienti (fino a 45 caratteri). *Gli SMS partono con OpenAPI: il token si imposta nella linguetta OpenAPI.* |
-| **Salva** | Salva sul servizio i dati di tutte le linguette. |
+| **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 #### OpenAPI
 
@@ -545,7 +546,7 @@ servizio di invio delle fatture elettroniche, come la password e il credito degl
 |---|---|
 | **Token** | Il token del servizio OpenAPI. Non viene mai rimostrato; sotto si legge *Non impostato.*, *Impostato - lascia vuoto per non cambiarlo.* oppure *Verra' sostituito al salvataggio.* Se in Facile gli SMS partono con un altro fornitore: *Non impostato. Facile manda gli SMS con un altro fornitore: salvando un token passano a OpenAPI.* |
 | **A cosa serve** | *Un solo token per tutti i servizi OpenAPI della ditta: gli SMS ai clienti e la ricerca della partita IVA.* e *Lo trovi nell'area OAuth di console.openapi.com. È lo stesso che usa Facile: cambiarlo qui lo cambia anche lì.* |
-| **Salva** | Salva sul servizio i dati di tutte le linguette. |
+| **Salva dati ditta** | Salva sul servizio i dati di tutte le linguette. |
 
 !!! warning "Un token nuovo vale anche per Facile"
 
@@ -600,7 +601,10 @@ stampante termica) è in [Configurazione del kiosk](../kiosk/configurazione.md).
 
 *Un tasto solo: produzione delle distinte, chiusura della cassa e Z, in quest'ordine.* La fine
 giornata vale per tutto l'impianto: si fa da una sola cassa, per tutte le casse e tutte le
-stampanti fiscali. Il pannello non chiede un PIN: chi apre le Impostazioni può chiudere la giornata.
+stampanti fiscali. La fa solo un operatore con il permesso **Puo' fare la fine giornata (chiusura
+cassa e Z)** (scheda [Operatori](operatori.md)): lo stesso permesso serve per **Correggi cassa**.
+Dopo l'aggiornamento il permesso è spento per tutti: il titolare lo deve dare a chi chiude la
+giornata.
 
 In alto c'è il giorno da chiudere, sotto le tre fasi affiancate, ciascuna con il suo numero (**1**,
 **2**, **3**), il suo stato e quello che farà. In fondo i pulsanti e la riga dell'esito.
@@ -647,11 +651,13 @@ Il riepilogo degli incassi del giorno, di tutto il locale, e la conta del casset
 | **Atteso nel cassetto** | Fondo più contanti incassati; sotto: *fondo + contanti incassati (€ …)*. |
 | **Contanti contati** | Obbligatorio: i contanti che hai contato nel cassetto. |
 | Differenza | Sotto la conta: *Eccedenza € …*, *Ammanco € …* oppure *Cassa in pari*. |
-| Riga dello stato | *Conta il cassetto e scrivi i contanti.* prima; *Chiusa alle 23:40 da …* dopo, con il nome dell'utente con cui la cassa è collegata al servizio (non l'operatore in turno). Chiusa la cassa, **Fondo cassa** e **Contanti contati** non si modificano più. |
+| Riga dello stato | *Conta il cassetto e scrivi i contanti.* prima; *Chiusa alle 23:40 da …* dopo, con il nome dell'operatore in turno che ha chiuso. Dopo una correzione: *Corretta alle 23:55 da …. Motivo: ….* Chiusa la cassa, **Fondo cassa** e **Contanti contati** si modificano solo con **Correggi cassa**. |
+| **Motivo della correzione** | Compare solo dopo **Correggi cassa**, con i pulsanti **Salva correzione** e **Annulla**. Obbligatorio: resta nel registro delle chiusure. |
 
-La chiusura cassa è una sola per tutto il locale: l'atteso somma i contanti incassati da tutte le
-casse. Con più cassetti, scrivi in **Fondo cassa** la somma dei fondi e in **Contanti contati** la
-somma di quanto conti in tutti i cassetti.
+!!! note "Più casse, più cassetti"
+    La chiusura cassa è una sola per tutto il locale: l'atteso somma i contanti incassati da
+    **tutte le casse**. Con più casse, ognuna col suo cassetto, conta tutti i cassetti insieme e
+    scrivi la somma in **Contanti contati**; anche il **Fondo cassa** è la somma dei fondi.
 
 **3 · Chiusura fiscale (Z)**
 
@@ -662,11 +668,13 @@ stampante adesso, non quel giorno.*
 | Elemento | Descrizione |
 |---|---|
 | Riga dello stato | *La Z sulla stampante fiscale.* / *La Z su tutte le 2 stampanti fiscali.* prima; *Z fatta alle 23:45.* dopo; *Z non riuscita alle 23:45: si riprova col tasto.* se qualche stampante non si è chiusa; *Nessuna stampante fiscale sull'impianto.* |
-| Una riga per stampante | *n. 1 · Banco* con *Da chiudere.* prima e, dopo, l'esito: **CHIUSA** (*Chiusa: azzeramento n. …*), **NON CHIUSA** con il motivo, oppure **SALTATA**. Una stampante senza indirizzo non si chiude e non conta come errore (*Senza indirizzo: si salta.*, poi *Saltata: manca l'indirizzo.*). Due stampanti con lo **stesso indirizzo** sono la stessa stampante fisica: la Z si fa una volta sola e la seconda dice *Stessa stampante della n. 1: chiusa con quella.* Una stampante spenta non ferma le altre. |
+| Una riga per stampante | *n. 1 · Banco* con *Da chiudere.* prima e, dopo, l'esito: **CHIUSA** (*Chiusa: azzeramento n. …*, oppure *Z uscita: confermata a mano da ….* quando l'ha confermata l'operatore guardando la stampante), **NON CHIUSA** con il motivo, oppure **SALTATA**. Una stampante senza indirizzo non si chiude e non conta come errore (*Senza indirizzo: si salta.*, poi *Saltata: manca l'indirizzo.*). Due stampanti con lo **stesso indirizzo** sono la stessa stampante fisica: la Z si fa una volta sola e la seconda dice *Stessa stampante della n. 1: chiusa con quella.* Una stampante spenta non ferma le altre. |
 
 **Cosa succede quando tocchi Chiudi la giornata**
 
-1. Se la cassa del giorno non è ancora chiusa, la cassa controlla che **Contanti contati** sia scritto.
+1. La cassa controlla che l'operatore in turno abbia il permesso **Puo' fare la fine giornata
+   (chiusura cassa e Z)**. Se la cassa del giorno non è ancora chiusa, controlla anche che
+   **Contanti contati** sia scritto.
 2. Una conferma riassume cosa succederà, fase per fase (per esempio *2. Cassa: atteso € 350,00,
    contati € 348,50 (ammanco € 1,50).*), con in testa l'avviso dei conti ancora aperti.
 3. Il servizio fa le tre fasi in ordine e **si ferma alla prima che non riesce**: se la produzione
@@ -674,16 +682,29 @@ stampante adesso, non quel giorno.*
 4. Toccando di nuovo **Chiudi la giornata** le fasi già fatte si saltano: la cassa non si richiude,
    la Z non si ripete se era riuscita. La produzione invece si rifà sempre, ma produce solo la
    differenza (per esempio i piatti venduti dopo).
-5. Se la Z non è riuscita su qualche stampante, al nuovo tocco si ripete su **tutte** le stampanti,
-   anche su quelle già chiuse (una seconda chiusura a importo zero, senza danni).
-6. Appena la cassa si chiude, il riepilogo della chiusura cassa (incassi per pagamento, per
+5. Se la Z non è riuscita su qualche stampante, al nuovo tocco si rifà **solo sulle stampanti non
+   ancora chiuse**: quelle già chiuse restano **CHIUSA** e non fanno un secondo azzeramento.
+6. Se di una stampante non si sa se la Z è uscita (per esempio la risposta si è persa a metà), la
+   cassa non la rifà da sola: al nuovo tocco chiede, stampante per stampante, *Su … non si sa se
+   la Z e' uscita (…). Guarda la stampante: c'e' lo scontrino dell'azzeramento di oggi?* con tre
+   risposte:
+    - **Si', e' uscita**: la Z non si rifà e la stampante diventa **CHIUSA** (*Z uscita: confermata
+      a mano da ….*);
+    - **No, rifalla**: la Z si rifà su quella stampante;
+    - **Non lo so**: la Z non si rifà e la stampante resta **NON CHIUSA**; la domanda torna al
+      tocco successivo.
+7. Appena la cassa si chiude, il riepilogo della chiusura cassa (incassi per pagamento, per
    documento e per operatore, fondo, contanti, atteso, contati, eccedenza o ammanco) esce sulla
    [stampante di cassa](#stampante-di-cassa) di questa postazione.
 
-!!! warning "La chiusura cassa non si rifà"
+**Correggere la chiusura cassa**
 
-    Chiusa la cassa di un giorno, fondo e contanti contati restano quelli scritti: non c'è un
-    comando per correggerli o riaprire la cassa. Conta con calma prima di confermare.
+Chiusa la cassa, **Fondo cassa** e **Contanti contati** si possono ancora correggere con **Correggi
+cassa** (serve lo stesso permesso della fine giornata), per esempio se il cassetto è stato contato
+male. La correzione rilegge gli incassi del giorno, anche quelli dei conti chiusi dopo la chiusura,
+e rifà la chiusura cassa con la conta nuova; la chiusura di prima resta nel registro delle chiusure,
+con chi l'ha corretta, quando e perché. Produzione e Z non si toccano. La procedura è in
+[Correggere la chiusura cassa](#correggere-la-chiusura-cassa).
 
 ### Controllo
 
@@ -782,7 +803,7 @@ licenza è bloccata). È descritto nella scheda [Licenza digitale](../introduzio
 | **FINE RICARICA** | Nella finestra della ricarica: chiude la ricarica. |
 | **Contanti a mano** | Questa cassa non usa più nessuna macchina: i contanti si incassano a mano. |
 | **Ditta** / **Fattura** / **Invio SdI** / **IVA e scontrini** / **Posta e SMS** / **OpenAPI** (Dati ditta) | Passano da una linguetta all'altra. |
-| **Salva dati ditta** / **Salva** (Dati ditta) | Salvano sul servizio i dati di **tutte** le linguette dei dati della ditta. |
+| **Salva dati ditta** (Dati ditta) | In ogni linguetta: salva sul servizio i dati di **tutte** le linguette dei dati della ditta. |
 | **Società** / **Persona fisica** (Dati ditta ▸ Ditta) | Dicono che cos'è la ditta; con **Persona fisica** compare **Ditta individuale**. |
 | **SI'** / **NO** (Dati ditta) | Accendono o spengono l'interruttore accanto: iscrizione al registro delle imprese, socio unico, in liquidazione, TLS e passivo dell'invio SdI, IVA di somministrazione, SSL e TLS della posta. |
 | **Salva menu in vendita** (Sala) | Salva per questa cassa i menu scelti. |
@@ -797,6 +818,9 @@ licenza è bloccata). È descritto nella scheda [Licenza digitale](../introduzio
 | Giorno sotto *Venduto ancora da produrre anche in:* (Fine giornata) | Passa a quel giorno. |
 | **Chiudi la giornata** (Fine giornata) | Dopo una conferma fa, in ordine, la produzione delle distinte, la chiusura della cassa (con la stampa del riepilogo) e la Z di tutte le stampanti fiscali, fermandosi alla prima fase che non riesce. Ritoccato salta le fasi già fatte. |
 | **Ristampa cassa** (Fine giornata) | Compare con la cassa chiusa: ristampa il riepilogo della chiusura cassa sulla stampante di cassa (*Chiusura cassa ristampata.*). |
+| **Correggi cassa** (Fine giornata) | Compare con la cassa chiusa; serve il permesso **Puo' fare la fine giornata (chiusura cassa e Z)**. Riapre **Fondo cassa** e **Contanti contati** e fa comparire **Motivo della correzione** (*Correggi fondo e contanti contati, scrivi il motivo e salva: gli incassi si rileggono.*). Durante la correzione **Chiudi la giornata** è spento. |
+| **Salva correzione** (Fine giornata) | Dopo una conferma rilegge gli incassi, rifà la chiusura cassa con fondo e contati nuovi e ristampa il riepilogo sulla stampante di cassa (*Chiusura cassa corretta.*). La chiusura di prima resta nel registro. |
+| **Annulla** (Fine giornata, correzione) | Lascia la correzione e rimette fondo e contati della chiusura salvata. |
 | **Aggiorna** (Fine giornata) | Rilegge dal servizio lo stato del giorno mostrato. La conta già scritta resta. |
 | **Imposta il PIN** (Controllo) | Imposta il primo PIN del titolare e apre il registro. |
 | **Apri il registro** (Controllo) | Apre il registro con il PIN scritto. |
@@ -883,6 +907,19 @@ Se una fase si ferma, la cassa mostra *La giornata non e' chiusa del tutto.* con
 fase diventa **DA SISTEMARE**. Sistema la causa (per esempio accendi la stampante fiscale rimasta
 spenta) e tocca di nuovo **Chiudi la giornata**: le fasi già fatte non si ripetono.
 
+### Correggere la chiusura cassa
+
+1. Tocca **Fine giornata** e, se serve, vai al giorno da correggere con le frecce.
+2. Tocca **Correggi cassa**: **Fondo cassa** e **Contanti contati** tornano modificabili e compare
+   **Motivo della correzione**.
+3. Correggi il fondo o i contanti contati: sotto si aggiorna la differenza.
+4. Scrivi il motivo (per esempio *contati due volte i 50 euro*).
+5. Tocca **Salva correzione**.
+6. Leggi la conferma (*La chiusura cassa si rifa' con fondo … e contati …, rileggendo gli incassi.
+   Quella di prima resta nel registro.*) e tocca **Correggi**.
+7. Dalla stampante di cassa esce il riepilogo nuovo e la riga dello stato diventa *Corretta alle
+   … da …. Motivo: ….*
+
 ### Chiudere un giorno passato
 
 1. Tocca **Fine giornata**.
@@ -958,10 +995,16 @@ spenta) e tocca di nuovo **Chiudi la giornata**: le fasi già fatte non si ripet
 | *Conta i contanti nel cassetto e scrivili in «Contanti contati»: senza la conta la cassa non si chiude.* | **Chiudi la giornata** con **Contanti contati** vuoto, mentre la cassa del giorno è ancora da chiudere. | Conta il cassetto e scrivi l'importo. |
 | *Il fondo cassa non e' un importo valido.* | **Fondo cassa** scritto male o negativo. | Scrivi un importo, per esempio `100` o `100,00`. |
 | *La giornata non e' chiusa del tutto.* (con il motivo) | Una fase non è riuscita: le fasi dopo non si sono fatte. Il motivo è anche nella fase segnata **DA SISTEMARE**. | Sistema la causa e tocca di nuovo **Chiudi la giornata**. |
-| *La Z non e' riuscita su tutte le stampanti: il motivo e' accanto a ciascuna.* | Qualche stampante fiscale non si è chiusa (spenta, senza carta, in errore). | Leggi il motivo sotto la stampante **NON CHIUSA**, sistemala e tocca di nuovo **Chiudi la giornata**: la Z si ripete su tutte. |
+| *La Z non e' riuscita su tutte le stampanti: il motivo e' accanto a ciascuna.* | Qualche stampante fiscale non si è chiusa (spenta, senza carta, in errore). | Leggi il motivo sotto la stampante **NON CHIUSA**, sistemala e tocca di nuovo **Chiudi la giornata**: la Z si rifà solo sulle stampanti non chiuse. |
+| *Su alcune stampanti non si sa se la Z e' uscita: controlla lo scontrino dell'azzeramento e ripremi.* | Su qualche stampante la risposta della Z si è persa: l'azzeramento può essere uscito o no. | Guarda sulla stampante se c'è lo scontrino dell'azzeramento di oggi, poi tocca di nuovo **Chiudi la giornata** e rispondi alla domanda della cassa. |
+| *Su … non si sa se la Z e' uscita (…). Guarda la stampante: c'e' lo scontrino dell'azzeramento di oggi?* (finestra **Z da controllare**) | **Chiudi la giornata** ritoccato dopo una Z incerta. | **Si', e' uscita** se lo scontrino c'è, **No, rifalla** se non c'è, **Non lo so** per lasciarla in sospeso. |
+| *… non e' abilitato a fare la fine giornata. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* (e *… a correggere la chiusura cassa.*) | **Chiudi la giornata**, **Correggi cassa** o **Salva correzione** senza il permesso **Puo' fare la fine giornata (chiusura cassa e Z)**. | Fallo fare a un operatore abilitato, o dai il permesso in [Operatori](operatori.md). |
+| *Scrivi i contanti contati nel cassetto.* | **Salva correzione** con **Contanti contati** vuoto. | Scrivi l'importo. |
+| *Scrivi il motivo della correzione: resta nel registro delle chiusure.* | **Salva correzione** senza motivo. | Scrivi il motivo. |
+| *Correzione non riuscita:* … (con *Correzione della chiusura cassa non riuscita.*) | Il servizio non ha accettato la correzione o non ha risposto. | Leggi il dettaglio, tocca **Aggiorna** e riprova. |
 | *Produzione delle distinte non riuscita:* … | La produzione in Facile non è andata a buon fine. Se invece il motivo parla delle causali di produzione, mancano nella ditta di Facile. | Leggi il dettaglio; sistema le causali in Facile e riprova. |
 | *Venduto non letto:* … / *Incassi non letti:* … | Il servizio non è riuscito a leggere il venduto o gli incassi del giorno. | Tocca **Aggiorna**; se insiste, controlla il servizio. |
-| *La chiusura cassa e' registrata ma non e' uscita sulla stampante di cassa: usa Ristampa.* | La cassa è chiusa ma la stampante di cassa non ha stampato il riepilogo. | Controlla la stampante e tocca **Ristampa cassa**. |
+| *La chiusura cassa e' registrata ma non e' uscita sulla stampante di cassa: usa «Ristampa cassa».* | La cassa è chiusa ma la stampante di cassa non ha stampato il riepilogo. | Controlla la stampante e tocca **Ristampa cassa**. |
 | *Chiusura non riuscita:* … (con *Chiusura della giornata non riuscita.*) | Il servizio non ha risposto alla chiusura. | Tocca **Aggiorna** per vedere quali fasi sono fatte, poi riprova. |
 | *Il servizio non ha ancora la fine giornata: va aggiornato.* | Il servizio è di una versione precedente alla fine giornata. | Fai aggiornare il servizio. |
 | *Giornata non letta:* … | Il servizio non ha risposto. | Controlla la **Connessione** e tocca **Aggiorna**. |

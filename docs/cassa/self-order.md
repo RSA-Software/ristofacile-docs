@@ -1,6 +1,6 @@
 ---
 title: Self order
-description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, PIN del tavolo, asporto online con ritiro e pagamento dal link, avvisi in sala, conto con i pagamenti dal telefono.
+description: Ordini e pagamenti dal telefono del cliente al tavolo - accensione, pausa, codici QR e cartoncini, PIN del tavolo, asporto online con ritiro e pagamento dal link, fornitore e chiavi del pagamento (Nexi XPay, SumUp, Revolut, Dojo), avvisi in sala, conto con i pagamenti dal telefono.
 app: Cassa
 percorso: Menu ▸ Impostazioni ▸ Self order
 pagina: ImpostazioniPage (pannello Self order, SelfOrderPannello)
@@ -51,20 +51,28 @@ minuti di preparazione, chi ordina alle 19:10 può scegliere il ritiro dalle 19:
   [Pubblicare il self order su internet](../appendici/self-order-internet.md)).
 - I piatti che il cliente vede sono quelli dei menu scelti nel [Sito del menu](sito-menu.md), linguetta **Menu e note**, e salvati con **Salva**: sistemalo prima.
 - Sale e tavoli devono esistere (vedi [Sale e tavoli](sale-e-tavoli.md)).
-- Per il pagamento dal telefono il servizio deve avere configurato Nexi.
+- Per il pagamento dal telefono serve un conto presso uno dei fornitori di pagamento: **Nexi XPay**,
+  **SumUp**, **Revolut** o **Dojo**. Le sue chiavi si scrivono nella linguetta **Pagamento** di
+  questa schermata (vedi [Scegliere il fornitore del pagamento](#scegliere-il-fornitore-del-pagamento)),
+  e per farlo l'operatore collegato deve avere il permesso **Pagamenti dal telefono** (vedi
+  [Operatori](operatori.md)). Dove si trovano le chiavi nel portale di ogni fornitore è spiegato in
+  [Pubblicare il self order su internet](../appendici/self-order-internet.md#pagamento-dal-telefono).
 - Per l'**asporto online**: il modulo **Asporto online** nella licenza (con la licenza in prova
-  funziona finché dura la prova), Nexi configurato nel servizio (si paga solo con Nexi),
+  funziona finché dura la prova), le chiavi del fornitore scelto nella linguetta **Pagamento**
+  (l'asporto online si paga con lo stesso fornitore del pagamento dal telefono),
   l'**Indirizzo pubblico** scritto nella linguetta **Attivazione** e il tavolo dell'asporto scelto
-  in [Impostazioni ▸ Sala ▸ Tavolo asporto](impostazioni.md#sala).
+  in [Impostazioni ▸ Sala ▸ Tavolo asporto](impostazioni.md#sala). Il tavolo serve solo per
+  accenderlo: per spegnere l'asporto online, o salvarne le impostazioni da spento, non serve.
 
 ## La schermata
 
 ![Self order](../assets/img/cassa/self-order.png)
 
+
 È un pannello delle [Impostazioni](impostazioni.md#self-order): *Ordini dal telefono del cliente,
-col QR sul tavolo. Vale per tutte le casse.* Ha quattro linguette in alto: **Attivazione**,
-**Pausa**, **Codici QR** e **Asporto online**. In basso a sinistra compare l'esito dell'ultima
-operazione.
+col QR sul tavolo. Vale per tutte le casse.* Ha cinque linguette in alto: **Attivazione**,
+**Pausa**, **Codici QR**, **Asporto online** e **Pagamento**. In basso a sinistra compare l'esito
+dell'ultima operazione.
 
 - **Attivazione**: gli interruttori del self order e del pagamento dal telefono, l'indirizzo
   pubblico e i limiti, con il pulsante **Salva**.
@@ -73,6 +81,9 @@ operazione.
 - **Asporto online**: a sinistra il riquadro **Ordini da casa** (accensione, pausa e link per
   ordinare), a destra il riquadro **Ritiro** (orari, giorni di chiusura e fasce); in basso
   **Salva**, **Copia il link** e **Stampa il QR**.
+- **Pagamento**: a sinistra il riquadro **Fornitore del pagamento** (il fornitore con cui paga il
+  cliente, le sue chiavi e, per Nexi XPay e Revolut, l'ambiente di prova), a destra il riquadro
+  **Come funziona** con un promemoria; in basso **Salva**.
 
 ![Linguetta Pausa](../assets/img/cassa/self-order-pausa.png)
 
@@ -80,12 +91,14 @@ operazione.
 
 ![Linguetta Asporto online](../assets/img/cassa/self-order-asporto-online.png)
 
+![Linguetta Pagamento](../assets/img/cassa/self-order-pagamento.png)
+
 ## Campi e indicatori
 
 | Elemento | Descrizione |
 |---|---|
 | **Self order acceso** | Acceso, i telefoni possono vedere il menu e ordinare. Spento, chi inquadra il QR vede il menu in sola lettura: niente ordini, chiamate o pagamenti (sul telefono: *Da qui puoi consultare il menu: per ordinare chiedi al cameriere.*). |
-| **Pagamento dal telefono** | Acceso, nel conto del telefono compaiono **Paga tutto** e **Paga una quota**. Si può accendere solo se il servizio ha configurato Nexi: altrimenti la riga sotto lo dice. |
+| **Pagamento dal telefono** | Acceso, nel conto del telefono compaiono **Paga tutto** e **Paga una quota**. Si può accendere solo se il fornitore scelto nella linguetta **Pagamento** ha le sue chiavi. La riga sotto dice con chi paga il cliente (per esempio *Il cliente paga tutto o una quota con SumUp; lo scontrino si emette alla chiusura del conto, con dentro i pagamenti.*) oppure cosa manca (*Mancano le credenziali di SumUp (linguetta Pagamento): il pagamento dal telefono resta spento.*). |
 | **Indirizzo pubblico** | L'indirizzo con cui i telefoni raggiungono il servizio da internet, per esempio `https://ordina.trattoria.it`. È quello stampato nei QR: se lo cambi vanno ristampati tutti i cartoncini. |
 | **Pezzi per ordine** | Quanti piatti al massimo può mandare un telefono in un solo invio, da 1 a 99 (proposto 15). |
 | **Proxy fidati** | Da compilare solo se lo dice chi ha installato il servizio; altrimenti lascialo vuoto. |
@@ -109,6 +122,17 @@ Nella linguetta **Asporto online**:
 | **Ordini per fascia** | Quanti ordini al massimo per ogni fascia; *0 = senza limite* (è la proposta). Una fascia piena non si può più scegliere. |
 | *Un ordine non pagato entro 20 minuti si annulla da solo.* | Promemoria sotto le fasce. |
 
+Nella linguetta **Pagamento**:
+
+| Elemento | Descrizione |
+|---|---|
+| Riga del permesso | Solo se l'operatore collegato non ha il permesso, in un riquadro ambra: *Serve il permesso «Pagamenti dal telefono» (Menu ▸ Operatori).* Si vedono il fornitore e lo stato, ma le caselle sono spente. Il permesso si dà in [Operatori](operatori.md). |
+| **Fornitore** | Con chi paga il cliente: **Nexi XPay**, **SumUp**, **Revolut** o **Dojo**. Se il servizio non è aggiornato propone solo **Nexi XPay**. Sotto, lo stato del fornitore scelto: *Pronto: il cliente paga con Revolut.* oppure *Mancano le credenziali di Revolut: il pagamento dal telefono non si può accendere.* Se nella casella hai scelto un fornitore diverso da quello in uso, la riga aggiunge *Finché non salvi resta Nexi XPay.* (con il nome di quello in uso). |
+| **Chiave API** (Nexi XPay, SumUp) / **Chiave segreta** (Revolut, Dojo) | La chiave che il fornitore dà nel suo portale. Si scrive ma non si rilegge: si vede solo come pallini, e se il servizio ce l'ha già la casella vuota dice *impostata*. Lasciandola vuota resta quella che c'è. Se cambi fornitore nella casella **Fornitore**, quello che avevi scritto si cancella: la chiave di un fornitore non va mai a un altro. |
+| **Codice esercente** | Solo per SumUp: il codice esercente del conto SumUp. Come la chiave, non si rilegge: se c'è già la casella dice *impostato*. |
+| **Ambiente di prova** | Solo per Nexi XPay e Revolut, **SI** / **NO**: *Acceso, i pagamenti vanno all'ambiente di prova del fornitore, con la sua chiave di prova: nessun addebito vero.* La chiave da scrivere è quella dell'ambiente scelto. SumUp e Dojo non hanno l'interruttore: la prova si fa con la chiave di prova del loro portale. |
+| Riquadro **Come funziona** | Il promemoria: *Le chiavi si prendono dal portale del fornitore. Restano nel servizio, negli stessi file che usa Facile (Utility ▸ Impostazioni Sistemi di Pagamento Elettronico).*, *Le chiavi già scritte non si rileggono: «impostata» vuol dire che c'è già, e lasciando la casella vuota resta quella.*, *SumUp e Dojo hanno un indirizzo solo: la prova si fa con la chiave di prova del loro portale.*, *Un pagamento già partito resta del fornitore che l'ha creato: cambiando fornitore, cambiano solo i pagamenti nuovi.* |
+
 ## Pulsanti e comandi
 
 | Comando | Effetto |
@@ -125,6 +149,8 @@ Nella linguetta **Asporto online**:
 | **Salva** (Asporto online) | Salva accensione, pausa, orari, giorni e fasce sul servizio. Sotto compare *Salvato: l'asporto online e' acceso.*, *Salvato: l'asporto online e' in pausa.* oppure *Salvato: l'asporto online e' spento, il link mostra solo il menu.* |
 | **Copia il link** (Asporto online) | Copia il link per ordinare negli appunti, da incollare sul sito o sui social: *Link copiato.* |
 | **Stampa il QR** (Asporto online) | Prepara il PDF con il QR del link per ordinare, da stampare (per esempio per la vetrina o i volantini). |
+| **SI** / **NO** (Pagamento) | Accende o spegne **Ambiente di prova**; la scelta vale dopo **Salva**. |
+| **Salva** (Pagamento) | Con il permesso **Pagamenti dal telefono**: salva sul servizio le chiavi scritte e l'ambiente, poi fa del fornitore scelto quello del pagamento dal telefono e dell'asporto online. Sotto compare *Salvato: il pagamento dal telefono usa Dojo.*; le caselle delle chiavi si svuotano e dicono *impostata* (quella del **Codice esercente** di SumUp dice *impostato*). Vale per i pagamenti nuovi: quelli già partiti restano del fornitore di prima. |
 
 ## Come si fa
 
@@ -132,10 +158,30 @@ Nella linguetta **Asporto online**:
 
 1. Apri Menu ▸ **Impostazioni** ▸ **Self order**, linguetta **Attivazione**.
 2. Scrivi l'**Indirizzo pubblico** che ti ha dato chi ha installato il servizio.
-3. Accendi **Self order acceso** (e, se vuoi, **Pagamento dal telefono**).
+3. Accendi **Self order acceso** (e, se vuoi, **Pagamento dal telefono**: prima però scegli il
+   fornitore, come spiegato qui sotto).
 4. Tocca **Salva**: sotto compare *Salvato: il self order e' acceso.*
 5. Passa alla linguetta **Codici QR** e tocca **Genera i codici mancanti**.
 6. Tocca **Stampa tutti i cartoncini**, stampa il PDF e metti ogni cartoncino sul suo tavolo.
+
+### Scegliere il fornitore del pagamento
+
+Serve il permesso **Pagamenti dal telefono**. Tieni a portata di mano la chiave che ti ha dato il
+fornitore nel suo portale (per SumUp anche il codice esercente).
+
+1. Apri Menu ▸ **Impostazioni** ▸ **Self order**, linguetta **Pagamento**.
+2. In **Fornitore** scegli il fornitore, per esempio **SumUp**.
+3. Scrivi la **Chiave API** (o la **Chiave segreta**, per Revolut e Dojo); per SumUp scrivi anche il
+   **Codice esercente**.
+4. Con Nexi XPay o Revolut, per una prova senza addebiti veri metti **Ambiente di prova** su **SI**
+   e scrivi la chiave di prova; per i pagamenti veri lascialo su **NO**.
+5. Tocca **Salva**: sotto compare *Salvato: il pagamento dal telefono usa SumUp.* e la riga del
+   fornitore dice *Pronto: il cliente paga con SumUp.*
+6. Se il pagamento dal telefono è ancora spento, passa alla linguetta **Attivazione**, accendi
+   **Pagamento dal telefono** e tocca **Salva**.
+
+Per cambiare fornitore si fa lo stesso: i pagamenti già partiti si chiudono con il fornitore di
+prima (vedi le [Note](#note)).
 
 ### Accendere l'asporto online
 
@@ -206,7 +252,7 @@ clienti quando si siedono.
 | *Senza l'indirizzo pubblico i QR non porterebbero da nessuna parte: scrivilo prima di accendere il self order.* | Hai acceso il self order senza indirizzo. | Scrivi l'**Indirizzo pubblico** e salva. |
 | *L'indirizzo pubblico va scritto intero, per esempio https://ordina.trattoria.it* | L'indirizzo non è completo. | Scrivilo con `https://` davanti. |
 | *I pezzi per ordine vanno da 1 a 99.* | Il limite è fuori misura. | Correggi **Pezzi per ordine**. |
-| *Nexi non e' configurato nel servizio: il pagamento dal telefono non si puo' accendere.* | Il servizio non ha le credenziali di Nexi. | Rivolgiti a chi ha installato il servizio. |
+| *Mancano le credenziali di …: il pagamento dal telefono non si può accendere.* | **Salva** della linguetta **Attivazione** con **Pagamento dal telefono** acceso, ma il fornitore scelto non ha le chiavi nel servizio. | Scrivi le chiavi nella linguetta **Pagamento** (vedi [Scegliere il fornitore del pagamento](#scegliere-il-fornitore-del-pagamento)), poi salva di nuovo. |
 | *Le impostazioni del self order non sono state lette dal servizio: riapri la pagina prima di salvare.* | All'apertura il servizio non ha risposto. | Esci e rientra nella schermata. |
 | *Codice nuovo* — *…: il cartoncino gia' stampato smette di funzionare e i telefoni collegati vanno scollegati. Continuare?* | Stai cambiando il codice di un tavolo. | Conferma con **Cambia codice** solo se ristampi il cartoncino. |
 | *Tavolo in pausa: si riprende da Self order, linguetta Pausa.* | Dopo il blocco di un telefono hai messo in pausa il tavolo. | Riprendi il tavolo dalla linguetta **Pausa**. |
@@ -214,8 +260,8 @@ clienti quando si siedono.
 | *Non riesco a sapere dal servizio se il tavolo ha pagato dal telefono: riprova fra un attimo.* | Il servizio non ha risposto alla domanda sui pagamenti. | Riprova; se insiste, controlla il collegamento. |
 | *Il conto e' cambiato mentre lo incassavi (un ordine dal telefono o un'altra postazione): ricontrolla il totale, ora € …, e premi di nuovo.* | Mentre eri sul conto è arrivato un ordine o un pagamento dal telefono. | Ricontrolla il totale e incassa di nuovo. |
 | *L'asporto online e' un modulo della licenza: chiedilo al rivenditore per poterlo accendere.* | **Salva** con **Asporto online acceso** su **SI**, ma la licenza non comprende il modulo. | Chiedi il modulo al rivenditore. |
-| *Nexi non e' configurato nel servizio (cfg\nexi.json): l'asporto online si paga solo con Nexi e non si puo' accendere.* | Il servizio non ha le credenziali di Nexi. | Rivolgiti a chi ha installato il servizio. |
-| *Configura prima il tavolo asporto in Impostazioni* | **Salva** dell'asporto online senza tavolo dell'asporto su questa cassa. | Scegli il tavolo in Impostazioni ▸ **Sala**, linguetta **Tavolo asporto**. |
+| *Mancano le credenziali di … (linguetta Pagamento): l'asporto online si paga con … e non si può accendere.* | **Salva** dell'asporto online acceso, ma il fornitore del pagamento non ha le chiavi nel servizio. | Scrivi le chiavi nella linguetta **Pagamento**, poi salva di nuovo. |
+| *Configura prima il tavolo asporto in Impostazioni* | **Salva** dell'asporto online acceso senza tavolo dell'asporto su questa cassa. Spento si salva lo stesso, e resta il tavolo che il servizio aveva già. | Scegli il tavolo in Impostazioni ▸ **Sala**, linguetta **Tavolo asporto**. |
 | *Scrivi prima l'indirizzo pubblico nella scheda Attivazione: senza, il link dell'asporto non porta da nessuna parte.* | Hai acceso l'asporto online senza indirizzo pubblico. | Scrivi l'**Indirizzo pubblico** nella linguetta **Attivazione** e salva. |
 | *Gli orari vanno scritti come 12:00-14:30, 19:00-22:30.* | Un orario di ritiro non si legge. | Correggi **Orari di ritiro**. |
 | *Senza orari di ritiro non si puo' ordinare: scrivine almeno uno.* | Asporto online acceso senza orari. | Scrivi almeno un orario. |
@@ -223,6 +269,17 @@ clienti quando si siedono.
 | *Impossibile salvare l'asporto online.* con *Asporto online: …* | Il servizio ha rifiutato i dati: per esempio *Asporto online: due orari si sovrappongono.*, *Asporto online: l'orario 22:00-01:00 finisce prima di cominciare (oltre la mezzanotte non si può).*, *Asporto online: il passo delle fasce va da 5 a 60 minuti.*, *Asporto online: il tempo di preparazione va da 0 a 180 minuti.* | Correggi come dice il messaggio e salva di nuovo. |
 | *Il tavolo asporto (sala 2, tavolo 99) non esiste piu': sceglilo di nuovo in Impostazioni.* | Il tavolo dell'asporto scelto su questa cassa è stato cancellato. | Scegline un altro in Impostazioni ▸ **Sala** ▸ **Tavolo asporto**. |
 | *Impossibile preparare il codice del tavolo asporto:* … | Aprendo la linguetta **Asporto online**, il servizio non ha dato il codice al tavolo dell'asporto. | Controlla la connessione e riapri la linguetta. |
+| *… non e' abilitato a cambiare il pagamento dal telefono. Il permesso si da' dalla cassa, in Menu ▸ Operatori.* | **Salva** della linguetta **Pagamento** senza il permesso **Pagamenti dal telefono**. Il tentativo finisce nel registro del titolare. | Fai salvare a chi ha il permesso, o fattelo dare in [Operatori](operatori.md). |
+| *Prima scrivi le credenziali di ….* | **Salva** della linguetta **Pagamento** su un fornitore senza chiavi, mentre il pagamento dal telefono o l'asporto online sono accesi: si resterebbe senza un fornitore pronto. | Scrivi la chiave (per SumUp anche il codice esercente) e salva. |
+| *Scrivi la Chiave API di ….* / *Scrivi la Chiave segreta di ….* | **Salva** della linguetta **Pagamento** senza la chiave, su un fornitore che nel servizio non l'ha ancora. | Scrivi la chiave e salva. |
+| *Scrivi il Codice esercente di SumUp.* | **Salva** di SumUp senza il codice esercente, che il servizio non ha ancora. | Scrivi il **Codice esercente** e salva. |
+| *Il servizio non sa ancora salvare le credenziali dei pagamenti dalla cassa: va aggiornato.* | Il servizio del locale è di una versione precedente. | Fai aggiornare il servizio; intanto le chiavi si scrivono da Facile (vedi [Pubblicare il self order su internet](../appendici/self-order-internet.md#pagamento-dal-telefono)). |
+| *Impossibile salvare le credenziali di ….* | Il servizio non ha risposto o ha rifiutato le chiavi; sotto compare il dettaglio. | Controlla il collegamento e salva di nuovo. |
+| *Le credenziali di … sono salvate, ma il fornitore del self order non è cambiato.* | Le chiavi sono andate, ma il cambio di fornitore no. | Tocca di nuovo **Salva**: le caselle vuote tengono le chiavi appena salvate. |
+| *Salvato, ma la rilettura dal servizio non è riuscita: riapri la pagina.* (…) | Tutto salvato, ma la cassa non è riuscita a rileggere le impostazioni. | Esci e rientra nella schermata. |
+| *Salvato: il pagamento dal telefono usa …; non ho potuto rileggere le credenziali (…).* | Tutto salvato, ma il servizio non ha potuto rileggere le chiavi: le caselle possono non dire *impostata*. | Riapri la schermata; se il messaggio torna, rivolgiti a chi ha installato il servizio. |
+| *…: non riesco a sapere se il pagamento dal telefono di € … è andato: verifica sul portale … l'ordine ….* (per l'asporto online: *il pagamento online*) | Mezz'ora dopo la scadenza di un link di pagamento il fornitore che l'ha creato non dice ancora com'è andato: le sue chiavi non sono più nel servizio, non risponde, oppure tiene il pagamento in verifica. Il servizio continua a chiederlo e, se il fornitore torna a rispondere, registra da solo il pagamento; ma alla chiusura del conto quel pagamento resta fuori. L'avviso compare in alto con gli avvisi dei telefoni, una volta sola, e resta anche a conto chiuso finché non lo segni come visto, al massimo per 12 ore. | Controlla sul portale del fornitore se il pagamento c'è; se c'è e il conto è già chiuso, rimborsa il cliente. |
+| *Credenziali dei pagamenti non leggibili dal servizio: …* | All'apertura il servizio non è riuscito a leggere le chiavi dei pagamenti, per esempio per un file di impostazioni rovinato: le caselle non dicono *impostata* anche se le chiavi ci sono. | Rivolgiti a chi ha installato il servizio. |
 
 Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 
@@ -232,9 +289,10 @@ Gli avvisi dei telefoni che compaiono in alto su mappa, comanda e conto:
 | ✋ | *… chiama il cameriere* | Vai al tavolo. |
 | 🧾 | *… chiede il conto* | Porta il conto o il preconto. |
 | 💳 | *… ha pagato € … dal telefono* | Niente: il pagamento è già nel conto. |
+| 💳 | *…: non riesco a sapere se il pagamento dal telefono di € … è andato: verifica sul portale … l'ordine ….* | Controlla sul portale del fornitore se il pagamento c'è; se c'è e il conto è già chiuso, rimborsa il cliente. Poi segnalalo come visto. |
 | 🖨 | *Comanda di … dal telefono non stampata: è in cucina sul monitor, ristampala dalla cassa* | Ristampa la comanda dalla cassa. |
 | 💳 | *… ha pagato tutto dal telefono, ma lo scontrino non è uscito (…): emettilo dalla cassa* | Apri il conto ed emetti lo scontrino. |
-| 💶 | *…: € … pagati dal telefono su un conto già chiuso, da rimborsare dal portale Nexi (operazione …)* | Rimborsa il cliente dal portale Nexi. |
+| 💶 | *…: € … pagati dal telefono su un conto già chiuso, da rimborsare dal portale … (operazione …)* (per l'asporto online: *pagati online*) | Rimborsa il cliente dal portale del fornitore che l'avviso nomina (Nexi, SumUp, Revolut o Dojo): è quello con cui il cliente ha pagato, anche se intanto hai cambiato fornitore. |
 | 🔒 | *…: molti PIN sbagliati dal telefono. Se non sono i clienti al tavolo, qualcuno prova a indovinarlo* | Chiedi al tavolo se hanno sbagliato loro; se no, metti il tavolo in pausa dalla linguetta **Pausa**. |
 
 Sul telefono del cliente, per il PIN:
@@ -274,9 +332,37 @@ Sul telefono del cliente, per il PIN:
   ricalcola all'invio: se nel frattempo sono cambiati, il cliente vede il totale nuovo e deve
   confermare di nuovo. Un piatto esaurito non si può ordinare.
 - **Pagamento dal telefono.** Il cliente paga tutto oppure una quota, dividendo il conto per il
-  numero di persone (la quota è arrotondata per eccesso al centesimo). Paga sulla pagina di Nexi:
-  il locale non vede mai la carta. Quando i pagamenti dal telefono coprono tutto il conto, il
+  numero di persone (la quota è arrotondata per eccesso al centesimo). Paga sulla pagina del
+  fornitore scelto nella linguetta **Pagamento** (Nexi XPay, SumUp, Revolut o Dojo): il locale non
+  vede mai la carta. Quando i pagamenti dal telefono coprono tutto il conto, il
   servizio chiude il tavolo da solo ed emette lo scontrino sulla stampante fiscale scelta per il saldo dal telefono (la predefinita, se non ne hai scelta una).
+- **La pagina del fornitore.** La pagina di Nexi XPay segue la lingua scelta sul telefono; quelle di
+  SumUp, Revolut e Dojo sono nella lingua che decide il fornitore. Se il cliente rinuncia sulla
+  pagina di Nexi XPay o di Dojo, torna al menu del locale e il pagamento si annulla (*Pagamento
+  annullato.*). Dalle pagine di SumUp e Revolut si torna al menu del locale solo dopo aver pagato:
+  chi rinuncia torna indietro da sé, e per pagare di nuovo usa **Ho rinunciato al pagamento**.
+- **Il cliente torna indietro senza pagare.** Il link di pagamento resta aperto per 15 minuti. Se
+  nel frattempo il cliente tocca di nuovo un tasto per pagare, il telefono scrive *Hai un pagamento
+  aperto. Se sei tornato indietro senza pagare, tocca «Ho rinunciato al pagamento».* e sotto compare
+  il tasto **Ho rinunciato al pagamento**. Toccandolo il telefono scrive *Stiamo verificando il
+  pagamento…* e il servizio chiede al fornitore com'è andata:
+
+    - se il pagamento non c'è, il link si annulla (*Pagamento annullato.*) e il cliente può pagare
+      di nuovo;
+    - se invece nel frattempo il pagamento è andato, vale il pagamento: il telefono lo dice e il
+      conto si aggiorna;
+    - se il fornitore non conferma ancora, il telefono resta su *Stiamo verificando il pagamento…*
+      e il cliente può riprovare fra poco.
+
+    Mentre aspetta la risposta i tasti di pagamento sono spenti; dopo la rilettura automatica del
+    conto (ogni 15 secondi) tornano accesi, e finché il link è aperto un nuovo tocco ripropone
+    **Ho rinunciato al pagamento**.
+- **Cambiare fornitore.** Il fornitore nuovo vale per i pagamenti che partono dopo il **Salva**. Un
+  pagamento già partito resta del fornitore che l'ha creato, che lo chiude, lo annulla o lo fa
+  scadere: per questo il fornitore di prima deve restare configurato finché i suoi pagamenti non
+  sono finiti, al massimo 15 minuti. Non cancellare le sue chiavi subito dopo il cambio.
+- **I rimborsi** si fanno dal portale del fornitore con cui il cliente ha pagato: la cassa non
+  restituisce soldi da sola.
 - Se chiudi il conto in cassa mentre un cliente sta pagando, il suo pagamento viene annullato; se
   arriva lo stesso, resta da rimborsare e compare l'avviso 💶.
 - **Asporto online: le fasce di ritiro.** Le ore proposte al cliente partono dall'inizio di ogni
@@ -286,9 +372,10 @@ Sul telefono del cliente, per il PIN:
   quando le fasce del giorno sono finite, l'asporto online risulta chiuso.
 - **Asporto online: il tavolo.** Il link è quello del tavolo virtuale dell'asporto scelto su
   questa cassa in Impostazioni ▸ Sala: se lo cambi, il link cambia e quello vecchio va sostituito
-  sul sito e sui social. L'asporto online è uno solo per tutto il locale: vale il tavolo della
-  cassa che ha salvato per ultima questa scheda. Sceglila sempre dalla stessa cassa, o scegli lo
-  stesso tavolo dell'asporto su tutte le casse.
+  sul sito e sui social. L'asporto online è uno solo per tutto il locale: se due casse hanno
+  scelto un tavolo dell'asporto diverso, vale quello della cassa che ha salvato per ultima questa
+  scheda. Sceglila sempre dalla stessa cassa, o scegli lo stesso tavolo dell'asporto su tutte le
+  casse.
 - **Asporto online: in cassa.** Un ordine compare solo quando è pagato: in quel momento parte la
   comanda per la cucina (carta e monitor) e l'ordine entra nell'elenco
   [Asporto e domicilio](asporto.md) con la pastiglia viola **ONLINE** e la scritta *Pagato online*,
